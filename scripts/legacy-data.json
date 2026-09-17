@@ -1,0 +1,7419 @@
+{
+  "countries": {
+    "CN": {
+      "name": "中国",
+      "nameEn": "China",
+      "region": "东亚",
+      "flag": "https://aka.doubaocdn.com/s/rgR05B2yzf"
+    },
+    "JP": {
+      "name": "日本",
+      "nameEn": "Japan",
+      "region": "东亚",
+      "flag": "https://aka.doubaocdn.com/s/sYaaFuImMw"
+    },
+    "KR": {
+      "name": "韩国",
+      "nameEn": "South Korea",
+      "region": "东亚",
+      "flag": "https://aka.doubaocdn.com/s/JLLJDxQwxb"
+    },
+    "SG": {
+      "name": "新加坡",
+      "nameEn": "Singapore",
+      "region": "东南亚",
+      "flag": "https://aka.doubaocdn.com/s/BVCFShzcKE"
+    },
+    "TH": {
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "region": "东南亚",
+      "flag": "https://aka.doubaocdn.com/s/vsd79qHRzg"
+    },
+    "MY": {
+      "name": "马来西亚",
+      "nameEn": "Malaysia",
+      "region": "东南亚",
+      "flag": "https://aka.doubaocdn.com/s/ow8GuLviGS"
+    },
+    "VN": {
+      "name": "越南",
+      "nameEn": "Vietnam",
+      "region": "东南亚",
+      "flag": "https://aka.doubaocdn.com/s/ZQYUzlUW6X"
+    },
+    "ID": {
+      "name": "印度尼西亚",
+      "nameEn": "Indonesia",
+      "region": "东南亚",
+      "flag": "https://aka.doubaocdn.com/s/ard5QUVoZh"
+    },
+    "PH": {
+      "name": "菲律宾",
+      "nameEn": "Philippines",
+      "region": "东南亚",
+      "flag": "https://aka.doubaocdn.com/s/4OfdcVvrKN"
+    },
+    "IN": {
+      "name": "印度",
+      "nameEn": "India",
+      "region": "南亚",
+      "flag": "https://aka.doubaocdn.com/s/1ptWDXSeuD"
+    },
+    "UZ": {
+      "name": "乌兹别克斯坦",
+      "nameEn": "Uzbekistan",
+      "region": "中亚",
+      "flag": "https://aka.doubaocdn.com/s/LPDCN7pa0T"
+    },
+    "AE": {
+      "name": "阿联酋",
+      "nameEn": "United Arab Emirates",
+      "region": "中东",
+      "flag": "https://aka.doubaocdn.com/s/HpmzhlU5f6"
+    },
+    "QA": {
+      "name": "卡塔尔",
+      "nameEn": "Qatar",
+      "region": "中东",
+      "flag": "https://aka.doubaocdn.com/s/8pWo73Jrrv"
+    },
+    "SA": {
+      "name": "沙特阿拉伯",
+      "nameEn": "Saudi Arabia",
+      "region": "中东",
+      "flag": "https://aka.doubaocdn.com/s/HkE3Df8UGx"
+    },
+    "TR": {
+      "name": "土耳其",
+      "nameEn": "Türkiye",
+      "region": "中东 / 欧洲",
+      "flag": "https://aka.doubaocdn.com/s/GSotb3HUQ3"
+    },
+    "GB": {
+      "name": "英国",
+      "nameEn": "United Kingdom",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/vEZNUskZ30"
+    },
+    "FR": {
+      "name": "法国",
+      "nameEn": "France",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/hQll4xegfi"
+    },
+    "DE": {
+      "name": "德国",
+      "nameEn": "Germany",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/dGcV9VngPu"
+    },
+    "NL": {
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/JJFETnfmzV"
+    },
+    "ES": {
+      "name": "西班牙",
+      "nameEn": "Spain",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/SMqISD8Um9"
+    },
+    "IT": {
+      "name": "意大利",
+      "nameEn": "Italy",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/0ZSeCDkHkH"
+    },
+    "CH": {
+      "name": "瑞士",
+      "nameEn": "Switzerland",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/eiwoYHkNRi"
+    },
+    "AT": {
+      "name": "奥地利",
+      "nameEn": "Austria",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/XX7ZacsPvY"
+    },
+    "PT": {
+      "name": "葡萄牙",
+      "nameEn": "Portugal",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/GPqKrJwRAv"
+    },
+    "IE": {
+      "name": "爱尔兰",
+      "nameEn": "Ireland",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/ddWFNTSdLX"
+    },
+    "SE": {
+      "name": "瑞典",
+      "nameEn": "Sweden",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/VZPoLRUzpt"
+    },
+    "DK": {
+      "name": "丹麦",
+      "nameEn": "Denmark",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/QxXQSAQegU"
+    },
+    "GR": {
+      "name": "希腊",
+      "nameEn": "Greece",
+      "region": "欧洲",
+      "flag": "https://aka.doubaocdn.com/s/naNegZV3Hl"
+    },
+    "RU": {
+      "name": "俄罗斯",
+      "nameEn": "Russia",
+      "region": "欧洲 / 亚洲",
+      "flag": "https://aka.doubaocdn.com/s/4EYKOACuUj"
+    },
+    "US": {
+      "name": "美国",
+      "nameEn": "United States",
+      "region": "北美洲",
+      "flag": "https://aka.doubaocdn.com/s/ufnuRwZSYJ"
+    },
+    "CA": {
+      "name": "加拿大",
+      "nameEn": "Canada",
+      "region": "北美洲",
+      "flag": "https://aka.doubaocdn.com/s/1cDxuSHUlm"
+    },
+    "MX": {
+      "name": "墨西哥",
+      "nameEn": "Mexico",
+      "region": "北美洲",
+      "flag": "https://aka.doubaocdn.com/s/M90pWyGQzv"
+    },
+    "BR": {
+      "name": "巴西",
+      "nameEn": "Brazil",
+      "region": "南美洲",
+      "flag": "https://aka.doubaocdn.com/s/BeHKVMJUaf"
+    },
+    "AU": {
+      "name": "澳大利亚",
+      "nameEn": "Australia",
+      "region": "大洋洲",
+      "flag": "https://aka.doubaocdn.com/s/euJK4omJlc"
+    },
+    "NZ": {
+      "name": "新西兰",
+      "nameEn": "New Zealand",
+      "region": "大洋洲",
+      "flag": "https://aka.doubaocdn.com/s/dosA2BfPZQ"
+    },
+    "ZA": {
+      "name": "南非",
+      "nameEn": "South Africa",
+      "region": "非洲",
+      "flag": "https://aka.doubaocdn.com/s/03QafhrY7K"
+    },
+    "EG": {
+      "name": "埃及",
+      "nameEn": "Egypt",
+      "region": "非洲",
+      "flag": "https://aka.doubaocdn.com/s/AiLmLhT0bF"
+    }
+  },
+  "airports": [
+    {
+      "iata": "PEK",
+      "name": "北京首都国际机场",
+      "nameEn": "Beijing Capital International Airport",
+      "city": "北京",
+      "country": "CN",
+      "desc": "中国规模最大、最繁忙的国际门户机场之一，拥有三座航站楼与两条 4F 级跑道，是星空联盟和天合联盟多个枢纽的所在地。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A1–A8",
+          "gates": 8,
+          "airlines": "海南航空及部分国内航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "B1–B12",
+          "gates": 12,
+          "airlines": "天合联盟成员及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            },
+            {
+              "icon": "currency",
+              "label": "货币兑换"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "C1–C32",
+          "gates": 32,
+          "airlines": "星空联盟成员、国航国际/国内航班",
+          "facilities": [
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "baggage",
+              "label": "行李寄存"
+            },
+            {
+              "icon": "medical",
+              "label": "医务室"
+            }
+          ]
+        }
+      ],
+      "gates": 52,
+      "pax": "约6700万",
+      "distance": "25 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁机场快线",
+          "desc": "首都机场线，连接东直门，约 25 分钟"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "覆盖市区主要区域"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "航站楼出发层外即停"
+        },
+        {
+          "icon": "car",
+          "name": "自驾停车",
+          "desc": "P1–P8 多个停车场"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "PVG",
+      "name": "上海浦东国际机场",
+      "nameEn": "Shanghai Pudong International Airport",
+      "city": "上海",
+      "country": "CN",
+      "desc": "中国最大的国际航空枢纽之一，拥有两座航站楼与两座卫星厅，连接全球 100 多个国际目的地，也是全球货运最繁忙的机场之一。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A1–A15",
+          "gates": 15,
+          "airlines": "东航、上航及天合联盟国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "B1–B22",
+          "gates": 22,
+          "airlines": "星空联盟、寰宇一家及国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            },
+            {
+              "icon": "currency",
+              "label": "货币兑换"
+            }
+          ]
+        },
+        {
+          "code": "S1",
+          "name": "1号卫星厅",
+          "gateRange": "C1–C8",
+          "gates": 8,
+          "airlines": "国际/港澳台航班远机位",
+          "facilities": [
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "shop",
+              "label": "免税店"
+            }
+          ]
+        },
+        {
+          "code": "S2",
+          "name": "2号卫星厅",
+          "gateRange": "D1–D8",
+          "gates": 8,
+          "airlines": "国际/港澳台航班远机位",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 53,
+      "pax": "约6700万",
+      "distance": "40 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "磁悬浮列车",
+          "desc": "连接龙阳路站，约 8 分钟"
+        },
+        {
+          "icon": "train",
+          "name": "地铁2号线",
+          "desc": "连接虹桥火车站与市区"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "多条线路覆盖全市"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "24 小时运营"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "CAN",
+      "name": "广州白云国际机场",
+      "nameEn": "Guangzhou Baiyun International Airport",
+      "city": "广州",
+      "country": "CN",
+      "desc": "粤港澳大湾区核心国际枢纽，两座航站楼加两条跑道，旅客吞吐量常年位居中国前列，南航的主运营基地。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A1–A26",
+          "gates": 26,
+          "airlines": "南航及部分国内/国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "B1–B22",
+          "gates": 22,
+          "airlines": "南航国际航班及多家外航",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            },
+            {
+              "icon": "currency",
+              "label": "货币兑换"
+            }
+          ]
+        }
+      ],
+      "gates": 48,
+      "pax": "约7600万",
+      "distance": "28 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁3号线",
+          "desc": "连接市区与广州南站"
+        },
+        {
+          "icon": "bus",
+          "name": "机场大巴",
+          "desc": "覆盖珠三角主要城市"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "航站楼到达层排队上客"
+        },
+        {
+          "icon": "car",
+          "name": "自驾停车",
+          "desc": "P1–P8 停车场"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "HKG",
+      "name": "香港国际机场",
+      "nameEn": "Hong Kong International Airport",
+      "city": "香港",
+      "country": "CN",
+      "desc": "位于赤鱲角的填海机场，多次获选全球最佳机场，单座巨型航站楼配卫星廊与中场客运廊，机场快线 24 分钟直达中环。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "一号客运大楼",
+          "gateRange": "1–80",
+          "gates": 80,
+          "airlines": "国泰航空及全部国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "M",
+          "name": "中场客运廊",
+          "gateRange": "201–230",
+          "gates": 30,
+          "airlines": "国际航班远机位",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "name": "北卫星客运廊",
+          "gateRange": "501–510",
+          "gates": 10,
+          "airlines": "区域航班",
+          "facilities": [
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 120,
+      "pax": "约5500万",
+      "distance": "34 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "机场快线",
+          "desc": "24 分钟直达中环/香港站"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "A/E 线覆盖香港各区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "分市区/大屿山候车站"
+        },
+        {
+          "icon": "ferry",
+          "name": "跨境快船",
+          "desc": "连接珠江口口岸"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "HND",
+      "name": "东京羽田机场",
+      "nameEn": "Tokyo Haneda Airport",
+      "city": "东京",
+      "country": "JP",
+      "desc": "全球最繁忙机场之一，距离东京市中心仅约 14 公里，三座航站楼通过地下通道与单轨电车连接，日航与全日空双枢纽。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "1–18",
+          "gates": 18,
+          "airlines": "日本航空及国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "51–70",
+          "gates": 20,
+          "airlines": "全日空及国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼（国际）",
+          "gateRange": "101–133",
+          "gates": 33,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "currency",
+              "label": "货币兑换"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 71,
+      "pax": "约8800万",
+      "distance": "14 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "京急电铁",
+          "desc": "约 15 分钟直达品川"
+        },
+        {
+          "icon": "train",
+          "name": "东京单轨电车",
+          "desc": "约 18 分钟直达滨松町"
+        },
+        {
+          "icon": "bus",
+          "name": "机场利木津巴士",
+          "desc": "连接新宿、涩谷等"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "国际/国内航站楼分设上客点"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "NRT",
+      "name": "东京成田机场",
+      "nameEn": "Narita International Airport",
+      "city": "东京",
+      "country": "JP",
+      "desc": "东京主要国际门户，位于千叶县成田市，三座航站楼布局清晰，成田特快与 Skyliner 提供快速市区连接。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "11–58",
+          "gates": 48,
+          "airlines": "全日空、星空联盟国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "61–88",
+          "gates": 28,
+          "airlines": "日航、寰宇一家国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "101–120",
+          "gates": 20,
+          "airlines": "低成本航司",
+          "facilities": [
+            {
+              "icon": "food",
+              "label": "餐饮"
+            },
+            {
+              "icon": "shop",
+              "label": "免税店"
+            }
+          ]
+        }
+      ],
+      "gates": 96,
+      "pax": "约4000万",
+      "distance": "66 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "成田特快 N'EX",
+          "desc": "约 60 分钟直达东京站"
+        },
+        {
+          "icon": "train",
+          "name": "Skyliner",
+          "desc": "约 36 分钟直达日暮里/上野"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接东京各主要车站"
+        },
+        {
+          "icon": "car",
+          "name": "自驾",
+          "desc": "东关东自动车道直达"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "KIX",
+      "name": "大阪关西国际机场",
+      "nameEn": "Kansai International Airport",
+      "city": "大阪",
+      "country": "JP",
+      "desc": "建在大阪湾人工岛上的国际机场，主航站楼采用全玻璃曲线设计，关西特快 HARUKA 直连京都与大阪市区。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "1–32",
+          "gates": 32,
+          "airlines": "日航、全日空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "61–66",
+          "gates": 6,
+          "airlines": "低成本航司（春秋、捷星等）",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 38,
+      "pax": "约2100万",
+      "distance": "50 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "HARUKA 特快",
+          "desc": "约 50 分钟直达京都"
+        },
+        {
+          "icon": "train",
+          "name": "南海电铁",
+          "desc": "约 40 分钟直达难波"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接大阪、神户"
+        },
+        {
+          "icon": "ferry",
+          "name": "高速船",
+          "desc": "前往神户港"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "ICN",
+      "name": "首尔仁川国际机场",
+      "nameEn": "Incheon International Airport",
+      "city": "首尔",
+      "country": "KR",
+      "desc": "韩国最大国际门户，位于永宗岛，连续多年入选全球最佳机场，两座航站楼间由无人驾驶捷运连接。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "1–45",
+          "gates": 45,
+          "airlines": "大韩航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "201–268",
+          "gates": 68,
+          "airlines": "韩亚航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 113,
+      "pax": "约7300万",
+      "distance": "49 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "机场铁路 AREX",
+          "desc": "普通/直达列车连接首尔站"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "覆盖首尔及仁川全域"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "国际/国内分设候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾停车",
+          "desc": "P1–P5 停车场"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "SIN",
+      "name": "新加坡樟宜机场",
+      "nameEn": "Singapore Changi Airport",
+      "city": "新加坡",
+      "country": "SG",
+      "desc": "蝉联世界最佳机场多年的航空枢纽，四座航站楼与星耀樟宜相连，拥有室内瀑布、蝴蝶园等独特体验设施。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A1–A20, C1–C5",
+          "gates": 25,
+          "airlines": "新航及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "E1–E25, F1–F10",
+          "gates": 35,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "A1–A20, B1–B10",
+          "gates": 30,
+          "airlines": "新航及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            },
+            {
+              "icon": "medical",
+              "label": "医务室"
+            }
+          ]
+        },
+        {
+          "code": "T4",
+          "name": "4号航站楼",
+          "gateRange": "G1–G11",
+          "gates": 11,
+          "airlines": "区域航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 101,
+      "pax": "约6900万",
+      "distance": "20 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁东西线",
+          "desc": "樟宜机场站直达市区"
+        },
+        {
+          "icon": "train",
+          "name": "轻轨Skytrain",
+          "desc": "航站楼间免费接驳"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "夜间线路覆盖市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "分层上客，便捷高效"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "BKK",
+      "name": "曼谷素万那普机场",
+      "nameEn": "Suvarnabhumi Airport",
+      "city": "曼谷",
+      "country": "TH",
+      "desc": "泰国最大国际机场，单一巨型主航站楼呈 X 形展开，机场快线连接市中心，是东南亚重要的转机枢纽。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼（M层）",
+          "gateRange": "A–G 廊",
+          "gates": 120,
+          "airlines": "泰航及全部国际/国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 120,
+      "pax": "约5900万",
+      "distance": "30 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "机场快线",
+          "desc": "约 30 分钟直达 Phaya Thai"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接市区主要区域"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "出发层 4 层乘车"
+        },
+        {
+          "icon": "car",
+          "name": "自驾停车",
+          "desc": "多栋停车楼"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "KUL",
+      "name": "吉隆坡国际机场",
+      "nameEn": "Kuala Lumpur International Airport",
+      "city": "吉隆坡",
+      "country": "MY",
+      "desc": "马来西亚主要国际门户，主航站楼与卫星厅通过机场快线连接，是亚洲航线的热门转机点。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "C1–C37",
+          "gates": 37,
+          "airlines": "马航及国际航班值机与出发",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "name": "卫星航站楼",
+          "gateRange": "A1–A32",
+          "gates": 32,
+          "airlines": "国际航班登机口",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "KLIA2 航站楼",
+          "gateRange": "P1–P14",
+          "gates": 14,
+          "airlines": "低成本航司（亚航）",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 83,
+      "pax": "约4700万",
+      "distance": "45 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "KLIA Express",
+          "desc": "约 28 分钟直达吉隆坡中央车站"
+        },
+        {
+          "icon": "train",
+          "name": "机场捷运Aerotrain",
+          "desc": "主楼与卫星厅间免费接驳"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接市区巴士站"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "DEL",
+      "name": "英迪拉·甘地国际机场",
+      "nameEn": "Indira Gandhi International Airport",
+      "city": "德里",
+      "country": "IN",
+      "desc": "印度最繁忙的机场，T3 航站楼为全球最大航站楼之一，机场快线连接新德里市中心。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A1–A12",
+          "gates": 12,
+          "airlines": "国内低成本航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "B1–B30, C1–C20",
+          "gates": 50,
+          "airlines": "印度航空及国际/国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 62,
+      "pax": "约7300万",
+      "distance": "16 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "机场快线",
+          "desc": "约 20 分钟直达新德里站"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接市区多条线路"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "预付费出租车服务"
+        },
+        {
+          "icon": "car",
+          "name": "自驾",
+          "desc": "NH8 高速直达"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "CGK",
+      "name": "苏加诺-哈达国际机场",
+      "nameEn": "Soekarno–Hatta International Airport",
+      "city": "雅加达",
+      "country": "ID",
+      "desc": "印度尼西亚最大门户机场，三座航站楼通过天空列车相连，服务雅加达都会区。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A1–A18",
+          "gates": 18,
+          "airlines": "国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "B1–B22",
+          "gates": 22,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "C1–C30",
+          "gates": 30,
+          "airlines": "鹰航及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 70,
+      "pax": "约6000万",
+      "distance": "20 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "机场快线",
+          "desc": "连接雅加达市区车站"
+        },
+        {
+          "icon": "train",
+          "name": "天空列车Skytrain",
+          "desc": "航站楼间免费接驳"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "Damri 巴士覆盖市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "官方定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "SGN",
+      "name": "新山一国际机场",
+      "nameEn": "Tan Son Nhat International Airport",
+      "city": "胡志明市",
+      "country": "VN",
+      "desc": "越南最繁忙的机场，紧邻市区，两座航站楼分别服务国际与国内航线。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "国内航站楼",
+          "gateRange": "A1–A12",
+          "gates": 12,
+          "airlines": "越南航空等国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "国际航站楼",
+          "gateRange": "B1–B18",
+          "gates": 18,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 30,
+      "pax": "约4000万",
+      "distance": "6 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "109/152 路连接市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "到达层定点上客"
+        },
+        {
+          "icon": "car",
+          "name": "自驾",
+          "desc": "市内短程可达"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "MNL",
+      "name": "尼诺伊·阿基诺国际机场",
+      "nameEn": "Ninoy Aquino International Airport",
+      "city": "马尼拉",
+      "country": "PH",
+      "desc": "菲律宾主要国际门户，四座航站楼沿环路分布，服务首都大马尼拉地区。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A1–A14",
+          "gates": 14,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "B1–B16",
+          "gates": 16,
+          "airlines": "菲律宾航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "C1–C32",
+          "gates": 32,
+          "airlines": "宿务太平洋及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "T4",
+          "name": "4号航站楼",
+          "gateRange": "D1–D8",
+          "gates": 8,
+          "airlines": "国内支线航班",
+          "facilities": [
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 70,
+      "pax": "约4800万",
+      "distance": "7 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接市区主要车站"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "分白色/黄色出租车"
+        },
+        {
+          "icon": "car",
+          "name": "自驾",
+          "desc": "机场高速直达"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "TAS",
+      "name": "塔什干国际机场",
+      "nameEn": "Islam Karimov Tashkent International Airport",
+      "city": "塔什干",
+      "country": "UZ",
+      "desc": "乌兹别克斯坦首都的国际门户，作为中亚航线的中转枢纽正快速扩建。",
+      "terminals": [
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "A1–A14",
+          "gates": 14,
+          "airlines": "乌兹别克斯坦航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "B1–B6",
+          "gates": 6,
+          "airlines": "国内及区域航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 20,
+      "pax": "约500万",
+      "distance": "12 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "label": "",
+          "name": "机场巴士",
+          "desc": "连接市中心"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "到达层定点上客"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "DXB",
+      "name": "迪拜国际机场",
+      "nameEn": "Dubai International Airport",
+      "city": "迪拜",
+      "country": "AE",
+      "desc": "中东最繁忙的航空枢纽，T3 航站楼为全球最大单体航站楼之一，阿联酋航空的旗舰基地，地铁红线直达市区。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "C1–C40",
+          "gates": 40,
+          "airlines": "多家国际航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "F1–F12",
+          "gates": 12,
+          "airlines": "低成本及区域航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "A/B 廊",
+          "gates": 60,
+          "airlines": "阿联酋航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "medical",
+              "label": "医务室"
+            }
+          ]
+        },
+        {
+          "code": "C1",
+          "name": "Concourse A（A380 专属）",
+          "gateRange": "A1–A25",
+          "gates": 25,
+          "airlines": "阿联酋航空 A380",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "头等舱休息室"
+            }
+          ]
+        }
+      ],
+      "gates": 137,
+      "pax": "约9200万",
+      "distance": "4 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "迪拜地铁红线",
+          "desc": "直达市区与棕榈岛"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "覆盖迪拜各区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "24 小时候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾停车",
+          "desc": "多栋停车楼"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "DOH",
+      "name": "哈马德国际机场",
+      "nameEn": "Hamad International Airport",
+      "city": "多哈",
+      "country": "QA",
+      "desc": "卡塔尔航空枢纽，屡获 Skytrax 全球最佳机场，巨型主航站楼以独特波浪穹顶著称，内设室内热带花园。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "A–E 廊",
+          "gates": 90,
+          "airlines": "卡塔尔航空及全部国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "name": "北卫星厅",
+          "gateRange": "F–H 廊",
+          "gates": 30,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        }
+      ],
+      "gates": 120,
+      "pax": "约4600万",
+      "distance": "12 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "多哈地铁",
+          "desc": "红线连接市区"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接多哈主要区域"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "Karwa 出租车上客区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "IST",
+      "name": "伊斯坦布尔机场",
+      "nameEn": "Istanbul Airport",
+      "city": "伊斯坦布尔",
+      "country": "TR",
+      "desc": "欧洲最繁忙机场之一，单一巨型主航站楼是全球最大的航站楼单体建筑，地铁 M11 线连接市区。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "A–F 廊",
+          "gates": 143,
+          "airlines": "土耳其航空及全部国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 143,
+      "pax": "约7900万",
+      "distance": "35 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁 M11",
+          "desc": "连接 Kağıthane 换乘市中心"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "Havaist 巴士覆盖伊斯坦布尔"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾停车",
+          "desc": "P1–P7 停车楼"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "RUH",
+      "name": "哈立德国王国际机场",
+      "nameEn": "King Khalid International Airport",
+      "city": "利雅得",
+      "country": "SA",
+      "desc": "沙特阿拉伯首都门户机场，五座航站楼布局开阔，T1–T2 航站楼之间设中央大厅。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A1–A20",
+          "gates": 20,
+          "airlines": "沙特航空国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "B1–B20",
+          "gates": 20,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "C1–C12",
+          "gates": 12,
+          "airlines": "国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T4",
+          "name": "4号航站楼",
+          "gateRange": "D1–D12",
+          "gates": 12,
+          "airlines": "国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T5",
+          "name": "5号航站楼",
+          "gateRange": "E1–E8",
+          "gates": 8,
+          "airlines": "王室及专机",
+          "facilities": [
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        }
+      ],
+      "gates": 72,
+      "pax": "约4000万",
+      "distance": "35 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接市区主要区域"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "到达层候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾停车",
+          "desc": "航站楼前停车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "LHR",
+      "name": "伦敦希思罗机场",
+      "nameEn": "Heathrow Airport",
+      "city": "伦敦",
+      "country": "GB",
+      "desc": "英国最繁忙的国际门户，欧洲主要枢纽之一，四座航站楼由希思罗快线与地铁 Piccadilly 线连接市区。",
+      "terminals": [
+        {
+          "code": "T2",
+          "name": "2号航站楼（女王航站楼）",
+          "gateRange": "A1–A20",
+          "gates": 20,
+          "airlines": "星空联盟成员",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "B1–B16",
+          "gates": 16,
+          "airlines": "寰宇一家成员",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T4",
+          "name": "4号航站楼",
+          "gateRange": "C1–C14",
+          "gates": 14,
+          "airlines": "天合联盟及部分航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "T5",
+          "name": "5号航站楼",
+          "gateRange": "D/E/F 廊",
+          "gates": 45,
+          "airlines": "英国航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "头等舱休息室"
+            },
+            {
+              "icon": "medical",
+              "label": "医务室"
+            }
+          ]
+        }
+      ],
+      "gates": 95,
+      "pax": "约8400万",
+      "distance": "24 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "希思罗快线",
+          "desc": "约 15 分钟直达帕丁顿"
+        },
+        {
+          "icon": "train",
+          "name": "地铁 Piccadilly 线",
+          "desc": "直达市中心各区"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "National Express 长途线"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "伦敦黑色出租车"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "LGW",
+      "name": "伦敦盖特威克机场",
+      "nameEn": "Gatwick Airport",
+      "city": "伦敦",
+      "country": "GB",
+      "desc": "伦敦第二大机场，南北两座航站楼通过自动捷运相连，盖特威克快线直达维多利亚车站。",
+      "terminals": [
+        {
+          "code": "N",
+          "name": "北航站楼",
+          "gateRange": "101–193",
+          "gates": 93,
+          "airlines": "多家国际航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "name": "南航站楼",
+          "gateRange": "1–66",
+          "gates": 66,
+          "airlines": "易捷航空等",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 159,
+      "pax": "约4500万",
+      "distance": "46 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "盖特威克快线",
+          "desc": "约 30 分钟直达维多利亚"
+        },
+        {
+          "icon": "train",
+          "name": "泰晤士连线",
+          "desc": "连接伦敦桥等站"
+        },
+        {
+          "icon": "bus",
+          "name": "长途巴士",
+          "desc": "覆盖英国南部城市"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "STN",
+      "name": "伦敦斯坦斯特德机场",
+      "nameEn": "London Stansted Airport",
+      "city": "伦敦",
+      "country": "GB",
+      "desc": "伦敦第三大机场，主要服务低成本航司，单座航站楼布局简洁高效，斯坦斯特德快线 47 分钟直达利物浦街。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "1–87",
+          "gates": 87,
+          "airlines": "瑞安航空、捷特二航空等",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 87,
+      "pax": "约2800万",
+      "distance": "48 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "斯坦斯特德快线",
+          "desc": "约 47 分钟直达利物浦街"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接伦敦各主要车站"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "到达层候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "CDG",
+      "name": "巴黎戴高乐机场",
+      "nameEn": "Paris Charles de Gaulle Airport",
+      "city": "巴黎",
+      "country": "FR",
+      "desc": "法国最大国际机场、欧洲主要枢纽之一，T2 航站楼群含 2A–2G 多个大厅，RER B 线连接巴黎市中心。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–D 廊",
+          "gates": 28,
+          "airlines": "法航及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼（2A–2G）",
+          "gateRange": "A–K 厅",
+          "gates": 82,
+          "airlines": "法航、天合联盟及多数国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            },
+            {
+              "icon": "medical",
+              "label": "医务室"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "L 廊",
+          "gates": 12,
+          "airlines": "低成本及包机航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 122,
+      "pax": "约6800万",
+      "distance": "25 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "RER B",
+          "desc": "约 30 分钟直达巴黎北站/市区"
+        },
+        {
+          "icon": "train",
+          "name": "TGV 高铁",
+          "desc": "直达法国及欧洲多城"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "Roissybus 连接歌剧院"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "固定费率至巴黎市区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "ORY",
+      "name": "巴黎奥利机场",
+      "nameEn": "Paris Orly Airport",
+      "city": "巴黎",
+      "country": "FR",
+      "desc": "巴黎第二大机场，紧邻市区，四座航站楼服务欧洲与区域航线，有轨电车 T7 与 RER B 连接市区。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–F 廊",
+          "gates": 24,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "G–J 廊",
+          "gates": 16,
+          "airlines": "欧洲航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "K 廊",
+          "gates": 8,
+          "airlines": "区域航班",
+          "facilities": [
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T4",
+          "name": "4号航站楼",
+          "gateRange": "L 廊",
+          "gates": 10,
+          "airlines": "低成本航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 58,
+      "pax": "约3200万",
+      "distance": "14 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "RER B + 有轨电车 T7",
+          "desc": "连接市中心"
+        },
+        {
+          "icon": "train",
+          "name": "ORLYVAL 捷运",
+          "desc": "连接 Antony RER 站"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接巴黎各主要区域"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "固定费率"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "FRA",
+      "name": "法兰克福机场",
+      "nameEn": "Frankfurt Airport",
+      "city": "法兰克福",
+      "country": "DE",
+      "desc": "德国最大门户机场、欧洲最繁忙枢纽之一，三座航站楼由无人驾驶捷运连接，是汉莎航空的主基地。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–C 廊",
+          "gates": 76,
+          "airlines": "汉莎航空及星空联盟",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "D–E 廊",
+          "gates": 44,
+          "airlines": "多家国际航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼（新）",
+          "gateRange": "G 廊",
+          "gates": 24,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        }
+      ],
+      "gates": 144,
+      "pax": "约5900万",
+      "distance": "12 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "城铁 S8/S9",
+          "desc": "约 15 分钟直达中央火车站"
+        },
+        {
+          "icon": "train",
+          "name": "ICE 高铁",
+          "desc": "法兰克福机场站直达多城"
+        },
+        {
+          "icon": "train",
+          "name": "SkyLine 捷运",
+          "desc": "T1/T2/T3 间免费接驳"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "航站楼前候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "MUC",
+      "name": "慕尼黑机场",
+      "nameEn": "Munich Airport",
+      "city": "慕尼黑",
+      "country": "DE",
+      "desc": "德国第二大机场，双航站楼设计获奖无数，拥有欧洲最大的机场室内啤酒花园。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–F 廊",
+          "gates": 60,
+          "airlines": "汉莎航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "G–L 廊",
+          "gates": 50,
+          "airlines": "汉莎及星空联盟",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 110,
+      "pax": "约3700万",
+      "distance": "29 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "城铁 S1/S8",
+          "desc": "约 40 分钟直达中央火车站"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接市区及周边城市"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "航站楼前候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "AMS",
+      "name": "阿姆斯特丹史基浦机场",
+      "nameEn": "Amsterdam Airport Schiphol",
+      "city": "阿姆斯特丹",
+      "country": "NL",
+      "desc": "荷兰皇家航空枢纽，单座巨型航站楼内设多个大厅，地下火车站 15 分钟直达阿姆斯特丹市中心。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼（大厅1/2/3）",
+          "gateRange": "B–M 廊",
+          "gates": 110,
+          "airlines": "荷航及全部国际/国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 110,
+      "pax": "约6700万",
+      "distance": "9 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "荷兰铁路 NS",
+          "desc": "约 15 分钟直达中央车站"
+        },
+        {
+          "icon": "train",
+          "name": "Thalys/ICE",
+          "desc": "跨境高铁连接欧洲"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接阿姆斯特丹各区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "航站楼前候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "MAD",
+      "name": "马德里巴拉哈斯机场",
+      "nameEn": "Madrid–Barajas Airport",
+      "city": "马德里",
+      "country": "ES",
+      "desc": "西班牙最大机场，T4 航站楼以竹木波浪顶闻名，四座航站楼通过免费接驳巴士相连。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–C 廊",
+          "gates": 28,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "D 廊",
+          "gates": 18,
+          "airlines": "申根区内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "E 廊",
+          "gates": 12,
+          "airlines": "区域航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            }
+          ]
+        },
+        {
+          "code": "T4",
+          "name": "4号航站楼",
+          "gateRange": "F–R 廊",
+          "gates": 60,
+          "airlines": "伊比利亚航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 118,
+      "pax": "约6400万",
+      "distance": "13 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁8号线",
+          "desc": "约 25 分钟直达市中心"
+        },
+        {
+          "icon": "train",
+          "name": "C1 近郊铁路",
+          "desc": "连接查马丁车站"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "24 小时机场快线"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "固定费率"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "BCN",
+      "name": "巴塞罗那机场",
+      "nameEn": "Barcelona–El Prat Airport",
+      "city": "巴塞罗那",
+      "country": "ES",
+      "desc": "西班牙第二大机场，T1 航站楼现代大气，地铁与 Aerobus 快线连接巴塞罗那市中心。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–F 廊",
+          "gates": 60,
+          "airlines": "国际及国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼（T2A–T2C）",
+          "gateRange": "G–K 廊",
+          "gates": 30,
+          "airlines": "低成本及区域航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 90,
+      "pax": "约5400万",
+      "distance": "13 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁 L9",
+          "desc": "连接巴塞罗那市区"
+        },
+        {
+          "icon": "train",
+          "name": "近郊铁路 R2",
+          "desc": "连接桑兹车站"
+        },
+        {
+          "icon": "bus",
+          "name": "Aerobus",
+          "desc": "A1/A2 快线直达市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "固定费率"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "FCO",
+      "name": "罗马菲乌米奇诺机场",
+      "nameEn": "Rome Fiumicino Airport",
+      "city": "罗马",
+      "country": "IT",
+      "desc": "意大利最大机场，达芬奇机场以三条长廊式航站楼闻名，Leonardo 快线直达罗马特米尼车站。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–D 廊",
+          "gates": 40,
+          "airlines": "意大利航空及申根航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "E–G 廊",
+          "gates": 55,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "T5",
+          "name": "5号航站楼",
+          "gateRange": "H 廊",
+          "gates": 12,
+          "airlines": "美国及非申根航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 107,
+      "pax": "约5000万",
+      "distance": "30 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "Leonardo 快线",
+          "desc": "约 32 分钟直达特米尼车站"
+        },
+        {
+          "icon": "train",
+          "name": "FL1 近郊线",
+          "desc": "连接罗马各区"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接罗马主要车站"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "固定费率至市区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "MXP",
+      "name": "米兰马尔彭萨机场",
+      "nameEn": "Milan Malpensa Airport",
+      "city": "米兰",
+      "country": "IT",
+      "desc": "米兰主要国际门户，T1 航站楼服务国际航线，Malpensa 快线连接米兰中央车站。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–H 廊",
+          "gates": 70,
+          "airlines": "国际及国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "K 廊",
+          "gates": 10,
+          "airlines": "低成本航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 80,
+      "pax": "约2900万",
+      "distance": "50 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "Malpensa 快线",
+          "desc": "约 50 分钟直达米兰中央车站"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接米兰市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "ZRH",
+      "name": "苏黎世机场",
+      "nameEn": "Zurich Airport",
+      "city": "苏黎世",
+      "country": "CH",
+      "desc": "瑞士最大国际机场，紧邻市区，单一综合体航站楼分 A/B/D/E 四个廊区，城铁 10 分钟直达苏黎世主站。",
+      "terminals": [
+        {
+          "code": "A",
+          "name": "A 廊",
+          "gateRange": "A1–A28",
+          "gates": 28,
+          "airlines": "申根区航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "name": "B 廊",
+          "gateRange": "B1–B30",
+          "gates": 30,
+          "airlines": "申根区航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "D",
+          "name": "D 廊",
+          "gateRange": "D1–D28",
+          "gates": 28,
+          "airlines": "非申根国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "E",
+          "name": "E 廊（卫星）",
+          "gateRange": "E1–E20",
+          "gates": 20,
+          "airlines": "国际航班远机位",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        }
+      ],
+      "gates": 106,
+      "pax": "约3100万",
+      "distance": "13 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "城铁 S16/S2",
+          "desc": "约 10 分钟直达苏黎世主站"
+        },
+        {
+          "icon": "train",
+          "name": "城际列车",
+          "desc": "直达瑞士及欧洲各城"
+        },
+        {
+          "icon": "tram",
+          "name": "有轨电车10号线",
+          "desc": "连接市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "航站楼前候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "VIE",
+      "name": "维也纳国际机场",
+      "nameEn": "Vienna International Airport",
+      "city": "维也纳",
+      "country": "AT",
+      "desc": "奥地利枢纽机场，三座航站楼布局紧凑，CAT 城市机场快线 16 分钟直达维也纳市中心。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–D 廊",
+          "gates": 25,
+          "airlines": "奥地利航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "E–F 廊",
+          "gates": 20,
+          "airlines": "申根区航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "G–L 廊",
+          "gates": 50,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 95,
+      "pax": "约3100万",
+      "distance": "18 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "CAT 城市机场快线",
+          "desc": "约 16 分钟直达市中心"
+        },
+        {
+          "icon": "train",
+          "name": "城铁 S7",
+          "desc": "经济型连接市区"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接维也纳各区域"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "LIS",
+      "name": "里斯本机场",
+      "nameEn": "Humberto Delgado Airport",
+      "city": "里斯本",
+      "country": "PT",
+      "desc": "葡萄牙主要国际门户，距市中心仅 7 公里，T1 与 T2 之间由免费摆渡巴士连接。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–E 廊",
+          "gates": 45,
+          "airlines": "葡萄牙航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "F 廊",
+          "gates": 10,
+          "airlines": "低成本航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 55,
+      "pax": "约3300万",
+      "distance": "7 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁红线",
+          "desc": "连接市中心"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "多条线路覆盖市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "到达层候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "DUB",
+      "name": "都柏林机场",
+      "nameEn": "Dublin Airport",
+      "city": "都柏林",
+      "country": "IE",
+      "desc": "爱尔兰最大机场，两座航站楼服务欧洲与大西洋航线，Aircoach 巴士连接都柏林市中心。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–E 廊",
+          "gates": 35,
+          "airlines": "爱尔兰航空及欧洲航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "F–K 廊",
+          "gates": 30,
+          "airlines": "爱尔兰航空长途及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 65,
+      "pax": "约3300万",
+      "distance": "10 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "Aircoach",
+          "desc": "连接市中心与主要区域"
+        },
+        {
+          "icon": "bus",
+          "name": "都柏林巴士",
+          "desc": "16/41 路连接市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "航站楼前候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "ARN",
+      "name": "斯德哥尔摩阿兰达机场",
+      "nameEn": "Stockholm Arlanda Airport",
+      "city": "斯德哥尔摩",
+      "country": "SE",
+      "desc": "瑞典最大机场，四座航站楼布局紧凑，阿兰达快线 18 分钟直达斯德哥尔摩中央车站。",
+      "terminals": [
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "A 廊",
+          "gates": 20,
+          "airlines": "低成本及欧洲航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "B 廊",
+          "gates": 10,
+          "airlines": "区域航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            }
+          ]
+        },
+        {
+          "code": "T4",
+          "name": "4号航站楼",
+          "gateRange": "C–D 廊",
+          "gates": 25,
+          "airlines": "北欧航空及国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T5",
+          "name": "5号航站楼",
+          "gateRange": "E–F 廊",
+          "gates": 35,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 90,
+      "pax": "约2500万",
+      "distance": "42 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "阿兰达快线",
+          "desc": "约 18 分钟直达中央车站"
+        },
+        {
+          "icon": "train",
+          "name": "通勤列车",
+          "desc": "连接斯德哥尔摩各区"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "FlixBus 等长途线"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "固定费率"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "CPH",
+      "name": "哥本哈根机场",
+      "nameEn": "Copenhagen Airport Kastrup",
+      "city": "哥本哈根",
+      "country": "DK",
+      "desc": "北欧主要枢纽，距市中心仅 8 公里，地铁与城铁直达哥本哈根市中心，三座航站楼相连成一体。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A 廊",
+          "gates": 12,
+          "airlines": "国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "B–C 廊",
+          "gates": 30,
+          "airlines": "北欧航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "D–F 廊",
+          "gates": 40,
+          "airlines": "北欧航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 82,
+      "pax": "约2900万",
+      "distance": "8 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁 M2",
+          "desc": "约 13 分钟直达市中心"
+        },
+        {
+          "icon": "train",
+          "name": "城际列车",
+          "desc": "连接马尔默等城市"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "SVO",
+      "name": "莫斯科谢列梅捷沃机场",
+      "nameEn": "Sheremetyevo International Airport",
+      "city": "莫斯科",
+      "country": "RU",
+      "desc": "俄罗斯最繁忙的机场，俄罗斯航空的主基地，B/C/D/E/F 多座航站楼由 Aeroexpress 快线连接市区。",
+      "terminals": [
+        {
+          "code": "B",
+          "name": "B 航站楼",
+          "gateRange": "1–10",
+          "gates": 10,
+          "airlines": "国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "name": "C 航站楼",
+          "gateRange": "11–20",
+          "gates": 10,
+          "airlines": "区域航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            }
+          ]
+        },
+        {
+          "code": "D",
+          "name": "D 航站楼",
+          "gateRange": "21–40",
+          "gates": 20,
+          "airlines": "俄罗斯航空国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "E",
+          "name": "E 航站楼",
+          "gateRange": "41–60",
+          "gates": 20,
+          "airlines": "俄罗斯航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "F",
+          "name": "F 航站楼",
+          "gateRange": "61–70",
+          "gates": 10,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 70,
+      "pax": "约4500万",
+      "distance": "30 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "Aeroexpress 快线",
+          "desc": "约 35 分钟直达白俄罗斯站"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接莫斯科各区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "ATH",
+      "name": "雅典国际机场",
+      "nameEn": "Athens International Airport",
+      "city": "雅典",
+      "country": "GR",
+      "desc": "希腊主要国际门户，主航站楼以简洁的指廊式布局服务国际与国内航线，地铁 3 号线直达市中心。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "A–D 廊",
+          "gates": 60,
+          "airlines": "爱琴海航空及全部航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 60,
+      "pax": "约3100万",
+      "distance": "27 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁3号线",
+          "desc": "约 40 分钟直达宪法广场"
+        },
+        {
+          "icon": "train",
+          "name": "近郊铁路",
+          "desc": "连接雅典各区"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "X95 等线路覆盖市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "固定费率"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "JFK",
+      "name": "约翰·F·肯尼迪国际机场",
+      "nameEn": "John F. Kennedy International Airport",
+      "city": "纽约",
+      "country": "US",
+      "desc": "纽约最大国际门户，多座航站楼各有主题设计，AirTrain 连接地铁与长岛铁路，是全球最重要的航空枢纽之一。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "1–11",
+          "gates": 11,
+          "airlines": "多家国际航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T4",
+          "name": "4号航站楼",
+          "gateRange": "A–B 廊",
+          "gates": 38,
+          "airlines": "达美航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "T5",
+          "name": "5号航站楼",
+          "gateRange": "1–29",
+          "gates": 29,
+          "airlines": "捷蓝航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T7",
+          "name": "7号航站楼",
+          "gateRange": "1–12",
+          "gates": 12,
+          "airlines": "英国航空等",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T8",
+          "name": "8号航站楼",
+          "gateRange": "A–C 廊",
+          "gates": 30,
+          "airlines": "美国航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        }
+      ],
+      "gates": 120,
+      "pax": "约6300万",
+      "distance": "24 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "AirTrain JFK",
+          "desc": "连接地铁 E/J/Z 线与长岛铁路"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接市区主要区域"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "黄色出租车固定费率"
+        },
+        {
+          "icon": "car",
+          "name": "自驾",
+          "desc": "Van Wyck 高速直达"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "EWR",
+      "name": "纽瓦克自由国际机场",
+      "nameEn": "Newark Liberty International Airport",
+      "city": "纽约",
+      "country": "US",
+      "desc": "纽约都会区三大机场之一，美联航东海岸枢纽，三座航站楼由 AirTrain 连接新泽西捷运。",
+      "terminals": [
+        {
+          "code": "A",
+          "name": "A 航站楼",
+          "gateRange": "A1–A28",
+          "gates": 28,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "name": "B 航站楼",
+          "gateRange": "B1–B32",
+          "gates": 32,
+          "airlines": "多家国际航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "name": "C 航站楼",
+          "gateRange": "C1–C32",
+          "gates": 32,
+          "airlines": "美联航",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 92,
+      "pax": "约4900万",
+      "distance": "24 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "AirTrain + 新泽西捷运",
+          "desc": "连接纽约宾州车站"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "Newark 机场快线"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾",
+          "desc": "NJ Turnpike 直达"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "LGA",
+      "name": "拉瓜迪亚机场",
+      "nameEn": "LaGuardia Airport",
+      "city": "纽约",
+      "country": "US",
+      "desc": "纽约最便捷的国内机场，全新改造的 B 航站楼获国际奖项，与曼哈顿隔河相望。",
+      "terminals": [
+        {
+          "code": "A",
+          "name": "A 航站楼（海洋航站楼）",
+          "gateRange": "A1–A8",
+          "gates": 8,
+          "airlines": "加拿大航空等",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "name": "B 航站楼",
+          "gateRange": "B1–B28",
+          "gates": 28,
+          "airlines": "达美航空等",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "name": "C 航站楼",
+          "gateRange": "C1–C12",
+          "gates": 12,
+          "airlines": "美航及区域航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "D",
+          "name": "D 航站楼",
+          "gateRange": "D1–D10",
+          "gates": 10,
+          "airlines": "美航",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 58,
+      "pax": "约3200万",
+      "distance": "13 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "Q70 快线连接地铁"
+        },
+        {
+          "icon": "bus",
+          "name": "M60 巴士",
+          "desc": "连接曼哈顿"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "HPN",
+      "name": "韦斯特切斯特县机场",
+      "nameEn": "Westchester County Airport",
+      "city": "纽约",
+      "country": "US",
+      "desc": "纽约北郊的区域机场，单座航站楼服务商务与支线航班，是避开大机场拥堵的选择。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "1–6",
+          "gates": 6,
+          "airlines": "美航、达美、捷蓝等支线航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 6,
+      "pax": "约100万",
+      "distance": "50 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接怀特普莱恩斯车站"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾停车",
+          "desc": "I-287/684 高速旁"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "商店"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "OKC",
+      "name": "俄克拉荷马城机场",
+      "nameEn": "Will Rogers World Airport",
+      "city": "俄克拉荷马城",
+      "country": "US",
+      "desc": "俄克拉荷马州主要机场，单座主航站楼经大规模翻新，服务美国国内航线为主。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "A–C 廊",
+          "gates": 17,
+          "airlines": "美航、联航、达美等国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 17,
+      "pax": "约450万",
+      "distance": "11 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾停车",
+          "desc": "航站楼前停车场"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "商店"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "LAX",
+      "name": "洛杉矶国际机场",
+      "nameEn": "Los Angeles International Airport",
+      "city": "洛杉矶",
+      "country": "US",
+      "desc": "美国西海岸最大门户，世界级枢纽，九座航站楼呈马蹄形分布，LAX 捷运系统连接新扩建的交通枢纽。",
+      "terminals": [
+        {
+          "code": "TB",
+          "name": "汤姆·布拉德利国际航站楼",
+          "gateRange": "A–H 廊",
+          "gates": 70,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "1–15",
+          "gates": 15,
+          "airlines": "西南航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T4",
+          "name": "4号航站楼",
+          "gateRange": "41–54",
+          "gates": 14,
+          "airlines": "美国航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T5",
+          "name": "5号航站楼",
+          "gateRange": "51–58",
+          "gates": 8,
+          "airlines": "达美航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T7",
+          "name": "7号航站楼",
+          "gateRange": "71–84",
+          "gates": 14,
+          "airlines": "美联航",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T8",
+          "name": "8号航站楼",
+          "gateRange": "81–90",
+          "gates": 10,
+          "airlines": "美联航",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 131,
+      "pax": "约7600万",
+      "distance": "27 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "LAX 捷运 + 地铁 K 线",
+          "desc": "连接市区与都会区"
+        },
+        {
+          "icon": "bus",
+          "name": "FlyAway 快线",
+          "desc": "直达市中心/好莱坞等"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "分层候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾",
+          "desc": "405 高速直达"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "SFO",
+      "name": "旧金山国际机场",
+      "nameEn": "San Francisco International Airport",
+      "city": "旧金山",
+      "country": "US",
+      "desc": "美联航跨太平洋枢纽，四座航站楼布局高效，BART 城铁直达旧金山市区。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–B 廊",
+          "gates": 25,
+          "airlines": "阿拉斯加航空等",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "C–D 廊",
+          "gates": 17,
+          "airlines": "美联航等",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "E–F 廊",
+          "gates": 27,
+          "airlines": "美联航",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        },
+        {
+          "code": "G",
+          "name": "国际航站楼 G 厅",
+          "gateRange": "G1–G14",
+          "gates": 14,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        }
+      ],
+      "gates": 83,
+      "pax": "约5400万",
+      "distance": "21 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "BART 城铁",
+          "desc": "约 30 分钟直达市区"
+        },
+        {
+          "icon": "train",
+          "name": "机场捷运 AirTrain",
+          "desc": "连接各航站楼与租车中心"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接旧金山各区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "ORD",
+      "name": "芝加哥奥黑尔国际机场",
+      "nameEn": "O'Hare International Airport",
+      "city": "芝加哥",
+      "country": "US",
+      "desc": "美国最繁忙枢纽之一、全球航线网络中心，美联航与美国航空双基地，地铁蓝线 40 分钟直达市中心。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "B–C 廊",
+          "gates": 50,
+          "airlines": "美联航",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "E–F 廊",
+          "gates": 28,
+          "airlines": "达美航空等",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "G–K 廊",
+          "gates": 45,
+          "airlines": "美国航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T5",
+          "name": "5号航站楼",
+          "gateRange": "M 廊",
+          "gates": 20,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 143,
+      "pax": "约7300万",
+      "distance": "27 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁蓝线",
+          "desc": "约 40 分钟直达市中心"
+        },
+        {
+          "icon": "train",
+          "name": "机场捷运",
+          "desc": "航站楼间免费接驳"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接芝加哥各区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "IAD",
+      "name": "华盛顿杜勒斯国际机场",
+      "nameEn": "Washington Dulles International Airport",
+      "city": "华盛顿",
+      "country": "US",
+      "desc": "华盛顿都会区主要国际门户，主楼加四条空中廊道的独特布局，银线地铁直达市区。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "值机大厅",
+          "gates": 0,
+          "airlines": "全部航司值机/安检",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "A",
+          "name": "A 廊道",
+          "gateRange": "A1–A14",
+          "gates": 14,
+          "airlines": "美联航",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "name": "B 廊道",
+          "gateRange": "B1–B14",
+          "gates": 14,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "name": "C 廊道",
+          "gateRange": "C1–C12",
+          "gates": 12,
+          "airlines": "美联航",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "D",
+          "name": "D 廊道",
+          "gateRange": "D1–D8",
+          "gates": 8,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        }
+      ],
+      "gates": 48,
+      "pax": "约2800万",
+      "distance": "42 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "银线地铁",
+          "desc": "直达华盛顿市中心"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接华盛顿各区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "SEA",
+      "name": "西雅图-塔科马国际机场",
+      "nameEn": "Seattle–Tacoma International Airport",
+      "city": "西雅图",
+      "country": "US",
+      "desc": "美国西北门户，阿拉斯加航空枢纽，主航站楼加南北卫星厅，轻轨 1 号线直达市中心。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "A–D 廊",
+          "gates": 32,
+          "airlines": "阿拉斯加航空及国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "name": "北卫星厅",
+          "gateRange": "N1–N20",
+          "gates": 20,
+          "airlines": "达美航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "name": "南卫星厅",
+          "gateRange": "S1–S16",
+          "gates": 16,
+          "airlines": "阿拉斯加航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 68,
+      "pax": "约5200万",
+      "distance": "21 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "轻轨1号线",
+          "desc": "直达西雅图市中心"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接都会区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "ATL",
+      "name": "哈茨菲尔德-杰克逊亚特兰大国际机场",
+      "nameEn": "Hartsfield–Jackson Atlanta International Airport",
+      "city": "亚特兰大",
+      "country": "US",
+      "desc": "全球最繁忙机场（年旅客量常年居首），主航站楼加 T/A–E 五条廊道，机场捷运贯穿全程。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "值机/到达",
+          "gates": 0,
+          "airlines": "全部航司值机/行李",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T",
+          "name": "T 廊道",
+          "gateRange": "T1–T8",
+          "gates": 8,
+          "airlines": "达美航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "A",
+          "name": "A 廊道",
+          "gateRange": "A1–A34",
+          "gates": 34,
+          "airlines": "达美航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "name": "B 廊道",
+          "gateRange": "B1–B34",
+          "gates": 34,
+          "airlines": "达美航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "name": "C 廊道",
+          "gateRange": "C1–C36",
+          "gates": 36,
+          "airlines": "达美航空",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "D",
+          "name": "D 廊道",
+          "gateRange": "D1–D28",
+          "gates": 28,
+          "airlines": "多家航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "E",
+          "name": "E 廊道（国际）",
+          "gateRange": "E1–E36",
+          "gates": 36,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 176,
+      "pax": "约1.08亿",
+      "distance": "14 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁红/金线",
+          "desc": "直达亚特兰大市中心"
+        },
+        {
+          "icon": "train",
+          "name": "机场捷运",
+          "desc": "主楼与廊道间快速接驳"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接都会区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "MIA",
+      "name": "迈阿密国际机场",
+      "nameEn": "Miami International Airport",
+      "city": "迈阿密",
+      "country": "US",
+      "desc": "美国通往拉美与加勒比的门户，美国航空枢纽，三座航站楼布局开阔，MIA Mover 连接租车中心。",
+      "terminals": [
+        {
+          "code": "N",
+          "name": "北航站楼",
+          "gateRange": "D–E 廊",
+          "gates": 50,
+          "airlines": "美国航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "name": "中央航站楼",
+          "gateRange": "F–H 廊",
+          "gates": 40,
+          "airlines": "多家国际航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "name": "南航站楼",
+          "gateRange": "J–K 廊",
+          "gates": 30,
+          "airlines": "国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 120,
+      "pax": "约5000万",
+      "distance": "11 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "MIA Mover + 地铁橙线",
+          "desc": "连接市中心"
+        },
+        {
+          "icon": "train",
+          "name": "三县铁路 Tri-Rail",
+          "desc": "连接南佛州"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接迈阿密各区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "YYZ",
+      "name": "多伦多皮尔逊国际机场",
+      "nameEn": "Toronto Pearson International Airport",
+      "city": "多伦多",
+      "country": "CA",
+      "desc": "加拿大最繁忙机场，加航枢纽，两座航站楼由终端线捷运连接，UP Express 25 分钟直达市中心。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–E 廊",
+          "gates": 60,
+          "airlines": "加拿大航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "F–K 廊",
+          "gates": 40,
+          "airlines": "西捷航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 100,
+      "pax": "约4600万",
+      "distance": "22 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "UP Express",
+          "desc": "约 25 分钟直达联合车站"
+        },
+        {
+          "icon": "train",
+          "name": "终端线捷运",
+          "desc": "T1/T3 间免费接驳"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "GO 巴士连接都会区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "YVR",
+      "name": "温哥华国际机场",
+      "nameEn": "Vancouver International Airport",
+      "city": "温哥华",
+      "country": "CA",
+      "desc": "加拿大西海岸门户，多次获评北美最佳机场，主楼以原住民艺术为特色，天车加拿大线直达市中心。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "主航站楼",
+          "gateRange": "A–E 廊",
+          "gates": 48,
+          "airlines": "加拿大航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "name": "南航站楼",
+          "gateRange": "F 廊",
+          "gates": 10,
+          "airlines": "支线与通勤航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 58,
+      "pax": "约2900万",
+      "distance": "12 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "天车加拿大线",
+          "desc": "约 25 分钟直达市中心"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接都会区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "GRU",
+      "name": "圣保罗瓜鲁柳斯国际机场",
+      "nameEn": "São Paulo/Guarulhos International Airport",
+      "city": "圣保罗",
+      "country": "BR",
+      "desc": "南美洲最繁忙机场，拉美航空枢纽，三座航站楼服务巴西国内外航线。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–B 廊",
+          "gates": 20,
+          "airlines": "巴西航空工业等区域航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "C–D 廊",
+          "gates": 30,
+          "airlines": "南美航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "E–F 廊",
+          "gates": 35,
+          "airlines": "多家国际航司",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 85,
+      "pax": "约4400万",
+      "distance": "25 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "机场快线巴士",
+          "desc": "连接市中心"
+        },
+        {
+          "icon": "train",
+          "name": "圣保罗城铁",
+          "desc": "机场专线连接市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "SYD",
+      "name": "悉尼金斯福德·史密斯机场",
+      "nameEn": "Sydney Kingsford Smith Airport",
+      "city": "悉尼",
+      "country": "AU",
+      "desc": "澳大利亚最大国际门户，三座航站楼分工明确，机场线火车约 15 分钟直达悉尼市中心。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "国际航站楼",
+          "gateRange": "A–B 廊",
+          "gates": 40,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "C–D 廊",
+          "gates": 25,
+          "airlines": "维珍澳洲及国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "E–F 廊",
+          "gates": 20,
+          "airlines": "澳洲航空国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        }
+      ],
+      "gates": 85,
+      "pax": "约4400万",
+      "distance": "8 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "机场线火车",
+          "desc": "约 15 分钟直达市中心"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接悉尼各区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "AKL",
+      "name": "奥克兰机场",
+      "nameEn": "Auckland Airport",
+      "city": "奥克兰",
+      "country": "NZ",
+      "desc": "新西兰最大机场，国际与国内航站楼步行相连，SkyBus 巴士直达奥克兰市中心。",
+      "terminals": [
+        {
+          "code": "I",
+          "name": "国际航站楼",
+          "gateRange": "1–20",
+          "gates": 20,
+          "airlines": "新西兰航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "D",
+          "name": "国内航站楼",
+          "gateRange": "A–F 廊",
+          "gates": 15,
+          "airlines": "新西兰航空等国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "商店"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 35,
+      "pax": "约1800万",
+      "distance": "21 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "SkyBus",
+          "desc": "约 30 分钟直达市中心"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾",
+          "desc": "SH20 高速直达"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "CPT",
+      "name": "开普敦国际机场",
+      "nameEn": "Cape Town International Airport",
+      "city": "开普敦",
+      "country": "ZA",
+      "desc": "南非第二大机场，非洲最受欢迎的旅行目的地门户之一，中央航站楼设计明亮通透。",
+      "terminals": [
+        {
+          "code": "M",
+          "name": "中央航站楼",
+          "gateRange": "A–E 廊",
+          "gates": 28,
+          "airlines": "南非航空及国际/国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        }
+      ],
+      "gates": 28,
+      "pax": "约1100万",
+      "distance": "20 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "MyCiTi 巴士",
+          "desc": "连接市中心"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾",
+          "desc": "N2 高速直达"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "CAI",
+      "name": "开罗国际机场",
+      "nameEn": "Cairo International Airport",
+      "city": "开罗",
+      "country": "EG",
+      "desc": "埃及和非洲主要航空枢纽，三座航站楼服务尼罗河谷的国际与国内航线。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–D 廊",
+          "gates": 25,
+          "airlines": "埃及航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "E–F 廊",
+          "gates": 15,
+          "airlines": "国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            }
+          ]
+        },
+        {
+          "code": "T3",
+          "name": "3号航站楼",
+          "gateRange": "G–H 廊",
+          "gates": 20,
+          "airlines": "埃及航空及国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 60,
+      "pax": "约2700万",
+      "distance": "22 km",
+      "transit": [
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接开罗市区"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        },
+        {
+          "icon": "car",
+          "name": "自驾",
+          "desc": "机场高速直达"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    },
+    {
+      "iata": "MEX",
+      "name": "墨西哥城国际机场",
+      "nameEn": "Mexico City International Airport",
+      "city": "墨西哥城",
+      "country": "MX",
+      "desc": "墨西哥最繁忙机场、拉美重要枢纽，两座航站楼服务国内外航线，地铁连接墨西哥城中心。",
+      "terminals": [
+        {
+          "code": "T1",
+          "name": "1号航站楼",
+          "gateRange": "A–E 廊",
+          "gates": 35,
+          "airlines": "墨西哥航空及国际航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "food",
+              "label": "餐饮"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "2号航站楼",
+          "gateRange": "F–J 廊",
+          "gates": 25,
+          "airlines": "墨西哥航空及国内航班",
+          "facilities": [
+            {
+              "icon": "shop",
+              "label": "免税店"
+            },
+            {
+              "icon": "lounge",
+              "label": "贵宾室"
+            },
+            {
+              "icon": "wifi",
+              "label": "免费WiFi"
+            }
+          ]
+        }
+      ],
+      "gates": 60,
+      "pax": "约5000万",
+      "distance": "6 km",
+      "transit": [
+        {
+          "icon": "train",
+          "name": "地铁5号线",
+          "desc": "连接墨西哥城中心"
+        },
+        {
+          "icon": "bus",
+          "name": "机场巴士",
+          "desc": "连接市区各区域"
+        },
+        {
+          "icon": "taxi",
+          "name": "出租车",
+          "desc": "定点候车区"
+        }
+      ],
+      "facilities": [
+        {
+          "icon": "shop",
+          "label": "免税购物"
+        },
+        {
+          "icon": "lounge",
+          "label": "贵宾休息室"
+        },
+        {
+          "icon": "wifi",
+          "label": "免费WiFi"
+        },
+        {
+          "icon": "currency",
+          "label": "货币兑换"
+        },
+        {
+          "icon": "baggage",
+          "label": "行李寄存"
+        },
+        {
+          "icon": "medical",
+          "label": "医务室"
+        },
+        {
+          "icon": "food",
+          "label": "餐饮美食"
+        },
+        {
+          "icon": "parking",
+          "label": "停车场"
+        }
+      ]
+    }
+  ]
+}

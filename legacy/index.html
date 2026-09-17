@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球机场地图 — 探索机场和航站楼地图</title>
+<meta name="description" content="浏览按国家和地区组织的全球机场航站楼地图。从主要国际枢纽到区域机场，查看登机口、值机区、行李提取处、商店、餐厅、贵宾室和地面交通的详细布局。">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap">
+<style>
+/* ============ 设计系统 ============ */
+:root{
+  --navy-950:#061A2E;
+  --navy-900:#0A2A43;
+  --navy-800:#0F3454;
+  --navy-700:#16406A;
+  --sky-600:#25699C;
+  --sky-500:#2E7DB3;
+  --sky-400:#54A0CC;
+  --sky-100:#DCECF7;
+  --amber:#F2A33C;
+  --amber-soft:#FBE3C0;
+  --paper:#F4F8FB;
+  --card:#FFFFFF;
+  --line:#D8E4EE;
+  --ink:#16324B;
+  --ink-soft:#5E768A;
+  --ink-faint:#8CA2B5;
+  --white:#FFFFFF;
+  --shadow-sm:0 1px 2px rgba(10,42,67,.06),0 2px 8px rgba(10,42,67,.05);
+  --shadow-md:0 4px 16px rgba(10,42,67,.10);
+  --shadow-lg:0 12px 32px rgba(10,42,67,.16);
+  --radius:14px;
+  --radius-sm:9px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:15px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+::-webkit-scrollbar{width:10px;height:10px;}
+::-webkit-scrollbar-thumb{background:#B9CDDC;border-radius:6px;}
+::-webkit-scrollbar-track{background:transparent;}
+
+.display{
+  font-family:"Oswald","Noto Sans SC",sans-serif;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+
+/* ============ 顶部导航 ============ */
+.topbar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(10,42,67,.97);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  color:var(--white);
+}
+.topbar-inner{
+  max-width:1240px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;gap:28px;height:64px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none;}
+.brand-mark{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,var(--sky-400),var(--navy-700));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset;
+}
+.brand-name{font-weight:700;font-size:16.5px;letter-spacing:.01em;}
+.brand-name em{font-style:normal;color:var(--amber);}
+.topnav{display:flex;align-items:center;gap:4px;flex:none;}
+.topnav a{
+  padding:8px 12px;border-radius:8px;font-size:14px;color:rgba(255,255,255,.82);
+  transition:background .15s,color .15s;white-space:nowrap;
+}
+.topnav a:hover{background:rgba(255,255,255,.10);color:#fff;}
+.topnav a.active{background:var(--amber);color:var(--navy-900);font-weight:600;}
+.top-search{margin-left:auto;position:relative;width:280px;flex:none;}
+.top-search input{
+  width:100%;height:38px;border-radius:19px;border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.10);color:#fff;padding:0 40px 0 16px;font-size:14px;
+  outline:none;transition:background .15s,border .15s;font-family:inherit;
+}
+.top-search input::placeholder{color:rgba(255,255,255,.55);}
+.top-search input:focus{background:rgba(255,255,255,.18);border-color:var(--amber);}
+.top-search svg{position:absolute;right:13px;top:9px;pointer-events:none;opacity:.7;}
+.suggest{
+  position:absolute;top:46px;left:0;right:0;background:#fff;color:var(--ink);
+  border-radius:12px;box-shadow:var(--shadow-lg);overflow:hidden;display:none;
+  max-height:380px;overflow-y:auto;z-index:120;
+}
+.suggest.open{display:block;}
+.suggest-item{
+  display:flex;align-items:center;gap:12px;padding:10px 14px;cursor:pointer;
+  transition:background .12s;
+}
+.suggest-item:hover{background:var(--sky-100);}
+.suggest-item .iata{
+  font-family:"Oswald",sans-serif;font-weight:600;font-size:17px;color:var(--navy-800);
+  width:52px;flex:none;letter-spacing:.03em;
+}
+.suggest-item .nm{flex:1;min-width:0;}
+.suggest-item .nm b{display:block;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.suggest-item .nm span{display:block;font-size:12px;color:var(--ink-soft);}
+.suggest-item .flag{width:26px;height:17px;object-fit:cover;border-radius:3px;flex:none;box-shadow:0 0 0 1px rgba(10,42,67,.10);}
+.suggest-empty{padding:16px;text-align:center;color:var(--ink-soft);font-size:13px;}
+
+/* ============ 英雄区 ============ */
+.hero{
+  position:relative;color:#fff;overflow:hidden;
+  background:var(--navy-900);
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  opacity:.62;
+}
+.hero-veil{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(6,26,46,.74) 0%,rgba(10,42,67,.52) 55%,var(--navy-900) 100%);
+}
+.hero-inner{
+  position:relative;max-width:1240px;margin:0 auto;padding:92px 24px 72px;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:"Oswald",sans-serif;font-size:13px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:22px;
+}
+.hero-eyebrow::before{content:"";width:34px;height:2px;background:var(--amber);}
+.hero h1{
+  font-size:clamp(34px,5.2vw,58px);
+  font-weight:900;line-height:1.18;letter-spacing:.01em;
+  max-width:760px;text-wrap:balance;
+}
+.hero h1 .accent{color:var(--amber);}
+.hero-sub{
+  margin-top:18px;font-size:16.5px;color:rgba(255,255,255,.82);
+  max-width:620px;font-weight:300;
+}
+.hero-search{
+  margin-top:34px;max-width:660px;position:relative;
+}
+.hero-search input{
+  width:100%;height:60px;border-radius:30px;border:none;outline:none;
+  background:#fff;color:var(--ink);font-size:16.5px;padding:0 148px 0 26px;
+  box-shadow:var(--shadow-lg);font-family:inherit;
+}
+.hero-search input::placeholder{color:var(--ink-faint);}
+.hero-search .suggest.hero-suggest{top:68px;color:var(--ink);}
+.hero-search .suggest.hero-suggest .suggest-empty{color:var(--ink-soft);}
+.hero-search button{
+  position:absolute;right:6px;top:6px;bottom:6px;padding:0 26px;
+  border-radius:24px;background:var(--amber);color:var(--navy-900);
+  font-weight:700;font-size:15.5px;letter-spacing:.04em;
+  transition:filter .15s;
+}
+.hero-search button:hover{filter:brightness(1.06);}
+.hero-stats{
+  margin-top:44px;display:flex;gap:0;flex-wrap:wrap;
+  border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);
+  background:rgba(255,255,255,.06);backdrop-filter:blur(4px);
+  max-width:560px;overflow:hidden;
+}
+.hero-stat{flex:1;min-width:130px;padding:18px 22px;border-right:1px solid rgba(255,255,255,.14);}
+.hero-stat:last-child{border-right:none;}
+.hero-stat .num{
+  font-family:"Oswald",sans-serif;font-size:32px;font-weight:600;color:#fff;line-height:1.1;
+}
+.hero-stat .num em{font-style:normal;color:var(--amber);}
+.hero-stat .lbl{font-size:12.5px;color:rgba(255,255,255,.68);margin-top:3px;letter-spacing:.04em;}
+.hero-map-deco{
+  position:absolute;right:28px;bottom:64px;width:340px;opacity:.9;
+  filter:drop-shadow(0 12px 40px rgba(0,0,0,.35));
+  pointer-events:none;
+}
+@media(max-width:1100px){.hero-map-deco{display:none;}}
+
+/* ============ 通用区块 ============ */
+.section{max-width:1240px;margin:0 auto;padding:64px 24px 8px;}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:28px;}
+.section-kicker{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:"Oswald",sans-serif;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--sky-600);margin-bottom:8px;font-weight:600;
+}
+.section-kicker::before{content:"";width:26px;height:2px;background:var(--amber);}
+.section-title{font-size:27px;font-weight:900;letter-spacing:.01em;color:var(--navy-900);}
+.section-title .en{
+  font-family:"Oswald",sans-serif;font-weight:500;font-size:15px;color:var(--ink-faint);
+  letter-spacing:.14em;text-transform:uppercase;margin-left:12px;
+}
+.section-more{
+  font-size:14px;color:var(--sky-600);font-weight:600;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:6px;transition:gap .15s;
+}
+.section-more:hover{gap:10px;}
+
+/* ============ 热门机场城市 ============ */
+.popular-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+.popular-card{
+  position:relative;border-radius:var(--radius);overflow:hidden;
+  background:var(--navy-900);color:#fff;min-height:236px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:20px;cursor:pointer;
+  box-shadow:var(--shadow-sm);transition:transform .18s,box-shadow .18s;
+  isolation:isolate;
+}
+.popular-card::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(120% 90% at 85% -10%,rgba(46,125,179,.55) 0%,transparent 55%),
+    radial-gradient(90% 70% at 10% 110%,rgba(242,163,60,.16) 0%,transparent 55%);
+}
+.popular-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.popular-rank{
+  position:absolute;top:14px;left:16px;
+  font-family:"Oswald",sans-serif;font-size:13px;font-weight:600;color:var(--amber);
+  letter-spacing:.18em;
+}
+.popular-card .iata{
+  font-family:"Oswald",sans-serif;font-size:40px;font-weight:600;line-height:1;
+  color:rgba(255,255,255,.96);letter-spacing:.02em;margin-bottom:8px;
+}
+.popular-card .city{font-size:16px;font-weight:700;}
+.popular-card .airport{font-size:12.5px;color:rgba(255,255,255,.66);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.popular-card .go{
+  margin-top:14px;display:inline-flex;align-items:center;gap:6px;
+  font-size:12.5px;font-weight:600;color:var(--amber);letter-spacing:.05em;
+}
+.popular-card .go svg{transition:transform .15s;}
+.popular-card:hover .go svg{transform:translateX(4px);}
+
+/* ============ 最近更新 ============ */
+.update-list{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow-sm);
+  overflow:hidden;border:1px solid var(--line);
+}
+.update-row{
+  display:flex;align-items:center;gap:16px;padding:15px 22px;
+  border-bottom:1px solid var(--line);cursor:pointer;transition:background .13s;
+}
+.update-row:last-child{border-bottom:none;}
+.update-row:hover{background:var(--sky-100);}
+.update-no{
+  font-family:"Oswald",sans-serif;font-size:14px;color:var(--ink-faint);
+  width:30px;flex:none;font-weight:500;
+}
+.update-iata{
+  font-family:"Oswald",sans-serif;font-weight:600;font-size:20px;color:var(--navy-800);
+  width:78px;flex:none;letter-spacing:.04em;
+}
+.update-name{flex:1;min-width:0;}
+.update-name b{display:block;font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.update-name span{font-size:12.5px;color:var(--ink-soft);}
+.update-flag{width:34px;height:22px;object-fit:cover;border-radius:4px;flex:none;box-shadow:0 0 0 1px rgba(10,42,67,.10);}
+.update-tag{
+  flex:none;font-size:11.5px;font-weight:600;color:var(--sky-600);
+  background:var(--sky-100);padding:4px 10px;border-radius:20px;letter-spacing:.05em;
+}
+
+/* ============ 国家网格 ============ */
+.country-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;}
+.country-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;display:flex;align-items:center;gap:14px;cursor:pointer;
+  transition:transform .16s,box-shadow .16s,border-color .16s;
+}
+.country-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--sky-400);}
+.country-flag{
+  width:52px;height:34px;object-fit:cover;border-radius:6px;flex:none;
+  box-shadow:0 0 0 1px rgba(10,42,67,.10),var(--shadow-sm);
+}
+.country-info{flex:1;min-width:0;}
+.country-info b{display:block;font-size:15.5px;font-weight:700;color:var(--navy-900);}
+.country-info span{font-size:12.5px;color:var(--ink-soft);}
+.country-card .cnt{
+  font-family:"Oswald",sans-serif;font-size:15px;font-weight:600;color:var(--sky-600);
+  background:var(--sky-100);border-radius:16px;padding:3px 10px;flex:none;
+}
+
+/* ============ 全部机场列表 ============ */
+.airport-table{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);overflow:hidden;
+}
+.table-head,.airport-row{
+  display:grid;grid-template-columns:92px 1.5fr 1fr 1fr 96px 92px;gap:16px;align-items:center;
+  padding:14px 22px;
+}
+.table-head{
+  background:var(--navy-900);color:rgba(255,255,255,.78);
+  font-size:12px;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;font-family:"Oswald",sans-serif;
+}
+.airport-row{border-bottom:1px solid var(--line);cursor:pointer;transition:background .12s;}
+.airport-row:last-child{border-bottom:none;}
+.airport-row:hover{background:var(--sky-100);}
+.airport-row .iata{
+  font-family:"Oswald",sans-serif;font-weight:600;font-size:20px;color:var(--navy-800);letter-spacing:.04em;
+}
+.airport-row .nm b{display:block;font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.airport-row .nm span{font-size:12px;color:var(--ink-soft);}
+.airport-row .flag{width:30px;height:20px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(10,42,67,.10);}
+.airport-row .meta{font-size:13px;color:var(--ink-soft);}
+.airport-row .btn{
+  font-size:13px;font-weight:600;color:var(--sky-600);text-align:right;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:5px;justify-content:flex-end;
+}
+.airport-row .btn svg{transition:transform .15s;}
+.airport-row:hover .btn svg{transform:translateX(3px);}
+@media(max-width:860px){
+  .table-head{display:none;}
+  .airport-row{grid-template-columns:70px 1fr auto;padding:13px 18px;}
+  .airport-row .meta{display:none;}
+}
+
+/* ============ 页脚 ============ */
+.footer{margin-top:72px;background:var(--navy-950);color:rgba(255,255,255,.78);}
+.footer-inner{max-width:1240px;margin:0 auto;padding:52px 24px 30px;}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-bottom:36px;}
+.footer h4{
+  font-family:"Oswald",sans-serif;font-size:13px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:14px;font-weight:600;
+}
+.footer p{font-size:13.5px;line-height:1.8;color:rgba(255,255,255,.62);}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.10);padding-top:22px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12.5px;color:rgba(255,255,255,.45);
+}
+.footer-bottom .brand-name{font-size:14px;}
+@media(max-width:760px){.footer-cols{grid-template-columns:1fr;gap:24px;}}
+
+/* ============ 国家页 ============ */
+.page-head{
+  background:var(--navy-900);color:#fff;
+  background-image:radial-gradient(90% 130% at 85% -20%,rgba(46,125,179,.5) 0%,transparent 60%);
+}
+.page-head-inner{max-width:1240px;margin:0 auto;padding:46px 24px 40px;}
+.crumb{
+  display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.62);
+  margin-bottom:22px;
+}
+.crumb a:hover{color:var(--amber);}
+.crumb .sep{opacity:.5;}
+.country-hero{display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
+.country-hero .flag{
+  width:96px;height:64px;object-fit:cover;border-radius:10px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.18),var(--shadow-lg);
+}
+.country-hero h1{font-size:34px;font-weight:900;letter-spacing:.01em;}
+.country-hero .sub{font-size:14px;color:rgba(255,255,255,.66);margin-top:6px;}
+.country-hero .iata-chip{
+  font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.18em;color:var(--amber);
+  border:1px solid rgba(242,163,60,.45);padding:5px 12px;border-radius:20px;margin-top:10px;display:inline-block;
+}
+.country-airports{max-width:1240px;margin:0 auto;padding:46px 24px 20px;}
+.cairport-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.cairport-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;cursor:pointer;transition:transform .16s,box-shadow .16s,border-color .16s;
+  display:flex;flex-direction:column;gap:4px;
+}
+.cairport-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--sky-400);}
+.cairport-card .top{display:flex;align-items:center;gap:14px;}
+.cairport-card .iata{
+  font-family:"Oswald",sans-serif;font-size:30px;font-weight:600;color:var(--navy-800);line-height:1;
+}
+.cairport-card .nm b{display:block;font-size:15.5px;font-weight:700;}
+.cairport-card .nm span{font-size:12.5px;color:var(--ink-soft);}
+.cairport-card .facts{
+  display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;
+}
+.cairport-card .fact{
+  font-size:12px;color:var(--ink-soft);background:var(--paper);
+  border:1px solid var(--line);border-radius:20px;padding:3px 10px;
+}
+.cairport-card .foot{
+  margin-top:14px;display:flex;align-items:center;justify-content:space-between;
+  border-top:1px dashed var(--line);padding-top:12px;
+}
+.cairport-card .map-mini{color:var(--sky-600);font-weight:600;font-size:13px;display:inline-flex;align-items:center;gap:5px;}
+.cairport-card .map-mini svg{transition:transform .15s;}
+.cairport-card:hover .map-mini svg{transform:translateX(3px);}
+.cairport-card .zone{
+  font-family:"Oswald",sans-serif;font-size:11.5px;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase;
+}
+
+/* ============ 机场详情页 ============ */
+.ap-head{
+  background:var(--navy-900);color:#fff;
+  background-image:
+    radial-gradient(80% 120% at 90% -30%,rgba(46,125,179,.5) 0%,transparent 55%),
+    radial-gradient(60% 90% at 0% 120%,rgba(242,163,60,.13) 0%,transparent 50%);
+}
+.ap-head-inner{max-width:1240px;margin:0 auto;padding:44px 24px 38px;}
+.ap-title-row{display:flex;align-items:flex-start;gap:28px;flex-wrap:wrap;}
+.ap-iata{
+  font-family:"Oswald",sans-serif;font-size:72px;font-weight:600;line-height:1;
+  color:var(--amber);letter-spacing:.04em;text-shadow:0 4px 24px rgba(242,163,60,.28);
+  flex:none;
+}
+.ap-title{flex:1;min-width:260px;padding-top:4px;}
+.ap-title h1{font-size:29px;font-weight:900;line-height:1.25;}
+.ap-title .city{font-size:14.5px;color:rgba(255,255,255,.68);margin-top:6px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.ap-title .city .flag{width:26px;height:17px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(255,255,255,.2);}
+.ap-facts{
+  margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+}
+.ap-fact{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius-sm);padding:14px 16px;
+}
+.ap-fact .num{font-family:"Oswald",sans-serif;font-size:24px;font-weight:600;line-height:1.1;}
+.ap-fact .lbl{font-size:12px;color:rgba(255,255,255,.6);margin-top:3px;letter-spacing:.04em;}
+@media(max-width:760px){.ap-facts{grid-template-columns:repeat(2,1fr);}}
+
+.ap-body{max-width:1240px;margin:0 auto;padding:44px 24px 10px;}
+.ap-desc{font-size:15px;color:var(--ink);max-width:860px;line-height:1.85;margin-bottom:6px;}
+
+/* ============ 航站楼平面示意图 ============ */
+.map-panel{
+  background:var(--navy-900);border-radius:20px;padding:26px 26px 20px;
+  margin:30px 0;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
+}
+.map-panel::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(100% 80% at 85% -20%,rgba(46,125,179,.35) 0%,transparent 60%);
+}
+.map-panel-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;position:relative;z-index:2;}
+.map-panel-title{
+  display:flex;align-items:center;gap:12px;color:#fff;
+  font-family:"Oswald",sans-serif;font-size:14px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+}
+.map-panel-title .dot{width:10px;height:10px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(242,163,60,.22);}
+.map-panel-note{font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.06em;}
+.map-svg-wrap{position:relative;z-index:2;overflow-x:auto;border-radius:12px;}
+.map-svg-wrap svg{display:block;width:100%;height:auto;min-width:640px;background:var(--navy-950);border-radius:12px;}
+.map-legend{
+  display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;position:relative;z-index:2;
+}
+.map-legend-item{display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,255,255,.66);}
+.map-legend-item .sw{width:14px;height:14px;border-radius:4px;display:inline-block;}
+
+/* ============ 航站楼信息 ============ */
+.terminal-list{display:flex;flex-direction:column;gap:14px;margin:26px 0 8px;}
+.terminal-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;display:flex;gap:20px;align-items:flex-start;
+  transition:border-color .15s,box-shadow .15s;
+}
+.terminal-card:hover{border-color:var(--sky-400);box-shadow:var(--shadow-md);}
+.terminal-badge{
+  flex:none;width:74px;height:74px;border-radius:14px;
+  background:var(--navy-900);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:"Oswald",sans-serif;font-size:24px;font-weight:600;letter-spacing:.03em;
+  box-shadow:var(--shadow-md);
+}
+.terminal-badge.gates{background:var(--amber);color:var(--navy-900);}
+.terminal-main{flex:1;min-width:0;}
+.terminal-main h3{font-size:16.5px;font-weight:700;color:var(--navy-900);}
+.terminal-main .gates{
+  font-family:"Oswald",sans-serif;font-size:13px;letter-spacing:.08em;color:var(--sky-600);
+  margin-top:3px;font-weight:500;
+}
+.terminal-main .airlines{font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.7;}
+.terminal-main .airlines b{color:var(--ink);font-weight:600;}
+.terminal-fac{
+  flex:none;display:flex;flex-direction:column;gap:8px;padding-left:20px;border-left:1px dashed var(--line);
+}
+.terminal-fac span{
+  display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-soft);white-space:nowrap;
+}
+.terminal-fac svg{color:var(--sky-500);flex:none;}
+@media(max-width:760px){
+  .terminal-card{flex-wrap:wrap;}
+  .terminal-fac{border-left:none;padding-left:0;flex-direction:row;flex-wrap:wrap;}
+}
+
+/* ============ 交通与设施 ============ */
+.two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;margin-top:26px;}
+@media(max-width:900px){.two-col{grid-template-columns:1fr;}}
+.info-panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow-sm);
+}
+.info-panel h3{
+  display:flex;align-items:center;gap:10px;font-size:16px;font-weight:700;color:var(--navy-900);
+  margin-bottom:18px;
+}
+.info-panel h3 svg{color:var(--sky-500);}
+.transit-list{display:flex;flex-direction:column;gap:12px;}
+.transit-row{display:flex;align-items:center;gap:14px;}
+.transit-icon{
+  width:42px;height:42px;border-radius:11px;background:var(--sky-100);color:var(--sky-600);
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+.transit-row b{display:block;font-size:14px;font-weight:600;}
+.transit-row span{font-size:12.5px;color:var(--ink-soft);}
+.fac-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.fac-item{
+  display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink);
+  background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px;
+}
+.fac-item svg{color:var(--sky-500);flex:none;}
+@media(max-width:480px){.fac-grid{grid-template-columns:1fr;}}
+
+/* ============ 页脚导航 / 相关机场 ============ */
+.related{max-width:1240px;margin:0 auto;padding:36px 24px 10px;}
+.related h3{font-size:19px;font-weight:700;color:var(--navy-900);margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.related h3 .en{font-family:"Oswald",sans-serif;font-weight:500;font-size:13px;color:var(--ink-faint);letter-spacing:.16em;text-transform:uppercase;}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.related-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:14px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;
+  transition:border-color .15s,transform .15s;
+}
+.related-card:hover{border-color:var(--sky-400);transform:translateY(-2px);}
+.related-card .iata{font-family:"Oswald",sans-serif;font-weight:600;font-size:17px;color:var(--navy-800);width:52px;flex:none;}
+.related-card .nm b{display:block;font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.related-card .nm span{font-size:12px;color:var(--ink-soft);}
+
+/* ============ 空态 / 回到顶部 ============ */
+.empty-state{text-align:center;padding:56px 24px;color:var(--ink-soft);}
+.empty-state .big{font-family:"Oswald",sans-serif;font-size:44px;color:var(--sky-100);font-weight:600;letter-spacing:.1em;}
+.empty-state p{margin-top:8px;font-size:14px;}
+.back-top{
+  position:fixed;right:26px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--navy-900);color:#fff;display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:opacity .2s;z-index:90;
+}
+.back-top.show{opacity:1;pointer-events:auto;}
+.back-top:hover{background:var(--navy-700);}
+.sec-sub{font-size:14px;color:var(--ink-soft);margin-top:6px;max-width:700px;}
+
+/* ============ 响应式 ============ */
+@media(max-width:1080px){
+  .popular-grid{grid-template-columns:repeat(3,1fr);}
+  .topnav a{padding:8px 9px;font-size:13.5px;}
+  .top-search{width:210px;}
+}
+@media(max-width:820px){
+  .top-search{display:none;}
+  .topnav{display:none;}
+  .topbar-inner{justify-content:space-between;}
+  .popular-grid{grid-template-columns:repeat(2,1fr);}
+  .section{padding-top:46px;}
+  .hero-inner{padding:64px 20px 52px;}
+  .hero h1{font-size:32px;}
+  .hero-search input{padding-right:120px;font-size:15px;}
+  .hero-search button{padding:0 18px;font-size:14px;}
+}
+@media(max-width:480px){
+  .popular-grid{grid-template-columns:1fr 1fr;gap:10px;}
+  .popular-card{min-height:190px;padding:15px;}
+  .popular-card .iata{font-size:30px;}
+  .country-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .airport-row{grid-template-columns:64px 1fr auto;}
+  .ap-iata{font-size:54px;}
+  .ap-title h1{font-size:23px;}
+  .hero-search button{display:none;}
+  .hero-search input{padding:0 22px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#/" data-nav="home">
+      <span class="brand-mark">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+      </span>
+      <span class="brand-name">全球机场<em>地图</em></span>
+    </a>
+    <nav class="topnav">
+      <a href="#/" data-nav="home">首页</a>
+      <a href="#/airports" data-nav="airports">全部机场</a>
+      <a href="#/countries" data-nav="countries">按国家浏览</a>
+      <a href="#/" data-nav="about" onclick="scrollToSection('about')">关于</a>
+    </nav>
+    <div class="top-search">
+      <input type="text" id="globalSearch" placeholder="搜索机场、城市或 IATA 代码" autocomplete="off" aria-label="搜索机场">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <div class="suggest" id="suggestBox"></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 视图容器 ===== -->
+<main id="view"></main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="footer" id="about">
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div>
+        <h4>详细航站楼地图</h4>
+        <p>导航世界各地的机场和航站楼可能很有挑战性。我们的机场地图提供航站楼、登机口、值机区、行李提取处、商店、餐厅、贵宾室和交通枢纽的详细布局，让您的旅行体验更顺畅。</p>
+      </div>
+      <div>
+        <h4>互动航站楼平面图</h4>
+        <p>主要国际机场拥有多个航站楼和复杂布局。我们的详细地图帮助您定位登机口、找到设施、规划转机，并高效地通过安检点、出发区和到达大厅。</p>
+      </div>
+      <div>
+        <h4>机场交通与出入信息</h4>
+        <p>除了航站楼布局，我们还整理了交通选项、停车信息和出入路线。找到到达登机口的最佳方式、在航站楼间转接，以及使用包括火车、巴士、出租车和租车在内的地面交通。</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="brand-name">全球机场<em style="color:var(--amber);font-style:normal;">地图</em></span>
+      <span>覆盖 37 个国家 / 地区 · 60 座机场 · 航站楼平面示意图</span>
+      <span>© 2026 Global Airport Maps</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+</button>
+
+<script>
+/* ================================================================
+   数据：国家与机场
+================================================================ */
+const COUNTRIES = {
+  CN:{name:"中国",nameEn:"China",region:"东亚",flag:"https://aka.doubaocdn.com/s/rgR05B2yzf"},
+  JP:{name:"日本",nameEn:"Japan",region:"东亚",flag:"https://aka.doubaocdn.com/s/sYaaFuImMw"},
+  KR:{name:"韩国",nameEn:"South Korea",region:"东亚",flag:"https://aka.doubaocdn.com/s/JLLJDxQwxb"},
+  SG:{name:"新加坡",nameEn:"Singapore",region:"东南亚",flag:"https://aka.doubaocdn.com/s/BVCFShzcKE"},
+  TH:{name:"泰国",nameEn:"Thailand",region:"东南亚",flag:"https://aka.doubaocdn.com/s/vsd79qHRzg"},
+  MY:{name:"马来西亚",nameEn:"Malaysia",region:"东南亚",flag:"https://aka.doubaocdn.com/s/ow8GuLviGS"},
+  VN:{name:"越南",nameEn:"Vietnam",region:"东南亚",flag:"https://aka.doubaocdn.com/s/ZQYUzlUW6X"},
+  ID:{name:"印度尼西亚",nameEn:"Indonesia",region:"东南亚",flag:"https://aka.doubaocdn.com/s/ard5QUVoZh"},
+  PH:{name:"菲律宾",nameEn:"Philippines",region:"东南亚",flag:"https://aka.doubaocdn.com/s/4OfdcVvrKN"},
+  IN:{name:"印度",nameEn:"India",region:"南亚",flag:"https://aka.doubaocdn.com/s/1ptWDXSeuD"},
+  UZ:{name:"乌兹别克斯坦",nameEn:"Uzbekistan",region:"中亚",flag:"https://aka.doubaocdn.com/s/LPDCN7pa0T"},
+  AE:{name:"阿联酋",nameEn:"United Arab Emirates",region:"中东",flag:"https://aka.doubaocdn.com/s/HpmzhlU5f6"},
+  QA:{name:"卡塔尔",nameEn:"Qatar",region:"中东",flag:"https://aka.doubaocdn.com/s/8pWo73Jrrv"},
+  SA:{name:"沙特阿拉伯",nameEn:"Saudi Arabia",region:"中东",flag:"https://aka.doubaocdn.com/s/HkE3Df8UGx"},
+  TR:{name:"土耳其",nameEn:"Türkiye",region:"中东 / 欧洲",flag:"https://aka.doubaocdn.com/s/GSotb3HUQ3"},
+  GB:{name:"英国",nameEn:"United Kingdom",region:"欧洲",flag:"https://aka.doubaocdn.com/s/vEZNUskZ30"},
+  FR:{name:"法国",nameEn:"France",region:"欧洲",flag:"https://aka.doubaocdn.com/s/hQll4xegfi"},
+  DE:{name:"德国",nameEn:"Germany",region:"欧洲",flag:"https://aka.doubaocdn.com/s/dGcV9VngPu"},
+  NL:{name:"荷兰",nameEn:"Netherlands",region:"欧洲",flag:"https://aka.doubaocdn.com/s/JJFETnfmzV"},
+  ES:{name:"西班牙",nameEn:"Spain",region:"欧洲",flag:"https://aka.doubaocdn.com/s/SMqISD8Um9"},
+  IT:{name:"意大利",nameEn:"Italy",region:"欧洲",flag:"https://aka.doubaocdn.com/s/0ZSeCDkHkH"},
+  CH:{name:"瑞士",nameEn:"Switzerland",region:"欧洲",flag:"https://aka.doubaocdn.com/s/eiwoYHkNRi"},
+  AT:{name:"奥地利",nameEn:"Austria",region:"欧洲",flag:"https://aka.doubaocdn.com/s/XX7ZacsPvY"},
+  PT:{name:"葡萄牙",nameEn:"Portugal",region:"欧洲",flag:"https://aka.doubaocdn.com/s/GPqKrJwRAv"},
+  IE:{name:"爱尔兰",nameEn:"Ireland",region:"欧洲",flag:"https://aka.doubaocdn.com/s/ddWFNTSdLX"},
+  SE:{name:"瑞典",nameEn:"Sweden",region:"欧洲",flag:"https://aka.doubaocdn.com/s/VZPoLRUzpt"},
+  DK:{name:"丹麦",nameEn:"Denmark",region:"欧洲",flag:"https://aka.doubaocdn.com/s/QxXQSAQegU"},
+  GR:{name:"希腊",nameEn:"Greece",region:"欧洲",flag:"https://aka.doubaocdn.com/s/naNegZV3Hl"},
+  RU:{name:"俄罗斯",nameEn:"Russia",region:"欧洲 / 亚洲",flag:"https://aka.doubaocdn.com/s/4EYKOACuUj"},
+  US:{name:"美国",nameEn:"United States",region:"北美洲",flag:"https://aka.doubaocdn.com/s/ufnuRwZSYJ"},
+  CA:{name:"加拿大",nameEn:"Canada",region:"北美洲",flag:"https://aka.doubaocdn.com/s/1cDxuSHUlm"},
+  MX:{name:"墨西哥",nameEn:"Mexico",region:"北美洲",flag:"https://aka.doubaocdn.com/s/M90pWyGQzv"},
+  BR:{name:"巴西",nameEn:"Brazil",region:"南美洲",flag:"https://aka.doubaocdn.com/s/BeHKVMJUaf"},
+  AU:{name:"澳大利亚",nameEn:"Australia",region:"大洋洲",flag:"https://aka.doubaocdn.com/s/euJK4omJlc"},
+  NZ:{name:"新西兰",nameEn:"New Zealand",region:"大洋洲",flag:"https://aka.doubaocdn.com/s/dosA2BfPZQ"},
+  ZA:{name:"南非",nameEn:"South Africa",region:"非洲",flag:"https://aka.doubaocdn.com/s/03QafhrY7K"},
+  EG:{name:"埃及",nameEn:"Egypt",region:"非洲",flag:"https://aka.doubaocdn.com/s/AiLmLhT0bF"}
+};
+
+const AIRPORTS = [
+  {iata:"PEK",name:"北京首都国际机场",nameEn:"Beijing Capital International Airport",city:"北京",country:"CN",
+   desc:"中国规模最大、最繁忙的国际门户机场之一，拥有三座航站楼与两条 4F 级跑道，是星空联盟和天合联盟多个枢纽的所在地。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A1–A8",gates:8,airlines:"海南航空及部分国内航司",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"B1–B12",gates:12,airlines:"天合联盟成员及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"C1–C32",gates:32,airlines:"星空联盟成员、国航国际/国内航班",facilities:[{icon:"lounge",label:"贵宾室"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"}]}
+   ],gates:52,pax:"约6700万",distance:"25 km",
+   transit:[{icon:"train",name:"地铁机场快线",desc:"首都机场线，连接东直门，约 25 分钟"},{icon:"bus",name:"机场巴士",desc:"覆盖市区主要区域"},{icon:"taxi",name:"出租车",desc:"航站楼出发层外即停"},{icon:"car",name:"自驾停车",desc:"P1–P8 多个停车场"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"PVG",name:"上海浦东国际机场",nameEn:"Shanghai Pudong International Airport",city:"上海",country:"CN",
+   desc:"中国最大的国际航空枢纽之一，拥有两座航站楼与两座卫星厅，连接全球 100 多个国际目的地，也是全球货运最繁忙的机场之一。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A1–A15",gates:15,airlines:"东航、上航及天合联盟国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"B1–B22",gates:22,airlines:"星空联盟、寰宇一家及国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"}]},
+     {code:"S1",name:"1号卫星厅",gateRange:"C1–C8",gates:8,airlines:"国际/港澳台航班远机位",facilities:[{icon:"lounge",label:"贵宾室"},{icon:"shop",label:"免税店"}]},
+     {code:"S2",name:"2号卫星厅",gateRange:"D1–D8",gates:8,airlines:"国际/港澳台航班远机位",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]}
+   ],gates:53,pax:"约6700万",distance:"40 km",
+   transit:[{icon:"train",name:"磁悬浮列车",desc:"连接龙阳路站，约 8 分钟"},{icon:"train",name:"地铁2号线",desc:"连接虹桥火车站与市区"},{icon:"bus",name:"机场巴士",desc:"多条线路覆盖全市"},{icon:"taxi",name:"出租车",desc:"24 小时运营"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"CAN",name:"广州白云国际机场",nameEn:"Guangzhou Baiyun International Airport",city:"广州",country:"CN",
+   desc:"粤港澳大湾区核心国际枢纽，两座航站楼加两条跑道，旅客吞吐量常年位居中国前列，南航的主运营基地。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A1–A26",gates:26,airlines:"南航及部分国内/国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"B1–B22",gates:22,airlines:"南航国际航班及多家外航",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"}]}
+   ],gates:48,pax:"约7600万",distance:"28 km",
+   transit:[{icon:"train",name:"地铁3号线",desc:"连接市区与广州南站"},{icon:"bus",name:"机场大巴",desc:"覆盖珠三角主要城市"},{icon:"taxi",name:"出租车",desc:"航站楼到达层排队上客"},{icon:"car",name:"自驾停车",desc:"P1–P8 停车场"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"HKG",name:"香港国际机场",nameEn:"Hong Kong International Airport",city:"香港",country:"CN",
+   desc:"位于赤鱲角的填海机场，多次获选全球最佳机场，单座巨型航站楼配卫星廊与中场客运廊，机场快线 24 分钟直达中环。",
+   terminals:[
+     {code:"T1",name:"一号客运大楼",gateRange:"1–80",gates:80,airlines:"国泰航空及全部国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"M",name:"中场客运廊",gateRange:"201–230",gates:30,airlines:"国际航班远机位",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"S",name:"北卫星客运廊",gateRange:"501–510",gates:10,airlines:"区域航班",facilities:[{icon:"food",label:"餐饮"}]}
+   ],gates:120,pax:"约5500万",distance:"34 km",
+   transit:[{icon:"train",name:"机场快线",desc:"24 分钟直达中环/香港站"},{icon:"bus",name:"机场巴士",desc:"A/E 线覆盖香港各区"},{icon:"taxi",name:"出租车",desc:"分市区/大屿山候车站"},{icon:"ferry",name:"跨境快船",desc:"连接珠江口口岸"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"HND",name:"东京羽田机场",nameEn:"Tokyo Haneda Airport",city:"东京",country:"JP",
+   desc:"全球最繁忙机场之一，距离东京市中心仅约 14 公里，三座航站楼通过地下通道与单轨电车连接，日航与全日空双枢纽。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"1–18",gates:18,airlines:"日本航空及国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"51–70",gates:20,airlines:"全日空及国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T3",name:"3号航站楼（国际）",gateRange:"101–133",gates:33,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"currency",label:"货币兑换"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:71,pax:"约8800万",distance:"14 km",
+   transit:[{icon:"train",name:"京急电铁",desc:"约 15 分钟直达品川"},{icon:"train",name:"东京单轨电车",desc:"约 18 分钟直达滨松町"},{icon:"bus",name:"机场利木津巴士",desc:"连接新宿、涩谷等"},{icon:"taxi",name:"出租车",desc:"国际/国内航站楼分设上客点"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"NRT",name:"东京成田机场",nameEn:"Narita International Airport",city:"东京",country:"JP",
+   desc:"东京主要国际门户，位于千叶县成田市，三座航站楼布局清晰，成田特快与 Skyliner 提供快速市区连接。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"11–58",gates:48,airlines:"全日空、星空联盟国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"61–88",gates:28,airlines:"日航、寰宇一家国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"101–120",gates:20,airlines:"低成本航司",facilities:[{icon:"food",label:"餐饮"},{icon:"shop",label:"免税店"}]}
+   ],gates:96,pax:"约4000万",distance:"66 km",
+   transit:[{icon:"train",name:"成田特快 N'EX",desc:"约 60 分钟直达东京站"},{icon:"train",name:"Skyliner",desc:"约 36 分钟直达日暮里/上野"},{icon:"bus",name:"机场巴士",desc:"连接东京各主要车站"},{icon:"car",name:"自驾",desc:"东关东自动车道直达"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"KIX",name:"大阪关西国际机场",nameEn:"Kansai International Airport",city:"大阪",country:"JP",
+   desc:"建在大阪湾人工岛上的国际机场，主航站楼采用全玻璃曲线设计，关西特快 HARUKA 直连京都与大阪市区。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"1–32",gates:32,airlines:"日航、全日空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"61–66",gates:6,airlines:"低成本航司（春秋、捷星等）",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:38,pax:"约2100万",distance:"50 km",
+   transit:[{icon:"train",name:"HARUKA 特快",desc:"约 50 分钟直达京都"},{icon:"train",name:"南海电铁",desc:"约 40 分钟直达难波"},{icon:"bus",name:"机场巴士",desc:"连接大阪、神户"},{icon:"ferry",name:"高速船",desc:"前往神户港"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"ICN",name:"首尔仁川国际机场",nameEn:"Incheon International Airport",city:"首尔",country:"KR",
+   desc:"韩国最大国际门户，位于永宗岛，连续多年入选全球最佳机场，两座航站楼间由无人驾驶捷运连接。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"1–45",gates:45,airlines:"大韩航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"201–268",gates:68,airlines:"韩亚航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:113,pax:"约7300万",distance:"49 km",
+   transit:[{icon:"train",name:"机场铁路 AREX",desc:"普通/直达列车连接首尔站"},{icon:"bus",name:"机场巴士",desc:"覆盖首尔及仁川全域"},{icon:"taxi",name:"出租车",desc:"国际/国内分设候车区"},{icon:"car",name:"自驾停车",desc:"P1–P5 停车场"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"SIN",name:"新加坡樟宜机场",nameEn:"Singapore Changi Airport",city:"新加坡",country:"SG",
+   desc:"蝉联世界最佳机场多年的航空枢纽，四座航站楼与星耀樟宜相连，拥有室内瀑布、蝴蝶园等独特体验设施。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A1–A20, C1–C5",gates:25,airlines:"新航及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"E1–E25, F1–F10",gates:35,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"A1–A20, B1–B10",gates:30,airlines:"新航及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"},{icon:"medical",label:"医务室"}]},
+     {code:"T4",name:"4号航站楼",gateRange:"G1–G11",gates:11,airlines:"区域航司",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]}
+   ],gates:101,pax:"约6900万",distance:"20 km",
+   transit:[{icon:"train",name:"地铁东西线",desc:"樟宜机场站直达市区"},{icon:"train",name:"轻轨Skytrain",desc:"航站楼间免费接驳"},{icon:"bus",name:"机场巴士",desc:"夜间线路覆盖市区"},{icon:"taxi",name:"出租车",desc:"分层上客，便捷高效"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"BKK",name:"曼谷素万那普机场",nameEn:"Suvarnabhumi Airport",city:"曼谷",country:"TH",
+   desc:"泰国最大国际机场，单一巨型主航站楼呈 X 形展开，机场快线连接市中心，是东南亚重要的转机枢纽。",
+   terminals:[
+     {code:"M",name:"主航站楼（M层）",gateRange:"A–G 廊",gates:120,airlines:"泰航及全部国际/国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]}
+   ],gates:120,pax:"约5900万",distance:"30 km",
+   transit:[{icon:"train",name:"机场快线",desc:"约 30 分钟直达 Phaya Thai"},{icon:"bus",name:"机场巴士",desc:"连接市区主要区域"},{icon:"taxi",name:"出租车",desc:"出发层 4 层乘车"},{icon:"car",name:"自驾停车",desc:"多栋停车楼"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"KUL",name:"吉隆坡国际机场",nameEn:"Kuala Lumpur International Airport",city:"吉隆坡",country:"MY",
+   desc:"马来西亚主要国际门户，主航站楼与卫星厅通过机场快线连接，是亚洲航线的热门转机点。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"C1–C37",gates:37,airlines:"马航及国际航班值机与出发",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"S",name:"卫星航站楼",gateRange:"A1–A32",gates:32,airlines:"国际航班登机口",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"T2",name:"KLIA2 航站楼",gateRange:"P1–P14",gates:14,airlines:"低成本航司（亚航）",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]}
+   ],gates:83,pax:"约4700万",distance:"45 km",
+   transit:[{icon:"train",name:"KLIA Express",desc:"约 28 分钟直达吉隆坡中央车站"},{icon:"train",name:"机场捷运Aerotrain",desc:"主楼与卫星厅间免费接驳"},{icon:"bus",name:"机场巴士",desc:"连接市区巴士站"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"DEL",name:"英迪拉·甘地国际机场",nameEn:"Indira Gandhi International Airport",city:"德里",country:"IN",
+   desc:"印度最繁忙的机场，T3 航站楼为全球最大航站楼之一，机场快线连接新德里市中心。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A1–A12",gates:12,airlines:"国内低成本航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"B1–B30, C1–C20",gates:50,airlines:"印度航空及国际/国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:62,pax:"约7300万",distance:"16 km",
+   transit:[{icon:"train",name:"机场快线",desc:"约 20 分钟直达新德里站"},{icon:"bus",name:"机场巴士",desc:"连接市区多条线路"},{icon:"taxi",name:"出租车",desc:"预付费出租车服务"},{icon:"car",name:"自驾",desc:"NH8 高速直达"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"CGK",name:"苏加诺-哈达国际机场",nameEn:"Soekarno–Hatta International Airport",city:"雅加达",country:"ID",
+   desc:"印度尼西亚最大门户机场，三座航站楼通过天空列车相连，服务雅加达都会区。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A1–A18",gates:18,airlines:"国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"B1–B22",gates:22,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"C1–C30",gates:30,airlines:"鹰航及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:70,pax:"约6000万",distance:"20 km",
+   transit:[{icon:"train",name:"机场快线",desc:"连接雅加达市区车站"},{icon:"train",name:"天空列车Skytrain",desc:"航站楼间免费接驳"},{icon:"bus",name:"机场巴士",desc:"Damri 巴士覆盖市区"},{icon:"taxi",name:"出租车",desc:"官方定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"SGN",name:"新山一国际机场",nameEn:"Tan Son Nhat International Airport",city:"胡志明市",country:"VN",
+   desc:"越南最繁忙的机场，紧邻市区，两座航站楼分别服务国际与国内航线。",
+   terminals:[
+     {code:"T1",name:"国内航站楼",gateRange:"A1–A12",gates:12,airlines:"越南航空等国内航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"国际航站楼",gateRange:"B1–B18",gates:18,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:30,pax:"约4000万",distance:"6 km",
+   transit:[{icon:"bus",name:"机场巴士",desc:"109/152 路连接市区"},{icon:"taxi",name:"出租车",desc:"到达层定点上客"},{icon:"car",name:"自驾",desc:"市内短程可达"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"MNL",name:"尼诺伊·阿基诺国际机场",nameEn:"Ninoy Aquino International Airport",city:"马尼拉",country:"PH",
+   desc:"菲律宾主要国际门户，四座航站楼沿环路分布，服务首都大马尼拉地区。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A1–A14",gates:14,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"B1–B16",gates:16,airlines:"菲律宾航空",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"C1–C32",gates:32,airlines:"宿务太平洋及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"T4",name:"4号航站楼",gateRange:"D1–D8",gates:8,airlines:"国内支线航班",facilities:[{icon:"food",label:"餐饮"}]}
+   ],gates:70,pax:"约4800万",distance:"7 km",
+   transit:[{icon:"bus",name:"机场巴士",desc:"连接市区主要车站"},{icon:"taxi",name:"出租车",desc:"分白色/黄色出租车"},{icon:"car",name:"自驾",desc:"机场高速直达"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"TAS",name:"塔什干国际机场",nameEn:"Islam Karimov Tashkent International Airport",city:"塔什干",country:"UZ",
+   desc:"乌兹别克斯坦首都的国际门户，作为中亚航线的中转枢纽正快速扩建。",
+   terminals:[
+     {code:"T2",name:"2号航站楼",gateRange:"A1–A14",gates:14,airlines:"乌兹别克斯坦航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"B1–B6",gates:6,airlines:"国内及区域航班",facilities:[{icon:"shop",label:"商店"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:20,pax:"约500万",distance:"12 km",
+   transit:[{icon:"bus",label:"",name:"机场巴士",desc:"连接市中心"},{icon:"taxi",name:"出租车",desc:"到达层定点上客"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"DXB",name:"迪拜国际机场",nameEn:"Dubai International Airport",city:"迪拜",country:"AE",
+   desc:"中东最繁忙的航空枢纽，T3 航站楼为全球最大单体航站楼之一，阿联酋航空的旗舰基地，地铁红线直达市区。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"C1–C40",gates:40,airlines:"多家国际航司",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"F1–F12",gates:12,airlines:"低成本及区域航班",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"A/B 廊",gates:60,airlines:"阿联酋航空",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"medical",label:"医务室"}]},
+     {code:"C1",name:"Concourse A（A380 专属）",gateRange:"A1–A25",gates:25,airlines:"阿联酋航空 A380",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"头等舱休息室"}]}
+   ],gates:137,pax:"约9200万",distance:"4 km",
+   transit:[{icon:"train",name:"迪拜地铁红线",desc:"直达市区与棕榈岛"},{icon:"bus",name:"机场巴士",desc:"覆盖迪拜各区"},{icon:"taxi",name:"出租车",desc:"24 小时候车区"},{icon:"car",name:"自驾停车",desc:"多栋停车楼"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"DOH",name:"哈马德国际机场",nameEn:"Hamad International Airport",city:"多哈",country:"QA",
+   desc:"卡塔尔航空枢纽，屡获 Skytrax 全球最佳机场，巨型主航站楼以独特波浪穹顶著称，内设室内热带花园。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"A–E 廊",gates:90,airlines:"卡塔尔航空及全部国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"N",name:"北卫星厅",gateRange:"F–H 廊",gates:30,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]}
+   ],gates:120,pax:"约4600万",distance:"12 km",
+   transit:[{icon:"train",name:"多哈地铁",desc:"红线连接市区"},{icon:"bus",name:"机场巴士",desc:"连接多哈主要区域"},{icon:"taxi",name:"出租车",desc:"Karwa 出租车上客区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"IST",name:"伊斯坦布尔机场",nameEn:"Istanbul Airport",city:"伊斯坦布尔",country:"TR",
+   desc:"欧洲最繁忙机场之一，单一巨型主航站楼是全球最大的航站楼单体建筑，地铁 M11 线连接市区。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"A–F 廊",gates:143,airlines:"土耳其航空及全部国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]}
+   ],gates:143,pax:"约7900万",distance:"35 km",
+   transit:[{icon:"train",name:"地铁 M11",desc:"连接 Kağıthane 换乘市中心"},{icon:"bus",name:"机场巴士",desc:"Havaist 巴士覆盖伊斯坦布尔"},{icon:"taxi",name:"出租车",desc:"定点候车区"},{icon:"car",name:"自驾停车",desc:"P1–P7 停车楼"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"RUH",name:"哈立德国王国际机场",nameEn:"King Khalid International Airport",city:"利雅得",country:"SA",
+   desc:"沙特阿拉伯首都门户机场，五座航站楼布局开阔，T1–T2 航站楼之间设中央大厅。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A1–A20",gates:20,airlines:"沙特航空国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"B1–B20",gates:20,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"C1–C12",gates:12,airlines:"国内航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"T4",name:"4号航站楼",gateRange:"D1–D12",gates:12,airlines:"国内航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"T5",name:"5号航站楼",gateRange:"E1–E8",gates:8,airlines:"王室及专机",facilities:[{icon:"lounge",label:"贵宾室"}]}
+   ],gates:72,pax:"约4000万",distance:"35 km",
+   transit:[{icon:"bus",name:"机场巴士",desc:"连接市区主要区域"},{icon:"taxi",name:"出租车",desc:"到达层候车区"},{icon:"car",name:"自驾停车",desc:"航站楼前停车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]}
+  ,{iata:"LHR",name:"伦敦希思罗机场",nameEn:"Heathrow Airport",city:"伦敦",country:"GB",
+   desc:"英国最繁忙的国际门户，欧洲主要枢纽之一，四座航站楼由希思罗快线与地铁 Piccadilly 线连接市区。",
+   terminals:[
+     {code:"T2",name:"2号航站楼（女王航站楼）",gateRange:"A1–A20",gates:20,airlines:"星空联盟成员",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"B1–B16",gates:16,airlines:"寰宇一家成员",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T4",name:"4号航站楼",gateRange:"C1–C14",gates:14,airlines:"天合联盟及部分航司",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"T5",name:"5号航站楼",gateRange:"D/E/F 廊",gates:45,airlines:"英国航空",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"头等舱休息室"},{icon:"medical",label:"医务室"}]}
+   ],gates:95,pax:"约8400万",distance:"24 km",
+   transit:[{icon:"train",name:"希思罗快线",desc:"约 15 分钟直达帕丁顿"},{icon:"train",name:"地铁 Piccadilly 线",desc:"直达市中心各区"},{icon:"bus",name:"机场巴士",desc:"National Express 长途线"},{icon:"taxi",name:"出租车",desc:"伦敦黑色出租车"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"LGW",name:"伦敦盖特威克机场",nameEn:"Gatwick Airport",city:"伦敦",country:"GB",
+   desc:"伦敦第二大机场，南北两座航站楼通过自动捷运相连，盖特威克快线直达维多利亚车站。",
+   terminals:[
+     {code:"N",name:"北航站楼",gateRange:"101–193",gates:93,airlines:"多家国际航司",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"S",name:"南航站楼",gateRange:"1–66",gates:66,airlines:"易捷航空等",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:159,pax:"约4500万",distance:"46 km",
+   transit:[{icon:"train",name:"盖特威克快线",desc:"约 30 分钟直达维多利亚"},{icon:"train",name:"泰晤士连线",desc:"连接伦敦桥等站"},{icon:"bus",name:"长途巴士",desc:"覆盖英国南部城市"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"STN",name:"伦敦斯坦斯特德机场",nameEn:"London Stansted Airport",city:"伦敦",country:"GB",
+   desc:"伦敦第三大机场，主要服务低成本航司，单座航站楼布局简洁高效，斯坦斯特德快线 47 分钟直达利物浦街。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"1–87",gates:87,airlines:"瑞安航空、捷特二航空等",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]}
+   ],gates:87,pax:"约2800万",distance:"48 km",
+   transit:[{icon:"train",name:"斯坦斯特德快线",desc:"约 47 分钟直达利物浦街"},{icon:"bus",name:"机场巴士",desc:"连接伦敦各主要车站"},{icon:"taxi",name:"出租车",desc:"到达层候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"CDG",name:"巴黎戴高乐机场",nameEn:"Paris Charles de Gaulle Airport",city:"巴黎",country:"FR",
+   desc:"法国最大国际机场、欧洲主要枢纽之一，T2 航站楼群含 2A–2G 多个大厅，RER B 线连接巴黎市中心。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–D 廊",gates:28,airlines:"法航及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼（2A–2G）",gateRange:"A–K 厅",gates:82,airlines:"法航、天合联盟及多数国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"},{icon:"medical",label:"医务室"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"L 廊",gates:12,airlines:"低成本及包机航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]}
+   ],gates:122,pax:"约6800万",distance:"25 km",
+   transit:[{icon:"train",name:"RER B",desc:"约 30 分钟直达巴黎北站/市区"},{icon:"train",name:"TGV 高铁",desc:"直达法国及欧洲多城"},{icon:"bus",name:"机场巴士",desc:"Roissybus 连接歌剧院"},{icon:"taxi",name:"出租车",desc:"固定费率至巴黎市区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"ORY",name:"巴黎奥利机场",nameEn:"Paris Orly Airport",city:"巴黎",country:"FR",
+   desc:"巴黎第二大机场，紧邻市区，四座航站楼服务欧洲与区域航线，有轨电车 T7 与 RER B 连接市区。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–F 廊",gates:24,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"G–J 廊",gates:16,airlines:"欧洲航班",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"K 廊",gates:8,airlines:"区域航班",facilities:[{icon:"food",label:"餐饮"}]},
+     {code:"T4",name:"4号航站楼",gateRange:"L 廊",gates:10,airlines:"低成本航司",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]}
+   ],gates:58,pax:"约3200万",distance:"14 km",
+   transit:[{icon:"train",name:"RER B + 有轨电车 T7",desc:"连接市中心"},{icon:"train",name:"ORLYVAL 捷运",desc:"连接 Antony RER 站"},{icon:"bus",name:"机场巴士",desc:"连接巴黎各主要区域"},{icon:"taxi",name:"出租车",desc:"固定费率"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"FRA",name:"法兰克福机场",nameEn:"Frankfurt Airport",city:"法兰克福",country:"DE",
+   desc:"德国最大门户机场、欧洲最繁忙枢纽之一，三座航站楼由无人驾驶捷运连接，是汉莎航空的主基地。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–C 廊",gates:76,airlines:"汉莎航空及星空联盟",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"D–E 廊",gates:44,airlines:"多家国际航司",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"T3",name:"3号航站楼（新）",gateRange:"G 廊",gates:24,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]}
+   ],gates:144,pax:"约5900万",distance:"12 km",
+   transit:[{icon:"train",name:"城铁 S8/S9",desc:"约 15 分钟直达中央火车站"},{icon:"train",name:"ICE 高铁",desc:"法兰克福机场站直达多城"},{icon:"train",name:"SkyLine 捷运",desc:"T1/T2/T3 间免费接驳"},{icon:"taxi",name:"出租车",desc:"航站楼前候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"MUC",name:"慕尼黑机场",nameEn:"Munich Airport",city:"慕尼黑",country:"DE",
+   desc:"德国第二大机场，双航站楼设计获奖无数，拥有欧洲最大的机场室内啤酒花园。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–F 廊",gates:60,airlines:"汉莎航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"G–L 廊",gates:50,airlines:"汉莎及星空联盟",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:110,pax:"约3700万",distance:"29 km",
+   transit:[{icon:"train",name:"城铁 S1/S8",desc:"约 40 分钟直达中央火车站"},{icon:"bus",name:"机场巴士",desc:"连接市区及周边城市"},{icon:"taxi",name:"出租车",desc:"航站楼前候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"AMS",name:"阿姆斯特丹史基浦机场",nameEn:"Amsterdam Airport Schiphol",city:"阿姆斯特丹",country:"NL",
+   desc:"荷兰皇家航空枢纽，单座巨型航站楼内设多个大厅，地下火车站 15 分钟直达阿姆斯特丹市中心。",
+   terminals:[
+     {code:"M",name:"主航站楼（大厅1/2/3）",gateRange:"B–M 廊",gates:110,airlines:"荷航及全部国际/国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]}
+   ],gates:110,pax:"约6700万",distance:"9 km",
+   transit:[{icon:"train",name:"荷兰铁路 NS",desc:"约 15 分钟直达中央车站"},{icon:"train",name:"Thalys/ICE",desc:"跨境高铁连接欧洲"},{icon:"bus",name:"机场巴士",desc:"连接阿姆斯特丹各区"},{icon:"taxi",name:"出租车",desc:"航站楼前候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"MAD",name:"马德里巴拉哈斯机场",nameEn:"Madrid–Barajas Airport",city:"马德里",country:"ES",
+   desc:"西班牙最大机场，T4 航站楼以竹木波浪顶闻名，四座航站楼通过免费接驳巴士相连。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–C 廊",gates:28,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"D 廊",gates:18,airlines:"申根区内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"E 廊",gates:12,airlines:"区域航班",facilities:[{icon:"shop",label:"商店"}]},
+     {code:"T4",name:"4号航站楼",gateRange:"F–R 廊",gates:60,airlines:"伊比利亚航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:118,pax:"约6400万",distance:"13 km",
+   transit:[{icon:"train",name:"地铁8号线",desc:"约 25 分钟直达市中心"},{icon:"train",name:"C1 近郊铁路",desc:"连接查马丁车站"},{icon:"bus",name:"机场巴士",desc:"24 小时机场快线"},{icon:"taxi",name:"出租车",desc:"固定费率"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"BCN",name:"巴塞罗那机场",nameEn:"Barcelona–El Prat Airport",city:"巴塞罗那",country:"ES",
+   desc:"西班牙第二大机场，T1 航站楼现代大气，地铁与 Aerobus 快线连接巴塞罗那市中心。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–F 廊",gates:60,airlines:"国际及国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼（T2A–T2C）",gateRange:"G–K 廊",gates:30,airlines:"低成本及区域航班",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:90,pax:"约5400万",distance:"13 km",
+   transit:[{icon:"train",name:"地铁 L9",desc:"连接巴塞罗那市区"},{icon:"train",name:"近郊铁路 R2",desc:"连接桑兹车站"},{icon:"bus",name:"Aerobus",desc:"A1/A2 快线直达市区"},{icon:"taxi",name:"出租车",desc:"固定费率"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"FCO",name:"罗马菲乌米奇诺机场",nameEn:"Rome Fiumicino Airport",city:"罗马",country:"IT",
+   desc:"意大利最大机场，达芬奇机场以三条长廊式航站楼闻名，Leonardo 快线直达罗马特米尼车站。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–D 廊",gates:40,airlines:"意大利航空及申根航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"E–G 廊",gates:55,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"T5",name:"5号航站楼",gateRange:"H 廊",gates:12,airlines:"美国及非申根航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]}
+   ],gates:107,pax:"约5000万",distance:"30 km",
+   transit:[{icon:"train",name:"Leonardo 快线",desc:"约 32 分钟直达特米尼车站"},{icon:"train",name:"FL1 近郊线",desc:"连接罗马各区"},{icon:"bus",name:"机场巴士",desc:"连接罗马主要车站"},{icon:"taxi",name:"出租车",desc:"固定费率至市区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"MXP",name:"米兰马尔彭萨机场",nameEn:"Milan Malpensa Airport",city:"米兰",country:"IT",
+   desc:"米兰主要国际门户，T1 航站楼服务国际航线，Malpensa 快线连接米兰中央车站。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–H 廊",gates:70,airlines:"国际及国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"K 廊",gates:10,airlines:"低成本航司",facilities:[{icon:"shop",label:"商店"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:80,pax:"约2900万",distance:"50 km",
+   transit:[{icon:"train",name:"Malpensa 快线",desc:"约 50 分钟直达米兰中央车站"},{icon:"bus",name:"机场巴士",desc:"连接米兰市区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"ZRH",name:"苏黎世机场",nameEn:"Zurich Airport",city:"苏黎世",country:"CH",
+   desc:"瑞士最大国际机场，紧邻市区，单一综合体航站楼分 A/B/D/E 四个廊区，城铁 10 分钟直达苏黎世主站。",
+   terminals:[
+     {code:"A",name:"A 廊",gateRange:"A1–A28",gates:28,airlines:"申根区航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"B",name:"B 廊",gateRange:"B1–B30",gates:30,airlines:"申根区航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]},
+     {code:"D",name:"D 廊",gateRange:"D1–D28",gates:28,airlines:"非申根国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"E",name:"E 廊（卫星）",gateRange:"E1–E20",gates:20,airlines:"国际航班远机位",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]}
+   ],gates:106,pax:"约3100万",distance:"13 km",
+   transit:[{icon:"train",name:"城铁 S16/S2",desc:"约 10 分钟直达苏黎世主站"},{icon:"train",name:"城际列车",desc:"直达瑞士及欧洲各城"},{icon:"tram",name:"有轨电车10号线",desc:"连接市区"},{icon:"taxi",name:"出租车",desc:"航站楼前候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"VIE",name:"维也纳国际机场",nameEn:"Vienna International Airport",city:"维也纳",country:"AT",
+   desc:"奥地利枢纽机场，三座航站楼布局紧凑，CAT 城市机场快线 16 分钟直达维也纳市中心。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–D 廊",gates:25,airlines:"奥地利航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"E–F 廊",gates:20,airlines:"申根区航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"G–L 廊",gates:50,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:95,pax:"约3100万",distance:"18 km",
+   transit:[{icon:"train",name:"CAT 城市机场快线",desc:"约 16 分钟直达市中心"},{icon:"train",name:"城铁 S7",desc:"经济型连接市区"},{icon:"bus",name:"机场巴士",desc:"连接维也纳各区域"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"LIS",name:"里斯本机场",nameEn:"Humberto Delgado Airport",city:"里斯本",country:"PT",
+   desc:"葡萄牙主要国际门户，距市中心仅 7 公里，T1 与 T2 之间由免费摆渡巴士连接。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–E 廊",gates:45,airlines:"葡萄牙航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"F 廊",gates:10,airlines:"低成本航司",facilities:[{icon:"shop",label:"商店"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:55,pax:"约3300万",distance:"7 km",
+   transit:[{icon:"train",name:"地铁红线",desc:"连接市中心"},{icon:"bus",name:"机场巴士",desc:"多条线路覆盖市区"},{icon:"taxi",name:"出租车",desc:"到达层候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"DUB",name:"都柏林机场",nameEn:"Dublin Airport",city:"都柏林",country:"IE",
+   desc:"爱尔兰最大机场，两座航站楼服务欧洲与大西洋航线，Aircoach 巴士连接都柏林市中心。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–E 廊",gates:35,airlines:"爱尔兰航空及欧洲航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"F–K 廊",gates:30,airlines:"爱尔兰航空长途及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:65,pax:"约3300万",distance:"10 km",
+   transit:[{icon:"bus",name:"Aircoach",desc:"连接市中心与主要区域"},{icon:"bus",name:"都柏林巴士",desc:"16/41 路连接市区"},{icon:"taxi",name:"出租车",desc:"航站楼前候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"ARN",name:"斯德哥尔摩阿兰达机场",nameEn:"Stockholm Arlanda Airport",city:"斯德哥尔摩",country:"SE",
+   desc:"瑞典最大机场，四座航站楼布局紧凑，阿兰达快线 18 分钟直达斯德哥尔摩中央车站。",
+   terminals:[
+     {code:"T2",name:"2号航站楼",gateRange:"A 廊",gates:20,airlines:"低成本及欧洲航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"B 廊",gates:10,airlines:"区域航班",facilities:[{icon:"shop",label:"商店"}]},
+     {code:"T4",name:"4号航站楼",gateRange:"C–D 廊",gates:25,airlines:"北欧航空及国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T5",name:"5号航站楼",gateRange:"E–F 廊",gates:35,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:90,pax:"约2500万",distance:"42 km",
+   transit:[{icon:"train",name:"阿兰达快线",desc:"约 18 分钟直达中央车站"},{icon:"train",name:"通勤列车",desc:"连接斯德哥尔摩各区"},{icon:"bus",name:"机场巴士",desc:"FlixBus 等长途线"},{icon:"taxi",name:"出租车",desc:"固定费率"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"CPH",name:"哥本哈根机场",nameEn:"Copenhagen Airport Kastrup",city:"哥本哈根",country:"DK",
+   desc:"北欧主要枢纽，距市中心仅 8 公里，地铁与城铁直达哥本哈根市中心，三座航站楼相连成一体。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A 廊",gates:12,airlines:"国内航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"B–C 廊",gates:30,airlines:"北欧航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"D–F 廊",gates:40,airlines:"北欧航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:82,pax:"约2900万",distance:"8 km",
+   transit:[{icon:"train",name:"地铁 M2",desc:"约 13 分钟直达市中心"},{icon:"train",name:"城际列车",desc:"连接马尔默等城市"},{icon:"bus",name:"机场巴士",desc:"连接市区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"SVO",name:"莫斯科谢列梅捷沃机场",nameEn:"Sheremetyevo International Airport",city:"莫斯科",country:"RU",
+   desc:"俄罗斯最繁忙的机场，俄罗斯航空的主基地，B/C/D/E/F 多座航站楼由 Aeroexpress 快线连接市区。",
+   terminals:[
+     {code:"B",name:"B 航站楼",gateRange:"1–10",gates:10,airlines:"国内航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"C",name:"C 航站楼",gateRange:"11–20",gates:10,airlines:"区域航班",facilities:[{icon:"shop",label:"免税店"}]},
+     {code:"D",name:"D 航站楼",gateRange:"21–40",gates:20,airlines:"俄罗斯航空国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"E",name:"E 航站楼",gateRange:"41–60",gates:20,airlines:"俄罗斯航空",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"F",name:"F 航站楼",gateRange:"61–70",gates:10,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:70,pax:"约4500万",distance:"30 km",
+   transit:[{icon:"train",name:"Aeroexpress 快线",desc:"约 35 分钟直达白俄罗斯站"},{icon:"bus",name:"机场巴士",desc:"连接莫斯科各区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"ATH",name:"雅典国际机场",nameEn:"Athens International Airport",city:"雅典",country:"GR",
+   desc:"希腊主要国际门户，主航站楼以简洁的指廊式布局服务国际与国内航线，地铁 3 号线直达市中心。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"A–D 廊",gates:60,airlines:"爱琴海航空及全部航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]}
+   ],gates:60,pax:"约3100万",distance:"27 km",
+   transit:[{icon:"train",name:"地铁3号线",desc:"约 40 分钟直达宪法广场"},{icon:"train",name:"近郊铁路",desc:"连接雅典各区"},{icon:"bus",name:"机场巴士",desc:"X95 等线路覆盖市区"},{icon:"taxi",name:"出租车",desc:"固定费率"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]}
+  ,{iata:"JFK",name:"约翰·F·肯尼迪国际机场",nameEn:"John F. Kennedy International Airport",city:"纽约",country:"US",
+   desc:"纽约最大国际门户，多座航站楼各有主题设计，AirTrain 连接地铁与长岛铁路，是全球最重要的航空枢纽之一。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"1–11",gates:11,airlines:"多家国际航司",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T4",name:"4号航站楼",gateRange:"A–B 廊",gates:38,airlines:"达美航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"T5",name:"5号航站楼",gateRange:"1–29",gates:29,airlines:"捷蓝航空",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]},
+     {code:"T7",name:"7号航站楼",gateRange:"1–12",gates:12,airlines:"英国航空等",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T8",name:"8号航站楼",gateRange:"A–C 廊",gates:30,airlines:"美国航空",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]}
+   ],gates:120,pax:"约6300万",distance:"24 km",
+   transit:[{icon:"train",name:"AirTrain JFK",desc:"连接地铁 E/J/Z 线与长岛铁路"},{icon:"bus",name:"机场巴士",desc:"连接市区主要区域"},{icon:"taxi",name:"出租车",desc:"黄色出租车固定费率"},{icon:"car",name:"自驾",desc:"Van Wyck 高速直达"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"EWR",name:"纽瓦克自由国际机场",nameEn:"Newark Liberty International Airport",city:"纽约",country:"US",
+   desc:"纽约都会区三大机场之一，美联航东海岸枢纽，三座航站楼由 AirTrain 连接新泽西捷运。",
+   terminals:[
+     {code:"A",name:"A 航站楼",gateRange:"A1–A28",gates:28,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"B",name:"B 航站楼",gateRange:"B1–B32",gates:32,airlines:"多家国际航司",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"C",name:"C 航站楼",gateRange:"C1–C32",gates:32,airlines:"美联航",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:92,pax:"约4900万",distance:"24 km",
+   transit:[{icon:"train",name:"AirTrain + 新泽西捷运",desc:"连接纽约宾州车站"},{icon:"bus",name:"机场巴士",desc:"Newark 机场快线"},{icon:"taxi",name:"出租车",desc:"定点候车区"},{icon:"car",name:"自驾",desc:"NJ Turnpike 直达"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"LGA",name:"拉瓜迪亚机场",nameEn:"LaGuardia Airport",city:"纽约",country:"US",
+   desc:"纽约最便捷的国内机场，全新改造的 B 航站楼获国际奖项，与曼哈顿隔河相望。",
+   terminals:[
+     {code:"A",name:"A 航站楼（海洋航站楼）",gateRange:"A1–A8",gates:8,airlines:"加拿大航空等",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"B",name:"B 航站楼",gateRange:"B1–B28",gates:28,airlines:"达美航空等",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"C",name:"C 航站楼",gateRange:"C1–C12",gates:12,airlines:"美航及区域航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"D",name:"D 航站楼",gateRange:"D1–D10",gates:10,airlines:"美航",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]}
+   ],gates:58,pax:"约3200万",distance:"13 km",
+   transit:[{icon:"bus",name:"机场巴士",desc:"Q70 快线连接地铁"},{icon:"bus",name:"M60 巴士",desc:"连接曼哈顿"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"HPN",name:"韦斯特切斯特县机场",nameEn:"Westchester County Airport",city:"纽约",country:"US",
+   desc:"纽约北郊的区域机场，单座航站楼服务商务与支线航班，是避开大机场拥堵的选择。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"1–6",gates:6,airlines:"美航、达美、捷蓝等支线航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]}
+   ],gates:6,pax:"约100万",distance:"50 km",
+   transit:[{icon:"bus",name:"机场巴士",desc:"连接怀特普莱恩斯车站"},{icon:"taxi",name:"出租车",desc:"定点候车区"},{icon:"car",name:"自驾停车",desc:"I-287/684 高速旁"}],
+   facilities:[{icon:"shop",label:"商店"},{icon:"wifi",label:"免费WiFi"},{icon:"food",label:"餐饮"},{icon:"parking",label:"停车场"}]},
+  {iata:"OKC",name:"俄克拉荷马城机场",nameEn:"Will Rogers World Airport",city:"俄克拉荷马城",country:"US",
+   desc:"俄克拉荷马州主要机场，单座主航站楼经大规模翻新，服务美国国内航线为主。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"A–C 廊",gates:17,airlines:"美航、联航、达美等国内航班",facilities:[{icon:"shop",label:"商店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]}
+   ],gates:17,pax:"约450万",distance:"11 km",
+   transit:[{icon:"bus",name:"机场巴士",desc:"连接市区"},{icon:"taxi",name:"出租车",desc:"定点候车区"},{icon:"car",name:"自驾停车",desc:"航站楼前停车场"}],
+   facilities:[{icon:"shop",label:"商店"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"food",label:"餐饮"},{icon:"parking",label:"停车场"}]},
+  {iata:"LAX",name:"洛杉矶国际机场",nameEn:"Los Angeles International Airport",city:"洛杉矶",country:"US",
+   desc:"美国西海岸最大门户，世界级枢纽，九座航站楼呈马蹄形分布，LAX 捷运系统连接新扩建的交通枢纽。",
+   terminals:[
+     {code:"TB",name:"汤姆·布拉德利国际航站楼",gateRange:"A–H 廊",gates:70,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T1",name:"1号航站楼",gateRange:"1–15",gates:15,airlines:"西南航空",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"T4",name:"4号航站楼",gateRange:"41–54",gates:14,airlines:"美国航空",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T5",name:"5号航站楼",gateRange:"51–58",gates:8,airlines:"达美航空",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T7",name:"7号航站楼",gateRange:"71–84",gates:14,airlines:"美联航",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T8",name:"8号航站楼",gateRange:"81–90",gates:10,airlines:"美联航",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]}
+   ],gates:131,pax:"约7600万",distance:"27 km",
+   transit:[{icon:"train",name:"LAX 捷运 + 地铁 K 线",desc:"连接市区与都会区"},{icon:"bus",name:"FlyAway 快线",desc:"直达市中心/好莱坞等"},{icon:"taxi",name:"出租车",desc:"分层候车区"},{icon:"car",name:"自驾",desc:"405 高速直达"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"SFO",name:"旧金山国际机场",nameEn:"San Francisco International Airport",city:"旧金山",country:"US",
+   desc:"美联航跨太平洋枢纽，四座航站楼布局高效，BART 城铁直达旧金山市区。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–B 廊",gates:25,airlines:"阿拉斯加航空等",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"C–D 廊",gates:17,airlines:"美联航等",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"E–F 廊",gates:27,airlines:"美联航",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]},
+     {code:"G",name:"国际航站楼 G 厅",gateRange:"G1–G14",gates:14,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]}
+   ],gates:83,pax:"约5400万",distance:"21 km",
+   transit:[{icon:"train",name:"BART 城铁",desc:"约 30 分钟直达市区"},{icon:"train",name:"机场捷运 AirTrain",desc:"连接各航站楼与租车中心"},{icon:"bus",name:"机场巴士",desc:"连接旧金山各区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"ORD",name:"芝加哥奥黑尔国际机场",nameEn:"O'Hare International Airport",city:"芝加哥",country:"US",
+   desc:"美国最繁忙枢纽之一、全球航线网络中心，美联航与美国航空双基地，地铁蓝线 40 分钟直达市中心。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"B–C 廊",gates:50,airlines:"美联航",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"E–F 廊",gates:28,airlines:"达美航空等",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"G–K 廊",gates:45,airlines:"美国航空",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T5",name:"5号航站楼",gateRange:"M 廊",gates:20,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:143,pax:"约7300万",distance:"27 km",
+   transit:[{icon:"train",name:"地铁蓝线",desc:"约 40 分钟直达市中心"},{icon:"train",name:"机场捷运",desc:"航站楼间免费接驳"},{icon:"bus",name:"机场巴士",desc:"连接芝加哥各区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"IAD",name:"华盛顿杜勒斯国际机场",nameEn:"Washington Dulles International Airport",city:"华盛顿",country:"US",
+   desc:"华盛顿都会区主要国际门户，主楼加四条空中廊道的独特布局，银线地铁直达市区。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"值机大厅",gates:0,airlines:"全部航司值机/安检",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"A",name:"A 廊道",gateRange:"A1–A14",gates:14,airlines:"美联航",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]},
+     {code:"B",name:"B 廊道",gateRange:"B1–B14",gates:14,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"C",name:"C 廊道",gateRange:"C1–C12",gates:12,airlines:"美联航",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"D",name:"D 廊道",gateRange:"D1–D8",gates:8,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]}
+   ],gates:48,pax:"约2800万",distance:"42 km",
+   transit:[{icon:"train",name:"银线地铁",desc:"直达华盛顿市中心"},{icon:"bus",name:"机场巴士",desc:"连接华盛顿各区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"SEA",name:"西雅图-塔科马国际机场",nameEn:"Seattle–Tacoma International Airport",city:"西雅图",country:"US",
+   desc:"美国西北门户，阿拉斯加航空枢纽，主航站楼加南北卫星厅，轻轨 1 号线直达市中心。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"A–D 廊",gates:32,airlines:"阿拉斯加航空及国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"N",name:"北卫星厅",gateRange:"N1–N20",gates:20,airlines:"达美航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"S",name:"南卫星厅",gateRange:"S1–S16",gates:16,airlines:"阿拉斯加航空",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]}
+   ],gates:68,pax:"约5200万",distance:"21 km",
+   transit:[{icon:"train",name:"轻轨1号线",desc:"直达西雅图市中心"},{icon:"bus",name:"机场巴士",desc:"连接都会区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"ATL",name:"哈茨菲尔德-杰克逊亚特兰大国际机场",nameEn:"Hartsfield–Jackson Atlanta International Airport",city:"亚特兰大",country:"US",
+   desc:"全球最繁忙机场（年旅客量常年居首），主航站楼加 T/A–E 五条廊道，机场捷运贯穿全程。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"值机/到达",gates:0,airlines:"全部航司值机/行李",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T",name:"T 廊道",gateRange:"T1–T8",gates:8,airlines:"达美航空",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"A",name:"A 廊道",gateRange:"A1–A34",gates:34,airlines:"达美航空",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"B",name:"B 廊道",gateRange:"B1–B34",gates:34,airlines:"达美航空",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"C",name:"C 廊道",gateRange:"C1–C36",gates:36,airlines:"达美航空",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]},
+     {code:"D",name:"D 廊道",gateRange:"D1–D28",gates:28,airlines:"多家航司",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"E",name:"E 廊道（国际）",gateRange:"E1–E36",gates:36,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:176,pax:"约1.08亿",distance:"14 km",
+   transit:[{icon:"train",name:"地铁红/金线",desc:"直达亚特兰大市中心"},{icon:"train",name:"机场捷运",desc:"主楼与廊道间快速接驳"},{icon:"bus",name:"机场巴士",desc:"连接都会区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"MIA",name:"迈阿密国际机场",nameEn:"Miami International Airport",city:"迈阿密",country:"US",
+   desc:"美国通往拉美与加勒比的门户，美国航空枢纽，三座航站楼布局开阔，MIA Mover 连接租车中心。",
+   terminals:[
+     {code:"N",name:"北航站楼",gateRange:"D–E 廊",gates:50,airlines:"美国航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"C",name:"中央航站楼",gateRange:"F–H 廊",gates:40,airlines:"多家国际航司",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"S",name:"南航站楼",gateRange:"J–K 廊",gates:30,airlines:"国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]}
+   ],gates:120,pax:"约5000万",distance:"11 km",
+   transit:[{icon:"train",name:"MIA Mover + 地铁橙线",desc:"连接市中心"},{icon:"train",name:"三县铁路 Tri-Rail",desc:"连接南佛州"},{icon:"bus",name:"机场巴士",desc:"连接迈阿密各区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"YYZ",name:"多伦多皮尔逊国际机场",nameEn:"Toronto Pearson International Airport",city:"多伦多",country:"CA",
+   desc:"加拿大最繁忙机场，加航枢纽，两座航站楼由终端线捷运连接，UP Express 25 分钟直达市中心。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–E 廊",gates:60,airlines:"加拿大航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"F–K 廊",gates:40,airlines:"西捷航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:100,pax:"约4600万",distance:"22 km",
+   transit:[{icon:"train",name:"UP Express",desc:"约 25 分钟直达联合车站"},{icon:"train",name:"终端线捷运",desc:"T1/T3 间免费接驳"},{icon:"bus",name:"机场巴士",desc:"GO 巴士连接都会区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"YVR",name:"温哥华国际机场",nameEn:"Vancouver International Airport",city:"温哥华",country:"CA",
+   desc:"加拿大西海岸门户，多次获评北美最佳机场，主楼以原住民艺术为特色，天车加拿大线直达市中心。",
+   terminals:[
+     {code:"M",name:"主航站楼",gateRange:"A–E 廊",gates:48,airlines:"加拿大航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"S",name:"南航站楼",gateRange:"F 廊",gates:10,airlines:"支线与通勤航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]}
+   ],gates:58,pax:"约2900万",distance:"12 km",
+   transit:[{icon:"train",name:"天车加拿大线",desc:"约 25 分钟直达市中心"},{icon:"bus",name:"机场巴士",desc:"连接都会区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"GRU",name:"圣保罗瓜鲁柳斯国际机场",nameEn:"São Paulo/Guarulhos International Airport",city:"圣保罗",country:"BR",
+   desc:"南美洲最繁忙机场，拉美航空枢纽，三座航站楼服务巴西国内外航线。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–B 廊",gates:20,airlines:"巴西航空工业等区域航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"C–D 廊",gates:30,airlines:"南美航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"E–F 廊",gates:35,airlines:"多家国际航司",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:85,pax:"约4400万",distance:"25 km",
+   transit:[{icon:"bus",name:"机场快线巴士",desc:"连接市中心"},{icon:"train",name:"圣保罗城铁",desc:"机场专线连接市区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"SYD",name:"悉尼金斯福德·史密斯机场",nameEn:"Sydney Kingsford Smith Airport",city:"悉尼",country:"AU",
+   desc:"澳大利亚最大国际门户，三座航站楼分工明确，机场线火车约 15 分钟直达悉尼市中心。",
+   terminals:[
+     {code:"T1",name:"国际航站楼",gateRange:"A–B 廊",gates:40,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"C–D 廊",gates:25,airlines:"维珍澳洲及国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"food",label:"餐饮"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"E–F 廊",gates:20,airlines:"澳洲航空国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]}
+   ],gates:85,pax:"约4400万",distance:"8 km",
+   transit:[{icon:"train",name:"机场线火车",desc:"约 15 分钟直达市中心"},{icon:"bus",name:"机场巴士",desc:"连接悉尼各区"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"AKL",name:"奥克兰机场",nameEn:"Auckland Airport",city:"奥克兰",country:"NZ",
+   desc:"新西兰最大机场，国际与国内航站楼步行相连，SkyBus 巴士直达奥克兰市中心。",
+   terminals:[
+     {code:"I",name:"国际航站楼",gateRange:"1–20",gates:20,airlines:"新西兰航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"D",name:"国内航站楼",gateRange:"A–F 廊",gates:15,airlines:"新西兰航空等国内航班",facilities:[{icon:"shop",label:"商店"},{icon:"food",label:"餐饮"}]}
+   ],gates:35,pax:"约1800万",distance:"21 km",
+   transit:[{icon:"bus",name:"SkyBus",desc:"约 30 分钟直达市中心"},{icon:"taxi",name:"出租车",desc:"定点候车区"},{icon:"car",name:"自驾",desc:"SH20 高速直达"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"CPT",name:"开普敦国际机场",nameEn:"Cape Town International Airport",city:"开普敦",country:"ZA",
+   desc:"南非第二大机场，非洲最受欢迎的旅行目的地门户之一，中央航站楼设计明亮通透。",
+   terminals:[
+     {code:"M",name:"中央航站楼",gateRange:"A–E 廊",gates:28,airlines:"南非航空及国际/国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]}
+   ],gates:28,pax:"约1100万",distance:"20 km",
+   transit:[{icon:"bus",name:"MyCiTi 巴士",desc:"连接市中心"},{icon:"taxi",name:"出租车",desc:"定点候车区"},{icon:"car",name:"自驾",desc:"N2 高速直达"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"CAI",name:"开罗国际机场",nameEn:"Cairo International Airport",city:"开罗",country:"EG",
+   desc:"埃及和非洲主要航空枢纽，三座航站楼服务尼罗河谷的国际与国内航线。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–D 廊",gates:25,airlines:"埃及航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"E–F 廊",gates:15,airlines:"国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"}]},
+     {code:"T3",name:"3号航站楼",gateRange:"G–H 廊",gates:20,airlines:"埃及航空及国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:60,pax:"约2700万",distance:"22 km",
+   transit:[{icon:"bus",name:"机场巴士",desc:"连接开罗市区"},{icon:"taxi",name:"出租车",desc:"定点候车区"},{icon:"car",name:"自驾",desc:"机场高速直达"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]},
+  {iata:"MEX",name:"墨西哥城国际机场",nameEn:"Mexico City International Airport",city:"墨西哥城",country:"MX",
+   desc:"墨西哥最繁忙机场、拉美重要枢纽，两座航站楼服务国内外航线，地铁连接墨西哥城中心。",
+   terminals:[
+     {code:"T1",name:"1号航站楼",gateRange:"A–E 廊",gates:35,airlines:"墨西哥航空及国际航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"food",label:"餐饮"}]},
+     {code:"T2",name:"2号航站楼",gateRange:"F–J 廊",gates:25,airlines:"墨西哥航空及国内航班",facilities:[{icon:"shop",label:"免税店"},{icon:"lounge",label:"贵宾室"},{icon:"wifi",label:"免费WiFi"}]}
+   ],gates:60,pax:"约5000万",distance:"6 km",
+   transit:[{icon:"train",name:"地铁5号线",desc:"连接墨西哥城中心"},{icon:"bus",name:"机场巴士",desc:"连接市区各区域"},{icon:"taxi",name:"出租车",desc:"定点候车区"}],
+   facilities:[{icon:"shop",label:"免税购物"},{icon:"lounge",label:"贵宾休息室"},{icon:"wifi",label:"免费WiFi"},{icon:"currency",label:"货币兑换"},{icon:"baggage",label:"行李寄存"},{icon:"medical",label:"医务室"},{icon:"food",label:"餐饮美食"},{icon:"parking",label:"停车场"}]}
+];
+
+/* ================================================================
+   工具
+================================================================ */
+const $  = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+function esc(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function countryOf(code){ return COUNTRIES[code]; }
+
+const ICONS = {
+  terminal: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V9l6-4v15M10 5l4-2v17M14 3l6 3v14M8 9h.01M8 13h.01M8 17h.01M16 10h.01M16 14h.01"/></svg>',
+  shop: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16l-1 13H5L4 7z"/><path d="M8 9a4 4 0 0 0 8 0"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>',
+  lounge: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-1z"/><path d="M3 14v3M21 14v3M5 17h14"/></svg>',
+  food: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v6a3 3 0 0 0 6 0V2M9 2v20M16 3c-1.5 1.5-2 3.5-2 5.5 0 1.5.6 2.5 2 3V21"/></svg>',
+  parking: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M10 17V8h3a2.5 2.5 0 0 1 0 5h-3"/></svg>',
+  wifi: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 9a15 15 0 0 1 19 0M5.5 13a10 10 0 0 1 13 0M8.8 16.8a5 5 0 0 1 6.4 0"/><circle cx="12" cy="20" r="1.1" fill="currentColor"/></svg>',
+  currency: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9a2.5 2.5 0 0 0-2.5-2h-1a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4H9M12 6.5V8M12 16v1.5"/></svg>',
+  baggage: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12v11a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V8z"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M6 12h12"/></svg>',
+  medical: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v8M8 12h8"/></svg>',
+  train: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="14" rx="4"/><path d="M8 21l-2 2M16 21l2 2M4 11h16M8 17h.01M16 17h.01"/></svg>',
+  tram: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="11" rx="3"/><path d="M4 13h16M9 16v3h6v-3M12 9h.01M9 9h.01"/></svg>',
+  ferry: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M3 19c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M12 5v8M12 5c-2 0-3.5 1.5-4 3M12 5c2 0 3.5 1.5 4 3"/></svg>',
+  bus: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="18" rx="4"/><path d="M4 9h16M8 20v2M16 20v2M8 14h.01M16 14h.01"/></svg>',
+  taxi: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11 7 6h10l2 5"/><rect x="3.5" y="11" width="17" height="7" rx="2.5"/><path d="M7 18v2M17 18v2M7 14h.01M17 14h.01"/></svg>',
+  car: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 6 6h12l2 6"/><rect x="3" y="12" width="18" height="6" rx="2"/><path d="M7 18v1.5M17 18v1.5M7.5 14.5h.01M16.5 14.5h.01"/></svg>',
+  arrow: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  back: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>'
+};
+
+/* 航站楼平面示意图 —— 数据驱动 SVG 生成（签名视觉元素） */
+function terminalMapSVG(ap){
+  const W = 1000, H = 430, pad = 40;
+  const c = {
+    bg: '#071B30',
+    line: 'rgba(255,255,255,.5)',
+    lineSoft: 'rgba(255,255,255,.16)',
+    bld: 'rgba(46,125,179,.30)',
+    bldStroke: 'rgba(255,255,255,.75)',
+    amber: '#F2A33C',
+    text: 'rgba(255,255,255,.92)',
+    textDim: 'rgba(255,255,255,.5)'
+  };
+  const n = ap.terminals.length;
+  const bw = (W - pad*2) / n;
+  let parts = [];
+  parts.push(`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(ap.name)}航站楼平面示意图">`);
+  parts.push(`<rect width="${W}" height="${H}" fill="${c.bg}"/>`);
+  // 跑道点缀线
+  parts.push(`<line x1="${pad}" y1="${H-38}" x2="${W-pad}" y2="${H-38}" stroke="${c.lineSoft}" stroke-width="2" stroke-dasharray="6 10"/>`);
+  parts.push(`<line x1="${pad}" y1="${H-30}" x2="${W-pad}" y2="${H-30}" stroke="${c.lineSoft}" stroke-width="2" stroke-dasharray="6 10"/>`);
+  // 航站楼体
+  ap.terminals.forEach((t, i) => {
+    const x = pad + i*bw + (bw-40)/2;
+    const w = Math.min(bw-40, 300);
+    const yTop = 96, hBld = 190;
+    const cx = x + w/2;
+    if (t.shape === 'satellite'){
+      // 卫星厅：圆形
+      const r = w/2;
+      parts.push(`<circle cx="${cx}" cy="${yTop+hBld/2}" r="${r}" fill="${c.bld}" stroke="${c.bldStroke}" stroke-width="1.6"/>`);
+      parts.push(`<circle cx="${cx}" cy="${yTop+hBld/2}" r="${r-14}" fill="none" stroke="${c.lineSoft}" stroke-width="1"/>`);
+      parts.push(`<line x1="${cx}" y1="${yTop+hBld/2-8}" x2="${cx}" y2="${yTop+hBld/2-40}" stroke="${c.amber}" stroke-width="2"/>`);
+      parts.push(`<text x="${cx}" y="${yTop+hBld/2-46}" fill="${c.amber}" font-size="13" text-anchor="middle" font-family="Oswald,sans-serif" letter-spacing="2">${esc(t.code)}</text>`);
+    } else {
+      parts.push(`<rect x="${x}" y="${yTop}" width="${w}" height="${hBld}" rx="10" fill="${c.bld}" stroke="${c.bldStroke}" stroke-width="1.6"/>`);
+      parts.push(`<rect x="${x}" y="${yTop}" width="${w}" height="34" rx="10" fill="rgba(242,163,60,.16)"/>`);
+      parts.push(`<text x="${cx}" y="${yTop+23}" fill="${c.amber}" font-size="14" text-anchor="middle" font-family="Oswald,sans-serif" letter-spacing="2" font-weight="600">${esc(t.code)}</text>`);
+      // 登机口节点
+      const gates = Math.min(12, Math.max(4, Math.round((t.gates||24)/3)));
+      for (let g=0; g<gates; g++){
+        const gx = x + 18 + (w-36) * g/(gates-1);
+        parts.push(`<circle cx="${gx}" cy="${yTop+hBld-14}" r="3.4" fill="${c.line}"/>`);
+      }
+      parts.push(`<text x="${cx}" y="${yTop+hBld+26}" fill="${c.textDim}" font-size="12" text-anchor="middle" font-family="Oswald,sans-serif" letter-spacing="1.5">${esc(t.gatesText||('登机口 '+ (t.gateRange||'')))}</text>`);
+    }
+    // 连接线（连廊）
+    if (i < n-1){
+      const nx = pad + (i+1)*bw + (bw-40)/2;
+      const yC = yTop + hBld/2;
+      parts.push(`<line x1="${cx}" y1="${yC}" x2="${nx}" y2="${yC}" stroke="${c.lineSoft}" stroke-width="6"/>`);
+      parts.push(`<line x1="${cx}" y1="${yC}" x2="${nx}" y2="${yC}" stroke="${c.bldStroke}" stroke-width="1.6" stroke-dasharray="4 6"/>`);
+    }
+    // 地面交通节点
+    if (i === Math.floor((n-1)/2)){
+      const gx = cx, gy = H-56;
+      parts.push(`<circle cx="${gx}" cy="${gy}" r="7" fill="${c.amber}" stroke="${c.bg}" stroke-width="2"/>`);
+      parts.push(`<line x1="${gx}" y1="${yTop+hBld+34}" x2="${gx}" y2="${gy-7}" stroke="${c.lineSoft}" stroke-width="2" stroke-dasharray="3 4"/>`);
+      parts.push(`<text x="${gx}" y="${H-30}" fill="${c.amber}" font-size="11.5" text-anchor="middle" font-family="Oswald,sans-serif" letter-spacing="2">地面交通</text>`);
+    }
+  });
+  // 图例
+  parts.push(`<g font-family="Oswald,sans-serif" font-size="11" letter-spacing="1.5" fill="${c.textDim}">`);
+  parts.push(`<circle cx="${pad+8}" cy="30" r="3.4" fill="${c.line}"/><text x="${pad+18}" y="34">登机口</text>`);
+  parts.push(`<rect x="${pad+92}" y="26" width="14" height="9" rx="2" fill="${c.bld}" stroke="${c.bldStroke}"/><text x="${pad+114}" y="34">航站楼</text>`);
+  parts.push(`<line x1="${pad+176}" y1="31" x2="${pad+190}" y2="31" stroke="${c.bldStroke}" stroke-dasharray="4 4"/><text x="${pad+198}" y="34">连廊</text>`);
+  parts.push(`<circle cx="${pad+258}" cy="31" r="4" fill="${c.amber}"/><text x="${pad+270}" y="34">地面交通</text>`);
+  parts.push(`<text x="${W-pad}" y="34" text-anchor="end" fill="${c.textDim}">${esc(ap.iata)} · 航站楼平面示意</text>`);
+  parts.push(`</g>`);
+  parts.push(`</svg>`);
+  return parts.join('');
+}
+
+/* ================================================================
+   视图渲染
+================================================================ */
+const view = $('#view');
+
+function renderHome(){
+  const totalAp = AIRPORTS.length;
+  const totalCountry = Object.keys(COUNTRIES).length;
+  const popular = ['DXB','FRA','IST','JFK','LHR'];
+  const recent  = ['CPT','SGN','TAS','OKC','HPN'];
+  const byIata = {};
+  AIRPORTS.forEach(a => byIata[a.iata] = a);
+
+  const popularCards = popular.map((code,i) => {
+    const a = byIata[code]; if(!a) return '';
+    return `<div class="popular-card" data-iata="${a.iata}" onclick="goAirport('${a.iata}')">
+      <span class="popular-rank">0${i+1}</span>
+      <div class="iata">${a.iata}</div>
+      <div class="city">${esc(a.city)}</div>
+      <div class="airport">${esc(a.name)}</div>
+      <span class="go">查看地图 ${ICONS.arrow}</span>
+    </div>`;
+  }).join('');
+
+  const updateRows = recent.map(code => {
+    const a = byIata[code]; if(!a) return '';
+    const c = countryOf(a.country);
+    return `<div class="update-row" onclick="goAirport('${a.iata}')">
+      <span class="update-no">0${recent.indexOf(code)+1}</span>
+      <span class="update-iata">${a.iata}</span>
+      <div class="update-name"><b>${esc(a.name)}</b><span>${esc(a.city)} · ${esc(c.name)}</span></div>
+      <img class="update-flag" src="${c.flag}" alt="${esc(c.name)}国旗" loading="lazy">
+      <span class="update-tag">最近更新</span>
+    </div>`;
+  }).join('');
+
+  const countryCards = Object.keys(COUNTRIES).map(code => {
+    const c = COUNTRIES[code];
+    const cnt = AIRPORTS.filter(a => a.country === code).length;
+    return `<div class="country-card" onclick="goCountry('${code}')">
+      <img class="country-flag" src="${c.flag}" alt="${esc(c.name)}国旗" loading="lazy">
+      <div class="country-info"><b>${esc(c.name)}</b><span>${esc(c.region)}</span></div>
+      <span class="cnt">${cnt} 机场</span>
+    </div>`;
+  }).join('');
+
+  const airportRows = AIRPORTS.slice().sort((a,b)=>a.name.localeCompare(b.name,'zh')).map(a => {
+    const c = countryOf(a.country);
+    return `<div class="airport-row" onclick="goAirport('${a.iata}')">
+      <span class="iata">${a.iata}</span>
+      <div class="nm"><b>${esc(a.name)}</b><span>${esc(a.iata)} · ${esc(a.nameEn)}</span></div>
+      <div class="meta">${esc(a.city)}</div>
+      <img class="flag" src="${c.flag}" alt="${esc(c.name)}国旗" loading="lazy">
+      <div class="meta">${a.terminals.length} 座航站楼 · ${a.gates} 登机口</div>
+      <span class="btn">航站楼地图 ${ICONS.arrow}</span>
+    </div>`;
+  }).join('');
+
+  return `
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url('https://aka.doubaocdn.com/s/b2RJdsGRQ0')"></div>
+    <div class="hero-veil"></div>
+    <svg class="hero-map-deco" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="200" height="120" rx="10" fill="rgba(7,27,48,.72)" stroke="rgba(255,255,255,.28)"/>
+      <rect x="18" y="22" width="74" height="56" rx="6" fill="rgba(46,125,179,.42)" stroke="rgba(255,255,255,.6)"/>
+      <rect x="110" y="22" width="72" height="56" rx="6" fill="rgba(46,125,179,.42)" stroke="rgba(255,255,255,.6)"/>
+      <line x1="92" y1="50" x2="110" y2="50" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+      <line x1="18" y1="96" x2="182" y2="96" stroke="rgba(255,255,255,.28)" stroke-width="2" stroke-dasharray="5 6"/>
+      <circle cx="100" cy="88" r="5" fill="#F2A33C"/>
+      <text x="55" y="44" fill="#fff" font-size="11" font-family="Oswald,sans-serif" text-anchor="middle">T1</text>
+      <text x="146" y="44" fill="#fff" font-size="11" font-family="Oswald,sans-serif" text-anchor="middle">T2</text>
+      <text x="16" y="16" fill="rgba(255,255,255,.55)" font-size="7.5" font-family="Oswald,sans-serif" letter-spacing="2">TERMINAL MAP</text>
+    </svg>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Global Airport Directory</div>
+      <h1>探索机场和<br><span class="accent">航站楼地图</span></h1>
+      <p class="hero-sub">使用我们完整的机场和航站楼地图轻松找到您的路。浏览按国家和地区组织的机场航站楼地图，从主要国际枢纽到区域机场。</p>
+      <div class="hero-search">
+        <input type="text" id="heroSearch" placeholder="搜索机场名称、城市或 IATA 代码，如 JFK / 迪拜 / 希思罗" autocomplete="off" aria-label="搜索机场">
+        <button onclick="searchJump()">查找机场</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">${totalCountry}</div><div class="lbl">覆盖国家 / 地区</div></div>
+        <div class="hero-stat"><div class="num">${totalAp}</div><div class="lbl">收录机场</div></div>
+        <div class="hero-stat"><div class="num"><em>${AIRPORTS.reduce((s,a)=>s+a.terminals.length,0)}</em></div><div class="lbl">航站楼平面图</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="popular">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">Busiest Hubs</div>
+        <h2 class="section-title">热门机场城市<span class="en">Popular Cities</span></h2>
+        <p class="sec-sub">世界上最繁忙的机场城市和主要旅行目的地的航站楼地图。</p>
+      </div>
+    </div>
+    <div class="popular-grid">${popularCards}</div>
+  </section>
+
+  <section class="section" id="recent">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">Freshly Published</div>
+        <h2 class="section-title">最近更新<span class="en">Recently Updated</span></h2>
+        <p class="sec-sub">新增和新更新的机场地图。</p>
+      </div>
+    </div>
+    <div class="update-list">${updateRows}</div>
+  </section>
+
+  <section class="section" id="countries">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">By Country</div>
+        <h2 class="section-title">按国家分类的机场地图<span class="en">Countries</span></h2>
+        <p class="sec-sub">浏览按国家和地区组织的机场航站楼地图。从主要国际枢纽到区域机场。</p>
+      </div>
+      <a class="section-more" href="#/countries">全部国家 ${ICONS.arrow}</a>
+    </div>
+    <div class="country-grid">${countryCards}</div>
+  </section>
+
+  <section class="section" id="allairports">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">All Maps</div>
+        <h2 class="section-title">全部机场地图<span class="en">All Airports</span></h2>
+        <p class="sec-sub">世界上最繁忙的机场和旅行枢纽的机场地图。</p>
+      </div>
+      <a class="section-more" href="#/airports">查看全部 ${ICONS.arrow}</a>
+    </div>
+    <div class="airport-table">
+      <div class="table-head">
+        <span>IATA</span><span>机场</span><span>城市</span><span>国家</span><span>规模</span><span style="text-align:right">地图</span>
+      </div>
+      ${airportRows}
+    </div>
+  </section>`;
+}
+
+function renderCountries(){
+  const cards = Object.keys(COUNTRIES).sort().map(code => {
+    const c = COUNTRIES[code];
+    const cnt = AIRPORTS.filter(a => a.country === code).length;
+    return `<div class="country-card" onclick="goCountry('${code}')">
+      <img class="country-flag" src="${c.flag}" alt="${esc(c.name)}国旗" loading="lazy">
+      <div class="country-info"><b>${esc(c.name)}</b><span>${esc(c.region)}</span></div>
+      <span class="cnt">${cnt} 机场</span>
+    </div>`;
+  }).join('');
+  return `
+  <div class="page-head">
+    <div class="page-head-inner">
+      <div class="crumb"><a href="#/">首页</a><span class="sep">/</span><span>按国家浏览</span></div>
+      <div class="country-hero">
+        <div>
+          <h1>按国家浏览机场</h1>
+          <div class="sub">从主要国际枢纽到区域机场，共 ${Object.keys(COUNTRIES).length} 个国家 / 地区、${AIRPORTS.length} 座机场。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="country-airports"><div class="country-grid">${cards}</div></section>`;
+}
+
+function renderCountry(code){
+  const c = COUNTRIES[code];
+  if(!c) return renderNotFound('国家不存在');
+  const list = AIRPORTS.filter(a => a.country === code);
+  const cards = list.map(a => {
+    return `<div class="cairport-card" onclick="goAirport('${a.iata}')">
+      <div class="top">
+        <span class="iata">${a.iata}</span>
+        <div class="nm"><b>${esc(a.name)}</b><span>${esc(a.city)} · ${esc(a.nameEn)}</span></div>
+      </div>
+      <div class="facts">
+        <span class="fact">${a.terminals.length} 座航站楼</span>
+        <span class="fact">${a.gates} 个登机口</span>
+        <span class="fact">年旅客约 ${a.pax}</span>
+      </div>
+      <div class="foot">
+        <span class="zone">${esc(c.name)}</span>
+        <span class="map-mini">航站楼地图 ${ICONS.arrow}</span>
+      </div>
+    </div>`;
+  }).join('');
+  return `
+  <div class="page-head">
+    <div class="page-head-inner">
+      <div class="crumb"><a href="#/">首页</a><span class="sep">/</span><a href="#/countries">按国家浏览</a><span class="sep">/</span><span>${esc(c.name)}</span></div>
+      <div class="country-hero">
+        <img class="flag" src="${c.flag}" alt="${esc(c.name)}国旗">
+        <div>
+          <h1>${esc(c.name)}</h1>
+          <div class="sub">${esc(c.region)} · ${list.length} 座机场</div>
+          <span class="iata-chip">${esc(c.nameEn.toUpperCase())} AIRPORTS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="country-airports">
+    <div class="cairport-grid">${cards || '<div class="empty-state"><p>该国家暂未收录机场。</p></div>'}</div>
+  </section>`;
+}
+
+function renderAirport(iata){
+  const ap = AIRPORTS.find(a => a.iata === iata.toUpperCase());
+  if(!ap) return renderNotFound('未找到该机场');
+  const c = countryOf(ap.country);
+  const mapSvg = terminalMapSVG(ap);
+  const tCards = ap.terminals.map(t => `
+    <div class="terminal-card">
+      <div class="terminal-badge">${esc(t.code)}</div>
+      <div class="terminal-main">
+        <h3>${esc(t.name)}</h3>
+        <div class="gates">登机口 ${esc(t.gateRange)}</div>
+        <div class="airlines"><b>主要航司：</b>${esc(t.airlines)}</div>
+      </div>
+      <div class="terminal-fac">
+        ${(t.facilities||[]).map(f => `<span>${ICONS[f.icon||'shop']}${esc(f.label)}</span>`).join('')}
+      </div>
+    </div>`).join('');
+
+  const transitRows = (ap.transit||[]).map(t => `
+    <div class="transit-row">
+      <span class="transit-icon">${ICONS[t.icon]||ICONS.bus}</span>
+      <div><b>${esc(t.name)}</b><span>${esc(t.desc)}</span></div>
+    </div>`).join('');
+
+  const facGrid = (ap.facilities||[]).map(f => `
+    <div class="fac-item">${ICONS[f.icon]||ICONS.shop}<span>${esc(f.label)}</span></div>`).join('');
+
+  const sameCountry = AIRPORTS.filter(a => a.country === ap.country && a.iata !== ap.iata);
+  const related = sameCountry.slice(0,6).map(a => `
+    <div class="related-card" onclick="goAirport('${a.iata}')">
+      <span class="iata">${a.iata}</span>
+      <div class="nm"><b>${esc(a.name)}</b><span>${esc(a.city)}</span></div>
+    </div>`).join('');
+
+  return `
+  <div class="ap-head">
+    <div class="ap-head-inner">
+      <div class="crumb"><a href="#/">首页</a><span class="sep">/</span><a href="#/country/${ap.country}">${esc(c.name)}</a><span class="sep">/</span><span>${esc(ap.name)}</span></div>
+      <div class="ap-title-row">
+        <div class="ap-iata">${ap.iata}</div>
+        <div class="ap-title">
+          <h1>${esc(ap.name)}</h1>
+          <div class="city">
+            <img class="flag" src="${c.flag}" alt="${esc(c.name)}国旗">
+            <span>${esc(ap.city)} · ${esc(c.name)}</span>
+            <span style="opacity:.55">· ${esc(ap.nameEn)}</span>
+          </div>
+        </div>
+      </div>
+      <div class="ap-facts">
+        <div class="ap-fact"><div class="num">${ap.terminals.length}</div><div class="lbl">航站楼</div></div>
+        <div class="ap-fact"><div class="num">${ap.gates}</div><div class="lbl">登机口</div></div>
+        <div class="ap-fact"><div class="num">${ap.pax}</div><div class="lbl">年旅客量（约）</div></div>
+        <div class="ap-fact"><div class="num">${ap.distance}</div><div class="lbl">距市中心</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ap-body">
+    <p class="ap-desc">${esc(ap.desc)}</p>
+
+    <div class="map-panel">
+      <div class="map-panel-head">
+        <div class="map-panel-title"><span class="dot"></span>${ap.iata} · 航站楼平面示意图</div>
+        <div class="map-panel-note">TERMINAL LAYOUT</div>
+      </div>
+      <div class="map-svg-wrap">${mapSvg}</div>
+      <div class="map-legend">
+        <span class="map-legend-item"><span class="sw" style="background:rgba(46,125,179,.45);box-shadow:0 0 0 1px rgba(255,255,255,.6)"></span>航站楼建筑</span>
+        <span class="map-legend-item"><span class="sw" style="background:#F2A33C;border-radius:50%"></span>地面交通节点</span>
+        <span class="map-legend-item"><span class="sw" style="background:transparent;box-shadow:0 0 0 1.5px rgba(255,255,255,.5) inset"></span>航站楼间连廊</span>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-bottom:18px">
+      <div>
+        <div class="section-kicker">Terminals</div>
+        <h2 class="section-title">航站楼信息<span class="en">Terminal Guide</span></h2>
+      </div>
+    </div>
+    <div class="terminal-list">${tCards}</div>
+
+    <div class="two-col">
+      <div class="info-panel">
+        <h3>${ICONS.train}地面交通</h3>
+        <div class="transit-list">${transitRows}</div>
+      </div>
+      <div class="info-panel">
+        <h3>${ICONS.shop}航站楼设施</h3>
+        <div class="fac-grid">${facGrid}</div>
+      </div>
+    </div>
+  </div>
+
+  ${related ? `
+  <section class="related">
+    <h3>${esc(c.name)}其他机场 <span class="en">More in ${esc(c.name)}</span></h3>
+    <div class="related-grid">${related}</div>
+  </section>` : ''}`;
+}
+
+function renderAllAirports(){
+  const rows = AIRPORTS.slice().sort((a,b)=>a.iata.localeCompare(b.iata)).map(a => {
+    const c = countryOf(a.country);
+    return `<div class="airport-row" onclick="goAirport('${a.iata}')">
+      <span class="iata">${a.iata}</span>
+      <div class="nm"><b>${esc(a.name)}</b><span>${esc(a.nameEn)}</span></div>
+      <div class="meta">${esc(a.city)}</div>
+      <img class="flag" src="${c.flag}" alt="${esc(c.name)}国旗" loading="lazy">
+      <div class="meta">${a.terminals.length} 座航站楼</div>
+      <span class="btn">航站楼地图 ${ICONS.arrow}</span>
+    </div>`;
+  }).join('');
+  return `
+  <div class="page-head">
+    <div class="page-head-inner">
+      <div class="crumb"><a href="#/">首页</a><span class="sep">/</span><span>全部机场</span></div>
+      <div class="country-hero">
+        <div>
+          <h1>全部机场地图</h1>
+          <div class="sub">共 ${AIRPORTS.length} 座机场，按 IATA 代码排序。点击任意机场查看航站楼平面示意图。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="country-airports">
+    <div class="airport-table">
+      <div class="table-head">
+        <span>IATA</span><span>机场</span><span>城市</span><span>国家</span><span>规模</span><span style="text-align:right">地图</span>
+      </div>
+      ${rows}
+    </div>
+  </section>`;
+}
+
+function renderNotFound(msg){
+  return `<div class="empty-state">
+    <div class="big">404</div>
+    <p>${esc(msg||'页面不存在')}</p>
+    <p style="margin-top:14px"><a href="#/" style="color:var(--sky-600);font-weight:600">返回首页</a></p>
+  </div>`;
+}
+
+/* ================================================================
+   路由
+================================================================ */
+function parseHash(){
+  const h = location.hash.replace(/^#\/?/, '');
+  const [seg, param] = h.split('/');
+  return { seg: seg || 'home', param: param || '' };
+}
+
+function router(){
+  const { seg, param } = parseHash();
+  window.scrollTo(0,0);
+  let html = '';
+  if(seg === 'home' || seg === '') html = renderHome();
+  else if(seg === 'countries') html = renderCountries();
+  else if(seg === 'country') html = renderCountry(param.toUpperCase());
+  else if(seg === 'airport') html = renderAirport(param);
+  else if(seg === 'airports') html = renderAllAirports();
+  else html = renderNotFound();
+  view.innerHTML = html;
+  $$('.topnav a').forEach(a => a.classList.toggle('active', a.dataset.nav === (seg==='home'?'home':seg)));
+  // 顶部搜索占位在 hero 输入框上联动的全局搜索
+  const hs = $('#heroSearch');
+  if(hs){
+    hs.addEventListener('input', function(){ suggestList(this.value, hs); });
+    hs.addEventListener('keydown', e => { if(e.key==='Enter') searchJump(); });
+  }
+  const gs = $('#globalSearch');
+  if(gs){
+    gs.addEventListener('input', function(){ suggestList(this.value, gs); });
+    gs.addEventListener('keydown', e => { if(e.key==='Enter') jumpFromGlobal(); });
+    gs.addEventListener('focus', function(){ if(this.value) suggestList(this.value, this); });
+  }
+}
+
+/* 联想搜索 */
+function suggestList(q, input){
+  const isHero = input && input.id === 'heroSearch';
+  const box = isHero ? ensureHeroSuggest() : $('#suggestBox');
+  q = (q||'').trim().toLowerCase();
+  if(!q){ box.classList.remove('open'); box.innerHTML=''; return; }
+  const hits = AIRPORTS.filter(a =>
+    a.iata.toLowerCase().includes(q) ||
+    a.name.toLowerCase().includes(q) ||
+    a.nameEn.toLowerCase().includes(q) ||
+    a.city.toLowerCase().includes(q) ||
+    countryOf(a.country).name.toLowerCase().includes(q)
+  ).slice(0,7);
+  if(!hits.length){
+    box.innerHTML = '<div class="suggest-empty">未找到匹配的机场</div>';
+    box.classList.add('open');
+    return;
+  }
+  box.innerHTML = hits.map(a => {
+    const c = countryOf(a.country);
+    return `<div class="suggest-item" data-iata="${a.iata}" data-label="${esc(a.name)}">
+      <span class="iata">${a.iata}</span>
+      <div class="nm"><b>${esc(a.name)}</b><span>${esc(a.city)} · ${esc(c.name)}</span></div>
+      <img class="flag" src="${c.flag}" alt="" loading="lazy">
+    </div>`;
+  }).join('');
+  box.classList.add('open');
+}
+function ensureHeroSuggest(){
+  let b = document.querySelector('.hero-suggest');
+  if(!b){
+    b = document.createElement('div');
+    b.className = 'suggest hero-suggest';
+    const hs = $('#heroSearch');
+    if(hs) hs.parentNode.appendChild(b);
+  }
+  return b;
+}
+function jumpFromGlobal(){
+  const v = $('#globalSearch').value.trim();
+  if(!v) return;
+  const a = AIRPORTS.find(x => x.iata.toLowerCase() === v.toLowerCase());
+  if(a){ $('#suggestBox').classList.remove('open'); goAirport(a.iata); return; }
+  const hit = AIRPORTS.find(x => x.name.toLowerCase().includes(v.toLowerCase()) || x.city.toLowerCase().includes(v.toLowerCase()));
+  if(hit){ $('#suggestBox').classList.remove('open'); goAirport(hit.iata); }
+}
+function searchJump(){
+  const hs = $('#heroSearch');
+  const v = (hs?hs.value:'').trim().toLowerCase();
+  if(!v){ hs&&hs.focus(); return; }
+  const a = AIRPORTS.find(x => x.iata.toLowerCase() === v);
+  if(a){ goAirport(a.iata); return; }
+  const hit = AIRPORTS.find(x =>
+    x.name.toLowerCase().includes(v) || x.nameEn.toLowerCase().includes(v) ||
+    x.city.toLowerCase().includes(v) || countryOf(x.country).name.toLowerCase().includes(v));
+  if(hit) goAirport(hit.iata);
+}
+
+/* 导航函数（暴露给内联 onclick） */
+function goAirport(iata){ location.hash = '#/airport/' + iata; }
+function goCountry(code){ location.hash = '#/country/' + code; }
+function scrollToSection(id){
+  if(parseHash().seg !== 'home'){
+    location.hash = '#/';
+    setTimeout(()=>{ const el=document.getElementById(id); if(el){ const y=el.getBoundingClientRect().top+window.pageYOffset-64; window.scrollTo({top:y,behavior:'smooth'}); } },60);
+  } else {
+    const el=document.getElementById(id);
+    if(el){ const y=el.getBoundingClientRect().top+window.pageYOffset-64; window.scrollTo({top:y,behavior:'smooth'}); }
+  }
+}
+
+/* 回到顶部 */
+const backTop = $('#backTop');
+window.addEventListener('scroll', () => {
+  backTop.classList.toggle('show', window.scrollY > 600);
+}, {passive:true});
+backTop.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+/* 点击页面空白关闭联想框 + 联想项跳转 */
+document.addEventListener('click', e => {
+  const it = e.target.closest('.suggest-item');
+  if(it){
+    $('#globalSearch').value = it.dataset.label || '';
+    $$('.suggest').forEach(b => b.classList.remove('open'));
+    goAirport(it.dataset.iata);
+    return;
+  }
+  if(!e.target.closest('.top-search') && !e.target.closest('.hero-search')){
+    $$('.suggest').forEach(b => b.classList.remove('open'));
+  }
+});
+
+window.addEventListener('hashchange', router);
+router();
+</script>
+</body>
+</html>

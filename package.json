@@ -1,0 +1,30 @@
+{
+  "name": "airport-maps",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3003",
+    "build": "next build",
+    "start": "next start -p 3003",
+    "typecheck": "tsc --noEmit",
+    "db:setup": "node scripts/db-setup.mjs",
+    "db:seed": "node scripts/seed.mjs",
+    "db:reset": "node scripts/db-setup.mjs --reset && node scripts/seed.mjs",
+    "db:verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "pg": "^8.16.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/pg": "^8.15.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}

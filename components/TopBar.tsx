@@ -1,0 +1,66 @@
+import Link from 'next/link';
+import LanguageSwitcher from './LanguageSwitcher';
+import NavLinks from './NavLinks';
+import SearchBox from './SearchBox';
+import { getMessages } from '@/lib/i18n';
+import { localizedPath, type Locale } from '@/lib/i18n/config';
+import { PlaneIcon } from '@/lib/icons';
+
+export default function TopBar({ locale }: { locale: Locale }) {
+  const t = getMessages(locale);
+
+  const items = [
+    { href: '/', label: t.nav.home },
+    { href: '/airports', label: t.nav.airports },
+    { href: '/countries', label: t.nav.countries },
+    { href: '/about', label: t.nav.about },
+  ];
+
+  return (
+    <>
+      <header className="topbar">
+        <div className="topbar-inner">
+          <Link className="brand" href={localizedPath(locale, '/')}>
+            <span className="brand-mark">
+              <PlaneIcon />
+            </span>
+            <span className="brand-name">
+              {t.site.nameLead}
+              <em>{t.site.nameAccent}</em>
+            </span>
+          </Link>
+          <nav className="topnav" aria-label={t.nav.label}>
+            <NavLinks locale={locale} items={items} />
+          </nav>
+          <SearchBox
+            variant="top"
+            labels={{
+              placeholder: t.search.placeholder,
+              ariaLabel: t.search.ariaLabel,
+              submit: t.search.submit,
+              loading: t.search.loading,
+              empty: t.search.empty,
+            }}
+          />
+          <LanguageSwitcher
+            current={locale}
+            label={t.nav.languageLabel}
+            switchLabel={t.nav.switchLanguage}
+          />
+        </div>
+      </header>
+      <div className="mobile-bar">
+        <SearchBox
+          variant="mobile"
+          labels={{
+            placeholder: t.search.placeholder,
+            ariaLabel: t.search.ariaLabel,
+            submit: t.search.submit,
+            loading: t.search.loading,
+            empty: t.search.empty,
+          }}
+        />
+      </div>
+    </>
+  );
+}
