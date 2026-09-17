@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import AirportTable from '@/components/AirportTable';
+import AirportMap from '@/components/AirportMap';
 import { CountryGrid } from '@/components/AirportCard';
 import CategoryGrid, { type CategoryCard } from '@/components/CategoryGrid';
 import { PopularCities, UpdateList } from '@/components/HomeSections';
@@ -23,6 +24,8 @@ import {
   getStats,
 } from '@/lib/queries';
 import { absoluteUrl } from '@/lib/site';
+import { getAirportGeo } from '@/lib/airport-geo';
+import worldAirportsMeta from '@/lib/world-airports-meta.json';
 
 export const revalidate = 3600;
 
@@ -62,6 +65,25 @@ export default async function HomePage({ params }: Props) {
     ]);
 
   const shortcuts = await getAirportsByCodes(locale, SHORTCUTS);
+
+  // Leaflet world map: the table summaries joined with static coordinates.
+  const mapAirports = airports.flatMap((a) => {
+    const geo = getAirportGeo(a.iata);
+    return geo
+      ? [{
+          iata: a.iata,
+          name: a.name,
+          city: a.city,
+          countryName: a.countryName,
+          countryCode: a.countryCode,
+          lat: geo.lat,
+          lng: geo.lng,
+          paxM: a.annualPaxM,
+          region: a.region,
+          url: localizedPath(locale, `/airport/${a.iata}`),
+        }]
+      : [];
+  });
 
   const categoryCards: CategoryCard[] = [
     {
@@ -182,6 +204,46 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* -------------------------------------------------- world airport map */}
+      {mapAirports.length > 0 && (
+        <section className="section" id="map">
+          <div className="section-head">
+            <div>
+              <div className="section-kicker">{t.home.map.kicker}</div>
+              <h2 className="section-title">
+                {t.home.map.title}
+                <span className="en">{t.home.map.en}</span>
+              </h2>
+              <p className="sec-sub">
+                {t.home.map.sub(
+                  formatNumber(stats?.airportCount ?? 0, locale),
+                  formatNumber(worldAirportsMeta.count, locale)
+                )}
+              </p>
+            </div>
+          </div>
+          <AirportMap
+            airports={mapAirports}
+            labels={{
+              all: t.home.map.all,
+              groups: {
+                europe: t.home.map.gEurope,
+                asia: t.home.map.gAsia,
+                americas: t.home.map.gAmericas,
+                africa: t.home.map.gAfrica,
+                oceania: t.home.map.gOceania,
+              },
+              legendSite: t.home.map.legendSite,
+              legendWorld: t.home.map.legendWorld,
+              countTemplate: t.home.map.countTemplate,
+              download: t.home.map.download,
+              downloadTitle: t.home.map.downloadTitle,
+              openAirport: t.home.map.openAirport,
+            }}
+          />
+        </section>
+      )}
 
       {/* ------------------------------------------------- functional-area strip */}
       <section className="cat-section" id="browse">

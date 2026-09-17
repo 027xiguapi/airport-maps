@@ -59,6 +59,8 @@ npm run build && npm start
 | `npm run db:seed` | 重建数据（先 TRUNCATE，可重复执行），含翻译校验 |
 | `npm run db:reset` | `db:setup` + `db:seed` |
 | `npm run db:verify` | 跑一遍站点依赖的关键查询 |
+| `npm run data:world-airports` | 从 `data/world-airports.csv` 生成地图数据：`public/data/world-airports.json`（前端加载）与 `lib/world-airports-meta.json`（构建期统计） |
+| `node scripts/check-maps.mjs [--table]` | 检查 `public/maps` 封面图与机场的覆盖情况：哪些机场缺图、哪些图没有对应机场 |
 | `node scripts/check-search.mjs [词...]` | 检查搜索相关性排序与通配符转义 |
 | `node scripts/analyze-shot.mjs <图片> [列数]` | 无法直接查看图片时，从像素里读出设计稿的结构：调色板、横向分区带、亮度与边缘 ASCII 图 |
 
@@ -191,6 +193,7 @@ lib/
   icons.tsx                 图标组件
   params.ts site.ts         searchParams 辅助 / 站点常量
 db/schema.sql               表结构、触发器、索引、directory_stats 视图
+data/world-airports.csv     全球机场原始数据（OurAirports 格式，首页地图数据的输入）
 content/                    Markdown 内容与术语表
 proxy.ts                    语言重定向（Next 16 的 middleware）
 scripts/                    提取、建库、灌数、自检脚本

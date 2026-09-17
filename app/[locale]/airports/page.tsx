@@ -5,14 +5,11 @@ import AirportCard, { CountryChips } from '@/components/AirportCard';
 import AirportTable from '@/components/AirportTable';
 import Breadcrumb from '@/components/Breadcrumb';
 import FilterBar from '@/components/FilterBar';
-import Pager from '@/components/Pager';
-import { formatNumber } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
-import { localizedPath } from '@/lib/i18n/config';
-import { intParam, oneOf, param, type RawSearchParams } from '@/lib/params';
-import { getCountries, listAirports } from '@/lib/queries';
-import { PAGE_SIZE } from '@/lib/site';
-import type { AirportSort } from '@/lib/types';
+import { localizedPath, type Locale } from '@/lib/i18n/config';
+import { oneOf, param, type RawSearchParams } from '@/lib/params';
+import { getAirportSummaries, getCountries, listAirports } from '@/lib/queries';
+import type { AirportSort, AirportSummary } from '@/lib/types';
 
 export const revalidate = 3600;
 
@@ -30,27 +27,38 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const sp = await searchParams;
   const q = param(sp, 'q');
   const country = param(sp, 'country');
-  const page = intParam(sp, 'page');
-
-  const title = q
-    ? t.search.resultsTitle(q)
-    : page > 1
-      ? `${t.home.all.title} (${page})`
-      : t.home.all.title;
+  const sort = oneOf(sp, 'sort', SORTS, 'pax');
 
   return {
-    title,
+    title: q ? t.search.resultsTitle(q) : t.home.all.title,
     description: t.countries.description,
     alternates: {
       canonical: localizedPath(locale, '/airports'),
       languages: languageAlternates('/airports'),
     },
-    // Filtered views duplicate the country pages, so keep them out of the index.
+    // Filtered and re-sorted views duplicate the canonical directory, so keep
+    // them out of the index.
     robots:
-      q || country || page > 1
+      q || country || sort !== 'pax'
         ? { index: false, follow: true }
         : { index: true, follow: true },
   };
+}
+
+/** Ordering for the flat table view, applied across the whole directory. */
+function sortRows(rows: AirportSummary[], sort: AirportSort, locale: Locale): AirportSummary[] {
+  const byIata = (a: AirportSummary, b: AirportSummary) => a.iata.localeCompare(b.iata);
+  switch (sort) {
+    case 'iata':
+      return [...rows].sort(byIata);
+    case 'updated':
+      return [...rows].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt) || byIata(a, b));
+    case 'name':
+      return [...rows].sort((a, b) => a.name.localeCompare(b.name, locale) || byIata(a, b));
+    default:
+      // The query already returns busiest-first.
+      return rows;
+  }
 }
 
 export default async function AirportsPage({ params, searchParams }: Props) {
@@ -62,16 +70,35 @@ export default async function AirportsPage({ params, searchParams }: Props) {
   const q = param(sp, 'q');
   const country = param(sp, 'country').toUpperCase();
   const sort: AirportSort = oneOf(sp, 'sort', SORTS, 'pax');
-  const page = intParam(sp, 'page');
 
-  const [result, countries] = await Promise.all([
-    listAirports(locale, { q, country, sort, page, perPage: PAGE_SIZE }),
+  const [countries, searchResult, allAirports] = await Promise.all([
     getCountries(locale),
+    // The directory is small enough to sit on one page, so a search caps at
+    // the directory size instead of paging.
+    q ? listAirports(locale, { q, country, sort, page: 1, perPage: 100 }) : null,
+    q ? [] : getAirportSummaries(locale),
   ]);
 
   const filters = { q, country, sort };
   const activeCountry = countries.find((c) => c.code === country);
   const totalAirports = countries.reduce((sum, c) => sum + c.airportCount, 0);
+
+  // Default view: every airport on one page, grouped under its country. The
+  // alternative sorts keep one flat, globally ordered table instead.
+  const grouped = !q && sort === 'pax';
+  const visible = country
+    ? allAirports.filter((airport) => airport.countryCode === country)
+    : allAirports;
+  const groups = grouped
+    ? countries
+        .map((c) => ({
+          country: c,
+          airports: visible.filter((airport) => airport.countryCode === c.code),
+        }))
+        .filter((group) => group.airports.length > 0)
+    : [];
+
+  const total = q ? (searchResult?.total ?? 0) : visible.length;
 
   return (
     <>
@@ -97,12 +124,10 @@ export default async function AirportsPage({ params, searchParams }: Props) {
               </h1>
               <div className="sub">
                 {q ? (
-                  t.search.resultsCount(result.total)
+                  t.search.resultsCount(total)
                 ) : (
                   <>
-                    {t.units.airports(result.total)}
-                    {result.pageCount > 1 &&
-                      ` · ${formatNumber(result.page, locale)} / ${formatNumber(result.pageCount, locale)}`}
+                    {t.units.airports(total)}
                     {'. '}
                     {t.home.all.hint}
                   </>
@@ -136,37 +161,47 @@ export default async function AirportsPage({ params, searchParams }: Props) {
 
         {q ? (
           <div className="cairport-grid">
-            {result.rows.map((airport) => (
+            {(searchResult?.rows ?? []).map((airport) => (
               <AirportCard locale={locale} airport={airport} key={airport.iata} />
             ))}
           </div>
+        ) : grouped ? (
+          groups.map((group) => (
+            <div className="country-block" key={group.country.code}>
+              <div className="country-block-head">
+                <img
+                  className="flag"
+                  src={group.country.flagUrl}
+                  alt={group.country.name}
+                  loading="lazy"
+                />
+                <h2>
+                  <Link href={localizedPath(locale, `/country/${group.country.code}`)}>
+                    {group.country.name}
+                  </Link>
+                </h2>
+                <span className="cnt">{t.units.airports(group.airports.length)}</span>
+              </div>
+              <div className="cairport-grid">
+                {group.airports.map((airport) => (
+                  <AirportCard locale={locale} airport={airport} key={airport.iata} />
+                ))}
+              </div>
+            </div>
+          ))
         ) : (
-          <AirportTable locale={locale} airports={result.rows} showUpdated={sort === 'updated'} />
+          <AirportTable
+            locale={locale}
+            airports={sortRows(visible, sort, locale)}
+            showUpdated={sort === 'updated'}
+          />
         )}
 
-        {result.total === 0 && (
+        {((q && total === 0) || (grouped && groups.length === 0)) && (
           <div className="empty-state">
             <div className="big">0</div>
-            <p>{t.search.noResults}</p>
+            <p>{q ? t.search.noResults : t.table.empty}</p>
           </div>
-        )}
-
-        <Pager
-          locale={locale}
-          page={result.page}
-          pageCount={result.pageCount}
-          basePath="/airports"
-          params={{ q, country, sort: sort === 'pax' ? '' : sort }}
-        />
-
-        {result.pageCount > 1 && (
-          <p className="result-note" style={{ justifyContent: 'center', marginTop: 4 }}>
-            {t.search.range(
-              (result.page - 1) * result.perPage + 1,
-              Math.min(result.page * result.perPage, result.total),
-              result.total
-            )}
-          </p>
         )}
 
         {/* crawlable links to every country so the directory is never a dead end */}

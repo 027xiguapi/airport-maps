@@ -127,6 +127,19 @@ export function UpIcon(props: IconProps) {
   );
 }
 
+/** Theme-toggle glyphs. Same 24×24 stroke language as the sprite set. */
+export function SunIcon(props: IconProps) {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.3M12 19.2v2.3M4.3 4.3l1.6 1.6M18.1 18.1l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.3 19.7l1.6-1.6M18.1 5.9l1.6-1.6"/></svg>
+  );
+}
+
+export function MoonIcon(props: IconProps) {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d="M20.4 14.2A8.5 8.5 0 1 1 9.8 3.6a7 7 0 1 0 10.6 10.6z"/></svg>
+  );
+}
+
 /** Category-strip glyphs. Same 24×24 / 1.8-stroke language as the sprite set. */
 export function GlobeIcon(props: IconProps) {
   return (

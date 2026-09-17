@@ -104,6 +104,23 @@
 }
 .result-note b{color:var(--ink);font-weight:600;}
 
+/* ------------------------------------- directory: every airport by country */
+/* The directory shows all airports on a single page, grouped under a country
+   heading (flag + linked name + count) instead of paging — same block rhythm
+   as the region groups on /countries. */
+.country-block{margin-bottom:38px;}
+.country-block-head{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line);
+}
+.country-block-head .flag{
+  width:34px;height:23px;object-fit:cover;border-radius:4px;flex:none;
+  box-shadow:0 0 0 1px rgba(10,42,67,.10);
+}
+.country-block-head h2{font-size:19px;font-weight:800;color:var(--navy-900);}
+.country-block-head h2 a:hover{color:var(--sky-600);}
+.country-block-head .cnt{font-size:13px;color:var(--ink-faint);}
+
 /* ------------------------------------------- popular city card: airport chips */
 .popular-card .city-airports{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
 .popular-card .city-airports span{
@@ -456,3 +473,207 @@
 .region-jump{
   display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px;
 }
+
+/* ------------------------------------------------------- dark mode toggle */
+.theme-toggle{
+  display:inline-flex;align-items:center;justify-content:center;flex:none;
+  width:34px;height:34px;border-radius:18px;
+  border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.10);
+  color:rgba(255,255,255,.9);transition:background .15s,border-color .15s;
+}
+.theme-toggle:hover{background:rgba(255,255,255,.18);border-color:var(--amber);}
+
+/* ============================================================================
+   Dark theme.
+
+   The layout flips `<html data-theme>` (stored choice, else the OS setting).
+   Most of the design reads the semantic variables, so remapping them re-skins
+   the page; the rules below then patch the two places variables cannot reach:
+   headings that borrow the navy *surface* colours as text, and the few
+   hard-coded white backgrounds. Elements that are dark in both themes
+   (topbar, hero, page-head, footer, map panel, table head) keep their navy.
+   ========================================================================== */
+:root{color-scheme:light;}
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#0A1724;
+  --card:#132435;
+  --line:#274058;
+  --ink:#E2ECF5;
+  --ink-soft:#A2B9CB;
+  --ink-faint:#7490A5;
+  /* sky-100 is the "pale blue tint" surface (hovers, chips, icon wells). */
+  --sky-100:#1C344A;
+  /* sky-600/500 also fill buttons; brightening them for link text means the
+     submit button now needs dark text instead (rule below). */
+  --sky-600:#5EA6D4;
+  --sky-500:#4E93C2;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.35),0 2px 8px rgba(0,0,0,.30);
+  --shadow-md:0 4px 16px rgba(0,0,0,.45);
+  --shadow-lg:0 12px 32px rgba(0,0,0,.55);
+}
+
+/* Headings printed in navy on light surfaces. */
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] .country-info b,
+html[data-theme="dark"] .terminal-main h3,
+html[data-theme="dark"] .info-panel h3,
+html[data-theme="dark"] .related h3,
+html[data-theme="dark"] .region-head h2,
+html[data-theme="dark"] .country-block-head h2,
+html[data-theme="dark"] .cat-body b,
+html[data-theme="dark"] .guide-card h3,
+html[data-theme="dark"] .md h2,
+html[data-theme="dark"] .md h3,
+html[data-theme="dark"] .md strong{color:#E9F2FA;}
+
+/* IATA wordmarks and other navy-800 text on cards. */
+html[data-theme="dark"] .airport-row .iata,
+html[data-theme="dark"] .cairport-card .iata,
+html[data-theme="dark"] .suggest-item .iata,
+html[data-theme="dark"] .update-iata,
+html[data-theme="dark"] .related-card .iata,
+html[data-theme="dark"] .hub-row .iata,
+html[data-theme="dark"] .guide-card .iata,
+html[data-theme="dark"] .lang-menu a[aria-current="true"],
+html[data-theme="dark"] .md h4{color:#C4DCF0;}
+
+/* Hard-coded white surfaces. */
+html[data-theme="dark"] .suggest,
+html[data-theme="dark"] .lang-menu{background:var(--card);border:1px solid var(--line);}
+html[data-theme="dark"] .chip:hover{background:var(--card);}
+html[data-theme="dark"] .filterbar input[type="search"]:focus{background:var(--card);}
+
+/* The submit button keeps its sky fill; with the brighter dark value it needs
+   dark text and a brighter hover to keep its contrast. */
+html[data-theme="dark"] .filterbar button[type="submit"]{color:var(--navy-900);}
+html[data-theme="dark"] .filterbar button[type="submit"]:hover{background:var(--sky-400);}
+html[data-theme="dark"] .md a:hover{color:var(--sky-400);}
+
+/* The empty-state numeral is a pale-on-pale watermark; invert the trick. */
+html[data-theme="dark"] .empty-state .big{color:rgba(255,255,255,.14);}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb{background:#2E4B66;}
+
+/* ============================================================================
+   Homepage world map (Leaflet), airport-detail additions and the cover images
+   on the country-page cards.
+   ========================================================================== */
+
+.cairport-card{overflow:hidden;}
+
+/* ============ 首页 · 世界机场地图 ============ */
+.am-card{
+  position:relative;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);box-shadow:var(--shadow-md);background:#0d1b2a;
+}
+.am-card .am-map{height:480px;z-index:1;}
+.leaflet-container{font:inherit;background:#0d1b2a;}
+/* OSM tiles inverted into a dark basemap — keeps the site theme without a
+   tile-provider API key. */
+.am-map .leaflet-tile-pane{
+  filter:invert(1) hue-rotate(185deg) brightness(.86) contrast(.88) saturate(.65);
+}
+.am-download{
+  position:absolute;top:12px;left:14px;z-index:600;
+  display:inline-flex;align-items:center;gap:6px;
+  font:inherit;font-size:12px;padding:5px 12px;border-radius:14px;
+  border:1px solid rgba(255,255,255,.25);background:rgba(10,42,67,.78);
+  color:rgba(255,255,255,.82);cursor:pointer;backdrop-filter:blur(4px);
+  transition:background .15s,border-color .15s,color .15s;
+}
+.am-download:hover{border-color:rgba(255,255,255,.5);color:#fff;}
+.am-download span{color:var(--amber);font-weight:700;}
+.am-tabs{
+  position:absolute;top:12px;right:12px;z-index:600;
+  display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;max-width:72%;
+}
+.am-tabs button{
+  font:inherit;font-size:12px;padding:5px 12px;border-radius:14px;
+  border:1px solid rgba(255,255,255,.25);background:rgba(10,42,67,.78);
+  color:rgba(255,255,255,.82);cursor:pointer;backdrop-filter:blur(4px);
+  transition:background .15s,border-color .15s;
+}
+.am-tabs button:hover{border-color:rgba(255,255,255,.5);color:#fff;}
+.am-tabs button.on{background:var(--amber);border-color:var(--amber);color:#0A2A43;font-weight:600;}
+.am-legend{
+  position:absolute;left:14px;bottom:14px;z-index:600;
+  display:flex;flex-direction:column;gap:4px;pointer-events:none;
+  background:rgba(10,42,67,.78);border:1px solid rgba(255,255,255,.18);
+  border-radius:8px;padding:8px 12px;font-size:11.5px;color:rgba(255,255,255,.78);
+  backdrop-filter:blur(4px);
+}
+.am-legend .rows{display:flex;flex-direction:column;gap:4px;}
+.am-legend .rows>span{display:inline-flex;align-items:center;gap:6px;}
+.am-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;flex:none;}
+.am-legend i.world{background:#2E7EB3;box-shadow:0 0 0 1px rgba(255,255,255,.35);}
+.am-legend svg.plane-ico{width:12px;height:12px;flex:none;fill:#F2A33C;filter:drop-shadow(0 0 1px rgba(0,0,0,.7));}
+/* Plane markers for covered airports: the divIcon default box must go. */
+.am-plane{background:none;border:0;}
+.am-plane svg{display:block;overflow:visible;}
+.am-plane svg path{
+  fill:#F2A33C;stroke:rgba(7,27,48,.85);stroke-width:1;stroke-linejoin:round;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.55));
+  transition:fill .15s;
+}
+.am-plane:hover svg path{fill:#FFC163;}
+.am-legend .cnt{border-top:1px solid rgba(255,255,255,.15);padding-top:4px;color:#F2A33C;font-weight:600;}
+.am-pop{font:13px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;min-width:170px;}
+.am-pop b{font-family:"Oswald",sans-serif;font-size:15px;color:var(--navy-800);margin-right:4px;}
+.am-pop span{color:var(--ink-soft);font-size:12px;}
+.am-pop a{display:inline-block;margin-top:6px;color:var(--sky-600);font-weight:600;text-decoration:none;}
+@media (max-width:640px){
+  .am-card .am-map{height:380px;}
+  .am-legend{display:none;}
+  .am-tabs{max-width:60%;}
+}
+
+.cairport-card .cover{
+  margin:-22px -22px 10px;aspect-ratio:4/3;flex:none;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+  border-radius:calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+  background:var(--navy-900);
+}
+.cairport-card .cover img{width:100%;height:100%;object-fit:cover;display:block;}
+.cairport-card .cover.empty{background:linear-gradient(135deg,var(--navy-700),var(--navy-900));}
+.cairport-card .cover .ph-iata{
+  font-family:"Oswald",sans-serif;font-size:36px;font-weight:600;letter-spacing:.08em;
+  color:rgba(255,255,255,.14);
+}
+
+.ap-extra{margin-top:46px;}
+.map-img-wrap{
+  margin:0 auto;max-width:680px;border-radius:12px;overflow:hidden;
+  background:#071B30;box-shadow:0 0 0 1px rgba(255,255,255,.14);
+}
+.map-img-wrap img{display:block;width:100%;height:auto;}
+.clock-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+.clock-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 22px;
+}
+.clock-card .lbl{
+  font-family:"Oswald",sans-serif;font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-faint);
+}
+.clock-card .tz{font-size:12.5px;color:var(--ink-soft);margin-top:2px;}
+.clock-card .time{
+  font-family:"Oswald",sans-serif;font-size:36px;font-weight:600;color:var(--navy-800);
+  line-height:1.15;margin-top:8px;font-variant-numeric:tabular-nums;
+}
+.clock-card .date{font-size:13px;color:var(--ink-soft);margin-top:4px;font-variant-numeric:tabular-nums;}
+.detail-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;}
+.detail-item{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 16px;}
+.detail-item .k{font-size:12px;color:var(--ink-soft);}
+.detail-item .v{font-size:15px;font-weight:700;margin-top:3px;color:var(--navy-800);font-variant-numeric:tabular-nums;word-break:break-word;}
+.map-embed{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--paper);}
+.map-embed iframe{display:block;width:100%;height:380px;border:0;}
+.ext-note{font-size:13px;color:var(--ink-soft);margin:16px 0 0;}
+.ext-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+a.ext-btn{
+  display:inline-flex;align-items:center;gap:6px;background:var(--card);
+  border:1px solid var(--line);border-radius:8px;padding:8px 14px;
+  font-size:13.5px;font-weight:600;color:var(--sky-600);
+  transition:border-color .15s,background .15s;
+}
+a.ext-btn:hover{border-color:var(--sky-400);background:var(--sky-100);}

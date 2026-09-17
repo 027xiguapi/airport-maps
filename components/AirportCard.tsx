@@ -3,6 +3,7 @@ import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { ArrowIcon } from '@/lib/icons';
 import { formatNumber, formatPax } from '@/lib/format';
+import { mapImageUrl } from '@/lib/map-images';
 import type { AirportSummary } from '@/lib/types';
 
 /** Card used on country pages and search results. */
@@ -15,9 +16,22 @@ export default function AirportCard({
 }) {
   const t = getMessages(locale);
   const pax = formatPax(airport.annualPaxM, locale);
+  const cover = mapImageUrl(airport.iata);
 
   return (
     <Link className="cairport-card" href={localizedPath(locale, `/airport/${airport.iata}`)}>
+      <span className={cover ? 'cover' : 'cover empty'}>
+        {cover ? (
+          <img
+            src={cover}
+            alt={`${airport.iata} ${airport.nameEn}`}
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <span className="ph-iata" aria-hidden="true">{airport.iata}</span>
+        )}
+      </span>
       <div className="top">
         <span className="iata">{airport.iata}</span>
         <div className="nm">

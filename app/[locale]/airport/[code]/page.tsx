@@ -5,12 +5,15 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Faq, { type FaqItem } from '@/components/Faq';
 import JsonLd from '@/components/JsonLd';
 import Markdown from '@/components/Markdown';
+import AirportClock from '@/components/AirportClock';
 import { formatDate, formatDistance, formatNumber, formatPax } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { LOCALE_META, localizedPath, type Locale } from '@/lib/i18n/config';
 import { ArrowIcon, Icon, ShopIcon, TrainIcon } from '@/lib/icons';
 import { getAirportGuide } from '@/lib/content';
 import { getAirportByCode, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
+import { getAirportGeo } from '@/lib/airport-geo';
+import { mapImageUrl } from '@/lib/map-images';
 import { absoluteUrl } from '@/lib/site';
 import { terminalMapSvg } from '@/lib/terminal-map';
 import type { AirportDetail } from '@/lib/types';
@@ -175,6 +178,8 @@ export default async function AirportPage({ params }: Props) {
   const pax = formatPax(airport.annualPaxM, locale);
   const distance = formatDistance(airport.distanceKm, locale);
   const faqItems = buildFaq(locale, airport, distance);
+  const mapImg = mapImageUrl(airport.iata);
+  const geo = getAirportGeo(airport.iata);
   const mapSvg = terminalMapSvg({
     iata: airport.iata,
     name: airport.name,
@@ -215,8 +220,8 @@ export default async function AirportPage({ params }: Props) {
                 {
                   '@type': 'ListItem',
                   position: 2,
-                  name: t.nav.countries,
-                  item: absoluteUrl(localizedPath(locale, '/countries')),
+                  name: t.nav.airports,
+                  item: absoluteUrl(localizedPath(locale, '/airports')),
                 },
                 {
                   '@type': 'ListItem',
@@ -251,6 +256,7 @@ export default async function AirportPage({ params }: Props) {
             locale={locale}
             items={[
               { label: t.common.home, href: '/' },
+              { label: t.nav.airports, href: '/airports' },
               { label: airport.countryName, href: `/country/${airport.countryCode}` },
               { label: airport.name },
             ]}
@@ -297,38 +303,155 @@ export default async function AirportPage({ params }: Props) {
           <div className="map-panel-head">
             <div className="map-panel-title">
               <span className="dot" />
-              {t.airport.mapTitle(airport.iata)}
+              {mapImg ? t.airport.realMapTitle(airport.iata) : t.airport.mapTitle(airport.iata)}
             </div>
-            <div className="map-panel-note">{t.airport.mapNote}</div>
+            <div className="map-panel-note">{mapImg ? t.airport.realMapNote : t.airport.mapNote}</div>
           </div>
-          <div className="map-svg-wrap" dangerouslySetInnerHTML={{ __html: mapSvg }} />
-          <div className="map-legend">
-            <span className="map-legend-item">
-              <span
-                className="sw"
-                style={{
-                  background: 'rgba(46,125,179,.45)',
-                  boxShadow: '0 0 0 1px rgba(255,255,255,.6)',
-                }}
-              />
-              {t.airport.legendTerminal}
-            </span>
-            <span className="map-legend-item">
-              <span className="sw" style={{ background: '#F2A33C', borderRadius: '50%' }} />
-              {t.airport.legendTransit}
-            </span>
-            <span className="map-legend-item">
-              <span
-                className="sw"
-                style={{
-                  background: 'transparent',
-                  boxShadow: '0 0 0 1.5px rgba(255,255,255,.5) inset',
-                }}
-              />
-              {t.airport.legendCorridor}
-            </span>
-          </div>
+          {mapImg ? (
+            <figure className="map-img-wrap">
+              <img src={mapImg} alt={t.airport.realMapTitle(airport.iata)} decoding="async" />
+            </figure>
+          ) : (
+            <>
+              <div className="map-svg-wrap" dangerouslySetInnerHTML={{ __html: mapSvg }} />
+              <div className="map-legend">
+                <span className="map-legend-item">
+                  <span
+                    className="sw"
+                    style={{
+                      background: 'rgba(46,125,179,.45)',
+                      boxShadow: '0 0 0 1px rgba(255,255,255,.6)',
+                    }}
+                  />
+                  {t.airport.legendTerminal}
+                </span>
+                <span className="map-legend-item">
+                  <span className="sw" style={{ background: '#F2A33C', borderRadius: '50%' }} />
+                  {t.airport.legendTransit}
+                </span>
+                <span className="map-legend-item">
+                  <span
+                    className="sw"
+                    style={{
+                      background: 'transparent',
+                      boxShadow: '0 0 0 1.5px rgba(255,255,255,.5) inset',
+                    }}
+                  />
+                  {t.airport.legendCorridor}
+                </span>
+              </div>
+            </>
+          )}
         </div>
+
+        {geo && (
+          <section className="ap-extra">
+            <div className="section-head">
+              <div>
+                <div className="section-kicker">{t.airport.timeKicker}</div>
+                <h2 className="section-title">
+                  {t.airport.timeTitle(airport.iata)}
+                  <span className="en">{t.airport.timeEn}</span>
+                </h2>
+                <p className="sec-sub">{t.airport.timeSub(airport.iata, geo.tz)}</p>
+              </div>
+            </div>
+            <AirportClock
+              locale={locale}
+              timeZone={geo.tz}
+              airportLabel={t.airport.clockAirport}
+              localLabel={t.airport.clockLocal}
+            />
+          </section>
+        )}
+
+        <section className="ap-extra">
+          <div className="section-head">
+            <div>
+              <div className="section-kicker">{t.airport.infoKicker}</div>
+              <h2 className="section-title">
+                {t.airport.infoTitle}
+                <span className="en">{t.airport.infoEn}</span>
+              </h2>
+            </div>
+          </div>
+          <div className="detail-list">
+            <div className="detail-item">
+              <div className="k">{t.airport.infoIata}</div>
+              <div className="v">{airport.iata}</div>
+            </div>
+            <div className="detail-item">
+              <div className="k">{t.airport.infoLocation}</div>
+              <div className="v">
+                {airport.city} · {airport.countryName}
+              </div>
+            </div>
+            {geo && (
+              <>
+                <div className="detail-item">
+                  <div className="k">{t.airport.infoCoords}</div>
+                  <div className="v">
+                    {geo.lat.toFixed(4)}, {geo.lng.toFixed(4)}
+                  </div>
+                </div>
+                <div className="detail-item">
+                  <div className="k">{t.airport.infoTimezone}</div>
+                  <div className="v">{geo.tz}</div>
+                </div>
+              </>
+            )}
+          </div>
+        </section>
+
+        {geo && (
+          <section className="ap-extra">
+            <div className="section-head">
+              <div>
+                <div className="section-kicker">{t.airport.mapEmbedKicker}</div>
+                <h2 className="section-title">
+                  {t.airport.mapEmbedTitle(airport.name)}
+                  <span className="en">{t.airport.mapEmbedEn}</span>
+                </h2>
+              </div>
+            </div>
+            <div className="map-embed">
+              <iframe
+                title={t.airport.mapEmbedTitle(airport.name)}
+                src={`https://www.openstreetmap.org/export/embed.html?bbox=${geo.lng - 0.07}%2C${
+                  geo.lat - 0.04
+                }%2C${geo.lng + 0.07}%2C${geo.lat + 0.04}&layer=mapnik&marker=${geo.lat}%2C${geo.lng}`}
+                loading="lazy"
+              />
+            </div>
+            <p className="ext-note">{t.airport.extMapsNote}</p>
+            <div className="ext-links">
+              <a
+                className="ext-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://www.google.com/maps/search/?api=1&query=${geo.lat},${geo.lng}`}
+              >
+                Google Maps ↗
+              </a>
+              <a
+                className="ext-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://www.openstreetmap.org/?mlat=${geo.lat}&mlon=${geo.lng}#map=13/${geo.lat}/${geo.lng}`}
+              >
+                OpenStreetMap ↗
+              </a>
+              <a
+                className="ext-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://www.bing.com/maps?q=${geo.lat},${geo.lng}`}
+              >
+                Bing Maps ↗
+              </a>
+            </div>
+          </section>
+        )}
 
         {/* Optional long-form guide from content/<locale>/airports/<IATA>.md */}
         {guide && (

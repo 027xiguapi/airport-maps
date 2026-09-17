@@ -2,9 +2,9 @@ import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
 import NavLinks from './NavLinks';
 import SearchBox from './SearchBox';
+import ThemeToggle from './ThemeToggle';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
-import { PlaneIcon } from '@/lib/icons';
 
 export default function TopBar({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
@@ -22,7 +22,7 @@ export default function TopBar({ locale }: { locale: Locale }) {
         <div className="topbar-inner">
           <Link className="brand" href={localizedPath(locale, '/')}>
             <span className="brand-mark">
-              <PlaneIcon />
+              <img src="/icon.png" alt="" width={34} height={34} />
             </span>
             <span className="brand-name">
               {t.site.nameLead}
@@ -42,6 +42,7 @@ export default function TopBar({ locale }: { locale: Locale }) {
               empty: t.search.empty,
             }}
           />
+          <ThemeToggle label={t.nav.themeToggle} />
           <LanguageSwitcher
             current={locale}
             label={t.nav.languageLabel}

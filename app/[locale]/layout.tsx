@@ -73,9 +73,18 @@ export default async function LocaleLayout({
   const t = getMessages(locale);
   const meta = LOCALE_META[locale];
 
+  // suppressHydrationWarning: the theme script mutates <html data-theme>
+  // before React hydrates, which would otherwise trip a mismatch warning.
   return (
-    <html lang={meta.htmlLang} dir={meta.dir}>
+    <html lang={meta.htmlLang} dir={meta.dir} suppressHydrationWarning>
       <head>
+        {/* Sets the theme before first paint so a dark preference never
+            flashes the light theme. Mirrors ThemeToggle's storage keys. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('theme');if(t!=='dark'&&t!=='light'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t}catch(e){}`,
+          }}
+        />
         <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5878114055897626"
