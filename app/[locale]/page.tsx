@@ -152,7 +152,9 @@ export default async function HomePage({ params }: Props) {
 
       {/* ---------------------------------------------------------- search hero */}
       <section className="hero">
-        <div className="hero-bg" style={{ backgroundImage: "url('/hero.svg')" }} />
+        {/* Decorative layer only — the gradient itself lives on .hero-bg in
+            globals.css, so there is no background image to load. */}
+        <div className="hero-bg" />
         <div className="hero-veil" />
         <div className="hero-inner">
           <div className="hero-eyebrow">{t.hero.eyebrow}</div>

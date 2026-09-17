@@ -16,7 +16,7 @@
 | --- | --- |
 | 框架 | Next.js 16（App Router、Server Components、ISR） |
 | 语言 | TypeScript |
-| 数据库 | PostgreSQL 13+（`pg` 驱动 + 手写 SQL，无 ORM） |
+| 数据库 | PostgreSQL 13+（drizzle-orm + drizzle-kit 管理表结构，`pg` 连接池；检索、分页、机场详情等复杂查询仍是手写 SQL） |
 | 国际化 | 自建轻量方案：类型安全的消息目录 + `[locale]` 路由段 + proxy |
 | Markdown | `react-markdown` + `remark-gfm`（渲染为 React 元素，不注入 HTML） |
 | 样式 | 移植原设计系统的原生 CSS（`app/globals.css` + `app/additions.css`） |
@@ -29,7 +29,7 @@
 ```bash
 npm install
 cp .env.example .env.local     # 按需修改 DATABASE_URL
-npm run db:reset               # 建库 + 建表 + 灌入数据（含双语内容）
+npm run db:reset               # 建库 + 建表（迁移）+ 扩展/触发器/视图 + 灌入数据（含双语内容）
 npm run dev                    # http://localhost:3000
 ```
 
@@ -55,14 +55,43 @@ npm run build && npm start
 | --- | --- |
 | `npm run dev` / `build` / `start` | 开发 / 构建 / 启动 |
 | `npm run typecheck` | `tsc --noEmit` |
-| `npm run db:setup` | 创建数据库（若不存在）并执行 `db/schema.sql` |
+| `npm run db:setup` | 初始化数据库：建库（若不存在）→ `db:extensions.sql` → `db:migrate` → `db/custom.sql`。脚本化、无交互，适合新环境首次初始化 |
+| `npm run db:reset` | 删库重建 → 上面的初始化 → `db:seed`（**会丢掉库里现有数据**） |
+| `npm run db:push` | `drizzle-kit push`：把 `db/schema.ts` 直接推到库，改表最快的开发路径（执行前会列出语句并确认） |
+| `npm run db:generate` | `drizzle-kit generate`：按 `db/schema.ts` 的改动生成迁移文件到 `drizzle/` |
+| `npm run db:migrate` | `drizzle-kit migrate`：应用 `drizzle/` 下的迁移（`db:setup` / `db:reset` 用的就是它） |
+| `npm run db:studio` | `drizzle-kit studio`：在浏览器里浏览 / 编辑数据 |
+| `npm run db:create` | 只建库（`--reset` 为 `DROP DATABASE ... WITH (FORCE)` 后重建） |
+| `npm run db:extensions` | 只跑 `db/extensions.sql`（`pg_trgm`），必须在建表**之前** |
+| `npm run db:custom` | 只跑 `db/custom.sql`（`search_blob` 触发器、`directory_stats` 视图），必须在建表**之后** |
 | `npm run db:seed` | 重建数据（先 TRUNCATE，可重复执行），含翻译校验 |
-| `npm run db:reset` | `db:setup` + `db:seed` |
 | `npm run db:verify` | 跑一遍站点依赖的关键查询 |
 | `npm run data:world-airports` | 从 `data/world-airports.csv` 生成地图数据：`public/data/world-airports.json`（前端加载）与 `lib/world-airports-meta.json`（构建期统计） |
 | `node scripts/check-maps.mjs [--table]` | 检查 `public/maps` 封面图与机场的覆盖情况：哪些机场缺图、哪些图没有对应机场 |
 | `node scripts/check-search.mjs [词...]` | 检查搜索相关性排序与通配符转义 |
 | `node scripts/analyze-shot.mjs <图片> [列数]` | 无法直接查看图片时，从像素里读出设计稿的结构：调色板、横向分区带、亮度与边缘 ASCII 图 |
+
+## 数据库与迁移（Drizzle）
+
+**表结构的唯一来源是 `db/schema.ts`**（`drizzle-orm/pg-core`）：7 张表、全部索引、唯一约束、外键与 CHECK 都写在这里。`drizzle/` 是 `db:generate` 生成的迁移与快照，**需要提交**；`drizzle.config.ts` 负责加载 `.env.local` 并把 `DATABASE_URL` 交给 drizzle-kit（drizzle-kit 自己不读 `.env.local`）。
+
+有三种对象 Drizzle 表达不了，放在两个 `.sql` 里，按顺序应用：
+
+| 文件 | 内容 | 时机 |
+| --- | --- | --- |
+| `db/extensions.sql` | `pg_trgm` 扩展（`gin_trgm_ops` 索引依赖它） | 建表**之前** |
+| `db/custom.sql` | `airports_search_blob_trg` 触发器、`directory_stats` 视图 | 建表**之后** |
+
+`directory_stats` 在 `db/schema.ts` 里以 `.existing()` 声明：Drizzle 可以查询它，但不会去建或删它（所以 `db:push` 不会误删视图和触发器）。
+
+两种把 `db/schema.ts` 落到库里的方式，按场景选一种、不要在同一个库上反复横跳：
+
+- **开发期改表**：`npm run db:push`。最快，代价是没有迁移记录；执行前 drizzle-kit 会列出将执行的语句并要求确认，CI 等非交互环境加 `--force`。
+- **需要可追溯 / 部署到其他环境**：改完 `db/schema.ts` 跑 `npm run db:generate`，审阅 `drizzle/*.sql` 后提交，再 `npm run db:migrate`。`npm run db:setup` / `db:reset` 走的是这条路径。
+
+查询层保持手写 SQL（`lib/queries.ts`）：分页目录、搜索相关性排序、机场详情页分别用到窗口函数、`LATERAL` + `json_agg`、`ESCAPE` 转义的 `ILIKE`，用 SQL 写更好读也更好审。`lib/db.ts` 在同一个连接池上另外导出了 `getDb()`（已挂 `db/schema.ts`），新写的、不需要上述技巧的查询可以直接用 ORM。
+
+> 与重构前的 `db/schema.sql`（已删除，见 git 历史）相比，库结构完全等价，**只有外键约束名不同**：Drizzle 生成 `<表>_<列>_<引用表>_<引用列>_fk`（如 `airports_country_code_countries_code_fk`），PostgreSQL 默认是 `<表>_<列>_fkey`。名称不影响行为。
 
 ## 多语言
 
@@ -186,13 +215,17 @@ lib/
   i18n/config.ts            语言注册表、locale 工具、localizedPath
   i18n/messages/{zh,en}.ts  消息目录（中文为形状来源，英文按类型校验）
   i18n/index.ts             getMessages、hreflang alternates
-  db.ts queries.ts types.ts 连接池 / 全部 SQL / 类型
+  db.ts queries.ts types.ts 连接池（含 getDb()）/ 全部 SQL / 类型
   content.ts                Markdown 读取与 frontmatter 解析
   format.ts                 按语言的旅客量、距离、数字、日期格式化
   terminal-map.ts           航站楼示意图 SVG（含本地化标注）
   icons.tsx                 图标组件
   params.ts site.ts         searchParams 辅助 / 站点常量
-db/schema.sql               表结构、触发器、索引、directory_stats 视图
+db/schema.ts                Drizzle 表结构（表、索引、约束）——结构的唯一来源
+db/extensions.sql           pg_trgm 扩展（建表前应用）
+db/custom.sql               search_blob 触发器与 directory_stats 视图（建表后应用）
+drizzle.config.ts           drizzle-kit 配置（含 .env.local 加载）
+drizzle/                    生成的迁移与快照（需提交）
 data/world-airports.csv     全球机场原始数据（OurAirports 格式，首页地图数据的输入）
 content/                    Markdown 内容与术语表
 proxy.ts                    语言重定向（Next 16 的 middleware）

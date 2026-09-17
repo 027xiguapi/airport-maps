@@ -1,0 +1,219 @@
+/**
+ * Drizzle schema — the source of truth for every table, column, index and
+ * constraint. `npm run db:push` (dev) and `npm run db:generate` +
+ * `npm run db:migrate` (reviewed migrations) both read this file.
+ *
+ * Three objects cannot be expressed here and live in `db/custom.sql` instead,
+ * applied by `npm run db:custom`:
+ *   - the `pg_trgm` extension that backs the fuzzy-search indexes,
+ *   - the `airports_search_blob_trg` trigger that keeps `airports.search_blob`
+ *     in sync (search_blob itself is a normal column below),
+ *   - the `directory_stats` view (declared here with `.existing()` so it is
+ *     queryable through Drizzle without Drizzle trying to manage its DDL).
+ */
+import { sql } from 'drizzle-orm';
+import {
+  boolean,
+  char,
+  check,
+  index,
+  integer,
+  numeric,
+  pgTable,
+  pgView,
+  primaryKey,
+  serial,
+  text,
+  timestamp,
+  unique,
+} from 'drizzle-orm/pg-core';
+
+// ---------------------------------------------------------------- countries
+export const countries = pgTable(
+  'countries',
+  {
+    /** ISO 3166-1 alpha-2. */
+    code: char('code', { length: 2 }).primaryKey(),
+    /** 中文名 — the editorial source language. */
+    name: text('name').notNull(),
+    nameEn: text('name_en').notNull(),
+    /** 中文区域. */
+    region: text('region').notNull(),
+    regionEn: text('region_en').notNull(),
+    flagUrl: text('flag_url').notNull(),
+    sortOrder: integer('sort_order').notNull().default(0),
+  },
+  (t) => [
+    index('countries_name_trgm_idx').using('gin', t.name.op('gin_trgm_ops')),
+    index('countries_name_en_trgm_idx').using('gin', t.nameEn.op('gin_trgm_ops')),
+  ]
+);
+
+// ----------------------------------------------------------------- airports
+export const airports = pgTable(
+  'airports',
+  {
+    /** IATA code, always upper case (see the check constraint below). */
+    iata: char('iata', { length: 3 }).primaryKey(),
+    slug: text('slug').notNull().unique('airports_slug_key'),
+    name: text('name').notNull(),
+    nameEn: text('name_en').notNull(),
+    city: text('city').notNull(),
+    cityEn: text('city_en'),
+    countryCode: char('country_code', { length: 2 })
+      .notNull()
+      .references(() => countries.code, { onDelete: 'restrict' }),
+    gateCount: integer('gate_count').notNull().default(0),
+    /**
+     * Annual passengers in millions. numeric keeps the authored precision —
+     * Drizzle returns it as a string; SQL callers cast to float8 as needed.
+     */
+    annualPaxM: numeric('annual_pax_m', { precision: 8, scale: 2 }),
+    /** Distance to the city centre, km. */
+    distanceKm: numeric('distance_km', { precision: 6, scale: 1 }),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    /**
+     * Denormalised haystack for /api/search, refreshed by the trigger in
+     * db/custom.sql. Holds every locale's names so search works regardless of
+     * the UI language.
+     */
+    searchBlob: text('search_blob').notNull().default(''),
+  },
+  (t) => [
+    index('airports_country_idx').on(t.countryCode),
+    index('airports_city_idx').on(t.city),
+    /**
+     * Plain `DESC` — Postgres's implicit NULLS FIRST for a descending index,
+     * which is what `ORDER BY updated_at DESC` (getRecentlyUpdated) needs to use
+     * this index. Drizzle would otherwise emit `DESC NULLS LAST` and the sort
+     * would stop matching. updated_at is NOT NULL, so the two are equivalent
+     * for the data, but not for the planner.
+     */
+    index('airports_updated_idx').on(t.updatedAt.desc().nullsFirst()),
+    /** Matches the `ORDER BY annual_pax_m DESC NULLS LAST` used when listing. */
+    index('airports_pax_idx').on(t.annualPaxM.desc().nullsLast()),
+    index('airports_slug_idx').on(t.slug),
+    index('airports_search_trgm_idx').using('gin', t.searchBlob.op('gin_trgm_ops')),
+    check('airports_iata_upper_chk', sql`${t.iata} = upper(${t.iata})`),
+    check('airports_slug_chk', sql`${t.slug} = lower(${t.slug})`),
+  ]
+);
+
+// ------------------------------------------------------ airport translations
+/**
+ * Long/short prose per airport and locale, authored in Markdown. The locale
+ * list lives in lib/i18n/config.ts; the app validates before writing, so the
+ * column is intentionally unconstrained to keep adding a language a
+ * data-only change.
+ */
+export const airportTranslations = pgTable(
+  'airport_translations',
+  {
+    airportIata: char('airport_iata', { length: 3 })
+      .notNull()
+      .references(() => airports.iata, { onDelete: 'cascade' }),
+    locale: text('locale').notNull(),
+    descriptionMd: text('description_md').notNull(),
+  },
+  (t) => [
+    primaryKey({ name: 'airport_translations_pkey', columns: [t.airportIata, t.locale] }),
+    index('airport_translations_locale_idx').on(t.locale),
+  ]
+);
+
+// ---------------------------------------------------------------- terminals
+/**
+ * The `*_en` columns are NULL until a translation exists. The UI then falls
+ * back to locale-neutral data (terminal code, gate count, transport mode)
+ * rather than displaying the default language's text on another locale's page.
+ */
+export const terminals = pgTable(
+  'terminals',
+  {
+    id: serial('id').primaryKey(),
+    airportIata: char('airport_iata', { length: 3 })
+      .notNull()
+      .references(() => airports.iata, { onDelete: 'cascade' }),
+    code: text('code').notNull(),
+    name: text('name').notNull(),
+    nameEn: text('name_en'),
+    gateRange: text('gate_range'),
+    gateRangeEn: text('gate_range_en'),
+    gateCount: integer('gate_count').notNull().default(0),
+    airlines: text('airlines'),
+    airlinesEn: text('airlines_en'),
+    /** Drawn as a round concourse on the terminal map. */
+    isSatellite: boolean('is_satellite').notNull().default(false),
+    sortOrder: integer('sort_order').notNull().default(0),
+  },
+  (t) => [
+    unique('terminals_airport_iata_code_key').on(t.airportIata, t.code),
+    index('terminals_airport_idx').on(t.airportIata, t.sortOrder),
+  ]
+);
+
+// -------------------------------------------------------- terminal amenities
+export const terminalAmenities = pgTable(
+  'terminal_amenities',
+  {
+    id: serial('id').primaryKey(),
+    terminalId: integer('terminal_id')
+      .notNull()
+      .references(() => terminals.id, { onDelete: 'cascade' }),
+    icon: text('icon').notNull(),
+    label: text('label').notNull(),
+    labelEn: text('label_en'),
+    sortOrder: integer('sort_order').notNull().default(0),
+  },
+  (t) => [index('terminal_amenities_terminal_idx').on(t.terminalId, t.sortOrder)]
+);
+
+// -------------------------------------------------------- airport facilities
+export const airportFacilities = pgTable(
+  'airport_facilities',
+  {
+    id: serial('id').primaryKey(),
+    airportIata: char('airport_iata', { length: 3 })
+      .notNull()
+      .references(() => airports.iata, { onDelete: 'cascade' }),
+    icon: text('icon').notNull(),
+    label: text('label').notNull(),
+    labelEn: text('label_en'),
+    sortOrder: integer('sort_order').notNull().default(0),
+  },
+  (t) => [index('airport_facilities_airport_idx').on(t.airportIata, t.sortOrder)]
+);
+
+// ---------------------------------------------------------- ground transport
+export const groundTransport = pgTable(
+  'ground_transport',
+  {
+    id: serial('id').primaryKey(),
+    airportIata: char('airport_iata', { length: 3 })
+      .notNull()
+      .references(() => airports.iata, { onDelete: 'cascade' }),
+    /** train|tram|bus|taxi|car|ferry */
+    icon: text('icon').notNull(),
+    name: text('name').notNull(),
+    nameEn: text('name_en'),
+    description: text('description').notNull().default(''),
+    descriptionEn: text('description_en'),
+    sortOrder: integer('sort_order').notNull().default(0),
+  },
+  (t) => [index('ground_transport_airport_idx').on(t.airportIata, t.sortOrder)]
+);
+
+// ------------------------------------------------------------------ reports
+/**
+ * Server-side rollup behind the homepage "statistics" strip. Created by
+ * db/custom.sql — `.existing()` tells Drizzle the view is queryable but not
+ * its to create or drop.
+ */
+export const directoryStats = pgView('directory_stats', {
+  countryCount: integer('country_count'),
+  airportCount: integer('airport_count'),
+  terminalCount: integer('terminal_count'),
+  gateCount: integer('gate_count'),
+}).existing();

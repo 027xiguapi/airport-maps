@@ -110,10 +110,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   position:relative;color:#fff;overflow:hidden;
   background:var(--navy-900);
 }
+/* Decorative layer under `.hero-veil`. It replaced `url('/hero.svg')` — a file
+   that never existed in this repo, so the band was rendering as flat navy.
+   Pure CSS: an amber glow top-right falling into the navy ramp. `opacity` and
+   `background-size/position` are gone with the image: the stops carry the
+   transparency the old 0.62 opacity used to provide. */
 .hero-bg{
   position:absolute;inset:0;
-  background-size:cover;background-position:center;
-  opacity:.62;
+  background:
+    radial-gradient(120% 100% at 70% 0%, rgba(242,163,60,.18) 0%, rgba(242,163,60,0) 60%),
+    linear-gradient(160deg,var(--navy-800) 0%,var(--navy-950) 100%);
 }
 .hero-veil{
   position:absolute;inset:0;

@@ -1,4 +1,6 @@
 import { Pool, type PoolClient, type QueryResultRow } from 'pg';
+import { drizzle, type NodePgDatabase } from 'drizzle-orm/node-postgres';
+import * as schema from '@/db/schema';
 
 /**
  * Single pooled connection reused across hot reloads in development and across
@@ -31,6 +33,27 @@ export function getPool(): Pool {
     globalForPg.__airportMapsPool = createPool();
   }
   return globalForPg.__airportMapsPool;
+}
+
+/**
+ * Drizzle client over the same pool, with the schema from db/schema.ts attached
+ * so `db.query.airports.findMany({ with: … })` works.
+ *
+ * The query helpers below stay hand-written SQL: the directory listing, the
+ * ranked search and the airport detail page rely on window functions, LATERAL
+ * json aggregation and `ESCAPE`-escaped ILIKE patterns that read better — and
+ * stay reviewable — as SQL. Reach for `getDb()` when writing new queries that
+ * do not need them.
+ */
+const globalForDrizzle = globalThis as unknown as {
+  __airportMapsDb?: NodePgDatabase<typeof schema>;
+};
+
+export function getDb(): NodePgDatabase<typeof schema> {
+  if (!globalForDrizzle.__airportMapsDb) {
+    globalForDrizzle.__airportMapsDb = drizzle(getPool(), { schema });
+  }
+  return globalForDrizzle.__airportMapsDb;
 }
 
 /** Runs a parameterised query and returns the typed rows. */
