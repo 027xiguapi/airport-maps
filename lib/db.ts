@@ -56,12 +56,37 @@ export function getDb(): NodePgDatabase<typeof schema> {
   return globalForDrizzle.__airportMapsDb;
 }
 
+/**
+ * Transient failures worth retrying. Static export runs one pool per build
+ * worker (11 processes × up to 10 clients each) against PostgreSQL's default
+ * max_connections of 100, so connection handshakes can briefly queue past the
+ * 10s connectionTimeoutMillis — without a retry that aborts the whole build.
+ */
+const TRANSIENT_DB_ERROR =
+  /timeout exceeded when trying to connect|Connection terminated|Connection ended|ECONNREFUSED|too many clients/i;
+
+async function withRetry<T>(op: () => Promise<T>, attempts = 3): Promise<T> {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      return await op();
+    } catch (err) {
+      lastError = err;
+      if (attempt === attempts || !TRANSIENT_DB_ERROR.test((err as Error).message)) {
+        throw err;
+      }
+      await new Promise((resolve) => setTimeout(resolve, 500 * attempt));
+    }
+  }
+  throw lastError;
+}
+
 /** Runs a parameterised query and returns the typed rows. */
 export async function query<T extends QueryResultRow>(
   text: string,
   params: unknown[] = []
 ): Promise<T[]> {
-  const { rows } = await getPool().query<T>(text, params);
+  const { rows } = await withRetry(() => getPool().query<T>(text, params));
   return rows;
 }
 
@@ -76,7 +101,7 @@ export async function queryOne<T extends QueryResultRow>(
 
 /** Runs `fn` inside a transaction, rolling back on any error. */
 export async function withTransaction<T>(fn: (client: PoolClient) => Promise<T>): Promise<T> {
-  const client = await getPool().connect();
+  const client = await withRetry(() => getPool().connect());
   try {
     await client.query('BEGIN');
     const result = await fn(client);

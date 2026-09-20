@@ -1,3 +1,9 @@
+/* Layering note: only the runtime token overrides below stay unlayered — they
+   must outrank the unlayered :root token block in globals.css, which any
+   @layer rule would lose to regardless of specificity. All component rules
+   join globals.css in @layer components (imported after it, so the cascade
+   matches the original unlayered file order). */
+@layer components {
 /* ============================================================================
    Additions on top of the ported design system (globals.css).
    Everything here is new: real navigation on small screens, directory filters,
@@ -553,6 +559,8 @@
    hard-coded white backgrounds. Elements that are dark in both themes
    (topbar, hero, page-head, footer, map panel, table head) keep their navy.
    ========================================================================== */
+}
+
 :root{color-scheme:light;}
 html[data-theme="dark"]{
   color-scheme:dark;
@@ -572,6 +580,8 @@ html[data-theme="dark"]{
   --shadow-md:0 4px 16px rgba(0,0,0,.45);
   --shadow-lg:0 12px 32px rgba(0,0,0,.55);
 }
+
+@layer components {
 
 /* Headings printed in navy on light surfaces. */
 html[data-theme="dark"] .section-title,
@@ -737,3 +747,5 @@ a.ext-btn{
   transition:border-color .15s,background .15s;
 }
 a.ext-btn:hover{border-color:var(--sky-400);background:var(--sky-100);}
+
+}
