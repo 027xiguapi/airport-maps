@@ -42,9 +42,13 @@ export const en: Messages = {
     home: 'Home',
     viewMap: 'View map',
     terminalMap: 'Terminal map',
+    /** Airport page <title>/og:title, mirroring the Chinese "2026年最新…地图". */
+    latestAirportTitle: (year: number, name: string, iata: string) =>
+      `Latest ${name} (${iata}) Terminal Map ${year}`,
     airportGuide: 'Airport guide',
     lastUpdated: 'Recently updated',
     updatedOn: (date: string) => `Updated ${date}`,
+    publishedOn: (date: string) => `Published ${date}`,
     readMore: 'Read the full guide',
   },
 
@@ -273,6 +277,33 @@ export const en: Messages = {
       `${name} (${nameEn}, IATA code ${iata}) is located in ${city}${
         cityEn ? ` (${cityEn})` : ''
       }, ${country}.`,
+    airlines: (name: string) => `Which airlines operate from each terminal at ${name}?`,
+    airlinesAnswer: (name: string, list: string) =>
+      `Main airlines by terminal at ${name}: ${list}. Airlines and gate assignments change, so always confirm on your boarding pass and the airport's own signage.`,
+    timezone: (name: string) => `What time zone is ${name} in?`,
+    timezoneAnswer: (name: string, iata: string, tz: string) =>
+      `${name} (${iata}) is in the ${tz} time zone. Compare it with your local time using the airport clock above.`,
+  },
+
+  /** Author byline & E-E-A-T trust signals shown under the airport page title. */
+  editorial: {
+    authorName: 'Global Airport Maps Editorial Team',
+    role: 'Compiled & reviewed by ',
+    sourcesNote: 'Compiled from public sources and official airport information',
+  },
+
+  /** Right-rail "on this page" navigation for the airport page. */
+  toc: {
+    label: 'On this page',
+    map: 'Terminal map',
+    time: 'Airport time',
+    details: 'Airport details',
+    location: 'Location map',
+    guide: 'Airport guide',
+    terminals: 'Terminal guide',
+    transport: 'Ground transport',
+    facilities: 'Facilities',
+    faq: 'FAQ',
   },
 
   error: {
@@ -299,6 +330,7 @@ export const en: Messages = {
     fallback: 'Illustrated terminal layouts and ground transport guides for airports worldwide',
     linksLabel: 'Footer navigation',
     about: 'About',
+    contact: 'Contact',
     privacy: 'Privacy policy',
     terms: 'Terms of use',
   },

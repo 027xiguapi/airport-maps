@@ -6,7 +6,7 @@ import BackToTop from '@/components/BackToTop';
 import Footer from '@/components/Footer';
 import TopBar from '@/components/TopBar';
 import { getMessages, LOCALES, LOCALE_META, parseLocale } from '@/lib/i18n';
-import { SITE_URL } from '@/lib/site';
+import { SITE_NAME, SITE_URL } from '@/lib/site';
 
 /** Pre-render both locales; anything else 404s. */
 export function generateStaticParams() {
@@ -34,7 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: t.site.keywords,
     openGraph: {
       type: 'website',
-      siteName: t.site.name,
+      // Canonical brand spelling, identical in every locale, so og:site_name
+      // always matches the title suffix and schema.org names exactly.
+      siteName: SITE_NAME,
       locale: meta.ogLocale,
       title: `${t.site.name} — ${t.site.tagline}`,
       description: t.site.description,

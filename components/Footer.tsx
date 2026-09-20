@@ -13,6 +13,7 @@ export default async function Footer({ locale }: { locale: Locale }) {
     { href: '/airports', label: t.nav.airports },
     { href: '/countries', label: t.nav.countries },
     { href: '/about', label: t.footer.about },
+    { href: '/contact', label: t.footer.contact },
     { href: '/privacy', label: t.footer.privacy },
     { href: '/terms', label: t.footer.terms },
   ];

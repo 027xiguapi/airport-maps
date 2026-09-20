@@ -269,6 +269,66 @@
   color:var(--ink-faint);
 }
 
+/* ------------------------------------------ airport page author/date byline */
+/* Sits on the dark navy .ap-head, so it uses white-alpha like .ap-title .city. */
+.ap-byline{
+  display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;
+  margin:14px 0 2px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.55);
+}
+.ap-byline a{
+  color:rgba(255,255,255,.82);font-weight:500;
+  text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px;
+}
+.ap-byline a:hover{color:#fff;text-decoration-color:currentColor;}
+.ap-byline .sep{opacity:.55;}
+
+/* ------------------------------------------------ airport page contents rail */
+/* .ap-with-toc takes over the container metrics from .ap-body (globals.css),
+   which becomes the main column beside the sticky rail. */
+.ap-with-toc{
+  max-width:1240px;margin:0 auto;padding:44px 24px 10px;
+  display:flex;gap:44px;align-items:flex-start;
+}
+.ap-with-toc .ap-body{order:1;flex:1;min-width:0;max-width:none;margin:0;padding:0;}
+.ap-toc{order:2;flex:none;width:216px;position:sticky;top:84px;}
+.toc-title{
+  font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-faint);margin-bottom:10px;
+}
+.toc-nav ul{list-style:none;margin:0;padding:0 0 0 2px;border-left:2px solid var(--line);}
+.toc-nav li{position:relative;}
+.toc-nav a{
+  display:block;padding:6px 0 6px 14px;font-size:13.5px;line-height:1.45;
+  color:var(--ink-soft);text-decoration:none;transition:color .14s;
+}
+.toc-nav a:hover{color:var(--ink);}
+.toc-nav li[data-active] > a{color:var(--sky-600);font-weight:600;}
+.toc-nav li[data-active]::before{
+  content:"";position:absolute;left:-2px;top:7px;bottom:7px;width:2px;background:var(--sky-600);
+}
+/* Anchored sections stop below the sticky topbar (64px) plus breathing room. */
+#terminal-map,#airport-time,#airport-details,#location-map,#guide,#terminals,#transport,#facilities,#faq{
+  scroll-margin-top:84px;
+}
+/* Narrow screens: the rail collapses into a horizontally scrollable chip strip
+   above the content (the aside precedes .ap-body in the DOM). */
+@media(max-width:1080px){
+  .ap-with-toc{display:block;padding:34px 20px 10px;}
+  .ap-toc{position:static;width:auto;margin:0 0 24px;}
+  .toc-title{margin-bottom:8px;}
+  .toc-nav ul{
+    display:flex;gap:8px;overflow-x:auto;border-left:0;padding:2px;
+    scrollbar-width:thin;-webkit-overflow-scrolling:touch;
+  }
+  .toc-nav li{flex:none;}
+  .toc-nav li[data-active]::before{display:none;}
+  .toc-nav a{
+    display:inline-block;padding:6px 13px;border:1px solid var(--line);border-radius:16px;
+    background:var(--card);color:var(--ink-soft);white-space:nowrap;
+  }
+  .toc-nav li[data-active] > a{border-color:var(--sky-600);}
+}
+
 /* ============================================================================
    Language-length robustness.
 

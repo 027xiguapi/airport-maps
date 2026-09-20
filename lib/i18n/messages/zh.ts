@@ -34,9 +34,13 @@ export const zh = {
     home: '首页',
     viewMap: '查看地图',
     terminalMap: '航站楼地图',
+    /** 机场页 <title>/og:title：「2026年最新广州白云国际机场地图」。 */
+    latestAirportTitle: (year: number, name: string, _iata: string) =>
+      `${year}年最新${name}地图`,
     airportGuide: '机场指南',
     lastUpdated: '最近更新',
     updatedOn: (date: string) => `更新于 ${date}`,
+    publishedOn: (date: string) => `发布于 ${date}`,
     readMore: '阅读完整指南',
   },
 
@@ -264,6 +268,33 @@ export const zh = {
       `${name}（英文名 ${nameEn}，IATA 代码 ${iata}）位于${country}的${city}${
         cityEn ? `（${cityEn}）` : ''
       }。`,
+    airlines: (name: string) => `${name}各航站楼主要运营哪些航空公司？`,
+    airlinesAnswer: (name: string, list: string) =>
+      `${name}各航站楼的主要航空公司：${list}。航司与登机口分配可能调整，请以登机牌与机场现场指引为准。`,
+    timezone: (name: string) => `${name}使用什么时区？`,
+    timezoneAnswer: (name: string, iata: string, tz: string) =>
+      `${name}（${iata}）使用 ${tz} 时区，可与页面上方的机场时钟对照当前时间。`,
+  },
+
+  /** 作者署名与 E-E-A-T 信任信号，展示在机场页标题下方。 */
+  editorial: {
+    authorName: '全球机场地图编辑团队',
+    role: '编制与审校：',
+    sourcesNote: '资料整理自公开来源与机场官方信息',
+  },
+
+  /** 机场页右侧目录导航（按当前机场实际展示的板块动态生成）。 */
+  toc: {
+    label: '页面导航',
+    map: '航站楼地图',
+    time: '机场时间',
+    details: '机场信息',
+    location: '位置地图',
+    guide: '机场指南',
+    terminals: '航站楼信息',
+    transport: '地面交通',
+    facilities: '设施服务',
+    faq: '常见问题',
   },
 
   error: {
@@ -290,6 +321,7 @@ export const zh = {
     fallback: '全球机场航站楼平面示意图与地面交通指南',
     linksLabel: '页脚导航',
     about: '关于本站',
+    contact: '联系我们',
     privacy: '隐私政策',
     terms: '使用条款',
   },

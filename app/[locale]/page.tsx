@@ -23,7 +23,7 @@ import {
   getRegionCount,
   getStats,
 } from '@/lib/queries';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, ORG_NODE_ID, SITE_NAME, SITE_URL, WEBSITE_NODE_ID } from '@/lib/site';
 import { getAirportGeo } from '@/lib/airport-geo';
 import worldAirportsMeta from '@/lib/world-airports-meta.json';
 
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = getMessages(locale);
   return {
     alternates: { canonical: localizedPath(locale, '/'), languages: languageAlternates('/') },
-    openGraph: { url: localizedPath(locale, '/') },
+    openGraph: { siteName: SITE_NAME, url: localizedPath(locale, '/') },
     description: t.site.description,
   };
 }
@@ -129,13 +129,15 @@ export default async function HomePage({ params }: Props) {
     },
   ];
 
-  const jsonLd: Record<string, unknown> = {
-    '@context': 'https://schema.org',
+  const websiteNode: Record<string, unknown> = {
     '@type': 'WebSite',
-    name: t.site.name,
+    '@id': WEBSITE_NODE_ID,
+    name: SITE_NAME,
+    alternateName: t.site.name,
     url: absoluteUrl(localizedPath(locale, '/')),
     description: t.site.description,
     inLanguage: LOCALE_META[locale].htmlLang,
+    publisher: { '@id': ORG_NODE_ID },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
@@ -144,6 +146,20 @@ export default async function HomePage({ params }: Props) {
       },
       'query-input': 'required name=search_term_string',
     },
+  };
+
+  const jsonLd: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': ORG_NODE_ID,
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+        logo: { '@type': 'ImageObject', url: absoluteUrl('/icon.png') },
+      },
+      websiteNode,
+    ],
   };
 
   return (

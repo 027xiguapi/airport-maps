@@ -6,6 +6,7 @@ import Faq, { type FaqItem } from '@/components/Faq';
 import JsonLd from '@/components/JsonLd';
 import Markdown from '@/components/Markdown';
 import AirportClock from '@/components/AirportClock';
+import TocNav, { type TocItem } from '@/components/TocNav';
 import { formatDate, formatDistance, formatNumber, formatPax } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { LOCALE_META, localizedPath, type Locale } from '@/lib/i18n/config';
@@ -14,7 +15,14 @@ import { getAirportGuide } from '@/lib/content';
 import { getAirportByCode, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
 import { getAirportGeo } from '@/lib/airport-geo';
 import { mapImageUrl } from '@/lib/map-images';
-import { absoluteUrl } from '@/lib/site';
+import {
+  absoluteUrl,
+  EDITORIAL_NODE_ID,
+  ORG_NODE_ID,
+  SITE_NAME,
+  SITE_URL,
+  WEBSITE_NODE_ID,
+} from '@/lib/site';
 import { terminalMapSvg } from '@/lib/terminal-map';
 import type { AirportDetail } from '@/lib/types';
 
@@ -26,6 +34,19 @@ export async function generateStaticParams() {
 }
 
 type Props = { params: Promise<{ locale: string; code: string }> };
+
+/**
+ * Machine-readable publication dates: dateModified is the latest of the
+ * airport record's `updated_at` and the guide's frontmatter date, datePublished
+ * the earliest signal we have (guide date, else the record date). Both are
+ * `YYYY-MM-DD` strings, which compare lexicographically.
+ */
+function publicationDates(airport: AirportDetail, guideUpdated?: string) {
+  const candidates = [airport.updatedAt, guideUpdated].filter(Boolean) as string[];
+  const modified = candidates.sort().pop();
+  const published = guideUpdated ?? airport.updatedAt;
+  return { published, modified };
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: raw, code } = await params;
@@ -42,7 +63,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const pax = formatPax(airport.annualPaxM, locale);
   const distance = formatDistance(airport.distanceKm, locale);
-  const title = `${airport.name} (${airport.iata}) — ${t.common.terminalMap}`;
+  const { published, modified } = publicationDates(airport, getAirportGuide(locale, airport.iata)?.updated);
+  // Title is rendered at build/ISR time, so the year rolls over with revalidate.
+  const title = t.common.latestAirportTitle(
+    new Date().getFullYear(),
+    airport.name,
+    airport.iata
+  );
   const description = t.airport.metaDescription({
     name: airport.name,
     nameEn: airport.nameEn,
@@ -70,9 +97,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       type: 'article',
+      siteName: SITE_NAME,
       title: `${title} | ${t.site.name}`,
       description,
       url: localizedPath(locale, `/airport/${airport.iata}`),
+      publishedTime: published,
+      modifiedTime: modified,
+      authors: [absoluteUrl(localizedPath(locale, '/about'))],
     },
   };
 }
@@ -88,7 +119,12 @@ function transitLabel(
 }
 
 /** FAQ assembled from database fields, in the requested locale. */
-function buildFaq(locale: Locale, airport: AirportDetail, distance: string | null): FaqItem[] {
+function buildFaq(
+  locale: Locale,
+  airport: AirportDetail,
+  distance: string | null,
+  tz: string | null
+): FaqItem[] {
   const t = getMessages(locale);
   const listSeparator = locale === 'en' ? ', ' : '、';
   const clauseSeparator = locale === 'en' ? '; ' : '；';
@@ -104,6 +140,15 @@ function buildFaq(locale: Locale, airport: AirportDetail, distance: string | nul
           }）`
     )
     .join(listSeparator);
+
+  const airlineList = airport.terminals
+    .filter((terminal) => terminal.airlines)
+    .map((terminal) =>
+      locale === 'en'
+        ? `${terminal.name}: ${terminal.airlines}`
+        : `${terminal.name}（${terminal.code}）：${terminal.airlines}`
+    )
+    .join(clauseSeparator);
 
   const transitSummary = airport.transit
     .map((option) => transitLabel(locale, option))
@@ -127,6 +172,14 @@ function buildFaq(locale: Locale, airport: AirportDetail, distance: string | nul
         terminalList
       ),
     },
+    ...(airlineList
+      ? [
+          {
+            q: t.faq.airlines(airport.name),
+            a: t.faq.airlinesAnswer(airport.name, airlineList),
+          },
+        ]
+      : []),
     {
       q: t.faq.distance(airport.name, airport.city),
       a: t.faq.distanceAnswer(airport.name, airport.city, distance ?? '—', transitSummary),
@@ -153,6 +206,14 @@ function buildFaq(locale: Locale, airport: AirportDetail, distance: string | nul
         airport.countryName
       ),
     },
+    ...(tz
+      ? [
+          {
+            q: t.faq.timezone(airport.name),
+            a: t.faq.timezoneAnswer(airport.name, airport.iata, tz),
+          },
+        ]
+      : []),
   ];
 }
 
@@ -177,9 +238,9 @@ export default async function AirportPage({ params }: Props) {
 
   const pax = formatPax(airport.annualPaxM, locale);
   const distance = formatDistance(airport.distanceKm, locale);
-  const faqItems = buildFaq(locale, airport, distance);
-  const mapImg = mapImageUrl(airport.iata);
   const geo = getAirportGeo(airport.iata);
+  const faqItems = buildFaq(locale, airport, distance, geo?.tz ?? null);
+  const mapImg = mapImageUrl(airport.iata);
   const mapSvg = terminalMapSvg({
     iata: airport.iata,
     name: airport.name,
@@ -187,19 +248,93 @@ export default async function AirportPage({ params }: Props) {
     locale,
   });
 
+  const { published, modified } = publicationDates(airport, guide?.updated);
+  const pageTitle = t.common.latestAirportTitle(
+    new Date().getFullYear(),
+    airport.name,
+    airport.iata
+  );
+  const pageDescription = t.airport.metaDescription({
+    name: airport.name,
+    nameEn: airport.nameEn,
+    iata: airport.iata,
+    city: airport.city,
+    country: airport.countryName,
+    terminals: formatNumber(airport.terminals.length, locale),
+    gates: formatNumber(airport.gateCount, locale),
+    pax: pax ?? '',
+    distance: distance ?? '',
+  });
+  const pageUrl = absoluteUrl(localizedPath(locale, `/airport/${airport.iata}`));
+  const airportNodeId = `${SITE_URL}/#airport-${airport.iata}`;
+
+  /** Sections that actually render on this airport's page, in order. */
+  const tocItems: TocItem[] = [
+    { id: 'terminal-map', label: t.toc.map },
+    ...(geo ? [{ id: 'airport-time', label: t.toc.time }] : []),
+    { id: 'airport-details', label: t.toc.details },
+    ...(geo ? [{ id: 'location-map', label: t.toc.location }] : []),
+    ...(guide ? [{ id: 'guide', label: t.toc.guide }] : []),
+    { id: 'terminals', label: t.toc.terminals },
+    { id: 'transport', label: t.toc.transport },
+    { id: 'facilities', label: t.toc.facilities },
+    { id: 'faq', label: t.toc.faq },
+  ];
+
   return (
     <>
       <JsonLd
         data={{
           '@context': 'https://schema.org',
           '@graph': [
+            // Site identity, one exact brand spelling across every machine-
+            // readable field (og:site_name and these nodes all use SITE_NAME).
+            {
+              '@type': 'Organization',
+              '@id': ORG_NODE_ID,
+              name: SITE_NAME,
+              url: `${SITE_URL}/`,
+              logo: { '@type': 'ImageObject', url: absoluteUrl('/icon.png') },
+            },
+            {
+              '@type': 'Person',
+              '@id': EDITORIAL_NODE_ID,
+              name: t.editorial.authorName,
+              description: t.editorial.sourcesNote,
+              url: absoluteUrl(localizedPath(locale, '/about')),
+              worksFor: { '@id': ORG_NODE_ID },
+            },
+            {
+              '@type': 'WebSite',
+              '@id': WEBSITE_NODE_ID,
+              name: SITE_NAME,
+              url: `${SITE_URL}/`,
+              publisher: { '@id': ORG_NODE_ID },
+            },
+            {
+              '@type': 'WebPage',
+              '@id': pageUrl,
+              url: pageUrl,
+              name: pageTitle,
+              description: pageDescription,
+              inLanguage: LOCALE_META[locale].htmlLang,
+              isPartOf: { '@id': WEBSITE_NODE_ID },
+              about: { '@id': airportNodeId },
+              mainEntity: { '@id': airportNodeId },
+              author: { '@id': EDITORIAL_NODE_ID },
+              publisher: { '@id': ORG_NODE_ID },
+              datePublished: published,
+              dateModified: modified,
+              breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+            },
             {
               '@type': 'Airport',
+              '@id': airportNodeId,
               name: airport.name,
               alternateName: airport.nameEn,
               iataCode: airport.iata,
               description: airport.descriptionMd,
-              url: absoluteUrl(localizedPath(locale, `/airport/${airport.iata}`)),
+              url: pageUrl,
               inLanguage: LOCALE_META[locale].htmlLang,
               address: {
                 '@type': 'PostalAddress',
@@ -207,9 +342,17 @@ export default async function AirportPage({ params }: Props) {
                 addressCountry: airport.countryCode,
               },
               containedInPlace: { '@type': 'Country', name: airport.countryName },
+              ...(geo && {
+                geo: {
+                  '@type': 'GeoCoordinates',
+                  latitude: geo.lat,
+                  longitude: geo.lng,
+                },
+              }),
             },
             {
               '@type': 'BreadcrumbList',
+              '@id': `${pageUrl}#breadcrumb`,
               itemListElement: [
                 {
                   '@type': 'ListItem',
@@ -274,6 +417,25 @@ export default async function AirportPage({ params }: Props) {
               </div>
             </div>
           </div>
+          {/* E-E-A-T byline: visible author attribution and freshness dates. */}
+          <p className="ap-byline">
+            <span>
+              {t.editorial.role}
+              <Link href={localizedPath(locale, '/about')}>{t.editorial.authorName}</Link>
+            </span>
+            {published && published !== modified && (
+              <>
+                <span className="sep">·</span>
+                <span>{t.common.publishedOn(formatDate(published, locale))}</span>
+              </>
+            )}
+            {modified && (
+              <>
+                <span className="sep">·</span>
+                <span>{t.common.updatedOn(formatDate(modified, locale))}</span>
+              </>
+            )}
+          </p>
           <div className="ap-facts">
             <div className="ap-fact">
               <div className="num">{formatNumber(airport.terminals.length, locale)}</div>
@@ -295,11 +457,19 @@ export default async function AirportPage({ params }: Props) {
         </div>
       </div>
 
+      {/* Aside precedes the body in DOM so it stays on top when the rail
+          collapses to a horizontal strip on narrow screens; on desktop the
+          flex order places it on the right. */}
+      <div className="ap-with-toc">
+        <aside className="ap-toc">
+          <TocNav items={tocItems} label={t.toc.label} />
+        </aside>
+
       <div className="ap-body">
         {/* Descriptions are Markdown, stored per locale in airport_translations. */}
         <Markdown className="ap-desc">{airport.descriptionMd}</Markdown>
 
-        <div className="map-panel">
+        <div className="map-panel" id="terminal-map">
           <div className="map-panel-head">
             <div className="map-panel-title">
               <span className="dot" />
@@ -345,7 +515,7 @@ export default async function AirportPage({ params }: Props) {
         </div>
 
         {geo && (
-          <section className="ap-extra">
+          <section className="ap-extra" id="airport-time">
             <div className="section-head">
               <div>
                 <div className="section-kicker">{t.airport.timeKicker}</div>
@@ -365,7 +535,7 @@ export default async function AirportPage({ params }: Props) {
           </section>
         )}
 
-        <section className="ap-extra">
+        <section className="ap-extra" id="airport-details">
           <div className="section-head">
             <div>
               <div className="section-kicker">{t.airport.infoKicker}</div>
@@ -404,7 +574,7 @@ export default async function AirportPage({ params }: Props) {
         </section>
 
         {geo && (
-          <section className="ap-extra">
+          <section className="ap-extra" id="location-map">
             <div className="section-head">
               <div>
                 <div className="section-kicker">{t.airport.mapEmbedKicker}</div>
@@ -476,7 +646,7 @@ export default async function AirportPage({ params }: Props) {
           </section>
         )}
 
-        <div className="section-head" style={{ marginTop: 46, marginBottom: 18 }}>
+        <div className="section-head" id="terminals" style={{ marginTop: 46, marginBottom: 18 }}>
           <div>
             <div className="section-kicker">{t.airport.terminalsKicker}</div>
             <h2 className="section-title">
@@ -520,7 +690,7 @@ export default async function AirportPage({ params }: Props) {
         </div>
 
         <div className="two-col">
-          <div className="info-panel">
+          <div className="info-panel" id="transport">
             <h3>
               <TrainIcon />
               {t.airport.transitTitle}
@@ -539,7 +709,7 @@ export default async function AirportPage({ params }: Props) {
               ))}
             </div>
           </div>
-          <div className="info-panel">
+          <div className="info-panel" id="facilities">
             <h3>
               <ShopIcon />
               {t.airport.facilitiesTitle}
@@ -555,7 +725,7 @@ export default async function AirportPage({ params }: Props) {
           </div>
         </div>
 
-        <div className="section-head" style={{ marginTop: 46, marginBottom: 18 }}>
+        <div className="section-head" id="faq" style={{ marginTop: 46, marginBottom: 18 }}>
           <div>
             <div className="section-kicker">{t.airport.faqKicker}</div>
             <h2 className="section-title">
@@ -565,6 +735,7 @@ export default async function AirportPage({ params }: Props) {
           </div>
         </div>
         <Faq items={faqItems} />
+      </div>
       </div>
 
       {related.length > 0 && (

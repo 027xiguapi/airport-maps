@@ -39,4 +39,4 @@ English is the default language, so the site root (`/`) opens the English versio
 
 ## Contact
 
-If you spot an error, or would like an airport or terminal map added, please get in touch. We will verify and update it so the next traveller has an easier time finding their way.
+If you spot an error, or would like an airport or terminal map added, please [get in touch](/contact). We will verify and update it so the next traveller has an easier time finding their way.

@@ -8,7 +8,7 @@ import { formatNumber } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { localizedPath, LOCALE_META } from '@/lib/i18n/config';
 import { getAirportsByCountry, getAllCountryCodes, getCountries, getCountry } from '@/lib/queries';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, SITE_NAME } from '@/lib/site';
 
 export const revalidate = 3600;
 
@@ -46,6 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: languageAlternates(`/country/${country.code}`),
     },
     openGraph: {
+      siteName: SITE_NAME,
       title: `${title} | ${t.site.name}`,
       description,
       url: localizedPath(locale, `/country/${country.code}`),
