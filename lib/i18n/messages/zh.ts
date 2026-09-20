@@ -25,6 +25,7 @@ export const zh = {
     languageLabel: '语言',
     switchLanguage: '切换语言',
     themeToggle: '切换深色模式',
+    menu: '菜单',
   },
 
   common: {

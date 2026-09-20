@@ -33,6 +33,7 @@ export const en: Messages = {
     languageLabel: 'Language',
     switchLanguage: 'Switch language',
     themeToggle: 'Toggle dark mode',
+    menu: 'Menu',
   },
 
   common: {

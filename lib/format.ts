@@ -1,4 +1,5 @@
 import { DEFAULT_LOCALE, type Locale } from './i18n/config';
+import { getMessages } from './i18n';
 
 /**
  * Display formatters. Passenger volume is stored in millions and rendered the
@@ -44,6 +45,16 @@ export function formatDate(iso: string | null | undefined, locale: Locale = DEFA
     );
   }
   return `${year}年${Number(month)}月${Number(day)}日`;
+}
+
+/** Resolves a transit entry to display text, falling back to its mode label. */
+export function transitLabel(
+  locale: Locale,
+  option: { icon: string; name: string }
+): string {
+  if (option.name) return option.name;
+  const modes = getMessages(locale).transportModes;
+  return modes[option.icon] ?? option.icon;
 }
 
 function trimZeros(value: string): string {

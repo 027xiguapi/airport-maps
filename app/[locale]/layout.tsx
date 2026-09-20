@@ -4,7 +4,7 @@ import '../globals.css';
 import '../additions.css';
 import BackToTop from '@/components/BackToTop';
 import Footer from '@/components/Footer';
-import TopBar from '@/components/TopBar';
+import Header from '@/components/Header';
 import { getMessages, LOCALES, LOCALE_META, parseLocale } from '@/lib/i18n';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
 
@@ -105,7 +105,7 @@ export default async function LocaleLayout({
         <a className="sr-only" href="#view">
           {t.common.skipToContent}
         </a>
-        <TopBar locale={locale} />
+        <Header locale={locale} />
         <main id="view">{children}</main>
         <Footer locale={locale} />
         <BackToTop label={t.common.backToTop} />

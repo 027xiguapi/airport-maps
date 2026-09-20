@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
+import MobileNav from './MobileNav';
 import NavLinks from './NavLinks';
 import SearchBox from './SearchBox';
 import ThemeToggle from './ThemeToggle';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 
-export default function TopBar({ locale }: { locale: Locale }) {
+export default function Header({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
 
   const items = [
@@ -29,9 +30,9 @@ export default function TopBar({ locale }: { locale: Locale }) {
               <em>{t.site.nameAccent}</em>
             </span>
           </Link>
-          <nav className="topnav" aria-label={t.nav.label}>
+          <MobileNav label={t.nav.menu} navLabel={t.nav.label}>
             <NavLinks locale={locale} items={items} />
-          </nav>
+          </MobileNav>
           <SearchBox
             variant="top"
             labels={{
