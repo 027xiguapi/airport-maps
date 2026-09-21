@@ -70,6 +70,7 @@ npm run build && npm start
 | `npm run data:terminal-maps` | 按机场代码批量下载航站楼地图 PNG + PDF（默认源 eoob.com，代码取自 `airports` 表；`--codes HKG,PEK` 指定代码、`--dry-run` 预演、`--png-only` / `--pdf-only` 只取一种、`--force` 强制重下）。文件落到 `public/terminal-maps/{CODE}/`，站点可直接以 `/terminal-maps/{CODE}/{CODE}_large.png`（及 `.pdf`）引用（57 个机场；下载后跑一次 `data:terminal-maps:compress`，共约 60MB）；溯源信息在同目录 `terminal-maps-manifest.json`。机场详情页的下载按钮自动使用这些文件（某机场缺文件时，图片回退到 `public/maps` 封面或 SVG 示意图、PDF 回退到谷歌搜索） |
 | `npm run data:terminal-maps:compress` | 原地压缩上一步下载的 PNG：量化为 8 位调色板（默认 `--quality 80`），尺寸不变，实测 52.8MB → 12.4MB 且登机口号、路名清晰可读。已在 manifest 的 `compressed` 里记录压缩后 sha256，原始下载的 url + sha256 保留可随时重下；已压缩的自动跳过，`--force` 重压、`--max-width 1600` 可同时缩尺寸 |
 | `node scripts/check-maps.mjs [--table]` | 检查 `public/maps` 封面图与机场的覆盖情况：哪些机场缺图、哪些图没有对应机场 |
+| `npm run data:build-directory` | 把 `data/new-airports-a.{zh,en}.json` 合并成 `scripts/directory-data.json`（目录批次的灌库输入，见"数据模型"一节；改完数据后接 `npm run db:seed` 生效） |
 | `node scripts/check-search.mjs [词...]` | 检查搜索相关性排序与通配符转义 |
 | `node scripts/analyze-shot.mjs <图片> [列数]` | 无法直接查看图片时，从像素里读出设计稿的结构：调色板、横向分区带、亮度与边缘 ASCII 图 |
 
@@ -253,6 +254,11 @@ terminal_amenities   航站楼设施（label + label_en）
 airport_facilities   机场整体设施（label + label_en）
 ground_transport     地面交通（name/description + 英文列，可空）
 ```
+
+机场分两批灌入（都在 `db:seed` 里完成）：
+
+- **编辑批次（60 个）**：来自 `scripts/legacy-data.json`，带完整航站楼、设施、交通与旅客量数据；
+- **目录批次（`scripts/directory-data.json`，303 个）**：由 `node data/build-directory-data.mjs` 从 `data/new-airports-a.{zh,en}.json` 合并生成（zh 提供中文名/城市，en 提供英文名、IATA/ICAO、国家与规模，55 个新国家在生成器里维护）。这批只有名称/城市/国家/规模，简介由字段推导，无航站楼与旅客量（详情页自动少渲染对应区块，下载按钮走封面/搜索回退）；与编辑批次重叠的代码自动跳过，`updated_at` 排在编辑批次之后以保证"最近更新"栏位的顺序。
 
 设计取舍：
 

@@ -1,0 +1,5 @@
+AIR/pdf	failed	HTTP 403 (blocked or not authorised for this client)	https://www.eoob.com/images/terminal-maps/AIR/AIR.pdf
+AJF/png	failed	HTTP 403 (blocked or not authorised for this client)	https://www.eoob.com/images/terminal-maps/AJF/AJF_large.png
+AIU/pdf	failed	HTTP 403 (blocked or not authorised for this client)	https://www.eoob.com/images/terminal-maps/AIU/AIU.pdf
+AJL/png	failed	HTTP 403 (blocked or not authorised for this client)	https://www.eoob.com/images/terminal-maps/AJL/AJL_large.png
+AJL/pdf	failed	HTTP 403 (blocked or not authorised for this client)	https://www.eoob.com/images/terminal-maps/AJL/AJL.pdf

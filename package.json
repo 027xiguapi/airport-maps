@@ -20,7 +20,8 @@
     "db:verify": "node scripts/verify.mjs",
     "data:world-airports": "node scripts/prepare-world-airports.mjs",
     "data:terminal-maps": "node scripts/fetch-terminal-maps.mjs",
-    "data:terminal-maps:compress": "node scripts/compress-terminal-maps.mjs"
+    "data:terminal-maps:compress": "node scripts/compress-terminal-maps.mjs",
+    "data:build-directory": "node data/build-directory-data.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.20",

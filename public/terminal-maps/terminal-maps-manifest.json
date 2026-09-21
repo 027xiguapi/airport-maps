@@ -2,8 +2,8 @@
   "note": "Provenance for downloaded terminal maps. Keep this next to the files: it records where each file came from and under what right it was copied.",
   "source": "https://www.eoob.com/images/terminal-maps",
   "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established",
-  "updatedAt": "2026-09-21T11:40:38.309Z",
-  "count": 57,
+  "updatedAt": "2026-09-21T13:26:29.201Z",
+  "count": 63,
   "files": {
     "HKG": {
       "png": {
@@ -1760,6 +1760,192 @@
         "sha256": "c43cfe228d6cba478f34dede0859953c4688c79f01c95a74cabb2cfdc62bb205",
         "contentType": "application/pdf",
         "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "AAL": {
+      "name": "Aalborg Airport",
+      "city": "Aalborg",
+      "countryCode": "DK",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/AAL/AAL_large.png",
+        "file": "AAL_large.png",
+        "bytes": 224103,
+        "sha256": "e8112852e7fd95cb60b6d3d2b2d733bde381aded2696584c9716078a27587cfb",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T13:20:51.793Z",
+        "compressed": {
+          "bytes": 54313,
+          "sha256": "eb21f12d84b371a887d52bef8edf77c6ea48dbf05d92abe9bf92fa11aef4704e",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T13:26:29.196Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/AAL/AAL.pdf",
+        "file": "AAL.pdf",
+        "bytes": 278906,
+        "sha256": "50dfe5715176cb5d2893d44b42f061714b81d3d36eaa91b46e907b92ee480161",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T13:20:51.793Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "AAR": {
+      "name": "Aarhus Airport",
+      "city": "Aarhus",
+      "countryCode": "DK",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/AAR/AAR_large.png",
+        "file": "AAR_large.png",
+        "bytes": 223972,
+        "sha256": "d47b81b3bf1c746353ef73fe5edb2ba24e05ab33564d664ac5a123fb34b0f474",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T13:20:51.793Z",
+        "compressed": {
+          "bytes": 38366,
+          "sha256": "f081b3b39119655442402378166ed5ec2b3b2401fe6c5ae32c40e71c1f135704",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T13:26:29.197Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/AAR/AAR.pdf",
+        "file": "AAR.pdf",
+        "bytes": 278817,
+        "sha256": "d7d73dcbe664da81b2a5afbcf2ef76940b765210bd56ab267909e0894e0c6e00",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T13:20:51.793Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "ACE": {
+      "name": "César Manrique-Lanzarote Airport",
+      "city": "Arrecife",
+      "countryCode": "ES",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/ACE/ACE_large.png",
+        "file": "ACE_large.png",
+        "bytes": 429887,
+        "sha256": "8e2b0395ed98c3854c52a04a518fd37accdb17dd7cb902920bae08bc4f038905",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T13:20:51.793Z",
+        "compressed": {
+          "bytes": 92190,
+          "sha256": "db2cb303ffb4d0e35f206542722ddde8974d28dba6f32fa0462fd21bb076ae0b",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T13:26:29.198Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/ACE/ACE.pdf",
+        "file": "ACE.pdf",
+        "bytes": 436728,
+        "sha256": "a284269b32aa0b7182406e9d6dc9c30efb9841715dc843b280fe1f8bbd98bf9d",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T13:20:51.793Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "AEP": {
+      "name": "Aeroparque Jorge Newbery",
+      "city": "Buenos Aires",
+      "countryCode": "AR",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/AEP/AEP_large.png",
+        "file": "AEP_large.png",
+        "bytes": 296255,
+        "sha256": "f7ed129b168bb31569540e6d5a26e34f021c06e20e525978a9402934b59156de",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T13:20:51.793Z",
+        "compressed": {
+          "bytes": 59494,
+          "sha256": "cf4bd4992c26436c5c4a8f3d2ead88093ef1d737a240503b1e5308bde56eaaa0",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T13:26:29.200Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/AEP/AEP.pdf",
+        "file": "AEP.pdf",
+        "bytes": 353716,
+        "sha256": "d13b9eef27423244f0335c888a0549ca3b2a6d4878353c86b410e405b77d2b74",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T13:20:51.793Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "AES": {
+      "name": "Ålesund Airport",
+      "city": "Ålesund",
+      "countryCode": "NO",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/AES/AES_large.png",
+        "file": "AES_large.png",
+        "bytes": 195743,
+        "sha256": "1b130ad4cf7c04caf70f52528979fc5bc32e84a3ee95098ce28ec10b9176f4b2",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T13:20:51.793Z",
+        "compressed": {
+          "bytes": 46621,
+          "sha256": "5bc4b275e43527571cc36eb1daa2c10d0612a5e2e13892f5faaaf5abe4929e8a",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T13:26:29.201Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/AES/AES.pdf",
+        "file": "AES.pdf",
+        "bytes": 252020,
+        "sha256": "81485a71f5ec2f7b1a99d98a02669a957b1f4d47155a566088e4758079dfdbd5",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T13:20:51.793Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "ADB": {
+      "name": "Adnan Menderes International Airport",
+      "city": "Izmir",
+      "countryCode": "TR",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/ADB/ADB_large.png",
+        "file": "ADB_large.png",
+        "bytes": 493487,
+        "sha256": "9d8fc2c4e85a9d6b9a93817b458b3c72a76e8b8a724f6e238c248a92a63ca49a",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T13:20:51.793Z",
+        "compressed": {
+          "bytes": 106217,
+          "sha256": "e763bf9cd684f79b06bd93b580b103c2089178964792935b1547fd2736030b51",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T13:26:29.199Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/ADB/ADB.pdf",
+        "file": "ADB.pdf",
+        "bytes": 493182,
+        "sha256": "c5724383e7c89338b0f12e107ca14be683805a921b4039bcc0bcde60c5f00400",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T13:20:51.793Z"
       },
       "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
     }
