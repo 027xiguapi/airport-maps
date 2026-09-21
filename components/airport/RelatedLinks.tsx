@@ -1,6 +1,7 @@
 import { airportEncyclopediaTitle, baikeUrl, wikiUrl } from '@/lib/encyclopedia-links';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { Button } from '@/components/ui/button';
 
 /**
  * External reference links: the official website (curated table in
@@ -38,21 +39,26 @@ export default function RelatedLinks({
       </div>
       <div className="ext-links">
         {website && (
-          <a className="ext-btn" href={website} target="_blank" rel="noopener noreferrer">
-            {t.airport.officialSite} ↗
-          </a>
+          <Button asChild variant="outline">
+            <a href={website} target="_blank" rel="noopener noreferrer">
+              {t.airport.officialSite} ↗
+            </a>
+          </Button>
         )}
-        <a
-          className="ext-btn"
-          href={wikiUrl(locale === 'en' ? 'en' : 'zh', wikiTitle)}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {t.airport.wikiLabel} ↗
-        </a>
-        <a className="ext-btn" href={baikeUrl(titleZh)} target="_blank" rel="noopener noreferrer">
-          {t.airport.baikeLabel} ↗
-        </a>
+        <Button asChild variant="outline">
+          <a
+            href={wikiUrl(locale === 'en' ? 'en' : 'zh', wikiTitle)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t.airport.wikiLabel} ↗
+          </a>
+        </Button>
+        <Button asChild variant="outline">
+          <a href={baikeUrl(titleZh)} target="_blank" rel="noopener noreferrer">
+            {t.airport.baikeLabel} ↗
+          </a>
+        </Button>
       </div>
     </section>
   );

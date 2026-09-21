@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import type { CountryWithCount } from '@/lib/types';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 export type DirectoryFilters = {
   q: string;
@@ -59,14 +61,17 @@ export default function FilterBar({
         <label className="sr-only" htmlFor="directory-q">
           {t.search.ariaLabel}
         </label>
-        <input
+        <Input
           id="directory-q"
           type="search"
           name="q"
           defaultValue={filters.q}
           placeholder={t.filters.searchPlaceholder}
+          className="flex-1 rounded-[19px] bg-paper focus-visible:bg-card"
         />
-        <button type="submit">{t.filters.submit}</button>
+        <Button type="submit" className="rounded-[19px]">
+          {t.filters.submit}
+        </Button>
       </form>
 
       <div className="group">

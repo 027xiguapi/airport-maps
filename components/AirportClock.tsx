@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Card } from '@/components/ui/card';
 
 /**
  * Live dual clock for the airport page: current time in the airport's
@@ -69,22 +70,30 @@ export default function AirportClock({
 
   return (
     <div className="clock-grid">
-      <div className="clock-card">
-        <div className="lbl">{airportLabel}</div>
-        <div className="tz">{timeZone}</div>
-        <div className="time">{airport?.time ?? '--:--:--'}</div>
-        <div className="date">
+      <Card className="px-[22px] py-[18px]">
+        <div className="font-display text-[11.5px] uppercase tracking-[0.14em] text-ink-faint">
+          {airportLabel}
+        </div>
+        <div className="mt-0.5 text-[12.5px] text-ink-soft">{timeZone}</div>
+        <div className="mt-2 font-display text-[36px] font-semibold leading-[1.15] text-navy-800 [font-variant-numeric:tabular-nums]">
+          {airport?.time ?? '--:--:--'}
+        </div>
+        <div className="mt-1 text-[13px] text-ink-soft [font-variant-numeric:tabular-nums]">
           {airport ? `${airport.date}${airport.suffix ? ` (${airport.suffix})` : ''}` : ''}
         </div>
-      </div>
-      <div className="clock-card">
-        <div className="lbl">{localLabel}</div>
-        <div className="tz">{localZone || '—'}</div>
-        <div className="time">{local?.time ?? '--:--:--'}</div>
-        <div className="date">
+      </Card>
+      <Card className="px-[22px] py-[18px]">
+        <div className="font-display text-[11.5px] uppercase tracking-[0.14em] text-ink-faint">
+          {localLabel}
+        </div>
+        <div className="mt-0.5 text-[12.5px] text-ink-soft">{localZone || '—'}</div>
+        <div className="mt-2 font-display text-[36px] font-semibold leading-[1.15] text-navy-800 [font-variant-numeric:tabular-nums]">
+          {local?.time ?? '--:--:--'}
+        </div>
+        <div className="mt-1 text-[13px] text-ink-soft [font-variant-numeric:tabular-nums]">
           {local ? `${local.date}${local.suffix ? ` (${local.suffix})` : ''}` : ''}
         </div>
-      </div>
+      </Card>
     </div>
   );
 }

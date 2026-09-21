@@ -20,6 +20,7 @@ export const zh = {
     home: '首页',
     airports: '全部机场',
     countries: '按国家浏览',
+    tools: '在线工具',
     about: '关于',
     label: '主导航',
     languageLabel: '语言',
@@ -213,7 +214,7 @@ export const zh = {
     }) =>
       // `o.nameEn` is empty when it equals `o.name` (both are "日本" / "Japan").
       `${o.name}${o.nameEn ? `（${o.nameEn}）` : ''}位于${o.region}，本站共收录 ${o.airports}、${o.terminals}、${o.gates}。` +
-      (o.busiest ? `其中${o.busiest}（${o.busiestIata}）规模最大，${o.busiestPax}。` : '') +
+      (o.busiest ? `其中${o.busiest}（${o.busiestIata}）规模最大，年旅客量${o.busiestPax}。` : '') +
       `机场分布在${o.cities}等城市，${o.mapsNote}`,
     introMapsNote: '每座机场都有航站楼平面示意图、登机口分布与地面交通说明。',
 
@@ -453,6 +454,92 @@ export const zh = {
     corridor: '连廊',
     transit: '地面交通',
     footer: (iata: string) => `${iata} · 航站楼平面示意`,
+  },
+
+  /** 工具中心（/tool）与各工具页。 */
+  tool: {
+    label: '在线工具',
+    hub: {
+      kicker: 'Tools',
+      title: '地图与坐标工具',
+      en: 'Free Tools',
+      sub: '为旅行者与地理爱好者准备的免费在线工具，打开即用，无需安装。',
+      description:
+        '免费在线地图与坐标工具：WGS84 / GCJ02 / BD09 坐标系转换、经纬度十进制度与度分秒互转、两点间大圆距离计算。中英双语，打开即用。',
+      comingTitle: '更多工具开发中',
+      comingSub: '坐标拾取、位置分享、投影计算等工具正在开发中，完成后会在这里上线。',
+    },
+    howTitle: '使用方法',
+    relatedTitle: '相关工具',
+    allTools: '全部工具',
+    tools: {
+      coordinateConverter: {
+        title: '坐标系转换',
+        en: 'Coordinate Converter',
+        description: '在 WGS84、GCJ02、BD09 三种坐标系之间互转，解决中国大陆地图偏移问题。',
+        note: 'WGS84 是 GPS 与国际通用的标准；GCJ02 是中国大陆法规要求的加偏坐标系（俗称「火星坐标」），高德、腾讯地图使用；BD09 在 GCJ02 基础上再次加偏，百度地图使用。同一地点在不同坐标系下可相差 100–700 米，跨地图服务使用坐标前请先转换。',
+        steps: [
+          '输入十进制经纬度（纬度, 经度），如 39.9042, 116.4074。',
+          '选择输入坐标所属的坐标系。',
+          '点击「转换」，得到另外两套坐标系的结果，点「复制」保存。',
+        ],
+        inputLabel: '输入坐标（纬度, 经度）',
+        inputPlaceholder: '例如 39.9042, 116.4074',
+        sourceLabel: '输入坐标系',
+        wgs84: 'WGS84 · GPS / 国际标准',
+        gcj02: 'GCJ02 · 高德 / 腾讯',
+        bd09: 'BD09 · 百度',
+        precisionLabel: '小数位数',
+        submit: '转换',
+        copy: '复制',
+        copied: '已复制',
+        error: '无法解析坐标。请使用「纬度, 经度」格式，例如 39.9042, 116.4074。',
+      },
+      dmsConverter: {
+        title: '经纬度格式转换',
+        en: 'Coordinate Format Converter',
+        description: '十进制度（DD）、度分（DM）、度分秒（DMS）三种经纬度写法互转，自动识别输入格式。',
+        note: 'DD（39.9042°）是设备与 API 常用的纯小数写法；DMS（39°54′15″N）常见于航海、航空与测绘；DM（39°54.25′N）多用于野外记录。工具按输入中数字段的数量自动识别格式（1 段 DD、2 段 DM、3 段 DMS），一次输出全部三种写法，南北纬 / 东西经以 N/S/E/W 表示。',
+        steps: [
+          '输入一对坐标，支持 39.9042、39°54′15″N、39°32.5′E 等写法，两半以逗号分隔。',
+          '选择输出的小数位数。',
+          '点击「转换」，三种格式的结果都会列出，点「复制」保存。',
+        ],
+        inputLabel: '输入坐标（一对，逗号分隔）',
+        inputPlaceholder: '例如 39°54′15″N, 116°24′51″E 或 39.9042, 116.4074',
+        precisionLabel: '小数位数',
+        submit: '转换',
+        ddLabel: '十进制度（DD）',
+        dmLabel: '度分（DM）',
+        dmsLabel: '度分秒（DMS）',
+        copy: '复制',
+        copied: '已复制',
+        error: '无法解析坐标。支持 39.9042、39°54′15″N、39°32.5′E 等写法，两半用逗号分隔。',
+      },
+      distanceCalculator: {
+        title: '两点距离计算',
+        en: 'Distance Calculator',
+        description: '用大圆公式计算地球表面两点间的距离，同时给出初始方位角。',
+        note: '距离使用 Haversine 大圆公式（地球平均半径 6371.0088 公里），即两点沿地表的最短距离；方位角是从起点看向终点的罗盘方向，以正北为 0°、顺时针递增。',
+        steps: [
+          '分别输入起点与终点的纬度、经度。',
+          '点击「计算距离」。',
+          '得到公里、英里、海里与初始方位角。',
+        ],
+        fromLabel: '起点',
+        toLabel: '终点',
+        inputPlaceholder: '纬度, 经度',
+        example: '示例：北京 → 上海',
+        submit: '计算距离',
+        km: '公里',
+        mi: '英里',
+        nmi: '海里',
+        bearing: '初始方位角',
+        copy: '复制',
+        copied: '已复制',
+        error: '无法解析坐标。请使用「纬度, 经度」格式，纬度 -90–90，经度 -180–180。',
+      },
+    },
   },
 };
 

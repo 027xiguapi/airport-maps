@@ -14,6 +14,7 @@ export default function Header({ locale }: { locale: Locale }) {
     { href: '/', label: t.nav.home },
     { href: '/airports', label: t.nav.airports },
     { href: '/countries', label: t.nav.countries },
+    { href: '/tool', label: t.nav.tools },
     { href: '/about', label: t.nav.about },
   ];
 

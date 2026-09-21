@@ -7,25 +7,14 @@
  * The blue button links out to a Google search for the airport's terminal-map
  * PDF — the site does not host PDFs, and searches such as "JFK airport
  * terminal map pdf" surface the official downloadable files.
+ *
+ * Both are shadcn Buttons; the green/blue branding comes in as classes so
+ * the base (focus ring, sizing, transitions) stays shared.
  */
 
-const dlIcon = (
-  <svg
-    width="18"
-    height="18"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
-    <path d="M12 4v11" />
-    <path d="m7 11 5 5 5-5" />
-    <path d="M5 20h14" />
-  </svg>
-);
+import { DownloadIcon } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
 
 export default function MapDownloads({
   iata,
@@ -58,19 +47,25 @@ export default function MapDownloads({
 
   return (
     <div className="map-dl-row">
-      <button type="button" className="map-dl map" onClick={downloadMap}>
-        {dlIcon}
-        {mapLabel}
-      </button>
-      <a
-        className="map-dl pdf"
-        href={`https://www.google.com/search?q=${encodeURIComponent(`${iata} airport terminal map pdf`)}`}
-        target="_blank"
-        rel="noopener noreferrer"
+      <Button
+        type="button"
+        size="lg"
+        onClick={downloadMap}
+        className="max-sm:w-full gap-[9px] rounded-[10px] bg-[#1E8E4B] font-bold text-white shadow-[0_8px_18px_-10px_rgba(30,142,75,0.85)] hover:bg-[#1E8E4B] hover:brightness-110"
       >
-        {dlIcon}
-        {pdfLabel}
-      </a>
+        <DownloadIcon className="opacity-95" />
+        {mapLabel}
+      </Button>
+      <Button asChild size="lg" className="max-sm:w-full gap-[9px] rounded-[10px] bg-[#0D6EFD] font-bold text-white shadow-[0_8px_18px_-10px_rgba(13,110,253,0.85)] hover:bg-[#0D6EFD] hover:brightness-110">
+        <a
+          href={`https://www.google.com/search?q=${encodeURIComponent(`${iata} airport terminal map pdf`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <DownloadIcon className="opacity-95" />
+          {pdfLabel}
+        </a>
+      </Button>
     </div>
   );
 }

@@ -58,6 +58,47 @@
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-ink-faint: var(--ink-faint);
+
+  /* shadcn/ui 语义令牌(components/ui 下的原语只引用这一层):
+     每个值都借用上方的设计令牌,暗色主题随 --* 重映射自动生效。 */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Radix 手风琴的展开/收起动画(components/ui/accordion.tsx)。 */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
 }
 
 /* The ported design wrote bare `transition: <props> <time>` shorthands, whose
@@ -92,6 +133,28 @@
   --shadow-lg: 0 12px 32px rgba(10, 42, 67, 0.16);
   --radius: 14px;
   --radius-sm: 9px;
+
+  /* ============ shadcn/ui 语义令牌 ============
+     主色取 sky-600(与筛选提交按钮一致);次级面用浅蓝;弱化面用纸色。
+     边框/输入框/焦点环借 --line 与 sky-500,暗色在下方整组重映射。 */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card-foreground: var(--ink);
+  --popover: var(--card);
+  --popover-foreground: var(--ink);
+  --primary: var(--sky-600);
+  --primary-foreground: #ffffff;
+  --secondary: var(--sky-100);
+  --secondary-foreground: var(--sky-600);
+  --muted: var(--paper);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--sky-100);
+  --accent-foreground: var(--ink);
+  --destructive: #d64545;
+  --destructive-foreground: #ffffff;
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--sky-500);
 }
 
 /* ============ 暗色主题令牌 ============
@@ -122,6 +185,12 @@ html[data-theme="dark"] {
   --shadow-sm: 0 1px 2px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.30);
   --shadow-md: 0 4px 16px rgba(0,0,0,.45);
   --shadow-lg: 0 12px 32px rgba(0,0,0,.55);
+  /* shadcn 语义令牌的暗色部分:--primary/--border/--accent 等借用的变量
+     已随上方重映射,这里只补前景色的换挡(主按钮亮蓝配深色文字,
+     与 .filterbar 提交按钮的暗色处理一致)。 */
+  --primary-foreground: var(--navy-900);
+  --secondary-foreground: #C4DCF0;
+  --destructive: #E5484D;
 }
 
 /* ============ 基础样式 ============ */
@@ -379,9 +448,6 @@ html[data-theme="dark"] {
   .hero-stat .num {
     @apply font-display text-[32px] font-semibold leading-[1.1] text-white;
   }
-  .hero-stat .num em {
-    @apply not-italic text-amber;
-  }
   .hero-stat .lbl {
     @apply mt-[3px] text-[12.5px] tracking-[0.04em] text-white/[0.68];
   }
@@ -509,10 +575,7 @@ html[data-theme="dark"] {
   }
 
   /* ============ 最近更新 ============ */
-  .update-list {
-    @apply overflow-hidden rounded-[14px] border border-line bg-card;
-    box-shadow: var(--shadow-sm);
-  }
+  /* The container is a shadcn Card (components/HomeSections.tsx). */
   .update-row {
     @apply flex cursor-pointer items-center gap-4 border-b border-b-line px-[22px] py-[15px] transition-[background-color] duration-[130ms];
   }
@@ -544,9 +607,7 @@ html[data-theme="dark"] {
     @apply h-[22px] w-[34px] flex-none rounded-[4px] object-cover;
     box-shadow: 0 0 0 1px rgba(10, 42, 67, 0.10);
   }
-  .update-tag {
-    @apply flex-none rounded-[20px] bg-sky-100 px-2.5 py-1 text-[11.5px] font-semibold tracking-[0.05em] text-sky-600;
-  }
+  /* The "recently updated" chip is a shadcn Badge (variant=secondary). */
 
   /* ============ 国家网格 ============ */
   /* `minmax(min(200px,100%),1fr)` instead of a bare 200px floor: the English
@@ -555,13 +616,6 @@ html[data-theme="dark"] {
   .country-grid {
     @apply grid gap-3.5;
     grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-  }
-  .country-card {
-    @apply flex min-w-0 cursor-pointer items-center gap-3.5 rounded-[14px] border border-line bg-card p-[18px] transition-[transform,box-shadow,border-color] duration-[160ms];
-  }
-  .country-card:hover {
-    @apply -translate-y-[3px] border-sky-400;
-    box-shadow: var(--shadow-md);
   }
   .country-flag {
     @apply h-[34px] w-[52px] flex-none rounded-[6px] object-cover;
@@ -579,11 +633,7 @@ html[data-theme="dark"] {
   .country-info span {
     @apply block truncate text-[12.5px] text-ink-soft;
   }
-  /* `.cnt` is a flex item and the name is unbounded, so both must be allowed to
-     shrink and truncate rather than set the row's min-content width. */
-  .country-card .cnt {
-    @apply min-w-0 flex-[0_1_auto] truncate rounded-2xl bg-sky-100 px-2.5 py-[3px] font-display text-[15px] font-semibold text-sky-600;
-  }
+  /* The airport-count chip is a shadcn Badge (variant=secondary). */
 
   /* ============ 全部机场列表 ============ */
   .airport-table {
@@ -694,52 +744,7 @@ html[data-theme="dark"] {
   .filterbar form {
     @apply flex min-w-[220px] flex-1 gap-2;
   }
-  .filterbar input[type="search"] {
-    @apply h-[38px] min-w-0 flex-1 rounded-[19px] border border-line bg-paper px-4 py-0 text-[14px] text-ink outline-none;
-    font-family: inherit;
-  }
-  .filterbar input[type="search"]:focus {
-    @apply border-sky-500;
-    background: #fff;
-    @variant dark {
-      background: var(--card);
-    }
-  }
-  .filterbar button[type="submit"] {
-    @apply h-[38px] rounded-[19px] bg-sky-600 px-[18px] py-0 text-[14px] font-semibold text-white transition-[background-color] duration-[140ms];
-    /* sky-600 brightens for link text in dark mode, so the fill needs dark text
-       there to keep its contrast. */
-    @variant dark {
-      color: var(--navy-900);
-    }
-  }
-  .filterbar button[type="submit"]:hover {
-    @apply bg-navy-700;
-    @variant dark {
-      background: var(--sky-400);
-    }
-  }
-
-  .pager {
-    @apply my-[26px] mb-2 flex flex-wrap items-center justify-center gap-2;
-  }
-  .pager a,
-  .pager span {
-    @apply inline-flex h-[38px] min-w-[38px] items-center justify-center rounded-[10px] border border-line bg-card px-3 py-0 font-display text-[14px] tracking-[0.03em] text-ink-soft;
-  }
-  .pager a:hover {
-    @apply border-sky-400 text-sky-600;
-  }
-  .pager .on {
-    @apply border-navy-800 bg-navy-800 font-semibold text-white;
-  }
-  .pager .gap {
-    border: none;
-    background: none;
-  }
-  .pager .off {
-    @apply opacity-45;
-  }
+  /* The search field and submit button are shadcn Input/Button. */
 
   .result-note {
     @apply mb-3.5 flex flex-wrap items-center gap-2 text-[13.5px] text-ink-soft;
@@ -801,22 +806,20 @@ html[data-theme="dark"] {
   .cat-section {
     @apply border-y border-y-line bg-card;
   }
+  /* The band's inner section keeps its 64px top padding but needs real bottom
+     padding too — .section's pb-[8px] would sit content on the band's own
+     bottom border. */
+  .cat-section .section {
+    @apply pb-16;
+  }
   .cat-grid {
     @apply grid gap-4;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .cat-card {
-    @apply relative flex min-h-[126px] items-start gap-3.5 rounded-[14px] border border-line bg-card px-[22px] py-5 transition-[transform,box-shadow,border-color] duration-[160ms];
-  }
-  .cat-card:hover {
-    @apply -translate-y-[3px] border-sky-400;
-    box-shadow: var(--shadow-md);
-  }
+  /* The card itself is a shadcn Card (components/CategoryGrid.tsx); the
+     icon's navy hover swap now lives in the component as group-hover classes. */
   .cat-icon {
     @apply flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[11px] bg-sky-100 text-sky-600;
-  }
-  .cat-card:hover .cat-icon {
-    @apply bg-navy-800 text-white;
   }
   .cat-body {
     @apply block min-w-0 flex-1;
@@ -847,9 +850,6 @@ html[data-theme="dark"] {
     .cat-grid {
       grid-template-columns: 1fr;
       gap: 12px;
-    }
-    .cat-card {
-      @apply min-h-0 px-[18px] py-4;
     }
     .cat-meta {
       @apply static mt-2 block flex-none;
@@ -906,40 +906,7 @@ html[data-theme="dark"] {
     @apply translate-x-[3px];
   }
 
-  /* ============ FAQ ============ */
-  .faq {
-    @apply overflow-hidden rounded-[14px] border border-line bg-card;
-    box-shadow: var(--shadow-sm);
-  }
-  .faq details {
-    @apply border-b border-b-line;
-  }
-  .faq details:last-child {
-    border-bottom: none;
-  }
-  .faq summary {
-    @apply flex cursor-pointer items-center justify-between gap-3.5 px-[22px] py-4 text-[15px] font-semibold transition-[background-color] duration-[140ms];
-    list-style: none;
-  }
-  .faq summary::-webkit-details-marker {
-    display: none;
-  }
-  .faq summary:hover {
-    @apply bg-sky-100;
-  }
-  .faq summary::after {
-    content: "+";
-    @apply flex-none font-display text-[19px] leading-none text-sky-600;
-  }
-  .faq details[open] summary::after {
-    content: "–";
-  }
-  .faq .a {
-    @apply px-[22px] pb-[18px] text-[14.5px] leading-[1.75] text-ink-soft;
-  }
-  .faq .a b {
-    @apply font-semibold text-ink;
-  }
+  /* FAQ moves to components/ui/accordion.tsx (shadcn); see --animate-accordion-* */
 
   /* ============ Markdown 排版 ============ */
   /* Typography for react-markdown output (guide pages, content pages). */
@@ -1143,67 +1110,8 @@ html[data-theme="dark"] {
     @apply grid gap-4;
     grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   }
-  .cairport-card {
-    @apply flex cursor-pointer flex-col gap-1 overflow-hidden rounded-[14px] border border-line bg-card p-[22px] transition-[transform,box-shadow,border-color] duration-[160ms];
-  }
-  .cairport-card:hover {
-    @apply -translate-y-[3px] border-sky-400;
-    box-shadow: var(--shadow-md);
-  }
-  .cairport-card .top {
-    @apply flex items-center gap-3.5;
-  }
-  .cairport-card .iata {
-    @apply font-display text-[30px] font-semibold leading-none text-navy-800;
-    @variant dark {
-      color: #C4DCF0;
-    }
-  }
-  .cairport-card .nm b {
-    @apply block text-[15.5px] font-bold;
-  }
-  .cairport-card .nm span {
-    @apply text-[12.5px] text-ink-soft;
-  }
-  .cairport-card .facts {
-    @apply mt-3 flex flex-wrap gap-2;
-  }
-  .cairport-card .fact {
-    @apply rounded-[20px] border border-line bg-paper px-2.5 py-[3px] text-[12px] text-ink-soft;
-  }
-  .cairport-card .foot {
-    @apply mt-3.5 flex items-center justify-between border-t border-dashed border-line pt-3;
-  }
-  .cairport-card .map-mini {
-    @apply inline-flex items-center gap-[5px] text-[13px] font-semibold text-sky-600;
-  }
-  .cairport-card .map-mini svg {
-    @apply transition-transform duration-150;
-  }
-  .cairport-card:hover .map-mini svg {
-    @apply translate-x-[3px];
-  }
-  .cairport-card .zone {
-    @apply font-display text-[11.5px] uppercase tracking-[0.14em] text-ink-faint;
-  }
-  /* Cover image on the country-page cards: bleeds out to the card's edges, and
-     falls back to a navy plate carrying the IATA code when there is none. */
-  .cairport-card .cover {
-    /* Bleeds out over the card's own padding on three sides (`margin:-22px
-       -22px 10px`). */
-    @apply -mx-[22px] -mt-[22px] mb-2.5 flex aspect-[4/3] flex-none items-center justify-center overflow-hidden;
-    border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
-    background: var(--navy-900);
-  }
-  .cairport-card .cover img {
-    @apply block h-full w-full object-cover;
-  }
-  .cairport-card .cover.empty {
-    background: linear-gradient(135deg, var(--navy-700), var(--navy-900));
-  }
-  .cairport-card .cover .ph-iata {
-    @apply font-display text-[36px] font-semibold tracking-[0.08em] text-white/[0.14];
-  }
+  /* `.cairport-card` and its descendants moved into the shadcn Card in
+     components/AirportCard.tsx as utilities (cover bleed, fact Badges, …). */
 
   /* ============ 机场详情页 ============ */
   .ap-head {
@@ -1375,23 +1283,7 @@ html[data-theme="dark"] {
     @apply grid gap-4;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
-  .clock-card {
-    @apply rounded-[14px] border border-line bg-card px-[22px] py-[18px];
-  }
-  .clock-card .lbl {
-    @apply font-display text-[11.5px] uppercase tracking-[0.14em] text-ink-faint;
-  }
-  .clock-card .tz {
-    @apply mt-0.5 text-[12.5px] text-ink-soft;
-  }
-  .clock-card .time {
-    @apply mt-2 font-display text-[36px] font-semibold leading-[1.15] text-navy-800;
-    font-variant-numeric: tabular-nums;
-  }
-  .clock-card .date {
-    @apply mt-1 text-[13px] text-ink-soft;
-    font-variant-numeric: tabular-nums;
-  }
+  /* `.clock-card` moved into the shadcn Card in components/AirportClock.tsx. */
 
   /* ---------- 机场详情字段 ---------- */
   .detail-list {
@@ -1458,10 +1350,65 @@ html[data-theme="dark"] {
   .ext-links {
     @apply mt-2.5 flex flex-wrap gap-2.5;
   }
-  a.ext-btn {
-    @apply inline-flex items-center gap-1.5 rounded-lg border border-line bg-card px-3.5 py-2 text-[13.5px] font-semibold text-sky-600 transition-[border-color,background-color] duration-150;
+  /* `.ext-btn` became the shadcn Button (variant=outline). */
+
+  /* ---------- 工具页表单 ---------- */
+  /* Shared form controls for the /tool client components; mirrors the
+     .filterbar input and submit styling so the tools read as part of the
+     site. sky-600 brightens in dark mode, so the primary button flips to dark
+     text there (same as .filterbar button[type="submit"]). */
+  .tool-label {
+    @apply mb-1.5 block font-display text-[11.5px] uppercase tracking-[0.14em] text-ink-faint;
   }
-  a.ext-btn:hover {
+  .tool-input,
+  .tool-select {
+    @apply h-[38px] w-full rounded-[19px] border border-line bg-paper px-4 py-0 text-[14px] text-ink outline-none transition-[border-color] duration-150;
+    font-family: inherit;
+  }
+  .tool-input:focus,
+  .tool-select:focus {
+    @apply border-sky-500;
+  }
+  .tool-btn {
+    @apply h-[38px] cursor-pointer rounded-[19px] bg-sky-600 px-[18px] py-0 text-[14px] font-semibold text-white transition-[background-color] duration-150;
+    font-family: inherit;
+    @variant dark {
+      color: var(--navy-900);
+    }
+  }
+  .tool-btn:hover {
+    @apply bg-navy-700;
+    @variant dark {
+      background: var(--sky-400);
+    }
+  }
+  .tool-ghost-btn {
+    @apply h-[38px] cursor-pointer rounded-[19px] border border-line bg-card px-[18px] py-0 text-[13px] font-semibold text-sky-600 transition-[border-color,background-color] duration-150;
+    font-family: inherit;
+  }
+  .tool-ghost-btn:hover {
+    @apply border-sky-400 bg-sky-100;
+  }
+  .tool-result {
+    @apply flex min-w-0 items-center justify-between gap-3 rounded-[10px] border border-line bg-paper px-4 py-2.5;
+  }
+  .tool-result .lbl {
+    @apply flex-none text-[12px] text-ink-soft;
+  }
+  .tool-result .val {
+    @apply min-w-0 flex-1 truncate font-display text-[15px] font-semibold text-navy-800;
+    font-variant-numeric: tabular-nums;
+    @variant dark {
+      color: #C4DCF0;
+    }
+  }
+  .tool-error {
+    @apply rounded-[10px] border border-line bg-paper px-4 py-2.5 text-[13px] text-ink-soft;
+  }
+  .tool-copy {
+    @apply flex-none cursor-pointer rounded-[16px] border border-line bg-card px-3 py-1 text-[12px] font-semibold text-sky-600 transition-[border-color,background-color] duration-150;
+  }
+  .tool-copy:hover {
     @apply border-sky-400 bg-sky-100;
   }
 
@@ -1543,62 +1490,19 @@ html[data-theme="dark"] {
   .map-legend-item .sw {
     @apply inline-block h-3.5 w-3.5 rounded-[4px];
   }
-  /* Download buttons at the bottom of the navy .map-panel, rendered by
-     components/airport/MapDownloads.tsx; position+z-index lift the row above
+  /* Download buttons at the bottom of the navy .map-panel are shadcn Buttons
+     (components/airport/MapDownloads.tsx); position+z-index lift the row above
      the panel's ::before veil. */
   .map-dl-row {
     @apply relative z-[2] mt-4 flex flex-wrap gap-2.5;
   }
-  .map-dl {
-    @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center gap-[9px] rounded-[10px] px-5 py-2.5 text-[14px] font-bold text-white no-underline transition-[filter] duration-150;
-    font-family: inherit;
-    border: 0;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .map-dl:hover {
-    filter: brightness(1.12);
-  }
-  .map-dl:active {
-    filter: brightness(0.92);
-  }
-  .map-dl:focus-visible {
-    outline: 2px solid var(--amber);
-    outline-offset: 2px;
-  }
-  .map-dl svg {
-    @apply flex-none opacity-95;
-  }
-  .map-dl.map {
-    background: #1E8E4B;
-    box-shadow: 0 8px 18px -10px rgba(30, 142, 75, 0.85);
-  }
-  .map-dl.pdf {
-    background: #0D6EFD;
-    box-shadow: 0 8px 18px -10px rgba(13, 110, 253, 0.85);
-  }
-  @media (max-width: 640px) {
-    .map-dl {
-      @apply flex-[1_1_100%];
-    }
-  }
 
   /* ============ 航站楼信息 ============ */
-  .terminal-list {
-    @apply mt-[26px] mb-2 flex flex-col gap-3.5;
-  }
-  .terminal-card {
-    @apply flex items-start gap-5 rounded-[14px] border border-line bg-card px-[22px] py-5 transition-[border-color,box-shadow] duration-150;
-  }
-  .terminal-card:hover {
-    @apply border-sky-400;
-    box-shadow: var(--shadow-md);
-  }
+  /* The terminal list renders shadcn Cards (components/airport/TerminalsSection.tsx);
+     the badge / main / facilities inner styles below stay class-based. */
   .terminal-badge {
     @apply flex h-[74px] w-[74px] flex-none items-center justify-center rounded-[14px] bg-navy-900 font-display text-[24px] font-semibold tracking-[0.03em] text-white;
     box-shadow: var(--shadow-md);
-  }
-  .terminal-badge.gates {
-    @apply bg-amber text-navy-900;
   }
   .terminal-main {
     @apply min-w-0 flex-1;
@@ -1628,9 +1532,6 @@ html[data-theme="dark"] {
     @apply flex-none text-sky-500;
   }
   @media (max-width: 760px) {
-    .terminal-card {
-      flex-wrap: wrap;
-    }
     /* `.terminal-fac` is flex:none, so it would keep its max-content width
        (every nowrap amenity chip on one line) and push the card past the
        viewport. Give it the full row so its chips wrap. */
@@ -1721,30 +1622,7 @@ html[data-theme="dark"] {
     @apply grid gap-3;
     grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
   }
-  .related-card {
-    @apply flex cursor-pointer items-center gap-3 rounded-[9px] border border-line bg-card px-4 py-3.5 transition-[border-color,transform] duration-150;
-  }
-  .related-card:hover {
-    @apply -translate-y-0.5 border-sky-400;
-  }
-  .related-card .iata {
-    @apply w-[52px] flex-none font-display text-[17px] font-semibold text-navy-800;
-    @variant dark {
-      color: #C4DCF0;
-    }
-  }
-  /* Flex rows with a nowrap airport name: without min-width:0 the grid track
-     floors at the full name width (400px for "Hartsfield–Jackson Atlanta
-     International Airport"). */
-  .related-card .nm {
-    @apply min-w-0;
-  }
-  .related-card .nm b {
-    @apply block truncate text-[13.5px] font-semibold;
-  }
-  .related-card .nm span {
-    @apply text-[12px] text-ink-soft;
-  }
+  /* `.related-card` moved into the shadcn Card in components/airport/RelatedAirports.tsx. */
 
   /* ============ 语言切换 / 主题切换 ============ */
   .lang {

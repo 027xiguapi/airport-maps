@@ -3,6 +3,8 @@ import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { ArrowIcon } from '@/lib/icons';
 import { formatPax } from '@/lib/format';
+import { Badge } from '@/components/ui/badge';
+import { Card } from '@/components/ui/card';
 import type { AirportSummary, CityHub } from '@/lib/types';
 
 /** "Recently updated" panel on the homepage. */
@@ -15,7 +17,7 @@ export function UpdateList({
 }) {
   const t = getMessages(locale);
   return (
-    <div className="update-list">
+    <Card className="overflow-hidden [box-shadow:var(--shadow-sm)]">
       {airports.map((airport, i) => (
         <Link
           className="update-row"
@@ -36,10 +38,12 @@ export function UpdateList({
             alt={airport.countryName}
             loading="lazy"
           />
-          <span className="update-tag">{t.common.lastUpdated}</span>
+          <Badge variant="secondary" className="text-[11.5px] font-semibold tracking-[0.05em]">
+            {t.common.lastUpdated}
+          </Badge>
         </Link>
       ))}
-    </div>
+    </Card>
   );
 }
 

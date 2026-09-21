@@ -12,7 +12,9 @@ import { listGuidedAirports } from '@/lib/content';
 import { formatNumber } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
-import { ArrowIcon } from '@/lib/icons';
+import { ArrowIcon, GlobeIcon, RulerIcon, SwapIcon } from '@/lib/icons';
+import { TOOL_CARD_CLASSES, TOOL_SLUGS, toolMessages } from '@/components/tool/shell';
+import { Card } from '@/components/ui/card';
 import {
   getAirportSummaries,
   getAirportsByCodes,
@@ -214,9 +216,7 @@ export default async function HomePage({ params }: Props) {
               <div className="lbl">{t.hero.stats.airports}</div>
             </div>
             <div className="hero-stat">
-              <div className="num">
-                <em>{formatNumber(stats?.terminalCount ?? 0, locale)}</em>
-              </div>
+              <div className="num">{formatNumber(stats?.terminalCount ?? 0, locale)}</div>
               <div className="lbl">{t.hero.stats.terminals}</div>
             </div>
           </div>
@@ -262,6 +262,47 @@ export default async function HomePage({ params }: Props) {
           />
         </section>
       )}
+
+      {/* ------------------------------------------------------------- tools */}
+      <section className="section" id="tools">
+        <div className="section-head">
+          <div>
+            <div className="section-kicker">{t.tool.hub.kicker}</div>
+            <h2 className="section-title">
+              {t.tool.hub.title}
+              <span className="en">{t.tool.hub.en}</span>
+            </h2>
+            <p className="sec-sub">{t.tool.hub.sub}</p>
+          </div>
+          <Link className="section-more" href={localizedPath(locale, '/tool')}>
+            {t.tool.allTools}
+            <ArrowIcon />
+          </Link>
+        </div>
+        <div className="cat-grid">
+          {TOOL_SLUGS.map((slug) => {
+            const tool = toolMessages(t.tool, slug);
+            const Icon =
+                slug === 'coordinate-converter' ? SwapIcon : slug === 'dms-converter' ? GlobeIcon : RulerIcon;
+            return (
+                <Card asChild className={TOOL_CARD_CLASSES} key={slug}>
+                <Link href={localizedPath(locale, `/tool/${slug}`)}>
+                <span className="cat-icon transition-[background-color,color] duration-[160ms] group-hover:bg-navy-800 group-hover:text-white">
+                  <Icon width={20} height={20} />
+                </span>
+                  <span className="cat-body">
+                  <b>{tool.title}</b>
+                  <span>{tool.description}</span>
+                </span>
+                  <span className="cat-meta">
+                  <ArrowIcon width={14} height={14} />
+                </span>
+                </Link>
+                </Card>
+            );
+          })}
+        </div>
+      </section>
 
       {/* ------------------------------------------------- functional-area strip */}
       <section className="cat-section" id="browse">

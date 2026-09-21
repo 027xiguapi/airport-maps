@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 type Props = {
   locale: Locale;
@@ -27,6 +29,11 @@ function buildHref(
   return `${localizedPath(locale, basePath)}${qs ? `?${qs}` : ''}`;
 }
 
+/** Shared box for every pager slot; states differ only in colour classes. */
+const slot = cn(
+  'h-[38px] min-w-[38px] rounded-[10px] border bg-card px-3 font-display text-[14px] tracking-[0.03em] no-underline'
+);
+
 /** Compact windowed pagination: 1 … 4 5 6 … 20 */
 function pageWindow(page: number, pageCount: number): (number | 'gap')[] {
   const pages = new Set<number>([1, pageCount, page, page - 1, page + 1]);
@@ -51,47 +58,55 @@ export default function Pager({ locale, page, pageCount, basePath, params = {} }
   if (pageCount <= 1) return null;
 
   return (
-    <nav className="pager" aria-label={t.pager.label}>
+    <nav
+      className="my-[26px] mb-2 flex flex-wrap items-center justify-center gap-2"
+      aria-label={t.pager.label}
+    >
       {page > 1 ? (
-        <Link
-          href={buildHref(locale, basePath, params, page - 1)}
-          rel="prev"
-          aria-label={t.pager.previous}
-        >
-          ‹
-        </Link>
+        <Button asChild variant="outline" className={cn(slot, 'text-muted-foreground hover:bg-card hover:text-primary')}>
+          <Link href={buildHref(locale, basePath, params, page - 1)} rel="prev" aria-label={t.pager.previous}>
+            ‹
+          </Link>
+        </Button>
       ) : (
-        <span className="off" aria-hidden="true">
+        <span aria-hidden="true" className={cn(slot, 'border-transparent bg-transparent opacity-45')}>
           ‹
         </span>
       )}
 
       {pageWindow(page, pageCount).map((entry, i) =>
         entry === 'gap' ? (
-          <span className="gap" key={`gap-${i}`}>
+          <span key={`gap-${i}`} className={cn(slot, 'border-none bg-transparent')}>
             …
           </span>
         ) : entry === page ? (
-          <span className="on" key={entry} aria-current="page">
+          <span
+            key={entry}
+            aria-current="page"
+            className={cn(slot, 'border-navy-800 bg-navy-800 font-semibold text-white')}
+          >
             {entry}
           </span>
         ) : (
-          <Link href={buildHref(locale, basePath, params, entry)} key={entry}>
-            {entry}
-          </Link>
+          <Button
+            asChild
+            key={entry}
+            variant="outline"
+            className={cn(slot, 'text-muted-foreground hover:bg-card hover:text-primary')}
+          >
+            <Link href={buildHref(locale, basePath, params, entry)}>{entry}</Link>
+          </Button>
         )
       )}
 
       {page < pageCount ? (
-        <Link
-          href={buildHref(locale, basePath, params, page + 1)}
-          rel="next"
-          aria-label={t.pager.next}
-        >
-          ›
-        </Link>
+        <Button asChild variant="outline" className={cn(slot, 'text-muted-foreground hover:bg-card hover:text-primary')}>
+          <Link href={buildHref(locale, basePath, params, page + 1)} rel="next" aria-label={t.pager.next}>
+            ›
+          </Link>
+        </Button>
       ) : (
-        <span className="off" aria-hidden="true">
+        <span aria-hidden="true" className={cn(slot, 'border-transparent bg-transparent opacity-45')}>
           ›
         </span>
       )}

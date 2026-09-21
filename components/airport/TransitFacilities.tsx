@@ -2,6 +2,7 @@ import { Icon, ShopIcon, TrainIcon } from '@/lib/icons';
 import { transitLabel } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { Card } from '@/components/ui/card';
 import type { Amenity, TransitOption } from '@/lib/types';
 
 /** Side-by-side ground transport and airport facilities panels. */
@@ -18,8 +19,8 @@ export default function TransitFacilities({
 
   return (
     <div className="two-col">
-      <div className="info-panel" id="transport">
-        <h3>
+      <Card className="p-6" id="transport">
+        <h3 className="mb-[18px] flex items-center gap-2.5 text-[16px] font-bold text-navy-900 dark:text-[#E9F2FA] [&>svg]:text-sky-500">
           <TrainIcon />
           {t.airport.transitTitle}
         </h3>
@@ -36,9 +37,9 @@ export default function TransitFacilities({
             </div>
           ))}
         </div>
-      </div>
-      <div className="info-panel" id="facilities">
-        <h3>
+      </Card>
+      <Card className="p-6" id="facilities">
+        <h3 className="mb-[18px] flex items-center gap-2.5 text-[16px] font-bold text-navy-900 dark:text-[#E9F2FA] [&>svg]:text-sky-500">
           <ShopIcon />
           {t.airport.facilitiesTitle}
         </h3>
@@ -50,7 +51,7 @@ export default function TransitFacilities({
             </div>
           ))}
         </div>
-      </div>
+      </Card>
     </div>
   );
 }

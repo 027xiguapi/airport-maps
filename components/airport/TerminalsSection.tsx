@@ -1,6 +1,7 @@
 import { Icon } from '@/lib/icons';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { Card } from '@/components/ui/card';
 import type { Terminal } from '@/lib/types';
 
 /** Terminal guide: one card per terminal with gates, airlines and amenities. */
@@ -27,9 +28,12 @@ export default function TerminalsSection({
           <p className="sec-sub">{t.airport.terminalsSub(airportName)}</p>
         </div>
       </div>
-      <div className="terminal-list">
+      <div className="mt-[26px] mb-2 flex flex-col gap-3.5">
         {terminals.map((terminal) => (
-          <div className="terminal-card" key={terminal.id}>
+          <Card
+            key={terminal.id}
+            className="flex-row items-start gap-5 px-[22px] py-5 transition-[border-color,box-shadow] duration-150 hover:border-sky-400 hover:[box-shadow:var(--shadow-md)] max-[760px]:flex-wrap"
+          >
             <div className="terminal-badge">{terminal.code}</div>
             <div className="terminal-main">
               <h3>{terminal.name}</h3>
@@ -56,7 +60,7 @@ export default function TerminalsSection({
                 ))}
               </div>
             )}
-          </div>
+          </Card>
         ))}
       </div>
     </>

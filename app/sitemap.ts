@@ -48,6 +48,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...localeEntries('', { changeFrequency: 'daily', priority: 1 }),
     ...localeEntries('/airports', { changeFrequency: 'daily', priority: 0.9 }),
     ...localeEntries('/countries', { changeFrequency: 'weekly', priority: 0.8 }),
+    ...localeEntries('/tool', { changeFrequency: 'monthly', priority: 0.5 }),
+    ...['coordinate-converter', 'dms-converter', 'distance-calculator'].flatMap((slug) =>
+      localeEntries(`/tool/${slug}`, { changeFrequency: 'monthly', priority: 0.4 })
+    ),
     ...staticPages.flatMap((slug) =>
       localeEntries(`/${slug}`, { changeFrequency: 'monthly', priority: 0.3 })
     ),

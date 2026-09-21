@@ -177,6 +177,21 @@ export function StarIcon(props: IconProps) {
   );
 }
 
+/* Hand-added for the tool pages, drawn in the same 1.8-stroke style as the
+   generated set above. */
+
+export function SwapIcon(props: IconProps) {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M16 3l4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+  );
+}
+
+export function RulerIcon(props: IconProps) {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17 17 3l4 4L7 21z"/><path d="m7.5 12.5 2 2"/><path d="m10.5 9.5 2 2"/><path d="m13.5 6.5 2 2"/></svg>
+  );
+}
+
 export const ICONS = {
   terminal: TerminalIcon,
   shop: ShopIcon,
@@ -204,6 +219,8 @@ export const ICONS = {
   clock: ClockIcon,
   book: BookIcon,
   star: StarIcon,
+  swap: SwapIcon,
+  ruler: RulerIcon,
 } as const;
 
 export type IconName = keyof typeof ICONS;
