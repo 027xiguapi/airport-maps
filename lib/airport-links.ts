@@ -1,0 +1,92 @@
+/**
+ * Curated official airport websites, keyed by IATA code — the same static-table
+ * approach as lib/airport-geo.ts, because the airports table carries no URLs.
+ * (The encyclopedia links — Wikipedia and Baidu Baike — live in
+ * lib/encyclopedia-links.ts.)
+ *
+ * An entry is added only when the domain is known for certain: a missing entry
+ * just omits the "official website" button on the airport page, while a wrong
+ * URL would send travellers to the wrong place.
+ */
+const OFFICIAL_WEBSITES: Record<string, string> = {
+  AKL: 'https://www.aucklandairport.co.nz',
+  AMS: 'https://www.schiphol.nl',
+  ARN: 'https://www.swedavia.se',
+  ATH: 'https://www.aia.gr',
+  ATL: 'https://www.atl.com',
+  AUH: 'https://www.zayedinternationalairport.ae',
+  BCN: 'https://www.aena.es',
+  BER: 'https://ber.berlin-airport.de',
+  BHX: 'https://www.birminghamairport.co.uk',
+  BLR: 'https://www.bengaluruairport.com',
+  BKK: 'https://www.suvarnabhumiairport.com',
+  BNE: 'https://www.bne.com.au',
+  BRU: 'https://www.brusselsairport.be',
+  BWI: 'https://www.bwiairport.com',
+  CAN: 'https://www.gbiac.net',
+  CDG: 'https://www.parisaeroport.fr',
+  CLT: 'https://www.cltairport.com',
+  CPH: 'https://www.cph.dk',
+  DEL: 'https://www.newdelhiairport.in',
+  DEN: 'https://www.flydenver.com',
+  DFW: 'https://www.dfwairport.com',
+  DOH: 'https://dohahamadairport.com',
+  DUB: 'https://www.dublinairport.com',
+  DUS: 'https://www.dus.com',
+  DXB: 'https://www.dubaiairports.ae',
+  EDI: 'https://www.edinburghairport.com',
+  EWR: 'https://www.newarkairport.com',
+  FCO: 'https://www.adr.it',
+  FRA: 'https://www.frankfurt-airport.com',
+  GRU: 'https://www.gru.com.br',
+  GVA: 'https://www.gva.ch',
+  HEL: 'https://www.finavia.fi',
+  HKG: 'https://www.hongkongairport.com',
+  HND: 'https://www.tokyo-haneda.com',
+  IAD: 'https://www.flydulles.com',
+  IAH: 'https://www.fly2houston.com',
+  ICN: 'https://www.airport.kr',
+  IST: 'https://www.istairport.com',
+  JFK: 'https://www.jfkairport.com',
+  KIX: 'https://www.kansai-airport.or.jp',
+  KUL: 'https://www.malaysiaairports.com.my',
+  LAS: 'https://www.harryreidairport.com',
+  LGA: 'https://www.laguardiaairport.com',
+  LGW: 'https://www.gatwickairport.com',
+  LHR: 'https://www.heathrow.com',
+  MAD: 'https://www.aena.es',
+  MAN: 'https://www.manchesterairport.co.uk',
+  MCO: 'https://www.orlandoairports.net',
+  MEL: 'https://www.melbourneairport.com.au',
+  MIA: 'https://www.miami-airport.com',
+  MUC: 'https://www.munich-airport.de',
+  MSP: 'https://www.mspairport.com',
+  NRT: 'https://www.narita-airport.jp',
+  ORY: 'https://www.parisaeroport.fr',
+  OSL: 'https://www.osl.no',
+  PEK: 'https://www.bcia.com.cn',
+  PER: 'https://www.perthairport.com.au',
+  PDX: 'https://www.flypdx.com',
+  PHL: 'https://www.phl.org',
+  PHX: 'https://www.skyharbor.com',
+  PVG: 'https://www.shanghaiairport.com',
+  SEA: 'https://www.portseattle.org',
+  SFO: 'https://www.flysfo.com',
+  SIN: 'https://www.changiairport.com',
+  SVO: 'https://www.svo.aero',
+  STN: 'https://www.stanstedairport.com',
+  SYD: 'https://www.sydneyairport.com.au',
+  SZX: 'https://www.szairport.com',
+  TPA: 'https://www.tampaairport.com',
+  TPE: 'https://www.taoyuan-airport.com',
+  VIE: 'https://www.viennaairport.com',
+  YUL: 'https://www.admtl.com',
+  YVR: 'https://www.yvr.ca',
+  YYZ: 'https://www.torontopearson.com',
+  ZRH: 'https://www.zurich-airport.com',
+};
+
+/** Official website for the IATA code, or null when none is curated. */
+export function airportWebsite(iata: string): string | null {
+  return OFFICIAL_WEBSITES[iata.toUpperCase()] ?? null;
+}

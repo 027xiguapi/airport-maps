@@ -133,6 +133,7 @@ function toSummary(row: AirportRow, locale: Locale): AirportSummary {
     iata: row.iata,
     slug: row.slug,
     name: pick(locale, row.name_zh, row.name_en),
+    nameZh: row.name_zh,
     nameEn: row.name_en,
     city: pick(locale, row.city_zh, row.city_en),
     cityEn: row.city_en,
@@ -284,6 +285,7 @@ export async function getCountries(locale: Locale): Promise<CountryWithCount[]> 
   return rows.map((row) => ({
     code: row.code,
     name: pick(locale, row.name_zh, row.name_en),
+    nameZh: row.name_zh,
     nameEn: row.name_en,
     region: pick(locale, row.region_zh, row.region_en),
     flagUrl: row.flag_url,
@@ -311,6 +313,7 @@ export async function getCountry(locale: Locale, code: string): Promise<Country 
   return {
     code: row.code,
     name: pick(locale, row.name_zh, row.name_en),
+    nameZh: row.name_zh,
     nameEn: row.name_en,
     region: pick(locale, row.region_zh, row.region_en),
     flagUrl: row.flag_url,
@@ -444,6 +447,17 @@ export async function getRelatedAirports(
     [countryCode.toUpperCase(), excludeIata.toUpperCase(), limit]
   );
   return rows.map((row) => toSummary(row, locale));
+}
+
+/**
+ * The Chinese name for an airport, regardless of the page locale — outbound
+ * links (zh Wikipedia, Baidu Baike) need it even on the English pages.
+ */
+export async function getAirportNameZh(iata: string): Promise<string | null> {
+  const row = await queryOne<{ name: string }>(`SELECT name FROM airports WHERE iata = $1`, [
+    iata.toUpperCase(),
+  ]);
+  return row?.name ?? null;
 }
 
 // --------------------------------------------------------------------- search

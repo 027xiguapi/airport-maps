@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm';
  * than injecting HTML — content can never introduce a script tag. GFM is
  * enabled for tables, strikethrough and autolinks.
  *
- * Typography comes from the `.md` rules in additions.css.
+ * Typography comes from the `.md` rules in app/globals.css.
  */
 export default function Markdown({
   children,

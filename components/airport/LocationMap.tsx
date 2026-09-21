@@ -11,7 +11,7 @@ import 'leaflet/dist/leaflet.css';
  * Leaflet is imported lazily inside the effect because its UMD build touches
  * `window` at module scope, which breaks SSR — the same approach the homepage
  * `AirportMap` uses. The host <div> is the Leaflet container; the dark-theme
- * tile inversion and the pin marker are styled in additions.css.
+ * tile inversion and the pin marker are styled in app/globals.css.
  */
 
 // Module-level cache so repeated mounts share one Leaflet load.

@@ -3,6 +3,8 @@
 export type Country = {
   code: string;
   name: string;
+  /** Chinese name, always available — the entry title for zh encyclopedia links. */
+  nameZh: string;
   nameEn: string;
   region: string;
   flagUrl: string;
@@ -19,6 +21,8 @@ export type AirportSummary = {
   slug: string;
   /** Display name in the requested locale. */
   name: string;
+  /** Chinese name, always available — the entry title for zh encyclopedia links. */
+  nameZh: string;
   /** English name, always available; used for secondary lines. */
   nameEn: string;
   city: string;

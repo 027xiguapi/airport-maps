@@ -200,6 +200,63 @@ export const en: Messages = {
     moreEn: 'More Countries',
     all: 'All countries',
     notFound: 'Country not found',
+
+    /** Airport overview: assembled from database fields; a longer article can
+        live in content/<locale>/countries/<CC>.md */
+    introKicker: 'Overview',
+    introTitle: (name: string) => `${name} airport overview`,
+    introEn: 'Airport Overview',
+    introSub:
+      'The scale of this country or region\u2019s airports, its main hubs and the cities they serve.',
+    introBody: (o: {
+      name: string;
+      nameEn: string;
+      region: string;
+      airports: string;
+      terminals: string;
+      gates: string;
+      cities: string;
+      busiest: string | null;
+      busiestIata: string;
+      busiestPax: string;
+      mapsNote: string;
+    }) =>
+      // `o.nameEn` is empty when it equals `o.name` (both are "Japan").
+      `${o.name}${o.nameEn ? ` (${o.nameEn})` : ''} lies in ${o.region}. This site covers ${o.airports}, ${o.terminals} and ${o.gates} there.` +
+      (o.busiest
+        ? ` ${o.busiest} (${o.busiestIata}) is the largest by annual passengers, at ${o.busiestPax}.`
+        : '') +
+      ` The airports serve cities including ${o.cities}. ${o.mapsNote}`,
+    introMapsNote:
+      'Every airport has a terminal layout diagram, gate ranges and ground transport notes.',
+
+    /** Related links */
+    linksTitle: 'Related links',
+    linksEn: 'Related Links',
+    linksSub: 'Official sites and encyclopedia entries for the country and each of its airports.',
+    linksCountry: (name: string) => `${name} reference`,
+    linksAirports: (name: string) => `Airports in ${name}`,
+
+    faqKicker: 'FAQ',
+    faqTitle: 'Frequently asked questions',
+    faqEn: 'Questions',
+    faq: {
+      airportCount: (name: string) => `Which airports are covered in ${name}?`,
+      airportCountAnswer: (name: string, count: string, list: string) =>
+        `This site covers ${count} in ${name}: ${list}.`,
+      busiest: (name: string) => `Which is the busiest airport in ${name}?`,
+      busiestAnswer: (busiest: string, iata: string, pax: string) =>
+        `By annual passengers, ${busiest} (${iata}) is the largest of the airports covered here, at ${pax}.`,
+      terminals: (name: string) => `How many terminals do the airports in ${name} have?`,
+      terminalsAnswer: (name: string, terminals: string, gates: string, list: string) =>
+        `The airports covered in ${name} have ${terminals} with ${gates} in total: ${list}.`,
+      cities: (name: string) => `Which cities in ${name} have airports?`,
+      citiesAnswer: (name: string, cities: string) =>
+        `The ${name} airports covered here serve cities including ${cities}. You can filter them by city or IATA code in the airport directory.`,
+      maps: (name: string) => `Do the airports in ${name} have terminal maps?`,
+      mapsAnswer: (name: string, count: string) =>
+        `Yes. Every one of the ${count} covered in ${name} has a terminal layout diagram marking terminal buildings, gate ranges, main airlines and ground transport. Open any airport to see it.`,
+    },
   },
 
   airport: {
@@ -222,6 +279,11 @@ export const en: Messages = {
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} Airport Terminal Map — Gates & Navigation`,
     realMapNote: 'TERMINAL MAP',
+    /** Download buttons under the map: the image downloads directly, the PDF
+        button links out to a Google search for the official PDF. */
+    downloadMapLabel: (iata: string) => `Download ${iata} Airport Map`,
+    downloadPdfLabel: (year: number, iata: string) =>
+      `${year} Latest ${iata} Airport Terminal Map PDF Download`,
     timeKicker: 'Time',
     timeTitle: (iata: string) => `Airport time information — ${iata} current time`,
     timeEn: 'Airport Time',
@@ -235,6 +297,14 @@ export const en: Messages = {
     infoLocation: 'Airport location',
     infoCoords: 'Coordinates',
     infoTimezone: 'Timezone',
+    /** "Related links" section: official website / Wikipedia / Baidu Baike. */
+    linksKicker: 'Links',
+    linksTitle: 'Related links',
+    linksEn: 'RELATED LINKS',
+    linksSub: 'External references for this airport: the official website, Wikipedia and Baidu Baike.',
+    officialSite: 'Official website',
+    wikiLabel: 'Wikipedia',
+    baikeLabel: 'Baidu Baike',
     mapEmbedKicker: 'Map',
     mapEmbedTitle: (name: string) => `Interactive map — ${name} location`,
     mapEmbedEn: 'Interactive Map',
@@ -299,12 +369,15 @@ export const en: Messages = {
     map: 'Terminal map',
     time: 'Airport time',
     details: 'Airport details',
+    links: 'Related links',
     location: 'Location map',
     guide: 'Airport guide',
     terminals: 'Terminal guide',
     transport: 'Ground transport',
     facilities: 'Facilities',
     faq: 'FAQ',
+    intro: 'Airport overview',
+    airports: 'Airport list',
   },
 
   error: {

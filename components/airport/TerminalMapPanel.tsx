@@ -1,9 +1,11 @@
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import MapDownloads from './MapDownloads';
 
 /**
  * Terminal map panel: the airport's real terminal-map image when one exists,
- * otherwise the generated SVG layout diagram plus its legend.
+ * otherwise the generated SVG layout diagram plus its legend. Below the map,
+ * the download row offers the map image and a terminal-map PDF search.
  */
 export default function TerminalMapPanel({
   locale,
@@ -63,6 +65,13 @@ export default function TerminalMapPanel({
           </div>
         </>
       )}
+      <MapDownloads
+        iata={iata}
+        mapImg={mapImg}
+        mapSvg={mapSvg}
+        mapLabel={t.airport.downloadMapLabel(iata)}
+        pdfLabel={t.airport.downloadPdfLabel(new Date().getFullYear(), iata)}
+      />
     </div>
   );
 }

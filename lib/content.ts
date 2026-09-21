@@ -8,6 +8,7 @@ import { SOURCE_LOCALE, type Locale } from './i18n/config';
  * PostgreSQL. Both render through the same Markdown component.
  *
  *   content/<locale>/airports/<IATA>.md   optional long-form airport guide
+ *   content/<locale>/countries/<CC>.md    optional long-form country introduction
  *   content/<locale>/pages/<slug>.md      static pages (about, privacy, terms)
  *
  * Every path is built inline from `process.cwd()` so the bundler can statically
@@ -73,6 +74,20 @@ export function getAirportGuide(locale: Locale, iata: string): MarkdownDoc | nul
   return (
     readMarkdown(locale, 'airports', `${code}.md`) ??
     readMarkdown(SOURCE_LOCALE, 'airports', `${code}.md`)
+  );
+}
+
+/**
+ * Long-form introduction for a country page, falling back to the source
+ * language. Optional: the country page always renders a data-derived overview,
+ * and this article is appended to it when the file exists.
+ */
+export function getCountryIntro(locale: Locale, code: string): MarkdownDoc | null {
+  const cc = code.toUpperCase();
+  if (!/^[A-Z]{2}$/.test(cc)) return null;
+  return (
+    readMarkdown(locale, 'countries', `${cc}.md`) ??
+    readMarkdown(SOURCE_LOCALE, 'countries', `${cc}.md`)
   );
 }
 

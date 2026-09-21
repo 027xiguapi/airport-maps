@@ -8,8 +8,9 @@ import { formatDistance, formatNumber, formatPax } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { localizedPath } from '@/lib/i18n/config';
 import { getAirportGuide } from '@/lib/content';
-import { getAirportByCode, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
+import { getAirportByCode, getAirportNameZh, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
 import { getAirportGeo } from '@/lib/airport-geo';
+import { airportWebsite } from '@/lib/airport-links';
 import { mapImageUrl } from '@/lib/map-images';
 import { absoluteUrl, SITE_NAME } from '@/lib/site';
 import { terminalMapSvg } from '@/lib/terminal-map';
@@ -19,6 +20,7 @@ import AirportHead from '@/components/airport/AirportHead';
 import TerminalMapPanel from '@/components/airport/TerminalMapPanel';
 import AirportTimeSection from '@/components/airport/AirportTimeSection';
 import AirportDetailsSection from '@/components/airport/AirportDetailsSection';
+import RelatedLinks from '@/components/airport/RelatedLinks';
 import LocationMapSection from '@/components/airport/LocationMapSection';
 import GuideSection from '@/components/airport/GuideSection';
 import TerminalsSection from '@/components/airport/TerminalsSection';
@@ -108,9 +110,10 @@ export default async function AirportPage({ params }: Props) {
     permanentRedirect(localizedPath(locale, `/airport/${airport.iata}`));
   }
 
-  const [related, guide] = await Promise.all([
+  const [related, guide, nameZh] = await Promise.all([
     getRelatedAirports(locale, airport.countryCode, airport.iata, 6),
     Promise.resolve(getAirportGuide(locale, airport.iata)),
+    getAirportNameZh(airport.iata),
   ]);
 
   const geo = getAirportGeo(airport.iata);
@@ -129,6 +132,7 @@ export default async function AirportPage({ params }: Props) {
     { id: 'terminal-map', label: t.toc.map },
     ...(geo ? [{ id: 'airport-time', label: t.toc.time }] : []),
     { id: 'airport-details', label: t.toc.details },
+    { id: 'related-links', label: t.toc.links },
     ...(geo ? [{ id: 'location-map', label: t.toc.location }] : []),
     ...(guide ? [{ id: 'guide', label: t.toc.guide }] : []),
     { id: 'terminals', label: t.toc.terminals },
@@ -160,6 +164,14 @@ export default async function AirportPage({ params }: Props) {
           {geo && <AirportTimeSection locale={locale} iata={airport.iata} timeZone={geo.tz} />}
 
           <AirportDetailsSection locale={locale} airport={airport} geo={geo} />
+
+          <RelatedLinks
+            locale={locale}
+            iata={airport.iata}
+            nameEn={airport.nameEn}
+            nameZh={nameZh ?? airport.name}
+            website={airportWebsite(airport.iata)}
+          />
 
           {geo && <LocationMapSection locale={locale} airportName={airport.name} geo={geo} />}
 

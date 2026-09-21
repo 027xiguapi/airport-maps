@@ -192,6 +192,58 @@ export const zh = {
     moreEn: 'More Countries',
     all: '全部国家',
     notFound: '国家不存在',
+
+    /** 机场介绍：由数据库字段拼出的概述，长文可另写 content/<locale>/countries/<CC>.md */
+    introKicker: 'Overview',
+    introTitle: (name: string) => `${name}机场介绍`,
+    introEn: 'Airport Overview',
+    introSub: '该国家 / 地区机场的整体规模、主要枢纽与分布城市。',
+    introBody: (o: {
+      name: string;
+      nameEn: string;
+      region: string;
+      airports: string;
+      terminals: string;
+      gates: string;
+      cities: string;
+      busiest: string | null;
+      busiestIata: string;
+      busiestPax: string;
+      mapsNote: string;
+    }) =>
+      // `o.nameEn` is empty when it equals `o.name` (both are "日本" / "Japan").
+      `${o.name}${o.nameEn ? `（${o.nameEn}）` : ''}位于${o.region}，本站共收录 ${o.airports}、${o.terminals}、${o.gates}。` +
+      (o.busiest ? `其中${o.busiest}（${o.busiestIata}）规模最大，${o.busiestPax}。` : '') +
+      `机场分布在${o.cities}等城市，${o.mapsNote}`,
+    introMapsNote: '每座机场都有航站楼平面示意图、登机口分布与地面交通说明。',
+
+    /** 相关链接 */
+    linksTitle: '相关链接',
+    linksEn: 'Related Links',
+    linksSub: '该国家 / 地区及其机场的官方网站与百科条目等外部参考链接。',
+    linksCountry: (name: string) => `${name}资料`,
+    linksAirports: (name: string) => `${name}的机场`,
+
+    faqKicker: 'FAQ',
+    faqTitle: '常见问题',
+    faqEn: 'Questions',
+    faq: {
+      airportCount: (name: string) => `${name}有哪些机场？`,
+      airportCountAnswer: (name: string, count: string, list: string) =>
+        `本站收录${name} ${count}：${list}。`,
+      busiest: (name: string) => `${name}最繁忙的机场是哪座？`,
+      busiestAnswer: (busiest: string, iata: string, pax: string) =>
+        `按年旅客吞吐量，${busiest}（${iata}）是本站收录的该国家 / 地区机场中规模最大的，${pax}。`,
+      terminals: (name: string) => `${name}的机场共有多少座航站楼？`,
+      terminalsAnswer: (name: string, terminals: string, gates: string, list: string) =>
+        `${name}的机场合计 ${terminals}、${gates}：${list}。`,
+      cities: (name: string) => `${name}的机场分布在哪些城市？`,
+      citiesAnswer: (name: string, cities: string) =>
+        `本站收录的${name}机场位于${cities}等城市，可按城市或 IATA 代码在机场目录中筛选。`,
+      maps: (name: string) => `${name}的机场有航站楼地图吗？`,
+      mapsAnswer: (name: string, count: string) =>
+        `有。本站为${name}收录的 ${count}都绘制了航站楼平面示意图，标注航站楼位置、登机口范围、主要航司与地面交通方式，点击任意机场即可查看。`,
+    },
   },
 
   airport: {
@@ -214,6 +266,10 @@ export const zh = {
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} 机场航站楼地图 — 登机口与导航`,
     realMapNote: 'TERMINAL MAP',
+    /** 终端图下方的下载按钮：图片直接下载，PDF 按钮跳转谷歌搜索官方 PDF。 */
+    downloadMapLabel: (iata: string) => `下载 ${iata} 机场地图`,
+    downloadPdfLabel: (year: number, iata: string) =>
+      `${year}年最新 ${iata} 机场地图 PDF 下载`,
     timeKicker: 'Time',
     timeTitle: (iata: string) => `机场时间信息 — ${iata} 当前时间`,
     timeEn: 'Airport Time',
@@ -227,6 +283,14 @@ export const zh = {
     infoLocation: '机场位置',
     infoCoords: '地理坐标',
     infoTimezone: '时区',
+    /** 「相关链接」板块：机场官网 / 维基百科 / 百度百科外链。 */
+    linksKicker: 'Links',
+    linksTitle: '相关链接',
+    linksEn: 'RELATED LINKS',
+    linksSub: '机场官网、维基百科与百度百科等外部参考链接。',
+    officialSite: '机场官网',
+    wikiLabel: '维基百科',
+    baikeLabel: '百度百科',
     mapEmbedKicker: 'Map',
     mapEmbedTitle: (name: string) => `${name}互动地图 — 机场位置`,
     mapEmbedEn: 'Interactive Map',
@@ -290,12 +354,15 @@ export const zh = {
     map: '航站楼地图',
     time: '机场时间',
     details: '机场信息',
+    links: '相关链接',
     location: '位置地图',
     guide: '机场指南',
     terminals: '航站楼信息',
     transport: '地面交通',
     facilities: '设施服务',
     faq: '常见问题',
+    intro: '机场介绍',
+    airports: '收录机场',
   },
 
   error: {

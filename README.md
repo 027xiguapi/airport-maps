@@ -19,7 +19,7 @@
 | 数据库 | PostgreSQL 13+（drizzle-orm + drizzle-kit 管理表结构，`pg` 连接池；检索、分页、机场详情等复杂查询仍是手写 SQL） |
 | 国际化 | 自建轻量方案：类型安全的消息目录 + `[locale]` 路由段 + proxy |
 | Markdown | `react-markdown` + `remark-gfm`（渲染为 React 元素，不注入 HTML） |
-| 样式 | 移植原设计系统的原生 CSS（`app/globals.css` + `app/additions.css`） |
+| 样式 | Tailwind CSS v4（CSS-first：单一 `app/globals.css`，`@layer components` + `@apply`，暗色主题用 `@variant dark`） |
 | 检索 | `pg_trgm` GIN 索引 + 分级相关性排序 |
 
 ## 快速开始
@@ -163,6 +163,8 @@ content/
   terminology/en.json                    封闭词表（航站楼名、设施标签、交通方式）
   zh/airports/HKG.md                     机场指南（可选，长文）
   en/airports/HKG.md
+  zh/countries/JP.md                     国家 / 地区机场介绍（可选，长文）
+  en/countries/JP.md
   zh/pages/{about,privacy,terms}.md      静态页
   en/pages/{about,privacy,terms}.md
 ```
@@ -184,7 +186,7 @@ updated: 2026-09-16
 ### 渲染
 
 - `components/Markdown.tsx` 用 `react-markdown` 渲染成 **React 元素**（不注入 HTML，因此内容无法引入脚本），并启用 `remark-gfm` 以支持表格、删除线与自动链接。
-- 排版样式在 `app/additions.css` 的 `.md` 规则下，沿用站点设计系统。
+- 排版样式在 `app/globals.css` 的 `.md` 规则下，沿用站点设计系统。
 - 宽表格（英文 4 列航站楼表）会被包进 `.md-table-scroll` 横向滚动容器，不会把页面撑宽。
 - 外链自动加 `target="_blank" rel="noopener noreferrer"`。
 - 缺失的语言会回退到默认语言（`lib/content.ts`），只有两种语言都没有该文件时才返回 `null`。
@@ -192,6 +194,10 @@ updated: 2026-09-16
 ### 机场指南是可选的
 
 `content/<locale>/airports/<IATA>.md` 存在时，机场页会多出一个「机场指南 / Airport guide」区块；不存在则整块不渲染。目前写了 4 座枢纽（HKG、SIN、LHR、JFK）的双语指南作为示范，**新增只需放一个 Markdown 文件**，无需改代码。指南内容全部取自本站数据（航站楼构成、登机口字母规律、距离、交通方式），不含臆测细节。
+
+### 国家机场介绍同样是可选的
+
+国家页的「机场介绍」区块**始终渲染**：开头段落由数据库字段拼出（机场数、航站楼数、登机口数、最繁忙机场、分布城市），因此 37 个国家 / 地区无需任何内容文件就有介绍。`content/<locale>/countries/<CC>.md` 存在时，长文会追加在同一段正文里（`JP.md` 是示范，同样只写本站数据）。
 
 ## 目录结构
 
@@ -202,14 +208,13 @@ app/
     page.tsx                首页：居中搜索英雄区 + 快捷入口 → 功能分区卡片 → 机场指南 → 最近更新 → 国家网格 → 全部机场表
     airports/page.tsx       机场目录：搜索 + 国家筛选 + 排序 + 分页
     countries/page.tsx      国家索引（按区域分组，含区域跳转条）
-    country/[code]/page.tsx 单个国家的机场列表
+    country/[code]/page.tsx 单个国家 / 地区：机场介绍 + 机场列表 + 相关链接 + 常见问题（右侧目录导航）
     airport/[code]/page.tsx 机场详情：示意图、指南、航站楼、交通、设施、FAQ
     {about,privacy,terms}/  由 Markdown 渲染的静态页（共用一个组件）
     error.tsx not-found.tsx 错误边界与 404（客户端组件，从 pathname 推断语言）
   api/search/route.ts       搜索联想接口（支持 ?locale=）
   sitemap.ts robots.ts      多语言站点地图与抓取规则
-  globals.css               原设计系统（自 legacy/index.html 原样移植）
-  additions.css             新增样式 + 长文案健壮性修正
+  globals.css               唯一样式表（Tailwind v4 CSS-first）：设计令牌 + 全部组件样式
 components/                 UI 组件（服务端为主；搜索框、语言切换、返回顶部为客户端）
 lib/
   i18n/config.ts            语言注册表、locale 工具、localizedPath
@@ -258,8 +263,9 @@ ground_transport     地面交通（name/description + 英文列，可空）
 
 - 每个语言 × 每个机场 / 国家都是预渲染页面（`generateStaticParams`），按 `revalidate = 3600` 每小时增量再生成；构建时共生成 212 个页面（默认语言为英语，`x-default` 指向 `/en`）
 - `<title>` / `description` 按语言与机场数据生成
-- 结构化数据：`WebSite` + `SearchAction`（首页）、`Airport` + `BreadcrumbList` + `FAQPage`（机场页）、`ItemList`（国家页），均带 `inLanguage`
+- 结构化数据：`WebSite` + `SearchAction`（首页）、`Airport` + `BreadcrumbList` + `FAQPage`（机场页）、`Country` + `ItemList` + `BreadcrumbList` + `FAQPage`（国家页），均带 `inLanguage`
 - 机场页 FAQ 由数据库字段按语言生成（航站楼构成、距市中心距离、如何进市区、设施、所属城市国家），同时用于页面展示与 `FAQPage` 富结果
+- 国家页 FAQ 同样由数据库字段生成（收录机场清单、最繁忙机场、航站楼与登机口总数、分布城市、是否有航站楼地图）
 - `sitemap.xml` 收录全部地址的两种语言版本并附带 `xhtml:link` alternates；`robots.txt` 屏蔽 `/api/`
 
 URL 约定：
@@ -279,13 +285,13 @@ URL 约定：
 
 ## 移植过程中修掉的问题
 
-原型里的缺陷，样式部分保留在 `app/globals.css` 原样，修正集中写在 `app/additions.css` 并附注释：
+原型里的缺陷，样式部分保留在 `app/globals.css`，修正也一并写在同一个文件里并附注释：
 
 1. **小屏无法导航**：原样式在 `max-width:820px` 时用 `display:none` 同时隐藏 `.topnav` 和 `.top-search`，窄屏下没有任何入口跳转到其他页面。现在导航变成可横向滚动的胶囊条，搜索框作为独立一栏保留在顶栏下方。
 2. **列表行在小屏被裁切**：`.airport-table{overflow:hidden}` + `img{max-width:100%}` 落在 `auto` 轨道上使国旗列塌缩为 0 宽并把按钮挤到第二行；`.nm` 缺少 `min-width:0`，超长机场名（nowrap）会把行撑出容器。
 3. **地面交通图标配色失效**：`.transit-row span`（0,1,1）优先级高于 `.transit-icon`（0,1,0），把图标重新刷成了 `--ink-soft` 灰色，而不是设计意图的 `--sky-600`。
 4. **「最近更新」缺条目**：见上文 `updated_at` 说明。
-5. **长文案下的横向溢出**：加入英文后，多处布局被更长的英文文案撑破（国家卡片的计数徽章、`.related-card` 的 nowrap 机场名、`minmax(300px,1fr)` 的网格轨道下限、「最近更新」行的固定列、区块标题与「more」链接同一行等）。全部在 320 / 360 / 390 / 480 / 640 / 768 / 1024 / 1280 / 1440px 两种语言下实测修正，现在**无横向溢出**。这类问题在任何「中文站加语言」的场景都会出现，修法都写在 `app/additions.css` 的注释里。
+5. **长文案下的横向溢出**：加入英文后，多处布局被更长的英文文案撑破（国家卡片的计数徽章、`.related-card` 的 nowrap 机场名、`minmax(300px,1fr)` 的网格轨道下限、「最近更新」行的固定列、区块标题与「more」链接同一行等）。全部在 320 / 360 / 390 / 480 / 640 / 768 / 1024 / 1280 / 1440px 两种语言下实测修正，现在**无横向溢出**。这类问题在任何「中文站加语言」的场景都会出现，修法都写在 `app/globals.css` 的注释里。
 
 ## 首页结构
 
