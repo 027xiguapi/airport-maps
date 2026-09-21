@@ -4,7 +4,7 @@ summary: How the three terminals divide domestic and international traffic, how 
 updated: 2026-09-21
 ---
 
-Soekarno-Hatta sits north-west of Jakarta, about 20 km from the city centre, and handles around 55 million passengers a year as Indonesia's gateway hub. Its three terminals stand apart from each other with **no airside connection between them**, tied together by a free skytrain known locally as the **Kalayang** — that is the first thing to understand about this airport.
+Soekarno-Hatta sits north-west of Jakarta, about 20 km from the city centre, and handles around 55 million passengers a year (2025) as Indonesia's gateway hub. Its three terminals stand apart from each other with **no airside connection between them**, tied together by a free skytrain known locally as the **Kalayang** — that is the first thing to understand about this airport.
 
 ## The three terminals
 
@@ -27,6 +27,14 @@ Soekarno-Hatta sits north-west of Jakarta, about 20 km from the city centre, and
 1. First confirm whether both flights use the same building — staying within one building saves the most time.
 2. **For a connection between buildings, allow 60–90 minutes or more** — you have to leave the building, wait for the train and clear security again.
 3. International to domestic is the common connection here, so count both security checks and the ride between buildings into your time.
+
+## Routes and flights
+
+| Aspect | Points |
+| --- | --- |
+| Routes | Around 54.95 million passengers in 2025, the busiest airport in South-East Asia for domestic traffic; it serves cities across the Indonesian archipelago plus international points in South-East and East Asia, the Middle East and Australia |
+| Flights | **229,249 aircraft movements** in 2025 |
+| Aircraft | **Garuda Indonesia** is the home-based full-service carrier, with around 99 serviceable aircraft in the group (end of 2025); main types are the Boeing 737, 777-300ER and Airbus A330; low-cost carriers Lion Air, Citilink and Indonesia AirAsia also operate heavily |
 
 ## Getting into Jakarta
 

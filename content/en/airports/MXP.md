@@ -4,7 +4,7 @@ summary: The two-terminal split created by easyJet taking T2 to itself, the fact
 updated: 2026-09-21
 ---
 
-Malpensa lies about 50 km from central Milan and handles around 26 million passengers a year, making it the city's main international airport. Its two terminals divide unusually cleanly: **easyJet has T2 to itself, and every other carrier is in T1** — and with the two buildings about 3 km apart, **any cross-terminal connection has to leave the building and go landside**.
+Malpensa lies about 50 km from central Milan and handles around 31.4 million passengers a year (2025), making it the city's main international airport. Its two terminals divide unusually cleanly: **easyJet has T2 to itself, and every other carrier is in T1** — and with the two buildings about 3 km apart, **any cross-terminal connection has to leave the building and go landside**.
 
 ## The two terminals
 
@@ -25,6 +25,12 @@ Malpensa lies about 50 km from central Milan and handles around 26 million passe
 1. **An easyJet-to-another-airline connection is a cross-terminal one** — leave the building, collect your bags, take the shuttle and clear security again; allow more than 3 hours.
 2. A connection within T1 follows the normal process, and 2 hours is a safe buffer.
 3. Milan also has **Linate Airport (LIN)**, used mainly for domestic and short European flights and much closer to the city; always check the three-letter code when booking.
+
+## Routes and flights
+
+- **Routes** — in 2025 the airport served 77 countries and about 204 direct destinations, the fastest-growing airport in its size category in Europe; long-haul points include New York, Miami, Beijing, Shanghai, Tokyo, Delhi, Dubai, Accra and São Paulo.
+- **Flights** — 31.4 million passengers in 2025 (+8.6%, an all-time record); Malpensa plus Linate together handled about 42.3 million passengers for the Milan system.
+- **Aircraft** — main base is **easyJet (T2 exclusively)**, with every other carrier (including ITA Airways, Lufthansa, Emirates and Qatar) in T1; the fleet is the A320 family, with 777 and A350 on long-haul.
 
 ## Getting into Milan
 

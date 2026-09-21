@@ -4,7 +4,7 @@ summary: How the two terminals relate to the free inter-terminal shuttle, the Ga
 updated: 2026-09-21
 ---
 
-Gatwick Airport lies about 45 km from central London and handles around 43 million passengers a year, making it London's second airport. It has only two terminals: **the North Terminal and the South Terminal**, joined by a **free automatic people-mover** (about 2 minutes) — the only "change of building" in the whole airport.
+Gatwick Airport lies about 45 km from central London and handles around 42.8 million passengers a year (2025), making it London's second airport. It has only two terminals: **the North Terminal and the South Terminal**, joined by a **free automatic people-mover** (about 2 minutes) — the only "change of building" in the whole airport.
 
 ## The two terminals
 
@@ -26,6 +26,12 @@ Gatwick Airport lies about 45 km from central London and handles around 43 milli
 1. First check whether both flights use the same terminal; a same-terminal connection saves the most time.
 2. **An inter-terminal transfer goes landside and through security again**, and with the shuttle time on top you should allow more than 2.5 hours.
 3. Gatwick is dominated by leisure and holiday traffic and has a lower share of connecting passengers than Heathrow, so when tickets are booked separately leave even more margin.
+
+## Routes and flights
+
+- **Routes** — around 60 airlines flying to more than 160 short-haul and 50-plus long-haul destinations; long-haul points include New York, Orlando, Barbados, Dubai and Shanghai.
+- **Flights** — 42.8 million passengers in 2025 (down 1.1%), with about 259,000 aircraft movements; short-haul 35.9 million and long-haul 6.9 million.
+- **Aircraft** — main base is **easyJet (North Terminal; 18.9 million passengers in 2025)**, followed by British Airways, Virgin Atlantic and TUI; short-haul fleets are the A319/A320/A321 family, with A330 and 787 on long-haul.
 
 ## Getting into London
 

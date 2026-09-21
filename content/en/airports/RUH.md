@@ -4,7 +4,7 @@ summary: The February 2026 terminal reshuffle — how national and foreign carri
 updated: 2026-09-21
 ---
 
-King Khalid International Airport sits in Riyadh's northern outskirts, about 35 km from the city centre, and handles around 35 million passengers a year as Saudi Arabia's main gateway. **In February 2026 the airport completed the first full terminal reallocation in the forty years since it opened** — the rules for which buildings national and foreign carriers use are now completely different from older guides, so check everything against the new ones.
+King Khalid International Airport sits in Riyadh's northern outskirts, about 35 km from the city centre, and handles **around 41 million passengers a year** as Saudi Arabia's main gateway. **In February 2026 the airport completed the first full terminal reallocation in the forty years since it opened** — the rules for which buildings national and foreign carriers use are now completely different from older guides, so check everything against the new ones.
 
 ## The five terminals (new allocation from February 2026)
 
@@ -26,6 +26,14 @@ King Khalid International Airport sits in Riyadh's northern outskirts, about 35 
 1. A Saudia-group connection is completed within the national-carrier buildings and is relatively smooth.
 2. **Foreign carriers are concentrated in T5** — if one of your two flights is in T5 and the other in T1/T2, allow more than 2 hours.
 3. Domestic flights are concentrated in T3/T4, so for an international-to-domestic connection, recalculate the time from the distance between the buildings.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | Around **60 airlines** serve **120+ domestic and international destinations**; long-haul points cover London, Paris, Frankfurt, Istanbul, Dubai, Mumbai, Guangzhou and Beijing, making it one of the Arabian Peninsula's main hubs to Europe and Asia. |
+| Flights | Around **296,800 aircraft movements in 2025**, roughly 810 a day; daily passenger traffic averaged about 112,000 in 2025. |
+| Aircraft | The main bases are **Saudia** and the newly launched **Riyadh Air**, which together form the national-carrier core; Saudia's workhorses are the Airbus A320 family, with A330 / A350 and Boeing 777 on long-haul. |
 
 ## Getting into Riyadh
 

@@ -4,7 +4,7 @@ summary: How the north and south terminal areas are joined by an underground tra
 updated: 2026-09-21
 ---
 
-Sheremetyevo sits north-west of Moscow, about 30 km from the city centre, and is one of Russia's largest airports. Its terminals are spread across **two areas, north and south**, roughly 2 km apart, joined by a **free underground train** — and with terminals opening and closing frequently in recent years, **working from an old guide is a good way to end up at a closed building**.
+Sheremetyevo sits north-west of Moscow, about 30 km from the city centre, handles **around 43 million passengers a year** and is one of Russia's largest airports. Its terminals are spread across **two areas, north and south**, roughly 2 km apart, joined by a **free underground train** — and with terminals opening and closing frequently in recent years, **working from an old guide is a good way to end up at a closed building**.
 
 ## The two terminal areas
 
@@ -29,6 +29,14 @@ Sheremetyevo sits north-west of Moscow, about 30 km from the city centre, and is
 1. First check whether both flights are in the same area — both in B/C is the quickest by far.
 2. **A connection across the north and south areas adds the underground train**, so allow more than 2.5 hours.
 3. International to domestic transfers normally happen within the north area (between B and C), so the process is fairly contained.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | The busiest airport in Russia, with **around 200 destinations**; since the reshaping of international routes, domestic, CIS, Middle Eastern and Asian points (Dubai, Istanbul, Beijing, Delhi) now make up the larger share, while direct services to Western Europe have contracted sharply. |
+| Flights | A record **around 43 million passengers in 2025**, on roughly **250,000 movements** (about 700 a day); the Aeroflot Group itself accounts for about **36 million passengers** here, around 84% of the total. |
+| Aircraft | The main base is **Aeroflot** (about 170 mainline aircraft: A320 family narrowbodies with A330 / A350 / 777 widebodies on long-haul), followed by **Pobeda** (an all-Boeing 737 low-cost fleet, Terminal D) and Nordwind. |
 
 ## Getting into Moscow
 

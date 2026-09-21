@@ -4,7 +4,7 @@ summary: The reality of international T2 and domestic T3 on opposite sides of th
 updated: 2026-09-21
 ---
 
-Tashkent lies about 12 km from the city centre, handles around 8 million passengers a year and is the main gateway to Central Asia. Its layout has one crucial constraint: **the international terminal (T2) and the domestic terminal (T3) sit on opposite sides of the runway, with no airside link between them** — an international-to-domestic transfer means leaving the building, driving round by road and clearing security again, and it is the part of a Central Asian connection that most needs a time buffer.
+Tashkent lies about 12 km from the city centre, handles **around 10 million passengers a year** and is the main gateway to Central Asia. Its layout has one crucial constraint: **the international terminal (T2) and the domestic terminal (T3) sit on opposite sides of the runway, with no airside link between them** — an international-to-domestic transfer means leaving the building, driving round by road and clearing security again, and it is the part of a Central Asian connection that most needs a time buffer.
 
 ## The two terminals in use
 
@@ -26,6 +26,14 @@ Tashkent lies about 12 km from the city centre, handles around 8 million passeng
 1. **For international to domestic, allow more than 3 hours** — immigration, baggage reclaim, the drive round and checking in and clearing security again: none of it can be skipped.
 2. An international-to-international connection on a single through ticket can be done inside T2; on separate tickets you go through the landside process as well.
 3. Tashkent is expanding its international terminal and planning a new one, so **routes inside the building may change** — follow the signs on the day.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | Around **40 international destinations**, covering Europe (Frankfurt, London, Rome, Madrid, Istanbul), Russian cities, the Middle East, East Asia (Beijing, Seoul, Tokyo) and Central Asian neighbours, plus a dense domestic network to Samarkand, Bukhara, Urgench and others. |
+| Flights | A record **around 10 million passengers in 2025**, on **40,153 aircraft movements** (about 110 a day), up 14% on 2024. |
+| Aircraft | The main base is **Uzbekistan Airways** (A320 family narrowbodies with A330 widebodies, and 787-9s on order), followed by low-cost carriers Qanot Sharq and Panorama Airways and regional subsidiary Silk Avia. |
 
 ## Getting into Tashkent
 

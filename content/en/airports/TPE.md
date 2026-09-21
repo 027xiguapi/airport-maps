@@ -4,7 +4,7 @@ summary: How T1 and T2 are divided by carrier, the difference between the Airpor
 updated: 2026-09-21
 ---
 
-Taoyuan is about 30 km from central Taipei and handles around 45 million passengers a year. It has only two terminals, and the division is easy to follow: **China Airlines and the SkyTeam group are mostly in T1, EVA Air and the Star Alliance group mostly in T2** — check the carrier and you can largely settle which building you need.
+Taoyuan is about 30 km from central Taipei and handles **around 48 million passengers a year**. It has only two terminals, and the division is easy to follow: **China Airlines and the SkyTeam group are mostly in T1, EVA Air and the Star Alliance group mostly in T2** — check the carrier and you can largely settle which building you need.
 
 ## The two terminals
 
@@ -20,6 +20,14 @@ Taoyuan is about 30 km from central Taipei and handles around 45 million passeng
 - **Free buggies and shuttle buses** run between T1 and T2, and the walkways connect them too; the distance is not great.
 - China Airlines to China Airlines, or EVA Air to EVA Air, stays within one building and is the quickest.
 - For a connection between buildings, add the shuttle and the walk to your buffer; for international-to-international connections, allow 2 hours.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | A record **around 48 million passengers in 2025** (+6.4%); **around 130 destinations** domestic and international, with long-haul points on both US coasts and in Europe (London, Paris, Frankfurt, Amsterdam), Oceania and South Asia. A record 6.69 million passengers connected here, making it a key relay between North Asia and South-East Asia. |
+| Flights | **262,217 aircraft movements in 2025** (about 720 a day), up about 5.5% on 2024. |
+| Aircraft | The main bases are **China Airlines** (SkyTeam; A350 / A330 / 777 / 787 widebodies with A321neo narrowbodies) and **EVA Air** (Star Alliance; A330 / 787 / 777 widebodies), followed by **STARLUX Airlines** (A350) and Tigerair Taiwan. |
 
 ## Getting to Taipei
 

@@ -4,7 +4,7 @@ summary: How to tell the circular T1 from the seven sub-terminals of T2, how the
 updated: 2026-09-21
 ---
 
-Charles de Gaulle lies about 25 km from central Paris and handles around 70 million passengers a year. It has exactly one difficulty: **T2 is not one terminal but a large complex of seven sub-terminals, A to G** — the letter in "T2E" on your boarding pass matters far more than the "T2" itself.
+Charles de Gaulle lies about 25 km from central Paris and handles around 72 million passengers a year (2025). It has exactly one difficulty: **T2 is not one terminal but a large complex of seven sub-terminals, A to G** — the letter in "T2E" on your boarding pass matters far more than the "T2" itself.
 
 ## The three terminals
 
@@ -22,6 +22,14 @@ Charles de Gaulle lies about 25 km from central Paris and handles around 70 mill
 
 - **CDGVAL free shuttle** — links T1, the T2 sub-terminals, T3 and the car parks; it is the backbone for changing building and for reaching the railway station.
 - Inside T2 the sub-terminals can be reached on foot from one another, but the distance from A to G is considerable; for a connection that crosses from one end to the other, allow extra time.
+
+## Routes and flights
+
+| Aspect | Points |
+| --- | --- |
+| Routes | 72.03 million passengers in 2025, serving **more than 300 destinations**, making it Europe's third-largest hub by international connectivity; long-haul coverage spans North and South America, Africa, the Middle East and Asia |
+| Flights | **473,798 aircraft movements** in 2025 |
+| Aircraft | **Air France** is the home-based carrier, with a mainline fleet of around 229 aircraft at the end of 2025 (plus about 39 Hop! regional E170/190s); main types are the Airbus A350, A330, A220 and A320 family, and Boeing 777 |
 
 ## Getting into Paris
 

@@ -4,7 +4,7 @@ summary: How Lufthansa takes T2 to itself with everyone else in T1, how the Term
 updated: 2026-09-21
 ---
 
-Munich Airport lies about 28 km from the city centre and handles around 41 million passengers a year, making it Germany's second-busiest hub. Its logic is clean: **Lufthansa and Star Alliance have T2 to themselves, with every other carrier in T1** — and T2 also has a **satellite building** reachable only from inside the terminal, so a gate beginning with K or L means an extra hop on an underground people mover.
+Munich Airport lies about 28 km from the city centre and handles around 43.4 million passengers a year (2025), making it Germany's second-busiest hub. Its logic is clean: **Lufthansa and Star Alliance have T2 to themselves, with every other carrier in T1** — and T2 also has a **satellite building** reachable only from inside the terminal, so a gate beginning with K or L means an extra hop on an underground people mover.
 
 ## Two terminals and a satellite
 
@@ -27,6 +27,12 @@ Munich Airport lies about 28 km from the city centre and handles around 41 milli
 1. A Lufthansa-group connection (between T2 and the satellite) is the smoothest, usually done in 45–60 minutes.
 2. **A T1-to-T2 connection takes the longest** — landside, through security again — so allow more than 2 hours.
 3. Flights between inside and outside the Schengen area involve passport control, so add another notch of buffer on top.
+
+## Routes and flights
+
+- **Routes** — around 100 airlines flying to about 300 destinations; long-haul points include New York, Boston, San Francisco, Dubai, Doha, Singapore, Beijing, Shanghai, Tokyo, Bangkok and Cape Town.
+- **Flights** — 43.4 million passengers in 2025 (+4.4% year on year), with 337,438 aircraft movements; long-haul passengers reached 8.9 million, above the 2019 level.
+- **Aircraft** — main base is **Lufthansa and Star Alliance (T2 and the 2S satellite)**, with every other carrier in T1; Lufthansa flies the A320 family plus A350, A340 and 787 widebodies.
 
 ## Getting into Munich
 

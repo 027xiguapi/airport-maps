@@ -4,7 +4,7 @@ summary: How the three terminals split by carrier and by domestic or internation
 updated: 2026-09-21
 ---
 
-Haneda sits on the shore of Tokyo Bay, about 15 km from central Tokyo, and handles around 78 million passengers a year. It is the international airport closest to Tokyo — the counterpart to Narita, some 60 km away. Its layout splits **by carrier and by domestic or international**: **Japan Airlines group domestic flights are in T1, ANA group domestic flights in T2, and international flights are concentrated in T3**.
+Haneda sits on the shore of Tokyo Bay, about 15 km from central Tokyo, and handles around 91.7 million passengers a year (2025). It is the international airport closest to Tokyo — the counterpart to Narita, some 60 km away. Its layout splits **by carrier and by domestic or international**: **Japan Airlines group domestic flights are in T1, ANA group domestic flights in T2, and international flights are concentrated in T3**.
 
 ## The three terminals
 
@@ -22,6 +22,14 @@ Haneda sits on the shore of Tokyo Bay, about 15 km from central Tokyo, and handl
 
 - **Free shuttle bus** — runs a loop between the three buildings, and T1 and T2 are also linked by a walking connection.
 - Domestic to international (T1/T2 to T3) is the most common connection, so build the shuttle's interval into your timing.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | 91.68 million passengers in 2025 (+6.7%), ranked 3rd worldwide; the densest domestic network in Japan, with T3 international traffic expanded in recent years to serve Beijing, Shanghai, Hong Kong, Bangkok, Singapore, London, Paris, Los Angeles and New York |
+| Flights | 91.68 million passengers in 2025, among the busiest airports in the world |
+| Aircraft | **Japan Airlines (JAL)** and **All Nippon Airways (ANA)** are the twin bases; JAL domestic concentrates in T1 and ANA in T2, and both fly Boeing 737 / 767 / 777 / 787 and Airbus A350 |
 
 ## Getting into the city
 

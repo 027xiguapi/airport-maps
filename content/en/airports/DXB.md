@@ -4,7 +4,7 @@ summary: How T1 and T3 divide the carriers, how the A/B/C/D concourse letters ma
 updated: 2026-09-21
 ---
 
-Dubai International Airport lies only about 15 km from the city centre and handles around 92 million passengers a year, making it the world's busiest international airport. What sets it apart is that **terminals are bound tightly to carriers**: Emirates has T3 to itself while most other international airlines use T1 — read the airline and the terminal is settled.
+Dubai International Airport lies only about 15 km from the city centre and handles around 95.2 million passengers a year (2025), making it the world's busiest international airport. What sets it apart is that **terminals are bound tightly to carriers**: Emirates has T3 to itself while most other international airlines use T1 — read the airline and the terminal is settled.
 
 ## The three terminals and four concourses
 
@@ -30,6 +30,14 @@ Dubai is the world's largest international transfer point, and Emirates connecti
 1. Read the gate letter to tell which concourse you are in; Concourses A and D need people-mover time built in.
 2. Emirates to Emirates almost never means changing building — a connection of around 2 hours is already comfortable.
 3. Connections involving T2 are the most awkward of all: T2 sits well away from T1 and T3, so confirm the transfer arrangement with your airline and allow longer.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | 108 international carriers serving 291 destinations in 2025; 95.2 million passengers (+3.1%), retaining DXB's place as the world's busiest airport for international passengers |
+| Flights | 454,800 aircraft movements in 2025, roughly 1,250 a day |
+| Aircraft | **Emirates** is the base carrier; as of March 2026 its fleet stood at around 277 all-widebody aircraft — 116 Airbus A380s, about 130 Boeing 777s and 19 Airbus A350s |
 
 ## Getting into the city
 

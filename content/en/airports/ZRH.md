@@ -4,7 +4,7 @@ summary: A single main building with four boarding zones A, B, D and E, Zone E r
 updated: 2026-09-21
 ---
 
-Zurich Airport sits about 13 km from the city centre and handles around 30 million passengers a year, making it Switzerland's largest airport. Its structure is "one main building plus four boarding zones": **check-in, security and passport control all happen in the same building**, and the boarding zones divide into A, B, D and the remote E — Zone E calls for a ride on the underground Skymetro, and that is the only "extra distance" involved.
+Zurich Airport sits about 13 km from the city centre and handles **around 33 million passengers a year**, making it Switzerland's largest airport. Its structure is "one main building plus four boarding zones": **check-in, security and passport control all happen in the same building**, and the boarding zones divide into A, B, D and the remote E — Zone E calls for a ride on the underground Skymetro, and that is the only "extra distance" involved.
 
 ## The main building and the four boarding zones
 
@@ -26,6 +26,14 @@ Zurich Airport sits about 13 km from the city centre and handles around 30 milli
 1. Every connection is made within the same main building complex, with no need to leave the building or check in again.
 2. **When your gates stretch to Zone E, count the Skymetro wait and ride into your connection buffer** (about 15–20 minutes).
 3. A connection between Schengen and non-Schengen flights involves passport control, so add a further step on top of that.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | A record **around 33 million passengers in 2025**; **around 170 destinations**, Switzerland's main long-haul hub — points reach Chicago, San Francisco, Singapore, Bangkok, Tokyo and Tel Aviv. About 70% of passengers are local and 30% connecting. |
+| Flights | Around **270,000 aircraft movements a year** (about 740 a day); peak days in summer and autumn top 110,000 passengers. |
+| Aircraft | The main base is **SWISS** (Lufthansa Group / Star Alliance; A220 and A320 family on European routes, with A330 / 777 widebodies on long-haul). |
 
 ## Getting into Zurich
 

@@ -1,10 +1,10 @@
 ---
 title: Hong Kong International Airport terminal guide
 summary: How Hong Kong's three passenger facilities divide the work, how to handle a terminal change, and the five ways into the city and the Pearl River Delta.
-updated: 2026-09-16
+updated: 2026-09-21
 ---
 
-Hong Kong International Airport sits on reclaimed land at Chek Lap Kok. It handles around 55 million passengers a year and lies about 34 km from the city centre. What sets it apart is that **one main terminal carries almost all the traffic**, with two further facilities handling remote gates — understanding that split is what tells you how far you will actually have to walk.
+Hong Kong International Airport sits on reclaimed land at Chek Lap Kok. It handles around 61 million passengers a year (2025) and lies about 34 km from the city centre. What sets it apart is that **one main terminal carries almost all the traffic**, with two further facilities handling remote gates — understanding that split is what tells you how far you will actually have to walk.
 
 ## The three passenger facilities
 
@@ -29,6 +29,14 @@ Connections are handled inside Terminal 1, but **if your arrival and departure g
 1. Work out which range your onward gate falls into (1–80 / 201–230 / 501–510).
 2. A connection inside the main terminal is the quickest; a move to the midfield or satellite facility adds shuttle and walking time in both directions.
 3. The higher the gate number, the earlier you should clear the transit checkpoint.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | 61 million passengers in 2025 (+15%), a strong recovery year; the global hub for Cathay Pacific, with services to every major city worldwide |
+| Flights | 394,730 aircraft movements in 2025 (+8.7%), roughly 1,080 a day |
+| Aircraft | **Cathay Pacific** is the base carrier, flying Airbus A330 / A350 and Boeing 777 widebodies; its low-cost subsidiary HK Express also operates from here |
 
 ## Getting into the city
 

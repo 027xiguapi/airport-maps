@@ -4,7 +4,7 @@ summary: Why there is no Terminal 4, which building United and American each use
 updated: 2026-09-21
 ---
 
-O'Hare sits about 27 km from the city centre and handles around 80 million passengers a year. It is a **hub under construction**: **the terminals are numbered 1, 2, 3 and 5 — there is no Terminal 4** — and that single fact is the most common source of confusion here. At the same time the airport is carrying out its largest rebuild in decades.
+O'Hare sits about 27 km from the city centre and handles around 84.8 million passengers a year (2025). It is a **hub under construction**: **the terminals are numbered 1, 2, 3 and 5 — there is no Terminal 4** — and that single fact is the most common source of confusion here. At the same time the airport is carrying out its largest rebuild in decades.
 
 ## The four terminals
 
@@ -27,6 +27,12 @@ O'Hare sits about 27 km from the city centre and handles around 80 million passe
 1. Cross-terminal connections are the norm at O'Hare: United to American, or domestic to international, both need 2–3 hours.
 2. **United to United** is completed within T1/T2 and **American to American** within T3 — the smoothest combinations.
 3. T5 is reached from the other buildings by ATS, with a wait plus ride of about 15–20 minutes — build that into your buffer.
+
+## Routes and flights
+
+- **Routes** — around 50 airlines flying to about 250 destinations; long-haul points include London, Frankfurt, Paris, Madrid, Rome, Beijing, Shanghai, Tokyo, Seoul, Delhi, Tel Aviv, Toronto and Mexico City.
+- **Flights** — 84.81 million passengers in 2025 (+6% year on year, sixth worldwide), with more than 857,000 aircraft movements — reclaiming the title of the world's busiest airfield.
+- **Aircraft** — main bases are **United (T1/T2)** and **American Airlines (T3)**, followed by oneworld and Star Alliance carriers; the fleet is 737 and A320 family narrowbodies, with 787, 777 and A350 on long-haul.
 
 ## Getting into Chicago
 

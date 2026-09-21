@@ -4,7 +4,7 @@ summary: Why T3 is the only international terminal, how T1 and T2 stay domestic,
 updated: 2026-09-21
 ---
 
-Delhi's airport lies about 16 km from the centre of New Delhi and handles around 78 million passengers a year, making it the largest aviation hub in South Asia. Its division of labour is unlike most hubs: **of the three terminals only T3 takes international flights**, while T1 and T2 are domestic-only — which means an international to domestic connection almost always involves a change of building.
+Delhi's airport lies about 16 km from the centre of New Delhi and handles around 78 million passengers a year (2025), making it the largest aviation hub in South Asia. Its division of labour is unlike most hubs: **of the three terminals only T3 takes international flights**, while T1 and T2 are domestic-only — which means an international to domestic connection almost always involves a change of building.
 
 ## The three terminals
 
@@ -26,6 +26,14 @@ Delhi's airport lies about 16 km from the centre of New Delhi and handles around
 1. Start with the terminal of your domestic flight: if it is in the same building as T3 that is quickest; if it is at T1 or T2, allow transfer time.
 2. An airside transfer bus now runs between the buildings (T1↔T3), so you do not have to clear immigration and go back in; transfer efficiency has improved noticeably in recent years.
 3. International to international is almost always completed inside T3, where two hours is a comfortable buffer.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | The densest domestic network in India, serving well over a hundred domestic cities and the main long-haul international points (London, Dubai, Singapore, Bangkok and others); 78.15 million passengers in 2025, ranked 11th worldwide |
+| Flights | Around 481,856 aircraft movements in 2025 (ACI), roughly 1,300 a day |
+| Aircraft | **IndiGo** and **Air India** are the main bases; IndiGo flies A320-family aircraft on domestic trunks, while Air India uses widebodies (B777 / B787 / A350) on long-haul international |
 
 ## Getting into Delhi
 

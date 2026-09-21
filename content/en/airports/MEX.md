@@ -4,7 +4,7 @@ summary: How T1 and T2 divide the work and the monorail that links them, plus th
 updated: 2026-09-21
 ---
 
-Mexico City's airport lies about 13 km from the city centre and handles around 45 million passengers a year, making it one of the busiest in Latin America. It has **two terminals**, 2–3 km apart, linked by a free monorail shuttle (**Aerotrén**) — but one thing matters more than that: **Mexico City now has two airports**, so whenever you see "Mexico City" on a booking, check the three-letter code.
+Mexico City's airport lies about 13 km from the city centre and handles around 44.6 million passengers a year (2025), making it one of the busiest in Latin America. It has **two terminals**, 2–3 km apart, linked by a free monorail shuttle (**Aerotrén**) — but one thing matters more than that: **Mexico City now has two airports**, so whenever you see "Mexico City" on a booking, check the three-letter code.
 
 ## The two terminals
 
@@ -26,6 +26,12 @@ Mexico City's airport lies about 13 km from the city centre and handles around 4
 1. A connection inside T1 or inside T2 is quickest; for a cross-terminal connection allow more than 1.5 hours.
 2. The airside cross-terminal link depends on the Aerotrén and on your boarding pass, and **it stops running late at night**, leaving only the landside shuttle.
 3. Mexico City sits at about 2,200 metres, and a long-haul flight takes more out of you here, so err on the generous side with connection time.
+
+## Routes and flights
+
+- **Routes** — around 20-plus airlines flying to about 100 destinations; long-haul points include Madrid, Barcelona, Paris, Amsterdam, London, Tokyo, São Paulo and Buenos Aires.
+- **Flights** — 44.61 million passengers in 2025 (27.12 million domestic, 17.48 million international), down about 1.7% as some services have shifted to NLU.
+- **Aircraft** — main base is **Aeroméxico (T2) and SkyTeam**, followed by Viva Aerobús and Volaris; the fleet is 737 and A320 family narrowbodies, with Aeroméxico using 787 and 777 on long-haul.
 
 ## Getting into Mexico City
 

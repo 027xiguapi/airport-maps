@@ -4,7 +4,7 @@ summary: How the T1 main building divides the work with the low-cost T2, why T2 
 updated: 2026-09-21
 ---
 
-Lisbon Airport lies only about 7 km from the city centre and handles around 35 million passengers a year. It is one of Europe's rare "city airports", and structurally it has **one easy trap**: **Terminal 2 handles departures only, not arrivals** — if you fly out of T2 on a low-cost carrier but take the metro to T1, you still have a shuttle ride round to the other side ahead of you.
+Lisbon Airport lies only about 7 km from the city centre and handles around 36.1 million passengers a year (2025). It is one of Europe's rare "city airports", and structurally it has **one easy trap**: **Terminal 2 handles departures only, not arrivals** — if you fly out of T2 on a low-cost carrier but take the metro to T1, you still have a shuttle ride round to the other side ahead of you.
 
 ## The two terminals
 
@@ -25,6 +25,12 @@ Lisbon Airport lies only about 7 km from the city centre and handles around 35 m
 1. Lisbon is dominated by point-to-point traffic, and **a transfer across T1 and T2 means a shuttle and then security again**; allow more than 2.5 hours.
 2. A transfer within T1 is straightforward, and connections within the TAP group save the most time.
 3. Departing from T2, arrive earlier than usual — shuttle buses are limited and the wait is unpredictable.
+
+## Routes and flights
+
+- **Routes** — around 30 airlines flying to about 140 destinations, and southern Europe's most dense gateway to Brazil, Africa and North America; long-haul points include New York, Boston, São Paulo, Rio de Janeiro and Casablanca.
+- **Flights** — about 36.1 million passengers in 2025, a record high (+3.4% year on year), and the busiest single-runway airport in Europe.
+- **Aircraft** — main base is **TAP Air Portugal (T1)**, followed by Ryanair, Vueling and Wizz (T2 departures); TAP's workhorse fleets are the A320neo and A330neo families.
 
 ## Getting into Lisbon
 

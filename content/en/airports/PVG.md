@@ -4,7 +4,7 @@ summary: How the two main buildings and two satellite halls divide the work, how
 updated: 2026-09-21
 ---
 
-Shanghai Pudong International Airport lies to the east of the city, handles around 77 million passengers a year and is about 30 km from People's Square. Its structure is **two main buildings plus two satellite halls**: **check-in and security are always completed in a main building**, yet your gate may fall in a satellite hall — whether that gate is in S1 or S2 directly decides how far you still have to walk after security.
+Shanghai Pudong International Airport lies to the east of the city, handles around 85 million passengers a year (2025) and is about 30 km from People's Square. Its structure is **two main buildings plus two satellite halls**: **check-in and security are always completed in a main building**, yet your gate may fall in a satellite hall — whether that gate is in S1 or S2 directly decides how far you still have to walk after security.
 
 ## Two main buildings and two satellite halls
 
@@ -30,6 +30,14 @@ Pudong is one of the busiest international transfer points in China, and connect
 1. A connection within T1 or within T2 is the quickest.
 2. When the gates fall on T1 (or S1) and T2 (or S2) respectively, the transit train and walking time cannot be compressed — be generous with your buffer.
 3. Transfer formalities are handled at the transfer desks in the main terminal buildings; the satellite halls do not process transfers.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | Named the most connected airport in the Asia-Pacific for 2025; 16.2% of passengers transfer (13.75 million connecting passengers). Long-haul points cover North America, Europe, Oceania and the Middle East, making it China's busiest international gateway. |
+| Flights | Around **557,000 aircraft movements in 2025** (+5.5% year on year), roughly 1,500 movements a day. |
+| Aircraft | The main base is **China Eastern Airlines** (fleet around 826 aircraft; Airbus A320 family and Boeing 737 family as workhorses, widebodies on A330 / A350 / Boeing 777 / 787, and the world's largest C919 fleet). Air China, China Southern and Hainan also run major bases here. |
 
 ## Getting into the city
 

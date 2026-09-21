@@ -4,7 +4,7 @@ summary: How the T1–T8 ring and the Bradley international terminal divide the 
 updated: 2026-09-21
 ---
 
-Los Angeles International Airport lies about 24 km from the city centre and handles around 77 million passengers a year. Like JFK, it **has no single main building**: nine terminals (T1–T8 plus the international terminal, TBIT) are strung out around a loop road. The one thing most worth updating here is your thinking: **taxis and rideshares do not pick up at the terminal door** — they all load at the LAX-it lot outside the terminals.
+Los Angeles International Airport lies about 24 km from the city centre and handles around 73.71 million passengers a year (2025). Like JFK, it **has no single main building**: nine terminals (T1–T8 plus the international terminal, TBIT) are strung out around a loop road. The one thing most worth updating here is your thinking: **taxis and rideshares do not pick up at the terminal door** — they all load at the LAX-it lot outside the terminals.
 
 ## The nine terminals
 
@@ -25,6 +25,12 @@ Los Angeles International Airport lies about 24 km from the city centre and hand
 
 - **Walking corridors** — T4–T5–T6 are linked by indoor corridors, and TBIT connects to T4/T5/T6 by an elevated walkway, so some connections can be made without leaving security.
 - **Free shuttle buses** — every other inter-terminal move, and trips to LAX-it and the car rental centre, rely on the shuttle; count the interval between buses into your time.
+
+## Routes and flights
+
+- **Routes** — around 80 airlines flying to about 110 countries and cities; long-haul points include London, Paris, Frankfurt, Tokyo, Seoul, Shanghai, Sydney and more, while the domestic network covers every major US hub.
+- **Flights** — 73.71 million passengers in 2025 (about 23.60 million international, 50.11 million domestic), slightly below the 2024 peak as domestic traffic softened.
+- **Aircraft** — main bases are **United (T7/T8), Delta (T2/T3), American Airlines (T4/T5) and Southwest (T1)**; short-haul workhorse fleets are Boeing 737 and Airbus A320 families, with TBIT long-haul using 777, 787 and A350 widebodies.
 
 ## Getting into the city
 

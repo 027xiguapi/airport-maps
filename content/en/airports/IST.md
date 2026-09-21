@@ -4,7 +4,7 @@ summary: How the world's largest single terminal building divides five piers, wh
 updated: 2026-09-21
 ---
 
-Istanbul Airport lies about 35 km from the city centre and handles around 80 million passengers a year, making it one of the world's busiest airports by flight numbers. What is most unusual about it is this: **the whole airport is one building** — a terminal of roughly 1.4 million square metres forming a single continuous whole, domestic and international under the same roof, with five piers reaching out from the central hall.
+Istanbul Airport lies about 35 km from the city centre and handles around 84 million passengers a year (2025), making it one of the world's busiest airports by flight numbers. What is most unusual about it is this: **the whole airport is one building** — a terminal of roughly 1.4 million square metres forming a single continuous whole, domestic and international under the same roof, with five piers reaching out from the central hall.
 
 ## One terminal, five piers
 
@@ -25,6 +25,14 @@ Istanbul Airport lies about 35 km from the city centre and handles around 80 mil
 - All connections are completed inside the building, but **distance itself is the biggest variable** — build the walk between piers into your connecting margin.
 - A domestic-to-international transfer requires passing through security and immigration once, so allow more than 2 hours; international-to-international is usually smoother.
 - Wayfinding inside the building is clear, and although the hub is vast the route is a single one — simply follow your gate letter.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | Serving more than 330 destinations; 84 million passengers in 2025 (+5.5%), with about 48% of passengers transferring — among the busiest airports in Europe |
+| Flights | Around 547,000 aircraft movements in 2025, nearly 1,500 a day |
+| Aircraft | **Turkish Airlines** is the base carrier, with a fleet of around 500 aircraft (516 at the end of 2025) flying Boeing 737 / 777 and Airbus A320 / A330 / A350 across its global network |
 
 ## Getting into the city
 

@@ -4,7 +4,7 @@ summary: How T1 and T2 divide the carriers, how the SkyLine links them, and how 
 updated: 2026-09-21
 ---
 
-Frankfurt Airport lies about 12 km from the city centre and handles around 61 million passengers a year, Germany's largest hub. Its structure is easy to read: **Lufthansa and Star Alliance have T1 to themselves and everyone else uses T2**, with the SkyLine people mover linking the two. More unusual still, the airport has **two railway stations** — and boarding at the wrong one is the most common mistake made here.
+Frankfurt Airport lies about 12 km from the city centre and handles around 63.2 million passengers a year (2025), Germany's largest hub. Its structure is easy to read: **Lufthansa and Star Alliance have T1 to themselves and everyone else uses T2**, with the SkyLine people mover linking the two. More unusual still, the airport has **two railway stations** — and boarding at the wrong one is the most common mistake made here.
 
 ## The two terminals
 
@@ -19,6 +19,14 @@ Frankfurt Airport lies about 12 km from the city centre and handles around 61 mi
 
 - **SkyLine people mover** — free between T1 and T2, every few minutes.
 - Within T1 the concourses are walkable from one another; Zone Z mostly handles non-Schengen flights, so watch for passport control when connecting.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | In 2025, 83 airlines flew to 275 destinations in 91 countries; 63.2 million passengers (+2.6%), with 48.7% of passengers transferring — the sixth-busiest airport in Europe |
+| Flights | 63.2 million passengers in 2025, still about 90% of pre-pandemic levels |
+| Aircraft | **Lufthansa** is the base carrier, sharing T1 with Star Alliance members; it flies A320-family aircraft and A340 / A350 / 747 widebodies on European and worldwide long-haul routes |
 
 ## Getting into Frankfurt
 

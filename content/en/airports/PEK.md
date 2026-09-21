@@ -4,7 +4,7 @@ summary: How the three terminals divide between airlines, how T3's C/D/E gate zo
 updated: 2026-09-21
 ---
 
-Beijing Capital International Airport lies to the north-east of the city, handles around 67 million passengers a year and sits about 25 km from the city centre. Its three terminals differ enormously in scale: **Terminal 3 carries the overwhelming majority of the traffic**, and it is one of the country's rare designs in which **you still take a transit train inside the building** — understanding T3's internal zones is what tells you how far you will actually have to walk.
+Beijing Capital International Airport lies to the north-east of the city, handles around 70.7 million passengers a year (2025) and sits about 25 km from the city centre. Its three terminals differ enormously in scale: **Terminal 3 carries the overwhelming majority of the traffic**, and it is one of the country's rare designs in which **you still take a transit train inside the building** — understanding T3's internal zones is what tells you how far you will actually have to walk.
 
 ## The three terminals
 
@@ -29,6 +29,12 @@ Most connections at Capital are made inside T3, but **if your gate is in Zone E,
 1. First confirm the gate prefix on your next flight (C / D / E).
 2. A connection that stays within Zone C is the quickest; crossing to Zone E means adding the transit train in both directions.
 3. Two flights in different terminals is the most complicated case: contact your airline in advance to confirm the transfer route, and allow more time rather than less.
+
+## Routes and flights
+
+- **Routes** — in 2025 the airport served 217 cities in 58 countries, with 226 destinations in total (131 domestic, 95 international and regional); long-haul points include Tokyo, Seoul, Singapore, Bangkok, Dubai, London, Frankfurt, Moscow, New York, Los Angeles, San Francisco and Vancouver.
+- **Flights** — 70.74 million passengers in 2025 (+5.0% year on year), with about 442,040 aircraft movements.
+- **Aircraft** — main base is **Air China and Star Alliance (T3)**, followed by the Hainan Airlines group (T1); the fleet is Boeing 737 and Airbus A320 family narrowbodies, with 747, 777, 787, A330 and A350 widebodies on long-haul.
 
 ## Getting into the city
 

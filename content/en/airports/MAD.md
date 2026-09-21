@@ -4,7 +4,7 @@ summary: Two terminal clusters set apart from each other, Iberia's long-haul sat
 updated: 2026-09-21
 ---
 
-Madrid's airport lies about 13 km from the city centre and handles around 66 million passengers a year, making it one of Europe's busiest hubs. Its structure is **two terminal clusters about 2 km apart**: T1, T2 and T3 form one group, while **T4 and its satellite T4S form a second** — and a cross-cluster connection is the most common mistake travellers make here.
+Madrid's airport lies about 13 km from the city centre and handles around 68.2 million passengers a year (2025), making it one of Europe's busiest hubs. Its structure is **two terminal clusters about 2 km apart**: T1, T2 and T3 form one group, while **T4 and its satellite T4S form a second** — and a cross-cluster connection is the most common mistake travellers make here.
 
 ## The two terminal clusters
 
@@ -29,6 +29,12 @@ Madrid's airport lies about 13 km from the city centre and handles around 66 mil
 1. **Check first whether both flights use the same cluster** — staying within the T4 cluster (T4S included) or within T1–T3 makes for the quickest connection.
 2. T4 and T4S are linked by the people mover; waiting plus the ride is about 10 minutes, so allow 90 minutes for a long-haul to long-haul connection.
 3. **For a cross-cluster connection allow more than 2 hours**, because you will travel landside by shuttle and clear security again.
+
+## Routes and flights
+
+- **Routes** — around 90 airlines flying to about 200 destinations, and Europe's primary gateway to Latin America; long-haul points include Buenos Aires, São Paulo, Bogotá, Lima, New York, Los Angeles and Tel Aviv.
+- **Flights** — 68.18 million passengers in 2025 (+3.0%, a record), with about 431,000 aircraft movements.
+- **Aircraft** — main base is **Iberia and oneworld (T4/T4S)**, followed by Air Europa, Ryanair and Vueling; Iberia flies the A320 family plus A330/A350 widebodies.
 
 ## Getting into Madrid
 

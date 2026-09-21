@@ -4,7 +4,7 @@ summary: How a single central terminal splits into a domestic and an internation
 updated: 2026-09-21
 ---
 
-Cape Town International lies about 20 km from the city centre and handles around 10 million passengers a year, making it South Africa's second-busiest airport. Its structure is compact: **a single central terminal**, with the domestic and international sides set apart from each other but joined by a central concourse — **five to ten minutes on foot between them**, which is its greatest convenience. But there is one important limit: **the airport has no international transit corridor that bypasses immigration**.
+Cape Town International lies about 20 km from the city centre and handles around 11.1 million passengers a year (2025), making it South Africa's second-busiest airport. Its structure is compact: **a single central terminal**, with the domestic and international sides set apart from each other but joined by a central concourse — **five to ten minutes on foot between them**, which is its greatest convenience. But there is one important limit: **the airport has no international transit corridor that bypasses immigration**.
 
 ## One terminal, two zones
 
@@ -26,6 +26,14 @@ Cape Town International lies about 20 km from the city centre and handles around
 1. **There is no transit corridor that bypasses immigration** — whether you are connecting domestic to international or international to international, you must **clear immigration, collect your luggage, and check in and clear security again**.
 2. For a **self-transfer on separate tickets, allow 2.5 hours or more**; on a through ticket, follow your airline's guidance.
 3. International to international also requires entering South Africa, which is not the case at many hubs, so check your visa requirements in advance.
+
+## Routes and flights
+
+| Aspect | Points |
+| --- | --- |
+| Routes | 11.11 million passengers in 2025 (7.8 million domestic, 3.3 million international), served by **more than 29 airlines on 31 or more direct destinations**; international points include London, Amsterdam, Frankfurt, Dubai and Doha |
+| Flights | Mainly high-frequency South African domestic routes, with lower international frequency |
+| Aircraft | The home base is for South African domestic carriers **FlySafair, Airlink and South African Airways (SAA)**; international sectors are operated by British Airways, KLM, Lufthansa, Emirates and Qatar |
 
 ## Getting into Cape Town
 

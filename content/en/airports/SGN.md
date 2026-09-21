@@ -4,7 +4,7 @@ summary: The three-way division of labour brought by the T3 that opened in 2025,
 updated: 2026-09-21
 ---
 
-Tan Son Nhat sits right up against Ho Chi Minh City, about 8 km from the city centre, and handles around 40 million passengers a year. It is a **city airport**, and its layout changed significantly in 2025: **the new T3 opened in April 2025 and takes domestic flights only**, carrying about 80% of domestic traffic — the three terminals now have clearly divided roles, and turning up at the wrong building is a wasted trip.
+Tan Son Nhat sits right up against Ho Chi Minh City, about 8 km from the city centre, and handles **around 43 million passengers a year**. It is a **city airport**, and its layout changed significantly in 2025: **the new T3 opened in April 2025 and takes domestic flights only**, carrying about 80% of domestic traffic — the three terminals now have clearly divided roles, and turning up at the wrong building is a wasted trip.
 
 ## The three terminals
 
@@ -27,6 +27,14 @@ Tan Son Nhat sits right up against Ho Chi Minh City, about 8 km from the city ce
 1. International to domestic is the most common connection: first confirm whether your domestic leg leaves from T1 or T3, then add the shuttle time.
 2. **For a connection between buildings, allow more than 3 hours** — you have to leave the building, take the shuttle and clear security again.
 3. Vietnamese domestic routes are dense and punctuality is only average, so err on the side of a longer connection.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | Vietnam's largest airport and main international gateway, with around **50 international points** covering China, Northeast Asia, South-East Asia, Europe and Oceania (long-haul examples: Tokyo, Seoul, Singapore, Bangkok, Taipei, Frankfurt); domestic routes are dense to Hanoi, Da Nang, Phu Quoc and others. |
+| Flights | Around **42.5 million passengers in 2025**, on roughly **256,000 flights** (about 700 a day); before T3 opened the airport had been running at around 110% of its designed capacity, and T3 lifted annual capacity to about 50 million in 2025. |
+| Aircraft | The main bases are **Vietnam Airlines** (SkyTeam; A321 workhorses with A350 and 787 widebodies on long-haul) and **Vietjet Air** (an all-A320 low-cost fleet, using T1 exclusively). |
 
 ## Getting into Ho Chi Minh City
 

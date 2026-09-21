@@ -4,7 +4,7 @@ summary: How the three terminals divide the airlines between them, how the free 
 updated: 2026-09-21
 ---
 
-Cairo International lies about 15 km from the city centre and handles around 28 million passengers a year, making it a major gateway hub for Africa. It is made up of three terminals that **are not connected to each other but are linked by a free 24-hour inter-terminal people mover (APM)** — and that is the key to understanding Cairo's airport.
+Cairo International lies about 15 km from the city centre and handles around 30.9 million passengers a year (2025), making it a major gateway hub for Africa. It is made up of three terminals that **are not connected to each other but are linked by a free 24-hour inter-terminal people mover (APM)** — and that is the key to understanding Cairo's airport.
 
 ## The three terminals
 
@@ -26,6 +26,14 @@ Cairo International lies about 15 km from the city centre and handles around 28 
 1. **First confirm which building each flight uses** — EgyptAir connections are mostly made inside T3, which saves the most time.
 2. A cross-terminal connection means going landside, taking the APM and going through security again; allow more than 2.5 hours.
 3. Connections at Cairo are less efficient than at the Gulf hubs, so it is better to over-allow than to under-allow.
+
+## Routes and flights
+
+| Aspect | Points |
+| --- | --- |
+| Routes | Cairo is a transit gateway for Africa and the Middle East, serving Europe, the Middle East, Africa and Asia; EgyptAir's Star Alliance network covers around 70 destinations |
+| Flights | **224,303 aircraft movements** in 2025 (+4.8%) |
+| Aircraft | **EgyptAir** is the home-based carrier, with a fleet of 71 aircraft at the end of 2025 (67 passenger, 4 cargo); main types are the Airbus A320neo/A321neo, A330, Boeing 737 and 787, with the A350 to follow |
 
 ## Getting into Cairo
 

@@ -4,7 +4,7 @@ summary: How T1/T2 and T3 divide the work, why T3 carries the international traf
 updated: 2026-09-21
 ---
 
-Vienna Airport lies about 18 km from the city centre, handles around 30 million passengers a year and is Austria's only international hub. Its three terminals stand in a row: **T1 and T2 serve Schengen flights, while T3 (the Skylink section completed in 2012) is the main building for long-haul international traffic** — see a gate beginning with F or G and you know you are in T3.
+Vienna Airport lies about 18 km from the city centre, handles **around 33 million passengers a year** and is Austria's only international hub. Its three terminals stand in a row: **T1 and T2 serve Schengen flights, while T3 (the Skylink section completed in 2012) is the main building for long-haul international traffic** — see a gate beginning with F or G and you know you are in T3.
 
 ## The three terminals
 
@@ -26,6 +26,14 @@ Vienna Airport lies about 18 km from the city centre, handles around 30 million 
 1. All three are under one roof and transfers run smoothly; 45–60 minutes is usually enough for a Schengen-to-Schengen connection.
 2. Moving between Schengen and non-Schengen flights means passport control, so allow more than 1.5 hours.
 3. Austrian Airlines (Lufthansa Group) has its hub here, so a high proportion of passengers are connecting and the signage is clear.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | A record **around 33 million passengers in 2025**; **around 200 destinations**, a main transfer hub for Central and Eastern Europe. Long-haul points include Chicago, Washington, Newark and Dubai, while the busiest short-haul routes are London, Frankfurt, Zürich, Paris, Amsterdam and Istanbul. |
+| Flights | **240,360 aircraft movements in 2025** (about 660 a day); around 70% of passengers are local and 30% connecting. |
+| Aircraft | The main base is **Austrian Airlines** (Lufthansa Group / Star Alliance; **45.8% of the market**, about 14.9 million passengers in 2025; A320 family narrowbodies with 767 / 777 widebodies on long-haul), followed by **Ryanair / Lauda** (20.5%) and Wizz Air (5.6%). |
 
 ## Getting into Vienna
 

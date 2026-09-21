@@ -4,7 +4,7 @@ summary: The gate rules across concourses A–G under one main building and the 
 updated: 2026-09-21
 ---
 
-Suvarnabhumi lies about 30 km east of central Bangkok and handles around 60 million passengers a year. It has **one main building** and no second terminal — but seven concourses (A–G) fan out behind it, along with the SAT-1 satellite. **Here, ending up in the wrong concourse is far more common than ending up at the wrong terminal.**
+Suvarnabhumi lies about 30 km east of central Bangkok and handles around 62.7 million passengers a year (fiscal 2025). It has **one main building** and no second terminal — but seven concourses (A–G) fan out behind it, along with the SAT-1 satellite. **Here, ending up in the wrong concourse is far more common than ending up at the wrong terminal.**
 
 ## One main building, seven concourses, one satellite
 
@@ -29,6 +29,14 @@ Every connection at Suvarnabhumi happens inside a "single building", which is si
 1. First check whether the concourse letters of the two gates match.
 2. The same concourse is quickest; crossing concourses means returning to the main building's central hall and entering another one, which is a considerable distance.
 3. For a connection involving a SAT-1 gate, count the wait for the people mover in; allow more than 90 minutes.
+
+## Routes and flights
+
+| Aspect | Points |
+| --- | --- |
+| Routes | Suvarnabhumi is mainly an international transit hub, with points across East and South-East Asia, South Asia, the Middle East, Europe and Oceania; long-haul points include London, Paris, Frankfurt, Sydney, Tokyo, Seoul, Beijing, Shanghai and Guangzhou |
+| Flights | **370,823 aircraft movements** in fiscal 2025 |
+| Aircraft | **Thai Airways** is the home-based carrier, with a fleet of 80 aircraft at the end of 2025 (59 wide-body, 21 narrow-body); main types are the Boeing 787, Airbus A350/A330 and Boeing 777 |
 
 ## Getting into Bangkok
 

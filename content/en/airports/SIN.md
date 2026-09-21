@@ -1,10 +1,10 @@
 ---
 title: Singapore Changi Airport terminal guide
 summary: How Changi's four terminals are divided by gate letter, how the free Skytrain links them, and how to get into Singapore.
-updated: 2026-09-16
+updated: 2026-09-21
 ---
 
-Changi has four terminals, handles around 69 million passengers a year and sits about 20 km from the city centre. Its gates are numbered **by terminal zone**, so reading the letter prefix tells you which building you need before you set off.
+Changi has four terminals, handles **around 70 million passengers a year** and sits about 20 km from the city centre. Its gates are numbered **by terminal zone**, so reading the letter prefix tells you which building you need before you set off.
 
 ## Terminals and their gate zones
 
@@ -28,6 +28,14 @@ Changi has four terminals, handles around 69 million passengers a year and sits 
 - **On foot** — walkways also connect adjacent terminals and are often faster than waiting at peak times.
 
 If your two flights are in different terminals, allow time for the change. A gate letter that jumps zones (E to G, say) means a building change plus a walk, which is the slowest kind of connection here.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | A record **around 70 million passengers in 2025**; **about 100 airlines** connect Singapore to **more than 170 cities**. Long-haul points reach as far as New York, London, San Francisco, Sydney and Frankfurt; the busiest regional routes are Kuala Lumpur, Bangkok, Jakarta and Denpasar. |
+| Flights | Around **374,000 aircraft movements in 2025** (up about 2%), equal to some **7,300 flights a week** — roughly 1,000 a day. |
+| Aircraft | The main bases are **Singapore Airlines (SQ)** (Star Alliance; a ~140-aircraft widebody fleet of A350, A380, 777-300ER and 787-10) and its low-cost subsidiary **Scoot (TR)** (an all-787 fleet). |
 
 ## Getting into the city
 

@@ -4,7 +4,7 @@ summary: The single-building low-cost hub, getting into London on the Stansted E
 updated: 2026-09-21
 ---
 
-Stansted lies about 55 km from central London and handles around 29 million passengers a year. It is the most single-minded of London's three main airports: **it has just one terminal, and low-cost carriers dominate** — Ryanair, easyJet, Jet2 and the like make up the great majority of flights. Structurally there is no terminal-change problem to solve; the only thing to work out is the distance into town.
+Stansted lies about 55 km from central London and handles **around 30 million passengers a year**. It is the most single-minded of London's three main airports: **it has just one terminal, and low-cost carriers dominate** — Ryanair, easyJet, Jet2 and the like make up the great majority of flights. Structurally there is no terminal-change problem to solve; the only thing to work out is the distance into town.
 
 ## A single terminal
 
@@ -21,6 +21,14 @@ Stansted lies about 55 km from central London and handles around 29 million pass
 1. Every connection happens inside the one building, but **Stansted is overwhelmingly a point-to-point airport** and through-ticketed connections are limited.
 2. If you are connecting here on two separate tickets, allow more than 3 hours for immigration, baggage reclaim and checking in again.
 3. Low-cost baggage rules and check-in deadlines are strict; do not estimate a connection here from full-service airline habits.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | A record **around 30 million passengers in 2025**; **around 200 destinations**, almost all short- and medium-haul European leisure and city points — the busiest are Istanbul, Dublin, Edinburgh, Barcelona, Palma and Faro, and the busiest countries Spain, Italy and Germany. |
+| Flights | Roughly **95,000 aircraft movements a year**; December 2025 was the busiest month ever at 2.26 million passengers, and the busiest single day topped 106,000. |
+| Aircraft | The main base is **Ryanair's largest base** (around half of all passengers here; an all-Boeing 737 fleet of about 600 aircraft group-wide), followed by **easyJet**, **Jet2.com** and Pegasus. |
 
 ## Getting into London
 

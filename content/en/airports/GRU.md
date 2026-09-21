@@ -4,7 +4,7 @@ summary: The rule that a gate number's first digit is its terminal, why T1 and T
 updated: 2026-09-21
 ---
 
-Guarulhos lies about 25 km from central São Paulo and handles around 43 million passengers a year, the busiest airport in South America. Its layout is unusually friendly to travellers: **the first digit of the gate number is the terminal number** — see 301 and you know you are in T3, see 205 and you are in T2. The difficulty is not reading it, but the fact that **T1 is not connected to T2/T3**.
+Guarulhos lies about 25 km from central São Paulo and handles around 47.2 million passengers a year (2025), the busiest airport in South America. Its layout is unusually friendly to travellers: **the first digit of the gate number is the terminal number** — see 301 and you know you are in T3, see 205 and you are in T2. The difficulty is not reading it, but the fact that **T1 is not connected to T2/T3**.
 
 ## The three terminals
 
@@ -26,6 +26,14 @@ Guarulhos lies about 25 km from central São Paulo and handles around 43 million
 1. Confirm the terminal from the gate number first: a connection inside T2 or inside T3 is the quickest.
 2. T2 and T3 can be linked on foot via the walking connection; allowing more than 30 minutes is safer.
 3. A connection involving T1 needs the shuttle wait added on, so allow more than 2.5 hours.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | 47.19 million passengers in 2025 (+8.2%), reclaiming the top spot in Latin America; international traffic of 16.8 million was a record, with new long-haul routes to Doha, Los Angeles and Johannesburg |
+| Flights | 47.19 million passengers in 2025, with monthly totals regularly above 3.5 million |
+| Aircraft | **LATAM Brasil** is the base carrier, with T2 as its domestic and international hub; the fleet flies A320-family aircraft and 767 / 777 widebodies, while Gol and other Brazilian carriers operate a dense domestic network |
 
 ## Getting into São Paulo
 

@@ -4,7 +4,7 @@ summary: The two-terminal layout with T1 and T2 about 4 km apart, the rule that 
 updated: 2026-09-21
 ---
 
-Barcelona's airport lies about 15 km from the city centre and handles around 55 million passengers a year, making it Spain's second-largest airport. Its two terminals **sit about 4 km apart**: T1 is the main building and takes most airlines, while **T2 is made up of three modules, T2A, T2B and T2C, and is where most low-cost carriers go** — pick the wrong building and you face a long loop round by shuttle.
+Barcelona's airport lies about 15 km from the city centre and handles around 57.5 million passengers a year (2025), making it Spain's second-largest airport. Its two terminals **sit about 4 km apart**: T1 is the main building and takes most airlines, while **T2 is made up of three modules, T2A, T2B and T2C, and is where most low-cost carriers go** — pick the wrong building and you face a long loop round by shuttle.
 
 ## The two terminals
 
@@ -25,6 +25,14 @@ Barcelona's airport lies about 15 km from the city centre and handles around 55 
 1. **The two terminals are not connected airside** — a cross-terminal connection means leaving the building, taking the shuttle and going through security again; allow more than 3 hours.
 2. A connection inside T1 runs smoothly; 2 hours is a comfortable allowance.
 3. Barcelona is a major gateway to Catalonia and to Mediterranean cruises, so cruise passengers should set aside time for the port leg separately.
+
+## Routes and flights
+
+| Aspect | Points |
+| --- | --- |
+| Routes | 57.48 million passengers in 2025, of whom 43.3 million were international; Barcelona–Palma (BCN–PMI) is Europe's busiest airport pair |
+| Flights | Around **361,000 aircraft movements** in 2025 |
+| Aircraft | **Vueling** is the largest base carrier (about 38% market share), with a group fleet of around 140 all-Airbus A320-family aircraft; about 60 are based at the Barcelona hub on more than 120 routes; Iberia, Ryanair and easyJet also operate heavily |
 
 ## Getting into Barcelona
 

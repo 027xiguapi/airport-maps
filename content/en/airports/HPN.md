@@ -4,7 +4,7 @@ summary: The small regional airport north of New York City, how its single termi
 updated: 2026-09-21
 ---
 
-Westchester County Airport (HPN) sits at White Plains, north of New York City, and is **a small regional airport in the New York metropolitan area**, far smaller than the three airports of JFK, Newark and LaGuardia. It serves only a handful of domestic routes, and its strengths and its limits are equally sharp: **the process is minimal with almost no queues, but the flight choices are few and there is no rail link**.
+Westchester County Airport (HPN) sits at White Plains, north of New York City, handling around 1.5 million commercial passengers a year (as of 2024), and is **a small regional airport in the New York metropolitan area**, far smaller than the three airports of JFK, Newark and LaGuardia. It serves only a handful of domestic routes, and its strengths and its limits are equally sharp: **the process is minimal with almost no queues, but the flight choices are few and there is no rail link**.
 
 ## The single terminal
 
@@ -20,6 +20,14 @@ Westchester County Airport (HPN) sits at White Plains, north of New York City, a
 
 - The airport **does not handle connecting traffic**; flights are mostly point-to-point.
 - If your trip needs a connection, start from JFK or Newark instead, where the full network of international and domestic links exists.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | Point-to-point domestic only, with no scheduled international flights; the main leisure and business points are Florida (Orlando, Fort Lauderdale, West Palm Beach), South Carolina (Myrtle Beach), Martha's Vineyard, Nantucket, Atlanta and Washington |
+| Flights | Around 100 departures a day, mostly on regional jets |
+| Aircraft | No base carrier; flights are operated by American Eagle, JetBlue and Breeze using Embraer regional jets, the A220 and the 737 |
 
 ## Getting into New York
 

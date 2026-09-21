@@ -4,7 +4,7 @@ summary: How far apart international T1 and domestic T2/T3 really are, the Qanta
 updated: 2026-09-21
 ---
 
-Sydney Airport is about 8 km from the city centre and handles around 42 million passengers a year, which makes it one of the closest airports to the centre of any major national capital. Its layout is one large terminal and two small ones: **T1 takes all international flights on its own, while T2 and T3 sit side by side handling domestic flights** — the two precincts face each other across a runway and cannot be reached on foot.
+Sydney Airport is about 8 km from the city centre and handles **around 43 million passengers a year**, which makes it one of the closest airports to the centre of any major national capital. Its layout is one large terminal and two small ones: **T1 takes all international flights on its own, while T2 and T3 sit side by side handling domestic flights** — the two precincts face each other across a runway and cannot be reached on foot.
 
 ## The three terminals
 
@@ -22,6 +22,14 @@ Sydney Airport is about 8 km from the city centre and handles around 42 million 
 
 - International to domestic means **clearing immigration, collecting your bags and checking in and clearing security again**; the two precincts are linked by a free shuttle bus or the train, so allow 3 hours for the connection.
 - Qantas to Qantas (T3, or the Qantas area of T1) is the smoothest connection; for a transfer within one precinct, plan on 90 minutes.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | A record **around 43 million passengers in 2025**, of which a record **17.2 million were international**; **around 90 destinations** domestic and international, with long-haul points such as Los Angeles, San Francisco, London, Singapore, Tokyo and Dubai. |
+| Flights | A record year, with movements at roughly **800 a day** (about 290,000 a year); international traffic grew 6.6% year on year in 2025. |
+| Aircraft | The main base is **Qantas** (oneworld; about 125 aircraft — A330, 787 and a handful of A380 widebodies, plus 737 narrowbodies), followed by **Virgin Australia** (T2) and **Jetstar** (Qantas Group; A320 and 787, T2). |
 
 ## Getting to Sydney
 

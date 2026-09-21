@@ -4,7 +4,7 @@ summary: How two check-in buildings share a single security checkpoint and airsi
 updated: 2026-09-21
 ---
 
-Copenhagen Airport lies only about 8 km from the city centre and handles around 30 million passengers a year, making it the busiest airport in the Nordics. Its structure fits into one sentence: **two check-in buildings, one shared airside area, six piers** — which building you check in at affects only the formalities, while gates are assigned by destination, and the two are not tied together.
+Copenhagen Airport lies only about 8 km from the city centre and handles around 32.4 million passengers a year (2025), making it the busiest airport in the Nordics. Its structure fits into one sentence: **two check-in buildings, one shared airside area, six piers** — which building you check in at affects only the formalities, while gates are assigned by destination, and the two are not tied together.
 
 ## Two check-in buildings and six piers
 
@@ -29,6 +29,14 @@ Copenhagen Airport lies only about 8 km from the city centre and handles around 
 1. Every pier is walkable once you are through security, and a connection within Schengen usually works in 45–60 minutes.
 2. **Non-Schengen flights leaving from piers C or E require passport control**, so add that on top of your buffer.
 3. Copenhagen is the Nordic connecting hub, with a high share of through tickets and clear signage — just follow the gate letter.
+
+## Routes and flights
+
+| Aspect | Points |
+| --- | --- |
+| Routes | 47 new routes opened in 2025, for a total of **367 routes and 63 airlines**, including 49 long-haul routes; the top destinations are London, Oslo, Stockholm, Amsterdam and Paris |
+| Flights | **256,737 aircraft movements** in 2025 (+7%) |
+| Aircraft | **Scandinavian Airlines (SAS)** and Norwegian are the two main carriers; SAS has a fleet of around 140 aircraft, mainly Airbus A320-family, A330 and A350 |
 
 ## Getting into Copenhagen
 

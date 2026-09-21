@@ -4,7 +4,7 @@ summary: How T1 and T2 divide the work, the unusual advantage of clearing US imm
 updated: 2026-09-21
 ---
 
-Dublin Airport lies about 10 km from the city centre and handles around 34 million passengers a year as Ireland's gateway hub. It has two terminals and a simple structure; what is genuinely unusual is **an arrangement few other countries offer: passengers flying to the United States can clear US immigration at Dublin Airport before they leave** — on landing in the US, you walk out as a domestic passenger.
+Dublin Airport lies about 10 km from the city centre and handles around 36.4 million passengers a year (2025) as Ireland's gateway hub. It has two terminals and a simple structure; what is genuinely unusual is **an arrangement few other countries offer: passengers flying to the United States can clear US immigration at Dublin Airport before they leave** — on landing in the US, you walk out as a domestic passenger.
 
 ## The two terminals
 
@@ -29,6 +29,14 @@ Dublin Airport lies about 10 km from the city centre and handles around 34 milli
 1. The two buildings are adjacent and a connection can be made on foot; for a change of terminal, allow two hours or more.
 2. For a connection involving a US flight, check whether US clearance has to be completed in Dublin and allow extra time for it.
 3. Aer Lingus is based here, and through connections run smoothly.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | Aer Lingus' main base, with transatlantic non-stops to the US East Coast and a dense European network; Ryanair also has a large base here; 36.43 million passengers in 2025 (+5.1%), a record year |
+| Flights | Roughly 700 commercial movements a day; Aer Lingus alone carried about 11 million passengers through Dublin in 2025 |
+| Aircraft | **Aer Lingus** (A320-family and A330 widebodies) operates from T2; **Ryanair** (Boeing 737) operates European low-cost services from T1 |
 
 ## Getting into Dublin
 

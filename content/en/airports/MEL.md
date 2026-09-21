@@ -4,7 +4,7 @@ summary: How four terminals divide into a connected T1–T3 and a separate T4, w
 updated: 2026-09-21
 ---
 
-Melbourne Airport lies about 23 km from the city centre and handles around 39 million passengers a year, making it Australia's second-busiest airport. Its terminal layout has a direct effect on how you travel: **T1, T2 and T3 stand in a row, with T4 off on its own to the south** — and because Qantas and Jetstar each use two of them, "find the terminal by airline" does not work here; you have to **look at whether the flight is domestic or international**.
+Melbourne Airport lies about 23 km from the city centre and handles around 36 million passengers a year (2024–25 financial year), making it Australia's second-busiest airport. Its terminal layout has a direct effect on how you travel: **T1, T2 and T3 stand in a row, with T4 off on its own to the south** — and because Qantas and Jetstar each use two of them, "find the terminal by airline" does not work here; you have to **look at whether the flight is domestic or international**.
 
 ## The four terminals
 
@@ -27,6 +27,12 @@ Melbourne Airport lies about 23 km from the city centre and handles around 39 mi
 1. Locate your terminal by domestic or international first, and only then by airline.
 2. An international-to-domestic connection means clearing immigration, collecting your bags and checking in again, and may involve a move between T2 and T1/T3/T4 — allow 3 hours.
 3. When connecting between T4 and T1–T3, count the walkway or shuttle time into your buffer as well.
+
+## Routes and flights
+
+- **Routes** — around 30 airlines flying to about 70 non-stop destinations; long-haul points include Singapore, Bangkok, Hong Kong, Tokyo, Shanghai, Los Angeles, San Francisco, Dubai and Johannesburg.
+- **Flights** — about 36 million passengers in the 2024–25 financial year, of which about 11.95 million were international; December 2025 set a single-month record of 3.42 million passengers.
+- **Aircraft** — main bases are **Qantas (T1 domestic / T2 international), Virgin Australia (T3) and Jetstar (T4)**; domestic workhorses are the 737 and A320 families, with A330 and 787 on international long-haul.
 
 ## Getting into Melbourne
 

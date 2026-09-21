@@ -4,7 +4,7 @@ summary: How the two terminals on an artificial island in the bay divide the wor
 updated: 2026-09-21
 ---
 
-Kansai International Airport is built on an artificial island in Osaka Bay, about 38 km from central Osaka, and handles around 32 million passengers a year. Its structure is not complicated, but **the two buildings serve entirely different traffic**: **the T1 main building across the sea bridge carries every traditional airline**, while **T2 on the far side of that bridge is the low-cost terminal** — the terminal number on your boarding pass decides directly whether you have an extra shuttle bus ride ahead of you.
+Kansai International Airport is built on an artificial island in Osaka Bay, about 38 km from central Osaka, and handles around 34 million passengers a year (2025). Its structure is not complicated, but **the two buildings serve entirely different traffic**: **the T1 main building across the sea bridge carries every traditional airline**, while **T2 on the far side of that bridge is the low-cost terminal** — the terminal number on your boarding pass decides directly whether you have an extra shuttle bus ride ahead of you.
 
 ## The two terminals
 
@@ -21,6 +21,14 @@ Kansai International Airport is built on an artificial island in Osaka Bay, abou
 
 - A T1-to-T2 transfer needs the shuttle bus; allow more than 90 minutes for the connection. A transfer within one building saves the most time.
 - International-to-domestic and domestic-to-international transfers are both completed inside the T1 main building, with the process concentrated under one roof.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | The gateway to the Kansai region, operating 24 hours a day; about 33.55 million passengers in fiscal year 2025, of which 21.2 million were international foreign visitors, a record; the network covers East and Southeast Asia, North America and Hawaii |
+| Flights | Around 33.55 million passengers in fiscal year 2025, with international and domestic traffic roughly balanced |
+| Aircraft | **Peach Aviation** is one of the main bases, with the low-cost T2 terminal dedicated to it; JAL, ANA and ANA Wings also fly A320-family aircraft from T1 |
 
 ## Getting into Osaka
 

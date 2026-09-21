@@ -4,7 +4,7 @@ summary: How two of the four terminals have opened brand new, why there is no ra
 updated: 2026-09-21
 ---
 
-LaGuardia Airport sits alongside Queens in New York, about 13 km from Manhattan, and handles around 30 million passengers a year. It has just completed a transformation: **Terminal B and Terminal C have been rebuilt and reopened**, with a look completely unlike a few years ago. But it is also **the only one of New York's three main airports without a direct rail link** — the city is reached by road, and that is its greatest shortcoming.
+LaGuardia Airport sits alongside Queens in New York, about 13 km from Manhattan, and handles around 32.8 million passengers a year (2025). It has just completed a transformation: **Terminal B and Terminal C have been rebuilt and reopened**, with a look completely unlike a few years ago. But it is also **the only one of New York's three main airports without a direct rail link** — the city is reached by road, and that is its greatest shortcoming.
 
 ## The four terminals
 
@@ -27,6 +27,12 @@ LaGuardia Airport sits alongside Queens in New York, about 13 km from Manhattan,
 1. LaGuardia is dominated by origin-and-destination traffic, and **its connecting facilities fall short of JFK's**, so a transfer between separately booked tickets needs generous time.
 2. An inter-terminal transfer relies on the shuttle bus; allow more than 2 hours.
 3. If your itinerary needs a long-haul connection, book through JFK rather than LaGuardia.
+
+## Routes and flights
+
+- **Routes** — dominated by US domestic and short-haul Canadian points, with around 15 airlines and about 50 non-stop destinations; there are no intercontinental flights here (time-of-day and airport agreement restrictions), so transatlantic travel goes through JFK or EWR.
+- **Flights** — about 32.79 million passengers in 2025, the second-busiest year in the airport's history, with about 350,000 aircraft movements.
+- **Aircraft** — main base is **Delta (Terminal C mainly)**, followed by Southwest, American and United; the fleet is Boeing 717, 737 and Airbus A320 family narrowbodies.
 
 ## Getting into New York
 

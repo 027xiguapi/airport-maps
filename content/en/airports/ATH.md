@@ -4,7 +4,7 @@ summary: How the main building's two halls split Schengen from non-Schengen traf
 updated: 2026-09-21
 ---
 
-Athens International lies about 27 km from the city centre and handles around 30 million passengers a year, making it Greece's only international hub. Everything centres on **one main building**, divided into two halls — **one for non-Schengen flights, the other for domestic and Schengen flights** — and at the summer travel peak some gates move out to a satellite terminal.
+Athens International lies about 27 km from the city centre and handles around 34 million passengers a year (2025), making it Greece's only international hub. Everything centres on **one main building**, divided into two halls — **one for non-Schengen flights, the other for domestic and Schengen flights** — and at the summer travel peak some gates move out to a satellite terminal.
 
 ## The main building and the satellite
 
@@ -26,6 +26,14 @@ Athens International lies about 27 km from the city centre and handles around 30
 1. Connections are made inside the one main building, but **moving between the Schengen and non-Schengen areas means passport control**, so allow more than 1.5 hours.
 2. For a connection involving a satellite gate, count the walk through the underground passage.
 3. Summer (June–September) is the peak for Greek island travel, when the airport's traffic surges and the queues at security and passport control are noticeably longer; arriving 3 hours ahead is advisable.
+
+## Routes and flights
+
+| Aspect | Points |
+| --- | --- |
+| Routes | In 2025, **70 airlines served 164 cities in 55 countries**; traffic is mainly intra-European, with long-haul points in the Middle East and the Gulf, and new direct services to Delhi and Mumbai from 2026 |
+| Flights | Around **760 scheduled arrivals and departures a day** in 2025 (Eurocontrol figure) |
+| Aircraft | **Aegean Airlines** is the home-based carrier, with a fleet of around 88 aircraft, mainly Airbus A320/A321neo, plus ATR 72 turboprops |
 
 ## Getting into Athens
 

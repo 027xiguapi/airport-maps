@@ -4,7 +4,7 @@ summary: The Aerotrain between the KLIA main building and its satellite, how the
 updated: 2026-09-21
 ---
 
-Kuala Lumpur International Airport lies about 50 km from the city centre and handles around 55 million passengers a year. The key to it is that **"KUL" is not one building**: the KLIA main terminal used by traditional airlines, its satellite gate building, and the low-cost **klia2** are three facilities set apart from one another — the terminal name on your boarding pass decides directly which of them you are heading for.
+Kuala Lumpur International Airport lies about 50 km from the city centre and handles around 63.4 million passengers a year (2025). The key to it is that **"KUL" is not one building**: the KLIA main terminal used by traditional airlines, its satellite gate building, and the low-cost **klia2** are three facilities set apart from one another — the terminal name on your boarding pass decides directly which of them you are heading for.
 
 ## The main terminal complex and klia2
 
@@ -26,6 +26,12 @@ Kuala Lumpur International Airport lies about 50 km from the city centre and han
 1. **First check whether both flights use the same complex** — both at KLIA (main building plus satellite) is smoothest; a connection involving klia2 has to add the time to change buildings.
 2. From the KLIA main building to the satellite you rely on the people-mover, about 10 minutes including the wait, so count it into your margin.
 3. For a transfer across KLIA and klia2, allow more than 3 hours, especially when it involves clearing immigration, collecting baggage and checking in again.
+
+## Routes and flights
+
+- **Routes** — around 70 airlines in 2025, with 40 new routes launched; coverage spans Southeast Asia, China, South Asia, Oceania and the Middle East, and long-haul points include London, Sydney, Tokyo, Seoul and Dubai.
+- **Flights** — 63.4 million passengers in 2025, up about 11% year on year; domestic traffic grew 17% and international 8.7%.
+- **Aircraft** — main bases are **Malaysia Airlines (full service, main terminal)** and **AirAsia (low-cost, klia2)**; AirAsia flies mainly the A320 family, while Malaysia Airlines uses A330 and A350 widebodies on long-haul.
 
 ## Getting into Kuala Lumpur
 

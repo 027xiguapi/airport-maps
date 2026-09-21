@@ -4,7 +4,7 @@ summary: How Air Canada and Star Alliance take T1 while oneworld and SkyTeam tak
 updated: 2026-09-21
 ---
 
-Toronto Pearson sits about 27 km from the city centre and handles around 45 million passengers a year, making it Canada's largest airport. It has **only two terminals**: the Air Canada and Star Alliance carriers in T1, and oneworld, SkyTeam, WestJet and others in T3 — Terminal 3 does not mean "the third", because Terminal 2 was demolished in 2007.
+Toronto Pearson sits about 27 km from the city centre and handles **around 47 million passengers a year**, making it Canada's largest airport. It has **only two terminals**: the Air Canada and Star Alliance carriers in T1, and oneworld, SkyTeam, WestJet and others in T3 — Terminal 3 does not mean "the third", because Terminal 2 was demolished in 2007.
 
 ## The two terminals
 
@@ -25,6 +25,14 @@ Toronto Pearson sits about 27 km from the city centre and handles around 45 mill
 1. An Air Canada to Air Canada connection is made inside T1; oneworld and SkyTeam transfers are mostly made inside T3.
 2. **Between T1 and T3 you must go landside** — clearing immigration, collecting bags, taking the Terminal Link and then checking in and clearing security again; allow more than 3 hours.
 3. A cross-alliance connection is the most time-consuming kind of transfer here, so when booking, favour itineraries that stay in one building.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | Canada's largest airport, with **around 180 destinations**; long-haul points reach London, Tokyo, Delhi, Tel Aviv, Dubai, Hong Kong and São Paulo, alongside a dense North American network. About 22% of passengers connect here. |
+| Flights | A record **around 47 million passengers in 2025**, on roughly **450,000 movements** (about 1,200 a day). |
+| Aircraft | The main base is **Air Canada** (Star Alliance, T1; about 240 aircraft group-wide — 787 / 777 / A330 widebodies internationally, A320 family and 737 MAX domestically), followed by **WestJet** (T3) and **Air Transat** (leisure). |
 
 ## Getting into Toronto
 

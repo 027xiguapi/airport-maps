@@ -4,7 +4,7 @@ summary: The gate-number patterns and alliance split across three terminals, the
 updated: 2026-09-21
 ---
 
-Narita sits in Chiba Prefecture, about 60 km from central Tokyo, and handles around 40 million passengers a year. It is the capital region's furthest airport from the city: the terminals themselves are easy enough to grasp — **it is the ground transport that is hard, and 1.5 hours each way into town is the safe budget**.
+Narita sits in Chiba Prefecture, about 60 km from central Tokyo, and handles around 42.6 million passengers a year (Japanese fiscal year 2025). It is the capital region's furthest airport from the city: the terminals themselves are easy enough to grasp — **it is the ground transport that is hard, and 1.5 hours each way into town is the safe budget**.
 
 ## Three terminals and the gate numbers
 
@@ -24,6 +24,12 @@ Narita sits in Chiba Prefecture, about 60 km from central Tokyo, and handles aro
 - **On foot** — a dedicated walkway links T2 and T3, about 10 minutes, and often quicker than waiting for the bus.
 
 When a connection involves two different terminals (common when a low-cost flight meets a full-service airline), count the shuttle's headway into your connection time; for any cross-terminal connection involving T3, allow more than 2 hours.
+
+## Routes and flights
+
+- **Routes** — around 80 airlines flying to about 120 destinations; long-haul points cover Beijing, Shanghai, Guangzhou, Hong Kong, Seoul, Singapore, Bangkok, Sydney, Los Angeles, San Francisco, New York, Honolulu, Paris and Frankfurt.
+- **Flights** — about 42.59 million passengers in Japanese fiscal year 2025 (April 2025 to March 2026), up about 4% year on year and the second-busiest year in the airport's history; inbound foreign travellers reached a record for the third straight year.
+- **Aircraft** — main bases are **ANA (T1 north wing) and JAL (T2)**, while the LCC-only T3 is used mainly by Peach and Jetstar Japan; the fleet is 737 and A320 family narrowbodies, with 777, 787 and A350 on long-haul.
 
 ## Getting into Tokyo
 

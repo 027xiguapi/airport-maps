@@ -4,7 +4,7 @@ summary: How T2 and T3 divide the work since T1 closed for rebuilding in May 202
 updated: 2026-09-21
 ---
 
-Guangzhou Baiyun International Airport lies about 28 km from the city centre and handles around 76 million passengers a year. Its biggest change in the past two years has been **the opening of Terminal 3 and the closure of Terminal 1 for rebuilding** — a great many guides online still refer to T1, and following them will take you straight to the wrong building.
+Guangzhou Baiyun International Airport lies about 28 km from the city centre and handles around 83.6 million passengers a year (2025). Its biggest change in the past two years has been **the opening of Terminal 3 and the closure of Terminal 1 for rebuilding** — a great many guides online still refer to T1, and following them will take you straight to the wrong building.
 
 ## Only T2 and T3 are in service
 
@@ -23,6 +23,14 @@ Guangzhou Baiyun International Airport lies about 28 km from the city centre and
 - A **free shuttle bus** runs between T2 and T3; before connecting, confirm which building each of your two flights uses.
 - A China Southern to China Southern connection is almost always completed inside T2, and is the quickest.
 - For a connection involving T3, add the shuttle wait and the walking distance in the new building to your buffer.
+
+## Routes and flights
+
+| Aspect | Points |
+| --- | --- |
+| Routes | 83.59 million passengers in 2025, ranked second in China and ninth globally; China Southern uses Guangzhou as its core hub, serving major Chinese cities and long-haul points in South-East Asia, Europe, North America and Oceania |
+| Flights | **550,000 aircraft movements** in 2025, around 1,508 a day |
+| Aircraft | **China Southern Airlines** is overwhelmingly the home carrier, with a group fleet of around 970 aircraft (end of 2025); main types are the Airbus A320 family, A330 and A350, and Boeing 787 and 777 |
 
 ## Getting into the city
 

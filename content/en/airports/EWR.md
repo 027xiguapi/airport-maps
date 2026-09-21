@@ -4,7 +4,7 @@ summary: How the three terminals divide the work, what the 2026 AirTrain rebuild
 updated: 2026-09-21
 ---
 
-Newark lies about 20 km from Manhattan and handles around 48 million passengers a year, the New York metropolitan area's second international gateway. It has three terminals: **A is brand new, C is United's hub and B is the oldest, now being rebuilt** — and the one development that matters most in 2026 is this: **the AirTrain is being replaced wholesale, with sections closed on weekday daytime and covered by shuttle buses**.
+Newark lies about 20 km from Manhattan and handles around 47 million passengers a year (2025), the New York metropolitan area's second international gateway. It has three terminals: **A is brand new, C is United's hub and B is the oldest, now being rebuilt** — and the one development that matters most in 2026 is this: **the AirTrain is being replaced wholesale, with sections closed on weekday daytime and covered by shuttle buses**.
 
 ## The three terminals
 
@@ -17,6 +17,14 @@ Newark lies about 20 km from Manhattan and handles around 48 million passengers 
 **How to tell where you are:** for United, look first at **Terminal C** (some domestic flights use Terminal A); international carriers use B; A is mostly domestic. **United flights can be spread across all three buildings**, so always go by the terminal on your boarding pass.
 
 > Our diagram draws the three buildings as a cluster threaded onto a single rail line precisely to mark the AirTrain, the spine that links them.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | 83 airlines serving 188 non-stop destinations; 47 million passengers in 2025, down slightly from 48.9 million in 2024 as runway resurfacing and FAA slot limits reduced schedules |
+| Flights | Roughly 490 departures a day |
+| Aircraft | **United Airlines** is the base carrier, with its hub at Terminal C; the fleet flies Boeing 757 / 767 / 777 / 787 |
 
 ## Getting to Manhattan
 

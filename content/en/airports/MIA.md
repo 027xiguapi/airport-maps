@@ -4,7 +4,7 @@ summary: How one U-shaped building splits into three zones and six concourses, w
 updated: 2026-09-21
 ---
 
-Miami's airport lies about 13 km from the city centre and handles around 52 million passengers a year, making it the main US gateway to Latin America and the Caribbean. Its structure is **one vast U-shaped building**, divided by colour into three zones and **six concourses (D–J)** — there is no I and no K, which is the most common source of confusion here.
+Miami's airport lies about 13 km from the city centre and handles around 55.3 million passengers a year (2025), making it the main US gateway to Latin America and the Caribbean. Its structure is **one vast U-shaped building**, divided by colour into three zones and **six concourses (D–J)** — there is no I and no K, which is the most common source of confusion here.
 
 ## One U-shaped building, three zones, six concourses
 
@@ -27,6 +27,12 @@ Miami's airport lies about 13 km from the city centre and handles around 52 mill
 1. **American Airlines is in Concourse D** — an American connection is almost always completed inside D, which also has a small multi-stop people mover running along its length.
 2. A connection between the central zone (E/F/G) and the south zone (H/J) **means leaving security and going back through**, so allow more than 2 hours.
 3. Flights towards Latin America are dense and the share of connecting passengers is high, so signage is bilingual in Spanish and English.
+
+## Routes and flights
+
+- **Routes** — around 100 airlines flying to about 190 destinations, with the densest network in Latin America and the Caribbean (about 80 points); long-haul points include London, Paris, Frankfurt, Madrid, São Paulo and Buenos Aires.
+- **Flights** — 55.3 million passengers in 2025 (24.8 million international, 30.5 million domestic), the second-busiest US airport for international travellers.
+- **Aircraft** — main base is **American Airlines (Concourse D, over 60% of traffic)**, followed by JetBlue, Delta, LATAM, British Airways, Lufthansa and Emirates; short-haul fleets are 737 and A320 family, with 777, 787, A330 and A380 on long-haul.
 
 ## Getting into Miami
 

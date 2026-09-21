@@ -4,7 +4,7 @@ summary: How a single hall with five piers A–E is laid out, the indoor garden 
 updated: 2026-09-21
 ---
 
-Hamad International lies about 15 km from the centre of Doha and handles around 50 million passengers a year as Qatar Airways' global connecting hub. It has **a single terminal**, with five piers reaching out to either side — and as in Dubai or Istanbul, the logic of a connection here is that you walk within the building and never change building.
+Hamad International lies about 15 km from the centre of Doha and handles around 54.3 million passengers a year (2025) as Qatar Airways' global connecting hub. It has **a single terminal**, with five piers reaching out to either side — and as in Dubai or Istanbul, the logic of a connection here is that you walk within the building and never change building.
 
 ## One terminal, five piers
 
@@ -27,6 +27,14 @@ Doha is one of the world's most efficient transfer points, and a Qatar Airways t
 1. Every transfer is completed inside the same building, with no need to clear immigration or pass security again.
 2. On a through ticket, 60–90 minutes is usually enough to connect, but **when your gates are in the D or E zone, stretch that to two hours**.
 3. The transfer corridors and signage inside are clear — just follow the Transfer signs.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | Qatar Airways' global hub, serving around 146 destinations; 57 airlines operated here in 2025, when the airport handled 54.3 million passengers (+3%) |
+| Flights | 282,975 aircraft movements in 2025, roughly 780 a day, with an 85% on-time performance |
+| Aircraft | **Qatar Airways** is the base carrier, flying an all-widebody long-haul fleet (Boeing 777 and Airbus A350, around 250 aircraft) |
 
 ## Getting into Doha
 

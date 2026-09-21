@@ -4,7 +4,7 @@ summary: How the four terminals relate to the A and G international boarding are
 updated: 2026-09-21
 ---
 
-San Francisco International Airport sits about 21 km from the city centre and handles around 50 million passengers a year. Its four terminals are laid out in a U: **three domestic terminals (Harvey Milk T1, T2 and T3) plus one international terminal** — but the international terminal is itself split into two boarding areas, A and G, at opposite ends of the U, and that is the structure most easily overlooked at this Bay Area airport.
+San Francisco International Airport sits about 21 km from the city centre and handles **around 54 million passengers a year**. Its four terminals are laid out in a U: **three domestic terminals (Harvey Milk T1, T2 and T3) plus one international terminal** — but the international terminal is itself split into two boarding areas, A and G, at opposite ends of the U, and that is the structure most easily overlooked at this Bay Area airport.
 
 ## The four terminals
 
@@ -27,6 +27,14 @@ San Francisco International Airport sits about 21 km from the city centre and ha
 1. First see whether the international gate is A or G, then confirm which building the domestic leg uses.
 2. **Area G with T3 (United) and Area A with T1** are the smoothest pairings, completed inside the building without clearing security.
 3. Moving from G to A is a long-distance connection: allow more than 90 minutes, or take the airside walkway instead.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | Non-stop to **58 international and 86 domestic destinations** (about 144 in total); Asia-Pacific makes up about 11.8% of international passengers and Europe 7.8%. It is United's main gateway to Asia-Pacific, with long-haul points such as Singapore, Hong Kong, Tokyo, Sydney and Frankfurt. |
+| Flights | Around **54 million passengers in calendar 2025**; about **7,200 flights a week**. |
+| Aircraft | The main base is **United Airlines**, around **44% of the market**; its long-haul fleet flies Boeing 777 / 787 / 767 widebodies and its domestic fleet the A320 family and Boeing 737. Next come Delta (around 7.6%) and American (around 6.9%). |
 
 ## Getting into San Francisco
 

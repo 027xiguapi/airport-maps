@@ -1,10 +1,10 @@
 ---
 title: New York JFK terminal guide
 summary: Why the terminal numbers skip, how the AirTrain ties every terminal together, and how to get into Manhattan.
-updated: 2026-09-16
+updated: 2026-09-21
 ---
 
-JFK handles around 63 million passengers a year and sits about 24 km from Manhattan. Unlike most hubs it has **no single main terminal** — instead several separate terminals are spread around a ring road, which means *which terminal you land at* largely decides how long the trip into the city takes.
+JFK handles around 63 million passengers a year (2025) and sits about 24 km from Manhattan. Unlike most hubs it has **no single main terminal** — instead several separate terminals are spread around a ring road, which means *which terminal you land at* largely decides how long the trip into the city takes.
 
 ## The five terminals
 
@@ -26,6 +26,14 @@ JFK handles around 63 million passengers a year and sits about 24 km from Manhat
 - It also connects to the **subway E / J / Z lines** and the **Long Island Rail Road (LIRR)** — the key link into New York.
 
 So the standard route into the city is: **terminal → AirTrain → subway or LIRR**. For a cross-terminal connection you also rely on the AirTrain, so factor in the wait and the loop.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | The United States' leading international gateway; around 63 million passengers in 2025, with an especially dense transatlantic network to every major city worldwide |
+| Flights | 1.6 million tonnes of air cargo in 2025; international passenger traffic remains the largest in the US |
+| Aircraft | **Delta Air Lines** (T4) and **JetBlue** (T5) are the base carriers; **American Airlines** and British Airways and other oneworld carriers use T8, all flying widebodies such as the 767 / 777 / 787 and A321 / A330 / A350 on long-haul |
 
 ## Getting into Manhattan
 

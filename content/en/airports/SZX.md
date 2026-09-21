@@ -4,7 +4,7 @@ summary: How a single main building plus a satellite hall shapes your gate decis
 updated: 2026-09-21
 ---
 
-Shenzhen Bao'an International Airport sits north-west of the city on the eastern shore of the Pearl River estuary, handles around 61 million passengers a year and lies about 32 km from the Futian central district. Its layout is simple, yet easy to misjudge: **there is only one main building (T3), but some gates are in a satellite hall that opened in late 2021** — check-in is straightforward, but the gate itself may be a journey.
+Shenzhen Bao'an International Airport sits north-west of the city on the eastern shore of the Pearl River estuary, handles **around 66 million passengers a year** and lies about 32 km from the Futian central district. Its layout is simple, yet easy to misjudge: **there is only one main building (T3), but some gates are in a satellite hall that opened in late 2021** — check-in is straightforward, but the gate itself may be a journey.
 
 ## One main building and one satellite hall
 
@@ -28,6 +28,14 @@ Transfers at Shenzhen all happen within T3, and the process is simple:
 1. Start by checking whether your two flights' gates are split between the main building and the satellite hall.
 2. Both in the main building is quickest; if one is in the satellite hall, add the return people-mover journey and allow more than 90 minutes.
 3. Domestic flights are dense and gate allocations change often, so go by the live flight displays when connecting.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | A record **around 66 million passengers in 2025** (+8.1%); **61 international and regional destinations** (long-haul points such as Tokyo, Seoul, Singapore, Bangkok and Dubai), with a dense domestic network across China. |
+| Flights | **448,000 aircraft movements in 2025** (about 1,230 a day); in the 2025/26 season the daily plan ran at around 1,300 movements. The third runway entered service in December 2025. |
+| Aircraft | The main base is **China Southern Airlines** (its second-largest hub; A320 family narrowbodies with A350 / 787 widebodies on long-haul), alongside Shenzhen Airlines and the **SF Airlines** all-freighter cargo base. |
 
 ## Getting into the city
 

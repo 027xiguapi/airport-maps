@@ -4,7 +4,7 @@ summary: How the main terminal fits domestic and international under one roof, w
 updated: 2026-09-21
 ---
 
-Vancouver Airport sits about 12 km from the city centre and handles around 26 million passengers a year, making it Canada's second-busiest airport. Its main terminal is a clever piece of design: **domestic and international flights share a single building**, divided by stacked levels, so passengers can connect on foot; a separate **South Terminal** is dedicated to regional routes and seaplanes.
+Vancouver Airport sits about 12 km from the city centre and handles **around 27 million passengers a year**, making it Canada's second-busiest airport. Its main terminal is a clever piece of design: **domestic and international flights share a single building**, divided by stacked levels, so passengers can connect on foot; a separate **South Terminal** is dedicated to regional routes and seaplanes.
 
 ## The main terminal and the South Terminal
 
@@ -27,6 +27,14 @@ Vancouver Airport sits about 12 km from the city centre and handles around 26 mi
 1. A domestic-to-international connection is made inside the same building — walking plus a security check usually connects within the hour.
 2. **Allow pre-clearance time on US-bound flights** — 30–60 minutes earlier than for an ordinary international flight is the sensible margin.
 3. Vancouver is the hub for Asia and western Canada, and Air Canada group itineraries connect smoothly.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | A record **around 27 million passengers in 2025** (+2.7%); **around 125 destinations**, a key Pacific gateway to Asia — long-haul points include Tokyo, Seoul, Beijing, Shanghai, Hong Kong, Delhi and Sydney. Asia-Pacific traffic grew 15.6% year on year. |
+| Flights | Aircraft movements rose about 3% in 2025; daily traffic averaged roughly 74,000 passengers and topped 140,000 on the busiest days. Cargo hit a record around 365,000 tonnes. |
+| Aircraft | The main base is **Air Canada** (Star Alliance; about 240 aircraft group-wide — 787 / 777 / A330 widebodies internationally, A320 family and 737 MAX domestically), followed by **WestJet** and Pacific Coastal on regional routes. |
 
 ## Getting into Vancouver
 

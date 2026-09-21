@@ -4,7 +4,7 @@ summary: The numbering logic of seven parallel concourses, how the underground P
 updated: 2026-09-21
 ---
 
-Atlanta's airport lies about 16 km from the city centre and handles **around 105 million passengers a year, long ranked first in the world**. Its layout is exceptionally orderly: a single central spine threads **seven parallel concourses** lettered from T to F, with a 24-hour **Plane Train** running underground to link them all — so at Atlanta you almost never end up in the wrong building, only too far from your gate.
+Atlanta's airport lies about 16 km from the city centre and handles **around 106 million passengers a year (2025), long ranked first in the world**. Its layout is exceptionally orderly: a single central spine threads **seven parallel concourses** lettered from T to F, with a 24-hour **Plane Train** running underground to link them all — so at Atlanta you almost never end up in the wrong building, only too far from your gate.
 
 ## The seven concourses
 
@@ -27,6 +27,14 @@ Atlanta's airport lies about 16 km from the city centre and handles **around 105
 1. **Delta's home base** — Delta connections run very smoothly here, usually achievable in around an hour.
 2. For a domestic-to-international connection (E/F), count the Plane Train ride in; allow 2 hours.
 3. The airport's traffic is enormous but the circulation is simple and clear — just follow the Plane Train signs.
+
+## Routes and flights
+
+| Aspect | Points |
+| --- | --- |
+| Routes | Delta runs nearly 1,000 peak-day departures to **207 destinations worldwide** (61 international), covering the US domestic network plus Europe, Latin America and Asia |
+| Flights | **807,625 total aircraft movements** in 2025, second in North America and among the world's highest |
+| Aircraft | **Delta Air Lines** is overwhelmingly the home carrier, with a mainline fleet of around 960 aircraft; main types are the A321neo, A330, A350 and Boeing 737, 757 and 767 |
 
 ## Getting into Atlanta
 

@@ -4,7 +4,7 @@ summary: How the A–D concourses relate to the two satellite buildings, how the
 updated: 2026-09-21
 ---
 
-Seattle-Tacoma sits about 23 km from the city centre, handles around 50 million passengers a year and is the gateway to the American north-west. Its layout is **four concourses plus two satellite buildings**: concourses A, B, C and D ring the main terminal, while the **North Satellite (N) and South Satellite (S)** stand apart and are linked by an underground train — if your gate letter carries an N or an S, you have a ride ahead of you.
+Seattle-Tacoma sits about 23 km from the city centre, handles **around 53 million passengers a year** and is the gateway to the American north-west. Its layout is **four concourses plus two satellite buildings**: concourses A, B, C and D ring the main terminal, while the **North Satellite (N) and South Satellite (S)** stand apart and are linked by an underground train — if your gate letter carries an N or an S, you have a ride ahead of you.
 
 ## Concourses and satellites
 
@@ -26,6 +26,14 @@ Seattle-Tacoma sits about 23 km from the city centre, handles around 50 million 
 1. Connections are completed within the same building complex; if yours crosses to a satellite (N/S), add the train time to your buffer.
 2. Trains between the main terminal and the satellites are frequent, and a transfer usually takes 10–15 minutes.
 3. Seattle is a starting point for Alaska and for the North Pacific routes to Asia, and through-connection signage is clear.
+
+## Routes and flights
+
+| Aspect | Detail |
+| --- | --- |
+| Routes | Around **37 airlines** serve **96 domestic and 36 international non-stop destinations** (about 132 in total); international points cover Canada, Mexico, major European cities, East Asia (Tokyo, Seoul, Beijing, Shanghai, Hong Kong) and Central Asia. It is the starting point for Alaska and the North Pacific routes to Asia. |
+| Flights | A record **52.7 million passengers in 2025**; roughly **1,200 aircraft movements a day** (about 440,000 a year). |
+| Aircraft | The main base is **Alaska Airlines** (around 43% of the market, with the Boeing 737 family as its all-but-exclusive workhorse), followed by **Delta Air Lines** (around 20%), which sends widebodies such as the 767 and A330 / A350 on the transpacific and European runs. |
 
 ## Getting into Seattle
 

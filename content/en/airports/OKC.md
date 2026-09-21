@@ -4,7 +4,7 @@ summary: The compact shape of a single-terminal airport, a route network led by 
 updated: 2026-09-21
 ---
 
-Will Rogers World Airport sits to the south-west of Oklahoma City, about 10 km from the city centre, and handles around 4.5 million passengers a year — a classic **medium-sized single-terminal airport**. It has recently completed a round of terminal expansion, adding gates and security lanes and restoring its ability to handle international flights — but structurally it stays simple: **one terminal, start to finish**.
+Will Rogers World Airport sits to the south-west of Oklahoma City, about 10 km from the city centre, and handles around 4.5 million passengers a year (as of 2024) — a classic **medium-sized single-terminal airport**. It has recently completed a round of terminal expansion, adding gates and security lanes and restoring its ability to handle international flights — but structurally it stays simple: **one terminal, start to finish**.
 
 ## A single terminal
 
@@ -21,6 +21,12 @@ Will Rogers World Airport sits to the south-west of Oklahoma City, about 10 km f
 - The airport is dominated by point-to-point traffic, so **connections depend on through-ticketing between partner airlines**.
 - If you need to connect between airlines, allow more than 2 hours for immigration (where it applies) and a fresh security check.
 - The main carriers are Southwest (the largest share), American, Delta, United and Alaska, covering the major US hubs.
+
+## Routes and flights
+
+- **Routes** — around seven commercial airlines serving about 30 non-stop US destinations, covering Dallas, Denver, Atlanta, Charlotte, Chicago, Phoenix, Las Vegas and other major hubs; the first non-stop international route resumed in November 2025.
+- **Flights** — about 4.6 million passengers in 2024 (a record), roughly flat in 2025; around 120,000 aircraft movements a year including general aviation.
+- **Aircraft** — largest carrier is **Southwest**, followed by American, Delta, United and Alaska; the fleet is 737 and A320 family narrowbodies.
 
 ## Getting into the city
 

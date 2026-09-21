@@ -4,7 +4,7 @@ summary: How the main terminal and Concourses A–D sit apart, the role of the A
 updated: 2026-09-21
 ---
 
-Dulles lies about 40 km from central Washington and handles around 25 million passengers a year, the Washington metropolitan area's main international gateway. Its layout has one historical quirk: **the check-in main terminal and the boarding concourses are separate from each other** — passengers were once moved by "mobile lounges", and today the underground **AeroTrain** does most of the linking.
+Dulles lies about 40 km from central Washington and handles around 29 million passengers a year (2025), the Washington metropolitan area's main international gateway. Its layout has one historical quirk: **the check-in main terminal and the boarding concourses are separate from each other** — passengers were once moved by "mobile lounges", and today the underground **AeroTrain** does most of the linking.
 
 ## The main terminal and the four concourses
 
@@ -28,6 +28,14 @@ Dulles lies about 40 km from central Washington and handles around 25 million pa
 1. **United's Atlantic gateway** — United connections are mostly made between Concourses C and D, linked by the AeroTrain.
 2. Waiting for and riding the AeroTrain takes about 10–15 minutes; build that into your margin.
 3. An international arrival onto a domestic flight means immigration, collecting baggage and checking in again through security; allow more than 2.5 hours.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | 47 airlines flying to 163 destinations (2026); 29.01 million passengers in 2025 (+6.4%), with international passengers of 10.53 million a record |
+| Flights | 29.01 million passengers in 2025, continuing to grow quickly |
+| Aircraft | **United Airlines'** Atlantic gateway, which it calls the "Decade of Dulles"; it flies transatlantic and Latin American routes on Boeing 757 / 767 / 777 / 787 |
 
 ## Getting into Washington
 

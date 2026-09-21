@@ -4,7 +4,7 @@ summary: How T1 and T2 divide the airlines, the free shuttle train out to the sa
 updated: 2026-09-21
 ---
 
-Incheon International Airport is built on Yeongjong Island, about 50 km from the city centre of Seoul, and handles around 73 million passengers a year. It is one of Asia's most important connecting hubs, and structurally it has only **two main buildings**: Korean Air, Asiana and others at T2, most foreign airlines at T1 — **confirm the operating airline and you have essentially identified the terminal**.
+Incheon International Airport is built on Yeongjong Island, about 50 km from the city centre of Seoul, and handles around 74.1 million passengers a year (2025). It is one of Asia's most important connecting hubs, and structurally it has only **two main buildings**: Korean Air, Asiana and others at T2, most foreign airlines at T1 — **confirm the operating airline and you have essentially identified the terminal**.
 
 ## Two terminals and one satellite concourse
 
@@ -29,6 +29,14 @@ Incheon's connection efficiency is among the best in the world, but a cross-term
 1. First confirm the gate range of both flights (two-digit main building / 1xx / 2xx).
 2. Korean Air to Korean Air is almost always completed inside T2, and saves the most time.
 3. A connection between T1 and T2 must add the wait for the shuttle bus — allow more margin rather than less.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | 74.07 million passengers in 2025 (+4.1%), the highest annual figure since the airport opened; it serves every major city worldwide and is also among the world's leading air-cargo hubs |
+| Flights | 374,039 aircraft movements in 2025, roughly 1,025 a day |
+| Aircraft | **Korean Air** and **Asiana Airlines** are the twin bases, both at T2; the two carriers completed their merger in 2024, with a combined fleet of about 200 aircraft, mainly Boeing 737 / 747 / 777 and Airbus A330 / A350 |
 
 ## Getting into Seoul
 

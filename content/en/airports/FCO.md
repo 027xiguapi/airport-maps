@@ -4,7 +4,7 @@ summary: How T1 and T3 divide the work, why the Leonardo Express only calls at T
 updated: 2026-09-21
 ---
 
-Fiumicino lies about 30 km from Rome's city centre and handles around 45 million passengers a year, Italy's largest airport. Its terminal layout is simple: **T1 takes Schengen and domestic traffic, T3 takes long-haul international** — but there is one thing you must remember: **the airport railway station is at T3**, so passengers leaving from T1 have to walk to T3 before they can board the express.
+Fiumicino lies about 30 km from Rome's city centre and handles around 51.3 million passengers a year (2025), Italy's largest airport. Its terminal layout is simple: **T1 takes Schengen and domestic traffic, T3 takes long-haul international** — but there is one thing you must remember: **the airport railway station is at T3**, so passengers leaving from T1 have to walk to T3 before they can board the express.
 
 ## The two terminals
 
@@ -26,6 +26,14 @@ Fiumicino lies about 30 km from Rome's city centre and handles around 45 million
 1. First check which building each flight uses: both in T3 or both in T1 is the quickest.
 2. **Between T1 and T3 you can use the airside walkway**, normally a walk of 10–15 minutes, with no need to clear security again.
 3. Connecting between a Schengen and a non-Schengen flight means passport control, so leave a margin on top of that.
+
+## Routes and flights
+
+| Aspect | Details |
+| --- | --- |
+| Routes | In 2025 the airport connected Rome with about 80 countries and more than 240 destinations; 51.3 million passengers (+4%), the first time it has passed 50 million, and Italy's busiest |
+| Flights | 51.3 million passengers in 2025; traditional carriers carried 37% and low-cost carriers 63% of the total |
+| Aircraft | **ITA Airways** is the base carrier, flying A320-family aircraft and A330 widebodies on domestic, European and intercontinental routes; Ryanair and other low-cost carriers also operate extensively from T1 |
 
 ## Getting into Rome
 
