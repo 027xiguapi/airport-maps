@@ -1,0 +1,1767 @@
+{
+  "note": "Provenance for downloaded terminal maps. Keep this next to the files: it records where each file came from and under what right it was copied.",
+  "source": "https://www.eoob.com/images/terminal-maps",
+  "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established",
+  "updatedAt": "2026-09-21T11:40:38.309Z",
+  "count": 57,
+  "files": {
+    "HKG": {
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/HKG/HKG_large.png",
+        "file": "HKG_large.png",
+        "bytes": 728371,
+        "sha256": "dda7eacd99eb3a2437559691017965f802443e5fd7cf402bef535d64ae382272",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:24:09.889Z",
+        "compressed": {
+          "bytes": 186340,
+          "sha256": "bba11b5edf5c476083d91247581afbef5762dcc9fdf47d6bd64a1b7fb0936dc7",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.271Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/HKG/HKG.pdf",
+        "file": "HKG.pdf",
+        "bytes": 642377,
+        "sha256": "c86a2fe9ac7ca0ac88e76f54c6f832159fa202c5823a9e74f4998da42cda2e4f",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:24:09.889Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "PEK": {
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/PEK/PEK_large.png",
+        "file": "PEK_large.png",
+        "bytes": 741184,
+        "sha256": "dccd71167eb9129b9b4482446aaadcf128b6db559ae12ae04ceb1b9416e0f9f7",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:24:09.889Z",
+        "compressed": {
+          "bytes": 180507,
+          "sha256": "ed3bf024b228d8c04722258e9a7924d683c56cf1a232390b79faabe4e256c4f0",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.294Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/PEK/PEK.pdf",
+        "file": "PEK.pdf",
+        "bytes": 714226,
+        "sha256": "a284fadfc41f13eded6886bf2803e10339df31a5d70f64f3ab44b9f263046f77",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:24:09.889Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "TAS": {
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/TAS/TAS_large.png",
+        "file": "TAS_large.png",
+        "bytes": 1140163,
+        "sha256": "aaae936d4d8221268f643f835f864c164a27dcad3a97275c6e337e2c00299df3",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:24:09.889Z",
+        "compressed": {
+          "bytes": 190411,
+          "sha256": "e703b61f0c63f523916f3a879a974430509e09dafce31d1c6dbb79a59ad69bff",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.304Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/TAS/TAS.pdf",
+        "file": "TAS.pdf",
+        "bytes": 815948,
+        "sha256": "8373752487ca92edb71b3a289e0f8553229cc4cfb4bd6cf4f96f8f500412e6be",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:24:09.889Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "AKL": {
+      "name": "Auckland Airport",
+      "city": "Auckland",
+      "countryCode": "NZ",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/AKL/AKL_large.png",
+        "file": "AKL_large.png",
+        "bytes": 1345450,
+        "sha256": "722109b637adf44d5b3938fbbf6471b4be336c54781dddabb1c8ef565666134a",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 295301,
+          "sha256": "72a4ed921a78e32aea0ab65dadf6f7afca314a4a75441cc7b52030e3deae8209",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:39:47.036Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/AKL/AKL.pdf",
+        "file": "AKL.pdf",
+        "bytes": 1044395,
+        "sha256": "85523e59160c335c3f02931f64dc85bcf61ec2d47fdd54ffba74e497f422e1e8",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "AMS": {
+      "name": "Amsterdam Airport Schiphol",
+      "city": "Amsterdam",
+      "countryCode": "NL",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/AMS/AMS_large.png",
+        "file": "AMS_large.png",
+        "bytes": 1146388,
+        "sha256": "47cc0a308fac2f248d46f9f3fd8f82b4b22841dd19098d1b63859b75d7cb60bd",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 274655,
+          "sha256": "1e0722b953eb5760fb11078c638aec2cdbd8b740a410c902ba9b706fef6d9749",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:39:47.037Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/AMS/AMS.pdf",
+        "file": "AMS.pdf",
+        "bytes": 918292,
+        "sha256": "18b0a47ca4a3573c8c531486285ad43dab61aabbee05f96b2919714280e62bbb",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "ARN": {
+      "name": "Stockholm Arlanda Airport",
+      "city": "Stockholm",
+      "countryCode": "SE",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/ARN/ARN_large.png",
+        "file": "ARN_large.png",
+        "bytes": 871423,
+        "sha256": "1b8bf1f04fe7125541b9fab16d3f83215f37c6034fd1aa45efb84c3831b3baf3",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 171851,
+          "sha256": "e046ce07ae21ccfd50a959520cf5ba43a7146459c4a2bece6a846f6e38003494",
+          "width": 2000,
+          "height": 2001,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:39:47.038Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/ARN/ARN.pdf",
+        "file": "ARN.pdf",
+        "bytes": 1192460,
+        "sha256": "c56d99278f3730b706db297b331393e3629db525be691821a4d6363241cbda29",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "ATH": {
+      "name": "Athens International Airport",
+      "city": "Athens",
+      "countryCode": "GR",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/ATH/ATH_large.png",
+        "file": "ATH_large.png",
+        "bytes": 578947,
+        "sha256": "de95d3794e7e9a6469388b7beb1d13451998e512732a8a7c64a6aadf6e7debf0",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 138360,
+          "sha256": "63a993af306b0ddf0572a2c639cc90ad94ea4ba1ac9b63579b63dd43635bce16",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.252Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/ATH/ATH.pdf",
+        "file": "ATH.pdf",
+        "bytes": 622281,
+        "sha256": "6c46690309b054c36695759e7404bc64cf29964aff9291a6e7f71d7bb07a2a9b",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "ATL": {
+      "name": "Hartsfield–Jackson Atlanta International Airport",
+      "city": "Atlanta",
+      "countryCode": "US",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/ATL/ATL_large.png",
+        "file": "ATL_large.png",
+        "bytes": 888252,
+        "sha256": "cbb63713d0539d8f69ee7584f717a9b3897b5418e4713d0e7b4bdf9f87429793",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 210633,
+          "sha256": "b83cac514e99a044cfabd69b293fd830f8e2385806ef1f89cfb71cd045cbd35a",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.254Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/ATL/ATL.pdf",
+        "file": "ATL.pdf",
+        "bytes": 777538,
+        "sha256": "2239ccfd9e4691b4a035c55b3cb1376e8d466dd22556720d74d74bf103dd613e",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "BCN": {
+      "name": "Barcelona–El Prat Airport",
+      "city": "Barcelona",
+      "countryCode": "ES",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/BCN/BCN_large.png",
+        "file": "BCN_large.png",
+        "bytes": 599977,
+        "sha256": "43648543bb605d6ce0e2490fd8837d20df89e0af388b396d767adaf248a3ec80",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 148320,
+          "sha256": "b3a642879408ea2a3ce3a02b543a19bc20d00a86891e1143f93e880dbb407e2e",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.255Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/BCN/BCN.pdf",
+        "file": "BCN.pdf",
+        "bytes": 664432,
+        "sha256": "3393e8f5fd63a0e4a6a839e274678d272e98548a15aafdd45d6270c44a25dc5b",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "BKK": {
+      "name": "Suvarnabhumi Airport",
+      "city": "Bangkok",
+      "countryCode": "TH",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/BKK/BKK_large.png",
+        "file": "BKK_large.png",
+        "bytes": 604341,
+        "sha256": "2b133d508c584a617b10a31dd1e966a6e8548a045c94cddfb428ba070a5f6082",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 132626,
+          "sha256": "f6f8947287e440f75a7803f65a72e088656824e20e515f95544ef26ab1111d55",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.256Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/BKK/BKK.pdf",
+        "file": "BKK.pdf",
+        "bytes": 617886,
+        "sha256": "b841f1495636bd4aaf9133a0f5fca0a46c06cf9cc593a9cec9af25029714b7a1",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "CAI": {
+      "name": "Cairo International Airport",
+      "city": "Cairo",
+      "countryCode": "EG",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/CAI/CAI_large.png",
+        "file": "CAI_large.png",
+        "bytes": 1062234,
+        "sha256": "fc404a99d25aae3d0cfe1b976a0cbe9c8975f6a8a9e63ba1154ff1aa0c5c3175",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 219645,
+          "sha256": "f3764bbf84c664f3c01eca3603037d7fb60614f060fe2596e6d17eaa6a57eff2",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.257Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/CAI/CAI.pdf",
+        "file": "CAI.pdf",
+        "bytes": 853696,
+        "sha256": "c73769cc085aae789bac6779ab08362441dc4307b313afb40b407ffbe4a4bad5",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "CAN": {
+      "name": "Guangzhou Baiyun International Airport",
+      "city": "Guangzhou",
+      "countryCode": "CN",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/CAN/CAN_large.png",
+        "file": "CAN_large.png",
+        "bytes": 746256,
+        "sha256": "395de3de328aa403c2aaa462165fc2988781a15fe8fc7d2de5db0d6574048c69",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 177305,
+          "sha256": "8e38759aacd5da6e34536c98988584c5690dbca25e3b439b9e61ec3a20a350b8",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.258Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/CAN/CAN.pdf",
+        "file": "CAN.pdf",
+        "bytes": 734986,
+        "sha256": "72d69f4ead5419f0e40c401f563329c882d1cde06e84d3bea7b5ff84bfe3201b",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "CDG": {
+      "name": "Paris Charles de Gaulle Airport",
+      "city": "Paris",
+      "countryCode": "FR",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/CDG/CDG_large.png",
+        "file": "CDG_large.png",
+        "bytes": 930540,
+        "sha256": "52ef208352a584b4d33baef65eb010456a62f6231a441f436ecd7f00c2885f52",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 188614,
+          "sha256": "801a84803bc069c0005626e6c952518651a6fa05caf008e779eb7026a75d9689",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.259Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/CDG/CDG.pdf",
+        "file": "CDG.pdf",
+        "bytes": 721604,
+        "sha256": "a08dd5df098592dc3594a8894d29dc302ceea30f907f0eddadd1115e2a197f0a",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "CGK": {
+      "name": "Soekarno–Hatta International Airport",
+      "city": "Jakarta",
+      "countryCode": "ID",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/CGK/CGK_large.png",
+        "file": "CGK_large.png",
+        "bytes": 806234,
+        "sha256": "5ab5fbd27cfea5dd940bbc4374470cbd535608b579028950c4f503119df1b7ad",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 210571,
+          "sha256": "83689e6f86cbaa4ce5034cd6e05887882970c050e0071b095e1020ef7065e692",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.260Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/CGK/CGK.pdf",
+        "file": "CGK.pdf",
+        "bytes": 794219,
+        "sha256": "d44c1de46e8c3403dc1ed3418e9384cee3bad38bdba520259903074b78b81aca",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "CPH": {
+      "name": "Copenhagen Airport Kastrup",
+      "city": "Copenhagen",
+      "countryCode": "DK",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/CPH/CPH_large.png",
+        "file": "CPH_large.png",
+        "bytes": 1365540,
+        "sha256": "6c27b31e09a1c4c040781873acdc23145e215ef38ecdb0dd87ace87ba94f9f3d",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 343236,
+          "sha256": "fac7cf279d95954e098e53c79e3f242c589d8150428bab36b5a74621bb7c40e9",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.261Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/CPH/CPH.pdf",
+        "file": "CPH.pdf",
+        "bytes": 1082346,
+        "sha256": "f62e5ec6320c4353ab412391b6b46b220c9a97914a3e317ec8c321feb33a4543",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "DEL": {
+      "name": "Indira Gandhi International Airport",
+      "city": "Delhi",
+      "countryCode": "IN",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/DEL/DEL_large.png",
+        "file": "DEL_large.png",
+        "bytes": 926371,
+        "sha256": "c598d0d289ec3f68121dc041b34776c9e4b537b30e77aa3c2f69882a0258399d",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 165043,
+          "sha256": "af15298a714bf98d7f4f7e3cd553b4bfd18c529ecb16bf19334cdb22a7876e7e",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.262Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/DEL/DEL.pdf",
+        "file": "DEL.pdf",
+        "bytes": 852649,
+        "sha256": "c5bf88e13d8ee86da5f7ced415d7970587a20fbc5555233cccfa3f7218d66ace",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "DOH": {
+      "name": "Hamad International Airport",
+      "city": "Doha",
+      "countryCode": "QA",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/DOH/DOH_large.png",
+        "file": "DOH_large.png",
+        "bytes": 648944,
+        "sha256": "4790d0d88f4aadc70b4bff61608f35ef0953371b14aebfdfc780bbbd7e328bc7",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 124337,
+          "sha256": "bdc337e0d69830001511705b8acef2b4abd59d2d140524a63e7f00972c1f3ec2",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.263Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/DOH/DOH.pdf",
+        "file": "DOH.pdf",
+        "bytes": 564471,
+        "sha256": "1d30445d79af4024a02f436e1c04dda1c3f4aa3269ad137db9f7623f03afcc7d",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "DUB": {
+      "name": "Dublin Airport",
+      "city": "Dublin",
+      "countryCode": "IE",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/DUB/DUB_large.png",
+        "file": "DUB_large.png",
+        "bytes": 1171544,
+        "sha256": "0c7c5ff0a321e31d5ca6a53d6bdcf4662eba8d156917e7fd504de2bf88b88a1b",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 223389,
+          "sha256": "46c09773160a41370b9682a7c5f1b18d018fa24e9b055538d6411e0832120c44",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.264Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/DUB/DUB.pdf",
+        "file": "DUB.pdf",
+        "bytes": 889338,
+        "sha256": "5c9543fd2ac3a6f932bf2965ade52ed97d9955b491c64cc78aab3331004ffa4a",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "DXB": {
+      "name": "Dubai International Airport",
+      "city": "Dubai",
+      "countryCode": "AE",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/DXB/DXB_large.png",
+        "file": "DXB_large.png",
+        "bytes": 2066239,
+        "sha256": "d1b1debd9efeb4e2703a9238556c5b8680af4d4d97bc5369b3d17add978b0bd7",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 663225,
+          "sha256": "62bc140929199ba69d4aade9064d65fe84648ca32035bee25decfb48168af90a",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.266Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/DXB/DXB.pdf",
+        "file": "DXB.pdf",
+        "bytes": 1458532,
+        "sha256": "5a95bf16468dba4559e698afaf1c6df8a05e69d1f8bb3cf06762b84394ea2243",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "FCO": {
+      "name": "Rome Fiumicino Airport",
+      "city": "Rome",
+      "countryCode": "IT",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/FCO/FCO_large.png",
+        "file": "FCO_large.png",
+        "bytes": 1328343,
+        "sha256": "854b72445c469964852a60215818b023f58ded18ac477ddbc9bf5f0e834d662b",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 252992,
+          "sha256": "39c4eeb93f4d298f1cf9c8f577d7d84e69f371319abb36ac98b7111d501a74e1",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.268Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/FCO/FCO.pdf",
+        "file": "FCO.pdf",
+        "bytes": 966679,
+        "sha256": "df8c843bf178a7fd92142fa3d45d01d8b6f7d592d5342640b9082e472ca045bb",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "EWR": {
+      "name": "Newark Liberty International Airport",
+      "city": "New York",
+      "countryCode": "US",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/EWR/EWR_large.png",
+        "file": "EWR_large.png",
+        "bytes": 1568223,
+        "sha256": "1918afe6e4bd482f292f5fe4cf5e4997f048c56a7e9edda3a29980292809d56a",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 360763,
+          "sha256": "1216881bc0e2560faae06d7635b3738ae143e5469fd2548428bf2c91069b27ae",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.267Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/EWR/EWR.pdf",
+        "file": "EWR.pdf",
+        "bytes": 1181789,
+        "sha256": "05b0e6339055470c820fb2d0175182a3319a524e82894ee8273089671aab6a8e",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "GRU": {
+      "name": "São Paulo/Guarulhos International Airport",
+      "city": "Sao Paulo",
+      "countryCode": "BR",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/GRU/GRU_large.png",
+        "file": "GRU_large.png",
+        "bytes": 1003590,
+        "sha256": "07f174325c35c505913706ef50a87a3d93e4096bd194e5b8cd2b480b08559c75",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 219886,
+          "sha256": "367ddf616972fcce143a207455899b8f1169c5afec28431c699d8f974e106b72",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.270Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/GRU/GRU.pdf",
+        "file": "GRU.pdf",
+        "bytes": 858326,
+        "sha256": "6a10e51a3d3fbf7d0e6ac4aaab973b6cded8be464849d15652e827e838f15250",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "FRA": {
+      "name": "Frankfurt Airport",
+      "city": "Frankfurt",
+      "countryCode": "DE",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/FRA/FRA_large.png",
+        "file": "FRA_large.png",
+        "bytes": 948914,
+        "sha256": "782762e94b9dd5dadc758974e5d06248fc40eceb9bedee59be8fec952351f575",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 235835,
+          "sha256": "5ca4511cfcdc55fcc72132becdb05b1ff79d0e151dc1b33b37ef753900dfb458",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.269Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/FRA/FRA.pdf",
+        "file": "FRA.pdf",
+        "bytes": 836255,
+        "sha256": "6e1d598b9c04718bdb48d6da3367ac8e20e047bcfd3e68f339775918c0265ecb",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "HND": {
+      "name": "Tokyo Haneda Airport",
+      "city": "Tokyo",
+      "countryCode": "JP",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/HND/HND_large.png",
+        "file": "HND_large.png",
+        "bytes": 1155302,
+        "sha256": "93907b1221cf9f949994a7e35f907c26a5aa5f7f12fcb8061499965a3a04373a",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 275111,
+          "sha256": "802c0a2c0c2a567550c09914d197ca0587ce9ce6db6de8291c138414faf3bf1b",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.272Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/HND/HND.pdf",
+        "file": "HND.pdf",
+        "bytes": 914470,
+        "sha256": "89afb5b44c1218df7261963f2562875a5b7425fce001e147b01de386db286494",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "IAD": {
+      "name": "Washington Dulles International Airport",
+      "city": "Washington",
+      "countryCode": "US",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/IAD/IAD_large.png",
+        "file": "IAD_large.png",
+        "bytes": 835836,
+        "sha256": "a7474e80267641f9daaf1aa40ce8f236d5b08b2a88e4f7402e4ec8cc86611e84",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 194158,
+          "sha256": "3248df7859eb3c9a49d793667fbf88f2d7550c9afb7dc9640a841ebc3238ea86",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.273Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/IAD/IAD.pdf",
+        "file": "IAD.pdf",
+        "bytes": 739760,
+        "sha256": "99d77bf6559a8422f0811254de885c393f53843a270d9fea8d2f387baee8661b",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "ICN": {
+      "name": "Incheon International Airport",
+      "city": "Seoul",
+      "countryCode": "KR",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/ICN/ICN_large.png",
+        "file": "ICN_large.png",
+        "bytes": 940776,
+        "sha256": "d12f1cb8a1ad48035f25a06183a6804cb32ffa23f2afdfe42601ece9ef3081c1",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 274743,
+          "sha256": "e522946a7246b841436a5e5e276faeb89df030ef0aab327b6f890dd0db6f3c4e",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.274Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/ICN/ICN.pdf",
+        "file": "ICN.pdf",
+        "bytes": 751301,
+        "sha256": "fe73bc359ecdbf9a9289fd83a305808530e5eaed8485d6989188a29e223009c8",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "IST": {
+      "name": "Istanbul Airport",
+      "city": "Istanbul",
+      "countryCode": "TR",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/IST/IST_large.png",
+        "file": "IST_large.png",
+        "bytes": 858491,
+        "sha256": "4544bb5cdca1b175327a20f0d64ae8f8b8c6ff52b428360eda332cb44a033c47",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 174259,
+          "sha256": "2b224fa2b45f4dfd134567016c88a706075e4f25e6d7501ee210f582600a6ac1",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.275Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/IST/IST.pdf",
+        "file": "IST.pdf",
+        "bytes": 704030,
+        "sha256": "3bc9ee6af7923973ad0528957a3bcc36664c38944a8e24c49f858a8dd3ad4a33",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "JFK": {
+      "name": "John F. Kennedy International Airport",
+      "city": "New York",
+      "countryCode": "US",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/JFK/JFK_large.png",
+        "file": "JFK_large.png",
+        "bytes": 1263282,
+        "sha256": "2ee44dfaf82d76fe4cfbf0ce1807ad0687bf69427ea9942d38363adefc3241f5",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 252493,
+          "sha256": "1cbc7756f1b98609aedac62449713720a27ef11bb24f8172bd35478cb295c130",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.276Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/JFK/JFK.pdf",
+        "file": "JFK.pdf",
+        "bytes": 917522,
+        "sha256": "7e9569a583ee312210ef99bebb440c309be401bc446ff4d5b7b470c671e868fc",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "KIX": {
+      "name": "Kansai International Airport",
+      "city": "Osaka",
+      "countryCode": "JP",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/KIX/KIX_large.png",
+        "file": "KIX_large.png",
+        "bytes": 545118,
+        "sha256": "dcad56f88a04a16a3d50d6e5932fe677b2d7a1959665f6dbd170033e271744f9",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 108873,
+          "sha256": "4d8a297337190879a18be8162dc6bf1e5313044253cf1bbcbaa47b889bdd8115",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.277Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/KIX/KIX.pdf",
+        "file": "KIX.pdf",
+        "bytes": 527853,
+        "sha256": "fbd7af35c2f6ea88a264eab595f0244bc8d84c951b67394bca55c5dba2871155",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "KUL": {
+      "name": "Kuala Lumpur International Airport",
+      "city": "Kuala Lumpur",
+      "countryCode": "MY",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/KUL/KUL_large.png",
+        "file": "KUL_large.png",
+        "bytes": 899399,
+        "sha256": "6f328362f0fb630b9f01b6324b242832471a4b29718296ca476c4b6aea90bc65",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 222915,
+          "sha256": "8769570a5ecf88630839efba98dc25b78344a85ef9e81609bc015d3f3b766f8a",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.278Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/KUL/KUL.pdf",
+        "file": "KUL.pdf",
+        "bytes": 737171,
+        "sha256": "c972b381722c25aa22d5362577c5605c34d937aed38b1eb6046fc1e6a6582c58",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "LAX": {
+      "name": "Los Angeles International Airport",
+      "city": "Los Angeles",
+      "countryCode": "US",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/LAX/LAX_large.png",
+        "file": "LAX_large.png",
+        "bytes": 949082,
+        "sha256": "1c2c55fba3cd56f78918b08aff751759b4f5b0b0a17826c7274e3153e0b86b8e",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 236224,
+          "sha256": "e970f723aeb6c05b049c3d7bc184d446b0d170a99bc1022f7ec7a66128fd03bf",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.279Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/LAX/LAX.pdf",
+        "file": "LAX.pdf",
+        "bytes": 815867,
+        "sha256": "e5e3fa3b7a060f32327fc5bdbdc978c4419befb7711a67e941a87f282ce91011",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "LGW": {
+      "name": "Gatwick Airport",
+      "city": "London",
+      "countryCode": "GB",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/LGW/LGW_large.png",
+        "file": "LGW_large.png",
+        "bytes": 1118006,
+        "sha256": "a408e755eca709cbc636c9f609da5d5f23e4885926d5aca020909298e563b57b",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 241509,
+          "sha256": "e0e135bc16eda68d9462f1086efb4d0db1a294eb76e6766da75557d60615d95b",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.281Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/LGW/LGW.pdf",
+        "file": "LGW.pdf",
+        "bytes": 857834,
+        "sha256": "62191fbaf5ae9c4c1520ede7278598bf3ad4d0bcba3cace281ae8f103476067d",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "LGA": {
+      "name": "LaGuardia Airport",
+      "city": "New York",
+      "countryCode": "US",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/LGA/LGA_large.png",
+        "file": "LGA_large.png",
+        "bytes": 2169147,
+        "sha256": "7aabc22742c972572379f124f8ea3ce5c3636ce03040b62b5ff9f6780a64ac92",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 513269,
+          "sha256": "96fa33adaaaa4b77afcd29006a3c55add920566394952b927783e52c788a1b8f",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.280Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/LGA/LGA.pdf",
+        "file": "LGA.pdf",
+        "bytes": 1504144,
+        "sha256": "649b92afeeb35f5885b041840c55704ea2394214d22f622028bbedbb860c4fd0",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "LHR": {
+      "name": "Heathrow Airport",
+      "city": "London",
+      "countryCode": "GB",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/LHR/LHR_large.png",
+        "file": "LHR_large.png",
+        "bytes": 1324136,
+        "sha256": "6ec73cfce6e134e20e5192d4aeeb47f65dc9fcd92ea25489355a6f6bb68fbe04",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 360700,
+          "sha256": "8cf7853b206937c4457622d5092a2c2d4d93581a811437c182c46a04cd623fa3",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.282Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/LHR/LHR.pdf",
+        "file": "LHR.pdf",
+        "bytes": 1091646,
+        "sha256": "8c77e4dae551bfe71548ccb7a5790b6bc26cac85cbcd88d6a9c861bc1e7bc5c5",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "MAD": {
+      "name": "Madrid–Barajas Airport",
+      "city": "Madrid",
+      "countryCode": "ES",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/MAD/MAD_large.png",
+        "file": "MAD_large.png",
+        "bytes": 1067129,
+        "sha256": "612b05c0f646bbd1d2eaaaa868495cd624539460a6f6b1ffb0e5759a0e6eaa76",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 254913,
+          "sha256": "b506ee4f1926fb9691c673ac32f9805a0f11bca386522b6ca2ff2a7566a66c2b",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.284Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/MAD/MAD.pdf",
+        "file": "MAD.pdf",
+        "bytes": 818691,
+        "sha256": "cb14afbe391df5dac7e210bb828c9f11acf1ac26091ffec897f72e490a2c2636",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "LIS": {
+      "name": "Humberto Delgado Airport",
+      "city": "Lisbon",
+      "countryCode": "PT",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/LIS/LIS_large.png",
+        "file": "LIS_large.png",
+        "bytes": 776718,
+        "sha256": "736a32ba8f4dba57cfba2771731abd199a0f4cdaf54c50a5857d7c24739cd8b9",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 164134,
+          "sha256": "357d018c049113fab3e44ff6f5674bfb20264d95831f00412c7455f168a2120b",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.283Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/LIS/LIS.pdf",
+        "file": "LIS.pdf",
+        "bytes": 729726,
+        "sha256": "b76f694f2d8aef250d9892f27e997b9c610ef2327994ccd01560cadd06280403",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "MEX": {
+      "name": "Mexico City International Airport",
+      "city": "Mexico City",
+      "countryCode": "MX",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/MEX/MEX_large.png",
+        "file": "MEX_large.png",
+        "bytes": 1431401,
+        "sha256": "ab03c61fd6ad68887349d9ae45c6a0f5864c537b6f3c196475661dc42014b87a",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 352208,
+          "sha256": "2e494a2038a05861c7e7a1d43cb9727c4bc48ae9a556fb9b896da55e2d8581ff",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.285Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/MEX/MEX.pdf",
+        "file": "MEX.pdf",
+        "bytes": 1076120,
+        "sha256": "14001e775b00e3eecbf5d88a5e46d1970ed09d53beae385f74e1e915d1ef825d",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "MIA": {
+      "name": "Miami International Airport",
+      "city": "Miami",
+      "countryCode": "US",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/MIA/MIA_large.png",
+        "file": "MIA_large.png",
+        "bytes": 815075,
+        "sha256": "a83adfc1bb3dc5f241a8d901e14fdf6795d38feab3299449e55b71903468f646",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 154288,
+          "sha256": "a50e3d1e75e863e8fefa614add4f8492f9bd69babae44c2f6c8d4bee78c72a84",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.286Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/MIA/MIA.pdf",
+        "file": "MIA.pdf",
+        "bytes": 674773,
+        "sha256": "999a5e02e8925b99a0fe47c14e9237f015081ab54d5370e0966a2971aa232918",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "MUC": {
+      "name": "Munich Airport",
+      "city": "Munich",
+      "countryCode": "DE",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/MUC/MUC_large.png",
+        "file": "MUC_large.png",
+        "bytes": 909437,
+        "sha256": "251a333eb067ba7851539de03e4428ff7ef55fc5dedc2c6fe55baefef74b6835",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 237386,
+          "sha256": "daa413ead10231e4cbe28a936660bf530272435e3e795e8fca2a4f3223bb86a0",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.289Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/MUC/MUC.pdf",
+        "file": "MUC.pdf",
+        "bytes": 832942,
+        "sha256": "3c3698fd403f20053f4ba082d60a3d4b55afaef742cc216ce2860abb4f54a2d0",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "MXP": {
+      "name": "Milan Malpensa Airport",
+      "city": "Milan",
+      "countryCode": "IT",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/MXP/MXP_large.png",
+        "file": "MXP_large.png",
+        "bytes": 891895,
+        "sha256": "e810e293b77a82970f33c68be84589888b69a5029e43d5df94492a18fb838070",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 232357,
+          "sha256": "27871e39ab11d9420b7bb8446fc3f6a0b0aaf4ddd0ee7dc192e73d9cc6d3bd58",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.290Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/MXP/MXP.pdf",
+        "file": "MXP.pdf",
+        "bytes": 711476,
+        "sha256": "7898bcfeb3f79ba0060251a81cae0deb3e7b1a88389a12e9ecd8ad40e81a1c33",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "NRT": {
+      "name": "Narita International Airport",
+      "city": "Tokyo",
+      "countryCode": "JP",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/NRT/NRT_large.png",
+        "file": "NRT_large.png",
+        "bytes": 1171900,
+        "sha256": "7e3735e2d66671682c8a713b6e28d40df74d346dac183a8d39194fcb6c3db24b",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 358563,
+          "sha256": "5c529c2cfa537885477f8bb19e25a49b91281aaf3c982600833235656e1e90c4",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.291Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/NRT/NRT.pdf",
+        "file": "NRT.pdf",
+        "bytes": 917017,
+        "sha256": "31df076c97f8eb51a938dfcb465620acbafa4935dce934b3c780e56a4ff0ec5d",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "ORD": {
+      "name": "O'Hare International Airport",
+      "city": "Chicago",
+      "countryCode": "US",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/ORD/ORD_large.png",
+        "file": "ORD_large.png",
+        "bytes": 1230702,
+        "sha256": "38dcb173d9ee6eed195ce61d99a0fe56c930577ad6c2b016e2518d6cb900b536",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 261038,
+          "sha256": "574a2c62a7bb1c9187f74f6d4b53eaad2db62591af69211cefc08ec5680bc762",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.292Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/ORD/ORD.pdf",
+        "file": "ORD.pdf",
+        "bytes": 941059,
+        "sha256": "859381e7da696b586d59c8db30345adb9e04e8c6ba67fd84074e85a31334ed94",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "ORY": {
+      "name": "Paris Orly Airport",
+      "city": "Paris",
+      "countryCode": "FR",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/ORY/ORY_large.png",
+        "file": "ORY_large.png",
+        "bytes": 961332,
+        "sha256": "934f07dcaf908331a0ea0b6f39e931de8f40057b6a6337480438f0f7502452dd",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 258422,
+          "sha256": "8e73596d471d7ebd033042ff52d1e4ff5e3f0ce75eef9698ca7062026a24b01b",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.293Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/ORY/ORY.pdf",
+        "file": "ORY.pdf",
+        "bytes": 897646,
+        "sha256": "338a9bdb6e27d47141a35f13db7c9c6e06fd8aa60e0308eb74d9edf7cb74765f",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "PVG": {
+      "name": "Shanghai Pudong International Airport",
+      "city": "Shanghai",
+      "countryCode": "CN",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/PVG/PVG_large.png",
+        "file": "PVG_large.png",
+        "bytes": 528508,
+        "sha256": "fa35af70f62702fd10db89f3b2950062d20b1a8fd0e4fad5ec1311c021b10142",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 144443,
+          "sha256": "9c5768dfbf9bd035b0c3276451e4a1cdaef5090ac7c35837b2ee5b8e814873cd",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.295Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/PVG/PVG.pdf",
+        "file": "PVG.pdf",
+        "bytes": 625137,
+        "sha256": "ffaf8604879ecb110c0124e19f0f953929106ec5e86f42052dbb814d289807ea",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "RUH": {
+      "name": "King Khalid International Airport",
+      "city": "Riyadh",
+      "countryCode": "SA",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/RUH/RUH_large.png",
+        "file": "RUH_large.png",
+        "bytes": 436726,
+        "sha256": "5c4543db3f6d25e64024625e903314c6307ed133da827e73111a333f34be1431",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 96205,
+          "sha256": "09430085d991332982ca2d8ef65744b037c0478c6ef0ff97029f5ba166bf4118",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.296Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/RUH/RUH.pdf",
+        "file": "RUH.pdf",
+        "bytes": 408701,
+        "sha256": "7a7a415df944a27bcca36e5fa423d982808c762313a6ea9008aebf3ae357c114",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "SEA": {
+      "name": "Seattle–Tacoma International Airport",
+      "city": "Seattle",
+      "countryCode": "US",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/SEA/SEA_large.png",
+        "file": "SEA_large.png",
+        "bytes": 1071037,
+        "sha256": "7f8fcd72876b03774439d3143a21783e797557048d8c38f96c9dcba00f3b4130",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 234241,
+          "sha256": "f5a89cd9460e9def15da2dc62995f81b058ed68d15338dd9c68b1d8022bb88c1",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.297Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/SEA/SEA.pdf",
+        "file": "SEA.pdf",
+        "bytes": 879535,
+        "sha256": "56e7955518c332b77c6ba92052e7abdf0e275c74c82c588c289556ca8778e12a",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "SFO": {
+      "name": "San Francisco International Airport",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/SFO/SFO_large.png",
+        "file": "SFO_large.png",
+        "bytes": 1143918,
+        "sha256": "55e3bef4477afd1a727ba7e080219bfa5be2cb64fe9ab5444f5d2c4d02dab564",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 224233,
+          "sha256": "0d7f8f133e3498344ebb2bd711ab12b7de04c26c59fb36111c930943c7812782",
+          "width": 2000,
+          "height": 1999,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.298Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/SFO/SFO.pdf",
+        "file": "SFO.pdf",
+        "bytes": 918863,
+        "sha256": "4cb36df2e1032eb4bea643283191a2d631adcb74f2865ac1df03ad760f4dc8a3",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "MNL": {
+      "name": "Ninoy Aquino International Airport",
+      "city": "Manila",
+      "countryCode": "PH",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/MNL/MNL_large.png",
+        "file": "MNL_large.png",
+        "bytes": 2358861,
+        "sha256": "aa8774657d87472b40d24a69fc46e81774f1d4b4db8e2b2117d9a3bdca0d978b",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 655161,
+          "sha256": "2cd7b24de983a5f091b60faea9314e52cf00c91d737ec8b0731909770decd420",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.288Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/MNL/MNL.pdf",
+        "file": "MNL.pdf",
+        "bytes": 1641964,
+        "sha256": "03191e53bd39d5f6e749c8c2c3308466c6bbf16bf2e530b8041f4294ba2eb53f",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "SGN": {
+      "name": "Tan Son Nhat International Airport",
+      "city": "Ho Chi Minh City",
+      "countryCode": "VN",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/SGN/SGN_large.png",
+        "file": "SGN_large.png",
+        "bytes": 1027658,
+        "sha256": "c731de68cab9094c9140db5749a9b6b212c102d074dcb65df66c1b61d303cce7",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 196526,
+          "sha256": "8a28f400b4b4f7e83eab84cae5affa3e6dbb7b42fcafcf6bd52d7bbeca69fbd4",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.299Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/SGN/SGN.pdf",
+        "file": "SGN.pdf",
+        "bytes": 823188,
+        "sha256": "aefd8a6a992887392891670205e31dc1f1ee5dba33273f7edaed19e5c1f94e42",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "SIN": {
+      "name": "Singapore Changi Airport",
+      "city": "Singapore",
+      "countryCode": "SG",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/SIN/SIN_large.png",
+        "file": "SIN_large.png",
+        "bytes": 1192719,
+        "sha256": "0106eb260018fa58ad1578208691a04e3a3f59bde27599cb8d41b366e11fed27",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 288030,
+          "sha256": "808c4dec3498fe0c5210ef12ac725794dc0a1a7b8493749b35ae3df51c36430e",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.300Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/SIN/SIN.pdf",
+        "file": "SIN.pdf",
+        "bytes": 959250,
+        "sha256": "3fda54085bbb1a378a56488b80708d56c41860e12ce85a7dcbd23af58e179b41",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "STN": {
+      "name": "London Stansted Airport",
+      "city": "London",
+      "countryCode": "GB",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/STN/STN_large.png",
+        "file": "STN_large.png",
+        "bytes": 489155,
+        "sha256": "74d14cf665ace5a2f199a9cec5c7ae785b60af5f0bb1ecceffc8752d25a41127",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 108448,
+          "sha256": "d10e4f4fe1c4b64a79ce93862532034dd2472b6b7857392b0b10f0cf9634c4ea",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.301Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/STN/STN.pdf",
+        "file": "STN.pdf",
+        "bytes": 564400,
+        "sha256": "7e41c2f429d403eccafc5d5fdf85ecd27910fbea0419eab5b2990de02fc04610",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "SVO": {
+      "name": "Sheremetyevo International Airport",
+      "city": "Moscow",
+      "countryCode": "RU",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/SVO/SVO_large.png",
+        "file": "SVO_large.png",
+        "bytes": 732367,
+        "sha256": "be30f9a2ff5ee9ca6cc45f3f9bea6e6e2d9a4b94f193bcf50590687dac891f4b",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 138975,
+          "sha256": "8fe5b2a2c28447187f68b3de2f0dbe79f1a6a41ec209592baa9375cc181437f5",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.302Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/SVO/SVO.pdf",
+        "file": "SVO.pdf",
+        "bytes": 610195,
+        "sha256": "6ebacd2cbd4617508fd9964c42ae425b030e91a6248147349ae40b3c12b65cfd",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "VIE": {
+      "name": "Vienna International Airport",
+      "city": "Vienna",
+      "countryCode": "AT",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/VIE/VIE_large.png",
+        "file": "VIE_large.png",
+        "bytes": 923438,
+        "sha256": "f5919558bedb99ce0c3b53c6b2caff77eee894e006f3e5486f0a9c7588a8c3e8",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 181424,
+          "sha256": "860b90a0450994c85f41ca39bd0c79a585e9283191c516c85384683616ebbec5",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.305Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/VIE/VIE.pdf",
+        "file": "VIE.pdf",
+        "bytes": 740866,
+        "sha256": "294907a58313b52b69398b27026a26cb50b9169f7d1c5ae535dce1b4e6dcec0b",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "YVR": {
+      "name": "Vancouver International Airport",
+      "city": "Vancouver",
+      "countryCode": "CA",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/YVR/YVR_large.png",
+        "file": "YVR_large.png",
+        "bytes": 712659,
+        "sha256": "57b566ad1e1d5364bd63de0181f9de29d1b19384833a0b2885086a1184a40cbd",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 153103,
+          "sha256": "38410c561b1b9bf5255bc52ae3fedff49fe69768dc68cc1cec21d4efd7d03b3b",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.306Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/YVR/YVR.pdf",
+        "file": "YVR.pdf",
+        "bytes": 622233,
+        "sha256": "c29bf928e66439e9544f7ff921765641f44aa52bc459faf445954ad97118086d",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "SYD": {
+      "name": "Sydney Kingsford Smith Airport",
+      "city": "Sydney",
+      "countryCode": "AU",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/SYD/SYD_large.png",
+        "file": "SYD_large.png",
+        "bytes": 1249975,
+        "sha256": "f0e33e803a4e6e251c8a22510b9ca934aa5c0315680e4c5937b40e954df44079",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 285511,
+          "sha256": "cbd36a7e416f414141179ae9e51863c5fbdae23f76e4c11701347e226accc643",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.303Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/SYD/SYD.pdf",
+        "file": "SYD.pdf",
+        "bytes": 1018625,
+        "sha256": "3eec6641919ab13fb5479c2f72aa90a4c50a2df9eebb396768f44eac5b957fb4",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "ZRH": {
+      "name": "Zurich Airport",
+      "city": "Zurich",
+      "countryCode": "CH",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/ZRH/ZRH_large.png",
+        "file": "ZRH_large.png",
+        "bytes": 1235807,
+        "sha256": "52400c41e5168e820f4f14de9f431302169bcbeea2c6718065ca87b0b52f9600",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 281049,
+          "sha256": "fdf46892cae14f144135456f86a70ee084042a40f3342eb6aad740db43578edf",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.309Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/ZRH/ZRH.pdf",
+        "file": "ZRH.pdf",
+        "bytes": 907886,
+        "sha256": "fe766ec1c993b99eb8164dc9f4aecc0837f6686977007ef4032d4b10ce85d398",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    },
+    "YYZ": {
+      "name": "Toronto Pearson International Airport",
+      "city": "Toronto",
+      "countryCode": "CA",
+      "png": {
+        "url": "https://www.eoob.com/images/terminal-maps/YYZ/YYZ_large.png",
+        "file": "YYZ_large.png",
+        "bytes": 1109481,
+        "sha256": "bbcb841a7795a300706f5f0f810f4a79cb283fd2a29e291929bc16c33b8f2aae",
+        "contentType": "image/png",
+        "retrievedAt": "2026-09-21T11:25:53.720Z",
+        "compressed": {
+          "bytes": 265663,
+          "sha256": "f90994dd4e9607f9546781a79641dd4bb285043d08839fd112282bbf3b20bac3",
+          "width": 2000,
+          "height": 2000,
+          "paletteQuality": 80,
+          "maxWidth": null,
+          "compressedAt": "2026-09-21T11:40:38.307Z"
+        }
+      },
+      "pdf": {
+        "url": "https://www.eoob.com/images/terminal-maps/YYZ/YYZ.pdf",
+        "file": "YYZ.pdf",
+        "bytes": 928835,
+        "sha256": "c43cfe228d6cba478f34dede0859953c4688c79f01c95a74cabb2cfdc62bb205",
+        "contentType": "application/pdf",
+        "retrievedAt": "2026-09-21T11:25:53.720Z"
+      },
+      "sourceRights": "unverified — terminal maps from eoob.com; permission to publish has not been established"
+    }
+  }
+}

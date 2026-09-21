@@ -285,7 +285,7 @@ export const en: Messages = {
     realMapNote: 'TERMINAL MAP',
     /** Download buttons under the map: the image downloads directly, the PDF
         button links out to a Google search for the official PDF. */
-    downloadMapLabel: (iata: string) => `Download ${iata} Airport Map`,
+    downloadMapLabel: (year: number, iata: string) => `${year} Latest ${iata} Airport Terminal Map Download`,
     downloadPdfLabel: (year: number, iata: string) =>
       `${year} Latest ${iata} Airport Terminal Map PDF Download`,
     timeKicker: 'Time',

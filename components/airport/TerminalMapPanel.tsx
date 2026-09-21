@@ -5,18 +5,25 @@ import MapDownloads from './MapDownloads';
 /**
  * Terminal map panel: the airport's real terminal-map image when one exists,
  * otherwise the generated SVG layout diagram plus its legend. Below the map,
- * the download row offers the map image and a terminal-map PDF search.
+ * the download row offers the map image and the terminal-map PDF — both from
+ * /terminal-maps when the repo hosts them, with search/SVG fallbacks.
  */
 export default function TerminalMapPanel({
   locale,
   iata,
   mapImg,
   mapSvg,
+  terminalMapUrl,
+  terminalPdfUrl,
 }: {
   locale: Locale;
   iata: string;
   mapImg: string | null;
   mapSvg: string;
+  /** `/terminal-maps/HKG/HKG_large.png` when hosted, else null. */
+  terminalMapUrl: string | null;
+  /** `/terminal-maps/HKG/HKG.pdf` when hosted, else null. */
+  terminalPdfUrl: string | null;
 }) {
   const t = getMessages(locale);
 
@@ -69,7 +76,9 @@ export default function TerminalMapPanel({
         iata={iata}
         mapImg={mapImg}
         mapSvg={mapSvg}
-        mapLabel={t.airport.downloadMapLabel(iata)}
+        terminalMapUrl={terminalMapUrl}
+        terminalPdfUrl={terminalPdfUrl}
+        mapLabel={t.airport.downloadMapLabel(new Date().getFullYear(), iata)}
         pdfLabel={t.airport.downloadPdfLabel(new Date().getFullYear(), iata)}
       />
     </div>

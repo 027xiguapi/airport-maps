@@ -270,7 +270,7 @@ export const zh = {
     realMapTitle: (iata: string) => `${iata} 机场航站楼地图 — 登机口与导航`,
     realMapNote: 'TERMINAL MAP',
     /** 终端图下方的下载按钮：图片直接下载，PDF 按钮跳转谷歌搜索官方 PDF。 */
-    downloadMapLabel: (iata: string) => `下载 ${iata} 机场地图`,
+    downloadMapLabel: (year: number, iata: string) => `${year}年最新  ${iata} 机场地图下载`,
     downloadPdfLabel: (year: number, iata: string) =>
       `${year}年最新 ${iata} 机场地图 PDF 下载`,
     timeKicker: 'Time',

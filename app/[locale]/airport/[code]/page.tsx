@@ -11,7 +11,7 @@ import { getAirportGuide } from '@/lib/content';
 import { getAirportByCode, getAirportNameZh, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
 import { getAirportGeo } from '@/lib/airport-geo';
 import { airportWebsite } from '@/lib/airport-links';
-import { mapImageUrl } from '@/lib/map-images';
+import { mapImageUrl, terminalMapDownloads } from '@/lib/map-images';
 import { absoluteUrl, SITE_NAME } from '@/lib/site';
 import { terminalMapSvg } from '@/lib/terminal-map';
 import { buildAirportGraph, publicationDates } from './schema';
@@ -120,6 +120,7 @@ export default async function AirportPage({ params }: Props) {
   const faqItems = buildFaq(locale, airport, formatDistance(airport.distanceKm, locale), geo?.tz ?? null);
   const { published, modified } = publicationDates(airport, guide?.updated);
   const mapImg = mapImageUrl(airport.iata);
+  const terminalMap = terminalMapDownloads(airport.iata);
   const mapSvg = terminalMapSvg({
     iata: airport.iata,
     name: airport.name,
@@ -161,7 +162,14 @@ export default async function AirportPage({ params }: Props) {
           {/* Descriptions are Markdown, stored per locale in airport_translations. */}
           <Markdown className="ap-desc">{airport.descriptionMd}</Markdown>
 
-          <TerminalMapPanel locale={locale} iata={airport.iata} mapImg={mapImg} mapSvg={mapSvg} />
+          <TerminalMapPanel
+            locale={locale}
+            iata={airport.iata}
+            mapImg={mapImg}
+            mapSvg={mapSvg}
+            terminalMapUrl={terminalMap.png}
+            terminalPdfUrl={terminalMap.pdf}
+          />
 
           {geo && <AirportTimeSection locale={locale} iata={airport.iata} timeZone={geo.tz} />}
 

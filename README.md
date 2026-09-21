@@ -67,6 +67,8 @@ npm run build && npm start
 | `npm run db:seed` | 重建数据（先 TRUNCATE，可重复执行），含翻译校验 |
 | `npm run db:verify` | 跑一遍站点依赖的关键查询 |
 | `npm run data:world-airports` | 从 `data/world-airports.csv` 生成地图数据：`public/data/world-airports.json`（前端加载）与 `lib/world-airports-meta.json`（构建期统计） |
+| `npm run data:terminal-maps` | 按机场代码批量下载航站楼地图 PNG + PDF（默认源 eoob.com，代码取自 `airports` 表；`--codes HKG,PEK` 指定代码、`--dry-run` 预演、`--png-only` / `--pdf-only` 只取一种、`--force` 强制重下）。文件落到 `public/terminal-maps/{CODE}/`，站点可直接以 `/terminal-maps/{CODE}/{CODE}_large.png`（及 `.pdf`）引用（57 个机场；下载后跑一次 `data:terminal-maps:compress`，共约 60MB）；溯源信息在同目录 `terminal-maps-manifest.json`。机场详情页的下载按钮自动使用这些文件（某机场缺文件时，图片回退到 `public/maps` 封面或 SVG 示意图、PDF 回退到谷歌搜索） |
+| `npm run data:terminal-maps:compress` | 原地压缩上一步下载的 PNG：量化为 8 位调色板（默认 `--quality 80`），尺寸不变，实测 52.8MB → 12.4MB 且登机口号、路名清晰可读。已在 manifest 的 `compressed` 里记录压缩后 sha256，原始下载的 url + sha256 保留可随时重下；已压缩的自动跳过，`--force` 重压、`--max-width 1600` 可同时缩尺寸 |
 | `node scripts/check-maps.mjs [--table]` | 检查 `public/maps` 封面图与机场的覆盖情况：哪些机场缺图、哪些图没有对应机场 |
 | `node scripts/check-search.mjs [词...]` | 检查搜索相关性排序与通配符转义 |
 | `node scripts/analyze-shot.mjs <图片> [列数]` | 无法直接查看图片时，从像素里读出设计稿的结构：调色板、横向分区带、亮度与边缘 ASCII 图 |

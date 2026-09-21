@@ -18,7 +18,9 @@
     "db:seed": "node scripts/seed.mjs",
     "db:reset": "node scripts/db-create.mjs --reset && node scripts/db-apply-sql.mjs db/extensions.sql && drizzle-kit migrate && node scripts/db-apply-sql.mjs db/custom.sql && node scripts/seed.mjs",
     "db:verify": "node scripts/verify.mjs",
-    "data:world-airports": "node scripts/prepare-world-airports.mjs"
+    "data:world-airports": "node scripts/prepare-world-airports.mjs",
+    "data:terminal-maps": "node scripts/fetch-terminal-maps.mjs",
+    "data:terminal-maps:compress": "node scripts/compress-terminal-maps.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.20",
@@ -46,6 +48,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "drizzle-kit": "^0.31.10",
+    "sharp": "^0.35.4",
     "typescript": "^5"
   }
 }
