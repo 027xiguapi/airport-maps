@@ -64,8 +64,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     iata: airport.iata,
     city: airport.city,
     country: airport.countryName,
-    terminals: formatNumber(airport.terminals.length, locale),
-    gates: formatNumber(airport.gateCount, locale),
+    terminals: airport.terminals.length > 0 ? formatNumber(airport.terminals.length, locale) : null,
+    gates: airport.gateCount > 0 ? formatNumber(airport.gateCount, locale) : null,
     pax: pax ?? '',
     distance: distance ?? '',
   });
@@ -127,7 +127,9 @@ export default async function AirportPage({ params }: Props) {
     locale,
   });
 
-  /** Sections that actually render on this airport's page, in order. */
+  /** Sections that actually render on this airport's page, in order. The
+      terminals/transport/facilities entries drop out for directory batch
+      airports whose data has not been compiled yet. */
   const tocItems: TocItem[] = [
     { id: 'terminal-map', label: t.toc.map },
     ...(geo ? [{ id: 'airport-time', label: t.toc.time }] : []),
@@ -135,9 +137,9 @@ export default async function AirportPage({ params }: Props) {
     { id: 'related-links', label: t.toc.links },
     ...(geo ? [{ id: 'location-map', label: t.toc.location }] : []),
     ...(guide ? [{ id: 'guide', label: t.toc.guide }] : []),
-    { id: 'terminals', label: t.toc.terminals },
-    { id: 'transport', label: t.toc.transport },
-    { id: 'facilities', label: t.toc.facilities },
+    ...(airport.terminals.length > 0 ? [{ id: 'terminals', label: t.toc.terminals }] : []),
+    ...(airport.transit.length > 0 ? [{ id: 'transport', label: t.toc.transport }] : []),
+    ...(airport.facilities.length > 0 ? [{ id: 'facilities', label: t.toc.facilities }] : []),
     { id: 'faq', label: t.toc.faq },
   ];
 

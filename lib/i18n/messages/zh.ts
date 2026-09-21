@@ -248,21 +248,23 @@ export const zh = {
   },
 
   airport: {
-    /** Meta description assembled from formatted airport facts. */
+    /** Meta description assembled from formatted airport facts. Terminals and
+        gates are null for directory airports with no compiled counts, and the
+        clause drops out instead of reading "共有 0 座航站楼". */
     metaDescription: (o: {
       name: string;
       nameEn: string;
       iata: string;
       city: string;
       country: string;
-      terminals: string;
-      gates: string;
+      terminals: string | null;
+      gates: string | null;
       pax: string;
       distance: string;
     }) =>
-      `${o.name}（${o.iata}，${o.nameEn}）位于${o.city}，共有 ${o.terminals} 座航站楼、${o.gates} 个登机口${
-        o.pax ? `，年旅客量${o.pax}` : ''
-      }${o.distance ? `，距市中心约 ${o.distance}` : ''}。查看航站楼平面示意图、登机口分布与地面交通方式。`,
+      `${o.name}（${o.iata}，${o.nameEn}）位于${o.city}${
+        o.terminals ? `，共有 ${o.terminals} 座航站楼、${o.gates} 个登机口` : ''
+      }${o.pax ? `，年旅客量${o.pax}` : ''}${o.distance ? `，距市中心约 ${o.distance}` : ''}。查看航站楼平面示意图、登机口分布与地面交通方式。`,
     mapTitle: (iata: string) => `${iata} · 航站楼平面示意图`,
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} 机场航站楼地图 — 登机口与导航`,

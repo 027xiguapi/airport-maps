@@ -16,6 +16,9 @@ export default function TerminalsSection({
 }) {
   const t = getMessages(locale);
 
+  // Directory batch airports have no terminal data compiled yet.
+  if (terminals.length === 0) return null;
+
   return (
     <>
       <div className="section-head" id="terminals" style={{ marginTop: 46, marginBottom: 18 }}>

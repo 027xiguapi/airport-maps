@@ -1,0 +1,2450 @@
+[
+ {
+  "iata": "LCG",
+  "icao": "LECO",
+  "country": "ES",
+  "nameEn": "A Coruña Airport",
+  "cityEn": "A Coruna",
+  "kind": "medium"
+ },
+ {
+  "iata": "ABU",
+  "icao": "WATA",
+  "country": "ID",
+  "nameEn": "AA Bere Tallo (Haliwen) Airport",
+  "cityEn": "Atambua",
+  "kind": "small"
+ },
+ {
+  "iata": "TAB",
+  "icao": "TTCP",
+  "country": "TT",
+  "nameEn": "A.N.R. Robinson International Airport",
+  "cityEn": "Scarborough",
+  "kind": "large"
+ },
+ {
+  "iata": "AAL",
+  "icao": "EKYT",
+  "country": "DK",
+  "nameEn": "Aalborg Airport",
+  "cityEn": "Aalborg",
+  "kind": "large"
+ },
+ {
+  "iata": "AAR",
+  "icao": "EKAH",
+  "country": "DK",
+  "nameEn": "Aarhus Airport",
+  "cityEn": "Aarhus",
+  "kind": "large"
+ },
+ {
+  "iata": "JEG",
+  "icao": "BGEM",
+  "country": "GL",
+  "nameEn": "Aasiaat Airport",
+  "cityEn": "Aasiaat",
+  "kind": "medium"
+ },
+ {
+  "iata": "ABD",
+  "icao": "OIAA",
+  "country": "IR",
+  "nameEn": "Abadan Ayatollah Jami International Airport",
+  "cityEn": "Abadan",
+  "kind": "large"
+ },
+ {
+  "iata": "ABA",
+  "icao": "UNAA",
+  "country": "RU",
+  "nameEn": "Abakan International Airport",
+  "cityEn": "Abakan",
+  "kind": "large"
+ },
+ {
+  "iata": "YXX",
+  "icao": "CYXX",
+  "country": "CA",
+  "nameEn": "Abbotsford International Airport",
+  "cityEn": "Abbotsford",
+  "kind": "medium"
+ },
+ {
+  "iata": "MLG",
+  "icao": "WARA",
+  "country": "ID",
+  "nameEn": "Abdul Rachman Saleh Airport",
+  "cityEn": "Malang",
+  "kind": "medium"
+ },
+ {
+  "iata": "AEH",
+  "icao": "FTTC",
+  "country": "TD",
+  "nameEn": "Abeche Airport",
+  "cityEn": "Abeche",
+  "kind": "medium"
+ },
+ {
+  "iata": "SNU",
+  "icao": "MUSC",
+  "country": "CU",
+  "nameEn": "Abel Santamaria International Airport",
+  "cityEn": "Santa Clara",
+  "kind": "large"
+ },
+ {
+  "iata": "ABR",
+  "icao": "KABR",
+  "country": "US",
+  "nameEn": "Aberdeen Regional Airport",
+  "cityEn": "Aberdeen",
+  "kind": "medium"
+ },
+ {
+  "iata": "AHB",
+  "icao": "OEAB",
+  "country": "SA",
+  "nameEn": "Abha International Airport",
+  "cityEn": "Abha",
+  "kind": "large"
+ },
+ {
+  "iata": "ABI",
+  "icao": "KABI",
+  "country": "US",
+  "nameEn": "Abilene Regional Airport",
+  "cityEn": "Abilene",
+  "kind": "medium"
+ },
+ {
+  "iata": "CJS",
+  "icao": "MMCS",
+  "country": "MX",
+  "nameEn": "Abraham González International Airport",
+  "cityEn": "Ciudad Juárez",
+  "kind": "large"
+ },
+ {
+  "iata": "SPI",
+  "icao": "KSPI",
+  "country": "US",
+  "nameEn": "Abraham Lincoln Capital Airport",
+  "cityEn": "Springfield",
+  "kind": "medium"
+ },
+ {
+  "iata": "AUH",
+  "icao": "OMAA",
+  "country": "AE",
+  "nameEn": "Zayed International Airport",
+  "cityEn": "Abu Dhabi",
+  "kind": "large"
+ },
+ {
+  "iata": "AEU",
+  "icao": "OIBA",
+  "country": "IR",
+  "nameEn": "Abu Musa Island Airport",
+  "cityEn": "Abu Musa",
+  "kind": "medium"
+ },
+ {
+  "iata": "ABS",
+  "icao": "HEBL",
+  "country": "EG",
+  "nameEn": "Abu Simbel Airport",
+  "cityEn": "Abu Simbel",
+  "kind": "medium"
+ },
+ {
+  "iata": "ARA",
+  "icao": "KARA",
+  "country": "US",
+  "nameEn": "Acadiana Regional Airport",
+  "cityEn": "New Iberia",
+  "kind": "medium"
+ },
+ {
+  "iata": "ADK",
+  "icao": "PADK",
+  "country": "US",
+  "nameEn": "Adak Airport",
+  "cityEn": "Adak",
+  "kind": "medium"
+ },
+ {
+  "iata": "AIP",
+  "icao": "VIAX",
+  "country": "IN",
+  "nameEn": "Adampur Airport",
+  "cityEn": "Adampur",
+  "kind": "small"
+ },
+ {
+  "iata": "LIT",
+  "icao": "KLIT",
+  "country": "US",
+  "nameEn": "Bill & Hillary Clinton National Airport/Adams Field",
+  "cityEn": "Little Rock",
+  "kind": "medium"
+ },
+ {
+  "iata": "ADS",
+  "icao": "KADS",
+  "country": "US",
+  "nameEn": "Addison Airport",
+  "cityEn": "Dallas",
+  "kind": "small"
+ },
+ {
+  "iata": "ADL",
+  "icao": "YPAD",
+  "country": "AU",
+  "nameEn": "Adelaide International Airport",
+  "cityEn": "Adelaide",
+  "kind": "large"
+ },
+ {
+  "iata": "MGQ",
+  "icao": "HCMM",
+  "country": "SO",
+  "nameEn": "Aden Adde International Airport",
+  "cityEn": "Mogadishu",
+  "kind": "large"
+ },
+ {
+  "iata": "ADE",
+  "icao": "OYAA",
+  "country": "YE",
+  "nameEn": "Aden International Airport",
+  "cityEn": "Aden",
+  "kind": "large"
+ },
+ {
+  "iata": "SOC",
+  "icao": "WARQ",
+  "country": "ID",
+  "nameEn": "Adisoemarmo International Airport",
+  "cityEn": "Surakarta",
+  "kind": "large"
+ },
+ {
+  "iata": "SLK",
+  "icao": "KSLK",
+  "country": "US",
+  "nameEn": "Adirondack Regional Airport",
+  "cityEn": "Saranac Lake",
+  "kind": "medium"
+ },
+ {
+  "iata": "JOG",
+  "icao": "WAHH",
+  "country": "ID",
+  "nameEn": "Adisutjipto International Airport",
+  "cityEn": "Yogyakarta",
+  "kind": "medium"
+ },
+ {
+  "iata": "ADF",
+  "icao": "LTCP",
+  "country": "TR",
+  "nameEn": "Adıyaman Airport",
+  "cityEn": "Adıyaman",
+  "kind": "medium"
+ },
+ {
+  "iata": "ADB",
+  "icao": "LTBJ",
+  "country": "TR",
+  "nameEn": "Adnan Menderes International Airport",
+  "cityEn": "Izmir",
+  "kind": "large"
+ },
+ {
+  "iata": "AEG",
+  "icao": "WIME",
+  "country": "ID",
+  "nameEn": "Aek Godang Airport",
+  "cityEn": "Padang Sidempuan",
+  "kind": "medium"
+ },
+ {
+  "iata": "AEP",
+  "icao": "SABE",
+  "country": "AR",
+  "nameEn": "Aeroparque Jorge Newbery",
+  "cityEn": "Buenos Aires",
+  "kind": "large"
+ },
+ {
+  "iata": "BPS",
+  "icao": "SBPS",
+  "country": "BR",
+  "nameEn": "Porto Seguro International Airport",
+  "cityEn": "Porto Seguro",
+  "kind": "large"
+ },
+ {
+  "iata": "RAF",
+  "icao": "SAFR",
+  "country": "AR",
+  "nameEn": "Rafaela Airport",
+  "cityEn": "Rafaela",
+  "kind": "small"
+ },
+ {
+  "iata": "TTQ",
+  "icao": "MRAO",
+  "country": "CR",
+  "nameEn": "Aerotortuguero Airport",
+  "cityEn": "Tulum",
+  "kind": "medium"
+ },
+ {
+  "iata": "CWB",
+  "icao": "SBCT",
+  "country": "BR",
+  "nameEn": "Curitiba-Afonso Pena International Airport",
+  "cityEn": "Curitiba",
+  "kind": "large"
+ },
+ {
+  "iata": "AFY",
+  "icao": "LTAH",
+  "country": "TR",
+  "nameEn": "Afyon Air Base",
+  "cityEn": "Afyonkarahisar",
+  "kind": "medium"
+ },
+ {
+  "iata": "IXA",
+  "icao": "VEAT",
+  "country": "IN",
+  "nameEn": "Agartala - Maharaja Bir Bikram Airport",
+  "cityEn": "Agartala",
+  "kind": "medium"
+ },
+ {
+  "iata": "AGX",
+  "icao": "VOAT",
+  "country": "IN",
+  "nameEn": "Agatti Airport",
+  "cityEn": "Agatti",
+  "kind": "medium"
+ },
+ {
+  "iata": "AGZ",
+  "icao": "FAAG",
+  "country": "ZA",
+  "nameEn": "Aggeneys Airport",
+  "cityEn": "Aggeneys",
+  "kind": "medium"
+ },
+ {
+  "iata": "PNR",
+  "icao": "FCPP",
+  "country": "CG",
+  "nameEn": "Antonio Agostinho-Neto International Airport",
+  "cityEn": "Pointe Noire",
+  "kind": "large"
+ },
+ {
+  "iata": "AGR",
+  "icao": "VIAG",
+  "country": "IN",
+  "nameEn": "Agra Airport / Agra Air Force Station",
+  "cityEn": "Agra",
+  "kind": "medium"
+ },
+ {
+  "iata": "AJI",
+  "icao": "LTCO",
+  "country": "TR",
+  "nameEn": "Ağrı Airport",
+  "cityEn": "Ağrı",
+  "kind": "medium"
+ },
+ {
+  "iata": "AGQ",
+  "icao": "LGAG",
+  "country": "GR",
+  "nameEn": "Dhokimion Airfield",
+  "cityEn": "Agrinion",
+  "kind": "small"
+ },
+ {
+  "iata": "OCV",
+  "icao": "SKOC",
+  "country": "CO",
+  "nameEn": "Aguas Claras Airport",
+  "cityEn": "Ocaña",
+  "kind": "medium"
+ },
+ {
+  "iata": "AHE",
+  "icao": "NTHE",
+  "country": "PF",
+  "nameEn": "Ahe Airport",
+  "cityEn": "Ahe Atoll",
+  "kind": "medium"
+ },
+ {
+  "iata": "SRG",
+  "icao": "WAHS",
+  "country": "ID",
+  "nameEn": "Jenderal Ahmad Yani Airport",
+  "cityEn": "Semarang",
+  "kind": "large"
+ },
+ {
+  "iata": "AMD",
+  "icao": "VAAH",
+  "country": "IN",
+  "nameEn": "Sardar Vallabh Patel International Airport",
+  "cityEn": "Ahmedabad",
+  "kind": "large"
+ },
+ {
+  "iata": "AHS",
+  "icao": "MHAH",
+  "country": "HN",
+  "nameEn": "Ahuas Airport",
+  "cityEn": "Ahuas",
+  "kind": "small"
+ },
+ {
+  "iata": "AWZ",
+  "icao": "OIAW",
+  "country": "IR",
+  "nameEn": "Qasem Soleimani International Airport",
+  "cityEn": "Ahvaz",
+  "kind": "large"
+ },
+ {
+  "iata": "QSF",
+  "icao": "DAAS",
+  "country": "DZ",
+  "nameEn": "Ain Arnat Airport",
+  "cityEn": "Sétif",
+  "kind": "medium"
+ },
+ {
+  "iata": "IEO",
+  "icao": "GQNA",
+  "country": "MR",
+  "nameEn": "Aioun el Atrouss Airport",
+  "cityEn": "Aioun El Atrouss",
+  "kind": "small"
+ },
+ {
+  "iata": "AIT",
+  "icao": "NCAI",
+  "country": "CK",
+  "nameEn": "Aitutaki Airport",
+  "cityEn": "Aitutaki",
+  "kind": "small"
+ },
+ {
+  "iata": "CMF",
+  "icao": "LFLB",
+  "country": "FR",
+  "nameEn": "Chambéry Aix les Bains airport",
+  "cityEn": "Chambéry",
+  "kind": "medium"
+ },
+ {
+  "iata": "QXB",
+  "icao": "LFMA",
+  "country": "FR",
+  "nameEn": "Aix Les Milles airport",
+  "cityEn": "Aix en Provence",
+  "kind": "small"
+ },
+ {
+  "iata": "AJL",
+  "icao": "VEAZ",
+  "country": "IN",
+  "nameEn": "Lengpui Airport",
+  "cityEn": "Aizawl (Lengpui)",
+  "kind": "medium"
+ },
+ {
+  "iata": "AXT",
+  "icao": "RJSK",
+  "country": "JP",
+  "nameEn": "Akita Airport",
+  "cityEn": "Akita",
+  "kind": "medium"
+ },
+ {
+  "iata": "LAK",
+  "icao": "CYKD",
+  "country": "CA",
+  "nameEn": "Aklavik/Freddie Carmichael Airport",
+  "cityEn": "Aklavik",
+  "kind": "small"
+ },
+ {
+  "iata": "AKD",
+  "icao": "VAAK",
+  "country": "IN",
+  "nameEn": "Akola Airport",
+  "cityEn": "Akola",
+  "kind": "medium"
+ },
+ {
+  "iata": "CAK",
+  "icao": "KCAK",
+  "country": "US",
+  "nameEn": "Akron Canton Regional Airport",
+  "cityEn": "Akron",
+  "kind": "medium"
+ },
+ {
+  "iata": "AKT",
+  "icao": "LCRA",
+  "country": "CY",
+  "nameEn": "RAF Akrotiri",
+  "cityEn": "Akrotiri",
+  "kind": "medium"
+ },
+ {
+  "iata": "AKU",
+  "icao": "ZWAK",
+  "country": "CN",
+  "nameEn": "Aksu Hongqipo Airport",
+  "cityEn": "Aksu (Onsu)",
+  "kind": "medium"
+ },
+ {
+  "iata": "SCO",
+  "icao": "UATE",
+  "country": "KZ",
+  "nameEn": "Aktau International Airport",
+  "cityEn": "Aktau",
+  "kind": "large"
+ },
+ {
+  "iata": "PVK",
+  "icao": "LGPZ",
+  "country": "GR",
+  "nameEn": "Aktion National Airport",
+  "cityEn": "Preveza",
+  "kind": "medium"
+ },
+ {
+  "iata": "AKX",
+  "icao": "UATT",
+  "country": "KZ",
+  "nameEn": "Aktobe International Airport",
+  "cityEn": "Aktobe",
+  "kind": "large"
+ },
+ {
+  "iata": "AKV",
+  "icao": "CYKO",
+  "country": "CA",
+  "nameEn": "Akulivik Airport",
+  "cityEn": "Akulivik",
+  "kind": "small"
+ },
+ {
+  "iata": "AKR",
+  "icao": "DNAK",
+  "country": "NG",
+  "nameEn": "Akure Airport",
+  "cityEn": "Akure",
+  "kind": "medium"
+ },
+ {
+  "iata": "AEY",
+  "icao": "BIAR",
+  "country": "IS",
+  "nameEn": "Akureyri International Airport",
+  "cityEn": "Akureyri",
+  "kind": "large"
+ },
+ {
+  "iata": "KQA",
+  "icao": "KKQA",
+  "country": "US",
+  "nameEn": "Akutan Airport",
+  "cityEn": "Akutan",
+  "kind": "small"
+ },
+ {
+  "iata": "HOF",
+  "icao": "OEAH",
+  "country": "SA",
+  "nameEn": "Al-Ahsa International Airport",
+  "cityEn": "Hofuf",
+  "kind": "large"
+ },
+ {
+  "iata": "AAN",
+  "icao": "OMAL",
+  "country": "AE",
+  "nameEn": "Al Ain International Airport",
+  "cityEn": "Al Ain",
+  "kind": "large"
+ },
+ {
+  "iata": "IQA",
+  "icao": "ORAA",
+  "country": "IQ",
+  "nameEn": "Al Asad Air Base",
+  "cityEn": "Al Asad",
+  "kind": "medium"
+ },
+ {
+  "iata": "ABT",
+  "icao": "OEBA",
+  "country": "SA",
+  "nameEn": "King Saud Bin Abdulaziz (Al Baha) Airport",
+  "cityEn": "Al-Baha",
+  "kind": "medium"
+ },
+ {
+  "iata": "DHF",
+  "icao": "OMAM",
+  "country": "AE",
+  "nameEn": "Al Dhafra Air Base",
+  "cityEn": "Al Dhafra",
+  "kind": "medium"
+ },
+ {
+  "iata": "AAY",
+  "icao": "OYGD",
+  "country": "YE",
+  "nameEn": "Al Ghaydah International Airport",
+  "cityEn": "Al Ghaydah",
+  "kind": "medium"
+ },
+ {
+  "iata": "TQD",
+  "icao": "ORAT",
+  "country": "IQ",
+  "nameEn": "Al Taqaddum Air Base",
+  "cityEn": "Al Taqaddum",
+  "kind": "medium"
+ },
+ {
+  "iata": "XJD",
+  "icao": "OTBH",
+  "country": "QA",
+  "nameEn": "Al Udeid Air Base",
+  "cityEn": "Doha",
+  "kind": "medium"
+ },
+ {
+  "iata": "AJF",
+  "icao": "OESK",
+  "country": "SA",
+  "nameEn": "Al-Jawf International Airport",
+  "cityEn": "Al-Jawf",
+  "kind": "large"
+ },
+ {
+  "iata": "AUK",
+  "icao": "PAUK",
+  "country": "US",
+  "nameEn": "Alakanuk Airport",
+  "cityEn": "Alakanuk",
+  "kind": "small"
+ },
+ {
+  "iata": "ALM",
+  "icao": "KALM",
+  "country": "US",
+  "nameEn": "Alamogordo White Sands Regional Airport",
+  "cityEn": "Alamogordo",
+  "kind": "medium"
+ },
+ {
+  "iata": "ABC",
+  "icao": "LEAB",
+  "country": "ES",
+  "nameEn": "Albacete Airport / Los Llanos Air Base",
+  "cityEn": "Albacete",
+  "kind": "medium"
+ },
+ {
+  "iata": "ALH",
+  "icao": "YABA",
+  "country": "AU",
+  "nameEn": "Albany Airport",
+  "cityEn": "Albany",
+  "kind": "medium"
+ },
+ {
+  "iata": "ALB",
+  "icao": "KALB",
+  "country": "US",
+  "nameEn": "Albany International Airport",
+  "cityEn": "Albany",
+  "kind": "large"
+ },
+ {
+  "iata": "ALL",
+  "icao": "LIMG",
+  "country": "IT",
+  "nameEn": "Riviera Villanova d'Albenga International Airport",
+  "cityEn": "Villanova d'Albenga (SV)",
+  "kind": "medium"
+ },
+ {
+  "iata": "BYF",
+  "icao": "LFAQ",
+  "country": "FR",
+  "nameEn": "Albert Bray airport",
+  "cityEn": "Albert",
+  "kind": "small"
+ },
+ {
+  "iata": "OAJ",
+  "icao": "KOAJ",
+  "country": "US",
+  "nameEn": "Albert J Ellis Airport",
+  "cityEn": "Richlands",
+  "kind": "medium"
+ },
+ {
+  "iata": "SPG",
+  "icao": "KSPG",
+  "country": "US",
+  "nameEn": "Albert Whitted Airport",
+  "cityEn": "St Petersburg",
+  "kind": "small"
+ },
+ {
+  "iata": "MRD",
+  "icao": "SVMD",
+  "country": "VE",
+  "nameEn": "Alberto Carnevalli Airport",
+  "cityEn": "Mérida",
+  "kind": "medium"
+ },
+ {
+  "iata": "TND",
+  "icao": "MUTD",
+  "country": "CU",
+  "nameEn": "Alberto Delgado Airport",
+  "cityEn": "Trinidad",
+  "kind": "medium"
+ },
+ {
+  "iata": "ABQ",
+  "icao": "KABQ",
+  "country": "US",
+  "nameEn": "Albuquerque International Sunport",
+  "cityEn": "Albuquerque",
+  "kind": "large"
+ },
+ {
+  "iata": "ABX",
+  "icao": "YMAY",
+  "country": "AU",
+  "nameEn": "Albury Airport",
+  "cityEn": "East Albury",
+  "kind": "medium"
+ },
+ {
+  "iata": "ACD",
+  "icao": "SKAD",
+  "country": "CO",
+  "nameEn": "Alcides Fernández Airport",
+  "cityEn": "Acandí",
+  "kind": "small"
+ },
+ {
+  "iata": "ACI",
+  "icao": "EGJA",
+  "country": "GG",
+  "nameEn": "Alderney Airport",
+  "cityEn": "Saint Anne",
+  "kind": "medium"
+ },
+ {
+  "iata": "ALQ",
+  "icao": "SSLT",
+  "country": "BR",
+  "nameEn": "Alegrete Novo Airport",
+  "cityEn": "Alegrete",
+  "kind": "small"
+ },
+ {
+  "iata": "CUZ",
+  "icao": "SPZO",
+  "country": "PE",
+  "nameEn": "Alejandro Velasco Astete International Airport",
+  "cityEn": "Cusco",
+  "kind": "large"
+ },
+ {
+  "iata": "WKK",
+  "icao": "5A8",
+  "country": "US",
+  "nameEn": "Aleknagik / New Airport",
+  "cityEn": "Aleknagik",
+  "kind": "medium"
+ },
+ {
+  "iata": "ALP",
+  "icao": "OSAP",
+  "country": "SY",
+  "nameEn": "Aleppo International Airport",
+  "cityEn": "Aleppo",
+  "kind": "large"
+ },
+ {
+  "iata": "YLT",
+  "icao": "CYLT",
+  "country": "CA",
+  "nameEn": "Alert Airport",
+  "cityEn": "Alert",
+  "kind": "medium"
+ },
+ {
+  "iata": "AES",
+  "icao": "ENAL",
+  "country": "NO",
+  "nameEn": "Ålesund Airport",
+  "cityEn": "Ålesund",
+  "kind": "large"
+ },
+ {
+  "iata": "ALJ",
+  "icao": "FAAB",
+  "country": "ZA",
+  "nameEn": "Alexander Bay Airport",
+  "cityEn": "Alexander Bay",
+  "kind": "medium"
+ },
+ {
+  "iata": "ALR",
+  "icao": "NZLX",
+  "country": "NZ",
+  "nameEn": "Alexandra Aerodrome",
+  "cityEn": "Alexandra",
+  "kind": "medium"
+ },
+ {
+  "iata": "ALY",
+  "icao": "HEAX",
+  "country": "EG",
+  "nameEn": "Alexandria International Airport",
+  "cityEn": "Alexandria",
+  "kind": "large"
+ },
+ {
+  "iata": "AEX",
+  "icao": "KAEX",
+  "country": "US",
+  "nameEn": "Alexandria International Airport",
+  "cityEn": "Alexandria",
+  "kind": "medium"
+ },
+ {
+  "iata": "JSI",
+  "icao": "LGSK",
+  "country": "GR",
+  "nameEn": "Skiathos Island National Airport",
+  "cityEn": "Skiathos",
+  "kind": "medium"
+ },
+ {
+  "iata": "PKH",
+  "icao": "LGHL",
+  "country": "GR",
+  "nameEn": "Alexion Airport",
+  "cityEn": "Alexion",
+  "kind": "small"
+ },
+ {
+  "iata": "HUU",
+  "icao": "SPNC",
+  "country": "PE",
+  "nameEn": "Alferez Fap David Figueroa Fernandini Airport",
+  "cityEn": "Huánuco",
+  "kind": "medium"
+ },
+ {
+  "iata": "CLO",
+  "icao": "SKCL",
+  "country": "CO",
+  "nameEn": "Alfonso Bonilla Aragon International Airport",
+  "cityEn": "Cali",
+  "kind": "large"
+ },
+ {
+  "iata": "VUP",
+  "icao": "SKVP",
+  "country": "CO",
+  "nameEn": "Alfonso López Pumarejo Airport",
+  "cityEn": "Valledupar",
+  "kind": "medium"
+ },
+ {
+  "iata": "LET",
+  "icao": "SKLT",
+  "country": "CO",
+  "nameEn": "Alfredo Vásquez Cobo International Airport",
+  "cityEn": "Leticia",
+  "kind": "medium"
+ },
+ {
+  "iata": "AHO",
+  "icao": "LIEA",
+  "country": "IT",
+  "nameEn": "Alghero-Fertilia Airport",
+  "cityEn": "Alghero",
+  "kind": "medium"
+ },
+ {
+  "iata": "ALC",
+  "icao": "LEAL",
+  "country": "ES",
+  "nameEn": "Alicante-Elche Miguel Hernández Airport",
+  "cityEn": "Alicante",
+  "kind": "large"
+ },
+ {
+  "iata": "ALI",
+  "icao": "KALI",
+  "country": "US",
+  "nameEn": "Alice International Airport",
+  "cityEn": "Alice",
+  "kind": "medium"
+ },
+ {
+  "iata": "ASP",
+  "icao": "YBAS",
+  "country": "AU",
+  "nameEn": "Alice Springs Airport",
+  "cityEn": "Alice Springs",
+  "kind": "medium"
+ },
+ {
+  "iata": "HRH",
+  "icao": "VAIH",
+  "country": "IN",
+  "nameEn": "Aligarh Airport",
+  "cityEn": "Aligarh",
+  "kind": "small"
+ },
+ {
+  "iata": "IXD",
+  "icao": "VIAL",
+  "country": "IN",
+  "nameEn": "Prayagraj Airport",
+  "cityEn": "Allahabad",
+  "kind": "medium"
+ },
+ {
+  "iata": "AET",
+  "icao": "PFAL",
+  "country": "US",
+  "nameEn": "Allakaket Airport",
+  "cityEn": "Allakaket",
+  "kind": "small"
+ },
+ {
+  "iata": "LHE",
+  "icao": "OPLA",
+  "country": "PK",
+  "nameEn": "Allama Iqbal International Airport",
+  "cityEn": "Lahore",
+  "kind": "large"
+ },
+ {
+  "iata": "AGC",
+  "icao": "KAGC",
+  "country": "US",
+  "nameEn": "Allegheny County Airport",
+  "cityEn": "Pittsburgh",
+  "kind": "medium"
+ },
+ {
+  "iata": "BIG",
+  "icao": "PABI",
+  "country": "US",
+  "nameEn": "Allen Army Airfield",
+  "cityEn": "Delta Junction",
+  "kind": "medium"
+ },
+ {
+  "iata": "FMM",
+  "icao": "EDJA",
+  "country": "DE",
+  "nameEn": "Memmingen Allgau Airport",
+  "cityEn": "Memmingen",
+  "kind": "large"
+ },
+ {
+  "iata": "AIA",
+  "icao": "KAIA",
+  "country": "US",
+  "nameEn": "Alliance Municipal Airport",
+  "cityEn": "Alliance",
+  "kind": "medium"
+ },
+ {
+  "iata": "LLU",
+  "icao": "BGAP",
+  "country": "GL",
+  "nameEn": "Alluitsup Paa Heliport",
+  "cityEn": "Alluitsup Paa",
+  "kind": "heliport"
+ },
+ {
+  "iata": "ALA",
+  "icao": "UAAA",
+  "country": "KZ",
+  "nameEn": "Almaty International Airport",
+  "cityEn": "Almaty",
+  "kind": "large"
+ },
+ {
+  "iata": "LEI",
+  "icao": "LEAM",
+  "country": "ES",
+  "nameEn": "Almería Airport",
+  "cityEn": "Almería",
+  "kind": "medium"
+ },
+ {
+  "iata": "RCH",
+  "icao": "SKRH",
+  "country": "CO",
+  "nameEn": "Almirante Padilla Airport",
+  "cityEn": "Riohacha",
+  "kind": "medium"
+ },
+ {
+  "iata": "REL",
+  "icao": "SAVT",
+  "country": "AR",
+  "nameEn": "Almirante Marco Andres Zar Airport",
+  "cityEn": "Rawson",
+  "kind": "medium"
+ },
+ {
+  "iata": "CTD",
+  "icao": "MPCE",
+  "country": "PA",
+  "nameEn": "Alonso Valderrama Airport",
+  "cityEn": "Chitré",
+  "kind": "medium"
+ },
+ {
+  "iata": "APN",
+  "icao": "KAPN",
+  "country": "US",
+  "nameEn": "Alpena County Regional Airport",
+  "cityEn": "Alpena",
+  "kind": "medium"
+ },
+ {
+  "iata": "ALF",
+  "icao": "ENAT",
+  "country": "NO",
+  "nameEn": "Alta Airport",
+  "cityEn": "Alta",
+  "kind": "medium"
+ },
+ {
+  "iata": "AFL",
+  "icao": "SBAT",
+  "country": "BR",
+  "nameEn": "Piloto Osvaldo Marques Dias Airport",
+  "cityEn": "Alta Floresta",
+  "kind": "medium"
+ },
+ {
+  "iata": "LTI",
+  "icao": "ZMAT",
+  "country": "MN",
+  "nameEn": "Altai Airport",
+  "cityEn": "Altai",
+  "kind": "medium"
+ },
+ {
+  "iata": "ATM",
+  "icao": "SBHT",
+  "country": "BR",
+  "nameEn": "Altamira Interstate Airport",
+  "cityEn": "Altamira",
+  "kind": "medium"
+ },
+ {
+  "iata": "AAT",
+  "icao": "ZWAT",
+  "country": "CN",
+  "nameEn": "Altay Xuedu Airport",
+  "cityEn": "Altay",
+  "kind": "medium"
+ },
+ {
+  "iata": "AOC",
+  "icao": "EDAC",
+  "country": "DE",
+  "nameEn": "Leipzig–Altenburg Airport",
+  "cityEn": "Nobitz",
+  "kind": "medium"
+ },
+ {
+  "iata": "AOO",
+  "icao": "KAOO",
+  "country": "US",
+  "nameEn": "Altoona Blair County Airport",
+  "cityEn": "Altoona",
+  "kind": "medium"
+ },
+ {
+  "iata": "LTS",
+  "icao": "KLTS",
+  "country": "US",
+  "nameEn": "Altus Air Force Base",
+  "cityEn": "Altus",
+  "kind": "medium"
+ },
+ {
+  "iata": "ALU",
+  "icao": "HCMA",
+  "country": "SO",
+  "nameEn": "Alula Airport",
+  "cityEn": "Alula",
+  "kind": "small"
+ },
+ {
+  "iata": "AXF",
+  "icao": "ZBAL",
+  "country": "CN",
+  "nameEn": "Alxa Left Banner Bayanhot Airport",
+  "cityEn": "Bayanhot",
+  "kind": "medium"
+ },
+ {
+  "iata": "NSK",
+  "icao": "UOOO",
+  "country": "RU",
+  "nameEn": "Alykel International Airport",
+  "cityEn": "Norilsk",
+  "kind": "large"
+ },
+ {
+  "iata": "AXJ",
+  "icao": "RJDA",
+  "country": "JP",
+  "nameEn": "Amakusa Airport",
+  "cityEn": "Amakusa",
+  "kind": "medium"
+ },
+ {
+  "iata": "ASJ",
+  "icao": "RJKA",
+  "country": "JP",
+  "nameEn": "Amami Airport",
+  "cityEn": "Amami",
+  "kind": "medium"
+ },
+ {
+  "iata": "WAI",
+  "icao": "FMNW",
+  "country": "MG",
+  "nameEn": "Ambalabe Airport",
+  "cityEn": "Antsohihy",
+  "kind": "medium"
+ },
+ {
+  "iata": "IVA",
+  "icao": "FMNJ",
+  "country": "MG",
+  "nameEn": "Ampampamena Airport",
+  "cityEn": "Ambanja",
+  "kind": "small"
+ },
+ {
+  "iata": "WAM",
+  "icao": "FMMZ",
+  "country": "MG",
+  "nameEn": "Ambatondrazaka Airport",
+  "cityEn": "Ambatondrazaka",
+  "kind": "small"
+ },
+ {
+  "iata": "AMB",
+  "icao": "FMNE",
+  "country": "MG",
+  "nameEn": "Ambilobe Airport",
+  "cityEn": "Ambilobe",
+  "kind": "small"
+ },
+ {
+  "iata": "ABL",
+  "icao": "PAFM",
+  "country": "US",
+  "nameEn": "Ambler Airport",
+  "cityEn": "Ambler",
+  "kind": "medium"
+ },
+ {
+  "iata": "MZI",
+  "icao": "GAMB",
+  "country": "ML",
+  "nameEn": "Mopti Airport",
+  "cityEn": "Sévaré",
+  "kind": "medium"
+ },
+ {
+  "iata": "ASV",
+  "icao": "HKAM",
+  "country": "KE",
+  "nameEn": "Amboseli Airport",
+  "cityEn": "Ol Tukai",
+  "kind": "medium"
+ },
+ {
+  "iata": "JIB",
+  "icao": "HDAM",
+  "country": "DJ",
+  "nameEn": "Djibouti-Ambouli Airport",
+  "cityEn": "Djibouti City",
+  "kind": "large"
+ },
+ {
+  "iata": "COR",
+  "icao": "SACO",
+  "country": "AR",
+  "nameEn": "Ingeniero Aeronáutico Ambrosio L.V. Taravella International Airport",
+  "cityEn": "Cordoba",
+  "kind": "large"
+ },
+ {
+  "iata": "AMV",
+  "icao": "ULDD",
+  "country": "RU",
+  "nameEn": "Amderma Airport",
+  "cityEn": "Amderma",
+  "kind": "medium"
+ },
+ {
+  "iata": "SID",
+  "icao": "GVAC",
+  "country": "CV",
+  "nameEn": "Amílcar Cabral International Airport",
+  "cityEn": "Espargos",
+  "kind": "large"
+ },
+ {
+  "iata": "GOY",
+  "icao": "VCCG",
+  "country": "LK",
+  "nameEn": "Ampara Airport",
+  "cityEn": "Ampara",
+  "kind": "medium"
+ },
+ {
+  "iata": "SAY",
+  "icao": "LIQS",
+  "country": "IT",
+  "nameEn": "Siena-Ampugnano Airport",
+  "cityEn": "Ampugnano (SI)",
+  "kind": "medium"
+ },
+ {
+  "iata": "AVR",
+  "icao": "VAAM",
+  "country": "IN",
+  "nameEn": "Amravati  Airport",
+  "cityEn": "Amravati",
+  "kind": "medium"
+ },
+ {
+  "iata": "AAA",
+  "icao": "NTGA",
+  "country": "PF",
+  "nameEn": "Anaa Airport",
+  "cityEn": "Anaa",
+  "kind": "medium"
+ },
+ {
+  "iata": "AAO",
+  "icao": "SVAN",
+  "country": "VE",
+  "nameEn": "Anaco Airport",
+  "cityEn": "Anaco",
+  "kind": "medium"
+ },
+ {
+  "iata": "AOE",
+  "icao": "LTBY",
+  "country": "TR",
+  "nameEn": "Hasan Polatkan Airport",
+  "cityEn": "Eskişehir",
+  "kind": "large"
+ },
+ {
+  "iata": "YAA",
+  "icao": "CAJ4",
+  "country": "CA",
+  "nameEn": "Anahim Lake Airport",
+  "cityEn": "Anahim Lake",
+  "kind": "medium"
+ },
+ {
+  "iata": "AKP",
+  "icao": "PAKP",
+  "country": "US",
+  "nameEn": "Anaktuvuk Pass Airport",
+  "cityEn": "Anaktuvuk Pass",
+  "kind": "medium"
+ },
+ {
+  "iata": "HVA",
+  "icao": "FMNL",
+  "country": "MG",
+  "nameEn": "Analalava Airport",
+  "cityEn": "Analalava",
+  "kind": "medium"
+ },
+ {
+  "iata": "SDN",
+  "icao": "ENSD",
+  "country": "NO",
+  "nameEn": "Sandane Airport, Anda",
+  "cityEn": "Sandane",
+  "kind": "small"
+ },
+ {
+  "iata": "ANS",
+  "icao": "SPHY",
+  "country": "PE",
+  "nameEn": "Andahuaylas Airport",
+  "cityEn": "Andahuaylas",
+  "kind": "small"
+ },
+ {
+  "iata": "ZWA",
+  "icao": "FMND",
+  "country": "MG",
+  "nameEn": "Andapa Airport",
+  "cityEn": "Andapa",
+  "kind": "medium"
+ },
+ {
+  "iata": "ANX",
+  "icao": "ENAN",
+  "country": "NO",
+  "nameEn": "Andøya Airport, Andenes",
+  "cityEn": "Andenes",
+  "kind": "medium"
+ },
+ {
+  "iata": "UAM",
+  "icao": "PGUA",
+  "country": "GU",
+  "nameEn": "Andersen Air Force Base",
+  "cityEn": "Yigo",
+  "kind": "medium"
+ },
+ {
+  "iata": "AND",
+  "icao": "KAND",
+  "country": "US",
+  "nameEn": "Anderson Regional Airport",
+  "cityEn": "Anderson",
+  "kind": "medium"
+ },
+ {
+  "iata": "AZN",
+  "icao": "UTKA",
+  "country": "UZ",
+  "nameEn": "Andijan International Airport",
+  "cityEn": "Andijan",
+  "kind": "medium"
+ },
+ {
+  "iata": "PYR",
+  "icao": "LGAD",
+  "country": "GR",
+  "nameEn": "Andravida Air Base",
+  "cityEn": "Andravida",
+  "kind": "medium"
+ },
+ {
+  "iata": "ADW",
+  "icao": "KADW",
+  "country": "US",
+  "nameEn": "Joint Base Andrews",
+  "cityEn": "Camp Springs",
+  "kind": "medium"
+ },
+ {
+  "iata": "ASD",
+  "icao": "MYAF",
+  "country": "BS",
+  "nameEn": "Andros Town Airport",
+  "cityEn": "Andros Town",
+  "kind": "medium"
+ },
+ {
+  "iata": "AUY",
+  "icao": "NVVA",
+  "country": "VU",
+  "nameEn": "Aneityum Airport",
+  "cityEn": "Anatom Island",
+  "kind": "small"
+ },
+ {
+  "iata": "OUD",
+  "icao": "GMFO",
+  "country": "MA",
+  "nameEn": "Oujda Angads Airport",
+  "cityEn": "Ahl Angad",
+  "kind": "large"
+ },
+ {
+  "iata": "TGZ",
+  "icao": "MMTG",
+  "country": "MX",
+  "nameEn": "Angel Albino Corzo International Airport",
+  "cityEn": "Tuxtla Gutiérrez",
+  "kind": "medium"
+ },
+ {
+  "iata": "LFK",
+  "icao": "KLFK",
+  "country": "US",
+  "nameEn": "Angelina County Airport",
+  "cityEn": "Lufkin",
+  "kind": "medium"
+ },
+ {
+  "iata": "ANE",
+  "icao": "LFJR",
+  "country": "FR",
+  "nameEn": "Angers Marcé airport",
+  "cityEn": "Angers",
+  "kind": "medium"
+ },
+ {
+  "iata": "VLY",
+  "icao": "EGOV",
+  "country": "GB",
+  "nameEn": "Anglesey Airport",
+  "cityEn": "Angelsey",
+  "kind": "medium"
+ },
+ {
+  "iata": "ANI",
+  "icao": "PANI",
+  "country": "US",
+  "nameEn": "Aniak Airport",
+  "cityEn": "Aniak",
+  "kind": "medium"
+ },
+ {
+  "iata": "AWD",
+  "icao": "NVVB",
+  "country": "VU",
+  "nameEn": "Aniwa Airport",
+  "cityEn": "Aniwa",
+  "kind": "small"
+ },
+ {
+  "iata": "AKA",
+  "icao": "ZLAK",
+  "country": "CN",
+  "nameEn": "Ankang Fuqiang Airport",
+  "cityEn": "Ankang (Hanbin)",
+  "kind": "small"
+ },
+ {
+  "iata": "JVA",
+  "icao": "FMMK",
+  "country": "MG",
+  "nameEn": "Ankavandra Airport",
+  "cityEn": "Ankavandra",
+  "kind": "small"
+ },
+ {
+  "iata": "VBA",
+  "icao": "VYAN",
+  "country": "MM",
+  "nameEn": "Ann Airport",
+  "cityEn": "Aeng",
+  "kind": "small"
+ },
+ {
+  "iata": "AAE",
+  "icao": "DABB",
+  "country": "DZ",
+  "nameEn": "Annaba Rabah Bitat Airport",
+  "cityEn": "Annaba",
+  "kind": "large"
+ },
+ {
+  "iata": "QNJ",
+  "icao": "LFLI",
+  "country": "FR",
+  "nameEn": "Annemasse Airfield",
+  "cityEn": "Annemasse",
+  "kind": "medium"
+ },
+ {
+  "iata": "ANN",
+  "icao": "PANT",
+  "country": "US",
+  "nameEn": "Annette Island Airport",
+  "cityEn": "Metlakatla",
+  "kind": "medium"
+ },
+ {
+  "iata": "ANB",
+  "icao": "KANB",
+  "country": "US",
+  "nameEn": "Anniston Regional Airport",
+  "cityEn": "Anniston",
+  "kind": "medium"
+ },
+ {
+  "iata": "AQG",
+  "icao": "ZSAQ",
+  "country": "CN",
+  "nameEn": "Anqing Tianzhushan Airport / Anqing North Air Base",
+  "cityEn": "Anqing",
+  "kind": "medium"
+ },
+ {
+  "iata": "AOG",
+  "icao": "ZYAS",
+  "country": "CN",
+  "nameEn": "Anshan Teng'ao Airport / Anshan Air Base",
+  "cityEn": "Anshan",
+  "kind": "medium"
+ },
+ {
+  "iata": "AVA",
+  "icao": "ZUAS",
+  "country": "CN",
+  "nameEn": "Anshun Huangguoshu Airport",
+  "cityEn": "Anshun (Xixiu)",
+  "kind": "medium"
+ },
+ {
+  "iata": "AYT",
+  "icao": "LTAI",
+  "country": "TR",
+  "nameEn": "Antalya International Airport",
+  "cityEn": "Antalya",
+  "kind": "large"
+ },
+ {
+  "iata": "GZP",
+  "icao": "LTFG",
+  "country": "TR",
+  "nameEn": "Gazipaşa-Alanya Airport",
+  "cityEn": "Gazipaşa",
+  "kind": "medium"
+ },
+ {
+  "iata": "OES",
+  "icao": "SAVN",
+  "country": "AR",
+  "nameEn": "Antoine de Saint Exupéry Airport",
+  "cityEn": "San Antonio Oeste",
+  "kind": "small"
+ },
+ {
+  "iata": "CYA",
+  "icao": "MTCA",
+  "country": "HT",
+  "nameEn": "Antoine-Simon International Airport",
+  "cityEn": "Les Cayes",
+  "kind": "medium"
+ },
+ {
+  "iata": "CUM",
+  "icao": "SVCU",
+  "country": "VE",
+  "nameEn": "Antonio José de Sucre Airport",
+  "cityEn": "Cumaná",
+  "kind": "medium"
+ },
+ {
+  "iata": "ARE",
+  "icao": "TJAB",
+  "country": "PR",
+  "nameEn": "Antonio Nery Juarbe Pol Airport",
+  "cityEn": "Arecibo",
+  "kind": "medium"
+ },
+ {
+  "iata": "SCU",
+  "icao": "MUCU",
+  "country": "CU",
+  "nameEn": "Antonio Maceo International Airport",
+  "cityEn": "Santiago",
+  "kind": "large"
+ },
+ {
+  "iata": "PSO",
+  "icao": "SKPS",
+  "country": "CO",
+  "nameEn": "Antonio Nariño Airport",
+  "cityEn": "Chachagüí",
+  "kind": "medium"
+ },
+ {
+  "iata": "APO",
+  "icao": "SKLC",
+  "country": "CO",
+  "nameEn": "Antonio Roldán Betancur Airport",
+  "cityEn": "Carepa",
+  "kind": "medium"
+ },
+ {
+  "iata": "WAQ",
+  "icao": "FMMG",
+  "country": "MG",
+  "nameEn": "Antsalova Airport",
+  "cityEn": "Antsalova",
+  "kind": "small"
+ },
+ {
+  "iata": "ANM",
+  "icao": "FMNH",
+  "country": "MG",
+  "nameEn": "Antsirabe Airport",
+  "cityEn": "Antsirabe",
+  "kind": "medium"
+ },
+ {
+  "iata": "ANR",
+  "icao": "EBAW",
+  "country": "BE",
+  "nameEn": "Antwerp International Airport (Deurne)",
+  "cityEn": "Antwerp",
+  "kind": "medium"
+ },
+ {
+  "iata": "ANV",
+  "icao": "PANV",
+  "country": "US",
+  "nameEn": "Anvik Airport",
+  "cityEn": "Anvik",
+  "kind": "medium"
+ },
+ {
+  "iata": "HQQ",
+  "icao": "ZHQQ",
+  "country": "CN",
+  "nameEn": "Anyang Hongqiqu Airport",
+  "cityEn": "Anyang",
+  "kind": "small"
+ },
+ {
+  "iata": "AOJ",
+  "icao": "RJSA",
+  "country": "JP",
+  "nameEn": "Aomori Airport",
+  "cityEn": "Aomori",
+  "kind": "large"
+ },
+ {
+  "iata": "AOT",
+  "icao": "LIMW",
+  "country": "IT",
+  "nameEn": "Aosta Corrado Gex Airport",
+  "cityEn": "Saint-Christophe (AO)",
+  "kind": "medium"
+ },
+ {
+  "iata": "APK",
+  "icao": "NTGD",
+  "country": "PF",
+  "nameEn": "Apataki Airport",
+  "cityEn": "Apataki",
+  "kind": "small"
+ },
+ {
+  "iata": "ATW",
+  "icao": "KATW",
+  "country": "US",
+  "nameEn": "Appleton International Airport",
+  "cityEn": "Appleton",
+  "kind": "medium"
+ },
+ {
+  "iata": "AAP",
+  "icao": "WALS",
+  "country": "ID",
+  "nameEn": "Aji Pangeran Tumenggung Pranoto International Airport",
+  "cityEn": "Samarinda",
+  "kind": "medium"
+ },
+ {
+  "iata": "AQJ",
+  "icao": "OJAQ",
+  "country": "JO",
+  "nameEn": "King Hussein International Airport",
+  "cityEn": "Aqaba",
+  "kind": "large"
+ },
+ {
+  "iata": "ARX",
+  "icao": "SNAT",
+  "country": "BR",
+  "nameEn": "Aracati Dragão do Mar Regional Airport",
+  "cityEn": "Aracati",
+  "kind": "medium"
+ },
+ {
+  "iata": "ARU",
+  "icao": "SBAU",
+  "country": "BR",
+  "nameEn": "Araçatuba Airport",
+  "cityEn": "Araçatuba",
+  "kind": "medium"
+ },
+ {
+  "iata": "ARW",
+  "icao": "LRAR",
+  "country": "RO",
+  "nameEn": "Arad International Airport",
+  "cityEn": "Arad",
+  "kind": "medium"
+ },
+ {
+  "iata": "AUX",
+  "icao": "SWGN",
+  "country": "BR",
+  "nameEn": "Araguaína Airport",
+  "cityEn": "Araguaína",
+  "kind": "medium"
+ },
+ {
+  "iata": "ACF",
+  "icao": "ZWAL",
+  "country": "CN",
+  "nameEn": "Aral Tarim Airport",
+  "cityEn": "Aral",
+  "kind": "small"
+ },
+ {
+  "iata": "RAE",
+  "icao": "OERR",
+  "country": "SA",
+  "nameEn": "Arar Domestic Airport",
+  "cityEn": "Arar",
+  "kind": "medium"
+ },
+ {
+  "iata": "ACR",
+  "icao": "SKAC",
+  "country": "CO",
+  "nameEn": "Araracuara Airport",
+  "cityEn": "Araracuara",
+  "kind": "small"
+ },
+ {
+  "iata": "AQA",
+  "icao": "SBAQ",
+  "country": "BR",
+  "nameEn": "Araraquara Airport",
+  "cityEn": "Araraquara",
+  "kind": "medium"
+ },
+ {
+  "iata": "AAX",
+  "icao": "SBAX",
+  "country": "BR",
+  "nameEn": "Romeu Zema Airport",
+  "cityEn": "Araxá",
+  "kind": "medium"
+ },
+ {
+  "iata": "GPA",
+  "icao": "LGRX",
+  "country": "GR",
+  "nameEn": "Patras Araxos Agamemnon Airport",
+  "cityEn": "Patras",
+  "kind": "medium"
+ },
+ {
+  "iata": "AMH",
+  "icao": "HAAM",
+  "country": "ET",
+  "nameEn": "Arba Minch Airport",
+  "cityEn": "Arba Minch",
+  "kind": "medium"
+ },
+ {
+  "iata": "ACV",
+  "icao": "KACV",
+  "country": "US",
+  "nameEn": "California Redwood Coast-Humboldt County Airport",
+  "cityEn": "Arcata/Eureka",
+  "kind": "medium"
+ },
+ {
+  "iata": "ARC",
+  "icao": "PARC",
+  "country": "US",
+  "nameEn": "Arctic Village Airport",
+  "cityEn": "Arctic Village",
+  "kind": "medium"
+ },
+ {
+  "iata": "ADU",
+  "icao": "OITL",
+  "country": "IR",
+  "nameEn": "Ardabil Airport",
+  "cityEn": "Ardabil",
+  "kind": "medium"
+ },
+ {
+  "iata": "OBS",
+  "icao": "LFHO",
+  "country": "FR",
+  "nameEn": "Aubenas-South Ardèche Airport",
+  "cityEn": "Lanas, Ardèche",
+  "kind": "medium"
+ },
+ {
+  "iata": "ADM",
+  "icao": "KADM",
+  "country": "US",
+  "nameEn": "Ardmore Municipal Airport",
+  "cityEn": "Ardmore",
+  "kind": "small"
+ },
+ {
+  "iata": "FON",
+  "icao": "MRAN",
+  "country": "CR",
+  "nameEn": "La Fortuna Arenal Airport",
+  "cityEn": "La Fortuna",
+  "kind": "medium"
+ },
+ {
+  "iata": "GYL",
+  "icao": "YARG",
+  "country": "AU",
+  "nameEn": "Argyle Airport",
+  "cityEn": "Argyle",
+  "kind": "small"
+ },
+ {
+  "iata": "SVD",
+  "icao": "TVSA",
+  "country": "VC",
+  "nameEn": "Argyle International Airport",
+  "cityEn": "Kingstown",
+  "kind": "large"
+ },
+ {
+  "iata": "AIR",
+  "icao": "SSOU",
+  "country": "BR",
+  "nameEn": "Aripuanã Airport",
+  "cityEn": "Aripuanã",
+  "kind": "small"
+ },
+ {
+  "iata": "KSO",
+  "icao": "LGKA",
+  "country": "GR",
+  "nameEn": "Kastoria National Airport Aristotle",
+  "cityEn": "Argos Orestiko",
+  "kind": "small"
+ },
+ {
+  "iata": "BYH",
+  "icao": "KBYH",
+  "country": "US",
+  "nameEn": "Arkansas International Airport",
+  "cityEn": "Blytheville",
+  "kind": "medium"
+ },
+ {
+  "iata": "ARN",
+  "icao": "ESSA",
+  "country": "SE",
+  "nameEn": "Stockholm-Arlanda Airport",
+  "cityEn": "Stockholm",
+  "kind": "large"
+ },
+ {
+  "iata": "ARM",
+  "icao": "YARM",
+  "country": "AU",
+  "nameEn": "Armidale Airport",
+  "cityEn": "Armidale",
+  "kind": "medium"
+ },
+ {
+  "iata": "SBK",
+  "icao": "LFRT",
+  "country": "FR",
+  "nameEn": "Saint-Brieuc-Armor Airport",
+  "cityEn": "Trémuson, Côtes-d'Armor",
+  "kind": "medium"
+ },
+ {
+  "iata": "YYW",
+  "icao": "CYYW",
+  "country": "CA",
+  "nameEn": "Armstrong Airport",
+  "cityEn": "Armstrong",
+  "kind": "medium"
+ },
+ {
+  "iata": "LME",
+  "icao": "LFRM",
+  "country": "FR",
+  "nameEn": "Le Mans-Arnage Airport",
+  "cityEn": "Le Mans, Sarthe",
+  "kind": "medium"
+ },
+ {
+  "iata": "LBE",
+  "icao": "KLBE",
+  "country": "US",
+  "nameEn": "Arnold Palmer Regional Airport",
+  "cityEn": "Latrobe",
+  "kind": "medium"
+ },
+ {
+  "iata": "ZCA",
+  "icao": "EDLA",
+  "country": "DE",
+  "nameEn": "Arnsberg Menden Airport",
+  "cityEn": "Arnsberg Menden",
+  "kind": "small"
+ },
+ {
+  "iata": "MOL",
+  "icao": "ENML",
+  "country": "NO",
+  "nameEn": "Molde Airport, Årø",
+  "cityEn": "Årø",
+  "kind": "medium"
+ },
+ {
+  "iata": "DIE",
+  "icao": "FMNA",
+  "country": "MG",
+  "nameEn": "Arrachart Airport",
+  "cityEn": "Antisiranana",
+  "kind": "medium"
+ },
+ {
+  "iata": "ACE",
+  "icao": "GCRR",
+  "country": "ES",
+  "nameEn": "César Manrique-Lanzarote Airport",
+  "cityEn": "San Bartolomé",
+  "kind": "large"
+ },
+ {
+  "iata": "EPS",
+  "icao": "MDAB",
+  "country": "DO",
+  "nameEn": "Arroyo Barril Airport",
+  "cityEn": "Arroyo Barril",
+  "kind": "small"
+ },
+ {
+  "iata": "ATC",
+  "icao": "MYCA",
+  "country": "BS",
+  "nameEn": "Arthur's Town Airport",
+  "cityEn": "Arthur's Town",
+  "kind": "medium"
+ },
+ {
+  "iata": "SCL",
+  "icao": "SCEL",
+  "country": "CL",
+  "nameEn": "Comodoro Arturo Merino Benítez International Airport",
+  "cityEn": "Santiago",
+  "kind": "large"
+ },
+ {
+  "iata": "VLN",
+  "icao": "SVVA",
+  "country": "VE",
+  "nameEn": "Arturo Michelena International Airport",
+  "cityEn": "Valencia",
+  "kind": "large"
+ },
+ {
+  "iata": "RUA",
+  "icao": "HUAR",
+  "country": "UG",
+  "nameEn": "Arua Airport",
+  "cityEn": "Arua",
+  "kind": "medium"
+ },
+ {
+  "iata": "ARK",
+  "icao": "HTAR",
+  "country": "TZ",
+  "nameEn": "Arusha Airport",
+  "cityEn": "Arusha",
+  "kind": "medium"
+ },
+ {
+  "iata": "AXR",
+  "icao": "NTGU",
+  "country": "PF",
+  "nameEn": "Arutua Airport",
+  "cityEn": "Arutua",
+  "kind": "medium"
+ },
+ {
+  "iata": "AVK",
+  "icao": "ZMAH",
+  "country": "MN",
+  "nameEn": "Arvaikheer Airport",
+  "cityEn": "Arvaikheer",
+  "kind": "medium"
+ },
+ {
+  "iata": "YEK",
+  "icao": "CYEK",
+  "country": "CA",
+  "nameEn": "Arviat Airport",
+  "cityEn": "Arviat",
+  "kind": "small"
+ },
+ {
+  "iata": "AJR",
+  "icao": "ESNX",
+  "country": "SE",
+  "nameEn": "Arvidsjaur Airport",
+  "cityEn": "Arvidsjaur",
+  "kind": "medium"
+ },
+ {
+  "iata": "YIE",
+  "icao": "ZBES",
+  "country": "CN",
+  "nameEn": "Arxan Yi'ershi Airport",
+  "cityEn": "Arxan",
+  "kind": "medium"
+ },
+ {
+  "iata": "ABB",
+  "icao": "DNAS",
+  "country": "NG",
+  "nameEn": "Asaba International Airport",
+  "cityEn": "Asaba",
+  "kind": "large"
+ },
+ {
+  "iata": "AKJ",
+  "icao": "RJEC",
+  "country": "JP",
+  "nameEn": "Asahikawa Airport",
+  "cityEn": "Higashikagura",
+  "kind": "medium"
+ },
+ {
+  "iata": "AVL",
+  "icao": "KAVL",
+  "country": "US",
+  "nameEn": "Asheville Regional Airport",
+  "cityEn": "Asheville",
+  "kind": "medium"
+ },
+ {
+  "iata": "LYM",
+  "icao": "EGMK",
+  "country": "GB",
+  "nameEn": "Ashford Airport",
+  "cityEn": "Ashford",
+  "kind": "small"
+ },
+ {
+  "iata": "ASB",
+  "icao": "UTAA",
+  "country": "TM",
+  "nameEn": "Ashgabat International Airport",
+  "cityEn": "Ashgabat",
+  "kind": "large"
+ },
+ {
+  "iata": "ASM",
+  "icao": "HHAS",
+  "country": "ER",
+  "nameEn": "Asmara International Airport",
+  "cityEn": "Asmara",
+  "kind": "medium"
+ },
+ {
+  "iata": "ASO",
+  "icao": "HASO",
+  "country": "ET",
+  "nameEn": "Asosa Airport",
+  "cityEn": "Asosa",
+  "kind": "medium"
+ },
+ {
+  "iata": "ASE",
+  "icao": "KASE",
+  "country": "US",
+  "nameEn": "Aspen-Pitkin County Airport (Sardy Field)",
+  "cityEn": "Aspen",
+  "kind": "medium"
+ },
+ {
+  "iata": "ASA",
+  "icao": "HHSB",
+  "country": "ER",
+  "nameEn": "Assab International Airport",
+  "cityEn": "Assab",
+  "kind": "medium"
+ },
+ {
+  "iata": "MDQ",
+  "icao": "SAZM",
+  "country": "AR",
+  "nameEn": "Ástor Piazzola International Airport",
+  "cityEn": "Mar del Plata",
+  "kind": "medium"
+ },
+ {
+  "iata": "ASF",
+  "icao": "URWA",
+  "country": "RU",
+  "nameEn": "Astrakhan Narimanovo Boris M. Kustodiev International Airport",
+  "cityEn": "Astrakhan",
+  "kind": "large"
+ },
+ {
+  "iata": "OVD",
+  "icao": "LEAS",
+  "country": "ES",
+  "nameEn": "Asturias Airport",
+  "cityEn": "Ranón",
+  "kind": "large"
+ },
+ {
+  "iata": "JTY",
+  "icao": "LGPL",
+  "country": "GR",
+  "nameEn": "Astypalaia Airport",
+  "cityEn": "Astypalaia Island",
+  "kind": "small"
+ },
+ {
+  "iata": "ASW",
+  "icao": "HESN",
+  "country": "EG",
+  "nameEn": "Aswan International Airport",
+  "cityEn": "Aswan",
+  "kind": "large"
+ },
+ {
+  "iata": "ATZ",
+  "icao": "HEAT",
+  "country": "EG",
+  "nameEn": "Asyut International Airport",
+  "cityEn": "Asyut",
+  "kind": "large"
+ },
+ {
+  "iata": "AXK",
+  "icao": "OYAT",
+  "country": "YE",
+  "nameEn": "Ataq Airport",
+  "cityEn": "Ataq",
+  "kind": "medium"
+ },
+ {
+  "iata": "ATR",
+  "icao": "GQPA",
+  "country": "MR",
+  "nameEn": "Atar International Airport",
+  "cityEn": "Atar",
+  "kind": "medium"
+ },
+ {
+  "iata": "ISL",
+  "icao": "LTBA",
+  "country": "TR",
+  "nameEn": "İstanbul Atatürk Airport",
+  "cityEn": "Istanbul(Bakırköy)",
+  "kind": "large"
+ },
+ {
+  "iata": "ATB",
+  "icao": "HSAT",
+  "country": "SD",
+  "nameEn": "Atbara Airport",
+  "cityEn": "Atbara",
+  "kind": "small"
+ },
+ {
+  "iata": "AHN",
+  "icao": "KAHN",
+  "country": "US",
+  "nameEn": "Athens Ben Epps Airport",
+  "cityEn": "Athens",
+  "kind": "medium"
+ },
+ {
+  "iata": "ATH",
+  "icao": "LGAV",
+  "country": "GR",
+  "nameEn": "Athens Eleftherios Venizelos International Airport",
+  "cityEn": "Spata-Artemida",
+  "kind": "large"
+ },
+ {
+  "iata": "YIB",
+  "icao": "CYIB",
+  "country": "CA",
+  "nameEn": "Atikokan Municipal Airport",
+  "cityEn": "Atikokan",
+  "kind": "medium"
+ },
+ {
+  "iata": "AIU",
+  "icao": "NCAT",
+  "country": "CK",
+  "nameEn": "Enua Airport",
+  "cityEn": "Atiu Island",
+  "kind": "small"
+ },
+ {
+  "iata": "ACY",
+  "icao": "KACY",
+  "country": "US",
+  "nameEn": "Atlantic City International Airport",
+  "cityEn": "Atlantic City",
+  "kind": "medium"
+ },
+ {
+  "iata": "ATK",
+  "icao": "PATQ",
+  "country": "US",
+  "nameEn": "Atqasuk Edward Burnell Sr Memorial Airport",
+  "cityEn": "Atqasuk",
+  "kind": "medium"
+ },
+ {
+  "iata": "YAT",
+  "icao": "CYAT",
+  "country": "CA",
+  "nameEn": "Attawapiskat Airport",
+  "cityEn": "Attawapiskat",
+  "kind": "small"
+ },
+ {
+  "iata": "PXA",
+  "icao": "WIPY",
+  "country": "ID",
+  "nameEn": "Atung Bungsu Airport",
+  "cityEn": "Bentayan",
+  "kind": "small"
+ },
+ {
+  "iata": "GUW",
+  "icao": "UATG",
+  "country": "KZ",
+  "nameEn": "Atyrau International Airport",
+  "cityEn": "Atyrau",
+  "kind": "large"
+ },
+ {
+  "iata": "AKL",
+  "icao": "NZAA",
+  "country": "NZ",
+  "nameEn": "Auckland International Airport",
+  "cityEn": "Auckland",
+  "kind": "large"
+ },
+ {
+  "iata": "AGB",
+  "icao": "EDMA",
+  "country": "DE",
+  "nameEn": "Augsburg Airport",
+  "cityEn": "Augsburg",
+  "kind": "medium"
+ },
+ {
+  "iata": "AGS",
+  "icao": "KAGS",
+  "country": "US",
+  "nameEn": "Augusta Regional At Bush Field",
+  "cityEn": "Augusta",
+  "kind": "medium"
+ },
+ {
+  "iata": "AUG",
+  "icao": "KAUG",
+  "country": "US",
+  "nameEn": "Augusta State Airport",
+  "cityEn": "Augusta",
+  "kind": "medium"
+ },
+ {
+  "iata": "AKS",
+  "icao": "AGGA",
+  "country": "SB",
+  "nameEn": "Gwaunaru'u Airport",
+  "cityEn": "Auki",
+  "kind": "small"
+ },
+ {
+  "iata": "YPJ",
+  "icao": "CYLA",
+  "country": "CA",
+  "nameEn": "Aupaluk Airport",
+  "cityEn": "Aupaluk",
+  "kind": "small"
+ },
+ {
+  "iata": "IXU",
+  "icao": "VAAU",
+  "country": "IN",
+  "nameEn": "Aurangabad Airport",
+  "cityEn": "Aurangabad",
+  "kind": "medium"
+ },
+ {
+  "iata": "BBU",
+  "icao": "LRBS",
+  "country": "RO",
+  "nameEn": "Bucharest Băneasa Aurel Vlaicu International Airport",
+  "cityEn": "Bucharest",
+  "kind": "large"
+ },
+ {
+  "iata": "AUR",
+  "icao": "LFLW",
+  "country": "FR",
+  "nameEn": "Aurillac airport",
+  "cityEn": "Aurillac",
+  "kind": "medium"
+ },
+ {
+  "iata": "AUU",
+  "icao": "YAUR",
+  "country": "AU",
+  "nameEn": "Aurukun Airport",
+  "cityEn": "Aurukun",
+  "kind": "small"
+ },
+ {
+  "iata": "AUS",
+  "icao": "KAUS",
+  "country": "US",
+  "nameEn": "Austin Bergstrom International Airport",
+  "cityEn": "Austin",
+  "kind": "large"
+ },
+ {
+  "iata": "EDC",
+  "icao": "KEDC",
+  "country": "US",
+  "nameEn": "Austin Executive Airport",
+  "cityEn": "Pflugerville",
+  "kind": "medium"
+ },
+ {
+  "iata": "GRB",
+  "icao": "KGRB",
+  "country": "US",
+  "nameEn": "Austin Straubel International Airport",
+  "cityEn": "Green Bay",
+  "kind": "medium"
+ },
+ {
+  "iata": "CFE",
+  "icao": "LFLC",
+  "country": "FR",
+  "nameEn": "Clermont-Ferrand Auvergne airport",
+  "cityEn": "Clermont-Ferrand",
+  "kind": "large"
+ },
+ {
+  "iata": "AVV",
+  "icao": "YMAV",
+  "country": "AU",
+  "nameEn": "Melbourne Avalon International Airport",
+  "cityEn": "Geelong/Melbourne",
+  "kind": "large"
+ },
+ {
+  "iata": "WMR",
+  "icao": "FMNC",
+  "country": "MG",
+  "nameEn": "Mananara Nord Airport",
+  "cityEn": "Mananara Nord",
+  "kind": "medium"
+ },
+ {
+  "iata": "CPC",
+  "icao": "SAZY",
+  "country": "AR",
+  "nameEn": "Aviador C. Campos Airport",
+  "cityEn": "Chapelco/San Martin de los Andes",
+  "kind": "medium"
+ },
+ {
+  "iata": "AVB",
+  "icao": "LIPA",
+  "country": "IT",
+  "nameEn": "Aviano Air Base",
+  "cityEn": "Aviano (PN)",
+  "kind": "medium"
+ },
+ {
+  "iata": "AWA",
+  "icao": "HALA",
+  "country": "ET",
+  "nameEn": "Hawassa International Airport",
+  "cityEn": "Hawassa",
+  "kind": "large"
+ },
+ {
+  "iata": "AXU",
+  "icao": "HAAX",
+  "country": "ET",
+  "nameEn": "Axum Airport",
+  "cityEn": "Axum",
+  "kind": "medium"
+ },
+ {
+  "iata": "AYQ",
+  "icao": "YAYE",
+  "country": "AU",
+  "nameEn": "Ayers Rock Connellan Airport",
+  "cityEn": "Yulara",
+  "kind": "medium"
+ },
+ {
+  "iata": "AYJ",
+  "icao": "VEAY",
+  "country": "IN",
+  "nameEn": "Maharshi Valmiki International Airport",
+  "cityEn": "Faizabad",
+  "kind": "medium"
+ },
+ {
+  "iata": "AZH",
+  "icao": "VEAH",
+  "country": "IN",
+  "nameEn": "Azamgarh Airport",
+  "cityEn": "Azamgarh",
+  "kind": "small"
+ }
+]

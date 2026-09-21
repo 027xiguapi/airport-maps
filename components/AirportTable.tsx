@@ -57,7 +57,8 @@ export default function AirportTable({
           </div>
           <div className="meta">{airport.city}</div>
           <img className="flag" src={airport.flagUrl} alt={airport.countryName} loading="lazy" />
-          <div className="meta">{t.units.terminals(airport.terminalCount)}</div>
+          {/* Directory batch airports have no compiled terminal count yet. */}
+          <div className="meta">{airport.terminalCount > 0 ? t.units.terminals(airport.terminalCount) : '—'}</div>
           {showUpdated ? (
             <span className="btn">
               {airport.updatedAt}

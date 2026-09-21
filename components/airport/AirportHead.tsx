@@ -69,12 +69,16 @@ export default function AirportHead({
           )}
         </p>
         <div className="ap-facts">
+          {/* Directory batch airports have no compiled counts yet; show the
+              same em-dash placeholder as pax/distance rather than "0". */}
           <div className="ap-fact">
-            <div className="num">{formatNumber(airport.terminals.length, locale)}</div>
+            <div className="num">
+              {airport.terminals.length > 0 ? formatNumber(airport.terminals.length, locale) : '—'}
+            </div>
             <div className="lbl">{locale === 'en' ? 'Terminals' : '航站楼'}</div>
           </div>
           <div className="ap-fact">
-            <div className="num">{formatNumber(airport.gateCount, locale)}</div>
+            <div className="num">{airport.gateCount > 0 ? formatNumber(airport.gateCount, locale) : '—'}</div>
             <div className="lbl">{locale === 'en' ? 'Gates' : '登机口'}</div>
           </div>
           <div className="ap-fact">

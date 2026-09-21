@@ -1,0 +1,3311 @@
+{
+ "countries": {
+  "AR": {
+   "name": "阿根廷",
+   "nameEn": "Argentina",
+   "region": "南美洲"
+  },
+  "BE": {
+   "name": "比利时",
+   "nameEn": "Belgium",
+   "region": "欧洲"
+  },
+  "BS": {
+   "name": "巴哈马",
+   "nameEn": "Bahamas",
+   "region": "北美洲"
+  },
+  "CG": {
+   "name": "刚果(布)",
+   "nameEn": "Republic of the Congo",
+   "region": "非洲"
+  },
+  "CK": {
+   "name": "库克群岛",
+   "nameEn": "Cook Islands",
+   "region": "大洋洲"
+  },
+  "CL": {
+   "name": "智利",
+   "nameEn": "Chile",
+   "region": "南美洲"
+  },
+  "CO": {
+   "name": "哥伦比亚",
+   "nameEn": "Colombia",
+   "region": "南美洲"
+  },
+  "CR": {
+   "name": "哥斯达黎加",
+   "nameEn": "Costa Rica",
+   "region": "北美洲"
+  },
+  "CU": {
+   "name": "古巴",
+   "nameEn": "Cuba",
+   "region": "北美洲"
+  },
+  "CV": {
+   "name": "佛得角",
+   "nameEn": "Cape Verde",
+   "region": "非洲"
+  },
+  "CY": {
+   "name": "塞浦路斯",
+   "nameEn": "Cyprus",
+   "region": "欧洲"
+  },
+  "DJ": {
+   "name": "吉布提",
+   "nameEn": "Djibouti",
+   "region": "非洲"
+  },
+  "DO": {
+   "name": "多米尼加共和国",
+   "nameEn": "Dominican Republic",
+   "region": "北美洲"
+  },
+  "DZ": {
+   "name": "阿尔及利亚",
+   "nameEn": "Algeria",
+   "region": "非洲"
+  },
+  "ER": {
+   "name": "厄立特里亚",
+   "nameEn": "Eritrea",
+   "region": "非洲"
+  },
+  "ET": {
+   "name": "埃塞俄比亚",
+   "nameEn": "Ethiopia",
+   "region": "非洲"
+  },
+  "GG": {
+   "name": "根西岛",
+   "nameEn": "Guernsey",
+   "region": "欧洲"
+  },
+  "GL": {
+   "name": "格陵兰",
+   "nameEn": "Greenland",
+   "region": "北美洲"
+  },
+  "GU": {
+   "name": "关岛",
+   "nameEn": "Guam",
+   "region": "大洋洲"
+  },
+  "HN": {
+   "name": "洪都拉斯",
+   "nameEn": "Honduras",
+   "region": "北美洲"
+  },
+  "HT": {
+   "name": "海地",
+   "nameEn": "Haiti",
+   "region": "北美洲"
+  },
+  "IQ": {
+   "name": "伊拉克",
+   "nameEn": "Iraq",
+   "region": "中东"
+  },
+  "IR": {
+   "name": "伊朗",
+   "nameEn": "Iran",
+   "region": "中东"
+  },
+  "IS": {
+   "name": "冰岛",
+   "nameEn": "Iceland",
+   "region": "欧洲"
+  },
+  "JO": {
+   "name": "约旦",
+   "nameEn": "Jordan",
+   "region": "中东"
+  },
+  "KE": {
+   "name": "肯尼亚",
+   "nameEn": "Kenya",
+   "region": "非洲"
+  },
+  "KZ": {
+   "name": "哈萨克斯坦",
+   "nameEn": "Kazakhstan",
+   "region": "中亚"
+  },
+  "LK": {
+   "name": "斯里兰卡",
+   "nameEn": "Sri Lanka",
+   "region": "南亚"
+  },
+  "MA": {
+   "name": "摩洛哥",
+   "nameEn": "Morocco",
+   "region": "非洲"
+  },
+  "MG": {
+   "name": "马达加斯加",
+   "nameEn": "Madagascar",
+   "region": "非洲"
+  },
+  "ML": {
+   "name": "马里",
+   "nameEn": "Mali",
+   "region": "非洲"
+  },
+  "MM": {
+   "name": "缅甸",
+   "nameEn": "Myanmar",
+   "region": "东南亚"
+  },
+  "MN": {
+   "name": "蒙古国",
+   "nameEn": "Mongolia",
+   "region": "东亚"
+  },
+  "MR": {
+   "name": "毛里塔尼亚",
+   "nameEn": "Mauritania",
+   "region": "非洲"
+  },
+  "NG": {
+   "name": "尼日利亚",
+   "nameEn": "Nigeria",
+   "region": "非洲"
+  },
+  "NO": {
+   "name": "挪威",
+   "nameEn": "Norway",
+   "region": "欧洲"
+  },
+  "PA": {
+   "name": "巴拿马",
+   "nameEn": "Panama",
+   "region": "北美洲"
+  },
+  "PE": {
+   "name": "秘鲁",
+   "nameEn": "Peru",
+   "region": "南美洲"
+  },
+  "PF": {
+   "name": "法属波利尼西亚",
+   "nameEn": "French Polynesia",
+   "region": "大洋洲"
+  },
+  "PK": {
+   "name": "巴基斯坦",
+   "nameEn": "Pakistan",
+   "region": "南亚"
+  },
+  "PR": {
+   "name": "波多黎各",
+   "nameEn": "Puerto Rico",
+   "region": "北美洲"
+  },
+  "RO": {
+   "name": "罗马尼亚",
+   "nameEn": "Romania",
+   "region": "欧洲"
+  },
+  "SB": {
+   "name": "所罗门群岛",
+   "nameEn": "Solomon Islands",
+   "region": "大洋洲"
+  },
+  "SD": {
+   "name": "苏丹",
+   "nameEn": "Sudan",
+   "region": "非洲"
+  },
+  "SO": {
+   "name": "索马里",
+   "nameEn": "Somalia",
+   "region": "非洲"
+  },
+  "SY": {
+   "name": "叙利亚",
+   "nameEn": "Syria",
+   "region": "中东"
+  },
+  "TD": {
+   "name": "乍得",
+   "nameEn": "Chad",
+   "region": "非洲"
+  },
+  "TM": {
+   "name": "土库曼斯坦",
+   "nameEn": "Turkmenistan",
+   "region": "中亚"
+  },
+  "TT": {
+   "name": "特立尼达和多巴哥",
+   "nameEn": "Trinidad and Tobago",
+   "region": "北美洲"
+  },
+  "TZ": {
+   "name": "坦桑尼亚",
+   "nameEn": "Tanzania",
+   "region": "非洲"
+  },
+  "UG": {
+   "name": "乌干达",
+   "nameEn": "Uganda",
+   "region": "非洲"
+  },
+  "VC": {
+   "name": "圣文森特和格林纳丁斯",
+   "nameEn": "Saint Vincent and the Grenadines",
+   "region": "北美洲"
+  },
+  "VE": {
+   "name": "委内瑞拉",
+   "nameEn": "Venezuela",
+   "region": "南美洲"
+  },
+  "VU": {
+   "name": "瓦努阿图",
+   "nameEn": "Vanuatu",
+   "region": "大洋洲"
+  },
+  "YE": {
+   "name": "也门",
+   "nameEn": "Yemen",
+   "region": "中东"
+  }
+ },
+ "airports": [
+  {
+   "iata": "LCG",
+   "icao": "LECO",
+   "country": "ES",
+   "kind": "medium",
+   "name": "拉科鲁尼亚机场",
+   "city": "拉科鲁尼亚",
+   "nameEn": "A Coruña Airport",
+   "cityEn": "A Coruna"
+  },
+  {
+   "iata": "ABU",
+   "icao": "WATA",
+   "country": "ID",
+   "kind": "small",
+   "name": "阿卜杜拉·贝雷·塔洛机场",
+   "city": "阿坦布阿",
+   "nameEn": "AA Bere Tallo (Haliwen) Airport",
+   "cityEn": "Atambua"
+  },
+  {
+   "iata": "TAB",
+   "icao": "TTCP",
+   "country": "TT",
+   "kind": "large",
+   "name": "A.N.R.罗宾逊国际机场",
+   "city": "斯卡伯勒",
+   "nameEn": "A.N.R. Robinson International Airport",
+   "cityEn": "Scarborough"
+  },
+  {
+   "iata": "AAL",
+   "icao": "EKYT",
+   "country": "DK",
+   "kind": "large",
+   "name": "奥尔堡机场",
+   "city": "奥尔堡",
+   "nameEn": "Aalborg Airport",
+   "cityEn": "Aalborg"
+  },
+  {
+   "iata": "AAR",
+   "icao": "EKAH",
+   "country": "DK",
+   "kind": "large",
+   "name": "奥胡斯机场",
+   "city": "奥胡斯",
+   "nameEn": "Aarhus Airport",
+   "cityEn": "Aarhus"
+  },
+  {
+   "iata": "JEG",
+   "icao": "BGEM",
+   "country": "GL",
+   "kind": "medium",
+   "name": "阿西亚特机场",
+   "city": "阿西亚特",
+   "nameEn": "Aasiaat Airport",
+   "cityEn": "Aasiaat"
+  },
+  {
+   "iata": "ABD",
+   "icao": "OIAA",
+   "country": "IR",
+   "kind": "large",
+   "name": "阿巴丹国际机场",
+   "city": "阿巴丹",
+   "nameEn": "Abadan Ayatollah Jami International Airport",
+   "cityEn": "Abadan"
+  },
+  {
+   "iata": "ABA",
+   "icao": "UNAA",
+   "country": "RU",
+   "kind": "large",
+   "name": "阿巴坎国际机场",
+   "city": "阿巴坎",
+   "nameEn": "Abakan International Airport",
+   "cityEn": "Abakan"
+  },
+  {
+   "iata": "YXX",
+   "icao": "CYXX",
+   "country": "CA",
+   "kind": "medium",
+   "name": "阿伯茨福德国际机场",
+   "city": "阿伯茨福德",
+   "nameEn": "Abbotsford International Airport",
+   "cityEn": "Abbotsford"
+  },
+  {
+   "iata": "MLG",
+   "icao": "WARA",
+   "country": "ID",
+   "kind": "medium",
+   "name": "玛琅阿卜杜勒·拉赫曼·萨利赫机场",
+   "city": "玛琅",
+   "nameEn": "Abdul Rachman Saleh Airport",
+   "cityEn": "Malang"
+  },
+  {
+   "iata": "AEH",
+   "icao": "FTTC",
+   "country": "TD",
+   "kind": "medium",
+   "name": "阿贝歇机场",
+   "city": "阿贝歇",
+   "nameEn": "Abeche Airport",
+   "cityEn": "Abeche"
+  },
+  {
+   "iata": "SNU",
+   "icao": "MUSC",
+   "country": "CU",
+   "kind": "large",
+   "name": "圣克拉拉阿贝尔·圣玛丽亚机场",
+   "city": "圣克拉拉",
+   "nameEn": "Abel Santamaria International Airport",
+   "cityEn": "Santa Clara"
+  },
+  {
+   "iata": "ABR",
+   "icao": "KABR",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿伯丁地区机场",
+   "city": "阿伯丁",
+   "nameEn": "Aberdeen Regional Airport",
+   "cityEn": "Aberdeen"
+  },
+  {
+   "iata": "AHB",
+   "icao": "OEAB",
+   "country": "SA",
+   "kind": "large",
+   "name": "艾卜哈国际机场",
+   "city": "艾卜哈",
+   "nameEn": "Abha International Airport",
+   "cityEn": "Abha"
+  },
+  {
+   "iata": "ABI",
+   "icao": "KABI",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿比林地区机场",
+   "city": "阿比林",
+   "nameEn": "Abilene Regional Airport",
+   "cityEn": "Abilene"
+  },
+  {
+   "iata": "CJS",
+   "icao": "MMCS",
+   "country": "MX",
+   "kind": "large",
+   "name": "华雷斯城亚伯拉罕·冈萨雷斯国际机场",
+   "city": "华雷斯城",
+   "nameEn": "Abraham González International Airport",
+   "cityEn": "Ciudad Juárez"
+  },
+  {
+   "iata": "SPI",
+   "icao": "KSPI",
+   "country": "US",
+   "kind": "medium",
+   "name": "斯普林菲尔德亚伯拉罕·林肯机场",
+   "city": "斯普林菲尔德",
+   "nameEn": "Abraham Lincoln Capital Airport",
+   "cityEn": "Springfield"
+  },
+  {
+   "iata": "AUH",
+   "icao": "OMAA",
+   "country": "AE",
+   "kind": "large",
+   "name": "阿布扎比扎耶德国际机场",
+   "city": "阿布扎比",
+   "nameEn": "Zayed International Airport",
+   "cityEn": "Abu Dhabi"
+  },
+  {
+   "iata": "AEU",
+   "icao": "OIBA",
+   "country": "IR",
+   "kind": "medium",
+   "name": "阿布穆萨岛机场",
+   "city": "阿布穆萨",
+   "nameEn": "Abu Musa Island Airport",
+   "cityEn": "Abu Musa"
+  },
+  {
+   "iata": "ABS",
+   "icao": "HEBL",
+   "country": "EG",
+   "kind": "medium",
+   "name": "阿布辛贝机场",
+   "city": "阿布辛贝",
+   "nameEn": "Abu Simbel Airport",
+   "cityEn": "Abu Simbel"
+  },
+  {
+   "iata": "ARA",
+   "icao": "KARA",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿卡迪亚纳地区机场",
+   "city": "新伊比利亚",
+   "nameEn": "Acadiana Regional Airport",
+   "cityEn": "New Iberia"
+  },
+  {
+   "iata": "ADK",
+   "icao": "PADK",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿达克机场",
+   "city": "阿达克",
+   "nameEn": "Adak Airport",
+   "cityEn": "Adak"
+  },
+  {
+   "iata": "AIP",
+   "icao": "VIAX",
+   "country": "IN",
+   "kind": "small",
+   "name": "阿丹普尔机场",
+   "city": "阿丹普尔",
+   "nameEn": "Adampur Airport",
+   "cityEn": "Adampur"
+  },
+  {
+   "iata": "LIT",
+   "icao": "KLIT",
+   "country": "US",
+   "kind": "medium",
+   "name": "比尔及希拉里·克林顿国家机场",
+   "city": "小石城",
+   "nameEn": "Bill & Hillary Clinton National Airport/Adams Field",
+   "cityEn": "Little Rock"
+  },
+  {
+   "iata": "ADS",
+   "icao": "KADS",
+   "country": "US",
+   "kind": "small",
+   "name": "阿迪森机场",
+   "city": "达拉斯",
+   "nameEn": "Addison Airport",
+   "cityEn": "Dallas"
+  },
+  {
+   "iata": "ADL",
+   "icao": "YPAD",
+   "country": "AU",
+   "kind": "large",
+   "name": "阿德莱德国际机场",
+   "city": "阿德莱德",
+   "nameEn": "Adelaide International Airport",
+   "cityEn": "Adelaide"
+  },
+  {
+   "iata": "MGQ",
+   "icao": "HCMM",
+   "country": "SO",
+   "kind": "large",
+   "name": "摩加迪沙亚丁·阿德国际机场",
+   "city": "摩加迪沙",
+   "nameEn": "Aden Adde International Airport",
+   "cityEn": "Mogadishu"
+  },
+  {
+   "iata": "ADE",
+   "icao": "OYAA",
+   "country": "YE",
+   "kind": "large",
+   "name": "亚丁国际机场",
+   "city": "亚丁",
+   "nameEn": "Aden International Airport",
+   "cityEn": "Aden"
+  },
+  {
+   "iata": "SOC",
+   "icao": "WARQ",
+   "country": "ID",
+   "kind": "large",
+   "name": "苏拉卡尔塔阿迪·苏马尔莫国际机场",
+   "city": "苏拉卡尔塔",
+   "nameEn": "Adisoemarmo International Airport",
+   "cityEn": "Surakarta"
+  },
+  {
+   "iata": "SLK",
+   "icao": "KSLK",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿迪朗达克地区机场",
+   "city": "萨拉纳克湖",
+   "nameEn": "Adirondack Regional Airport",
+   "cityEn": "Saranac Lake"
+  },
+  {
+   "iata": "JOG",
+   "icao": "WAHH",
+   "country": "ID",
+   "kind": "medium",
+   "name": "日惹阿迪苏特吉普托机场",
+   "city": "日惹",
+   "nameEn": "Adisutjipto International Airport",
+   "cityEn": "Yogyakarta"
+  },
+  {
+   "iata": "ADF",
+   "icao": "LTCP",
+   "country": "TR",
+   "kind": "medium",
+   "name": "阿德亚曼机场",
+   "city": "阿德亚曼",
+   "nameEn": "Adıyaman Airport",
+   "cityEn": "Adıyaman"
+  },
+  {
+   "iata": "ADB",
+   "icao": "LTBJ",
+   "country": "TR",
+   "kind": "large",
+   "name": "伊兹密尔阿达南·门德列斯国际机场",
+   "city": "伊兹密尔",
+   "nameEn": "Adnan Menderes International Airport",
+   "cityEn": "Izmir"
+  },
+  {
+   "iata": "AEG",
+   "icao": "WIME",
+   "country": "ID",
+   "kind": "medium",
+   "name": "阿克·戈当机场",
+   "city": "巴东锡当普安",
+   "nameEn": "Aek Godang Airport",
+   "cityEn": "Padang Sidempuan"
+  },
+  {
+   "iata": "AEP",
+   "icao": "SABE",
+   "country": "AR",
+   "kind": "large",
+   "name": "布宜诺斯艾利斯霍尔赫·纽伯里机场",
+   "city": "布宜诺斯艾利斯",
+   "nameEn": "Aeroparque Jorge Newbery",
+   "cityEn": "Buenos Aires"
+  },
+  {
+   "iata": "BPS",
+   "icao": "SBPS",
+   "country": "BR",
+   "kind": "large",
+   "name": "波尔图塞古罗国际机场",
+   "city": "波尔图塞古罗",
+   "nameEn": "Porto Seguro International Airport",
+   "cityEn": "Porto Seguro"
+  },
+  {
+   "iata": "RAF",
+   "icao": "SAFR",
+   "country": "AR",
+   "kind": "small",
+   "name": "拉斐拉机场",
+   "city": "拉斐拉",
+   "nameEn": "Rafaela Airport",
+   "cityEn": "Rafaela"
+  },
+  {
+   "iata": "TTQ",
+   "icao": "MRAO",
+   "country": "CR",
+   "kind": "medium",
+   "name": "图卢姆机场",
+   "city": "图卢姆",
+   "nameEn": "Aerotortuguero Airport",
+   "cityEn": "Tulum"
+  },
+  {
+   "iata": "CWB",
+   "icao": "SBCT",
+   "country": "BR",
+   "kind": "large",
+   "name": "库里蒂巴阿方索·佩纳国际机场",
+   "city": "库里蒂巴",
+   "nameEn": "Curitiba-Afonso Pena International Airport",
+   "cityEn": "Curitiba"
+  },
+  {
+   "iata": "AFY",
+   "icao": "LTAH",
+   "country": "TR",
+   "kind": "medium",
+   "name": "阿菲永机场",
+   "city": "阿菲永卡拉希萨尔",
+   "nameEn": "Afyon Air Base",
+   "cityEn": "Afyonkarahisar"
+  },
+  {
+   "iata": "IXA",
+   "icao": "VEAT",
+   "country": "IN",
+   "kind": "medium",
+   "name": "阿加尔塔拉机场",
+   "city": "阿加尔塔拉",
+   "nameEn": "Agartala - Maharaja Bir Bikram Airport",
+   "cityEn": "Agartala"
+  },
+  {
+   "iata": "AGX",
+   "icao": "VOAT",
+   "country": "IN",
+   "kind": "medium",
+   "name": "阿加蒂机场",
+   "city": "阿加蒂",
+   "nameEn": "Agatti Airport",
+   "cityEn": "Agatti"
+  },
+  {
+   "iata": "AGZ",
+   "icao": "FAAG",
+   "country": "ZA",
+   "kind": "medium",
+   "name": "阿赫尼亚斯机场",
+   "city": "阿赫尼亚斯",
+   "nameEn": "Aggeneys Airport",
+   "cityEn": "Aggeneys"
+  },
+  {
+   "iata": "PNR",
+   "icao": "FCPP",
+   "country": "CG",
+   "kind": "large",
+   "name": "黑角阿戈斯蒂尼奥·内托国际机场",
+   "city": "黑角",
+   "nameEn": "Antonio Agostinho-Neto International Airport",
+   "cityEn": "Pointe Noire"
+  },
+  {
+   "iata": "AGR",
+   "icao": "VIAG",
+   "country": "IN",
+   "kind": "medium",
+   "name": "阿格拉机场",
+   "city": "阿格拉",
+   "nameEn": "Agra Airport / Agra Air Force Station",
+   "cityEn": "Agra"
+  },
+  {
+   "iata": "AJI",
+   "icao": "LTCO",
+   "country": "TR",
+   "kind": "medium",
+   "name": "阿格里机场",
+   "city": "阿格里",
+   "nameEn": "Ağrı Airport",
+   "cityEn": "Ağrı"
+  },
+  {
+   "iata": "AGQ",
+   "icao": "LGAG",
+   "country": "GR",
+   "kind": "small",
+   "name": "多基米翁机场",
+   "city": "阿格里尼翁",
+   "nameEn": "Dhokimion Airfield",
+   "cityEn": "Agrinion"
+  },
+  {
+   "iata": "OCV",
+   "icao": "SKOC",
+   "country": "CO",
+   "kind": "medium",
+   "name": "奥卡尼亚阿瓜斯克拉拉斯机场",
+   "city": "奥卡尼亚",
+   "nameEn": "Aguas Claras Airport",
+   "cityEn": "Ocaña"
+  },
+  {
+   "iata": "AHE",
+   "icao": "NTHE",
+   "country": "PF",
+   "kind": "medium",
+   "name": "阿赫环礁机场",
+   "city": "阿赫环礁",
+   "nameEn": "Ahe Airport",
+   "cityEn": "Ahe Atoll"
+  },
+  {
+   "iata": "SRG",
+   "icao": "WAHS",
+   "country": "ID",
+   "kind": "large",
+   "name": "三宝垄艾哈迈德·亚尼国际机场",
+   "city": "三宝垄",
+   "nameEn": "Jenderal Ahmad Yani Airport",
+   "cityEn": "Semarang"
+  },
+  {
+   "iata": "AMD",
+   "icao": "VAAH",
+   "country": "IN",
+   "kind": "large",
+   "name": "艾哈迈达巴德国际机场",
+   "city": "艾哈迈达巴德",
+   "nameEn": "Sardar Vallabh Patel International Airport",
+   "cityEn": "Ahmedabad"
+  },
+  {
+   "iata": "AHS",
+   "icao": "MHAH",
+   "country": "HN",
+   "kind": "small",
+   "name": "阿胡阿斯机场",
+   "city": "阿胡阿斯",
+   "nameEn": "Ahuas Airport",
+   "cityEn": "Ahuas"
+  },
+  {
+   "iata": "AWZ",
+   "icao": "OIAW",
+   "country": "IR",
+   "kind": "large",
+   "name": "阿瓦士国际机场",
+   "city": "阿瓦士",
+   "nameEn": "Qasem Soleimani International Airport",
+   "cityEn": "Ahvaz"
+  },
+  {
+   "iata": "QSF",
+   "icao": "DAAS",
+   "country": "DZ",
+   "kind": "medium",
+   "name": "塞提夫机场",
+   "city": "塞提夫",
+   "nameEn": "Ain Arnat Airport",
+   "cityEn": "Sétif"
+  },
+  {
+   "iata": "IEO",
+   "icao": "GQNA",
+   "country": "MR",
+   "kind": "small",
+   "name": "艾云机场",
+   "city": "艾云",
+   "nameEn": "Aioun el Atrouss Airport",
+   "cityEn": "Aioun"
+  },
+  {
+   "iata": "AIT",
+   "icao": "NCAI",
+   "country": "CK",
+   "kind": "small",
+   "name": "阿伊图塔基机场",
+   "city": "阿伊图塔基",
+   "nameEn": "Aitutaki Airport",
+   "cityEn": "Aitutaki"
+  },
+  {
+   "iata": "CMF",
+   "icao": "LFLB",
+   "country": "FR",
+   "kind": "medium",
+   "name": "尚贝里艾克斯莱班机场",
+   "city": "尚贝里",
+   "nameEn": "Chambéry Aix les Bains airport",
+   "cityEn": "Chambéry"
+  },
+  {
+   "iata": "QXB",
+   "icao": "LFMA",
+   "country": "FR",
+   "kind": "small",
+   "name": "艾克斯莱米勒机场",
+   "city": "普罗旺斯地区艾克斯",
+   "nameEn": "Aix Les Milles airport",
+   "cityEn": "Aix en Provence"
+  },
+  {
+   "iata": "AJL",
+   "icao": "VEAZ",
+   "country": "IN",
+   "kind": "medium",
+   "name": "阿伊扎尔机场",
+   "city": "阿伊扎尔",
+   "nameEn": "Lengpui Airport",
+   "cityEn": "Aizawl"
+  },
+  {
+   "iata": "AXT",
+   "icao": "RJSK",
+   "country": "JP",
+   "kind": "medium",
+   "name": "秋田机场",
+   "city": "秋田",
+   "nameEn": "Akita Airport",
+   "cityEn": "Akita"
+  },
+  {
+   "iata": "LAK",
+   "icao": "CYKD",
+   "country": "CA",
+   "kind": "small",
+   "name": "阿克拉维克机场",
+   "city": "阿克拉维克",
+   "nameEn": "Aklavik/Freddie Carmichael Airport",
+   "cityEn": "Aklavik"
+  },
+  {
+   "iata": "AKD",
+   "icao": "VAAK",
+   "country": "IN",
+   "kind": "medium",
+   "name": "阿科拉机场",
+   "city": "阿科拉",
+   "nameEn": "Akola Airport",
+   "cityEn": "Akola"
+  },
+  {
+   "iata": "CAK",
+   "icao": "KCAK",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿克伦-坎顿机场",
+   "city": "阿克伦",
+   "nameEn": "Akron Canton Regional Airport",
+   "cityEn": "Akron"
+  },
+  {
+   "iata": "AKT",
+   "icao": "LCRA",
+   "country": "CY",
+   "kind": "medium",
+   "name": "阿克罗蒂里皇家空军基地",
+   "city": "阿克罗蒂里",
+   "nameEn": "RAF Akrotiri",
+   "cityEn": "Akrotiri"
+  },
+  {
+   "iata": "AKU",
+   "icao": "ZWAK",
+   "country": "CN",
+   "kind": "medium",
+   "name": "阿克苏红旗坡机场",
+   "city": "阿克苏",
+   "nameEn": "Aksu Hongqipo Airport",
+   "cityEn": "Aksu"
+  },
+  {
+   "iata": "SCO",
+   "icao": "UATE",
+   "country": "KZ",
+   "kind": "large",
+   "name": "阿克套国际机场",
+   "city": "阿克套",
+   "nameEn": "Aktau International Airport",
+   "cityEn": "Aktau"
+  },
+  {
+   "iata": "PVK",
+   "icao": "LGPZ",
+   "country": "GR",
+   "kind": "medium",
+   "name": "普雷韦扎阿克蒂翁国家机场",
+   "city": "普雷韦扎",
+   "nameEn": "Aktion National Airport",
+   "cityEn": "Preveza"
+  },
+  {
+   "iata": "AKX",
+   "icao": "UATT",
+   "country": "KZ",
+   "kind": "large",
+   "name": "阿克托别国际机场",
+   "city": "阿克托别",
+   "nameEn": "Aktobe International Airport",
+   "cityEn": "Aktobe"
+  },
+  {
+   "iata": "AKV",
+   "icao": "CYKO",
+   "country": "CA",
+   "kind": "small",
+   "name": "阿库利维克机场",
+   "city": "阿库利维克",
+   "nameEn": "Akulivik Airport",
+   "cityEn": "Akulivik"
+  },
+  {
+   "iata": "AKR",
+   "icao": "DNAK",
+   "country": "NG",
+   "kind": "medium",
+   "name": "阿库雷机场",
+   "city": "阿库雷",
+   "nameEn": "Akure Airport",
+   "cityEn": "Akure"
+  },
+  {
+   "iata": "AEY",
+   "icao": "BIAR",
+   "country": "IS",
+   "kind": "large",
+   "name": "阿克雷里国际机场",
+   "city": "阿克雷里",
+   "nameEn": "Akureyri International Airport",
+   "cityEn": "Akureyri"
+  },
+  {
+   "iata": "KQA",
+   "icao": "KKQA",
+   "country": "US",
+   "kind": "small",
+   "name": "阿库坦水上机场",
+   "city": "阿库坦",
+   "nameEn": "Akutan Airport",
+   "cityEn": "Akutan"
+  },
+  {
+   "iata": "HOF",
+   "icao": "OEAH",
+   "country": "SA",
+   "kind": "large",
+   "name": "艾赫萨国际机场",
+   "city": "胡富夫",
+   "nameEn": "Al-Ahsa International Airport",
+   "cityEn": "Hofuf"
+  },
+  {
+   "iata": "AAN",
+   "icao": "OMAL",
+   "country": "AE",
+   "kind": "large",
+   "name": "艾因国际机场",
+   "city": "艾因",
+   "nameEn": "Al Ain International Airport",
+   "cityEn": "Al Ain"
+  },
+  {
+   "iata": "IQA",
+   "icao": "ORAA",
+   "country": "IQ",
+   "kind": "medium",
+   "name": "阿萨德空军基地",
+   "city": "阿萨德",
+   "nameEn": "Al Asad Air Base",
+   "cityEn": "Al Asad"
+  },
+  {
+   "iata": "ABT",
+   "icao": "OEBA",
+   "country": "SA",
+   "kind": "medium",
+   "name": "巴哈国际机场",
+   "city": "巴哈",
+   "nameEn": "King Saud Bin Abdulaziz (Al Baha) Airport",
+   "cityEn": "Al Baha"
+  },
+  {
+   "iata": "DHF",
+   "icao": "OMAM",
+   "country": "AE",
+   "kind": "medium",
+   "name": "扎夫拉空军基地",
+   "city": "扎夫拉",
+   "nameEn": "Al Dhafra Air Base",
+   "cityEn": "Al Dhafra"
+  },
+  {
+   "iata": "AAY",
+   "icao": "OYGD",
+   "country": "YE",
+   "kind": "medium",
+   "name": "盖达国际机场",
+   "city": "盖达",
+   "nameEn": "Al Ghaydah International Airport",
+   "cityEn": "Al Ghaydah"
+  },
+  {
+   "iata": "TQD",
+   "icao": "ORAT",
+   "country": "IQ",
+   "kind": "medium",
+   "name": "塔卡杜姆空军基地",
+   "city": "塔卡杜姆",
+   "nameEn": "Al Taqaddum Air Base",
+   "cityEn": "Al Taqaddum"
+  },
+  {
+   "iata": "XJD",
+   "icao": "OTBH",
+   "country": "QA",
+   "kind": "medium",
+   "name": "乌代德空军基地",
+   "city": "多哈",
+   "nameEn": "Al Udeid Air Base",
+   "cityEn": "Doha"
+  },
+  {
+   "iata": "AJF",
+   "icao": "OESK",
+   "country": "SA",
+   "kind": "large",
+   "name": "焦夫国际机场",
+   "city": "焦夫",
+   "nameEn": "Al-Jawf International Airport",
+   "cityEn": "Al Jawf"
+  },
+  {
+   "iata": "AUK",
+   "icao": "PAUK",
+   "country": "US",
+   "kind": "small",
+   "name": "阿拉卡努克机场",
+   "city": "阿拉卡努克",
+   "nameEn": "Alakanuk Airport",
+   "cityEn": "Alakanuk"
+  },
+  {
+   "iata": "ALM",
+   "icao": "KALM",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿拉莫戈多白沙地区机场",
+   "city": "阿拉莫戈多",
+   "nameEn": "Alamogordo White Sands Regional Airport",
+   "cityEn": "Alamogordo"
+  },
+  {
+   "iata": "ABC",
+   "icao": "LEAB",
+   "country": "ES",
+   "kind": "medium",
+   "name": "阿尔瓦塞特机场",
+   "city": "阿尔瓦塞特",
+   "nameEn": "Albacete Airport / Los Llanos Air Base",
+   "cityEn": "Albacete"
+  },
+  {
+   "iata": "ALH",
+   "icao": "YABA",
+   "country": "AU",
+   "kind": "medium",
+   "name": "奥尔巴尼机场",
+   "city": "奥尔巴尼",
+   "nameEn": "Albany Airport",
+   "cityEn": "Albany"
+  },
+  {
+   "iata": "ALB",
+   "icao": "KALB",
+   "country": "US",
+   "kind": "large",
+   "name": "奥尔巴尼国际机场",
+   "city": "奥尔巴尼",
+   "nameEn": "Albany International Airport",
+   "cityEn": "Albany"
+  },
+  {
+   "iata": "ALL",
+   "icao": "LIMG",
+   "country": "IT",
+   "kind": "medium",
+   "name": "阿尔本加国际机场",
+   "city": "阿尔本加",
+   "nameEn": "Riviera Villanova d'Albenga International Airport",
+   "cityEn": "Albenga"
+  },
+  {
+   "iata": "BYF",
+   "icao": "LFAQ",
+   "country": "FR",
+   "kind": "small",
+   "name": "亚贝尔机场",
+   "city": "亚贝尔",
+   "nameEn": "Albert Bray airport",
+   "cityEn": "Albert"
+  },
+  {
+   "iata": "OAJ",
+   "icao": "KOAJ",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿尔伯特·J·埃利斯机场",
+   "city": "杰克逊维尔",
+   "nameEn": "Albert J Ellis Airport",
+   "cityEn": "Jacksonville"
+  },
+  {
+   "iata": "SPG",
+   "icao": "KSPG",
+   "country": "US",
+   "kind": "small",
+   "name": "圣彼得斯堡阿尔伯特·惠特德机场",
+   "city": "圣彼得斯堡",
+   "nameEn": "Albert Whitted Airport",
+   "cityEn": "St Petersburg"
+  },
+  {
+   "iata": "MRD",
+   "icao": "SVMD",
+   "country": "VE",
+   "kind": "medium",
+   "name": "梅里达阿尔韦托·卡内瓦利机场",
+   "city": "梅里达",
+   "nameEn": "Alberto Carnevalli Airport",
+   "cityEn": "Mérida"
+  },
+  {
+   "iata": "TND",
+   "icao": "MUTD",
+   "country": "CU",
+   "kind": "medium",
+   "name": "特立尼达阿尔贝托·德尔加多机场",
+   "city": "特立尼达",
+   "nameEn": "Alberto Delgado Airport",
+   "cityEn": "Trinidad"
+  },
+  {
+   "iata": "ABQ",
+   "icao": "KABQ",
+   "country": "US",
+   "kind": "large",
+   "name": "阿尔伯克基国际太阳港机场",
+   "city": "阿尔伯克基",
+   "nameEn": "Albuquerque International Sunport",
+   "cityEn": "Albuquerque"
+  },
+  {
+   "iata": "ABX",
+   "icao": "YMAY",
+   "country": "AU",
+   "kind": "medium",
+   "name": "奥尔伯里机场",
+   "city": "奥尔伯里",
+   "nameEn": "Albury Airport",
+   "cityEn": "East Albury"
+  },
+  {
+   "iata": "ACD",
+   "icao": "SKAD",
+   "country": "CO",
+   "kind": "small",
+   "name": "阿尔西德斯·费尔南德斯机场",
+   "city": "阿坎迪",
+   "nameEn": "Alcides Fernández Airport",
+   "cityEn": "Acandí"
+  },
+  {
+   "iata": "ACI",
+   "icao": "EGJA",
+   "country": "GG",
+   "kind": "medium",
+   "name": "奥尔德尼机场",
+   "city": "奥尔德尼",
+   "nameEn": "Alderney Airport",
+   "cityEn": "Alderney"
+  },
+  {
+   "iata": "ALQ",
+   "icao": "SSLT",
+   "country": "BR",
+   "kind": "small",
+   "name": "阿莱格雷特机场",
+   "city": "阿莱格雷特",
+   "nameEn": "Alegrete Novo Airport",
+   "cityEn": "Alegrete"
+  },
+  {
+   "iata": "CUZ",
+   "icao": "SPZO",
+   "country": "PE",
+   "kind": "large",
+   "name": "库斯科亚历杭德罗·贝拉斯科·阿斯泰特国际机场",
+   "city": "库斯科",
+   "nameEn": "Alejandro Velasco Astete International Airport",
+   "cityEn": "Cusco"
+  },
+  {
+   "iata": "WKK",
+   "icao": "5A8",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿莱克纳克机场",
+   "city": "阿莱克纳克",
+   "nameEn": "Aleknagik / New Airport",
+   "cityEn": "Aleknagik"
+  },
+  {
+   "iata": "ALP",
+   "icao": "OSAP",
+   "country": "SY",
+   "kind": "large",
+   "name": "阿勒颇国际机场",
+   "city": "阿勒颇",
+   "nameEn": "Aleppo International Airport",
+   "cityEn": "Aleppo"
+  },
+  {
+   "iata": "YLT",
+   "icao": "CYLT",
+   "country": "CA",
+   "kind": "medium",
+   "name": "阿勒特机场",
+   "city": "阿勒特",
+   "nameEn": "Alert Airport",
+   "cityEn": "Alert"
+  },
+  {
+   "iata": "AES",
+   "icao": "ENAL",
+   "country": "NO",
+   "kind": "large",
+   "name": "奥勒松机场",
+   "city": "奥勒松",
+   "nameEn": "Ålesund Airport",
+   "cityEn": "Ålesund"
+  },
+  {
+   "iata": "ALJ",
+   "icao": "FAAB",
+   "country": "ZA",
+   "kind": "medium",
+   "name": "亚历山大湾机场",
+   "city": "亚历山大湾",
+   "nameEn": "Alexander Bay Airport",
+   "cityEn": "Alexander Bay"
+  },
+  {
+   "iata": "ALR",
+   "icao": "NZLX",
+   "country": "NZ",
+   "kind": "medium",
+   "name": "亚历山德拉机场",
+   "city": "亚历山德拉",
+   "nameEn": "Alexandra Aerodrome",
+   "cityEn": "Alexandra"
+  },
+  {
+   "iata": "ALY",
+   "icao": "HEAX",
+   "country": "EG",
+   "kind": "large",
+   "name": "亚历山大国际机场",
+   "city": "亚历山大",
+   "nameEn": "Alexandria International Airport",
+   "cityEn": "Alexandria"
+  },
+  {
+   "iata": "AEX",
+   "icao": "KAEX",
+   "country": "US",
+   "kind": "medium",
+   "name": "亚历山德里亚国际机场",
+   "city": "亚历山德里亚",
+   "nameEn": "Alexandria International Airport",
+   "cityEn": "Alexandria"
+  },
+  {
+   "iata": "JSI",
+   "icao": "LGSK",
+   "country": "GR",
+   "kind": "medium",
+   "name": "斯基亚索斯岛机场",
+   "city": "斯基亚索斯",
+   "nameEn": "Skiathos Island National Airport",
+   "cityEn": "Skiathos"
+  },
+  {
+   "iata": "PKH",
+   "icao": "LGHL",
+   "country": "GR",
+   "kind": "small",
+   "name": "阿莱克西翁机场",
+   "city": "阿莱克西翁",
+   "nameEn": "Alexion Airport",
+   "cityEn": "Alexion"
+  },
+  {
+   "iata": "HUU",
+   "icao": "SPNC",
+   "country": "PE",
+   "kind": "medium",
+   "name": "大卫·费格罗亚·费尔南迪尼机场",
+   "city": "瓦努科",
+   "nameEn": "Alferez Fap David Figueroa Fernandini Airport",
+   "cityEn": "Huánuco"
+  },
+  {
+   "iata": "CLO",
+   "icao": "SKCL",
+   "country": "CO",
+   "kind": "large",
+   "name": "卡利阿方索·博尼利亚·阿拉贡国际机场",
+   "city": "卡利",
+   "nameEn": "Alfonso Bonilla Aragon International Airport",
+   "cityEn": "Cali"
+  },
+  {
+   "iata": "VUP",
+   "icao": "SKVP",
+   "country": "CO",
+   "kind": "medium",
+   "name": "阿方索·洛佩斯·普马雷霍机场",
+   "city": "瓦列杜帕尔",
+   "nameEn": "Alfonso López Pumarejo Airport",
+   "cityEn": "Valledupar"
+  },
+  {
+   "iata": "LET",
+   "icao": "SKLT",
+   "country": "CO",
+   "kind": "medium",
+   "name": "莱蒂西亚阿尔弗雷多·巴斯克斯·科博国际机场",
+   "city": "莱蒂西亚",
+   "nameEn": "Alfredo Vásquez Cobo International Airport",
+   "cityEn": "Leticia"
+  },
+  {
+   "iata": "AHO",
+   "icao": "LIEA",
+   "country": "IT",
+   "kind": "medium",
+   "name": "阿尔盖罗-费尔蒂利亚机场",
+   "city": "阿尔盖罗",
+   "nameEn": "Alghero-Fertilia Airport",
+   "cityEn": "Alghero"
+  },
+  {
+   "iata": "ALC",
+   "icao": "LEAL",
+   "country": "ES",
+   "kind": "large",
+   "name": "阿利坎特-埃尔切机场",
+   "city": "阿利坎特",
+   "nameEn": "Alicante-Elche Miguel Hernández Airport",
+   "cityEn": "Alicante"
+  },
+  {
+   "iata": "ALI",
+   "icao": "KALI",
+   "country": "US",
+   "kind": "medium",
+   "name": "艾丽丝机场",
+   "city": "艾丽丝",
+   "nameEn": "Alice International Airport",
+   "cityEn": "Alice"
+  },
+  {
+   "iata": "ASP",
+   "icao": "YBAS",
+   "country": "AU",
+   "kind": "medium",
+   "name": "爱丽丝斯普林斯机场",
+   "city": "爱丽丝斯普林斯",
+   "nameEn": "Alice Springs Airport",
+   "cityEn": "Alice Springs"
+  },
+  {
+   "iata": "HRH",
+   "icao": "VAIH",
+   "country": "IN",
+   "kind": "small",
+   "name": "阿利格尔机场",
+   "city": "阿利格尔",
+   "nameEn": "Aligarh Airport",
+   "cityEn": "Aligarh"
+  },
+  {
+   "iata": "IXD",
+   "icao": "VIAL",
+   "country": "IN",
+   "kind": "medium",
+   "name": "阿拉哈巴德机场",
+   "city": "阿拉哈巴德",
+   "nameEn": "Prayagraj Airport",
+   "cityEn": "Allahabad"
+  },
+  {
+   "iata": "AET",
+   "icao": "PFAL",
+   "country": "US",
+   "kind": "small",
+   "name": "阿拉卡凯特机场",
+   "city": "阿拉卡凯特",
+   "nameEn": "Allakaket Airport",
+   "cityEn": "Allakaket"
+  },
+  {
+   "iata": "LHE",
+   "icao": "OPLA",
+   "country": "PK",
+   "kind": "large",
+   "name": "拉合尔阿拉马·伊克巴尔国际机场",
+   "city": "拉合尔",
+   "nameEn": "Allama Iqbal International Airport",
+   "cityEn": "Lahore"
+  },
+  {
+   "iata": "AGC",
+   "icao": "KAGC",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿勒格尼县机场",
+   "city": "匹兹堡",
+   "nameEn": "Allegheny County Airport",
+   "cityEn": "Pittsburgh"
+  },
+  {
+   "iata": "BIG",
+   "icao": "PABI",
+   "country": "US",
+   "kind": "medium",
+   "name": "艾伦陆军机场",
+   "city": "德尔塔章克申",
+   "nameEn": "Allen Army Airfield",
+   "cityEn": "Delta Junction"
+  },
+  {
+   "iata": "FMM",
+   "icao": "EDJA",
+   "country": "DE",
+   "kind": "large",
+   "name": "梅明根阿尔高机场",
+   "city": "梅明根",
+   "nameEn": "Memmingen Allgau Airport",
+   "cityEn": "Memmingen"
+  },
+  {
+   "iata": "AIA",
+   "icao": "KAIA",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿莱恩斯市机场",
+   "city": "阿莱恩斯",
+   "nameEn": "Alliance Municipal Airport",
+   "cityEn": "Alliance"
+  },
+  {
+   "iata": "LLU",
+   "icao": "BGAP",
+   "country": "GL",
+   "kind": "heliport",
+   "name": "阿卢伊茨帕阿直升机场",
+   "city": "阿卢伊茨帕阿",
+   "nameEn": "Alluitsup Paa Heliport",
+   "cityEn": "Alluitsup Paa"
+  },
+  {
+   "iata": "ALA",
+   "icao": "UAAA",
+   "country": "KZ",
+   "kind": "large",
+   "name": "阿拉木图国际机场",
+   "city": "阿拉木图",
+   "nameEn": "Almaty International Airport",
+   "cityEn": "Almaty"
+  },
+  {
+   "iata": "LEI",
+   "icao": "LEAM",
+   "country": "ES",
+   "kind": "medium",
+   "name": "阿尔梅里亚机场",
+   "city": "阿尔梅里亚",
+   "nameEn": "Almería Airport",
+   "cityEn": "Almería"
+  },
+  {
+   "iata": "RCH",
+   "icao": "SKRH",
+   "country": "CO",
+   "kind": "medium",
+   "name": "里奥哈查阿尔米兰特·帕迪利亚机场",
+   "city": "里奥哈查",
+   "nameEn": "Almirante Padilla Airport",
+   "cityEn": "Riohacha"
+  },
+  {
+   "iata": "REL",
+   "icao": "SAVT",
+   "country": "AR",
+   "kind": "medium",
+   "name": "罗森阿尔米兰特·萨尔机场",
+   "city": "罗森",
+   "nameEn": "Almirante Marco Andres Zar Airport",
+   "cityEn": "Rawson"
+  },
+  {
+   "iata": "CTD",
+   "icao": "MPCE",
+   "country": "PA",
+   "kind": "medium",
+   "name": "奇特雷阿隆索·瓦尔德拉马机场",
+   "city": "奇特雷",
+   "nameEn": "Alonso Valderrama Airport",
+   "cityEn": "Chitré"
+  },
+  {
+   "iata": "APN",
+   "icao": "KAPN",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿尔皮纳县地区机场",
+   "city": "阿尔皮纳",
+   "nameEn": "Alpena County Regional Airport",
+   "cityEn": "Alpena"
+  },
+  {
+   "iata": "ALF",
+   "icao": "ENAT",
+   "country": "NO",
+   "kind": "medium",
+   "name": "阿尔塔机场",
+   "city": "阿尔塔",
+   "nameEn": "Alta Airport",
+   "cityEn": "Alta"
+  },
+  {
+   "iata": "AFL",
+   "icao": "SBAT",
+   "country": "BR",
+   "kind": "medium",
+   "name": "阿尔塔弗洛雷斯塔机场",
+   "city": "阿尔塔弗洛雷斯塔",
+   "nameEn": "Piloto Osvaldo Marques Dias Airport",
+   "cityEn": "Alta Floresta"
+  },
+  {
+   "iata": "LTI",
+   "icao": "ZMAT",
+   "country": "MN",
+   "kind": "medium",
+   "name": "阿尔泰机场",
+   "city": "阿尔泰",
+   "nameEn": "Altai Airport",
+   "cityEn": "Altai"
+  },
+  {
+   "iata": "ATM",
+   "icao": "SBHT",
+   "country": "BR",
+   "kind": "medium",
+   "name": "阿尔塔米拉机场",
+   "city": "阿尔塔米拉",
+   "nameEn": "Altamira Interstate Airport",
+   "cityEn": "Altamira"
+  },
+  {
+   "iata": "AAT",
+   "icao": "ZWAT",
+   "country": "CN",
+   "kind": "medium",
+   "name": "阿勒泰雪都机场",
+   "city": "阿勒泰",
+   "nameEn": "Altay Xuedu Airport",
+   "cityEn": "Altay"
+  },
+  {
+   "iata": "AOC",
+   "icao": "EDAC",
+   "country": "DE",
+   "kind": "medium",
+   "name": "莱比锡-阿尔滕堡机场",
+   "city": "阿尔滕堡",
+   "nameEn": "Leipzig–Altenburg Airport",
+   "cityEn": "Altenburg"
+  },
+  {
+   "iata": "AOO",
+   "icao": "KAOO",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿尔图纳布莱尔县机场",
+   "city": "阿尔图纳",
+   "nameEn": "Altoona Blair County Airport",
+   "cityEn": "Altoona"
+  },
+  {
+   "iata": "LTS",
+   "icao": "KLTS",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿尔特斯空军基地",
+   "city": "阿尔特斯",
+   "nameEn": "Altus Air Force Base",
+   "cityEn": "Altus"
+  },
+  {
+   "iata": "ALU",
+   "icao": "HCMA",
+   "country": "SO",
+   "kind": "small",
+   "name": "阿卢拉机场",
+   "city": "阿卢拉",
+   "nameEn": "Alula Airport",
+   "cityEn": "Alula"
+  },
+  {
+   "iata": "AXF",
+   "icao": "ZBAL",
+   "country": "CN",
+   "kind": "medium",
+   "name": "阿拉善左旗巴彦浩特机场",
+   "city": "阿拉善左旗",
+   "nameEn": "Alxa Left Banner Bayanhot Airport",
+   "cityEn": "Bayanhot"
+  },
+  {
+   "iata": "NSK",
+   "icao": "UOOO",
+   "country": "RU",
+   "kind": "large",
+   "name": "诺里尔斯克阿雷克利国际机场",
+   "city": "诺里尔斯克",
+   "nameEn": "Alykel International Airport",
+   "cityEn": "Norilsk"
+  },
+  {
+   "iata": "AXJ",
+   "icao": "RJDA",
+   "country": "JP",
+   "kind": "medium",
+   "name": "天草机场",
+   "city": "天草",
+   "nameEn": "Amakusa Airport",
+   "cityEn": "Amakusa"
+  },
+  {
+   "iata": "ASJ",
+   "icao": "RJKA",
+   "country": "JP",
+   "kind": "medium",
+   "name": "奄美机场",
+   "city": "奄美",
+   "nameEn": "Amami Airport",
+   "cityEn": "Amami"
+  },
+  {
+   "iata": "WAI",
+   "icao": "FMNW",
+   "country": "MG",
+   "kind": "medium",
+   "name": "安察奥希安巴拉贝机场",
+   "city": "安察奥希",
+   "nameEn": "Ambalabe Airport",
+   "cityEn": "Antsohihy"
+  },
+  {
+   "iata": "IVA",
+   "icao": "FMNJ",
+   "country": "MG",
+   "kind": "small",
+   "name": "安班贾机场",
+   "city": "安班贾",
+   "nameEn": "Ampampamena Airport",
+   "cityEn": "Ambanja"
+  },
+  {
+   "iata": "WAM",
+   "icao": "FMMZ",
+   "country": "MG",
+   "kind": "small",
+   "name": "安巴通德拉扎卡机场",
+   "city": "安巴通德拉扎卡",
+   "nameEn": "Ambatondrazaka Airport",
+   "cityEn": "Ambatondrazaka"
+  },
+  {
+   "iata": "AMB",
+   "icao": "FMNE",
+   "country": "MG",
+   "kind": "small",
+   "name": "安比卢贝机场",
+   "city": "安比卢贝",
+   "nameEn": "Ambilobe Airport",
+   "cityEn": "Ambilobe"
+  },
+  {
+   "iata": "ABL",
+   "icao": "PAFM",
+   "country": "US",
+   "kind": "medium",
+   "name": "安布勒机场",
+   "city": "安布勒",
+   "nameEn": "Ambler Airport",
+   "cityEn": "Ambler"
+  },
+  {
+   "iata": "MZI",
+   "icao": "GAMB",
+   "country": "ML",
+   "kind": "medium",
+   "name": "莫普提机场",
+   "city": "莫普提",
+   "nameEn": "Mopti Airport",
+   "cityEn": "Mopti"
+  },
+  {
+   "iata": "ASV",
+   "icao": "HKAM",
+   "country": "KE",
+   "kind": "medium",
+   "name": "安博塞利机场",
+   "city": "安博塞利",
+   "nameEn": "Amboseli Airport",
+   "cityEn": "Amboseli"
+  },
+  {
+   "iata": "JIB",
+   "icao": "HDAM",
+   "country": "DJ",
+   "kind": "large",
+   "name": "吉布提-安布利国际机场",
+   "city": "吉布提市",
+   "nameEn": "Djibouti-Ambouli Airport",
+   "cityEn": "Djibouti"
+  },
+  {
+   "iata": "COR",
+   "icao": "SACO",
+   "country": "AR",
+   "kind": "large",
+   "name": "科尔多瓦安布罗西奥·塔拉维拉国际机场",
+   "city": "科尔多瓦",
+   "nameEn": "Ingeniero Aeronáutico Ambrosio L.V. Taravella International Airport",
+   "cityEn": "Cordoba"
+  },
+  {
+   "iata": "AMV",
+   "icao": "ULDD",
+   "country": "RU",
+   "kind": "medium",
+   "name": "阿姆杰尔马机场",
+   "city": "阿姆杰尔马",
+   "nameEn": "Amderma Airport",
+   "cityEn": "Amderma"
+  },
+  {
+   "iata": "SID",
+   "icao": "GVAC",
+   "country": "CV",
+   "kind": "large",
+   "name": "阿米尔卡·卡布拉尔国际机场",
+   "city": "埃斯帕戈斯",
+   "nameEn": "Amílcar Cabral International Airport",
+   "cityEn": "Espargos"
+  },
+  {
+   "iata": "GOY",
+   "icao": "VCCG",
+   "country": "LK",
+   "kind": "medium",
+   "name": "安帕拉机场",
+   "city": "安帕拉",
+   "nameEn": "Ampara Airport",
+   "cityEn": "Ampara"
+  },
+  {
+   "iata": "SAY",
+   "icao": "LIQS",
+   "country": "IT",
+   "kind": "medium",
+   "name": "锡耶纳安普尼亚诺机场",
+   "city": "锡耶纳",
+   "nameEn": "Siena-Ampugnano Airport",
+   "cityEn": "Siena"
+  },
+  {
+   "iata": "AVR",
+   "icao": "VAAM",
+   "country": "IN",
+   "kind": "medium",
+   "name": "阿姆劳蒂机场",
+   "city": "阿姆劳蒂",
+   "nameEn": "Amravati  Airport",
+   "cityEn": "Amravati"
+  },
+  {
+   "iata": "AAA",
+   "icao": "NTGA",
+   "country": "PF",
+   "kind": "medium",
+   "name": "阿纳机场",
+   "city": "阿纳",
+   "nameEn": "Anaa Airport",
+   "cityEn": "Anaa"
+  },
+  {
+   "iata": "AAO",
+   "icao": "SVAN",
+   "country": "VE",
+   "kind": "medium",
+   "name": "阿纳科机场",
+   "city": "阿纳科",
+   "nameEn": "Anaco Airport",
+   "cityEn": "Anaco"
+  },
+  {
+   "iata": "AOE",
+   "icao": "LTBY",
+   "country": "TR",
+   "kind": "large",
+   "name": "埃斯基谢希尔哈桑·波拉特坎机场",
+   "city": "埃斯基谢希尔",
+   "nameEn": "Hasan Polatkan Airport",
+   "cityEn": "Eskişehir"
+  },
+  {
+   "iata": "YAA",
+   "icao": "CAJ4",
+   "country": "CA",
+   "kind": "medium",
+   "name": "阿纳希姆莱克机场",
+   "city": "阿纳希姆莱克",
+   "nameEn": "Anahim Lake Airport",
+   "cityEn": "Anahim Lake"
+  },
+  {
+   "iata": "AKP",
+   "icao": "PAKP",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿纳克图维克帕斯机场",
+   "city": "阿纳克图维克帕斯",
+   "nameEn": "Anaktuvuk Pass Airport",
+   "cityEn": "Anaktuvuk Pass"
+  },
+  {
+   "iata": "HVA",
+   "icao": "FMNL",
+   "country": "MG",
+   "kind": "medium",
+   "name": "阿纳拉拉瓦机场",
+   "city": "阿纳拉拉瓦",
+   "nameEn": "Analalava Airport",
+   "cityEn": "Analalava"
+  },
+  {
+   "iata": "SDN",
+   "icao": "ENSD",
+   "country": "NO",
+   "kind": "small",
+   "name": "桑达内机场",
+   "city": "桑达内",
+   "nameEn": "Sandane Airport, Anda",
+   "cityEn": "Sandane"
+  },
+  {
+   "iata": "ANS",
+   "icao": "SPHY",
+   "country": "PE",
+   "kind": "small",
+   "name": "安达瓦亚斯机场",
+   "city": "安达瓦亚斯",
+   "nameEn": "Andahuaylas Airport",
+   "cityEn": "Andahuaylas"
+  },
+  {
+   "iata": "ZWA",
+   "icao": "FMND",
+   "country": "MG",
+   "kind": "medium",
+   "name": "安达帕机场",
+   "city": "安达帕",
+   "nameEn": "Andapa Airport",
+   "cityEn": "Andapa"
+  },
+  {
+   "iata": "ANX",
+   "icao": "ENAN",
+   "country": "NO",
+   "kind": "medium",
+   "name": "安德内斯机场",
+   "city": "安德内斯",
+   "nameEn": "Andøya Airport, Andenes",
+   "cityEn": "Andenes"
+  },
+  {
+   "iata": "UAM",
+   "icao": "PGUA",
+   "country": "GU",
+   "kind": "medium",
+   "name": "安德森空军基地",
+   "city": "伊戈",
+   "nameEn": "Andersen Air Force Base",
+   "cityEn": "Yigo"
+  },
+  {
+   "iata": "AND",
+   "icao": "KAND",
+   "country": "US",
+   "kind": "medium",
+   "name": "安德森地区机场",
+   "city": "安德森",
+   "nameEn": "Anderson Regional Airport",
+   "cityEn": "Anderson"
+  },
+  {
+   "iata": "AZN",
+   "icao": "UTKA",
+   "country": "UZ",
+   "kind": "medium",
+   "name": "安集延国际机场",
+   "city": "安集延",
+   "nameEn": "Andijan International Airport",
+   "cityEn": "Andijan"
+  },
+  {
+   "iata": "PYR",
+   "icao": "LGAD",
+   "country": "GR",
+   "kind": "medium",
+   "name": "安德拉维达空军基地",
+   "city": "安德拉维达",
+   "nameEn": "Andravida Air Base",
+   "cityEn": "Andravida"
+  },
+  {
+   "iata": "ADW",
+   "icao": "KADW",
+   "country": "US",
+   "kind": "medium",
+   "name": "安德鲁斯联合基地",
+   "city": "坎普斯普林斯",
+   "nameEn": "Joint Base Andrews",
+   "cityEn": "Camp Springs"
+  },
+  {
+   "iata": "ASD",
+   "icao": "MYAF",
+   "country": "BS",
+   "kind": "medium",
+   "name": "安德罗斯敦机场",
+   "city": "安德罗斯敦",
+   "nameEn": "Andros Town Airport",
+   "cityEn": "Andros Town"
+  },
+  {
+   "iata": "AUY",
+   "icao": "NVVA",
+   "country": "VU",
+   "kind": "small",
+   "name": "阿内蒂乌姆机场",
+   "city": "阿内蒂乌姆岛",
+   "nameEn": "Aneityum Airport",
+   "cityEn": "Aneityum"
+  },
+  {
+   "iata": "OUD",
+   "icao": "GMFO",
+   "country": "MA",
+   "kind": "large",
+   "name": "乌季达安加兹机场",
+   "city": "乌季达",
+   "nameEn": "Oujda Angads Airport",
+   "cityEn": "Oujda"
+  },
+  {
+   "iata": "TGZ",
+   "icao": "MMTG",
+   "country": "MX",
+   "kind": "medium",
+   "name": "图斯特拉-古铁雷斯国际机场",
+   "city": "图斯特拉-古铁雷斯",
+   "nameEn": "Angel Albino Corzo International Airport",
+   "cityEn": "Tuxtla Gutiérrez"
+  },
+  {
+   "iata": "LFK",
+   "icao": "KLFK",
+   "country": "US",
+   "kind": "medium",
+   "name": "安杰利纳县机场",
+   "city": "拉夫金",
+   "nameEn": "Angelina County Airport",
+   "cityEn": "Lufkin"
+  },
+  {
+   "iata": "ANE",
+   "icao": "LFJR",
+   "country": "FR",
+   "kind": "medium",
+   "name": "昂热马塞机场",
+   "city": "昂热",
+   "nameEn": "Angers Marcé airport",
+   "cityEn": "Angers"
+  },
+  {
+   "iata": "VLY",
+   "icao": "EGOV",
+   "country": "GB",
+   "kind": "medium",
+   "name": "安格尔西机场",
+   "city": "安格尔西",
+   "nameEn": "Anglesey Airport",
+   "cityEn": "Anglesey"
+  },
+  {
+   "iata": "ANI",
+   "icao": "PANI",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿尼亚克机场",
+   "city": "阿尼亚克",
+   "nameEn": "Aniak Airport",
+   "cityEn": "Aniak"
+  },
+  {
+   "iata": "AWD",
+   "icao": "NVVB",
+   "country": "VU",
+   "kind": "small",
+   "name": "阿尼瓦机场",
+   "city": "阿尼瓦",
+   "nameEn": "Aniwa Airport",
+   "cityEn": "Aniwa"
+  },
+  {
+   "iata": "AKA",
+   "icao": "ZLAK",
+   "country": "CN",
+   "kind": "small",
+   "name": "安康富强机场",
+   "city": "安康",
+   "nameEn": "Ankang Fuqiang Airport",
+   "cityEn": "Ankang (Hanbin)"
+  },
+  {
+   "iata": "JVA",
+   "icao": "FMMK",
+   "country": "MG",
+   "kind": "small",
+   "name": "安卡万德拉机场",
+   "city": "安卡万德拉",
+   "nameEn": "Ankavandra Airport",
+   "cityEn": "Ankavandra"
+  },
+  {
+   "iata": "VBA",
+   "icao": "VYAN",
+   "country": "MM",
+   "kind": "small",
+   "name": "安机场",
+   "city": "安镇",
+   "nameEn": "Ann Airport",
+   "cityEn": "Ann"
+  },
+  {
+   "iata": "AAE",
+   "icao": "DABB",
+   "country": "DZ",
+   "kind": "large",
+   "name": "安纳巴拉巴赫·比塔特机场",
+   "city": "安纳巴",
+   "nameEn": "Annaba Rabah Bitat Airport",
+   "cityEn": "Annaba"
+  },
+  {
+   "iata": "QNJ",
+   "icao": "LFLI",
+   "country": "FR",
+   "kind": "medium",
+   "name": "安纳马斯机场",
+   "city": "安纳马斯",
+   "nameEn": "Annemasse Airfield",
+   "cityEn": "Annemasse"
+  },
+  {
+   "iata": "ANN",
+   "icao": "PANT",
+   "country": "US",
+   "kind": "medium",
+   "name": "安尼特岛机场",
+   "city": "安尼特岛",
+   "nameEn": "Annette Island Airport",
+   "cityEn": "Annette Island"
+  },
+  {
+   "iata": "ANB",
+   "icao": "KANB",
+   "country": "US",
+   "kind": "medium",
+   "name": "安尼斯顿地区机场",
+   "city": "安尼斯顿",
+   "nameEn": "Anniston Regional Airport",
+   "cityEn": "Anniston"
+  },
+  {
+   "iata": "AQG",
+   "icao": "ZSAQ",
+   "country": "CN",
+   "kind": "medium",
+   "name": "安庆天柱山机场",
+   "city": "安庆",
+   "nameEn": "Anqing Tianzhushan Airport / Anqing North Air Base",
+   "cityEn": "Anqing"
+  },
+  {
+   "iata": "AOG",
+   "icao": "ZYAS",
+   "country": "CN",
+   "kind": "medium",
+   "name": "鞍山腾鳌机场",
+   "city": "鞍山",
+   "nameEn": "Anshan Teng'ao Airport / Anshan Air Base",
+   "cityEn": "Anshan"
+  },
+  {
+   "iata": "AVA",
+   "icao": "ZUAS",
+   "country": "CN",
+   "kind": "medium",
+   "name": "安顺黄果树机场",
+   "city": "安顺",
+   "nameEn": "Anshun Huangguoshu Airport",
+   "cityEn": "Anshun (Xixiu)"
+  },
+  {
+   "iata": "AYT",
+   "icao": "LTAI",
+   "country": "TR",
+   "kind": "large",
+   "name": "安塔利亚机场",
+   "city": "安塔利亚",
+   "nameEn": "Antalya International Airport",
+   "cityEn": "Antalya"
+  },
+  {
+   "iata": "GZP",
+   "icao": "LTFG",
+   "country": "TR",
+   "kind": "medium",
+   "name": "加济帕夏-阿拉尼亚机场",
+   "city": "加济帕夏",
+   "nameEn": "Gazipaşa-Alanya Airport",
+   "cityEn": "Gazipaşa"
+  },
+  {
+   "iata": "OES",
+   "icao": "SAVN",
+   "country": "AR",
+   "kind": "small",
+   "name": "圣安东尼奥奥斯特机场",
+   "city": "圣安东尼奥奥斯特",
+   "nameEn": "Antoine de Saint Exupéry Airport",
+   "cityEn": "San Antonio Oeste"
+  },
+  {
+   "iata": "CYA",
+   "icao": "MTCA",
+   "country": "HT",
+   "kind": "medium",
+   "name": "莱凯安托万-西蒙国际机场",
+   "city": "莱凯",
+   "nameEn": "Antoine-Simon International Airport",
+   "cityEn": "Les Cayes"
+  },
+  {
+   "iata": "CUM",
+   "icao": "SVCU",
+   "country": "VE",
+   "kind": "medium",
+   "name": "库马纳安东尼奥·何塞·德·苏克雷机场",
+   "city": "库马纳",
+   "nameEn": "Antonio José de Sucre Airport",
+   "cityEn": "Cumaná"
+  },
+  {
+   "iata": "ARE",
+   "icao": "TJAB",
+   "country": "PR",
+   "kind": "medium",
+   "name": "阿雷西博安东尼奥·胡阿尔韦·波尔机场",
+   "city": "阿雷西博",
+   "nameEn": "Antonio Nery Juarbe Pol Airport",
+   "cityEn": "Arecibo"
+  },
+  {
+   "iata": "SCU",
+   "icao": "MUCU",
+   "country": "CU",
+   "kind": "large",
+   "name": "圣地亚哥安东尼奥·马塞奥国际机场",
+   "city": "圣地亚哥",
+   "nameEn": "Antonio Maceo International Airport",
+   "cityEn": "Santiago"
+  },
+  {
+   "iata": "PSO",
+   "icao": "SKPS",
+   "country": "CO",
+   "kind": "medium",
+   "name": "安东尼奥·纳里尼奥机场",
+   "city": "查查圭",
+   "nameEn": "Antonio Nariño Airport",
+   "cityEn": "Chachagüí"
+  },
+  {
+   "iata": "APO",
+   "icao": "SKLC",
+   "country": "CO",
+   "kind": "medium",
+   "name": "卡雷帕安东尼奥·罗尔丹·贝坦库尔机场",
+   "city": "卡雷帕",
+   "nameEn": "Antonio Roldán Betancur Airport",
+   "cityEn": "Carepa"
+  },
+  {
+   "iata": "WAQ",
+   "icao": "FMMG",
+   "country": "MG",
+   "kind": "small",
+   "name": "安察洛瓦机场",
+   "city": "安察洛瓦",
+   "nameEn": "Antsalova Airport",
+   "cityEn": "Antsalova"
+  },
+  {
+   "iata": "ANM",
+   "icao": "FMNH",
+   "country": "MG",
+   "kind": "medium",
+   "name": "安齐拉巴托机场",
+   "city": "安塔拉哈",
+   "nameEn": "Antsirabe Airport",
+   "cityEn": "Antalaha"
+  },
+  {
+   "iata": "ANR",
+   "icao": "EBAW",
+   "country": "BE",
+   "kind": "medium",
+   "name": "安特卫普国际机场",
+   "city": "安特卫普",
+   "nameEn": "Antwerp International Airport (Deurne)",
+   "cityEn": "Antwerp"
+  },
+  {
+   "iata": "ANV",
+   "icao": "PANV",
+   "country": "US",
+   "kind": "medium",
+   "name": "安维克机场",
+   "city": "安维克",
+   "nameEn": "Anvik Airport",
+   "cityEn": "Anvik"
+  },
+  {
+   "iata": "HQQ",
+   "icao": "ZHQQ",
+   "country": "CN",
+   "kind": "small",
+   "name": "安阳红旗渠机场",
+   "city": "安阳",
+   "nameEn": "Anyang Hongqiqu Airport",
+   "cityEn": "Anyang"
+  },
+  {
+   "iata": "AOJ",
+   "icao": "RJSA",
+   "country": "JP",
+   "kind": "large",
+   "name": "青森机场",
+   "city": "青森",
+   "nameEn": "Aomori Airport",
+   "cityEn": "Aomori"
+  },
+  {
+   "iata": "AOT",
+   "icao": "LIMW",
+   "country": "IT",
+   "kind": "medium",
+   "name": "奥斯塔科拉多·杰克斯机场",
+   "city": "奥斯塔",
+   "nameEn": "Aosta Corrado Gex Airport",
+   "cityEn": "Aosta"
+  },
+  {
+   "iata": "APK",
+   "icao": "NTGD",
+   "country": "PF",
+   "kind": "small",
+   "name": "阿帕塔基机场",
+   "city": "阿帕塔基",
+   "nameEn": "Apataki Airport",
+   "cityEn": "Apataki"
+  },
+  {
+   "iata": "ATW",
+   "icao": "KATW",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿普尔顿国际机场",
+   "city": "阿普尔顿",
+   "nameEn": "Appleton International Airport",
+   "cityEn": "Appleton"
+  },
+  {
+   "iata": "AAP",
+   "icao": "WALS",
+   "country": "ID",
+   "kind": "medium",
+   "name": "三马林达阿吉·潘格兰·图门贡·普拉诺托国际机场",
+   "city": "三马林达",
+   "nameEn": "Aji Pangeran Tumenggung Pranoto International Airport",
+   "cityEn": "Samarinda"
+  },
+  {
+   "iata": "AQJ",
+   "icao": "OJAQ",
+   "country": "JO",
+   "kind": "large",
+   "name": "亚喀巴侯赛因国王国际机场",
+   "city": "亚喀巴",
+   "nameEn": "King Hussein International Airport",
+   "cityEn": "Aqaba"
+  },
+  {
+   "iata": "ARX",
+   "icao": "SNAT",
+   "country": "BR",
+   "kind": "medium",
+   "name": "阿拉卡蒂机场",
+   "city": "阿拉卡蒂",
+   "nameEn": "Aracati Dragão do Mar Regional Airport",
+   "cityEn": "Aracati"
+  },
+  {
+   "iata": "ARU",
+   "icao": "SBAU",
+   "country": "BR",
+   "kind": "medium",
+   "name": "阿拉萨图巴机场",
+   "city": "阿拉萨图巴",
+   "nameEn": "Araçatuba Airport",
+   "cityEn": "Araçatuba"
+  },
+  {
+   "iata": "ARW",
+   "icao": "LRAR",
+   "country": "RO",
+   "kind": "medium",
+   "name": "阿拉德国际机场",
+   "city": "阿拉德",
+   "nameEn": "Arad International Airport",
+   "cityEn": "Arad"
+  },
+  {
+   "iata": "AUX",
+   "icao": "SWGN",
+   "country": "BR",
+   "kind": "medium",
+   "name": "阿拉瓜伊纳机场",
+   "city": "阿拉瓜伊纳",
+   "nameEn": "Araguaína Airport",
+   "cityEn": "Araguaína"
+  },
+  {
+   "iata": "ACF",
+   "icao": "ZWAL",
+   "country": "CN",
+   "kind": "small",
+   "name": "阿拉尔塔里木机场",
+   "city": "阿拉尔",
+   "nameEn": "Aral Tarim Airport",
+   "cityEn": "Aral"
+  },
+  {
+   "iata": "RAE",
+   "icao": "OERR",
+   "country": "SA",
+   "kind": "medium",
+   "name": "阿拉尔机场",
+   "city": "阿拉尔",
+   "nameEn": "Arar Domestic Airport",
+   "cityEn": "Arar"
+  },
+  {
+   "iata": "ACR",
+   "icao": "SKAC",
+   "country": "CO",
+   "kind": "small",
+   "name": "阿拉拉夸拉机场",
+   "city": "阿拉拉夸拉",
+   "nameEn": "Araracuara Airport",
+   "cityEn": "Araracuara"
+  },
+  {
+   "iata": "AQA",
+   "icao": "SBAQ",
+   "country": "BR",
+   "kind": "medium",
+   "name": "阿拉拉夸拉机场",
+   "city": "阿拉拉夸拉",
+   "nameEn": "Araraquara Airport",
+   "cityEn": "Araraquara"
+  },
+  {
+   "iata": "AAX",
+   "icao": "SBAX",
+   "country": "BR",
+   "kind": "medium",
+   "name": "阿拉沙机场",
+   "city": "阿拉沙",
+   "nameEn": "Romeu Zema Airport",
+   "cityEn": "Araxá"
+  },
+  {
+   "iata": "GPA",
+   "icao": "LGRX",
+   "country": "GR",
+   "kind": "medium",
+   "name": "帕特雷阿拉克索斯机场",
+   "city": "帕特雷",
+   "nameEn": "Patras Araxos Agamemnon Airport",
+   "cityEn": "Patras"
+  },
+  {
+   "iata": "AMH",
+   "icao": "HAAM",
+   "country": "ET",
+   "kind": "medium",
+   "name": "阿尔巴门奇机场",
+   "city": "阿尔巴门奇",
+   "nameEn": "Arba Minch Airport",
+   "cityEn": "Arba Minch"
+  },
+  {
+   "iata": "ACV",
+   "icao": "KACV",
+   "country": "US",
+   "kind": "medium",
+   "name": "加州红木海岸机场",
+   "city": "阿克塔",
+   "nameEn": "California Redwood Coast-Humboldt County Airport",
+   "cityEn": "Arcata"
+  },
+  {
+   "iata": "ARC",
+   "icao": "PARC",
+   "country": "US",
+   "kind": "medium",
+   "name": "北极村机场",
+   "city": "北极村",
+   "nameEn": "Arctic Village Airport",
+   "cityEn": "Arctic Village"
+  },
+  {
+   "iata": "ADU",
+   "icao": "OITL",
+   "country": "IR",
+   "kind": "medium",
+   "name": "阿尔达比勒机场",
+   "city": "阿尔达比勒",
+   "nameEn": "Ardabil Airport",
+   "cityEn": "Ardabil"
+  },
+  {
+   "iata": "OBS",
+   "icao": "LFHO",
+   "country": "FR",
+   "kind": "medium",
+   "name": "奥伯纳南阿尔代什机场",
+   "city": "奥伯纳",
+   "nameEn": "Aubenas-South Ardèche Airport",
+   "cityEn": "Aubenas"
+  },
+  {
+   "iata": "ADM",
+   "icao": "KADM",
+   "country": "US",
+   "kind": "small",
+   "name": "阿德莫尔市机场",
+   "city": "阿德莫尔",
+   "nameEn": "Ardmore Municipal Airport",
+   "cityEn": "Ardmore"
+  },
+  {
+   "iata": "FON",
+   "icao": "MRAN",
+   "country": "CR",
+   "kind": "medium",
+   "name": "拉福图纳阿雷纳尔机场",
+   "city": "拉福图纳",
+   "nameEn": "La Fortuna Arenal Airport",
+   "cityEn": "La Fortuna"
+  },
+  {
+   "iata": "GYL",
+   "icao": "YARG",
+   "country": "AU",
+   "kind": "small",
+   "name": "阿盖尔机场",
+   "city": "阿盖尔",
+   "nameEn": "Argyle Airport",
+   "cityEn": "Argyle"
+  },
+  {
+   "iata": "SVD",
+   "icao": "TVSA",
+   "country": "VC",
+   "kind": "large",
+   "name": "金斯顿阿盖尔国际机场",
+   "city": "金斯顿",
+   "nameEn": "Argyle International Airport",
+   "cityEn": "Kingstown"
+  },
+  {
+   "iata": "AIR",
+   "icao": "SSOU",
+   "country": "BR",
+   "kind": "small",
+   "name": "阿里普阿南机场",
+   "city": "阿里普阿南",
+   "nameEn": "Aripuanã Airport",
+   "cityEn": "Aripuanã"
+  },
+  {
+   "iata": "KSO",
+   "icao": "LGKA",
+   "country": "GR",
+   "kind": "small",
+   "name": "卡斯托里亚阿里斯托特利斯机场",
+   "city": "卡斯托里亚",
+   "nameEn": "Kastoria National Airport Aristotle",
+   "cityEn": "Kastoria"
+  },
+  {
+   "iata": "BYH",
+   "icao": "KBYH",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿肯色国际机场",
+   "city": "布莱斯维尔",
+   "nameEn": "Arkansas International Airport",
+   "cityEn": "Blytheville"
+  },
+  {
+   "iata": "ARM",
+   "icao": "YARM",
+   "country": "AU",
+   "kind": "medium",
+   "name": "阿米代尔机场",
+   "city": "阿米代尔",
+   "nameEn": "Armidale Airport",
+   "cityEn": "Armidale"
+  },
+  {
+   "iata": "SBK",
+   "icao": "LFRT",
+   "country": "FR",
+   "kind": "medium",
+   "name": "圣布里厄阿莫尔机场",
+   "city": "圣布里厄",
+   "nameEn": "Saint-Brieuc-Armor Airport",
+   "cityEn": "Saint-Brieuc"
+  },
+  {
+   "iata": "YYW",
+   "icao": "CYYW",
+   "country": "CA",
+   "kind": "medium",
+   "name": "阿姆斯特朗机场",
+   "city": "阿姆斯特朗",
+   "nameEn": "Armstrong Airport",
+   "cityEn": "Armstrong"
+  },
+  {
+   "iata": "LME",
+   "icao": "LFRM",
+   "country": "FR",
+   "kind": "medium",
+   "name": "勒芒阿尔纳日机场",
+   "city": "勒芒",
+   "nameEn": "Le Mans-Arnage Airport",
+   "cityEn": "Le Mans"
+  },
+  {
+   "iata": "LBE",
+   "icao": "KLBE",
+   "country": "US",
+   "kind": "medium",
+   "name": "拉特罗布阿诺德·帕尔默机场",
+   "city": "拉特罗布",
+   "nameEn": "Arnold Palmer Regional Airport",
+   "cityEn": "Latrobe"
+  },
+  {
+   "iata": "ZCA",
+   "icao": "EDLA",
+   "country": "DE",
+   "kind": "small",
+   "name": "阿恩斯贝格-门登机场",
+   "city": "门登",
+   "nameEn": "Arnsberg Menden Airport",
+   "cityEn": "Menden"
+  },
+  {
+   "iata": "MOL",
+   "icao": "ENML",
+   "country": "NO",
+   "kind": "medium",
+   "name": "莫尔德阿罗机场",
+   "city": "莫尔德",
+   "nameEn": "Molde Airport, Årø",
+   "cityEn": "Molde"
+  },
+  {
+   "iata": "DIE",
+   "icao": "FMNA",
+   "country": "MG",
+   "kind": "medium",
+   "name": "安齐拉纳纳阿拉沙尔机场",
+   "city": "安齐拉纳纳",
+   "nameEn": "Arrachart Airport",
+   "cityEn": "Antsiranana"
+  },
+  {
+   "iata": "ACE",
+   "icao": "GCRR",
+   "country": "ES",
+   "kind": "large",
+   "name": "兰萨罗特塞萨尔·曼里克机场",
+   "city": "阿雷西费",
+   "nameEn": "César Manrique-Lanzarote Airport",
+   "cityEn": "Arrecife"
+  },
+  {
+   "iata": "EPS",
+   "icao": "MDAB",
+   "country": "DO",
+   "kind": "small",
+   "name": "阿罗约巴里尔机场",
+   "city": "阿罗约巴里尔",
+   "nameEn": "Arroyo Barril Airport",
+   "cityEn": "Arroyo Barril"
+  },
+  {
+   "iata": "ATC",
+   "icao": "MYCA",
+   "country": "BS",
+   "kind": "medium",
+   "name": "亚瑟斯敦机场",
+   "city": "亚瑟斯敦",
+   "nameEn": "Arthur's Town Airport",
+   "cityEn": "Arthur's Town"
+  },
+  {
+   "iata": "SCL",
+   "icao": "SCEL",
+   "country": "CL",
+   "kind": "large",
+   "name": "圣地亚哥阿图罗·梅里诺·贝尼特斯国际机场",
+   "city": "圣地亚哥",
+   "nameEn": "Comodoro Arturo Merino Benítez International Airport",
+   "cityEn": "Santiago"
+  },
+  {
+   "iata": "VLN",
+   "icao": "SVVA",
+   "country": "VE",
+   "kind": "large",
+   "name": "瓦伦西亚阿图罗·米切莱纳国际机场",
+   "city": "瓦伦西亚",
+   "nameEn": "Arturo Michelena International Airport",
+   "cityEn": "Valencia"
+  },
+  {
+   "iata": "RUA",
+   "icao": "HUAR",
+   "country": "UG",
+   "kind": "medium",
+   "name": "阿鲁阿机场",
+   "city": "阿鲁阿",
+   "nameEn": "Arua Airport",
+   "cityEn": "Arua"
+  },
+  {
+   "iata": "ARK",
+   "icao": "HTAR",
+   "country": "TZ",
+   "kind": "medium",
+   "name": "阿鲁沙机场",
+   "city": "阿鲁沙",
+   "nameEn": "Arusha Airport",
+   "cityEn": "Arusha"
+  },
+  {
+   "iata": "AXR",
+   "icao": "NTGU",
+   "country": "PF",
+   "kind": "medium",
+   "name": "阿鲁图阿机场",
+   "city": "阿鲁图阿",
+   "nameEn": "Arutua Airport",
+   "cityEn": "Arutua"
+  },
+  {
+   "iata": "AVK",
+   "icao": "ZMAH",
+   "country": "MN",
+   "kind": "medium",
+   "name": "阿尔拜赫雷机场",
+   "city": "阿尔拜赫雷",
+   "nameEn": "Arvaikheer Airport",
+   "cityEn": "Arvaikheer"
+  },
+  {
+   "iata": "YEK",
+   "icao": "CYEK",
+   "country": "CA",
+   "kind": "small",
+   "name": "阿维亚特机场",
+   "city": "阿维亚特",
+   "nameEn": "Arviat Airport",
+   "cityEn": "Arviat"
+  },
+  {
+   "iata": "AJR",
+   "icao": "ESNX",
+   "country": "SE",
+   "kind": "medium",
+   "name": "阿尔维斯尧尔机场",
+   "city": "阿尔维斯尧尔",
+   "nameEn": "Arvidsjaur Airport",
+   "cityEn": "Arvidsjaur"
+  },
+  {
+   "iata": "YIE",
+   "icao": "ZBES",
+   "country": "CN",
+   "kind": "medium",
+   "name": "阿尔山伊尔施机场",
+   "city": "阿尔山",
+   "nameEn": "Arxan Yi'ershi Airport",
+   "cityEn": "Arxan"
+  },
+  {
+   "iata": "ABB",
+   "icao": "DNAS",
+   "country": "NG",
+   "kind": "large",
+   "name": "阿萨巴国际机场",
+   "city": "阿萨巴",
+   "nameEn": "Asaba International Airport",
+   "cityEn": "Asaba"
+  },
+  {
+   "iata": "AKJ",
+   "icao": "RJEC",
+   "country": "JP",
+   "kind": "medium",
+   "name": "旭川机场",
+   "city": "旭川",
+   "nameEn": "Asahikawa Airport",
+   "cityEn": "Asahikawa"
+  },
+  {
+   "iata": "AVL",
+   "icao": "KAVL",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿什维尔地区机场",
+   "city": "阿什维尔",
+   "nameEn": "Asheville Regional Airport",
+   "cityEn": "Asheville"
+  },
+  {
+   "iata": "LYM",
+   "icao": "EGMK",
+   "country": "GB",
+   "kind": "small",
+   "name": "阿什福德机场",
+   "city": "阿什福德",
+   "nameEn": "Ashford Airport",
+   "cityEn": "Ashford"
+  },
+  {
+   "iata": "ASB",
+   "icao": "UTAA",
+   "country": "TM",
+   "kind": "large",
+   "name": "阿什哈巴德国际机场",
+   "city": "阿什哈巴德",
+   "nameEn": "Ashgabat International Airport",
+   "cityEn": "Ashgabat"
+  },
+  {
+   "iata": "ASM",
+   "icao": "HHAS",
+   "country": "ER",
+   "kind": "medium",
+   "name": "阿斯马拉国际机场",
+   "city": "阿斯马拉",
+   "nameEn": "Asmara International Airport",
+   "cityEn": "Asmara"
+  },
+  {
+   "iata": "ASO",
+   "icao": "HASO",
+   "country": "ET",
+   "kind": "medium",
+   "name": "阿索萨机场",
+   "city": "阿索萨",
+   "nameEn": "Asosa Airport",
+   "cityEn": "Asosa"
+  },
+  {
+   "iata": "ASE",
+   "icao": "KASE",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿斯彭-皮特金县机场",
+   "city": "阿斯彭",
+   "nameEn": "Aspen-Pitkin County Airport (Sardy Field)",
+   "cityEn": "Aspen"
+  },
+  {
+   "iata": "ASA",
+   "icao": "HHSB",
+   "country": "ER",
+   "kind": "medium",
+   "name": "阿萨布国际机场",
+   "city": "阿萨布",
+   "nameEn": "Assab International Airport",
+   "cityEn": "Assab"
+  },
+  {
+   "iata": "MDQ",
+   "icao": "SAZM",
+   "country": "AR",
+   "kind": "medium",
+   "name": "马德普拉塔阿斯托·皮亚佐拉国际机场",
+   "city": "马德普拉塔",
+   "nameEn": "Ástor Piazzola International Airport",
+   "cityEn": "Mar del Plata"
+  },
+  {
+   "iata": "ASF",
+   "icao": "URWA",
+   "country": "RU",
+   "kind": "large",
+   "name": "阿斯特拉罕纳里马诺夫国际机场",
+   "city": "阿斯特拉罕",
+   "nameEn": "Astrakhan Narimanovo Boris M. Kustodiev International Airport",
+   "cityEn": "Astrakhan"
+  },
+  {
+   "iata": "OVD",
+   "icao": "LEAS",
+   "country": "ES",
+   "kind": "large",
+   "name": "阿斯图里亚斯机场",
+   "city": "阿斯图里亚斯",
+   "nameEn": "Asturias Airport",
+   "cityEn": "Asturias"
+  },
+  {
+   "iata": "JTY",
+   "icao": "LGPL",
+   "country": "GR",
+   "kind": "small",
+   "name": "阿斯提帕莱阿机场",
+   "city": "阿斯提帕莱阿岛",
+   "nameEn": "Astypalaia Airport",
+   "cityEn": "Astypalaia"
+  },
+  {
+   "iata": "ASW",
+   "icao": "HESN",
+   "country": "EG",
+   "kind": "large",
+   "name": "阿斯旺国际机场",
+   "city": "阿斯旺",
+   "nameEn": "Aswan International Airport",
+   "cityEn": "Aswan"
+  },
+  {
+   "iata": "ATZ",
+   "icao": "HEAT",
+   "country": "EG",
+   "kind": "large",
+   "name": "阿西尤特国际机场",
+   "city": "阿西尤特",
+   "nameEn": "Asyut International Airport",
+   "cityEn": "Asyut"
+  },
+  {
+   "iata": "AXK",
+   "icao": "OYAT",
+   "country": "YE",
+   "kind": "medium",
+   "name": "阿塔克机场",
+   "city": "阿塔克",
+   "nameEn": "Ataq Airport",
+   "cityEn": "Ataq"
+  },
+  {
+   "iata": "ATR",
+   "icao": "GQPA",
+   "country": "MR",
+   "kind": "medium",
+   "name": "阿塔尔国际机场",
+   "city": "阿塔尔",
+   "nameEn": "Atar International Airport",
+   "cityEn": "Atar"
+  },
+  {
+   "iata": "ISL",
+   "icao": "LTBA",
+   "country": "TR",
+   "kind": "large",
+   "name": "伊斯坦布尔阿塔图尔克机场",
+   "city": "伊斯坦布尔",
+   "nameEn": "İstanbul Atatürk Airport",
+   "cityEn": "Istanbul"
+  },
+  {
+   "iata": "ATB",
+   "icao": "HSAT",
+   "country": "SD",
+   "kind": "small",
+   "name": "阿特巴拉机场",
+   "city": "阿特巴拉",
+   "nameEn": "Atbara Airport",
+   "cityEn": "Atbara"
+  },
+  {
+   "iata": "AHN",
+   "icao": "KAHN",
+   "country": "US",
+   "kind": "medium",
+   "name": "雅典本·埃普斯机场",
+   "city": "雅典",
+   "nameEn": "Athens Ben Epps Airport",
+   "cityEn": "Athens"
+  },
+  {
+   "iata": "YIB",
+   "icao": "CYIB",
+   "country": "CA",
+   "kind": "medium",
+   "name": "阿蒂科坎机场",
+   "city": "阿蒂科坎",
+   "nameEn": "Atikokan Municipal Airport",
+   "cityEn": "Atikokan"
+  },
+  {
+   "iata": "AIU",
+   "icao": "NCAT",
+   "country": "CK",
+   "kind": "small",
+   "name": "埃努阿机场",
+   "city": "阿蒂乌岛",
+   "nameEn": "Enua Airport",
+   "cityEn": "Atiu Island"
+  },
+  {
+   "iata": "ACY",
+   "icao": "KACY",
+   "country": "US",
+   "kind": "medium",
+   "name": "大西洋城国际机场",
+   "city": "大西洋城",
+   "nameEn": "Atlantic City International Airport",
+   "cityEn": "Atlantic City"
+  },
+  {
+   "iata": "ATK",
+   "icao": "PATQ",
+   "country": "US",
+   "kind": "medium",
+   "name": "阿特卡苏克机场",
+   "city": "阿特卡苏克",
+   "nameEn": "Atqasuk Edward Burnell Sr Memorial Airport",
+   "cityEn": "Atqasuk"
+  },
+  {
+   "iata": "YAT",
+   "icao": "CYAT",
+   "country": "CA",
+   "kind": "small",
+   "name": "阿塔瓦皮斯卡特机场",
+   "city": "阿塔瓦皮斯卡特",
+   "nameEn": "Attawapiskat Airport",
+   "cityEn": "Attawapiskat"
+  },
+  {
+   "iata": "PXA",
+   "icao": "WIPY",
+   "country": "ID",
+   "kind": "small",
+   "name": "阿通邦苏机场",
+   "city": "本塔延",
+   "nameEn": "Atung Bungsu Airport",
+   "cityEn": "Bentayan"
+  },
+  {
+   "iata": "GUW",
+   "icao": "UATG",
+   "country": "KZ",
+   "kind": "large",
+   "name": "阿特劳国际机场",
+   "city": "阿特劳",
+   "nameEn": "Atyrau International Airport",
+   "cityEn": "Atyrau"
+  },
+  {
+   "iata": "AGB",
+   "icao": "EDMA",
+   "country": "DE",
+   "kind": "medium",
+   "name": "奥格斯堡机场",
+   "city": "奥格斯堡",
+   "nameEn": "Augsburg Airport",
+   "cityEn": "Augsburg"
+  },
+  {
+   "iata": "AGS",
+   "icao": "KAGS",
+   "country": "US",
+   "kind": "medium",
+   "name": "奥古斯塔地区机场",
+   "city": "奥古斯塔",
+   "nameEn": "Augusta Regional At Bush Field",
+   "cityEn": "Augusta"
+  },
+  {
+   "iata": "AUG",
+   "icao": "KAUG",
+   "country": "US",
+   "kind": "medium",
+   "name": "奥古斯塔州机场",
+   "city": "奥古斯塔",
+   "nameEn": "Augusta State Airport",
+   "cityEn": "Augusta"
+  },
+  {
+   "iata": "AKS",
+   "icao": "AGGA",
+   "country": "SB",
+   "kind": "small",
+   "name": "奥基机场",
+   "city": "奥基",
+   "nameEn": "Gwaunaru'u Airport",
+   "cityEn": "Auki"
+  },
+  {
+   "iata": "YPJ",
+   "icao": "CYLA",
+   "country": "CA",
+   "kind": "small",
+   "name": "奥帕卢克机场",
+   "city": "奥帕卢克",
+   "nameEn": "Aupaluk Airport",
+   "cityEn": "Aupaluk"
+  },
+  {
+   "iata": "IXU",
+   "icao": "VAAU",
+   "country": "IN",
+   "kind": "medium",
+   "name": "奥兰加巴德机场",
+   "city": "奥兰加巴德",
+   "nameEn": "Aurangabad Airport",
+   "cityEn": "Aurangabad"
+  },
+  {
+   "iata": "BBU",
+   "icao": "LRBS",
+   "country": "RO",
+   "kind": "large",
+   "name": "布加勒斯特奥雷尔·弗拉伊库国际机场",
+   "city": "布加勒斯特",
+   "nameEn": "Bucharest Băneasa Aurel Vlaicu International Airport",
+   "cityEn": "Bucharest"
+  },
+  {
+   "iata": "AUR",
+   "icao": "LFLW",
+   "country": "FR",
+   "kind": "medium",
+   "name": "奥里亚克机场",
+   "city": "奥里亚克",
+   "nameEn": "Aurillac airport",
+   "cityEn": "Aurillac"
+  },
+  {
+   "iata": "AUU",
+   "icao": "YAUR",
+   "country": "AU",
+   "kind": "small",
+   "name": "奥鲁昆机场",
+   "city": "奥鲁昆",
+   "nameEn": "Aurukun Airport",
+   "cityEn": "Aurukun"
+  },
+  {
+   "iata": "AUS",
+   "icao": "KAUS",
+   "country": "US",
+   "kind": "large",
+   "name": "奥斯汀-伯格斯特罗姆国际机场",
+   "city": "奥斯汀",
+   "nameEn": "Austin Bergstrom International Airport",
+   "cityEn": "Austin"
+  },
+  {
+   "iata": "EDC",
+   "icao": "KEDC",
+   "country": "US",
+   "kind": "medium",
+   "name": "奥斯汀商务机场",
+   "city": "奥斯汀",
+   "nameEn": "Austin Executive Airport",
+   "cityEn": "Austin"
+  },
+  {
+   "iata": "GRB",
+   "icao": "KGRB",
+   "country": "US",
+   "kind": "medium",
+   "name": "格林贝奥斯汀·施特劳贝尔国际机场",
+   "city": "格林贝",
+   "nameEn": "Austin Straubel International Airport",
+   "cityEn": "Green Bay"
+  },
+  {
+   "iata": "CFE",
+   "icao": "LFLC",
+   "country": "FR",
+   "kind": "large",
+   "name": "克莱蒙费朗奥弗涅机场",
+   "city": "克莱蒙费朗",
+   "nameEn": "Clermont-Ferrand Auvergne airport",
+   "cityEn": "Clermont-Ferrand"
+  },
+  {
+   "iata": "AVV",
+   "icao": "YMAV",
+   "country": "AU",
+   "kind": "large",
+   "name": "墨尔本阿瓦隆国际机场",
+   "city": "吉朗",
+   "nameEn": "Melbourne Avalon International Airport",
+   "cityEn": "Geelong"
+  },
+  {
+   "iata": "WMR",
+   "icao": "FMNC",
+   "country": "MG",
+   "kind": "medium",
+   "name": "北马纳纳拉机场",
+   "city": "北马纳纳拉",
+   "nameEn": "Mananara Nord Airport",
+   "cityEn": "Mananara Nord"
+  },
+  {
+   "iata": "CPC",
+   "icao": "SAZY",
+   "country": "AR",
+   "kind": "medium",
+   "name": "圣马丁德洛斯安第斯机场",
+   "city": "圣马丁德洛斯安第斯",
+   "nameEn": "Aviador C. Campos Airport",
+   "cityEn": "San Martin de los Andes"
+  },
+  {
+   "iata": "AVB",
+   "icao": "LIPA",
+   "country": "IT",
+   "kind": "medium",
+   "name": "阿维亚诺空军基地",
+   "city": "阿维亚诺",
+   "nameEn": "Aviano Air Base",
+   "cityEn": "Aviano"
+  },
+  {
+   "iata": "AWA",
+   "icao": "HALA",
+   "country": "ET",
+   "kind": "large",
+   "name": "阿瓦萨国际机场",
+   "city": "阿瓦萨",
+   "nameEn": "Hawassa International Airport",
+   "cityEn": "Hawassa"
+  },
+  {
+   "iata": "AXU",
+   "icao": "HAAX",
+   "country": "ET",
+   "kind": "medium",
+   "name": "阿克苏姆机场",
+   "city": "阿克苏姆",
+   "nameEn": "Axum Airport",
+   "cityEn": "Axum"
+  },
+  {
+   "iata": "AYQ",
+   "icao": "YAYE",
+   "country": "AU",
+   "kind": "medium",
+   "name": "艾尔斯岩机场",
+   "city": "尤拉拉",
+   "nameEn": "Ayers Rock Connellan Airport",
+   "cityEn": "Yulara"
+  },
+  {
+   "iata": "AYJ",
+   "icao": "VEAY",
+   "country": "IN",
+   "kind": "medium",
+   "name": "阿约提亚机场",
+   "city": "阿约提亚",
+   "nameEn": "Maharshi Valmiki International Airport",
+   "cityEn": "Ayodhya"
+  },
+  {
+   "iata": "AZH",
+   "icao": "VEAH",
+   "country": "IN",
+   "kind": "small",
+   "name": "阿扎姆加尔机场",
+   "city": "阿扎姆加尔",
+   "nameEn": "Azamgarh Airport",
+   "cityEn": "Azamgarh"
+  }
+ ]
+}

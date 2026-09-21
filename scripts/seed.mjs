@@ -136,7 +136,7 @@ function trimZeros(value) {
  */
 function englishDescription(a, paxM, distanceKm, modes) {
   const country = countries[a.country].nameEn;
-  const city = CITY_EN[a.city];
+  const city = a.cityEn ?? CITY_EN[a.city];
   const terminalCount = a.terminals.length;
   // Deduplicate modes: several services may share the same one.
   const transportTerms = [
@@ -153,6 +153,30 @@ function englishDescription(a, paxM, distanceKm, modes) {
   return parts.filter(Boolean).join(' ');
 }
 
+const KIND_ZH = { large: '大型', medium: '中型', small: '小型', heliport: '直升机' };
+const KIND_EN = {
+  large: 'large airport',
+  medium: 'medium-sized airport',
+  small: 'small airport',
+  heliport: 'heliport',
+};
+
+/**
+ * Description for the directory batch (scripts/directory-data.json), derived
+ * purely from its own fields — those airports carry no editorial copy yet.
+ * Returns the [zh, en] pair for airport_translations.
+ */
+function directoryDescriptions(a) {
+  const country = countries[a.country];
+  const kindZh = KIND_ZH[a.kind] ?? '';
+  const kindEn = KIND_EN[a.kind] ?? 'airport';
+  return [
+    `${a.name}(IATA:${a.iata})位于${country.name}${a.city}，是一座${kindZh}机场。详细航站楼、登机口及交通信息将陆续补充。`,
+    `${a.nameEn} (${a.iata}) is a ${kindEn} serving ${a.cityEn}, ${country.nameEn}. ` +
+      'Terminal, gate and ground-transport details will be added as they are compiled.',
+  ];
+}
+
 /** "a, b and c" */
 function joinList(items) {
   if (items.length <= 1) return items[0] ?? '';
@@ -161,6 +185,15 @@ function joinList(items) {
 
 const legacy = JSON.parse(readFileSync(join(ROOT, 'scripts', 'legacy-data.json'), 'utf8'));
 const { countries, airports } = legacy;
+
+// Directory batch: name/city/country records collected separately, generated
+// into scripts/directory-data.json by data/build-directory-data.mjs. They ride
+// the same seed so a re-seed cannot drop them, and carry no editorial content
+// (no terminals, facilities or pax figures) until those are written.
+const directory = JSON.parse(readFileSync(join(ROOT, 'scripts', 'directory-data.json'), 'utf8'));
+Object.assign(countries, directory.countries);
+const editorialIatas = new Set(airports.map((a) => a.iata));
+const directoryAirports = directory.airports.filter((a) => !editorialIatas.has(a.iata));
 
 // ---------------------------------------------------------------- validation
 const missingCities = [...new Set(airports.map((a) => a.city))].filter((c) => !CITY_EN[c]);
@@ -329,6 +362,25 @@ try {
         ]
       );
     }
+  }
+
+  // Directory batch: base row plus data-derived descriptions only. The day
+  // stagger continues after the editorial set, so every editorial airport
+  // stays above them in the homepage "recently updated" strip.
+  for (const [di, a] of directoryAirports.entries()) {
+    const slug = `${slugify(a.nameEn)}-${a.iata.toLowerCase()}`;
+    await client.query(
+      `INSERT INTO airports
+         (iata, slug, name, name_en, city, city_en, country_code, gate_count, updated_at)
+       VALUES ($1,$2,$3,$4,$5,$6,$7,0, now() - ($8 || ' days')::interval)`,
+      [a.iata, slug, a.name, a.nameEn, a.city, a.cityEn, a.country, ordered.length + di]
+    );
+    const [descZh, descEn] = directoryDescriptions(a);
+    await client.query(
+      `INSERT INTO airport_translations (airport_iata, locale, description_md)
+       VALUES ($1, 'zh', $2), ($1, 'en', $3)`,
+      [a.iata, descZh, descEn]
+    );
   }
 
   await client.query('COMMIT');

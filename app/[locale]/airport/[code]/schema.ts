@@ -58,8 +58,9 @@ export function buildAirportGraph(input: {
     iata: airport.iata,
     city: airport.city,
     country: airport.countryName,
-    terminals: formatNumber(airport.terminals.length, locale),
-    gates: formatNumber(airport.gateCount, locale),
+    terminals:
+      airport.terminals.length > 0 ? formatNumber(airport.terminals.length, locale) : null,
+    gates: airport.gateCount > 0 ? formatNumber(airport.gateCount, locale) : null,
     pax: pax ?? '',
     distance: distance ?? '',
   });

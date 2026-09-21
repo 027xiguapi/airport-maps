@@ -62,8 +62,14 @@ export default function AirportCard({
           </div>
         </div>
         <div className="mt-3 flex flex-wrap gap-2">
-          <Badge variant="outline">{t.units.terminals(airport.terminalCount)}</Badge>
-          <Badge variant="outline">{t.units.gates(airport.gateCount)}</Badge>
+          {/* Directory batch airports have no compiled terminal data yet, so
+              the two count badges stay hidden instead of reading "0". */}
+          {(airport.terminalCount > 0 || airport.gateCount > 0) && (
+            <>
+              <Badge variant="outline">{t.units.terminals(airport.terminalCount)}</Badge>
+              <Badge variant="outline">{t.units.gates(airport.gateCount)}</Badge>
+            </>
+          )}
           {pax && <Badge variant="outline">{pax}</Badge>}
         </div>
         <div className="mt-3.5 flex items-center justify-between border-t border-dashed border-border pt-3">

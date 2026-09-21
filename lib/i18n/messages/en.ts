@@ -261,21 +261,24 @@ export const en: Messages = {
   },
 
   airport: {
-    /** Meta description assembled from formatted airport facts. */
+    /** Meta description assembled from formatted airport facts. Terminals and
+        gates are null for directory airports with no compiled counts. */
     metaDescription: (o: {
       name: string;
       nameEn: string;
       iata: string;
       city: string;
       country: string;
-      terminals: string;
-      gates: string;
+      terminals: string | null;
+      gates: string | null;
       pax: string;
       distance: string;
     }) =>
-      `${o.name} (${o.iata}, ${o.nameEn}) serves ${o.city}, ${o.country}. Terminal maps, ${o.terminals.toLowerCase()} and ${o.gates.toLowerCase()}${
-        o.pax ? `, ${o.pax} passengers a year` : ''
-      }${o.distance ? `, ${o.distance} from the city centre` : ''}.`,
+      `${o.name} (${o.iata}, ${o.nameEn}) serves ${o.city}, ${o.country}. ${
+        o.terminals
+          ? `Terminal maps, ${o.terminals.toLowerCase()} and ${o.gates?.toLowerCase()}`
+          : 'Terminal map and gate layout'
+      }${o.pax ? `, ${o.pax} passengers a year` : ''}${o.distance ? `, ${o.distance} from the city centre` : ''}.`,
     mapTitle: (iata: string) => `${iata} · Terminal layout`,
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} Airport Terminal Map — Gates & Navigation`,

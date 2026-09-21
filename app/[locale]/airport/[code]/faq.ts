@@ -48,16 +48,22 @@ export function buildFaq(
     .join(clauseSeparator);
 
   return [
-    {
-      q: t.faq.terminalCount(airport.name),
-      a: t.faq.terminalCountAnswer(
-        airport.name,
-        airport.iata,
-        formatNumber(airport.terminals.length, locale),
-        formatNumber(airport.gateCount, locale),
-        terminalList
-      ),
-    },
+    // Directory batch airports have no compiled terminal data, so the count
+    // question would answer "0" — drop it until data exists.
+    ...(airport.terminals.length > 0
+      ? [
+          {
+            q: t.faq.terminalCount(airport.name),
+            a: t.faq.terminalCountAnswer(
+              airport.name,
+              airport.iata,
+              formatNumber(airport.terminals.length, locale),
+              formatNumber(airport.gateCount, locale),
+              terminalList
+            ),
+          },
+        ]
+      : []),
     ...(airlineList
       ? [
           {
@@ -66,21 +72,33 @@ export function buildFaq(
           },
         ]
       : []),
-    {
-      q: t.faq.distance(airport.name, airport.city),
-      a: t.faq.distanceAnswer(airport.name, airport.city, distance ?? '—', transitSummary),
-    },
-    {
-      q: t.faq.access(airport.name, airport.city),
-      a: t.faq.accessAnswer(accessList),
-    },
-    {
-      q: t.faq.facilities(airport.name),
-      a: t.faq.facilitiesAnswer(
-        airport.name,
-        airport.facilities.map((f) => f.label).join(listSeparator)
-      ),
-    },
+    ...(distance
+      ? [
+          {
+            q: t.faq.distance(airport.name, airport.city),
+            a: t.faq.distanceAnswer(airport.name, airport.city, distance, transitSummary),
+          },
+        ]
+      : []),
+    ...(accessList
+      ? [
+          {
+            q: t.faq.access(airport.name, airport.city),
+            a: t.faq.accessAnswer(accessList),
+          },
+        ]
+      : []),
+    ...(airport.facilities.length > 0
+      ? [
+          {
+            q: t.faq.facilities(airport.name),
+            a: t.faq.facilitiesAnswer(
+              airport.name,
+              airport.facilities.map((f) => f.label).join(listSeparator)
+            ),
+          },
+        ]
+      : []),
     {
       q: t.faq.location(airport.name),
       a: t.faq.locationAnswer(
