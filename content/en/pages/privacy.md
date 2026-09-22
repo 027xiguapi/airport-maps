@@ -4,7 +4,7 @@ summary: What this site collects, how cookies are used, which third-party servic
 updated: 2026-09-16
 ---
 
-This page explains how Global Airport Maps (the "site") handles information when you visit.
+This page explains how World Airport Maps (the "site") handles information when you visit.
 
 ## What we collect
 

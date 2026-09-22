@@ -11,7 +11,7 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3
  * localized (全球机场地图), but crawlers and AI platforms should always see this
  * single spelling so brand signals are not split across variants.
  */
-export const SITE_NAME = 'Global Airport Maps';
+export const SITE_NAME = 'World Airport Maps';
 
 /** Stable schema.org node ids, so pages can cross-reference the same entity. */
 export const ORG_NODE_ID = `${SITE_URL}/#organization`;

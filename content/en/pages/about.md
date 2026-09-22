@@ -1,10 +1,10 @@
 ---
 title: About
-summary: What Global Airport Maps covers, where the data comes from, and how to use the terminal layout diagrams to plan a trip.
+summary: What World Airport Maps covers, where the data comes from, and how to use the terminal layout diagrams to plan a trip.
 updated: 2026-09-16
 ---
 
-Global Airport Maps is an airport navigation directory. It organises **illustrated terminal layouts**, gate ranges, ground transport and terminal facilities for airports worldwide, by country and region — so you know how an airport is put together before you get there.
+World Airport Maps is an airport navigation directory. It organises **illustrated terminal layouts**, gate ranges, ground transport and terminal facilities for airports worldwide, by country and region — so you know how an airport is put together before you get there.
 
 ## What we cover
 

@@ -1,6 +1,6 @@
 ---
 title: Contact
-summary: How to get in touch with Global Airport Maps — report an error in an airport map or terminal guide, or ask for a new airport to be added.
+summary: How to get in touch with World Airport Maps — report an error in an airport map or terminal guide, or ask for a new airport to be added.
 updated: 2026-09-20
 ---
 

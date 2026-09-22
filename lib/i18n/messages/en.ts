@@ -6,9 +6,9 @@ import type { Messages } from './zh';
  */
 export const en: Messages = {
   site: {
-    name: 'Global Airport Maps',
+    name: 'World Airport Maps',
     // The wordmark is split so the accent colour can highlight part of it.
-    nameLead: 'Global Airport',
+    nameLead: 'World Airport',
     nameAccent: 'Maps',
     tagline: 'Airport & Terminal Maps',
     description:
@@ -88,7 +88,7 @@ export const en: Messages = {
   },
 
   hero: {
-    eyebrow: 'Global Airport Directory',
+    eyebrow: 'World Airport Directory',
     titleLead: 'Explore airports and',
     titleAccent: 'terminal maps',
     sub: 'Find your way through any airport with our complete collection of airport and terminal maps, organised by country and region — from major international hubs to regional airports.',
@@ -285,6 +285,11 @@ export const en: Messages = {
     realMapNote: 'TERMINAL MAP',
     /** Download buttons under the map: the image downloads directly, the PDF
         button links out to a Google search for the official PDF. */
+    zoomLabel: 'Zoom',
+    zoomClose: 'Close',
+    downloadKicker: 'Download',
+    downloadTitle: 'Download Airport Maps',
+    downloadEn: 'Downloads',
     downloadMapLabel: (year: number, iata: string) => `${year} Latest ${iata} Airport Terminal Map Download`,
     downloadPdfLabel: (year: number, iata: string) =>
       `${year} Latest ${iata} Airport Terminal Map PDF Download`,
@@ -362,7 +367,7 @@ export const en: Messages = {
 
   /** Author byline & E-E-A-T trust signals shown under the airport page title. */
   editorial: {
-    authorName: 'Global Airport Maps Editorial Team',
+    authorName: 'World Airport Maps Editorial Team',
     role: 'Compiled & reviewed by ',
     sourcesNote: 'Compiled from public sources and official airport information',
   },

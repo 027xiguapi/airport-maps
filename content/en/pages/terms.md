@@ -4,7 +4,7 @@ summary: How this site's content may be used, and the limits of our liability.
 updated: 2026-09-16
 ---
 
-By accessing or using Global Airport Maps (the "site") you agree to the terms below.
+By accessing or using World Airport Maps (the "site") you agree to the terms below.
 
 ## Using the content
 

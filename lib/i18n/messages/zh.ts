@@ -80,7 +80,7 @@ export const zh = {
   },
 
   hero: {
-    eyebrow: 'Global Airport Directory',
+    eyebrow: 'World Airport Directory',
     titleLead: '探索机场和',
     titleAccent: '航站楼地图',
     sub: '使用我们完整的机场和航站楼地图轻松找到您的路。浏览按国家和地区组织的机场航站楼地图，从主要国际枢纽到区域机场。',
@@ -270,6 +270,11 @@ export const zh = {
     realMapTitle: (iata: string) => `${iata} 机场航站楼地图 — 登机口与导航`,
     realMapNote: 'TERMINAL MAP',
     /** 终端图下方的下载按钮：图片直接下载，PDF 按钮跳转谷歌搜索官方 PDF。 */
+    zoomLabel: '放大',
+    zoomClose: '关闭',
+    downloadKicker: 'Download',
+    downloadTitle: '下载机场地图',
+    downloadEn: 'Downloads',
     downloadMapLabel: (year: number, iata: string) => `${year}年最新  ${iata} 机场地图下载`,
     downloadPdfLabel: (year: number, iata: string) =>
       `${year}年最新 ${iata} 机场地图 PDF 下载`,
