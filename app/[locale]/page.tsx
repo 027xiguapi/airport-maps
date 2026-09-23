@@ -18,13 +18,13 @@ import { Card } from '@/components/ui/card';
 import {
   getAirportSummaries,
   getAirportsByCodes,
-  getBusiestCities,
   getCityCount,
   getCountries,
   getRecentlyUpdated,
   getRegionCount,
   getStats,
 } from '@/lib/queries';
+import { mapImageCodes } from '@/lib/map-images';
 import { absoluteUrl, ORG_NODE_ID, SITE_NAME, SITE_URL, WEBSITE_NODE_ID } from '@/lib/site';
 import { getAirportGeo } from '@/lib/airport-geo';
 import worldAirportsMeta from '@/lib/world-airports-meta.json';
@@ -47,6 +47,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /** Airports offered as one-tap shortcuts under the search box. */
 const SHORTCUTS = ['LHR', 'JFK', 'DXB', 'HND', 'SIN', 'PEK'];
 
+/** Fisher–Yates over a copy, so callers can keep the original order. */
+function shuffled<T>(list: readonly T[]): T[] {
+  const out = [...list];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
 export default async function HomePage({ params }: Props) {
   const locale = parseLocale((await params).locale);
   if (!locale) notFound();
@@ -54,10 +64,12 @@ export default async function HomePage({ params }: Props) {
   const t = getMessages(locale);
   const guidedCodes = listGuidedAirports(locale);
 
-  const [stats, cities, recent, countries, airports, cityCount, regionCount, guided] =
+  const [stats, popularPool, recent, countries, airports, cityCount, regionCount, guided] =
     await Promise.all([
       getStats(),
-      getBusiestCities(locale, 5),
+      // Random 10 airports that have a /maps cover — reshuffles on every
+      // (re)validation of the page.
+      getAirportsByCodes(locale, mapImageCodes()),
       getRecentlyUpdated(locale, 5),
       getCountries(locale),
       getAirportSummaries(locale),
@@ -65,6 +77,8 @@ export default async function HomePage({ params }: Props) {
       getRegionCount(),
       getAirportsByCodes(locale, guidedCodes),
     ]);
+
+  const popular = shuffled(popularPool).slice(0, 10);
 
   const shortcuts = await getAirportsByCodes(locale, SHORTCUTS);
 
@@ -333,7 +347,7 @@ export default async function HomePage({ params }: Props) {
             <p className="sec-sub">{t.home.popular.sub}</p>
           </div>
         </div>
-        <PopularCities locale={locale} cities={cities} />
+        <PopularCities locale={locale} airports={popular} />
       </section>
 
       {/* ---------------------------------------------------------- guides */}

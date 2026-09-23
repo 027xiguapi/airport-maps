@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
-import { ArrowIcon } from '@/lib/icons';
-import { formatPax } from '@/lib/format';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import type { AirportSummary, CityHub } from '@/lib/types';
+import type { AirportSummary } from '@/lib/types';
 
 /** "Recently updated" panel on the homepage. */
 export function UpdateList({
@@ -48,30 +46,32 @@ export function UpdateList({
 }
 
 /**
- * Homepage "busiest hubs" cards. The order comes from the query, which ranks
- * airport cities by total annual passenger volume.
+ * Homepage popular strip: one horizontally scrollable row of terminal-map
+ * cover tiles (the 400px covers in /public/maps) with the airport name under
+ * each. The random pick happens in the page — this list is already shuffled.
  */
-export function PopularCities({ locale, cities }: { locale: Locale; cities: CityHub[] }) {
-  const t = getMessages(locale);
+export function PopularCities({ locale, airports }: { locale: Locale; airports: AirportSummary[] }) {
   return (
-    <div className="popular-grid">
-      {cities.map((city, i) => (
+    <div className="popular-strip">
+      {airports.map((airport) => (
         <Link
-          className="popular-card"
-          href={localizedPath(locale, `/airport/${city.leadIata}`)}
-          key={`${city.leadIata}-${i}`}
+          className="popular-tile"
+          href={localizedPath(locale, `/airport/${airport.iata}`)}
+          key={airport.iata}
         >
-          <span className="popular-rank">{String(i + 1).padStart(2, '0')}</span>
-          <div className="iata">{city.leadIata}</div>
-          <div className="city">{city.city}</div>
-          <div className="airport">{city.leadName}</div>
-          <div className="city-airports">
-            <span className="lead">{formatPax(city.totalPaxM, locale)}</span>
-            <span>{t.units.airports(city.airportCount)}</span>
-          </div>
-          <span className="go">
-            {t.common.viewMap}
-            <ArrowIcon />
+          <span className="pic">
+            <img
+              src={`/maps/${airport.iata}.png`}
+              alt={airport.name}
+              loading="lazy"
+            />
+          </span>
+          <span className="body">
+            <span className="iata">{airport.iata}</span>
+            <span className="name">{airport.name}</span>
+            <span className="city">
+              {airport.city} · {airport.countryName}
+            </span>
           </span>
         </Link>
       ))}

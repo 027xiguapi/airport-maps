@@ -25,6 +25,14 @@ export function mapImageUrl(iata: string): string | null {
   return available().has(file) ? `/source-maps/${file}` : null;
 }
 
+/** IATA codes that have a cover in /public/maps, sorted alphabetically. */
+export function mapImageCodes(): string[] {
+  return [...available()]
+    .filter((file) => file.toLowerCase().endsWith('.png'))
+    .map((file) => file.slice(0, -4).toUpperCase())
+    .sort();
+}
+
 /**
  * Full terminal-map files downloaded by scripts/fetch-terminal-maps.mjs into
  * /public/terminal-maps, keyed by IATA code (HKG/HKG_large.png + HKG.pdf).

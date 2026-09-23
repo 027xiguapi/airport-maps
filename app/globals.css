@@ -498,61 +498,40 @@ html[data-theme="dark"] {
     @apply gap-2.5;
   }
 
-  /* ============ 热门机场城市 ============ */
-  .popular-grid {
-    @apply grid grid-cols-5 gap-4;
+  /* ============ 热门机场地图 ============ */
+  /* One horizontal scroll row of terminal-map cover tiles (/public/maps). */
+  .popular-strip {
+    @apply flex gap-4 overflow-x-auto pb-2;
+    scroll-snap-type: x proximity;
   }
-  .popular-card {
-    /* min-width:0 + the minmax(0,1fr) tracks in 响应式 let a long English
-       airport name truncate instead of widening the card. */
-    @apply relative isolate flex min-h-[236px] min-w-0 cursor-pointer flex-col justify-end overflow-hidden rounded-[14px] bg-navy-900 p-5 text-white transition-[transform,box-shadow] duration-[180ms];
+  .popular-tile {
+    @apply flex w-[230px] flex-none flex-col overflow-hidden rounded-[14px] bg-navy-900 text-white transition-[transform,box-shadow] duration-[180ms];
+    scroll-snap-align: start;
     box-shadow: var(--shadow-sm);
   }
-  .popular-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background:
-      radial-gradient(120% 90% at 85% -10%, rgba(46, 125, 179, 0.55) 0%, transparent 55%),
-      radial-gradient(90% 70% at 10% 110%, rgba(242, 163, 60, 0.16) 0%, transparent 55%);
-  }
-  .popular-card:hover {
+  .popular-tile:hover {
     @apply -translate-y-1;
     box-shadow: var(--shadow-lg);
   }
-  .popular-rank {
-    @apply absolute left-4 top-[14px] font-display text-[13px] font-semibold tracking-[0.18em] text-amber;
+  /* The covers are white-background PNGs at mixed aspect ratios, so they sit
+     object-contain inside a fixed white frame to keep the row even. */
+  .popular-tile .pic {
+    @apply flex h-[150px] flex-none items-center justify-center bg-white p-2;
   }
-  .popular-card .iata {
-    @apply mb-2 font-display text-[40px] font-semibold leading-none tracking-[0.02em] text-white/96;
+  .popular-tile .pic img {
+    @apply h-full w-full object-contain;
   }
-  .popular-card .city {
-    @apply text-[16px] font-bold;
+  .popular-tile .body {
+    @apply flex min-w-0 flex-1 flex-col p-3.5;
   }
-  .popular-card .airport {
-    @apply mt-[2px] truncate text-[12.5px] text-white/66;
+  .popular-tile .body .iata {
+    @apply font-display text-[12.5px] font-semibold tracking-[0.18em] text-amber;
   }
-  .popular-card .go {
-    @apply mt-3.5 inline-flex items-center gap-1.5 text-[12.5px] font-semibold tracking-[0.05em] text-amber;
+  .popular-tile .body .name {
+    @apply mt-1 line-clamp-2 text-[15px] font-bold leading-snug;
   }
-  .popular-card .go svg {
-    @apply transition-transform duration-150;
-  }
-  .popular-card:hover .go svg {
-    @apply translate-x-1;
-  }
-  /* The other airports of the same city, as chips under the card copy. */
-  .popular-card .city-airports {
-    @apply mt-2.5 flex flex-wrap gap-[5px];
-  }
-  .popular-card .city-airports span {
-    @apply rounded-[5px] px-[7px] py-[3px] font-display text-[11px] tracking-[0.06em];
-    background: rgba(255, 255, 255, 0.13);
-    color: rgba(255, 255, 255, 0.86);
-  }
-  .popular-card .city-airports span.lead {
-    @apply bg-amber font-semibold text-navy-900;
+  .popular-tile .body .city {
+    @apply mt-auto truncate pt-1.5 text-[12px] text-white/60;
   }
 
   /* ============ 最近更新 ============ */
@@ -1729,9 +1708,6 @@ html[data-theme="dark"] {
 
   /* ============ 响应式 ============ */
   @media (max-width: 1080px) {
-    .popular-grid {
-      @apply grid-cols-3;
-    }
     .topnav a {
       @apply px-[9px] py-2 text-[13.5px];
     }
@@ -1742,9 +1718,6 @@ html[data-theme="dark"] {
   @media (max-width: 820px) {
     .top-search {
       @apply hidden;
-    }
-    .popular-grid {
-      @apply grid-cols-2;
     }
     .section {
       @apply pt-[46px];
@@ -1823,14 +1796,11 @@ html[data-theme="dark"] {
     }
   }
   @media (max-width: 480px) {
-    .popular-grid {
-      @apply grid-cols-2 gap-2.5;
+    .popular-tile {
+      @apply w-[188px];
     }
-    .popular-card {
-      @apply min-h-[190px] p-[15px];
-    }
-    .popular-card .iata {
-      @apply text-[30px];
+    .popular-tile .pic {
+      @apply h-[124px];
     }
     .country-grid {
       @apply grid-cols-2 gap-2.5;

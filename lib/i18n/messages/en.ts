@@ -120,10 +120,10 @@ export const en: Messages = {
       openAirport: 'View airport',
     },
     popular: {
-      kicker: 'Busiest Hubs',
-      title: 'Popular airport cities',
-      en: 'Popular Cities',
-      sub: 'The busiest airport cities and major travel destinations in the world, ranked by total annual passenger volume.',
+      kicker: 'Terminal Maps',
+      title: 'Popular airport maps',
+      en: 'Airport Maps',
+      sub: 'A rotating pick of terminal-map covers from airports worldwide — open an airport page for the full map.',
     },
     recent: {
       kicker: 'Freshly Published',

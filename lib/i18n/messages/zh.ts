@@ -112,10 +112,10 @@ export const zh = {
       openAirport: '查看机场详情',
     },
     popular: {
-      kicker: 'Busiest Hubs',
-      title: '热门机场城市',
-      en: 'Popular Cities',
-      sub: '按年旅客吞吐量汇总，世界上最繁忙的机场城市和主要旅行目的地的航站楼地图。',
+      kicker: 'Terminal Maps',
+      title: '热门机场地图',
+      en: 'Airport Maps',
+      sub: '随机展示全球机场的航站楼地图封面，点击进入机场页面查看完整大图。',
     },
     recent: {
       kicker: 'Freshly Published',
