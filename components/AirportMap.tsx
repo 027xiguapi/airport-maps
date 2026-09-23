@@ -122,6 +122,22 @@ const csvCell = (v: unknown) => {
 let leafletPromise: Promise<typeof import('leaflet')> | null = null;
 const getLeaflet = () => (leafletPromise ??= import('leaflet'));
 
+/**
+ * Chrome for the buttons floating over the map, as utilities rather than the
+ * `.am-download` / `.am-tabs button` rules they used to be. Idle and active are
+ * separate constants instead of an override: both set the background and the
+ * text colour, and the order of two classes in an attribute decides nothing.
+ *
+ * The marker, popup and Leaflet tile-pane rules (.am-plane, .am-pop,
+ * .am-map .leaflet-tile-pane) stay in globals.css — that markup is built by
+ * Leaflet, not by this component.
+ */
+const MAP_BUTTON =
+  'cursor-pointer rounded-[14px] border px-3 py-[5px] text-[12px] backdrop-blur-[4px] transition-[background-color,border-color] duration-150 [font:inherit]';
+const MAP_BUTTON_IDLE =
+  'border-white/25 text-white/82 [background:rgba(10,42,67,0.78)] hover:border-white/50 hover:text-white';
+const MAP_BUTTON_ON = 'border-amber bg-amber font-semibold text-[#0A2A43]';
+
 export default function AirportMap({
   airports,
   labels,
@@ -329,36 +345,56 @@ export default function AirportMap({
   }
 
   return (
-    <div className="am-card">
-      <div className="am-map" ref={hostRef} />
-      <button className="am-download" onClick={downloadCsv} title={labels.downloadTitle}>
-        <span aria-hidden="true">↓</span>
+    <div className="relative overflow-hidden rounded-[14px] border border-line bg-[#0d1b2a] [box-shadow:var(--shadow-md)]">
+      {/* `am-map` stays as the hook the tile-pane filter in globals.css hangs on. */}
+      <div className="am-map z-[1] h-[480px] max-[640px]:h-[380px]" ref={hostRef} />
+      <button
+        className={`${MAP_BUTTON} ${MAP_BUTTON_IDLE} absolute left-3.5 top-3 z-[600] inline-flex items-center gap-1.5`}
+        onClick={downloadCsv}
+        title={labels.downloadTitle}
+      >
+        <span className="font-bold text-amber" aria-hidden="true">
+          ↓
+        </span>
         {labels.download}
       </button>
-      <div className="am-tabs">
-        <button className={group === 'all' ? 'on' : ''} onClick={() => setGroup('all')}>
+      <div className="absolute right-3 top-3 z-[600] flex max-w-[72%] flex-wrap justify-end gap-1.5 max-[640px]:max-w-[60%]">
+        <button
+          className={`${MAP_BUTTON} ${group === 'all' ? MAP_BUTTON_ON : MAP_BUTTON_IDLE}`}
+          onClick={() => setGroup('all')}
+        >
           {labels.all}
         </button>
         {GROUP_KEYS.map((g) => (
-          <button key={g} className={group === g ? 'on' : ''} onClick={() => setGroup(g)}>
+          <button
+            key={g}
+            className={`${MAP_BUTTON} ${group === g ? MAP_BUTTON_ON : MAP_BUTTON_IDLE}`}
+            onClick={() => setGroup(g)}
+          >
             {labels.groups[g]}
           </button>
         ))}
       </div>
-      <div className="am-legend">
-        <span className="rows">
-          <span>
-            <svg className="plane-ico" viewBox="0 0 24 24" aria-hidden="true">
+      <div className="pointer-events-none absolute bottom-3.5 left-3.5 z-[600] flex flex-col gap-1 rounded-lg border border-white/18 px-3 py-2 text-[11.5px] text-white/78 backdrop-blur-[4px] [background:rgba(10,42,67,0.78)] max-[640px]:hidden">
+        <span className="flex flex-col gap-1">
+          <span className="inline-flex items-center gap-1.5">
+            <svg
+              className="h-3 w-3 flex-none [fill:#F2A33C] [filter:drop-shadow(0_0_1px_rgba(0,0,0,0.7))]"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
               <path d={PLANE_PATH} />
             </svg>
             {labels.legendSite}
           </span>
-          <span>
-            <i className="world" />
+          <span className="inline-flex items-center gap-1.5">
+            <i className="inline-block h-[9px] w-[9px] flex-none rounded-[50%] [background:#2E7EB3] [box-shadow:0_0_0_1px_rgba(255,255,255,0.35)]" />
             {labels.legendWorld}
           </span>
         </span>
-        <span className="cnt">{labels.countTemplate.replace('{n}', String(shown))}</span>
+        <span className="border-t border-t-white/15 pt-1 font-semibold [color:#F2A33C]">
+          {labels.countTemplate.replace('{n}', String(shown))}
+        </span>
       </div>
     </div>
   );

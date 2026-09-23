@@ -85,7 +85,7 @@ npm run build && npm start
 | `npm run db:verify` | 跑一遍站点依赖的关键查询 |
 | `npm run data:world-airports` | 从 `data/world-airports.csv` 生成地图数据：`public/data/world-airports.json`（前端加载，3244 座机场）与 `lib/world-airports-meta.json`（构建期统计） |
 | `npm run data:build-directory` | 把 `data/new-airports-a.{zh,en}.json` 合并成 `scripts/directory-data.json`（目录批次的灌库输入，见「数据模型」；改完数据后接 `npm run db:seed` 生效） |
-| `npm run data:route-images` | 按首页航线条目的排序，把每个机场的航线图渲染成 PNG 到 `public/route`（世界地图轮廓 + 大圆航线，经 sharp 栅格化；含反子午线处理） |
+| `npm run data:route-images` | 按首页航线条目的排序，把每个机场的航线图渲染成 PNG 到 `public/route`（世界地图轮廓 + 大圆航线，经 sharp 栅格化；含反子午线处理）。默认只渲染前 12 座，且**已有文件一律跳过**（渲染慢，已提交的图是好的）；`--codes ICN,AMS` 指定机场、`--top N` 改数量、`--force` 重跑 |
 | `npm run data:terminal-maps` | 按机场代码批量下载航站楼地图 PNG + PDF（默认源 eoob.com；`--codes HKG,PEK` 指定、`--dry-run` 预演、`--png-only` / `--pdf-only`、`--force`）。文件落到 `public/terminal-maps/{CODE}/`，溯源信息在 `terminal-maps-manifest.json`（当前 63 座机场） |
 | `npm run data:terminal-maps:compress` | 原地压缩上一步的 PNG：量化为 8 位调色板（默认 `--quality 80`），尺寸不变，实测 52.8MB → 12.4MB 且登机口号、路名清晰可读；已压缩的自动跳过，`--force` 重压、`--max-width 1600` 可同时缩尺寸 |
 | `node scripts/fetch-airport-images.mjs` | 批量下载机场封面图（`public/maps`）并记录每张图的来源、sha256 与许可说明；机场代码只能来自你自备的列表 / HTML / 库导出，脚本不爬站发现代码，默认遵守 robots.txt |
@@ -260,11 +260,11 @@ updated: 2026-09-16
 app/
   [locale]/
     layout.tsx              语言布局：<html lang/dir>、顶栏、页脚、AdSense 脚本、回到顶部
-    page.tsx                首页：搜索英雄区 → 世界地图 → 工具 → 功能分区 → 热门 → 航线 → 指南 → 最近更新 → 国家网格
+    page.tsx                首页：搜索英雄区 → 网站介绍 → 世界地图 → 工具 → 功能分区 → 热门 → 航线 → 指南 → 最近更新 → 国家网格
     airports/page.tsx       机场目录：搜索 + 国家筛选 + 排序 + 分页
     countries/page.tsx      国家索引（按区域分组，含区域跳转条）
     country/[code]/page.tsx 单个国家 / 地区：机场介绍 + 机场列表 + 相关链接 + 常见问题（右侧目录导航）
-    airport/[code]/page.tsx 机场详情：封面 / 示意图、指南、航站楼、交通、设施、定位图、FAQ、相关链接
+    airport/[code]/page.tsx 机场详情：封面 / 示意图、指南、航站楼、交通、设施、定位图、航线图（有静态渲染图时以图片为入口）、FAQ、相关链接
     route/[code]/page.tsx   航线图页：航线地图 + 目的地表 + CSV / JSON 下载 + FAQ
     tool/…                  工具目录与三个工具页（坐标转换、度分秒、距离计算）
     {about,contact,privacy,terms}/  由 Markdown 渲染的静态页
@@ -301,7 +301,7 @@ legacy/index.html           重构前的单文件版本（保留备查）
 - 目的地的坐标与英文地名来自 `public/data/world-airports.json`（同一份首页地图索引）；本站目录收录的目的地则换成本站自己的译名。站点 363 座机场里有 **224 座有航线数据**，只有这些才生成 `/route/<IATA>` 页面（其余不在 `generateStaticParams` 里，直接 404）。
 - 航线页（`components/airport/RouteMapSection.tsx`）由三块组成：**Leaflet 航线图**、**目的地表**（城市、国家、距离、执飞航司）、**数据下载**（`/api/routes/<IATA>` 的 CSV / JSON，普通 `<a download>`，无 JS 也可用；CSV 带 BOM 以便 Excel 正确识别中文）。
 - 航线图的交互（`components/airport/RouteMap.tsx`）：主题化的 ± 缩放按钮（到边界自动禁用）、⌘/Ctrl + 滚轮与触控板捏合缩放（普通滚轮留给页面滚动，地图不抢），**目录收录的目的地圆点本身就是指向该机场页面的真实链接**（可中键 / 右键新开标签），未收录的目的地只有悬停提示。颜色分级见 `lib/route-tiers.ts`（按执飞航司数量）。
-- 首页的航线条目用**静态渲染图**（`public/route/*.png`，`npm run data:route-images`）：世界地图轮廓 + 大圆航线，处理了反子午线，缺图时回退为纯文字卡片。
+- 首页的航线条目用**静态渲染图**（`public/route/*.png`，`npm run data:route-images`）：世界地图轮廓 + 大圆航线，处理了反子午线，缺图时回退为纯文字卡片。取景是**固定的世界全图**（经度 −180~180 横跨整幅、赤道居中），因此每张图的海岸线都落在同一位置、航线朝哪个方向飞一目了然；新增渲染图时不要改成按航线范围缩放。机场页的「航线图」区块用的是同一批图：该机场有渲染图时，图片本身就是通往 `/route/<IATA>` 的链接（`components/airport/RouteMapTeaser.tsx`，与航线页的航站楼地图卡片同一套样式），没有则回退为按钮——**站点目前只有 13 座机场有图**（首页那 12 座 + ICN），所以这条区块的样子本来就因机场而异。
 
 ## 地图与静态图片资产
 
@@ -321,6 +321,7 @@ legacy/index.html           重构前的单文件版本（保留备查）
 | `source-maps/`（262 张） | 上者的原始大图，供需要原尺寸的场景 |
 | `terminal-maps/{CODE}/`（63 座） | 航站楼平面图 PNG + PDF，带 `terminal-maps-manifest.json` 溯源（来源、sha256、许可说明）；缺文件时图片回退到封面或 SVG 示意图、PDF 回退到搜索 |
 | `route/`（12 张） | 首页航线条目的静态渲染图 |
+| `terminal-maps.png` | 首页「网站介绍」区块的照片（`components/HomeIntro.tsx`，1023×600） |
 | `flags/`（92 张） | 国家 / 地区旗帜（与 `countries` 数量一致） |
 | `data/world-airports.json`、`world-airport-map.jpg` | 首页地图索引与英雄区世界地图底图（`components/HeroRoutes.tsx` 在它上面用服务端 SVG 画大圆航线动画，`prefers-reduced-motion` 时静止） |
 
@@ -347,15 +348,16 @@ URL 约定：
 
 首页按「先搜索、再分区导航」组织；区块顺序即页面顺序，锚点可直接分享：
 
-1. **搜索英雄区**（深色，`public/world-airport-map.jpg` 底图 + `HeroRoutes` 的服务端 SVG 大圆航线动画）：居中标题、副标题、搜索框、常用机场快捷入口，以及国家 / 机场 / 航站楼统计。
-2. **世界地图**（`#map`）：3244 座机场的点阵，按区域浏览。
-3. **地理工具**（`#tools`）：三个工具卡片。
-4. **功能分区**（`#browse`）：六张指向真实目的地的卡片（全部机场、按国家浏览、按区域浏览、热门机场城市、最近更新、机场指南），角标数字来自数据库与内容目录，不写死。
-5. **热门机场**（`#popular`）：随机 10 张机场封面图。
-6. **热门机场航线图**（`#routes`）：直飞目的地最多的机场，每格一张静态航线图并链接到航线页。
-7. **机场指南**（`#guides`）：有 Markdown 指南的机场，无指南时整段不渲染。
-8. **最近更新**（`#recent`，按 `updated_at` 倒序）。
-9. **按国家分类**（`#countries`）：国家 / 地区网格。
+1. **搜索英雄区**（深色，`public/world-airport-map.jpg` 底图 + `HeroRoutes` 的服务端 SVG 大圆航线动画）：居中标题、副标题、搜索框、常用机场快捷入口，以及国家 / 机场 / 航站楼统计。动画本身是 `@theme` 里的 `--animate-hero-*`，描边与减弱动效都在组件的原子类里（详见「开发注意」）。
+2. **网站介绍**（`#intro`）：`public/terminal-maps.png` 机场照片 + 三组小标题与正文（`components/HomeIntro.tsx`，文案在 `home.intro`）。照片排在正文之前，所以这一段没有 kicker / 区块标题，语义名称走 `aria-label`；正文栏宽 880px，比 `.section` 的 1240px 窄，便于阅读。样式全部是组件里的 Tailwind 原子类（不新增 `globals.css` 规则，与顶栏、分类卡片同一做法），只有外层沿用各区块共用的 `.section`。照片是**固定高度横幅**：桌面 420px / 手机 200px，宽度 100%，`object-cover` 只裁不压（原图 1023×600 为 1.7:1，裁切偏上 `object-[50%_40%]`，保证机头机尾都在画面里）；手机另给一个高度，否则 390px 宽的屏幕上 420px 高几乎成方形，飞机会被裁掉。
+3. **世界地图**（`#map`）：3244 座机场的点阵，按区域浏览。
+4. **地理工具**（`#tools`）：三个工具卡片。
+5. **功能分区**（`#browse`）：六张指向真实目的地的卡片（全部机场、按国家浏览、按区域浏览、热门机场城市、最近更新、机场指南），角标数字来自数据库与内容目录，不写死。
+6. **热门机场**（`#popular`）：随机 10 张机场封面图。
+7. **热门机场航线图**（`#routes`）：直飞目的地最多的机场，每格一张静态航线图并链接到航线页。
+8. **机场指南**（`#guides`）：有 Markdown 指南的机场，无指南时整段不渲染。
+9. **最近更新**（`#recent`，按 `updated_at` 倒序）。
+10. **按国家分类**（`#countries`）：国家 / 地区网格。
 
 `/countries` 按区域分组并带一条区域跳转条；每个区域块标注该区域的国家数与机场数。
 
@@ -371,7 +373,13 @@ URL 约定：
 
 ## 开发注意（这几处踩过坑）
 
-- **`app/globals.css` 是唯一样式表**，Tailwind v4 CSS-first：设计令牌在 `:root`、暗色令牌在 `html[data-theme="dark"]`，两者都**必须保持未分层**（分层后会被未分层的 `:root` 令牌反超，整站暗色主题失效）；组件样式集中在 `@layer components`，越靠后的段落优先级越高（equal-specificity 由顺序决定）。
+- **`app/globals.css` 是唯一样式表**，Tailwind v4 CSS-first：设计令牌在 `:root`、暗色令牌在 `html[data-theme="dark"]`，两者都**必须保持未分层**（分层后会被未分层的 `:root` 令牌反超，整站暗色主题失效）；组件样式集中在 `@layer components`，越靠后的段落优先级越高（equal-specificity 由顺序决定）。**新样式优先写成组件里的原子类**（顶栏、页脚、`CategoryGrid` 卡片、`HomeIntro`、`HeroRoutes` 都是这样），`globals.css` 只留设计令牌、跨组件共用件和没法用原子类表达的东西。**页脚在明暗两套主题下都保持深色**，所以 `Footer.tsx` 用的是固定的 `bg-navy-950` + 白色透明度（`text-white/78` 等），而不是会随主题翻转的语义令牌。
+- **动画注册在 `@theme`，用 `animate-*` 调用**：`@keyframes` 没法写成原子类，所以 `--animate-accordion-*`（Radix 手风琴）与 `--animate-hero-*`（英雄区航线）都在 `@theme` 里定义，且 keyframes 只有被对应工具类用到时才输出。英雄区那组（`components/HeroRoutes.tsx`）的周期与延迟是**每条航线的数据**，由组件内联成 `--cycle` / `--delay`，`--animate-hero-*` 直接引用它们，于是虚线、光点、端点脉冲共用一只时钟、按航线错峰；描边与 `prefers-reduced-motion` 也全在该组件的原子类里（`motion-reduce:*`），`globals.css` 不再有任何 `.hero-routes` 规则。
+- **首页的所有区块都已经是原子类**（英雄区、导览卡、功能分区横幅、热门 / 航线 / 最近更新三条列表、搜索建议、首页地图的按钮与图例、国家网格），对应的一百多条 `.hero-*` / `.guide-*` / `.popular-*` / `.route-tile*` / `.update-*` / `.suggest*` / `.am-*` / `.country-grid` 规则已从 `globals.css` 删除（2011 → 1594 行）。留在表里的只有三类：设计令牌与 `@theme`、**跨页面共用**的类（`.section` 家族、被工具页也引用的 `.cat-grid` / `.cat-body` / `.cat-meta` / `.cat-icon`）、以及**第三方生成的 DOM**（Leaflet 的 `.am-map .leaflet-tile-pane`、`.am-plane`、`.am-pop`、`.rt-map .leaflet-tooltip.*` —— 这些节点由 Leaflet 创建，拿不到 class，只能靠选择器）。改这些区块时别再往 `globals.css` 加同名规则：重复的声明叠在一起，谁赢要看层与顺序，而不是看 class 在属性里的先后。
+- **同一属性只写一个变体，别指望顺序**：`.am-tabs button.on` 当年靠「写在后面」压过基础态，换成原子类后 `bg-amber` 与 `[background:rgba(...)]` 谁生效取决于 Tailwind 的输出顺序。所以这类互斥状态写成两个常量（`MAP_BUTTON_IDLE` / `MAP_BUTTON_ON`）二选一传入，而不是叠在一起。
+- **Tailwind 的 `max-[Npx]:` 与 CSS 的 `max-width: Npx` 在边界上不等价**：前者编译成 `@media not (min-width: Npx)`，即 `< Npx`，而 `max-width` 是 `<= Npx`。只在视口宽度**正好等于**断点时才有 1px 的差别（常见设备宽度不受影响），但从 `max-width` 迁移过来时值得知道。
+- **别把渲染出来的 HTML 存进仓库**：Tailwind v4 会扫描工程目录里的文本找候选类名，而服务端 HTML 里的 `class` 属性中 `'` 会变成 `&#x27;`——于是 `[background-image:...url('/x.jpg')]` 这类任意值被扫成一个带实体的新候选，Turbopack 再把它当模块去解析，**整站 CSS 编译失败、所有页面 500**。要留快照请放到工程目录之外，或直接用未加引号的 `url(/x.jpg)`。
+- **Tailwind 没有 `stroke-linecap` / `stroke-dasharray` 的具名工具类**：这类 SVG 属性要么写任意属性（`[stroke-linecap:round]`、`[stroke-dasharray:7_11]`），要么别写。**写错名字不会报错，只会静默失效**——`stroke-round` 就属于这种，编译通过、DOM 上却什么都没生成，只能靠浏览器里读 computed style 才发现。
 - **第三方 CSS 未分层，压过 `@layer components`。** `leaflet.css` 自带 `.leaflet-container`、`.leaflet-tooltip`、`.leaflet-interactive` 等规则，我们的同名属性如果写在 components 层里就会静默失效（浅色主题看不出来，暗色才会露馅）。凡是需要压过 Leaflet 的属性都写在**文件末尾的未分层覆盖块**里，文件内两处注释互相指向。
 - **内容必须中英成对**：只写中文的 `content/zh/countries/XX.md` 会让英文页出现中文长文（回退目标是 `SOURCE_LOCALE`）。
 - **同名 i18n 键会在编译期强制补齐**：`Messages` 类型派生自中文目录，英文目录少一个键就过不了 `npm run typecheck`。

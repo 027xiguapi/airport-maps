@@ -37,8 +37,10 @@ const API_LIMIT = 7;
  * `.mobile-bar` and `.hero-search` descendant rules in globals.css).
  *
  * `top` sits on the always-white bar, so its field uses literal light colours;
- * `mobile` sits on the page itself and keeps the theme tokens; `hero` is left to
- * the `.hero-search` rules because that panel is dark in both themes.
+ * `mobile` sits on the page itself and keeps the theme tokens; `hero` is the
+ * dark hero panel, where the field is a white pill with the submit button
+ * tucked inside it (and dropped altogether on a phone, where it would leave the
+ * field too narrow to read).
  */
 const CHROME = {
   top: {
@@ -52,6 +54,15 @@ const CHROME = {
     input:
       'h-10 w-full rounded-[20px] border border-line bg-card py-0 pl-4 pr-10 text-[14px] text-ink outline-none [font-family:inherit] focus:border-sky-500 focus:[box-shadow:0_0_0_3px_rgba(46,125,179,0.15)]',
     icon: 'pointer-events-none absolute right-[29px] top-[19px] opacity-50',
+  },
+  hero: {
+    root: 'relative mx-auto mt-[34px] max-w-[760px]',
+    input:
+      'h-[60px] w-full rounded-[30px] border-0 bg-white py-0 pl-[26px] pr-[148px] text-[16.5px] text-ink outline-none [font-family:inherit] [box-shadow:var(--shadow-lg)] placeholder:text-ink-faint max-[820px]:pr-[120px] max-[820px]:text-[15px] max-[480px]:pl-[22px] max-[480px]:pr-[22px]',
+    button:
+      'absolute bottom-1.5 right-1.5 top-1.5 rounded-[24px] bg-amber px-[26px] py-0 text-[15.5px] font-bold tracking-[0.04em] text-navy-900 transition-[filter] duration-150 hover:brightness-[1.06] max-[820px]:px-[18px] max-[820px]:py-0 max-[820px]:text-[14px] max-[480px]:hidden',
+    /** The dropdown clears the taller field instead of the 46px one. */
+    suggest: 'top-[68px]',
   },
 } as const;
 
@@ -153,7 +164,7 @@ export default function SearchBox({ variant = 'top', labels, locale = 'zh', auto
   };
 
   const listId = `${boxId}-list`;
-  const chrome = isHero ? null : CHROME[variant];
+  const chrome = isHero ? CHROME.hero : CHROME[variant];
 
   const input = (
     <input
@@ -177,9 +188,17 @@ export default function SearchBox({ variant = 'top', labels, locale = 'zh', auto
   );
 
   const dropdown = open && (
-    <div className={`suggest open${isHero ? ' hero-suggest' : ''}`} id={listId} role="listbox">
+    <div
+      className={`absolute left-0 right-0 z-[120] max-h-[380px] overflow-y-auto rounded-xl bg-card text-ink [box-shadow:var(--shadow-lg)] dark:border dark:border-line ${
+        isHero ? CHROME.hero.suggest : 'top-[46px]'
+      }`}
+      id={listId}
+      role="listbox"
+    >
       {hits.length === 0 ? (
-        <div className="suggest-empty">{loading ? labels.loading : labels.empty}</div>
+        <div className="p-4 text-center text-[13px] text-ink-soft">
+          {loading ? labels.loading : labels.empty}
+        </div>
       ) : (
         hits.map((hit, i) => (
           <div
@@ -187,19 +206,29 @@ export default function SearchBox({ variant = 'top', labels, locale = 'zh', auto
             id={`${boxId}-opt-${i}`}
             role="option"
             aria-selected={i === active}
-            className="suggest-item"
-            style={i === active ? { background: 'var(--sky-100)' } : undefined}
+            className={`flex cursor-pointer items-center gap-3 px-3.5 py-2.5 transition-[background-color] duration-[120ms] hover:bg-sky-100 ${
+              i === active ? 'bg-sky-100' : ''
+            }`}
             onMouseEnter={() => setActive(i)}
             onClick={() => go(hit.iata)}
           >
-            <span className="iata">{hit.iata}</span>
-            <div className="nm">
-              <b>{hit.name}</b>
-              <span>
+            <span className="w-[52px] flex-none font-display text-[17px] font-semibold tracking-[0.03em] text-ink-heading-soft">
+              {hit.iata}
+            </span>
+            <div className="min-w-0 flex-1">
+              <b className="block truncate text-[14px] font-semibold">{hit.name}</b>
+              <span className="block text-[12px] text-ink-soft">
                 {hit.city} · {hit.countryName}
               </span>
             </div>
-            <img className="flag" src={hit.flagUrl} alt="" width={26} height={17} loading="lazy" />
+            <img
+              className="h-[17px] w-[26px] flex-none rounded-[3px] object-cover [box-shadow:var(--flag-ring)]"
+              src={hit.flagUrl}
+              alt=""
+              width={26}
+              height={17}
+              loading="lazy"
+            />
           </div>
         ))
       )}
@@ -208,9 +237,9 @@ export default function SearchBox({ variant = 'top', labels, locale = 'zh', auto
 
   if (isHero) {
     return (
-      <div className="hero-search" ref={rootRef}>
+      <div className={CHROME.hero.root} ref={rootRef}>
         {input}
-        <button type="button" onClick={submit}>
+        <button className={CHROME.hero.button} type="button" onClick={submit}>
           {labels.submit}
         </button>
         {dropdown}

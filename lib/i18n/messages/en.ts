@@ -100,6 +100,29 @@ export const en: Messages = {
   },
 
   home: {
+    /**
+     * Homepage "what this site is" block: one airport photo above three
+     * heading/paragraph pairs. The photo leads, so the block has no kicker or
+     * section title — `ariaLabel` names it for assistive tech instead.
+     */
+    intro: {
+      ariaLabel: 'About this site',
+      imageAlt: 'An airliner at the gate of a glass-fronted airport terminal at sunrise',
+      blocks: [
+        {
+          title: 'Navigate Any Airport with Detailed Terminal Maps',
+          body: 'Navigating airports and terminals worldwide can be challenging. Our comprehensive airport maps provide detailed layouts of terminals, gates, check-in areas, baggage claim, shops, restaurants, lounges and transportation hubs, so you can plan the route before you set off.',
+        },
+        {
+          title: 'Interactive Airport Terminal Maps and Floor Plans',
+          body: 'Major international airports feature multiple terminals and complex layouts. Our detailed airport maps help you locate gates, find amenities, plan connections and move efficiently through security checkpoints, departure areas and arrival halls — without doubling back.',
+        },
+        {
+          title: 'Airport Transportation and Access Information',
+          body: 'Beyond terminal layouts, our airport guides cover transportation options, parking information and access routes. Find the best way to reach your departure gate, connect between terminals, and use ground transportation including trains, buses, taxis and rental cars.',
+        },
+      ],
+    },
     map: {
       kicker: 'World Map',
       title: 'Airport map',
@@ -390,6 +413,8 @@ export const en: Messages = {
     backToAirport: (iata: string) => `Back to the ${iata} airport page`,
     /** Button on the airport page's teaser card. */
     openFull: 'View route map',
+    /** Same card, for the airports whose network the repo has rendered: the picture is the link. */
+    previewCta: (iata: string) => `View the full ${iata} route map`,
     teaserSub: (count: string) => `${count} direct destinations: map, operating airlines and distances.`,
     /** Figure on a tile of the homepage's route strip. */
     cardMeta: (count: string) => `${count} direct destinations`,

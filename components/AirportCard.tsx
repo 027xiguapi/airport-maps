@@ -96,7 +96,11 @@ export function CountryGrid({
 }) {
   const t = getMessages(locale);
   return (
-    <div className="country-grid">
+    // One column below 560px: two would leave a card ~126px, too narrow for the
+    // flag, the name and the count chip once the labels are English. (The 480px
+    // two-column rule this replaced was never the winner — the 560px rule sat
+    // later in the sheet and applied at every width below it.)
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(min(200px,100%),1fr))] gap-3.5 max-[560px]:grid-cols-1 max-[480px]:gap-2.5">
       {countries.map((country) => (
         <Card
           asChild

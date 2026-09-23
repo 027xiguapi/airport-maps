@@ -61,7 +61,7 @@ export default function CategoryGrid({
         );
       })}
       {/* keeps the grid balanced when the card count is odd */}
-      {cards.length % 3 !== 0 && <span className="cat-filler" aria-hidden="true" />}
+      {cards.length % 3 !== 0 && <span className="hidden" aria-hidden="true" />}
     </div>
   );
 }

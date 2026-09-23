@@ -98,10 +98,26 @@ const FLIGHTS: Flight[] = PAIRS.flatMap((pair, i) =>
   )
 );
 
+/**
+ * Every moving part is styled with utility classes; the animation itself is the
+ * `animate-hero-*` theme tokens (see @theme in app/globals.css), and the arcs'
+ * geometry lives in the SVG attributes. `--cycle` / `--delay` are the only inline
+ * style — they are per-flight *data*, and the tokens read them so the dashes, the
+ * travelling dot and the endpoint pulses share one clock per flight.
+ *
+ * The arcs are dashed and deliberately dim: they are texture over the backdrop,
+ * not something that should compete with the headline. The dash pattern's period
+ * is the animation's travel distance per loop (7 + 11 = 18 units), so one
+ * dashoffset cycle flows seamlessly into the next.
+ *
+ * Reduced motion stops the movement but keeps the picture: `motion-reduce:`
+ * overrides the animations, drops the travelling dot and brightens the arcs and
+ * endpoints slightly so the static routes stay legible.
+ */
 export default function HeroRoutes() {
   return (
     <svg
-      className="hero-routes"
+      className="pointer-events-none absolute inset-0 h-full w-full"
       viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
       preserveAspectRatio="xMidYMid slice"
       aria-hidden="true"
@@ -110,26 +126,26 @@ export default function HeroRoutes() {
       {FLIGHTS.map((flight, i) => (
         <g key={`${flight.d}-${i}`}>
           <path
-            className="arc"
+            className="animate-hero-dash fill-none stroke-amber/42 stroke-[1.3] [stroke-linecap:round] [stroke-dasharray:7_11] motion-reduce:animate-none motion-reduce:opacity-50"
             d={flight.d}
             style={{ '--cycle': CYCLE, '--delay': flight.delay } as CSSProperties}
           />
           <circle
-            className="city"
+            className="animate-hero-city fill-white/72 motion-reduce:animate-none motion-reduce:opacity-45"
             cx={flight.from[0]}
             cy={flight.from[1]}
             r="3"
             style={{ '--cycle': CYCLE, '--delay': flight.delay } as CSSProperties}
           />
           <circle
-            className="city"
+            className="animate-hero-city fill-white/72 motion-reduce:animate-none motion-reduce:opacity-45"
             cx={flight.to[0]}
             cy={flight.to[1]}
             r="3"
             style={{ '--cycle': CYCLE, '--delay': flight.delay } as CSSProperties}
           />
           <circle
-            className="fly"
+            className="animate-hero-fly fill-[#FFD6A0]/85 opacity-0 [offset-rotate:0deg] motion-reduce:animate-none motion-reduce:hidden"
             r="2.2"
             cx="0"
             cy="0"

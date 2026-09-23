@@ -11,6 +11,7 @@ import { getAirportGuide } from '@/lib/content';
 import { getAirportByCode, getAirportNameZh, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
 import { getAirportGeo } from '@/lib/airport-geo';
 import { getAirportRouteMap } from '@/lib/routes';
+import { routeImageUrl } from '@/lib/route-images';
 import { airportWebsite } from '@/lib/airport-links';
 import { mapImageUrl, terminalMapDownloads } from '@/lib/map-images';
 import { absoluteUrl, SITE_NAME } from '@/lib/site';
@@ -183,6 +184,7 @@ export default async function AirportPage({ params }: Props) {
               iata={airport.iata}
               airportName={airport.name}
               destinationCount={routeMap.destinations.length}
+              image={routeImageUrl(airport.iata)}
             />
           )}
 

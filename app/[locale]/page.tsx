@@ -5,6 +5,7 @@ import AirportMap from '@/components/AirportMap';
 import { CountryGrid } from '@/components/AirportCard';
 import CategoryGrid, { type CategoryCard } from '@/components/CategoryGrid';
 import HeroRoutes from '@/components/HeroRoutes';
+import HomeIntro from '@/components/HomeIntro';
 import { PopularCities, RouteNav, UpdateList } from '@/components/HomeSections';
 import JsonLd from '@/components/JsonLd';
 import SearchBox from '@/components/SearchBox';
@@ -208,25 +209,36 @@ export default async function HomePage({ params }: Props) {
       <JsonLd data={jsonLd} />
 
       {/* ---------------------------------------------------------- search hero */}
-      <section className="hero">
+      {/* The hero's chrome is utilities rather than the old `.hero-*` block in
+          globals.css; HeroRoutes carries the animated arcs itself. */}
+      <section className="relative overflow-hidden bg-navy-900 text-white">
         {/* The backdrop is a CSS background, which the browser's preload
             scanner cannot discover — hoist a preload for it so the hero's
             first paint does not wait for the CSSOM. */}
         <link rel="preload" as="image" href="/world-airport-map.jpg" fetchPriority="high" />
-        {/* Decorative layers — gradients on .hero-bg, the world-map backdrop
-            with its scrim on .hero-veil, and the animated flight arcs on
-            HeroRoutes, all styled in globals.css. */}
-        <div className="hero-bg" />
-        <div className="hero-veil" />
+        {/* Two decorative layers: an amber glow top-right falling into the navy
+            ramp, then the world-map photo under a scrim so the headline stays
+            legible — the scrim's last stop is the flat navy the band continues
+            in, which is what the old `.hero-veil` opacity stood in for. The
+            photo is an unquoted url() on purpose: this class name also
+            round-trips through server-rendered HTML, where quotes come back as
+            entities that the bundler then tries to resolve as a module. */}
+        <div className="absolute inset-0 [background-image:radial-gradient(120%_100%_at_70%_0%,rgba(242,163,60,0.18)_0%,rgba(242,163,60,0)_60%),linear-gradient(160deg,var(--navy-800)_0%,var(--navy-950)_100%)]" />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat [background-image:linear-gradient(180deg,rgba(6,26,46,0.84)_0%,rgba(10,42,67,0.55)_55%,var(--navy-900)_100%),url(/world-airport-map.jpg)]" />
         <HeroRoutes />
-        <div className="hero-inner">
-          <div className="hero-eyebrow">{t.hero.eyebrow}</div>
-          <h1>
+        <div className="relative mx-auto max-w-[1240px] px-6 pb-[72px] pt-[92px] text-center max-[820px]:px-5 max-[820px]:pb-[52px] max-[820px]:pt-16">
+          {/* The rule before the eyebrow is a pseudo-element, as in the old rule. */}
+          <div className="mb-[22px] inline-flex items-center justify-center gap-2.5 font-display text-[13px] uppercase tracking-[0.28em] text-amber before:h-[2px] before:w-[34px] before:bg-amber before:content-['']">
+            {t.hero.eyebrow}
+          </div>
+          <h1 className="mx-auto max-w-[760px] text-balance text-[clamp(34px,5.2vw,58px)] font-black leading-[1.18] tracking-[0.01em] max-[820px]:text-[32px]">
             {t.hero.titleLead}
             <br />
-            <span className="accent">{t.hero.titleAccent}</span>
+            <span className="text-amber">{t.hero.titleAccent}</span>
           </h1>
-          <p className="hero-sub">{t.hero.sub}</p>
+          <p className="mx-auto mt-[18px] max-w-[620px] text-[16.5px] font-light text-white/82">
+            {t.hero.sub}
+          </p>
 
           <SearchBox
             variant="hero"
@@ -241,28 +253,46 @@ export default async function HomePage({ params }: Props) {
           />
 
           {shortcuts.length > 0 && (
-            <div className="hero-shortcuts">
+            <div className="mt-4 flex flex-wrap justify-center gap-2 max-[520px]:gap-1.5">
               {shortcuts.map((airport) => (
-                <Link href={localizedPath(locale, `/airport/${airport.iata}`)} key={airport.iata}>
-                  <span className="code">{airport.iata}</span>
+                <Link
+                  className="inline-flex items-center gap-[7px] rounded-[20px] border border-white/24 bg-white/10 px-[13px] py-1.5 text-[13px] text-white/90 transition-[background-color,border-color] duration-150 hover:border-amber hover:bg-white/20 max-[520px]:px-[11px] max-[520px]:py-[5px] max-[520px]:text-[12.5px]"
+                  href={localizedPath(locale, `/airport/${airport.iata}`)}
+                  key={airport.iata}
+                >
+                  <span className="font-display font-semibold tracking-[0.05em] text-amber">
+                    {airport.iata}
+                  </span>
                   {airport.city}
                 </Link>
               ))}
             </div>
           )}
 
-          <div className="hero-stats">
-            <div className="hero-stat">
-              <div className="num">{formatNumber(stats?.countryCount ?? 0, locale)}</div>
-              <div className="lbl">{t.hero.stats.countries}</div>
+          <div className="mx-auto mt-11 flex max-w-[560px] flex-wrap gap-0 overflow-hidden rounded-[14px] border border-white/16 bg-white/6 backdrop-blur-[4px]">
+            <div className="min-w-[130px] flex-1 border-r border-r-white/14 px-[22px] py-[18px] last:border-r-0">
+              <div className="font-display text-[32px] font-semibold leading-[1.1] text-white">
+                {formatNumber(stats?.countryCount ?? 0, locale)}
+              </div>
+              <div className="mt-[3px] text-[12.5px] tracking-[0.04em] text-white/68">
+                {t.hero.stats.countries}
+              </div>
             </div>
-            <div className="hero-stat">
-              <div className="num">{formatNumber(stats?.airportCount ?? 0, locale)}</div>
-              <div className="lbl">{t.hero.stats.airports}</div>
+            <div className="min-w-[130px] flex-1 border-r border-r-white/14 px-[22px] py-[18px] last:border-r-0">
+              <div className="font-display text-[32px] font-semibold leading-[1.1] text-white">
+                {formatNumber(stats?.airportCount ?? 0, locale)}
+              </div>
+              <div className="mt-[3px] text-[12.5px] tracking-[0.04em] text-white/68">
+                {t.hero.stats.airports}
+              </div>
             </div>
-            <div className="hero-stat">
-              <div className="num">{formatNumber(stats?.terminalCount ?? 0, locale)}</div>
-              <div className="lbl">{t.hero.stats.terminals}</div>
+            <div className="min-w-[130px] flex-1 border-r border-r-white/14 px-[22px] py-[18px] last:border-r-0">
+              <div className="font-display text-[32px] font-semibold leading-[1.1] text-white">
+                {formatNumber(stats?.terminalCount ?? 0, locale)}
+              </div>
+              <div className="mt-[3px] text-[12.5px] tracking-[0.04em] text-white/68">
+                {t.hero.stats.terminals}
+              </div>
             </div>
           </div>
         </div>
@@ -350,8 +380,12 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* ------------------------------------------------- functional-area strip */}
-      <section className="cat-section" id="browse">
-        <div className="section">
+      {/* `.section` is shared with every other page, so only the band and the
+          extra bottom padding are local utilities: the inner section keeps
+          .section's 64px top padding but needs a real bottom one too, or the
+          content would sit on the band's own bottom border. */}
+      <section className="border-y border-y-line bg-card" id="browse">
+        <div className="section pb-16">
           <div className="section-head">
             <div>
               <div className="section-kicker">{t.categories.kicker}</div>
@@ -411,38 +445,54 @@ export default async function HomePage({ params }: Props) {
               <p className="sec-sub">{t.guides.sub}</p>
             </div>
           </div>
-          <div className="guide-grid">
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(260px,100%),1fr))] gap-3.5">
             {guided.map((airport) => (
               <Link
-                className="guide-card"
+                className="group flex flex-col overflow-hidden rounded-[14px] bg-navy-900 text-white transition-[transform,box-shadow] duration-[180ms] [box-shadow:var(--shadow-sm)] hover:-translate-y-1 hover:[box-shadow:var(--shadow-lg)]"
                 href={localizedPath(locale, `/airport/${airport.iata}`)}
                 key={airport.iata}
               >
-                <span className="pic">
+                <span className="flex h-[150px] flex-none items-center justify-center bg-white p-2">
                   {coverCodes.has(airport.iata) ? (
                     <img
+                      className="h-full w-full object-contain"
                       src={`/maps/${airport.iata}.png`}
                       alt={airport.name}
                       loading="lazy"
                     />
                   ) : (
-                    <span className="ph">{airport.iata}</span>
+                    <span className="font-display text-[44px] font-semibold tracking-[0.06em] text-navy-900/10">
+                      {airport.iata}
+                    </span>
                   )}
                 </span>
-                <span className="body">
-                  <span className="top">
-                    <span className="iata">{airport.iata}</span>
-                    <span className="flagline">
-                      <img src={airport.flagUrl} alt="" loading="lazy" />
+                <span className="flex min-w-0 flex-1 flex-col p-4">
+                  <span className="flex items-center justify-between gap-3">
+                    <span className="flex-none font-display text-[12.5px] font-semibold tracking-[0.18em] text-amber">
+                      {airport.iata}
+                    </span>
+                    <span className="flex min-w-0 items-center gap-[7px] truncate text-[12px] text-white/60">
+                      <img
+                        className="h-4 w-6 flex-none rounded-[3px] object-cover"
+                        src={airport.flagUrl}
+                        alt=""
+                        loading="lazy"
+                      />
                       {airport.city} · {airport.countryName}
                     </span>
                   </span>
-                  <h3>{airport.name}</h3>
-                  <span className="facts">
-                    <span className="fact">{t.units.terminals(airport.terminalCount)}</span>
-                    <span className="fact">{t.units.gates(airport.gateCount)}</span>
+                  <h3 className="mt-1 line-clamp-2 text-[15px] font-bold leading-snug text-white">
+                    {airport.name}
+                  </h3>
+                  <span className="mt-2.5 flex flex-wrap gap-1.5">
+                    <span className="rounded-[20px] bg-white/10 px-2.5 py-[3px] text-[11.5px] text-white/80">
+                      {t.units.terminals(airport.terminalCount)}
+                    </span>
+                    <span className="rounded-[20px] bg-white/10 px-2.5 py-[3px] text-[11.5px] text-white/80">
+                      {t.units.gates(airport.gateCount)}
+                    </span>
                   </span>
-                  <span className="more">
+                  <span className="mt-auto inline-flex items-center gap-1.5 border-t border-dashed border-t-white/18 pt-3 text-[12.5px] font-semibold text-amber [&>svg]:transition-transform [&>svg]:duration-150 group-hover:[&>svg]:translate-x-[3px]">
                     {t.guides.more}
                     <ArrowIcon />
                   </span>
@@ -490,6 +540,9 @@ export default async function HomePage({ params }: Props) {
         </div>
         <CountryGrid locale={locale} countries={countries} />
       </section>
+
+      {/* -------------------------------------------------------- site intro */}
+      <HomeIntro locale={locale} />
 
     </>
   );
