@@ -9,6 +9,14 @@ import * as schema from '@/db/schema';
  */
 const globalForPg = globalThis as unknown as { __airportMapsPool?: Pool };
 
+/**
+ * Build workers prerender in parallel, so each one holding a full-size pool can
+ * push the server past its own `max_connections` (100 by default) — and a server
+ * that closes the surplus sockets shows up here as a reset mid-query. Runtime is
+ * a single process, so it keeps the full pool; `PGPOOL_MAX` overrides both.
+ */
+const BUILD_PHASE = process.env.NEXT_PHASE === 'phase-production-build';
+
 function createPool(): Pool {
   const connectionString = process.env.DATABASE_URL;
   if (!connectionString) {
@@ -18,7 +26,7 @@ function createPool(): Pool {
   }
   const pool = new Pool({
     connectionString,
-    max: Number(process.env.PGPOOL_MAX ?? 10),
+    max: Number(process.env.PGPOOL_MAX ?? (BUILD_PHASE ? 4 : 10)),
     idleTimeoutMillis: 30_000,
     connectionTimeoutMillis: 10_000,
   });
@@ -60,10 +68,12 @@ export function getDb(): NodePgDatabase<typeof schema> {
  * Transient failures worth retrying. Static export runs one pool per build
  * worker (11 processes × up to 10 clients each) against PostgreSQL's default
  * max_connections of 100, so connection handshakes can briefly queue past the
- * 10s connectionTimeoutMillis — without a retry that aborts the whole build.
+ * 10s connectionTimeoutMillis — and the server drops the surplus sockets, which
+ * surfaces as a socket-level reset rather than a timeout. Without a retry either
+ * one aborts the whole build.
  */
 const TRANSIENT_DB_ERROR =
-  /timeout exceeded when trying to connect|Connection terminated|Connection ended|ECONNREFUSED|too many clients/i;
+  /timeout exceeded when trying to connect|Connection terminated|Connection ended|ECONNREFUSED|ECONNRESET|EPIPE|ETIMEDOUT|socket hang up|Client has encountered a connection error|too many clients/i;
 
 async function withRetry<T>(op: () => Promise<T>, attempts = 3): Promise<T> {
   let lastError: unknown;

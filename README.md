@@ -64,7 +64,7 @@ npm run build && npm start
 | --- | --- | --- |
 | `DATABASE_URL` | 是 | PostgreSQL 连接串 |
 | `NEXT_PUBLIC_SITE_URL` | 建议 | 站点对外地址，用于 `canonical`、`hreflang`、Open Graph、`sitemap.xml`、`robots.txt` 与 JSON-LD。默认 `http://localhost:3000` |
-| `PGPOOL_MAX` | 否 | 连接池上限，默认 `10`。CI / 低配库上建议调小（见「查询层与连接池」） |
+| `PGPOOL_MAX` | 否 | 连接池上限：运行时默认 `10`，**构建期默认 `4`**（`next build` 会开 11 个 worker）。CI / 低配库上建议两边都调小（见「查询层与连接池」） |
 
 ## npm 脚本
 
@@ -119,8 +119,8 @@ npm run build && npm start
 
 连接池的两个细节（`lib/db.ts`）值得知道：
 
-- 池是**进程级单例**（挂在 `globalThis` 上），开发期热更新与生产多 lambda 都不会反复建池；`PGPOOL_MAX` 控制上限。
-- 查询包了 `withRetry`：构建期每个 worker 各持一个池（实测 11 进程 × 最多 10 连接），会顶到 PostgreSQL 默认 `max_connections = 100`，握手可能超出 10s 的 `connectionTimeoutMillis`；没有这层重试整个构建会被一条连接超时打断。
+- 池是**进程级单例**（挂在 `globalThis` 上），开发期热更新与生产多 lambda 都不会反复建池；`PGPOOL_MAX` 控制上限，构建期（`NEXT_PHASE === 'phase-production-build'`）默认取 `4`：11 个 worker 各持一个满额池会顶到 PostgreSQL 默认 `max_connections = 100`，库端把多余的连接踢掉，报出来就是查询中途 `read ECONNRESET`。
+- 查询包了 `withRetry`：上面这类**连接层**故障（连接超时、`ECONNRESET` / `EPIPE` / `ETIMEDOUT`、连接被关闭、`too many clients`）都会退避重试 3 次，一条连接抖动不再打断整个构建；SQL 本身的错误（例如表不存在）不在重试之列，会立刻抛出。
 
 ## 数据模型
 
