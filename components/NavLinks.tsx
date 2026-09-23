@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LOCALES } from '@/lib/i18n/config';
+import { LOCALES, localizedPath, type Locale } from '@/lib/i18n/config';
 
 export type NavItem = { href: string; label: string };
 
@@ -16,7 +16,7 @@ export default function NavLinks({
   items,
   className,
 }: {
-  locale: string;
+  locale: Locale;
   items: NavItem[];
   className?: string;
 }) {
@@ -38,7 +38,7 @@ export default function NavLinks({
         return (
           <Link
             key={item.href}
-            href={`/${locale}${item.href === '/' ? '' : item.href}`}
+            href={localizedPath(locale, item.href)}
             className={[className, isActive ? 'active' : ''].filter(Boolean).join(' ')}
             aria-current={isActive ? 'page' : undefined}
           >

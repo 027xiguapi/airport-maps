@@ -6,12 +6,19 @@ import { getMessages } from './i18n';
  * way each locale expresses it: 万 / 亿 for Chinese, "million" for English.
  */
 
-const NUMBER_LOCALE: Record<Locale, string> = { zh: 'zh-CN', en: 'en-US' };
+/**
+ * Intl locale per UI locale; untranslated locales fall back to the default's
+ * formatting until they get their own catalog entry here.
+ */
+const NUMBER_LOCALE: Partial<Record<Locale, string>> = {
+  en: 'en-US',
+  zh: 'zh-CN',
+};
 
 export function formatNumber(value: number | string | null | undefined, locale: Locale = DEFAULT_LOCALE): string {
   const n = typeof value === 'string' ? Number(value) : value;
   if (n == null || !Number.isFinite(n)) return '—';
-  return new Intl.NumberFormat(NUMBER_LOCALE[locale]).format(n);
+  return new Intl.NumberFormat(NUMBER_LOCALE[locale] ?? NUMBER_LOCALE[DEFAULT_LOCALE]).format(n);
 }
 
 export function formatPax(

@@ -131,6 +131,13 @@ export const en: Messages = {
       en: 'Recently Updated',
       sub: 'New and newly revised airport maps.',
     },
+    /** Homepage route-map strip: the widest direct networks, linking to /route/<IATA>. */
+    routes: {
+      kicker: 'Routes',
+      title: 'Busiest airport route maps',
+      en: 'Route Maps',
+      sub: 'Airports ranked by how many places they fly to non-stop — open one for its route map, airlines and destination list.',
+    },
     countries: {
       kicker: 'By Country',
       title: 'Airport maps by country',
@@ -320,6 +327,35 @@ export const en: Messages = {
     mapEmbedTitle: (name: string) => `Interactive map — ${name} location`,
     mapEmbedEn: 'Interactive Map',
     extMapsNote: 'View this airport on other map services:',
+    routeMapKicker: 'Routes',
+    routeMapTitle: (name: string) => `${name} route map — direct destinations`,
+    routeMapEn: 'Route Map',
+    routeMapAria: (name: string) => `Map of direct routes from ${name}`,
+    routeLegendTitle: 'Colour key',
+    routeLegendClose: 'Hide the legend',
+    routeReset: 'Reset map',
+    routeZoomIn: 'Zoom in',
+    routeZoomOut: 'Zoom out',
+    routeFullscreen: 'View fullscreen',
+    routeExitFullscreen: 'Exit fullscreen',
+    /** Hover hint on clickable destination dots; `{iata}` is substituted client-side. */
+    routeOpenAirport: 'Open the {iata} airport page',
+    /** Mirrors the tiers in lib/route-tiers.ts. */
+    routeTiers: {
+      trunk: '6+ airlines',
+      major: '3–5 airlines',
+      minor: '2 airlines',
+      single: '1 airline',
+    },
+    /** Airline count in the map's hover tooltip; `{n}` is substituted client-side. */
+    routeCarriersTpl: '{n} airlines',
+    routeTableDest: 'Destination',
+    routeTableCountry: 'Country/region',
+    routeTableDistance: 'Distance',
+    routeTableCarriers: 'Airlines',
+    routeCarriersMore: (n: number) => ` +${n} more`,
+    routeMapNote: (date: string) =>
+      `Route data snapshot: ${date}; direct flights only. Source: `,
     legendTerminal: 'Terminal building',
     legendTransit: 'Ground transport node',
     legendCorridor: 'Inter-terminal link',
@@ -340,6 +376,65 @@ export const en: Messages = {
     relatedEn: (country: string) => `More in ${country}`,
     relatedAll: (country: string) => `All airports in ${country}`,
     notFound: 'Airport not found',
+  },
+
+  /** Standalone route-map page (/route/<IATA>). */
+  route: {
+    metaTitle: (year: number, name: string, iata: string, count: string) =>
+      `Latest ${name} (${iata}) Route Map ${year} — ${count} direct destinations`,
+    metaDescription: (name: string, iata: string, count: string) =>
+      `Direct route map for ${name} (${iata}): ${count} destinations with operating airlines and distances, plus the full destination list.`,
+    heading: (name: string) => `${name} route map`,
+    headingSub: (iata: string, count: string) =>
+      `${iata} has ${count} direct destinations, coloured by how many airlines serve each.`,
+    backToAirport: (iata: string) => `Back to the ${iata} airport page`,
+    /** Button on the airport page's teaser card. */
+    openFull: 'View route map',
+    teaserSub: (count: string) => `${count} direct destinations: map, operating airlines and distances.`,
+    /** Figure on a tile of the homepage's route strip. */
+    cardMeta: (count: string) => `${count} direct destinations`,
+    /** Section headings, each naming the airport (`en` line takes the IATA code). */
+    mapSectionTitle: (name: string) => `${name} direct route map`,
+    tableKicker: (iata: string) => `${iata} · Destinations`,
+    tableSectionTitle: (name: string) => `${name} direct destination list`,
+    tableSectionEn: (iata: string) => `${iata} Destinations`,
+    /** Short label for the contents rail, where the full heading would wrap. */
+    tableToc: 'Destinations',
+    tableSectionSub: (count: string) =>
+      `${count} destinations, busiest first by number of operating airlines, with distance and carriers.`,
+    dataKicker: 'Download',
+    dataTitle: 'Route data download',
+    dataEn: 'Data',
+    dataSub: (count: number) =>
+      `${count} direct routes with destination, IATA code, city, country, distance and operating airlines — ready for a spreadsheet or a script.`,
+    dataFields: 'CSV suits Excel / Numbers, JSON suits code; both are UTF-8.',
+    dataCsv: 'Download CSV',
+    dataJson: 'Download JSON',
+    /** Clickable terminal-map card pointing at the airport page. */
+    airportMapSub:
+      'Terminal and gate layout at a glance — click the image for the full map, terminal facilities and ground transport on the airport page.',
+    airportMapCta: (iata: string) => `See the full ${iata} terminal map`,
+    /** Header fact cells. */
+    factDestinations: 'Direct destinations',
+    factAirlines: 'Airlines',
+    factCountries: 'Countries',
+    factSnapshot: 'Data snapshot',
+    /** FAQ — every answer is computed from the route data. */
+    faqCountQ: (name: string) => `How many places does ${name} fly to non-stop?`,
+    faqCountA: (name: string, iata: string, count: string, countries: string) =>
+      `${name} (${iata}) has ${count} direct destinations across ${countries} countries and territories. Only non-stop routes are counted; itineraries with a stop are not.`,
+    faqAirlinesQ: (name: string) => `How many airlines fly from ${name}?`,
+    faqAirlinesA: (count: string, leaders: string) =>
+      `${count} airlines operate direct routes from this airport. The widest networks are ${leaders} (destination count in brackets).`,
+    faqFarthestQ: (name: string) => `What is the farthest non-stop destination from ${name}?`,
+    faqFarthestA: (city: string, country: string, iata: string, km: string) =>
+      `The farthest direct destination is ${city}, ${country} ${iata}, about ${km} km away.`,
+    faqBusiestQ: () => 'Which destinations have the most competition?',
+    faqBusiestA: (count: string, list: string) =>
+      `${count} destinations are served by three or more airlines; the busiest are ${list}.`,
+    faqSourceQ: () => 'How often is the route data updated?',
+    faqSourceA: (date: string, source: string, license: string) =>
+      `Routes on this page come from the ${source} open dataset (${license}), a ${date} snapshot rather than a live schedule — check the airline or airport for tickets and timings.`,
   },
 
   faq: {
@@ -382,6 +477,7 @@ export const en: Messages = {
     details: 'Airport details',
     links: 'Related links',
     location: 'Location map',
+    routes: 'Route map',
     guide: 'Airport guide',
     terminals: 'Terminal guide',
     transport: 'Ground transport',
@@ -460,6 +556,10 @@ export const en: Messages = {
     guides: {
       title: 'Airport guides',
       body: 'Long-form guides to terminal transfers, getting into the city and practical tips.',
+    },
+    routes: {
+      title: 'Route maps',
+      body: 'See an airport’s non-stop network, ranked by destination count, with airlines and distances.',
     },
   },
 

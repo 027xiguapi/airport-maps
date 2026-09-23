@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import AirportTable from '@/components/AirportTable';
 import AirportMap from '@/components/AirportMap';
 import { CountryGrid } from '@/components/AirportCard';
 import CategoryGrid, { type CategoryCard } from '@/components/CategoryGrid';
-import { PopularCities, UpdateList } from '@/components/HomeSections';
+import HeroRoutes from '@/components/HeroRoutes';
+import { PopularCities, RouteNav, UpdateList } from '@/components/HomeSections';
 import JsonLd from '@/components/JsonLd';
 import SearchBox from '@/components/SearchBox';
 import { listGuidedAirports } from '@/lib/content';
@@ -25,6 +25,7 @@ import {
   getStats,
 } from '@/lib/queries';
 import { mapImageCodes } from '@/lib/map-images';
+import { routeDestinationCounts } from '@/lib/routes';
 import { absoluteUrl, ORG_NODE_ID, SITE_NAME, SITE_URL, WEBSITE_NODE_ID } from '@/lib/site';
 import { getAirportGeo } from '@/lib/airport-geo';
 import worldAirportsMeta from '@/lib/world-airports-meta.json';
@@ -79,8 +80,24 @@ export default async function HomePage({ params }: Props) {
     ]);
 
   const popular = shuffled(popularPool).slice(0, 10);
+  // Guide tiles show the same 400px /maps covers; a few guided airports have
+  // no cover yet and render an IATA wordmark placeholder instead.
+  const coverCodes = new Set(mapImageCodes());
 
   const shortcuts = await getAirportsByCodes(locale, SHORTCUTS);
+
+  // Route-map strip: rank the summaries already loaded above by how many
+  // destinations the route dump gives them, keeping the order stable (count,
+  // then IATA) so the internal links do not churn between revalidations.
+  const routeCounts = routeDestinationCounts();
+  const routeNav = airports
+    .filter((airport) => routeCounts.has(airport.iata))
+    .sort(
+      (a, b) =>
+        routeCounts.get(b.iata)! - routeCounts.get(a.iata)! || a.iata.localeCompare(b.iata)
+    )
+    .slice(0, 12)
+    .map((airport) => ({ ...airport, destinationCount: routeCounts.get(airport.iata)! }));
 
   // Leaflet world map: the table summaries joined with static coordinates.
   const mapAirports = airports.flatMap((a) => {
@@ -143,6 +160,14 @@ export default async function HomePage({ params }: Props) {
       body: t.categories.guides.body,
       meta: guidedCodes.length ? formatNumber(guided.length, locale) : undefined,
     },
+    {
+      href: '#routes',
+      icon: 'plane',
+      title: t.categories.routes.title,
+      body: t.categories.routes.body,
+      // Airports the route dump covers, not just the twelve on the strip.
+      meta: formatNumber(airports.filter((a) => routeCounts.has(a.iata)).length, locale),
+    },
   ];
 
   const websiteNode: Record<string, unknown> = {
@@ -184,10 +209,16 @@ export default async function HomePage({ params }: Props) {
 
       {/* ---------------------------------------------------------- search hero */}
       <section className="hero">
-        {/* Decorative layer only — the gradient itself lives on .hero-bg in
-            globals.css, so there is no background image to load. */}
+        {/* The backdrop is a CSS background, which the browser's preload
+            scanner cannot discover — hoist a preload for it so the hero's
+            first paint does not wait for the CSSOM. */}
+        <link rel="preload" as="image" href="/world-airport-map.jpg" fetchPriority="high" />
+        {/* Decorative layers — gradients on .hero-bg, the world-map backdrop
+            with its scrim on .hero-veil, and the animated flight arcs on
+            HeroRoutes, all styled in globals.css. */}
         <div className="hero-bg" />
         <div className="hero-veil" />
+        <HeroRoutes />
         <div className="hero-inner">
           <div className="hero-eyebrow">{t.hero.eyebrow}</div>
           <h1>
@@ -350,6 +381,23 @@ export default async function HomePage({ params }: Props) {
         <PopularCities locale={locale} airports={popular} />
       </section>
 
+      {/* ----------------------------------------------------------- route maps */}
+      {routeNav.length > 0 && (
+        <section className="section" id="routes">
+          <div className="section-head">
+            <div>
+              <div className="section-kicker">{t.home.routes.kicker}</div>
+              <h2 className="section-title">
+                {t.home.routes.title}
+                <span className="en">{t.home.routes.en}</span>
+              </h2>
+              <p className="sec-sub">{t.home.routes.sub}</p>
+            </div>
+          </div>
+          <RouteNav locale={locale} airports={routeNav} />
+        </section>
+      )}
+
       {/* ---------------------------------------------------------- guides */}
       {guided.length > 0 && (
         <section className="section" id="guides">
@@ -370,21 +418,34 @@ export default async function HomePage({ params }: Props) {
                 href={localizedPath(locale, `/airport/${airport.iata}`)}
                 key={airport.iata}
               >
-                <div className="top">
-                  <span className="iata">{airport.iata}</span>
-                  <div className="flagline">
-                    <img src={airport.flagUrl} alt="" loading="lazy" />
-                    {airport.city} · {airport.countryName}
-                  </div>
-                </div>
-                <h3>{airport.name}</h3>
-                <div className="facts">
-                  <span className="fact">{t.units.terminals(airport.terminalCount)}</span>
-                  <span className="fact">{t.units.gates(airport.gateCount)}</span>
-                </div>
-                <span className="more">
-                  {t.guides.more}
-                  <ArrowIcon />
+                <span className="pic">
+                  {coverCodes.has(airport.iata) ? (
+                    <img
+                      src={`/maps/${airport.iata}.png`}
+                      alt={airport.name}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="ph">{airport.iata}</span>
+                  )}
+                </span>
+                <span className="body">
+                  <span className="top">
+                    <span className="iata">{airport.iata}</span>
+                    <span className="flagline">
+                      <img src={airport.flagUrl} alt="" loading="lazy" />
+                      {airport.city} · {airport.countryName}
+                    </span>
+                  </span>
+                  <h3>{airport.name}</h3>
+                  <span className="facts">
+                    <span className="fact">{t.units.terminals(airport.terminalCount)}</span>
+                    <span className="fact">{t.units.gates(airport.gateCount)}</span>
+                  </span>
+                  <span className="more">
+                    {t.guides.more}
+                    <ArrowIcon />
+                  </span>
                 </span>
               </Link>
             ))}
@@ -430,24 +491,6 @@ export default async function HomePage({ params }: Props) {
         <CountryGrid locale={locale} countries={countries} />
       </section>
 
-      {/* --------------------------------------------------------- all airports */}
-      <section className="section" id="allairports">
-        <div className="section-head">
-          <div>
-            <div className="section-kicker">{t.home.all.kicker}</div>
-            <h2 className="section-title">
-              {t.home.all.title}
-              <span className="en">{t.home.all.en}</span>
-            </h2>
-            <p className="sec-sub">{t.home.all.sub}</p>
-          </div>
-          <Link className="section-more" href={localizedPath(locale, '/airports')}>
-            {t.home.all.more}
-            <ArrowIcon />
-          </Link>
-        </div>
-        <AirportTable locale={locale} airports={airports} />
-      </section>
     </>
   );
 }

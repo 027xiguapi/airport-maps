@@ -1,9 +1,10 @@
 import type { SVGProps } from 'react';
 
 /**
- * Inline SVG icon set, generated from the original build's sprite strings by
- * scripts/gen-icons.mjs. Each icon is a plain component so markup stays
- * identical to the ported stylesheets' expectations (no wrapper element).
+ * Inline SVG icon set, generated from the original build's sprite strings by a
+ * one-off script that is no longer in the repo (it consumed its own source
+ * file). Each icon is a plain component so markup stays identical to the
+ * ported stylesheets' expectations (no wrapper element).
  */
 type IconProps = SVGProps<SVGSVGElement>;
 

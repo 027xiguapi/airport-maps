@@ -105,3 +105,41 @@ export type AirportListParams = {
   page?: number;
   perPage?: number;
 };
+
+// ----------------------------------------------------------------- route map
+
+/** An airline flying a route, resolved from the OpenFlights airline table. */
+export type RouteCarrier = { code: string; name: string };
+
+/**
+ * One destination on an airport's route map. Place names come from the bulk
+ * OurAirports index and are swapped for the directory's own translation
+ * whenever the destination is an airport the site covers.
+ */
+export type RouteDestination = {
+  iata: string;
+  name: string;
+  city: string;
+  country: string;
+  countryCode: string;
+  lat: number;
+  lng: number;
+  km: number;
+  carriers: RouteCarrier[];
+  /**
+   * Site-relative URL of the destination's own airport page, absent when the
+   * directory does not cover it — the route map links only where a page exists,
+   * so no click lands on a 404.
+   */
+  href?: string;
+};
+
+/** Everything the airport page's route map and destination table render. */
+export type AirportRouteMap = {
+  lat: number;
+  lng: number;
+  destinations: RouteDestination[];
+  /** Snapshot date of the route dump, e.g. "2014-06" — see scripts/fetch-routes.mjs. */
+  dataDate: string;
+  source: { name: string; url: string; license: string };
+};

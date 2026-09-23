@@ -123,6 +123,13 @@ export const zh = {
       en: 'Recently Updated',
       sub: '新增和新更新的机场地图。',
     },
+    /** 首页「航线图」导航条：直飞目的地最多的机场，链到各自的 /route 页面。 */
+    routes: {
+      kicker: 'Routes',
+      title: '热门机场航线图',
+      en: 'Route Maps',
+      sub: '按直飞目的地数量排序的机场，点击查看全球航线网络、执飞航司与目的地列表。',
+    },
     countries: {
       kicker: 'By Country',
       title: '按国家分类的机场地图',
@@ -305,6 +312,36 @@ export const zh = {
     mapEmbedTitle: (name: string) => `${name}互动地图 — 机场位置`,
     mapEmbedEn: 'Interactive Map',
     extMapsNote: '在其他地图服务中查看该机场：',
+    /** 「航线图」板块：大圆航线地图 + 直飞目的地列表。 */
+    routeMapKicker: 'Routes',
+    routeMapTitle: (name: string) => `${name}航线图 · 直飞目的地`,
+    routeMapEn: 'Route Map',
+    routeMapAria: (name: string) => `${name}直飞航线地图`,
+    routeLegendTitle: '颜色说明',
+    routeLegendClose: '收起图例',
+    routeReset: '重置地图',
+    routeZoomIn: '放大',
+    routeZoomOut: '缩小',
+    routeFullscreen: '全屏查看',
+    routeExitFullscreen: '退出全屏',
+    /** 可点击的目的地圆点的悬停提示，`{iata}` 由客户端替换。 */
+    routeOpenAirport: '查看 {iata} 机场页',
+    /** 与 lib/route-tiers.ts 的分级一一对应。 */
+    routeTiers: {
+      trunk: '6 家以上航司',
+      major: '3–5 家航司',
+      minor: '2 家航司',
+      single: '1 家航司',
+    },
+    /** 地图悬停提示里的航司数量，`{n}` 由客户端替换。 */
+    routeCarriersTpl: '{n} 家航司',
+    routeTableDest: '目的地',
+    routeTableCountry: '国家/地区',
+    routeTableDistance: '距离',
+    routeTableCarriers: '执飞航司',
+    routeCarriersMore: (n: number) => ` 等 ${n} 家`,
+    routeMapNote: (date: string) =>
+      `航线数据快照：${date}，仅统计直飞航线。数据来源：`,
     legendTerminal: '航站楼建筑',
     legendTransit: '地面交通节点',
     legendCorridor: '航站楼间连廊',
@@ -324,6 +361,64 @@ export const zh = {
     relatedEn: (country: string) => `More in ${country}`,
     relatedAll: (country: string) => `${country}全部机场`,
     notFound: '未找到该机场',
+  },
+
+  /** 独立的航线图页面（/route/<IATA>）。 */
+  route: {
+    metaTitle: (year: number, name: string, iata: string, count: string) =>
+      `${year}年最新${name}航线图 — ${iata} 直飞 ${count} 个目的地`,
+    metaDescription: (name: string, iata: string, count: string) =>
+      `${name}（${iata}）直飞航线图：共 ${count} 个目的地，含执飞航司、飞行距离与线路示意，并附完整目的地列表。`,
+    heading: (name: string) => `${name}航线图`,
+    headingSub: (iata: string, count: string) => `${iata} 共 ${count} 个直飞目的地，按执飞航司数量着色。`,
+    backToAirport: (iata: string) => `返回 ${iata} 机场页`,
+    /** 机场页预览卡片上的按钮。 */
+    openFull: '查看航线图',
+    teaserSub: (count: string) => `共 ${count} 个直飞目的地：航线示意、执飞航司与飞行距离。`,
+    /** 首页导航条上一格的字数说明。 */
+    cardMeta: (count: string) => `${count} 个直飞目的地`,
+    /** 各区块标题都带上机场名（`en` 行的参数是机场的英文名 / IATA 代码）。 */
+    mapSectionTitle: (name: string) => `${name}直飞航线图`,
+    tableKicker: (iata: string) => `${iata} · Destinations`,
+    tableSectionTitle: (name: string) => `${name}直飞目的地列表`,
+    tableSectionEn: (iata: string) => `${iata} Destinations`,
+    /** 导航栏里的短标签（区块标题放不下）。 */
+    tableToc: '直飞目的地',
+    tableSectionSub: (count: string) =>
+      `共 ${count} 个目的地，按执飞航司数量由多到少排列，含飞行距离与执飞航司。`,
+    dataKicker: 'Download',
+    dataTitle: '航线数据下载',
+    dataEn: 'Data',
+    dataSub: (count: number) =>
+      `${count} 条直飞航线数据，含目的地、IATA 代码、城市、国家/地区、飞行距离与执飞航司，可用于表格软件或脚本处理。`,
+    dataFields: 'CSV 适合 Excel / Numbers 等表格软件，JSON 适合程序处理；均为 UTF-8 编码。',
+    dataCsv: '下载 CSV',
+    dataJson: '下载 JSON',
+    /** 点击跳转机场页的航站楼地图卡片。 */
+    airportMapSub:
+      '机场航站楼与登机口分布示意；点击图片前往机场页，查看完整地图、航站楼设施与地面交通。',
+    airportMapCta: (iata: string) => `查看 ${iata} 完整航站楼地图`,
+    /** 页头指标格。 */
+    factDestinations: '直飞目的地',
+    factAirlines: '执飞航司',
+    factCountries: '国家/地区',
+    factSnapshot: '数据快照',
+    /** FAQ：全部由航线数据算出。 */
+    faqCountQ: (name: string) => `${name}有多少个直飞目的地？`,
+    faqCountA: (name: string, iata: string, count: string, countries: string) =>
+      `${name}（${iata}）共有 ${count} 个直飞目的地，覆盖 ${countries} 个国家和地区。这里只统计直飞航线，中转行程不计入。`,
+    faqAirlinesQ: (name: string) => `有多少家航空公司从${name}执飞？`,
+    faqAirlinesA: (count: string, leaders: string) =>
+      `共有 ${count} 家航空公司运营从该机场出发的直飞航线。其中执飞目的地最多的是 ${leaders}（括号内为目的地数量）。`,
+    faqFarthestQ: (name: string) => `从${name}出发最远的直飞目的地是哪里？`,
+    faqFarthestA: (city: string, country: string, iata: string, km: string) =>
+      `最远的直飞目的地是${country}${city} ${iata}，距离约 ${km} 公里。`,
+    faqBusiestQ: () => '哪些目的地有多家航司竞争？',
+    faqBusiestA: (count: string, list: string) =>
+      `有 ${count} 个目的地由 3 家及以上航司执飞，竞争最激烈的是 ${list}。`,
+    faqSourceQ: () => '航线数据多久更新一次？',
+    faqSourceA: (date: string, source: string, license: string) =>
+      `本页航线来自 ${source} 开放数据集（${license} 授权），为 ${date} 的数据快照，不是实时航班计划；机票与班次请以航空公司或机场官方渠道为准。`,
   },
 
   faq: {
@@ -366,6 +461,7 @@ export const zh = {
     details: '机场信息',
     links: '相关链接',
     location: '位置地图',
+    routes: '航线图',
     guide: '机场指南',
     terminals: '航站楼信息',
     transport: '地面交通',
@@ -444,6 +540,10 @@ export const zh = {
     guides: {
       title: '机场指南',
       body: '航站楼换乘、进城方式与实用提示，长篇图文指南。',
+    },
+    routes: {
+      title: '航线图',
+      body: '按直飞目的地数量查看机场的全球航线网络，含执飞航司与目的地列表。',
     },
   },
 

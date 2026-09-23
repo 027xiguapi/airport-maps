@@ -4,12 +4,16 @@ import '../globals.css';
 import BackToTop from '@/components/BackToTop';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import { getMessages, LOCALES, LOCALE_META, parseLocale } from '@/lib/i18n';
+import { getMessages, LOCALE_META, parseLocale, PUBLISHED_LOCALES } from '@/lib/i18n';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
 
-/** Pre-render both locales; anything else 404s. */
+/**
+ * Pre-render published locales only; untranslated locales 404 (their URL
+ * prefixes never reach the app — the proxy redirects them to the visitor's
+ * best published language).
+ */
 export function generateStaticParams() {
-  return LOCALES.map((locale) => ({ locale }));
+  return PUBLISHED_LOCALES.map((locale) => ({ locale }));
 }
 
 type Props = { params: Promise<{ locale: string }> };

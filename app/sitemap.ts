@@ -1,13 +1,13 @@
 import type { MetadataRoute } from 'next';
 import { listPageSlugs } from '@/lib/content';
+import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import {
   DEFAULT_LOCALE,
-  LOCALES,
   LOCALE_META,
   SOURCE_LOCALE,
-  type Locale,
 } from '@/lib/i18n/config';
 import { getAllCountryCodes, getAirportRoutes } from '@/lib/queries';
+import { routeAirportCodes } from '@/lib/routes';
 import { SITE_URL } from '@/lib/site';
 
 export const revalidate = 3600;
@@ -18,21 +18,27 @@ type EntryOptions = {
   lastModified?: Date;
 };
 
+/** Locale-prefixed URL for a path; the default locale is the bare URL. */
+function localeUrl(locale: string, path: string): string {
+  return `${SITE_URL}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}${path}`;
+}
+
 /**
- * Emits one sitemap entry per locale for a locale-independent path, each
- * carrying `alternates` that list every translation plus `x-default`. That is
- * what tells a crawler the /zh and /en pages are translations of each other
- * rather than competing duplicates.
+ * Emits one sitemap entry per published locale for a locale-independent path,
+ * each carrying `alternates` that list every translation plus `x-default`
+ * pointing at the bare default-locale URL. That is what tells a crawler the
+ * bare and /zh pages are translations of each other rather than competing
+ * duplicates.
  */
 function localeEntries(path: string, options: EntryOptions): MetadataRoute.Sitemap {
   const languages: Record<string, string> = {};
-  for (const locale of LOCALES) {
-    languages[LOCALE_META[locale].htmlLang] = `${SITE_URL}/${locale}${path}`;
+  for (const locale of PUBLISHED_LOCALES) {
+    languages[LOCALE_META[locale].htmlLang] = localeUrl(locale, path);
   }
-  languages['x-default'] = `${SITE_URL}/${DEFAULT_LOCALE}${path}`;
+  languages['x-default'] = localeUrl(DEFAULT_LOCALE, path);
 
-  return (LOCALES as readonly Locale[]).map((locale) => ({
-    url: `${SITE_URL}/${locale}${path}`,
+  return PUBLISHED_LOCALES.map((locale) => ({
+    url: localeUrl(locale, path),
     changeFrequency: options.changeFrequency,
     priority: options.priority,
     ...(options.lastModified ? { lastModified: options.lastModified } : {}),
@@ -43,6 +49,9 @@ function localeEntries(path: string, options: EntryOptions): MetadataRoute.Sitem
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [airports, countries] = await Promise.all([getAirportRoutes(), getAllCountryCodes()]);
   const staticPages = listPageSlugs(SOURCE_LOCALE);
+  // Route maps exist for a subset of the directory only; publishing URLs for the
+  // rest would just be a crawl of 404s.
+  const withRoutes = new Set(routeAirportCodes());
 
   return [
     ...localeEntries('', { changeFrequency: 'daily', priority: 1 }),
@@ -65,5 +74,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date(airport.updated_at),
       })
     ),
+    ...airports
+      .filter((airport) => withRoutes.has(airport.iata))
+      .flatMap((airport) =>
+        localeEntries(`/route/${airport.iata}`, {
+          changeFrequency: 'weekly',
+          priority: 0.6,
+          lastModified: new Date(airport.updated_at),
+        })
+      ),
   ];
 }

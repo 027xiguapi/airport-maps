@@ -21,6 +21,7 @@
     "data:world-airports": "node scripts/prepare-world-airports.mjs",
     "data:terminal-maps": "node scripts/fetch-terminal-maps.mjs",
     "data:terminal-maps:compress": "node scripts/compress-terminal-maps.mjs",
+    "data:route-images": "node scripts/generate-route-images.mjs",
     "data:build-directory": "node data/build-directory-data.mjs"
   },
   "dependencies": {
@@ -51,6 +52,8 @@
     "@types/react-dom": "^19",
     "drizzle-kit": "^0.31.10",
     "sharp": "^0.35.4",
-    "typescript": "^5"
+    "topojson-client": "^3.1.0",
+    "typescript": "^5",
+    "world-atlas": "^2.0.2"
   }
 }

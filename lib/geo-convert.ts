@@ -108,6 +108,46 @@ export function initialBearing(a: LatLng, b: LatLng): number {
   return (((Math.atan2(y, x) * 180) / PI) + 360) % 360;
 }
 
+/**
+ * Points along the great circle from a to b, as [lat, lng] pairs — what a route
+ * map has to draw so a flight looks like the arc it flies. A straight lat/lng
+ * line instead cuts a chord, which on a Mercator map bends the wrong way for
+ * every long route. `segments` is the number of straight pieces the arc is
+ * approximated with.
+ */
+export function greatCirclePoints(a: LatLng, b: LatLng, segments = 48): [number, number][] {
+  const toRad = (d: number) => (d / 180) * PI;
+  const φ1 = toRad(a.lat);
+  const λ1 = toRad(a.lng);
+  const φ2 = toRad(b.lat);
+  const λ2 = toRad(b.lng);
+  const d =
+    2 *
+    Math.asin(
+      Math.min(
+        1,
+        Math.sqrt(
+          Math.sin((φ2 - φ1) / 2) ** 2 +
+            Math.cos(φ1) * Math.cos(φ2) * Math.sin((λ2 - λ1) / 2) ** 2
+        )
+      )
+    );
+  // Coincident (or antipodal-to-rounding) endpoints: nothing to interpolate.
+  if (d < 1e-9) return [[a.lat, a.lng], [b.lat, b.lng]];
+
+  const points: [number, number][] = [];
+  for (let i = 0; i <= segments; i++) {
+    const f = i / segments;
+    const A = Math.sin((1 - f) * d) / Math.sin(d);
+    const B = Math.sin(f * d) / Math.sin(d);
+    const x = A * Math.cos(φ1) * Math.cos(λ1) + B * Math.cos(φ2) * Math.cos(λ2);
+    const y = A * Math.cos(φ1) * Math.sin(λ1) + B * Math.cos(φ2) * Math.sin(λ2);
+    const z = A * Math.sin(φ1) + B * Math.sin(φ2);
+    points.push([(Math.atan2(z, Math.sqrt(x * x + y * y)) * 180) / PI, (Math.atan2(y, x) * 180) / PI]);
+  }
+  return points;
+}
+
 /** Parses "lat, lng" (decimal degrees) tolerating spaces, full-width commas and
  * a trailing hemisphere letter that agrees with the sign. Returns null when the
  * text is not a valid pair (|lat| ≤ 90, |lng| ≤ 180). */

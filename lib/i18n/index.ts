@@ -1,19 +1,16 @@
 import {
   DEFAULT_LOCALE,
-  LOCALES,
-  LOCALE_META,
   isLocale,
+  LOCALE_META,
   localizedPath,
   type Locale,
 } from './config';
-import { en } from './messages/en';
-import { zh, type Messages } from './messages/zh';
-
-const CATALOGS: Record<Locale, Messages> = { zh, en };
+import { catalogFor, PUBLISHED_LOCALES } from './catalogs';
+import type { Messages } from './messages/zh';
 
 /** Message catalog for a locale, falling back to the default locale. */
 export function getMessages(locale: Locale): Messages {
-  return CATALOGS[locale] ?? CATALOGS[DEFAULT_LOCALE];
+  return catalogFor(locale);
 }
 
 /** Narrows an untrusted route param to a supported locale. */
@@ -22,17 +19,24 @@ export function parseLocale(value: string | undefined): Locale | null {
 }
 
 /**
- * `alternates.languages` for Next metadata: one entry per locale plus an
- * `x-default` pointing at the default locale.
+ * `alternates.languages` for Next metadata: one entry per published locale
+ * plus an `x-default` pointing at the bare default-locale path.
  */
 export function languageAlternates(path: string): Record<string, string> {
   const alternates: Record<string, string> = {};
-  for (const locale of LOCALES) {
+  for (const locale of PUBLISHED_LOCALES) {
     alternates[LOCALE_META[locale].htmlLang] = localizedPath(locale, path);
   }
   alternates['x-default'] = localizedPath(DEFAULT_LOCALE, path);
   return alternates;
 }
 
-export { DEFAULT_LOCALE, LOCALES, LOCALE_META, isLocale, localizedPath };
+export {
+  DEFAULT_LOCALE,
+  isLocale,
+  LOCALES,
+  LOCALE_META,
+  localizedPath,
+} from './config';
+export { PUBLISHED_LOCALES } from './catalogs';
 export type { Locale, Messages };
