@@ -38,10 +38,12 @@ export default function MapZoom({
 
   return (
     <>
+      {/* Dark-on-light to match the white terminal-map card (the panel used to
+          be navy). */}
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex flex-none items-center gap-[6px] rounded-full border border-white/25 px-3 py-[5px] text-[12px] font-semibold text-white/80 transition-colors duration-150 hover:border-white/60 hover:text-white"
+        className="inline-flex flex-none items-center gap-[6px] rounded-full border border-[#d8e4ee] px-3 py-[5px] text-[12px] font-semibold text-[#5e768a] transition-colors duration-150 hover:border-[#0f3454] hover:text-navy-900"
       >
         <ZoomInIcon className="h-[14px] w-[14px]" />
         {label}

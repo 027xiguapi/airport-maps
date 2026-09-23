@@ -33,8 +33,13 @@ export default function LanguageSwitcher({ current, label, switchLabel }: Props)
   };
 
   return (
-    <details className="lang" aria-label={switchLabel}>
-      <summary className="lang-toggle" title={switchLabel}>
+    <details className="group relative flex-none" aria-label={switchLabel}>
+      {/* Utilities replace the old `.lang*` rules; colours are literals because
+          the bar is white in either theme (see Header.tsx). The chevron's
+          `group-open:` rotation was intended by the old CSS, but its
+          `[data-open="true"]` hook was never set — this is the first time it
+          actually runs. */}
+      <summary className="inline-flex h-[34px] items-center gap-1.5 whitespace-nowrap rounded-[18px] border border-[#d8e4ee] bg-white px-3 text-[13.5px] font-medium text-[#5e768a] transition-[background-color,border-color] duration-150 hover:border-amber hover:bg-[#f4f8fb] hover:text-navy-900 max-[820px]:px-2.5 max-[820px]:text-[13px]">
         <span>{label}</span>
         <svg
           width="12"
@@ -46,11 +51,12 @@ export default function LanguageSwitcher({ current, label, switchLabel }: Props)
           strokeLinecap="round"
           strokeLinejoin="round"
           aria-hidden="true"
+          className="opacity-70 transition-transform duration-150 group-open:rotate-180"
         >
           <path d="m6 9 6 6 6-6" />
         </svg>
       </summary>
-      <div className="lang-menu">
+      <div className="absolute right-0 top-[42px] z-[130] min-w-[150px] overflow-hidden rounded-xl border border-[#d8e4ee] bg-white [box-shadow:var(--shadow-lg)] max-[820px]:top-[38px]">
         {PUBLISHED_LOCALES.map((locale) => (
           <Link
             key={locale}
@@ -58,9 +64,12 @@ export default function LanguageSwitcher({ current, label, switchLabel }: Props)
             hrefLang={LOCALE_META[locale].htmlLang}
             aria-current={locale === current ? 'true' : undefined}
             onClick={() => remember(locale)}
+            className="flex items-center justify-between gap-3 px-3.5 py-2.5 text-[14px] text-[#16324b] transition-[background-color] duration-[120ms] hover:bg-[#dcecf7] aria-[current=true]:bg-[#dcecf7] aria-[current=true]:font-bold aria-[current=true]:text-navy-800"
           >
             <span>{LOCALE_META[locale].label}</span>
-            <span className="code">{locale}</span>
+            <span className="font-display text-[11px] uppercase tracking-[0.1em] text-[#8ca2b5]">
+              {locale}
+            </span>
           </Link>
         ))}
       </div>

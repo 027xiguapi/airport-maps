@@ -33,6 +33,29 @@ type Props = {
 const API_LIMIT = 7;
 
 /**
+ * Per-variant chrome, as utilities (these used to be the `.top-search`,
+ * `.mobile-bar` and `.hero-search` descendant rules in globals.css).
+ *
+ * `top` sits on the always-white bar, so its field uses literal light colours;
+ * `mobile` sits on the page itself and keeps the theme tokens; `hero` is left to
+ * the `.hero-search` rules because that panel is dark in both themes.
+ */
+const CHROME = {
+  top: {
+    root: 'relative ml-auto w-[280px] flex-none max-[1080px]:w-[210px] max-[820px]:hidden',
+    input:
+      'h-[38px] w-full rounded-[19px] border border-[#d8e4ee] bg-[#f4f8fb] py-0 pl-4 pr-10 text-[14px] text-[#16324b] outline-none transition-[background-color,border-color] duration-150 [font-family:inherit] placeholder:text-[#8ca2b5] focus:border-[#2e7db3] focus:bg-white focus:[box-shadow:0_0_0_3px_rgba(46,125,179,0.15)]',
+    icon: 'pointer-events-none absolute right-[13px] top-[9px] text-[#5e768a] opacity-60',
+  },
+  mobile: {
+    root: 'relative mx-auto max-w-[1240px] px-4 py-[10px]',
+    input:
+      'h-10 w-full rounded-[20px] border border-line bg-card py-0 pl-4 pr-10 text-[14px] text-ink outline-none [font-family:inherit] focus:border-sky-500 focus:[box-shadow:0_0_0_3px_rgba(46,125,179,0.15)]',
+    icon: 'pointer-events-none absolute right-[29px] top-[19px] opacity-50',
+  },
+} as const;
+
+/**
  * Airport search with live suggestions. The dropdown is fed by /api/search
  * (Postgres trigram index) in the current locale; pressing Enter without a
  * highlighted hit falls through to the server-rendered directory page.
@@ -130,11 +153,13 @@ export default function SearchBox({ variant = 'top', labels, locale = 'zh', auto
   };
 
   const listId = `${boxId}-list`;
+  const chrome = isHero ? null : CHROME[variant];
 
   const input = (
     <input
       ref={inputRef}
       type="text"
+      className={chrome?.input}
       value={term}
       onChange={(e) => setTerm(e.target.value)}
       onKeyDown={onKeyDown}
@@ -195,18 +220,18 @@ export default function SearchBox({ variant = 'top', labels, locale = 'zh', auto
 
   if (variant === 'mobile') {
     return (
-      <div className="wrap" ref={rootRef}>
+      <div className={CHROME.mobile.root} ref={rootRef}>
         {input}
-        <SearchIcon />
+        <SearchIcon className={CHROME.mobile.icon} />
         {dropdown}
       </div>
     );
   }
 
   return (
-    <div className="top-search" ref={rootRef}>
+    <div className={CHROME.top.root} ref={rootRef}>
       {input}
-      <SearchIcon />
+      <SearchIcon className={CHROME.top.icon} />
       {dropdown}
     </div>
   );

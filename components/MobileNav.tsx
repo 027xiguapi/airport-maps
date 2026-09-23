@@ -6,13 +6,25 @@ import { usePathname } from 'next/navigation';
 /**
  * Hamburger control for the primary navigation on small screens.
  *
- * It renders the toggle button and the `.topnav` panel as siblings (a fragment)
- * so that, on desktop, the links stay direct flex children of `.topbar-inner`
- * and the layout is unchanged — CSS simply hides the button above the mobile
- * breakpoint. Keeping the open state here lets `Header` remain a server
+ * It renders the toggle button and the nav panel as siblings (a fragment) so
+ * that, on desktop, the links stay direct flex children of the bar's inner row
+ * and the layout is unchanged — utilities simply hide the button above the
+ * mobile breakpoint. Keeping the open state here lets `Header` remain a server
  * component. The menu closes on Escape, on a tap/click outside it, when a link
  * is chosen, and whenever the route changes.
+ *
+ * Both elements carry utilities instead of the old `.nav-toggle` / `.topnav`
+ * rules: the bar is white in either theme (see Header.tsx), so the panel
+ * surface is written as literals, and `data-[open=true]` replaces the
+ * `[data-open="true"]` CSS hook.
  */
+const TOGGLE_CLASSES =
+  'hidden h-10 w-10 flex-none cursor-pointer items-center justify-center rounded-[10px] border border-[#d8e4ee] bg-white text-[#5e768a] transition-[background-color] duration-150 [-webkit-tap-highlight-color:transparent] hover:bg-[#f4f8fb] hover:text-navy-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber aria-expanded:bg-[#f4f8fb] max-[820px]:order-1 max-[820px]:inline-flex';
+
+/** Inline row on desktop; a dropdown panel below the bar at ≤820px. */
+const PANEL_CLASSES =
+  'flex flex-none items-center gap-1 max-[820px]:absolute max-[820px]:inset-x-0 max-[820px]:top-full max-[820px]:z-[120] max-[820px]:hidden max-[820px]:max-h-[calc(100vh-56px)] max-[820px]:flex-col max-[820px]:gap-1 max-[820px]:overflow-y-auto max-[820px]:border-t max-[820px]:border-t-[rgba(10,42,67,0.1)] max-[820px]:bg-[rgba(255,255,255,0.99)] max-[820px]:px-3 max-[820px]:pb-3.5 max-[820px]:pt-2.5 max-[820px]:[box-shadow:0_20px_34px_-20px_rgba(10,42,67,0.35)] max-[820px]:data-[open=true]:flex';
+
 export default function MobileNav({
   label,
   navLabel,
@@ -54,7 +66,7 @@ export default function MobileNav({
     <>
       <button
         type="button"
-        className="nav-toggle"
+        className={TOGGLE_CLASSES}
         data-nav-menu
         aria-label={label}
         aria-expanded={open}
@@ -86,7 +98,7 @@ export default function MobileNav({
         </svg>
       </button>
       <nav
-        className="topnav"
+        className={PANEL_CLASSES}
         id="primary-nav"
         data-nav-menu
         data-open={open}

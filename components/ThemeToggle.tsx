@@ -55,7 +55,7 @@ export default function ThemeToggle({ label }: { label: string }) {
   return (
     <button
       type="button"
-      className="theme-toggle"
+      className="inline-flex h-[34px] w-[34px] flex-none items-center justify-center rounded-[18px] border border-[#d8e4ee] bg-white text-[#5e768a] transition-[background-color,border-color] duration-150 hover:border-amber hover:bg-[#f4f8fb] hover:text-navy-900"
       onClick={toggle}
       aria-label={label}
       title={label}

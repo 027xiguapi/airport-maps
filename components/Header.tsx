@@ -20,15 +20,31 @@ export default function Header({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <header className="topbar">
-        <div className="topbar-inner">
-          <Link className="brand" href={localizedPath(locale, '/')}>
-            <span className="brand-mark">
-              <img src="/icon.png" alt="" width={34} height={34} />
+      {/* Straight utilities rather than the old `.topbar` block in globals.css.
+          The bar is deliberately white in both themes, so its colours are
+          literals (`bg-[rgba(255,255,255,0.97)]`, `text-navy-900`) instead of the
+          flipping tokens — the previous bar was theme-independent navy in the
+          same spirit. The breakpoints mirror the old media blocks: 1080px
+          tightens the inline nav (in NavLinks) and 820px collapses it into the
+          panel (in MobileNav). */}
+      <header className="sticky top-0 z-[100] border-b border-b-[rgba(10,42,67,0.1)] bg-[rgba(255,255,255,0.97)] text-navy-900 backdrop-blur-[8px]">
+        <div className="mx-auto flex h-16 max-w-[1240px] items-center gap-7 px-6 max-[820px]:h-14 max-[820px]:flex-nowrap max-[820px]:justify-start max-[820px]:gap-2 max-[820px]:px-3.5">
+          <Link
+            className="flex flex-none items-center gap-2.5 max-[820px]:mr-auto max-[820px]:min-w-0 max-[820px]:flex-[0_1_auto]"
+            href={localizedPath(locale, '/')}
+          >
+            <span className="h-[34px] w-[34px] flex-none overflow-hidden rounded-[9px] bg-white [box-shadow:0_0_0_1px_rgba(10,42,67,0.1)_inset]">
+              <img
+                className="block h-full w-full object-cover"
+                src="/icon.png"
+                alt=""
+                width={34}
+                height={34}
+              />
             </span>
-            <span className="brand-name">
+            <span className="text-[16.5px] font-bold tracking-[0.01em] max-[820px]:min-w-0 max-[820px]:truncate max-[820px]:text-[15px]">
               {t.site.nameLead}
-              <em>{t.site.nameAccent}</em>
+              <em className="not-italic text-amber">{t.site.nameAccent}</em>
             </span>
           </Link>
           <MobileNav label={t.nav.menu} navLabel={t.nav.label}>
@@ -52,7 +68,9 @@ export default function Header({ locale }: { locale: Locale }) {
           />
         </div>
       </header>
-      <div className="mobile-bar">
+      {/* Small-screen search, hidden from 820px up where `.top-search` (inside
+          SearchBox) takes over. Token-based: it sits on the page, not the bar. */}
+      <div className="hidden border-b border-b-line bg-paper max-[820px]:block">
         <SearchBox
           variant="mobile"
           labels={{
