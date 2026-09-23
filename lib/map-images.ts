@@ -22,7 +22,7 @@ function available(): Set<string> {
 /** `/maps/PEK.png` when a cover exists for the code, else null. */
 export function mapImageUrl(iata: string): string | null {
   const file = `${iata.toUpperCase()}.png`;
-  return available().has(file) ? `/maps/${file}` : null;
+  return available().has(file) ? `/source-maps/${file}` : null;
 }
 
 /**

@@ -287,6 +287,8 @@ export const en: Messages = {
         button links out to a Google search for the official PDF. */
     zoomLabel: 'Zoom',
     zoomClose: 'Close',
+    zoomIn: 'Zoom in',
+    zoomOut: 'Zoom out',
     downloadKicker: 'Download',
     downloadTitle: 'Download Airport Maps',
     downloadEn: 'Downloads',

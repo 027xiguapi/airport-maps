@@ -272,6 +272,8 @@ export const zh = {
     /** 终端图下方的下载按钮：图片直接下载，PDF 按钮跳转谷歌搜索官方 PDF。 */
     zoomLabel: '放大',
     zoomClose: '关闭',
+    zoomIn: '放大',
+    zoomOut: '缩小',
     downloadKicker: 'Download',
     downloadTitle: '下载机场地图',
     downloadEn: 'Downloads',

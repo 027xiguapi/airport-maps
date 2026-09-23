@@ -41,12 +41,14 @@ export default function TerminalMapPanel({
         </div>
         <div className="flex flex-none items-center gap-3">
           <div className="map-panel-note">{mapImg ? t.airport.realMapNote : t.airport.mapNote}</div>
-          {zoomSrc && (
+          {mapImg && (
             <MapZoom
-              src={zoomSrc}
+              src={mapImg}
               alt={t.airport.realMapTitle(iata)}
               label={t.airport.zoomLabel}
               closeLabel={t.airport.zoomClose}
+              zoomInLabel={t.airport.zoomIn}
+              zoomOutLabel={t.airport.zoomOut}
             />
           )}
         </div>
