@@ -24,11 +24,14 @@ function localeUrl(locale: string, path: string): string {
 }
 
 /**
- * Emits one sitemap entry per published locale for a locale-independent path,
- * each carrying `alternates` that list every translation plus `x-default`
- * pointing at the bare default-locale URL. That is what tells a crawler the
- * bare and /zh pages are translations of each other rather than competing
- * duplicates.
+ * One sitemap entry per locale-independent path: `<loc>` is the bare
+ * default-locale URL, and `alternates` list every translated URL plus
+ * `x-default` (the same bare URL). The localized URLs are deliberately *not*
+ * repeated as top-level `<loc>` entries — they are the same page, and repeating
+ * the identical alternates block once per language tripled the file and read as
+ * the same page listed three times. Crawlers still learn the /zh and /tw URLs
+ * from the hreflang annotations here, from the language switcher links on every
+ * page, and from each page's own `hreflang` tags.
  */
 function localeEntries(path: string, options: EntryOptions): MetadataRoute.Sitemap {
   const languages: Record<string, string> = {};
@@ -37,13 +40,15 @@ function localeEntries(path: string, options: EntryOptions): MetadataRoute.Sitem
   }
   languages['x-default'] = localeUrl(DEFAULT_LOCALE, path);
 
-  return PUBLISHED_LOCALES.map((locale) => ({
-    url: localeUrl(locale, path),
-    changeFrequency: options.changeFrequency,
-    priority: options.priority,
-    ...(options.lastModified ? { lastModified: options.lastModified } : {}),
-    alternates: { languages },
-  }));
+  return [
+    {
+      url: localeUrl(DEFAULT_LOCALE, path),
+      changeFrequency: options.changeFrequency,
+      priority: options.priority,
+      ...(options.lastModified ? { lastModified: options.lastModified } : {}),
+      alternates: { languages },
+    },
+  ];
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
