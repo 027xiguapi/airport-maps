@@ -21,12 +21,15 @@
 const HOME = [
   { href: '/en', label: 'English home' },
   { href: '/zh', label: '中文首页' },
+  { href: '/tw', label: '繁體中文首頁' },
 ];
 const DIRECTORIES = [
   { href: '/en/airports', label: 'All airports' },
   { href: '/zh/airports', label: '全部机场' },
+  { href: '/tw/airports', label: '全部機場' },
   { href: '/en/countries', label: 'By country' },
   { href: '/zh/countries', label: '按国家浏览' },
+  { href: '/tw/countries', label: '按國家瀏覽' },
 ];
 
 export default function NotFoundContent() {
@@ -40,7 +43,7 @@ export default function NotFoundContent() {
         </nav>
         <div className="country-hero">
           <div>
-            <h1>404 · Page not found · 页面不存在</h1>
+            <h1>404 · Page not found · 页面不存在 · 頁面不存在</h1>
             <div className="sub">
               The page you requested may have been moved or removed. Try searching for an airport, or
               continue from the links below.
@@ -48,16 +51,19 @@ export default function NotFoundContent() {
             <div className="sub">
               您访问的页面可能已被移动或删除。试试搜索机场，或从下面的入口继续浏览。
             </div>
+            <div className="sub">
+              您造訪的頁面可能已被移動或刪除。請嘗試搜尋機場，或從下方入口繼續瀏覽。
+            </div>
 
             <form action="/en/airports" method="get" role="search" style={{ marginTop: 22, maxWidth: 520 }}>
               <label className="sr-only" htmlFor="nf-q">
-                Search airports / 搜索机场
+                Search airports / 搜索机场 / 搜尋機場
               </label>
               <input
                 id="nf-q"
                 type="search"
                 name="q"
-                placeholder="Search airports, cities or IATA codes / 搜索机场、城市或 IATA 代码"
+                placeholder="Search airports, cities or IATA codes / 搜索机场、城市或 IATA 代码 / 搜尋機場、城市或 IATA 代碼"
                 style={{
                   width: '100%',
                   height: 56,

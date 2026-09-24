@@ -21,15 +21,16 @@
 CREATE OR REPLACE FUNCTION airports_refresh_search_blob() RETURNS trigger AS $$
 BEGIN
   NEW.search_blob :=
-    NEW.iata || ' ' || NEW.name || ' ' || NEW.name_en || ' ' ||
-    NEW.city || ' ' || coalesce(NEW.city_en, '') || ' ' || NEW.slug;
+    NEW.iata || ' ' || NEW.name || ' ' || coalesce(NEW.name_tw, '') || ' ' || NEW.name_en || ' ' ||
+    NEW.city || ' ' || coalesce(NEW.city_tw, '') || ' ' ||
+    coalesce(NEW.city_en, '') || ' ' || NEW.slug;
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
 
 DROP TRIGGER IF EXISTS airports_search_blob_trg ON airports;
 CREATE TRIGGER airports_search_blob_trg
-  BEFORE INSERT OR UPDATE OF iata, name, name_en, city, city_en, slug ON airports
+  BEFORE INSERT OR UPDATE OF iata, name, name_tw, name_en, city, city_tw, city_en, slug ON airports
   FOR EACH ROW EXECUTE FUNCTION airports_refresh_search_blob();
 
 -- ------------------------------------------------------------------ reports

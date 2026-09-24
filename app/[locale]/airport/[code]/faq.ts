@@ -2,7 +2,22 @@ import type { FaqItem } from '@/components/Faq';
 import { formatNumber, transitLabel } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
-import type { AirportDetail } from '@/lib/types';
+import type { AirportDetail, Terminal } from '@/lib/types';
+
+/**
+ * Complete gate phrase for one terminal, worded by the catalog so each locale
+ * uses its own script (登机口 / 登機口). A gate range that names a concourse
+ * ("Concourse A–E" / "A–E 廊") is already a phrase and stands on its own;
+ * anything else is a code list and needs the word "gates" in front of it.
+ */
+function gatePhrase(locale: Locale, t: ReturnType<typeof getMessages>, terminal: Terminal): string {
+  const { gateRange, gateCount } = terminal;
+  if (!gateRange) return t.units.gates(gateCount);
+  if (locale === 'en') {
+    return /^concourse/i.test(gateRange) ? gateRange : t.units.gatesLabel(gateRange);
+  }
+  return gateRange.endsWith('廊') ? gateRange : t.units.gatesLabel(gateRange);
+}
 
 /** FAQ assembled from database fields, in the requested locale. */
 export function buildFaq(
@@ -18,12 +33,8 @@ export function buildFaq(
   const terminalList = airport.terminals
     .map((terminal) =>
       locale === 'en'
-        ? `${terminal.name} (${terminal.code}, ${
-            terminal.gateRange ? `gates ${terminal.gateRange}` : `${terminal.gateCount} gates`
-          })`
-        : `${terminal.name}（${terminal.code}，登机口 ${
-            terminal.gateRange ?? `${terminal.gateCount} 个`
-          }）`
+        ? `${terminal.name} (${terminal.code}, ${gatePhrase(locale, t, terminal)})`
+        : `${terminal.name}（${terminal.code}，${gatePhrase(locale, t, terminal)}）`
     )
     .join(listSeparator);
 
@@ -35,6 +46,15 @@ export function buildFaq(
         : `${terminal.name}（${terminal.code}）：${terminal.airlines}`
     )
     .join(clauseSeparator);
+
+  /** The same terminals reduced to their gate information alone. */
+  const gateList = airport.terminals
+    .map((terminal) =>
+      locale === 'en'
+        ? `${terminal.name} (${gatePhrase(locale, t, terminal)})`
+        : `${terminal.name}（${gatePhrase(locale, t, terminal)}）`
+    )
+    .join(listSeparator);
 
   const transitSummary = airport.transit
     .map((option) => transitLabel(locale, option))
@@ -60,6 +80,21 @@ export function buildFaq(
               formatNumber(airport.terminals.length, locale),
               formatNumber(airport.gateCount, locale),
               terminalList
+            ),
+          },
+        ]
+      : []),
+    // The other half of the same demand: "how many gates does X have" is asked
+    // as often as the terminal count, and its answer is the gate split.
+    ...(airport.terminals.length > 0 && airport.gateCount > 0
+      ? [
+          {
+            q: t.faq.gateCount(airport.name),
+            a: t.faq.gateCountAnswer(
+              airport.name,
+              airport.iata,
+              formatNumber(airport.gateCount, locale),
+              gateList
             ),
           },
         ]

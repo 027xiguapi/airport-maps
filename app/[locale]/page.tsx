@@ -492,7 +492,7 @@ export default async function HomePage({ params }: Props) {
                       {t.units.gates(airport.gateCount)}
                     </span>
                   </span>
-                  <span className="mt-auto inline-flex items-center gap-1.5 border-t border-dashed border-t-white/18 pt-3 text-[12.5px] font-semibold text-amber [&>svg]:transition-transform [&>svg]:duration-150 group-hover:[&>svg]:translate-x-[3px]">
+                  <span className="mt-auto inline-flex items-center gap-1.5 pt-3 pl-3 text-[12.5px] font-semibold text-amber [&>svg]:transition-transform [&>svg]:duration-150 group-hover:[&>svg]:translate-x-[3px]">
                     {t.guides.more}
                     <ArrowIcon />
                   </span>

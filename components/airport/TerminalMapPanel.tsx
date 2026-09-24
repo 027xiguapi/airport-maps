@@ -14,6 +14,7 @@ import MapZoom from './MapZoom';
 export default function TerminalMapPanel({
   locale,
   iata,
+  name,
   mapImg,
   mapSvg,
   terminalMapUrl,
@@ -21,6 +22,8 @@ export default function TerminalMapPanel({
 }: {
   locale: Locale;
   iata: string;
+  /** Airport name for the image alt text; the panel label above it shows the code. */
+  name: string;
   mapImg: string | null;
   mapSvg: string;
   /** `/terminal-maps/HKG/HKG_large.png` when hosted, else null. */
@@ -30,6 +33,7 @@ export default function TerminalMapPanel({
 }) {
   const t = getMessages(locale);
   const zoomSrc = terminalMapUrl ?? mapImg;
+  const mapAlt = t.airport.mapAlt(name, iata);
 
   return (
       <>
@@ -44,7 +48,7 @@ export default function TerminalMapPanel({
           {mapImg && (
             <MapZoom
               src={mapImg}
-              alt={t.airport.realMapTitle(iata)}
+              alt={mapAlt}
               label={t.airport.zoomLabel}
               closeLabel={t.airport.zoomClose}
               zoomInLabel={t.airport.zoomIn}
@@ -55,7 +59,7 @@ export default function TerminalMapPanel({
       </div>
       {mapImg ? (
         <figure className="map-img-wrap">
-          <img src={mapImg} alt={t.airport.realMapTitle(iata)} decoding="async" />
+          <img src={mapImg} alt={mapAlt} decoding="async" />
         </figure>
       ) : (
         <>

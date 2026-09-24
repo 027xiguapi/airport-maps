@@ -54,11 +54,14 @@ export default function RelatedLinks({
             {t.airport.wikiLabel} ↗
           </a>
         </Button>
-        <Button asChild variant="outline">
-          <a href={baikeUrl(titleZh)} target="_blank" rel="noopener noreferrer">
-            {t.airport.baikeLabel} ↗
-          </a>
-        </Button>
+        {/* Baidu Baike is simplified-Chinese only, so it is left off /tw pages. */}
+        {locale !== 'tw' && (
+          <Button asChild variant="outline">
+            <a href={baikeUrl(titleZh)} target="_blank" rel="noopener noreferrer">
+              {t.airport.baikeLabel} ↗
+            </a>
+          </Button>
+        )}
       </div>
     </section>
   );

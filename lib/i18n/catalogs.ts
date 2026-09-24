@@ -1,5 +1,6 @@
 import { DEFAULT_LOCALE, LOCALES, type Locale } from './config';
 import { en } from './messages/en';
+import { tw } from './messages/tw';
 import { zh, type Messages } from './messages/zh';
 
 /**
@@ -14,7 +15,7 @@ import { zh, type Messages } from './messages/zh';
  * registered in config but not here fall back to the default catalog and their
  * URL prefixes redirect to the visitor's best published language.
  */
-const CATALOGS: Partial<Record<Locale, Messages>> = { en, zh };
+const CATALOGS: Partial<Record<Locale, Messages>> = { en, zh, tw };
 
 /** Locales whose UI catalog exists; everything else falls back to the default. */
 export const PUBLISHED_LOCALES = LOCALES.filter(

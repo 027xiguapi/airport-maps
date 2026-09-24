@@ -154,19 +154,20 @@ ground_transport     216 行   地面交通（name/description + 英文列，可
 
 ### 语言注册表与 URL 方案
 
-`lib/i18n/config.ts` 的 `LOCALES` 注册了 24 个语言代码（顺序即语言切换器顺序），但**只有 `lib/i18n/catalogs.ts` 里登记了消息目录的语言才真正发布**——当前是 `en` + `zh`。未发布的前缀会被剥掉并跳到访客的最佳可用语言，而不是 404，也不会出现「同一批英文页面挂在 /es 下」的重复收录。
+`lib/i18n/config.ts` 的 `LOCALES` 注册了 24 个语言代码（顺序即语言切换器顺序），但**只有 `lib/i18n/catalogs.ts` 里登记了消息目录的语言才真正发布**——当前是 `en` + `zh` + `tw`（繁体中文，`htmlLang=zh-hant`，URL 前缀 `/tw`）。未发布的前缀会被剥掉并跳到访客的最佳可用语言，而不是 404，也不会出现「同一批英文页面挂在 /es 下」的重复收录。
 
 URL 方案（与生产站点地图一致）：
 
 | 地址 | 行为 |
 | --- | --- |
 | `/`、`/airport/PEK` | **默认语言（英语）的规范地址**，`proxy.ts` 内部 rewrite 到 `[locale]` 路由，可见 URL 不变；`x-default` 指向这里 |
-| `/zh/airport/PEK` | 中文页面的规范地址 |
+| `/zh/airport/PEK` | 中文（简体）页面的规范地址 |
+| `/tw/airport/PEK` | 繁体中文页面的规范地址（`hreflang="zh-hant"`） |
 | `/en/airport/PEK` | 旧地址，308 跳到裸路径，保证一个英文页面只有一个可收录 URL |
 | `/es/...`、`/de/...` | 已注册但未发布（或任意两位语言前缀）：剥离前缀后跳到访客最佳可用语言 |
 | 深层裸路径（`/airport/PEK`） | 访问过某个语言后由 `preferred-locale` Cookie 记住选择；未设置时按 `Accept-Language` 判断 |
 
-每页都输出 `hreflang`（`en`、`zh-CN`、`x-default`）与按语言区分的 `canonical`；`sitemap.xml` 为每个地址列出全部已发布语言版本。`proxy.ts` 跳过 `/api`、`/_next` 与带扩展名的静态文件。
+每页都输出 `hreflang`（`en`、`zh-hans`、`zh-hant`、`x-default`）与按语言区分的 `canonical`；`sitemap.xml` 为每个地址列出全部已发布语言版本。`proxy.ts` 跳过 `/api`、`/_next` 与带扩展名的静态文件。
 
 页头右上角的语言切换器用 `<details>` 实现（**无 JS 也能用**），每一项目标语言都是指向「当前页面等价路径」的真实链接（`components/LanguageSwitcher.tsx` 从 pathname 剥掉语言段再拼回去），既方便爬虫发现译文，也不会把访客丢回首页；点击时顺手写入 `preferred-locale` Cookie。
 
@@ -179,6 +180,15 @@ URL 方案（与生产站点地图一致）：
 5. 在 `scripts/seed.mjs` 的 `SEED_LOCALES` 中加入该语言，然后 `npm run db:reset`。
 
 路由、`generateStaticParams`、`hreflang`、站点地图、语言切换器与 AdSense 无关的页面代码都会自动跟随，无需改动页面。
+
+#### 派生语言：繁体中文（`tw`）怎么做
+
+`tw` 与中文同属一个书写系统，文案是**派生**而不是另写一份，因此它的第 2、4、5 步不同：
+
+- 消息目录 `lib/i18n/messages/tw.ts`、`content/tw/**`（63 篇机场指南 + 37 篇国家介绍 + 4 个静态页）由 `npm run i18n:hant` 生成：OpenCC `cn → twp` 转换，先过 `content/terminology/tw-phrases.json` 的 `phrases`（台湾用法例外：希斯洛、杜拜、雪梨、巴塞隆納…），再过 `corrections`（纠正 OpenCC 的过度替换：连接→連線、只→隻、绑定→繫結）。脚本会检查 `${}` 插值数量、扫描简体残留，并拒绝在有残留时通过。
+- 重新生成会**覆盖** `content/tw`，所以要改文案就改词表（或改写生成器），不要直接改生成物。
+- 数据库侧没有 `terminology/tw.json`：`scripts/seed.mjs` 的 `DERIVED_LOCALES` 把 `tw` 标记为派生语言，各表 `_tw` 列由 `toHant()` / `toHantName()` 从中文源直接转换（`name_tw`、`city_tw`、`region_tw`、`gate_range_tw`、`airlines_tw`、`label_tw`、`description_tw`，简介写入 `airport_translations.locale='tw'`）。种子脚本最后打印 `derived (tw)` 的条数与简体残留数。
+- 名称类字段用 `toHantName()`：OpenCC 在音译里会把「里」读成「裡」（紐伯裡、庫裡蒂巴），名称里一律还原为「里」。
 
 ### 默认语言与内容源语言是两件事
 
@@ -196,7 +206,8 @@ URL 方案（与生产站点地图一致）：
 | 内容 | 来源 | 说明 |
 | --- | --- | --- |
 | 机场名称、城市、国家、区域 | `airports.name_en` / `city_en`、`countries.name_en` / `region_en` | 数据自带，直接切换 |
-| 机场简介 | `airport_translations(airport_iata, locale, description_md)` | 按语言存放的 Markdown，当前 726 条 |
+| 同上（繁体） | `airports.name_tw` / `city_tw`、`countries.name_tw` / `region_tw` | 由中文源转换生成，见「派生语言」 |
+| 机场简介 | `airport_translations(airport_iata, locale, description_md)` | 按语言存放的 Markdown，当前 1089 条（zh/en/tw 各 363） |
 | 航站楼名称、登机口范围 | `terminals.name_en` / `gate_range_en` | 由 `content/terminology/en.json` 词典 + 规则翻译填入 |
 | 设施 / 航站楼设施标签 | `*.label_en` | 同上（封闭词表） |
 | 航司列表 | `terminals.airlines_en` | **可空**；为空时英文页面不显示该行 |

@@ -54,7 +54,10 @@ export default function CountryLinks({
             <ReferenceLinks
               locale={locale}
               nameEn={country.nameEn}
-              titleZh={countryEncyclopediaTitle(country.code, country.nameZh)}
+              titleZh={countryEncyclopediaTitle(
+                country.code,
+                locale === 'tw' ? country.name : country.nameZh
+              )}
               website={null}
             />
           </div>
@@ -74,7 +77,10 @@ export default function CountryLinks({
                 <ReferenceLinks
                   locale={locale}
                   nameEn={airport.nameEn}
-                  titleZh={airportEncyclopediaTitle(airport.iata, airport.nameZh)}
+                  titleZh={airportEncyclopediaTitle(
+                    airport.iata,
+                    locale === 'tw' ? airport.name : airport.nameZh
+                  )}
                   website={airportWebsite(airport.iata)}
                 />
               </div>
@@ -120,11 +126,14 @@ function ReferenceLinks({
           {t.airport.wikiLabel} ↗
         </a>
       </Button>
-      <Button asChild variant="outline">
-        <a href={baikeUrl(titleZh)} target="_blank" rel="noopener noreferrer">
-          {t.airport.baikeLabel} ↗
-        </a>
-      </Button>
+      {/* Baidu Baike is simplified-Chinese only, so it is left off /tw pages. */}
+      {locale !== 'tw' && (
+        <Button asChild variant="outline">
+          <a href={baikeUrl(titleZh)} target="_blank" rel="noopener noreferrer">
+            {t.airport.baikeLabel} ↗
+          </a>
+        </Button>
+      )}
     </>
   );
 }

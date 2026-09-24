@@ -44,9 +44,16 @@ export const en: Messages = {
     home: 'Home',
     viewMap: 'View map',
     terminalMap: 'Terminal map',
-    /** Airport page <title>/og:title, mirroring the Chinese "2026年最新…地图". */
+    /**
+     * Airport page <title>/og:title, mirroring the Chinese "2026年最新…地图".
+     * Name and code lead because the layout template appends the site name and
+     * the SERP truncates the tail; "All Terminals" matches the searches that
+     * ask for a map of every terminal at once.
+     */
     latestAirportTitle: (year: number, name: string, iata: string) =>
-      `Latest ${name} (${iata}) Terminal Map ${year}`,
+      `${name} (${iata}) Terminal Map — All Terminals ${year}`,
+    /** H1 on the airport page, carrying the phrase the title tag leads with. */
+    airportHeading: (name: string) => `${name} Terminal Map`,
     airportGuide: 'Airport guide',
     lastUpdated: 'Recently updated',
     updatedOn: (date: string) => `Updated ${date}`,
@@ -55,6 +62,9 @@ export const en: Messages = {
   },
 
   units: {
+    /** Key-facts cell labels on the airport page (no count). */
+    terminalsFact: 'Terminals',
+    gatesFact: 'Gates',
     terminals: (n: number) => `${n} terminal${n === 1 ? '' : 's'}`,
     terminalsShort: (n: number) => `${n} terminal${n === 1 ? '' : 's'}`,
     gates: (n: number) => `${n} gate${n === 1 ? '' : 's'}`,
@@ -291,8 +301,13 @@ export const en: Messages = {
   },
 
   airport: {
-    /** Meta description assembled from formatted airport facts. Terminals and
-        gates are null for directory airports with no compiled counts. */
+    /**
+     * Meta description assembled from formatted airport facts. Terminals and
+     * gates are null for directory airports with no compiled counts, and the
+     * clause drops out instead of reading "0 terminals". The count question
+     * Google receives ("how many gates does X have") is answered in the first
+     * clause, because that is the text a snippet shows.
+     */
     metaDescription: (o: {
       name: string;
       nameEn: string;
@@ -304,14 +319,22 @@ export const en: Messages = {
       pax: string;
       distance: string;
     }) =>
-      `${o.name} (${o.iata}, ${o.nameEn}) serves ${o.city}, ${o.country}. ${
-        o.terminals
-          ? `Terminal maps, ${o.terminals.toLowerCase()} and ${o.gates?.toLowerCase()}`
-          : 'Terminal map and gate layout'
-      }${o.pax ? `, ${o.pax} passengers a year` : ''}${o.distance ? `, ${o.distance} from the city centre` : ''}.`,
+      o.terminals
+        ? `${o.name} (${o.iata}) has ${o.terminals} terminal${
+            o.terminals === '1' ? '' : 's'
+          }${o.gates ? ` with ${o.gates} gate${o.gates === '1' ? '' : 's'}` : ''}${
+            o.pax ? `, handling ${o.pax} passengers a year` : ''
+          }${
+            o.distance ? `, ${o.distance} from the city centre` : ''
+          }. Terminal map showing all terminals, gate ranges and ground transport.`
+        : `${o.name} (${o.iata}) serves ${o.city}, ${o.country}. Terminal layout, airport facts and ground transport.`,
     mapTitle: (iata: string) => `${iata} · Terminal layout`,
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} Airport Terminal Map — Gates & Navigation`,
+    /** Alt text for the terminal-map images: full airport name and code, which
+        the panel label above them omits. */
+    mapAlt: (name: string, iata: string) =>
+      `${name} (${iata}) terminal map showing all terminals, gate ranges and concourses`,
     realMapNote: 'TERMINAL MAP',
     /** Download buttons under the map: the image downloads directly, the PDF
         button links out to a Google search for the official PDF. */
@@ -466,6 +489,9 @@ export const en: Messages = {
     terminalCount: (name: string) => `How many terminals does ${name} have?`,
     terminalCountAnswer: (name: string, iata: string, terminals: string, gates: string, list: string) =>
       `${name} (${iata}) has ${terminals} terminals with ${gates} gates in total: ${list}.`,
+    gateCount: (name: string) => `How many gates does ${name} have?`,
+    gateCountAnswer: (name: string, iata: string, gates: string, list: string) =>
+      `${name} (${iata}) has ${gates} gates in total: ${list}.`,
     distance: (name: string, city: string) => `How far is ${name} from central ${city}?`,
     distanceAnswer: (name: string, city: string, distance: string, transit: string) =>
       `${name} is about ${distance} from central ${city}. You can reach the city by ${transit}.`,

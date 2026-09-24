@@ -36,9 +36,15 @@ export const zh = {
     home: '首页',
     viewMap: '查看地图',
     terminalMap: '航站楼地图',
-    /** 机场页 <title>/og:title：「2026年最新广州白云国际机场地图」。 */
-    latestAirportTitle: (year: number, name: string, _iata: string) =>
-      `${year}年最新${name}地图`,
+    /**
+     * 机场页 <title>/og:title：「2026年最新广州白云国际机场（CAN）航站楼地图」。
+     * 中文搜索大量用 IATA 代码（"mxp 機場"）和"航站楼地图/平面图"，所以标题里
+     * 带上代码与"航站楼"，而不是只有机场名加"地图"。
+     */
+    latestAirportTitle: (year: number, name: string, iata: string) =>
+      `${year}年最新${name}（${iata}）航站楼地图`,
+    /** 机场页 H1，与标题同一主词。 */
+    airportHeading: (name: string) => `${name}航站楼地图`,
     airportGuide: '机场指南',
     lastUpdated: '最近更新',
     updatedOn: (date: string) => `更新于 ${date}`,
@@ -47,6 +53,9 @@ export const zh = {
   },
 
   units: {
+    /** 机场页关键数据格的标签（不含数量）。 */
+    terminalsFact: '航站楼',
+    gatesFact: '登机口',
     terminals: (n: number) => `${n} 座航站楼`,
     terminalsShort: (n: number) => `${n} 航站楼`,
     gates: (n: number) => `${n} 个登机口`,
@@ -293,10 +302,13 @@ export const zh = {
     }) =>
       `${o.name}（${o.iata}，${o.nameEn}）位于${o.city}${
         o.terminals ? `，共有 ${o.terminals} 座航站楼、${o.gates} 个登机口` : ''
-      }${o.pax ? `，年旅客量${o.pax}` : ''}${o.distance ? `，距市中心约 ${o.distance}` : ''}。查看航站楼平面示意图、登机口分布与地面交通方式。`,
+      }${o.pax ? `，年旅客量${o.pax}` : ''}${o.distance ? `，距市中心约 ${o.distance}` : ''}。查看航站楼地图、登机口分布与地面交通方式。`,
     mapTitle: (iata: string) => `${iata} · 航站楼平面示意图`,
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} 机场航站楼地图 — 登机口与导航`,
+    /** 航站楼地图图片的 alt：补上机场全称与代码，上方的小标题只有代码。 */
+    mapAlt: (name: string, iata: string) =>
+      `${name}（${iata}）航站楼地图，含各航站楼、登机口与指廊分布`,
     realMapNote: 'TERMINAL MAP',
     /** 终端图下方的下载按钮：图片直接下载，PDF 按钮跳转谷歌搜索官方 PDF。 */
     zoomLabel: '放大',
@@ -449,6 +461,9 @@ export const zh = {
     terminalCount: (name: string) => `${name}有几座航站楼？`,
     terminalCountAnswer: (name: string, iata: string, terminals: string, gates: string, list: string) =>
       `${name}（${iata}）共有 ${terminals} 座航站楼，合计 ${gates} 个登机口：${list}。`,
+    gateCount: (name: string) => `${name}有多少个登机口？`,
+    gateCountAnswer: (name: string, iata: string, gates: string, list: string) =>
+      `${name}（${iata}）共有 ${gates} 个登机口：${list}。`,
     distance: (name: string, city: string) => `${name}距离${city}市中心有多远？`,
     distanceAnswer: (name: string, city: string, distance: string, transit: string) =>
       `${name}距离${city}市中心约 ${distance}，可搭乘${transit}等交通方式往返市区。`,

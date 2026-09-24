@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button';
 import { formatNumber } from '@/lib/format';
 import { BackIcon } from '@/lib/icons';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
+import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { mapImageUrl } from '@/lib/map-images';
 import { getAirportByCode, getAirportRoutes } from '@/lib/queries';
@@ -31,7 +32,7 @@ export const revalidate = 3600;
 export async function generateStaticParams() {
   const [covered, airports] = await Promise.all([routeAirportCodes(), getAirportRoutes()]);
   const withRoutes = new Set(covered);
-  return ['zh', 'en'].flatMap((locale) =>
+  return PUBLISHED_LOCALES.flatMap((locale) =>
     airports
       .filter((airport) => withRoutes.has(airport.iata))
       .map((airport) => ({ locale, code: airport.iata }))

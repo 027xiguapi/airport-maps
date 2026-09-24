@@ -50,11 +50,11 @@ export default function AirportHead({
     // em-dash placeholder as pax/distance rather than "0".
     {
       num: airport.terminals.length > 0 ? formatNumber(airport.terminals.length, locale) : '—',
-      label: locale === 'en' ? 'Terminals' : '航站楼',
+      label: t.units.terminalsFact,
     },
     {
       num: airport.gateCount > 0 ? formatNumber(airport.gateCount, locale) : '—',
-      label: locale === 'en' ? 'Gates' : '登机口',
+      label: t.units.gatesFact,
     },
     { num: pax ?? '—', label: t.units.paxFull },
     { num: distance ?? '—', label: t.units.distance },

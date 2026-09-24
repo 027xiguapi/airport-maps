@@ -64,7 +64,7 @@ export default function RouteMapSection({
               tiers: t.airport.routeTiers,
               carriers: t.airport.routeCarriersTpl,
               openAirport: t.airport.routeOpenAirport,
-              numberLocale: locale === 'en' ? 'en-US' : 'zh-CN',
+              numberLocale: locale === 'en' ? 'en-US' : locale === 'tw' ? 'zh-TW' : 'zh-CN',
             }}
           />
         </div>

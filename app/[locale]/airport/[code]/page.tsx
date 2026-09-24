@@ -6,9 +6,10 @@ import Markdown from '@/components/Markdown';
 import TocNav, { type TocItem } from '@/components/TocNav';
 import { formatDistance, formatNumber, formatPax } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
+import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { localizedPath } from '@/lib/i18n/config';
 import { getAirportGuide } from '@/lib/content';
-import { getAirportByCode, getAirportNameZh, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
+import { getAirportByCode, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
 import { getAirportGeo } from '@/lib/airport-geo';
 import { getAirportRouteMap } from '@/lib/routes';
 import { routeImageUrl } from '@/lib/route-images';
@@ -34,7 +35,7 @@ export const revalidate = 3600;
 
 export async function generateStaticParams() {
   const routes = await getAirportRoutes();
-  return ['zh', 'en'].flatMap((locale) => routes.map((r) => ({ locale, code: r.iata })));
+  return PUBLISHED_LOCALES.flatMap((locale) => routes.map((r) => ({ locale, code: r.iata })));
 }
 
 type Props = { params: Promise<{ locale: string; code: string }> };
@@ -113,10 +114,9 @@ export default async function AirportPage({ params }: Props) {
     permanentRedirect(localizedPath(locale, `/airport/${airport.iata}`));
   }
 
-  const [related, guide, nameZh, routeMap] = await Promise.all([
+  const [related, guide, routeMap] = await Promise.all([
     getRelatedAirports(locale, airport.countryCode, airport.iata, 6),
     Promise.resolve(getAirportGuide(locale, airport.iata)),
-    getAirportNameZh(airport.iata),
     getAirportRouteMap(locale, airport.iata),
   ]);
 
@@ -153,7 +153,13 @@ export default async function AirportPage({ params }: Props) {
     <>
       <JsonLd data={buildAirportGraph({ locale, airport, guide, faqItems })} />
 
-      <AirportHead locale={locale} airport={airport} published={published} modified={modified} />
+      <AirportHead
+        locale={locale}
+        airport={airport}
+        published={published}
+        modified={modified}
+        title={t.common.airportHeading(airport.name)}
+      />
 
       {/* Aside precedes the body in DOM so it stays on top when the rail
           collapses to a horizontal strip on narrow screens; on desktop the
@@ -170,6 +176,7 @@ export default async function AirportPage({ params }: Props) {
           <TerminalMapPanel
             locale={locale}
             iata={airport.iata}
+            name={airport.name}
             mapImg={mapImg}
             mapSvg={mapSvg}
             terminalMapUrl={terminalMap.png}
@@ -194,7 +201,9 @@ export default async function AirportPage({ params }: Props) {
             locale={locale}
             iata={airport.iata}
             nameEn={airport.nameEn}
-            nameZh={nameZh ?? airport.name}
+            // Encyclopedia entry title: the page's own wording on a Traditional
+            // page, the source Chinese name otherwise (Baidu Baike is simplified).
+            nameZh={locale === 'tw' ? airport.name : airport.nameZh}
             website={airportWebsite(airport.iata)}
           />
 

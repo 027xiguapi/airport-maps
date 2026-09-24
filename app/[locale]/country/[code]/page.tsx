@@ -10,6 +10,7 @@ import CountryIntro from '@/components/country/CountryIntro';
 import CountryLinks from '@/components/country/CountryLinks';
 import { getCountryIntro } from '@/lib/content';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
+import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { localizedPath } from '@/lib/i18n/config';
 import { getAirportsByCountry, getAllCountryCodes, getCountries, getCountry } from '@/lib/queries';
 import { SITE_NAME } from '@/lib/site';
@@ -21,7 +22,7 @@ export const revalidate = 3600;
 /** Pre-render every locale × country pair. */
 export async function generateStaticParams() {
   const countries = await getAllCountryCodes();
-  return ['zh', 'en'].flatMap((locale) => countries.map((c) => ({ locale, code: c.code })));
+  return PUBLISHED_LOCALES.flatMap((locale) => countries.map((c) => ({ locale, code: c.code })));
 }
 
 type Props = { params: Promise<{ locale: string; code: string }> };

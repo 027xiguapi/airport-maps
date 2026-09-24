@@ -8,6 +8,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import pg from 'pg';
 import { databaseUrl, ROOT } from './_env.mjs';
+import { toHant, toHantName, SIMPLIFIED_ONLY } from './_hant.mjs';
 
 const CITY_EN = {
   上海: 'Shanghai', 东京: 'Tokyo', 亚特兰大: 'Atlanta', 伊斯坦布尔: 'Istanbul',
@@ -54,17 +55,23 @@ const REGION_EN = {
  * `zh` is the editorial source language (see SOURCE_LOCALE in
  * lib/i18n/config.ts): its descriptions come from the legacy content and its
  * terminology needs no file. `en` is generated + looked up in
- * content/terminology/en.json. Order here does not matter.
+ * content/terminology/en.json. `tw` is *derived*: its columns are the Chinese
+ * source run through toHant()/toHantName() (OpenCC + the exceptions in
+ * content/terminology/tw-phrases.json), so it needs no terminology file either.
+ * Order here does not matter.
  */
-const SEED_LOCALES = ['zh', 'en'];
+const SEED_LOCALES = ['zh', 'en', 'tw'];
+
+/** Locales whose columns are derived from the Chinese source rather than authored. */
+const DERIVED_LOCALES = new Set(['tw']);
 
 /**
  * Loads a locale's closed-vocabulary terminology. Chinese is the source
- * language, so it needs no file.
+ * language and `tw` is derived from it, so neither needs a file.
  */
 function loadTerminology(locale) {
   const path = join(ROOT, 'content', 'terminology', `${locale}.json`);
-  if (locale === 'zh') return null;
+  if (locale === 'zh' || DERIVED_LOCALES.has(locale)) return null;
   if (!existsSync(path)) {
     throw new Error(`missing terminology file: content/terminology/${locale}.json`);
   }
@@ -286,9 +293,12 @@ try {
   for (const [i, code] of countryCodes.entries()) {
     const c = countries[code];
     await client.query(
-      `INSERT INTO countries (code, name, name_en, region, region_en, flag_url, sort_order)
-       VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-      [code, c.name, c.nameEn, c.region, REGION_EN[c.region], `/flags/${code.toLowerCase()}.jpg`, i]
+      `INSERT INTO countries (code, name, name_en, name_tw, region, region_en, region_tw, flag_url, sort_order)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
+      [
+        code, c.name, c.nameEn, toHantName(c.name), c.region, REGION_EN[c.region],
+        toHantName(c.region), `/flags/${code.toLowerCase()}.jpg`, i,
+      ]
     );
   }
 
@@ -301,39 +311,43 @@ try {
 
     await client.query(
       `INSERT INTO airports
-         (iata, slug, name, name_en, city, city_en, country_code,
+         (iata, slug, name, name_en, name_tw, city, city_en, city_tw, country_code,
           gate_count, annual_pax_m, distance_km, updated_at)
-       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10, now() - ($11 || ' days')::interval)`,
-      [a.iata, slug, a.name, a.nameEn, a.city, CITY_EN[a.city], a.country, a.gates, paxM, distanceKm, i]
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12, now() - ($13 || ' days')::interval)`,
+      [
+        a.iata, slug, a.name, a.nameEn, toHantName(a.name), a.city, CITY_EN[a.city],
+        toHantName(a.city), a.country, a.gates, paxM, distanceKm, i,
+      ]
     );
 
-    // descriptions are Markdown; zh keeps the editorial copy, en is data-derived
+    // descriptions are Markdown; zh keeps the editorial copy, en is data-derived,
+    // tw is the Chinese copy converted (it is prose, so OpenCC's own wording wins)
     await client.query(
       `INSERT INTO airport_translations (airport_iata, locale, description_md)
-       VALUES ($1, 'zh', $2), ($1, 'en', $3)`,
-      [a.iata, a.desc, englishDescription(a, paxM, distanceKm, enTerms.transportModes)]
+       VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4)`,
+      [a.iata, a.desc, englishDescription(a, paxM, distanceKm, enTerms.transportModes), toHant(a.desc)]
     );
 
     for (const [ti, t] of a.terminals.entries()) {
       const isSatellite = /卫星/.test(t.name);
       const { rows } = await client.query(
         `INSERT INTO terminals
-           (airport_iata, code, name, name_en, gate_range, gate_range_en,
-            gate_count, airlines, airlines_en, is_satellite, sort_order)
-         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING id`,
+           (airport_iata, code, name, name_en, name_tw, gate_range, gate_range_en, gate_range_tw,
+            gate_count, airlines, airlines_en, airlines_tw, is_satellite, sort_order)
+         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) RETURNING id`,
         [
-          a.iata, t.code, t.name, enTerms.terminalNames[t.name],
-          t.gateRange ?? null, translateGateRange(t.gateRange),
+          a.iata, t.code, t.name, enTerms.terminalNames[t.name], toHantName(t.name),
+          t.gateRange ?? null, translateGateRange(t.gateRange), toHantName(t.gateRange ?? null),
           t.gates ?? 0, t.airlines ?? null, enTerms.airlines?.[t.airlines] ?? null,
-          isSatellite, ti,
+          toHant(t.airlines ?? null), isSatellite, ti,
         ]
       );
       for (const [fi, f] of (t.facilities ?? []).entries()) {
         if (!f?.label) continue;
         await client.query(
-          `INSERT INTO terminal_amenities (terminal_id, icon, label, label_en, sort_order)
-           VALUES ($1,$2,$3,$4,$5)`,
-          [rows[0].id, f.icon || 'shop', f.label, enTerms.labels[f.label], fi]
+          `INSERT INTO terminal_amenities (terminal_id, icon, label, label_en, label_tw, sort_order)
+           VALUES ($1,$2,$3,$4,$5,$6)`,
+          [rows[0].id, f.icon || 'shop', f.label, enTerms.labels[f.label], toHantName(f.label), fi]
         );
       }
     }
@@ -341,9 +355,9 @@ try {
     for (const [fi, f] of (a.facilities ?? []).entries()) {
       if (!f?.label) continue;
       await client.query(
-        `INSERT INTO airport_facilities (airport_iata, icon, label, label_en, sort_order)
-         VALUES ($1,$2,$3,$4,$5)`,
-        [a.iata, f.icon || 'shop', f.label, enTerms.labels[f.label], fi]
+        `INSERT INTO airport_facilities (airport_iata, icon, label, label_en, label_tw, sort_order)
+         VALUES ($1,$2,$3,$4,$5,$6)`,
+        [a.iata, f.icon || 'shop', f.label, enTerms.labels[f.label], toHantName(f.label), fi]
       );
     }
 
@@ -351,13 +365,15 @@ try {
       if (!t?.name) continue;
       await client.query(
         `INSERT INTO ground_transport
-           (airport_iata, icon, name, name_en, description, description_en, sort_order)
-         VALUES ($1,$2,$3,$4,$5,$6,$7)`,
+           (airport_iata, icon, name, name_en, name_tw, description, description_en, description_tw, sort_order)
+         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)`,
         [
           a.iata, t.icon || 'bus', t.name,
           enTerms.transit?.[t.name]?.name ?? null,
+          toHantName(t.name),
           t.desc ?? '',
           enTerms.transit?.[t.name]?.description ?? null,
+          toHant(t.desc ?? ''),
           si,
         ]
       );
@@ -371,15 +387,18 @@ try {
     const slug = `${slugify(a.nameEn)}-${a.iata.toLowerCase()}`;
     await client.query(
       `INSERT INTO airports
-         (iata, slug, name, name_en, city, city_en, country_code, gate_count, updated_at)
-       VALUES ($1,$2,$3,$4,$5,$6,$7,0, now() - ($8 || ' days')::interval)`,
-      [a.iata, slug, a.name, a.nameEn, a.city, a.cityEn, a.country, ordered.length + di]
+         (iata, slug, name, name_en, name_tw, city, city_en, city_tw, country_code, gate_count, updated_at)
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,0, now() - ($10 || ' days')::interval)`,
+      [
+        a.iata, slug, a.name, a.nameEn, toHantName(a.name), a.city, a.cityEn,
+        toHantName(a.city), a.country, ordered.length + di,
+      ]
     );
     const [descZh, descEn] = directoryDescriptions(a);
     await client.query(
       `INSERT INTO airport_translations (airport_iata, locale, description_md)
-       VALUES ($1, 'zh', $2), ($1, 'en', $3)`,
-      [a.iata, descZh, descEn]
+       VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4)`,
+      [a.iata, descZh, descEn, toHant(descZh)]
     );
   }
 
@@ -398,9 +417,42 @@ const { rows: coverage } = await client.query(
      (SELECT count(*) FROM terminals WHERE name_en IS NULL)::int      AS terminals_missing_en,
      (SELECT count(*) FROM terminals WHERE airlines_en IS NULL)::int  AS airlines_missing_en,
      (SELECT count(*) FROM ground_transport
-       WHERE name_en IS NULL OR description_en IS NULL)::int          AS transit_missing_en`
+       WHERE name_en IS NULL OR description_en IS NULL)::int          AS transit_missing_en,
+     (SELECT count(*) FROM airports WHERE name_tw IS NULL)::int       AS airports_missing_tw,
+     (SELECT count(*) FROM countries WHERE name_tw IS NULL)::int      AS countries_missing_tw,
+     (SELECT count(*) FROM terminals WHERE name_tw IS NULL)::int      AS terminals_missing_tw`
 );
+
+// The tw layer is machine-converted, so check the result instead of trusting it:
+// any simplified-only character left means the phrase list needs an entry.
+const { rows: twTexts } = await client.query(
+  `SELECT name_tw AS v FROM countries WHERE name_tw IS NOT NULL
+   UNION ALL SELECT region_tw FROM countries WHERE region_tw IS NOT NULL
+   UNION ALL SELECT name_tw FROM airports WHERE name_tw IS NOT NULL
+   UNION ALL SELECT city_tw FROM airports WHERE city_tw IS NOT NULL
+   UNION ALL SELECT name_tw FROM terminals WHERE name_tw IS NOT NULL
+   UNION ALL SELECT gate_range_tw FROM terminals WHERE gate_range_tw IS NOT NULL
+   UNION ALL SELECT airlines_tw FROM terminals WHERE airlines_tw IS NOT NULL
+   UNION ALL SELECT label_tw FROM airport_facilities WHERE label_tw IS NOT NULL
+   UNION ALL SELECT label_tw FROM terminal_amenities WHERE label_tw IS NOT NULL
+   UNION ALL SELECT name_tw FROM ground_transport WHERE name_tw IS NOT NULL
+   UNION ALL SELECT description_tw FROM ground_transport WHERE description_tw IS NOT NULL
+   UNION ALL SELECT description_md FROM airport_translations WHERE locale = 'tw'`
+);
+const twLeftovers = [
+  ...new Set(
+    twTexts
+      .flatMap((row) => [...row.v.matchAll(SIMPLIFIED_ONLY)].map((m) => m[0]))
+  ),
+];
+if (twLeftovers.length) {
+  console.warn(
+    `tw text still contains simplified characters: ${twLeftovers.join(' ')}` +
+      ' — add the word to content/terminology/tw-phrases.json'
+  );
+}
 
 console.log('seeded:', stats[0]);
 console.log('untranslated (en):', coverage[0]);
+console.log(`derived (tw): ${twTexts.length} strings checked, ${twLeftovers.length} simplified leftovers`);
 await client.end();

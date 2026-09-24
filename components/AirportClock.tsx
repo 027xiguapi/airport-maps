@@ -11,7 +11,7 @@ import { Card } from '@/components/ui/card';
 type Reading = { date: string; time: string; suffix: string };
 
 function read(now: Date, locale: string, timeZone?: string): Reading {
-  const lang = locale === 'en' ? 'en-GB' : 'zh-CN';
+  const lang = locale === 'en' ? 'en-GB' : locale === 'tw' ? 'zh-TW' : 'zh-CN';
   const opts = { timeZone } as Intl.DateTimeFormatOptions;
   return {
     date: new Intl.DateTimeFormat(lang, {

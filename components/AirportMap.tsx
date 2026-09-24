@@ -76,16 +76,16 @@ const CONTINENT_GROUP: Record<string, string> = {
 // countries.region fallback for site airports missing from the world data
 // (none today): zh + en values of the old five-group mapping.
 const REGION_FALLBACK: Record<string, string> = {
-  Europe: 'europe', '欧洲': 'europe',
-  'Europe and Asia': 'europe', '欧洲 / 亚洲': 'europe',
-  'East Asia': 'asia', '东亚': 'asia',
-  'Central Asia': 'asia', '中亚': 'asia',
-  'South Asia': 'asia', '南亚': 'asia',
-  'Southeast Asia': 'asia', '东南亚': 'asia',
+  Europe: 'europe', '欧洲': 'europe', '歐洲': 'europe',
+  'Europe and Asia': 'europe', '欧洲 / 亚洲': 'europe', '歐洲 / 亞洲': 'europe',
+  'East Asia': 'asia', '东亚': 'asia', '東亞': 'asia',
+  'Central Asia': 'asia', '中亚': 'asia', '中亞': 'asia',
+  'South Asia': 'asia', '南亚': 'asia', '南亞': 'asia',
+  'Southeast Asia': 'asia', '东南亚': 'asia', '東南亞': 'asia',
   'North America': 'americas', '北美洲': 'americas',
   'South America': 'americas', '南美洲': 'americas',
-  'the Middle East': 'africa', '中东': 'africa',
-  'the Middle East and Europe': 'africa', '中东 / 欧洲': 'africa',
+  'the Middle East': 'africa', '中东': 'africa', '中東': 'africa',
+  'the Middle East and Europe': 'africa', '中东 / 欧洲': 'africa', '中東 / 歐洲': 'africa',
   Africa: 'africa', '非洲': 'africa',
   Oceania: 'oceania', '大洋洲': 'oceania',
 };

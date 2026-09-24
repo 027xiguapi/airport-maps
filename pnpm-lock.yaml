@@ -81,6 +81,9 @@ importers:
       drizzle-kit:
         specifier: ^0.31.10
         version: 0.31.10
+      opencc-js:
+        specifier: ^1.4.2
+        version: 1.4.2
       sharp:
         specifier: ^0.35.4
         version: 0.35.4(@types/node@20.19.43)
@@ -1545,6 +1548,9 @@ packages:
         optional: true
       sass:
         optional: true
+
+  opencc-js@1.4.2:
+    resolution: {integrity: sha512-EdcspgdROiCCZDM+jZR6Pa670xW+EW2QhctPBQ8gRjg6lrx4IHEl+2s+kt5izk/TkxVRgdWuFgaGkaEdIUfdaw==}
 
   parse-entities@4.0.2:
     resolution: {integrity: sha512-GG2AQYWoLgL877gQIKeRPGO1xF9+eG1ujIb5soS5gPvLQ1y2o8FL90w2QWNdf9I361Mpp7726c+lj3U0qK1uGw==}
@@ -3066,6 +3072,8 @@ snapshots:
       - '@babel/core'
       - '@types/node'
       - babel-plugin-macros
+
+  opencc-js@1.4.2: {}
 
   parse-entities@4.0.2:
     dependencies:

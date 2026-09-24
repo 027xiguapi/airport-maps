@@ -37,7 +37,9 @@ export function buildCountryFaq(
     .map((a) =>
       locale === 'en'
         ? `${a.name} (${a.iata}, ${a.terminalCount} terminals, ${a.gateCount} gates)`
-        : `${a.name}（${a.iata}，${a.terminalCount} 座航站楼、${a.gateCount} 个登机口）`
+        : `${a.name}（${a.iata}，${t.units.terminals(a.terminalCount)}、${t.units.gates(
+            a.gateCount
+          )}）`
     )
     .join(listSeparator);
 

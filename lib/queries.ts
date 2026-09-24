@@ -20,15 +20,32 @@ function likePattern(value: string): string {
   return `%${value.trim().replace(/[\\%_]/g, (c) => `\\${c}`)}%`;
 }
 
-/** Picks the localized value, falling back to the default language. */
-function pick(locale: Locale, zh: string | null, en: string | null): string {
+/**
+ * Picks the localized value, falling back to the Chinese source. `tw` is the
+ * derived Traditional-Chinese layer (see scripts/_hant.mjs); it is null only on
+ * a dataset seeded before that layer existed, hence the same fallback chain.
+ */
+function pick(
+  locale: Locale,
+  zh: string | null,
+  tw: string | null,
+  en: string | null
+): string {
   if (locale === 'en') return en ?? zh ?? '';
+  if (locale === 'tw') return tw ?? zh ?? en ?? '';
   return zh ?? en ?? '';
 }
 
 /** Picks the localized value, or null when that locale has no translation. */
-function pickStrict(locale: Locale, zh: string | null, en: string | null): string | null {
-  return locale === 'en' ? en : zh;
+function pickStrict(
+  locale: Locale,
+  zh: string | null,
+  tw: string | null,
+  en: string | null
+): string | null {
+  if (locale === 'en') return en;
+  if (locale === 'tw') return tw;
+  return zh;
 }
 
 // -------------------------------------------------------------- raw SQL rows
@@ -37,13 +54,17 @@ type AirportRow = {
   iata: string;
   slug: string;
   name_zh: string;
+  name_tw: string | null;
   name_en: string;
   city_zh: string;
+  city_tw: string | null;
   city_en: string | null;
   country_code: string;
   country_name_zh: string;
+  country_name_tw: string | null;
   country_name_en: string;
   region_zh: string;
+  region_tw: string | null;
   region_en: string;
   flag_url: string;
   gate_count: number;
@@ -57,23 +78,38 @@ type TerminalJson = {
   id: number;
   code: string;
   name_zh: string;
+  name_tw: string | null;
   name_en: string | null;
   gate_range_zh: string | null;
+  gate_range_tw: string | null;
   gate_range_en: string | null;
   gate_count: number;
   airlines_zh: string | null;
+  airlines_tw: string | null;
   airlines_en: string | null;
   is_satellite: boolean;
-  amenities: { icon: string; label_zh: string; label_en: string | null }[];
+  amenities: {
+    icon: string;
+    label_zh: string;
+    label_tw: string | null;
+    label_en: string | null;
+  }[];
 };
 
-type FacilityJson = { icon: string; label_zh: string; label_en: string | null };
+type FacilityJson = {
+  icon: string;
+  label_zh: string;
+  label_tw: string | null;
+  label_en: string | null;
+};
 
 type TransitJson = {
   icon: string;
   name_zh: string;
+  name_tw: string | null;
   name_en: string | null;
   description_zh: string;
+  description_tw: string | null;
   description_en: string | null;
 };
 
@@ -90,13 +126,17 @@ const AIRPORT_SUMMARY = `
   a.iata,
   a.slug,
   a.name     AS name_zh,
+  a.name_tw,
   a.name_en,
   a.city     AS city_zh,
+  a.city_tw,
   a.city_en,
   a.country_code,
   c.name     AS country_name_zh,
+  c.name_tw  AS country_name_tw,
   c.name_en  AS country_name_en,
   c.region   AS region_zh,
+  c.region_tw,
   c.region_en,
   c.flag_url,
   a.gate_count,
@@ -132,15 +172,15 @@ function toSummary(row: AirportRow, locale: Locale): AirportSummary {
   return {
     iata: row.iata,
     slug: row.slug,
-    name: pick(locale, row.name_zh, row.name_en),
+    name: pick(locale, row.name_zh, row.name_tw, row.name_en),
     nameZh: row.name_zh,
     nameEn: row.name_en,
-    city: pick(locale, row.city_zh, row.city_en),
+    city: pick(locale, row.city_zh, row.city_tw, row.city_en),
     cityEn: row.city_en,
     countryCode: row.country_code,
-    countryName: pick(locale, row.country_name_zh, row.country_name_en),
+    countryName: pick(locale, row.country_name_zh, row.country_name_tw, row.country_name_en),
     countryNameEn: row.country_name_en,
-    region: pick(locale, row.region_zh, row.region_en),
+    region: pick(locale, row.region_zh, row.region_tw, row.region_en),
     flagUrl: row.flag_url,
     gateCount: row.gate_count,
     annualPaxM: row.annual_pax_m,
@@ -154,16 +194,16 @@ function toTerminal(row: TerminalJson, locale: Locale): Terminal {
   return {
     id: row.id,
     code: row.code,
-    name: pick(locale, row.name_zh, row.name_en),
-    gateRange: pick(locale, row.gate_range_zh, row.gate_range_en) || null,
+    name: pick(locale, row.name_zh, row.name_tw, row.name_en),
+    gateRange: pick(locale, row.gate_range_zh, row.gate_range_tw, row.gate_range_en) || null,
     gateCount: row.gate_count,
     // Editorial airline lists are not machine-translatable, so a missing
     // translation yields null and the UI omits the line.
-    airlines: pickStrict(locale, row.airlines_zh, row.airlines_en),
+    airlines: pickStrict(locale, row.airlines_zh, row.airlines_tw, row.airlines_en),
     isSatellite: row.is_satellite,
     amenities: (row.amenities ?? []).map<Amenity>((a) => ({
       icon: a.icon,
-      label: pick(locale, a.label_zh, a.label_en),
+      label: pick(locale, a.label_zh, a.label_tw, a.label_en),
     })),
   };
 }
@@ -193,15 +233,18 @@ export async function getStats(): Promise<DirectoryStats | null> {
 export async function getBusiestCities(locale: Locale, limit = 5): Promise<CityHub[]> {
   const rows = await query<{
     city_zh: string;
+    city_tw: string | null;
     city_en: string | null;
     country_code: string;
     country_name_zh: string;
+    country_name_tw: string | null;
     country_name_en: string;
     flag_url: string;
     airport_count: number;
     total_pax_m: number | null;
     lead_iata: string;
     lead_name_zh: string;
+    lead_name_tw: string | null;
     lead_name_en: string;
     lead_slug: string;
     iatas: string[];
@@ -209,8 +252,8 @@ export async function getBusiestCities(locale: Locale, limit = 5): Promise<CityH
     `WITH ranked AS (
        SELECT
          a.city, a.city_en, a.country_code, a.iata,
-         a.name AS name_zh, a.name_en, a.slug,
-         c.name AS country_name_zh, c.name_en AS country_name_en, c.flag_url,
+         a.name AS name_zh, a.name_tw, a.name_en, a.slug,
+         c.name AS country_name_zh, c.name_tw AS country_name_tw, c.name_en AS country_name_en, c.flag_url,
          sum(a.annual_pax_m) OVER (PARTITION BY a.city)::float8 AS total_pax_m,
          count(*)            OVER (PARTITION BY a.city)::int    AS airport_count,
          row_number()        OVER (PARTITION BY a.city
@@ -219,10 +262,11 @@ export async function getBusiestCities(locale: Locale, limit = 5): Promise<CityH
        JOIN countries c ON c.code = a.country_code
      )
      SELECT
-       city AS city_zh, city_en, country_code,
-       country_name_zh, country_name_en, flag_url,
+       city AS city_zh, city_tw, city_en, country_code,
+       country_name_zh, country_name_tw, country_name_en, flag_url,
        airport_count, total_pax_m,
-       iata AS lead_iata, name_zh AS lead_name_zh, name_en AS lead_name_en, slug AS lead_slug,
+       iata AS lead_iata, name_zh AS lead_name_zh, name_tw AS lead_name_tw,
+       name_en AS lead_name_en, slug AS lead_slug,
        -- every IATA in the city, busiest first (a window aggregate cannot take
        -- its own ORDER BY, so this is a correlated subquery)
        (SELECT array_agg(x.iata ORDER BY x.annual_pax_m DESC NULLS LAST, x.iata)
@@ -235,15 +279,15 @@ export async function getBusiestCities(locale: Locale, limit = 5): Promise<CityH
   );
 
   return rows.map((row) => ({
-    city: pick(locale, row.city_zh, row.city_en),
+    city: pick(locale, row.city_zh, row.city_tw, row.city_en),
     cityEn: row.city_en,
     countryCode: row.country_code,
-    countryName: pick(locale, row.country_name_zh, row.country_name_en),
+    countryName: pick(locale, row.country_name_zh, row.country_name_tw, row.country_name_en),
     flagUrl: row.flag_url,
     airportCount: row.airport_count,
     totalPaxM: row.total_pax_m,
     leadIata: row.lead_iata,
-    leadName: pick(locale, row.lead_name_zh, row.lead_name_en),
+    leadName: pick(locale, row.lead_name_zh, row.lead_name_tw, row.lead_name_en),
     leadSlug: row.lead_slug,
     iatas: row.iatas ?? [],
   }));
@@ -263,16 +307,18 @@ export async function getCountries(locale: Locale): Promise<CountryWithCount[]> 
   const rows = await query<{
     code: string;
     name_zh: string;
+    name_tw: string | null;
     name_en: string;
     region_zh: string;
+    region_tw: string | null;
     region_en: string;
     flag_url: string;
     sort_order: number;
     airport_count: number;
     terminal_count: number;
   }>(
-    `SELECT c.code, c.name AS name_zh, c.name_en,
-            c.region AS region_zh, c.region_en, c.flag_url, c.sort_order,
+    `SELECT c.code, c.name AS name_zh, c.name_tw, c.name_en,
+            c.region AS region_zh, c.region_tw, c.region_en, c.flag_url, c.sort_order,
             count(a.iata)::int AS airport_count,
             coalesce(sum((SELECT count(*) FROM terminals t WHERE t.airport_iata = a.iata)), 0)::int
               AS terminal_count
@@ -284,10 +330,10 @@ export async function getCountries(locale: Locale): Promise<CountryWithCount[]> 
 
   return rows.map((row) => ({
     code: row.code,
-    name: pick(locale, row.name_zh, row.name_en),
+    name: pick(locale, row.name_zh, row.name_tw, row.name_en),
     nameZh: row.name_zh,
     nameEn: row.name_en,
-    region: pick(locale, row.region_zh, row.region_en),
+    region: pick(locale, row.region_zh, row.region_tw, row.region_en),
     flagUrl: row.flag_url,
     sortOrder: row.sort_order,
     airportCount: row.airport_count,
@@ -299,23 +345,26 @@ export async function getCountry(locale: Locale, code: string): Promise<Country 
   const row = await queryOne<{
     code: string;
     name_zh: string;
+    name_tw: string | null;
     name_en: string;
     region_zh: string;
+    region_tw: string | null;
     region_en: string;
     flag_url: string;
     sort_order: number;
   }>(
-    `SELECT code, name AS name_zh, name_en, region AS region_zh, region_en, flag_url, sort_order
+    `SELECT code, name AS name_zh, name_tw, name_en, region AS region_zh,
+            region_tw, region_en, flag_url, sort_order
        FROM countries WHERE code = $1`,
     [code.toUpperCase()]
   );
   if (!row) return null;
   return {
     code: row.code,
-    name: pick(locale, row.name_zh, row.name_en),
+    name: pick(locale, row.name_zh, row.name_tw, row.name_en),
     nameZh: row.name_zh,
     nameEn: row.name_en,
-    region: pick(locale, row.region_zh, row.region_en),
+    region: pick(locale, row.region_zh, row.region_tw, row.region_en),
     flagUrl: row.flag_url,
     sortOrder: row.sort_order,
   };
@@ -377,16 +426,20 @@ export async function getAirportByCode(
                 'id',            t.id,
                 'code',          t.code,
                 'name_zh',       t.name,
+                'name_tw',       t.name_tw,
                 'name_en',       t.name_en,
                 'gate_range_zh', t.gate_range,
+                'gate_range_tw', t.gate_range_tw,
                 'gate_range_en', t.gate_range_en,
                 'gate_count',    t.gate_count,
                 'airlines_zh',   t.airlines,
+                'airlines_tw',   t.airlines_tw,
                 'airlines_en',   t.airlines_en,
                 'is_satellite',  t.is_satellite,
                 'amenities', coalesce((
                   SELECT json_agg(json_build_object(
-                           'icon', am.icon, 'label_zh', am.label, 'label_en', am.label_en)
+                           'icon', am.icon, 'label_zh', am.label,
+                           'label_tw', am.label_tw, 'label_en', am.label_en)
                          ORDER BY am.sort_order)
                     FROM terminal_amenities am WHERE am.terminal_id = t.id
                 ), '[]'::json)
@@ -396,15 +449,17 @@ export async function getAirportByCode(
      ) t ON true
      LEFT JOIN LATERAL (
        SELECT json_agg(json_build_object(
-                'icon', af.icon, 'label_zh', af.label, 'label_en', af.label_en)
+                'icon', af.icon, 'label_zh', af.label,
+                'label_tw', af.label_tw, 'label_en', af.label_en)
               ORDER BY af.sort_order) AS facilities
          FROM airport_facilities af WHERE af.airport_iata = a.iata
      ) f ON true
      LEFT JOIN LATERAL (
        SELECT json_agg(json_build_object(
                 'icon', gt.icon,
-                'name_zh', gt.name, 'name_en', gt.name_en,
-                'description_zh', gt.description, 'description_en', gt.description_en)
+                'name_zh', gt.name, 'name_tw', gt.name_tw, 'name_en', gt.name_en,
+                'description_zh', gt.description, 'description_tw', gt.description_tw,
+                'description_en', gt.description_en)
               ORDER BY gt.sort_order) AS transit
          FROM ground_transport gt WHERE gt.airport_iata = a.iata
      ) g ON true
@@ -421,13 +476,13 @@ export async function getAirportByCode(
     terminals: (row.terminals ?? []).map((t) => toTerminal(t, locale)),
     facilities: (row.facilities ?? []).map<Amenity>((f) => ({
       icon: f.icon,
-      label: pick(locale, f.label_zh, f.label_en),
+      label: pick(locale, f.label_zh, f.label_tw, f.label_en),
     })),
     transit: (row.transit ?? []).map<TransitOption>((t) => ({
       icon: t.icon,
       // Empty strings signal "no translation" so the UI can show the mode label.
-      name: pickStrict(locale, t.name_zh, t.name_en) ?? '',
-      description: pickStrict(locale, t.description_zh, t.description_en) ?? '',
+      name: pickStrict(locale, t.name_zh, t.name_tw, t.name_en) ?? '',
+      description: pickStrict(locale, t.description_zh, t.description_tw, t.description_en) ?? '',
     })),
   };
 }
@@ -474,19 +529,23 @@ export async function searchAirports(
     iata: string;
     slug: string;
     name_zh: string;
+    name_tw: string | null;
     name_en: string;
     city_zh: string;
+    city_tw: string | null;
     city_en: string | null;
     country_code: string;
     country_name_zh: string;
+    country_name_tw: string | null;
     country_name_en: string;
     flag_url: string;
   }>(
     // search_blob carries every locale's names, so one query serves all locales.
     `SELECT a.iata, a.slug,
-            a.name AS name_zh, a.name_en,
-            a.city AS city_zh, a.city_en,
-            a.country_code, c.name AS country_name_zh, c.name_en AS country_name_en, c.flag_url
+            a.name AS name_zh, a.name_tw, a.name_en,
+            a.city AS city_zh, a.city_tw, a.city_en,
+            a.country_code, c.name AS country_name_zh, c.name_tw AS country_name_tw,
+            c.name_en AS country_name_en, c.flag_url
        FROM airports a
        JOIN countries c ON c.code = a.country_code
       WHERE a.search_blob ILIKE $2 ESCAPE '\\'
@@ -515,11 +574,11 @@ export async function searchAirports(
   return rows.map((row) => ({
     iata: row.iata,
     slug: row.slug,
-    name: pick(locale, row.name_zh, row.name_en),
+    name: pick(locale, row.name_zh, row.name_tw, row.name_en),
     nameEn: row.name_en,
-    city: pick(locale, row.city_zh, row.city_en),
+    city: pick(locale, row.city_zh, row.city_tw, row.city_en),
     countryCode: row.country_code,
-    countryName: pick(locale, row.country_name_zh, row.country_name_en),
+    countryName: pick(locale, row.country_name_zh, row.country_name_tw, row.country_name_en),
     flagUrl: row.flag_url,
   }));
 }

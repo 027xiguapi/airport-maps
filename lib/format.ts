@@ -13,6 +13,13 @@ import { getMessages } from './i18n';
 const NUMBER_LOCALE: Partial<Record<Locale, string>> = {
   en: 'en-US',
   zh: 'zh-CN',
+  tw: 'zh-TW',
+};
+
+/** Chinese locales write the ten-thousand/hundred-million units in their own script. */
+const CJK_UNITS: Partial<Record<Locale, { wan: string; yi: string; about: string }>> = {
+  zh: { wan: '万', yi: '亿', about: '约' },
+  tw: { wan: '萬', yi: '億', about: '約' },
 };
 
 export function formatNumber(value: number | string | null | undefined, locale: Locale = DEFAULT_LOCALE): string {
@@ -29,10 +36,11 @@ export function formatPax(
   if (locale === 'en') {
     return `about ${trimZeros(millions.toFixed(2))} million`;
   }
+  const cjk = CJK_UNITS[locale] ?? CJK_UNITS.zh!;
   if (millions >= 100) {
-    return `约 ${trimZeros((millions / 100).toFixed(2))} 亿`;
+    return `${cjk.about} ${trimZeros((millions / 100).toFixed(2))} ${cjk.yi}`;
   }
-  return `约 ${formatNumber(Math.round(millions * 100), locale)} 万`;
+  return `${cjk.about} ${formatNumber(Math.round(millions * 100), locale)} ${cjk.wan}`;
 }
 
 export function formatDistance(km: number | null | undefined, _locale: Locale = DEFAULT_LOCALE): string | null {

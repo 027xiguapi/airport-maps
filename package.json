@@ -22,7 +22,8 @@
     "data:terminal-maps": "node scripts/fetch-terminal-maps.mjs",
     "data:terminal-maps:compress": "node scripts/compress-terminal-maps.mjs",
     "data:route-images": "node scripts/generate-route-images.mjs",
-    "data:build-directory": "node data/build-directory-data.mjs"
+    "data:build-directory": "node data/build-directory-data.mjs",
+    "i18n:hant": "node scripts/build-hant.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.20",
@@ -51,6 +52,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "drizzle-kit": "^0.31.10",
+    "opencc-js": "^1.4.2",
     "sharp": "^0.35.4",
     "topojson-client": "^3.1.0",
     "typescript": "^5",
