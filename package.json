@@ -23,6 +23,7 @@
     "data:terminal-maps:compress": "node scripts/compress-terminal-maps.mjs",
     "data:route-images": "node scripts/generate-route-images.mjs",
     "data:build-directory": "node data/build-directory-data.mjs",
+    "data:airport-maps": "node scripts/generate-airport-maps.mjs",
     "i18n:hant": "node scripts/build-hant.mjs"
   },
   "dependencies": {

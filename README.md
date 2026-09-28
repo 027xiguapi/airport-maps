@@ -85,6 +85,7 @@ npm run build && npm start
 | `npm run db:verify` | 跑一遍站点依赖的关键查询 |
 | `npm run data:world-airports` | 从 `data/world-airports.csv` 生成地图数据：`public/data/world-airports.json`（前端加载，3244 座机场）与 `lib/world-airports-meta.json`（构建期统计） |
 | `npm run data:build-directory` | 把 `data/new-airports-a.{zh,en}.json` 合并成 `scripts/directory-data.json`（目录批次的灌库输入，见「数据模型」；改完数据后接 `npm run db:seed` 生效） |
+| `npm run data:airport-maps` | 用 OpenStreetMap 几何生成机场地图，写入 `public/source-maps/{CODE}.png`（2000px 宽）+ `public/maps/{CODE}.png`（400px 封面）：`--codes PEK,PVG` 指定机场、`--missing` 补所有还没有封面的机场（可配 `--kind large`）、`--dry-run` 预演、`--force` 重渲染、`--limit N` 限量、`--delay MS` 调 Overpass 请求间隔。原始响应缓存在 `data/osm/`（已 gitignore，删掉某机场的文件即重新拉取），图上带 `© OpenStreetMap contributors` 归属行，来源 / sha256 / 许可写进 `public/maps/maps-manifest.json` |
 | `npm run data:route-images` | 按首页航线条目的排序，把每个机场的航线图渲染成 PNG 到 `public/route`（世界地图轮廓 + 大圆航线，经 sharp 栅格化；含反子午线处理）。默认只渲染前 12 座，且**已有文件一律跳过**（渲染慢，已提交的图是好的）；`--codes ICN,AMS` 指定机场、`--top N` 改数量、`--force` 重跑 |
 | `npm run data:terminal-maps` | 按机场代码批量下载航站楼地图 PNG + PDF（默认源 eoob.com；`--codes HKG,PEK` 指定、`--dry-run` 预演、`--png-only` / `--pdf-only`、`--force`）。文件落到 `public/terminal-maps/{CODE}/`，溯源信息在 `terminal-maps-manifest.json`（当前 63 座机场） |
 | `npm run data:terminal-maps:compress` | 原地压缩上一步的 PNG：量化为 8 位调色板（默认 `--quality 80`），尺寸不变，实测 52.8MB → 12.4MB 且登机口号、路名清晰可读；已压缩的自动跳过，`--force` 重压、`--max-width 1600` 可同时缩尺寸 |
@@ -328,8 +329,8 @@ legacy/index.html           重构前的单文件版本（保留备查）
 
 | 目录 | 内容 |
 | --- | --- |
-| `maps/`（262 张） | 机场封面图，`lib/map-images.ts` 按 IATA 索引；机场页下载按钮与首页图片位使用 |
-| `source-maps/`（262 张） | 上者的原始大图，供需要原尺寸的场景 |
+| `maps/`（323 张） | 机场封面图，`lib/map-images.ts` 按 IATA 索引；机场页下载按钮与首页图片位使用。其中 61 张由 `npm run data:airport-maps` 用 OpenStreetMap 几何生成（ODbL，图上带 `© OpenStreetMap contributors`，溯源见同目录 `maps-manifest.json`），其余是第三方下载图 |
+| `source-maps/`（323 张） | 上者的原始大图（宽 2000px），供需要原尺寸的场景 |
 | `terminal-maps/{CODE}/`（63 座） | 航站楼平面图 PNG + PDF，带 `terminal-maps-manifest.json` 溯源（来源、sha256、许可说明）；缺文件时图片回退到封面或 SVG 示意图、PDF 回退到搜索 |
 | `route/`（12 张） | 首页航线条目的静态渲染图 |
 | `terminal-maps.png` | 首页「网站介绍」区块的照片（`components/HomeIntro.tsx`，1023×600） |
