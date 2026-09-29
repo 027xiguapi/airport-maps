@@ -16,6 +16,7 @@
     "db:custom": "node scripts/db-apply-sql.mjs db/custom.sql",
     "db:setup": "node scripts/db-create.mjs && node scripts/db-apply-sql.mjs db/extensions.sql && drizzle-kit migrate && node scripts/db-apply-sql.mjs db/custom.sql",
     "db:seed": "node scripts/seed.mjs",
+    "db:add-airports": "node scripts/seed.mjs --add-airports",
     "db:reset": "node scripts/db-create.mjs --reset && node scripts/db-apply-sql.mjs db/extensions.sql && drizzle-kit migrate && node scripts/db-apply-sql.mjs db/custom.sql && node scripts/seed.mjs",
     "db:verify": "node scripts/verify.mjs",
     "data:world-airports": "node scripts/prepare-world-airports.mjs",

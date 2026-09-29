@@ -6,7 +6,7 @@ import { CountryGrid } from '@/components/AirportCard';
 import CategoryGrid, { type CategoryCard } from '@/components/CategoryGrid';
 import HeroRoutes from '@/components/HeroRoutes';
 import HomeIntro from '@/components/HomeIntro';
-import { PopularCities, RouteNav, UpdateList } from '@/components/HomeSections';
+import { LatestMaps, PopularCities, RouteNav, UpdateList } from '@/components/HomeSections';
 import JsonLd from '@/components/JsonLd';
 import SearchBox from '@/components/SearchBox';
 import { listGuidedAirports } from '@/lib/content';
@@ -25,7 +25,7 @@ import {
   getRegionCount,
   getStats,
 } from '@/lib/queries';
-import { mapImageCodes } from '@/lib/map-images';
+import { latestMapCodes, mapImageCodes } from '@/lib/map-images';
 import { routeDestinationCounts } from '@/lib/routes';
 import { absoluteUrl, ORG_NODE_ID, SITE_NAME, SITE_URL, WEBSITE_NODE_ID } from '@/lib/site';
 import { getAirportGeo } from '@/lib/airport-geo';
@@ -65,13 +65,16 @@ export default async function HomePage({ params }: Props) {
 
   const t = getMessages(locale);
   const guidedCodes = listGuidedAirports(locale);
+  // Newest generated covers, in the order the generator recorded them.
+  const latestCodes = latestMapCodes(12);
 
-  const [stats, popularPool, recent, countries, airports, cityCount, regionCount, guided] =
+  const [stats, popularPool, latestPool, recent, countries, airports, cityCount, regionCount, guided] =
     await Promise.all([
       getStats(),
       // Random 10 airports that have a /maps cover — reshuffles on every
       // (re)validation of the page.
       getAirportsByCodes(locale, mapImageCodes()),
+      getAirportsByCodes(locale, latestCodes),
       getRecentlyUpdated(locale, 5),
       getCountries(locale),
       getAirportSummaries(locale),
@@ -81,6 +84,12 @@ export default async function HomePage({ params }: Props) {
     ]);
 
   const popular = shuffled(popularPool).slice(0, 10);
+  // getAirportsByCodes orders by passengers; the strip wants newest first.
+  const latestByCode = new Map(latestPool.map((airport) => [airport.iata, airport]));
+  const latest = latestCodes.flatMap((code) => {
+    const airport = latestByCode.get(code);
+    return airport ? [airport] : [];
+  });
   // Guide tiles show the same 400px /maps covers; a few guided airports have
   // no cover yet and render an IATA wordmark placeholder instead.
   const coverCodes = new Set(mapImageCodes());
@@ -378,12 +387,6 @@ export default async function HomePage({ params }: Props) {
           })}
         </div>
       </section>
-
-      {/* ------------------------------------------------- functional-area strip */}
-      {/* `.section` is shared with every other page, so only the band and the
-          extra bottom padding are local utilities: the inner section keeps
-          .section's 64px top padding but needs a real bottom one too, or the
-          content would sit on the band's own bottom border. */}
       <section className="border-y border-y-line bg-card" id="browse">
         <div className="section pb-16">
           <div className="section-head">
@@ -414,6 +417,23 @@ export default async function HomePage({ params }: Props) {
         </div>
         <PopularCities locale={locale} airports={popular} />
       </section>
+
+      {/* -------------------------------------------------------- latest maps */}
+      {latest.length > 0 && (
+        <section className="section" id="latest">
+          <div className="section-head">
+            <div>
+              <div className="section-kicker">{t.home.latest.kicker}</div>
+              <h2 className="section-title">
+                {t.home.latest.title}
+                <span className="en">{t.home.latest.en}</span>
+              </h2>
+              <p className="sec-sub">{t.home.latest.sub}</p>
+            </div>
+          </div>
+          <LatestMaps locale={locale} airports={latest} />
+        </section>
+      )}
 
       {/* ----------------------------------------------------------- route maps */}
       {routeNav.length > 0 && (
@@ -448,7 +468,7 @@ export default async function HomePage({ params }: Props) {
           <div className="grid grid-cols-[repeat(auto-fill,minmax(min(260px,100%),1fr))] gap-3.5">
             {guided.map((airport) => (
               <Link
-                className="group flex flex-col overflow-hidden rounded-[14px] bg-navy-900 text-white transition-[transform,box-shadow] duration-[180ms] [box-shadow:var(--shadow-sm)] hover:-translate-y-1 hover:[box-shadow:var(--shadow-lg)]"
+                className="group flex flex-col overflow-hidden bg-navy-900 text-white transition-[transform,box-shadow] duration-[180ms] [box-shadow:var(--shadow-sm)] hover:-translate-y-1 hover:[box-shadow:var(--shadow-lg)]"
                 href={localizedPath(locale, `/airport/${airport.iata}`)}
                 key={airport.iata}
               >

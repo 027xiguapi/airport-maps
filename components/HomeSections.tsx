@@ -21,9 +21,8 @@ import type { AirportSummary } from '@/lib/types';
  */
 const STRIP = 'flex overflow-x-auto pb-2 [scroll-snap-type:x_proximity]';
 
-/** The tile chrome shared by both strips: a navy card that lifts on hover. */
 const TILE =
-  'flex flex-none flex-col overflow-hidden rounded-[14px] bg-navy-900 text-white ' +
+  'flex flex-none flex-col overflow-hidden bg-navy-900 text-white ' +
   'transition-[transform,box-shadow] duration-[180ms] [scroll-snap-align:start] ' +
   '[box-shadow:var(--shadow-sm)] hover:-translate-y-1 hover:[box-shadow:var(--shadow-lg)]';
 
@@ -77,6 +76,8 @@ export function UpdateList({
  * Homepage popular strip: one horizontally scrollable row of terminal-map
  * cover tiles (the 400px covers in /public/maps) with the airport name under
  * each. The random pick happens in the page — this list is already shuffled.
+ * Tiles are square: the cover is a map sheet, and the straight edges let the
+ * white frame meet the navy body without a seam of corner rounding.
  */
 export function PopularCities({ locale, airports }: { locale: Locale; airports: AirportSummary[] }) {
   return (
@@ -87,6 +88,49 @@ export function PopularCities({ locale, airports }: { locale: Locale; airports: 
           href={localizedPath(locale, `/airport/${airport.iata}`)}
           key={airport.iata}
         >
+          <span className="flex h-[150px] flex-none items-center justify-center bg-white p-2 max-[480px]:h-[124px]">
+            <img
+              className="h-full w-full object-contain"
+              src={`/maps/${airport.iata}.png`}
+              alt={airport.name}
+              loading="lazy"
+            />
+          </span>
+          <span className="flex min-w-0 flex-1 flex-col p-3.5">
+            <span className="font-display text-[12.5px] font-semibold tracking-[0.18em] text-amber">
+              {airport.iata}
+            </span>
+            <span className="mt-1 line-clamp-2 text-[15px] font-bold leading-snug">
+              {airport.name}
+            </span>
+            <span className="mt-auto truncate pt-1.5 text-[12px] text-white/60">
+              {airport.city} · {airport.countryName}
+            </span>
+          </span>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * Homepage "latest maps" strip: the covers the generator produced most recently,
+ * dated by public/maps/maps-manifest.json (see lib/map-images.ts). Same tiles as
+ * the popular strip, with a flag so the two read differently.
+ */
+export function LatestMaps({ locale, airports }: { locale: Locale; airports: AirportSummary[] }) {
+  const t = getMessages(locale);
+  return (
+    <div className={`${STRIP} gap-4`}>
+      {airports.map((airport) => (
+        <Link
+          className={`${TILE} relative w-[230px] max-[480px]:w-[188px]`}
+          href={localizedPath(locale, `/airport/${airport.iata}`)}
+          key={airport.iata}
+        >
+          <span className="absolute left-3 top-3 z-10 rounded-full bg-amber px-[9px] py-[3px] font-display text-[11px] font-semibold tracking-[0.14em] text-navy-900 max-[480px]:left-2.5 max-[480px]:top-2.5">
+            {t.home.latest.badge}
+          </span>
           <span className="flex h-[150px] flex-none items-center justify-center bg-white p-2 max-[480px]:h-[124px]">
             <img
               className="h-full w-full object-contain"

@@ -1,4 +1,4 @@
-import { readdirSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 /**
@@ -31,6 +31,32 @@ export function mapImageCodes(): string[] {
     .filter((file) => file.toLowerCase().endsWith('.png'))
     .map((file) => file.slice(0, -4).toUpperCase())
     .sort();
+}
+
+/**
+ * Covers generated most recently, newest first. The order comes from the index
+ * scripts/generate-airport-maps.mjs writes to public/data/latest-maps.json —
+ * downloaded covers predate that pipeline and are not in it, so this is exactly
+ * "what the generator last produced". Returns [] when the index is absent, which
+ * lets the caller drop the section instead of rendering it empty.
+ */
+export function latestMapCodes(limit = 12): string[] {
+  try {
+    const index = JSON.parse(
+      readFileSync(join(process.cwd(), 'public', 'data', 'latest-maps.json'), 'utf8')
+    );
+    const available_ = available();
+    const codes: string[] = [];
+    for (const entry of index.maps ?? []) {
+      const code = String(entry.iata ?? '').toUpperCase();
+      if (!code || !available_.has(`${code}.png`) || codes.includes(code)) continue;
+      codes.push(code);
+      if (codes.length >= limit) break;
+    }
+    return codes;
+  } catch {
+    return [];
+  }
 }
 
 /**

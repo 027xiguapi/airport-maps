@@ -150,6 +150,14 @@ export const tw: Messages = {
       en: 'Airport Maps',
       sub: '隨機展示全球機場的航站樓地圖封面，點選進入機場頁面檢視完整大圖。',
     },
+    /** 首頁「最新地圖」條：剛生成的封面，順序按 public/maps/maps-manifest.json 的時間。 */
+    latest: {
+      kicker: 'Just Added',
+      title: '最新機場地圖',
+      en: 'Latest Maps',
+      sub: '剛剛上線的機場平面圖：航站樓、停車場與地面交通位置一目瞭然。',
+      badge: '最新',
+    },
     recent: {
       kicker: 'Freshly Published',
       title: '最近更新',

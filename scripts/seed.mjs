@@ -1,14 +1,33 @@
 /**
  * Seeds PostgreSQL from scripts/legacy-data.json (extracted from the original
- * single-file version of the site). Idempotent: truncates then re-inserts.
+ * single-file version of the site) and the directory batch in
+ * scripts/directory-data.json.
  *
- * Usage: node scripts/seed.mjs
+ * Usage:
+ *   node scripts/seed.mjs                 rebuild: TRUNCATE, then re-insert
+ *                                         everything. Idempotent; use it after
+ *                                         editing either data file.
+ *   node scripts/seed.mjs --add-airports  insert only what is missing: airports
+ *                                         (and the countries they need) that the
+ *                                         database does not have yet. Existing
+ *                                         rows are left alone, and new ones are
+ *                                         stamped minutes old so they arrive at
+ *                                         the top of the homepage order instead
+ *                                         of behind every existing airport.
+ *
+ * Adding an airport means adding it to one of those two data files first: the
+ * curated set (legacy-data.json, with terminals and editorial copy) or the
+ * directory batch (directory-data.json, base fields only — see
+ * `npm run data:build-directory`).
  */
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import pg from 'pg';
 import { databaseUrl, ROOT } from './_env.mjs';
 import { toHant, toHantName, SIMPLIFIED_ONLY } from './_hant.mjs';
+
+/** Insert-only mode: see the usage note above. */
+const ADD_AIRPORTS = process.argv.includes('--add-airports');
 
 const CITY_EN = {
   上海: 'Shanghai', 东京: 'Tokyo', 亚特兰大: 'Atlanta', 伊斯坦布尔: 'Istanbul',
@@ -284,17 +303,29 @@ if (badGateRanges.length) {
 const client = new pg.Client({ connectionString: databaseUrl() });
 await client.connect();
 
+/** What --add-airports actually did, for the closing report. */
+const added = [];
+const skipped = [];
+
 try {
   await client.query('BEGIN');
-  await client.query(
-    'TRUNCATE terminal_amenities, airport_facilities, ground_transport, terminals, airport_translations, airports, countries RESTART IDENTITY CASCADE'
-  );
+
+  const existing = new Set();
+  if (ADD_AIRPORTS) {
+    const { rows } = await client.query('SELECT iata FROM airports');
+    for (const row of rows) existing.add(row.iata);
+  } else {
+    await client.query(
+      'TRUNCATE terminal_amenities, airport_facilities, ground_transport, terminals, airport_translations, airports, countries RESTART IDENTITY CASCADE'
+    );
+  }
 
   for (const [i, code] of countryCodes.entries()) {
     const c = countries[code];
     await client.query(
       `INSERT INTO countries (code, name, name_en, name_tw, region, region_en, region_tw, flag_url, sort_order)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+       ${ADD_AIRPORTS ? 'ON CONFLICT (code) DO NOTHING' : ''}`,
       [
         code, c.name, c.nameEn, toHantName(c.name), c.region, REGION_EN[c.region],
         toHantName(c.region), `/flags/${code.toLowerCase()}.jpg`, i,
@@ -302,9 +333,18 @@ try {
     );
   }
 
-  // `now() - i days` gives the homepage "recently updated" list a stable order:
-  // the first entries of `ordered` are the freshest.
+  // `updated_at` is what orders the homepage lists, so the two modes stamp it
+  // differently: a rebuild staggers the editorial set by whole days (the first
+  // entries of `ordered` stay freshest and the directory batch sits below all of
+  // them), while --add-airports stamps only the rows it inserts, in minutes, so
+  // they land above everything that is already there.
+  let stamp = 0;
   for (const [i, a] of ordered.entries()) {
+    if (ADD_AIRPORTS && existing.has(a.iata)) {
+      skipped.push(a.iata);
+      continue;
+    }
+    const age = ADD_AIRPORTS ? `${stamp++} minutes` : `${i} days`;
     const slug = `${slugify(a.nameEn)}-${a.iata.toLowerCase()}`;
     const paxM = parsePax(a.pax);
     const distanceKm = parseDistance(a.distance);
@@ -313,12 +353,13 @@ try {
       `INSERT INTO airports
          (iata, slug, name, name_en, name_tw, city, city_en, city_tw, country_code,
           gate_count, annual_pax_m, distance_km, updated_at)
-       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12, now() - ($13 || ' days')::interval)`,
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12, now() - ($13)::interval)`,
       [
         a.iata, slug, a.name, a.nameEn, toHantName(a.name), a.city, CITY_EN[a.city],
-        toHantName(a.city), a.country, a.gates, paxM, distanceKm, i,
+        toHantName(a.city), a.country, a.gates, paxM, distanceKm, age,
       ]
     );
+    added.push(a.iata);
 
     // descriptions are Markdown; zh keeps the editorial copy, en is data-derived,
     // tw is the Chinese copy converted (it is prose, so OpenCC's own wording wins)
@@ -384,16 +425,22 @@ try {
   // stagger continues after the editorial set, so every editorial airport
   // stays above them in the homepage "recently updated" strip.
   for (const [di, a] of directoryAirports.entries()) {
+    if (ADD_AIRPORTS && existing.has(a.iata)) {
+      skipped.push(a.iata);
+      continue;
+    }
+    const age = ADD_AIRPORTS ? `${stamp++} minutes` : `${ordered.length + di} days`;
     const slug = `${slugify(a.nameEn)}-${a.iata.toLowerCase()}`;
     await client.query(
       `INSERT INTO airports
          (iata, slug, name, name_en, name_tw, city, city_en, city_tw, country_code, gate_count, updated_at)
-       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,0, now() - ($10 || ' days')::interval)`,
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,0, now() - ($10)::interval)`,
       [
         a.iata, slug, a.name, a.nameEn, toHantName(a.name), a.city, a.cityEn,
-        toHantName(a.city), a.country, ordered.length + di,
+        toHantName(a.city), a.country, age,
       ]
     );
+    added.push(a.iata);
     const [descZh, descEn] = directoryDescriptions(a);
     await client.query(
       `INSERT INTO airport_translations (airport_iata, locale, description_md)
@@ -452,7 +499,15 @@ if (twLeftovers.length) {
   );
 }
 
-console.log('seeded:', stats[0]);
+if (ADD_AIRPORTS) {
+  console.log(
+    `added ${added.length} airport(s)` +
+      (skipped.length ? `, left ${skipped.length} already-present airport(s) untouched` : '')
+  );
+  if (added.length) console.log(`new: ${added.join(' ')}`);
+} else {
+  console.log('seeded:', stats[0]);
+}
 console.log('untranslated (en):', coverage[0]);
 console.log(`derived (tw): ${twTexts.length} strings checked, ${twLeftovers.length} simplified leftovers`);
 await client.end();

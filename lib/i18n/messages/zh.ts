@@ -148,6 +148,14 @@ export const zh = {
       en: 'Airport Maps',
       sub: '随机展示全球机场的航站楼地图封面，点击进入机场页面查看完整大图。',
     },
+    /** 首页「最新地图」条：刚生成的封面，顺序按 public/maps/maps-manifest.json 的时间。 */
+    latest: {
+      kicker: 'Just Added',
+      title: '最新机场地图',
+      en: 'Latest Maps',
+      sub: '刚刚上线的机场平面图：航站楼、停车场与地面交通位置一目了然。',
+      badge: '最新',
+    },
     recent: {
       kicker: 'Freshly Published',
       title: '最近更新',

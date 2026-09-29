@@ -81,11 +81,12 @@ npm run build && npm start
 | `npm run db:create` | 只建库（`--reset` 为 `DROP DATABASE ... WITH (FORCE)` 后重建） |
 | `npm run db:extensions` | 只跑 `db/extensions.sql`（`pg_trgm`），必须在建表**之前** |
 | `npm run db:custom` | 只跑 `db/custom.sql`（`search_blob` 触发器、`directory_stats` 视图），必须在建表**之后** |
-| `npm run db:seed` | 重建数据（先 TRUNCATE，可重复执行），含翻译与数据校验 |
+| `npm run db:seed` | 重建数据（先 TRUNCATE，可重复执行），含翻译与数据校验。改过 `scripts/legacy-data.json` 或 `scripts/directory-data.json` 后跑它生效 |
+| `npm run db:add-airports` | **增量新增机场**：只插入库里还没有的机场（及其国家、翻译、航站楼等子表），已有行一律不动；新行的 `updated_at` 记成「几分钟前」，所以在首页排在最前面。新增一座机场的顺序是：写进 `scripts/legacy-data.json`（精编，带航站楼与正文）或 `scripts/directory-data.json`（目录批次，只有基础字段）→ 跑这个命令。只做插入，不更新已有行——要改已有数据用 `db:seed` |
 | `npm run db:verify` | 跑一遍站点依赖的关键查询 |
 | `npm run data:world-airports` | 从 `data/world-airports.csv` 生成地图数据：`public/data/world-airports.json`（前端加载，3244 座机场）与 `lib/world-airports-meta.json`（构建期统计） |
 | `npm run data:build-directory` | 把 `data/new-airports-a.{zh,en}.json` 合并成 `scripts/directory-data.json`（目录批次的灌库输入，见「数据模型」；改完数据后接 `npm run db:seed` 生效） |
-| `npm run data:airport-maps` | 用 OpenStreetMap 几何生成机场地图，写入 `public/source-maps/{CODE}.png`（2000px 宽）+ `public/maps/{CODE}.png`（400px 封面）：`--codes PEK,PVG` 指定机场、`--missing` 补所有还没有封面的机场（可配 `--kind large`）、`--dry-run` 预演、`--force` 重渲染、`--limit N` 限量、`--delay MS` 调 Overpass 请求间隔。原始响应缓存在 `data/osm/`（已 gitignore，删掉某机场的文件即重新拉取），图上带 `© OpenStreetMap contributors` 归属行，来源 / sha256 / 许可写进 `public/maps/maps-manifest.json` |
+| `npm run data:airport-maps` | 用 OpenStreetMap 几何生成机场地图，写入 `public/source-maps/{CODE}.png`（2000px 宽）+ `public/maps/{CODE}.png`（400px 封面）：`--codes PEK,PVG` 指定机场、`--missing` 补所有还没有封面的机场（可配 `--kind large`）、`--dry-run` 预演、`--force` 重渲染、`--reindex` 只按磁盘上的图重写记录、`--limit N` 限量、`--delay MS` 调 Overpass 请求间隔。原始响应缓存在 `data/osm/`（已 gitignore，删掉某机场的文件即重新拉取），图上带 `© OpenStreetMap contributors` 归属行；来源 / sha256 / 许可写进 `scripts/maps-manifest.json`，首页「最新地图」读的小索引写进 `public/data/latest-maps.json`（两个目录里只有图片） |
 | `npm run data:route-images` | 按首页航线条目的排序，把每个机场的航线图渲染成 PNG 到 `public/route`（世界地图轮廓 + 大圆航线，经 sharp 栅格化；含反子午线处理）。默认只渲染前 12 座，且**已有文件一律跳过**（渲染慢，已提交的图是好的）；`--codes ICN,AMS` 指定机场、`--top N` 改数量、`--force` 重跑 |
 | `npm run data:terminal-maps` | 按机场代码批量下载航站楼地图 PNG + PDF（默认源 eoob.com；`--codes HKG,PEK` 指定、`--dry-run` 预演、`--png-only` / `--pdf-only`、`--force`）。文件落到 `public/terminal-maps/{CODE}/`，溯源信息在 `terminal-maps-manifest.json`（当前 63 座机场） |
 | `npm run data:terminal-maps:compress` | 原地压缩上一步的 PNG：量化为 8 位调色板（默认 `--quality 80`），尺寸不变，实测 52.8MB → 12.4MB 且登机口号、路名清晰可读；已压缩的自动跳过，`--force` 重压、`--max-width 1600` 可同时缩尺寸 |
@@ -186,7 +187,7 @@ URL 方案（与生产站点地图一致）：
 
 `tw` 与中文同属一个书写系统，文案是**派生**而不是另写一份，因此它的第 2、4、5 步不同：
 
-- 消息目录 `lib/i18n/messages/tw.ts`、`content/tw/**`（63 篇机场指南 + 37 篇国家介绍 + 4 个静态页）由 `npm run i18n:hant` 生成：OpenCC `cn → twp` 转换，先过 `content/terminology/tw-phrases.json` 的 `phrases`（台湾用法例外：希斯洛、杜拜、雪梨、巴塞隆納…），再过 `corrections`（纠正 OpenCC 的过度替换：连接→連線、只→隻、绑定→繫結）。脚本会检查 `${}` 插值数量、扫描简体残留，并拒绝在有残留时通过。
+- 消息目录 `lib/i18n/messages/tw.ts`、`content/tw/**`（63 篇机场指南 + 37 篇国家介绍 + 4 个静态页）由 `npm run i18n:hant` 生成：OpenCC `cn → twp` 转换，先过 `content/terminology/tw-phrases.json` 的 `phrases`（台湾用法例外：希斯洛、杜拜、雪梨、巴塞隆納…），再过 `corrections`（纠正 OpenCC 的过度替换：连接→連線、只→隻、绑定→繫結）。转换规则集中在 `scripts/_hant.mjs`（`toHant` 用于正文、`toHantName` 用于地名——台湾写法用「里」而不是 OpenCC 的「裡」），生成器是 `scripts/build-hant.mjs`；`npm run i18n:hant -- --check` 校验提交的 tw.ts 是否与 zh.ts 同步，转换前后还会核对 `${}` 插值数量（防止词表替换破坏模板字符串）。简体残留用 `_hant.mjs` 里按 OpenCC 反推的字符集扫描，有残留时 `db:seed` 会直接报出来。
 - 重新生成会**覆盖** `content/tw`，所以要改文案就改词表（或改写生成器），不要直接改生成物。
 - 数据库侧没有 `terminology/tw.json`：`scripts/seed.mjs` 的 `DERIVED_LOCALES` 把 `tw` 标记为派生语言，各表 `_tw` 列由 `toHant()` / `toHantName()` 从中文源直接转换（`name_tw`、`city_tw`、`region_tw`、`gate_range_tw`、`airlines_tw`、`label_tw`、`description_tw`，简介写入 `airport_translations.locale='tw'`）。种子脚本最后打印 `derived (tw)` 的条数与简体残留数。
 - 名称类字段用 `toHantName()`：OpenCC 在音译里会把「里」读成「裡」（紐伯裡、庫裡蒂巴），名称里一律还原为「里」。
@@ -272,7 +273,7 @@ updated: 2026-09-16
 app/
   [locale]/
     layout.tsx              语言布局：<html lang/dir>、顶栏、页脚、AdSense 脚本、回到顶部
-    page.tsx                首页：搜索英雄区 → 网站介绍 → 世界地图 → 工具 → 功能分区 → 热门 → 航线 → 指南 → 最近更新 → 国家网格
+    page.tsx                首页：搜索英雄区 → 网站介绍 → 世界地图 → 工具 → 功能分区 → 热门 → 最新地图 → 航线 → 指南 → 最近更新 → 国家网格
     airports/page.tsx       机场目录：搜索 + 国家筛选 + 排序 + 分页
     countries/page.tsx      国家索引（按区域分组，含区域跳转条）
     country/[code]/page.tsx 单个国家 / 地区：机场介绍 + 机场列表 + 相关链接 + 常见问题（右侧目录导航）
@@ -329,8 +330,8 @@ legacy/index.html           重构前的单文件版本（保留备查）
 
 | 目录 | 内容 |
 | --- | --- |
-| `maps/`（323 张） | 机场封面图，`lib/map-images.ts` 按 IATA 索引；机场页下载按钮与首页图片位使用。其中 61 张由 `npm run data:airport-maps` 用 OpenStreetMap 几何生成（ODbL，图上带 `© OpenStreetMap contributors`，溯源见同目录 `maps-manifest.json`），其余是第三方下载图 |
-| `source-maps/`（323 张） | 上者的原始大图（宽 2000px），供需要原尺寸的场景 |
+| `maps/`（322 张） | 机场封面图，`lib/map-images.ts` 按 IATA 索引；机场页下载按钮与首页图片位使用。其中 60 张由 `npm run data:airport-maps` 用 OpenStreetMap 几何生成（ODbL，图上带 `© OpenStreetMap contributors`，溯源在 `scripts/maps-manifest.json`），其余是第三方下载图。目录里只有图片：首页「最新地图」的顺序读 `public/data/latest-maps.json` |
+| `source-maps/`（322 张） | 上者的原始大图（宽 2000px），供需要原尺寸的场景 |
 | `terminal-maps/{CODE}/`（63 座） | 航站楼平面图 PNG + PDF，带 `terminal-maps-manifest.json` 溯源（来源、sha256、许可说明）；缺文件时图片回退到封面或 SVG 示意图、PDF 回退到搜索 |
 | `route/`（12 张） | 首页航线条目的静态渲染图 |
 | `terminal-maps.png` | 首页「网站介绍」区块的照片（`components/HomeIntro.tsx`，1023×600） |
@@ -366,10 +367,11 @@ URL 约定：
 4. **地理工具**（`#tools`）：三个工具卡片。
 5. **功能分区**（`#browse`）：六张指向真实目的地的卡片（全部机场、按国家浏览、按区域浏览、热门机场城市、最近更新、机场指南），角标数字来自数据库与内容目录，不写死。
 6. **热门机场**（`#popular`）：随机 10 张机场封面图。
-7. **热门机场航线图**（`#routes`）：直飞目的地最多的机场，每格一张静态航线图并链接到航线页。
-8. **机场指南**（`#guides`）：有 Markdown 指南的机场，无指南时整段不渲染。
-9. **最近更新**（`#recent`，按 `updated_at` 倒序）。
-10. **按国家分类**（`#countries`）：国家 / 地区网格。
+7. **最新地图**（`#latest`）：地图生成器最近产出的 N 张封面（顺序取 `public/data/latest-maps.json`，见「图片资产」与 `npm run data:airport-maps`），每格带「最新 / New」角标；索引缺失时整段不渲染。
+8. **热门机场航线图**（`#routes`）：直飞目的地最多的机场，每格一张静态航线图并链接到航线页。
+9. **机场指南**（`#guides`）：有 Markdown 指南的机场，无指南时整段不渲染。
+10. **最近更新**（`#recent`，按 `updated_at` 倒序）。
+11. **按国家分类**（`#countries`）：国家 / 地区网格。
 
 `/countries` 按区域分组并带一条区域跳转条；每个区域块标注该区域的国家数与机场数。
 
@@ -413,7 +415,7 @@ URL 约定：
 
 迁移时用一次性脚本从 `legacy/index.html` 解析出原来的 `COUNTRIES` 与 `AIRPORTS` 字面量，校验后写入 `scripts/legacy-data.json`（37 个国家 / 地区、60 座机场、174 座航站楼；脚本本身已从仓库移除，数据文件保留）。`scripts/seed.mjs` 再灌进数据库，并在过程中校验：国家代码存在、每座机场至少一座航站楼、旅客量与距离可解析、各航站楼登机口数之和与机场总数是否有出入、翻译词表是否完整（`content/terminology/<locale>.json` 的每个键都要有值）。
 
-`legacy-data.json` 只在重建数据库时被 seed 读取；日常的数据更新走 `data/build-directory-data.mjs` + `npm run db:seed`。
+`legacy-data.json` 只在重建数据库时被 seed 读取；日常新增机场走 `npm run db:add-airports`（只插缺的行，不动已有数据），改动已有数据才需要 `npm run db:seed` 全量重建。
 
 ## 移植过程中修掉的问题
 

@@ -158,6 +158,14 @@ export const en: Messages = {
       en: 'Airport Maps',
       sub: 'A rotating pick of terminal-map covers from airports worldwide — open an airport page for the full map.',
     },
+    /** Homepage "latest maps" strip: covers by the date they were generated in public/maps/maps-manifest.json. */
+    latest: {
+      kicker: 'Just Added',
+      title: 'Latest airport maps',
+      en: 'Latest Maps',
+      sub: 'Freshly published airport maps — terminal layout, parking and ground transport at a glance.',
+      badge: 'New',
+    },
     recent: {
       kicker: 'Freshly Published',
       title: 'Recently updated',
