@@ -30,6 +30,8 @@
  *                   (large|medium|small|heliport)
  *   --dry-run       print the plan only: no fetch, no write
  *   --force         re-render (and re-fetch) airports that already have a cover
+ *   --compact       one Overpass request per airport instead of three, for
+ *                   small/medium fields where the search box is small
  *   --reindex       write manifest entries for the given --codes from the files
  *                   already on disk, without rendering anything
  *   --limit N       stop after N airports
@@ -54,6 +56,10 @@ const value = (flag, fallback = null) => {
 
 const DRY = has('--dry-run');
 const FORCE = has('--force');
+/** One Overpass request per airport instead of three: see queryAll. */
+const COMPACT = has('--compact');
+/** Debug: write the SVG beside the PNG and stop, to inspect what sharp is given. */
+const SVG_ONLY = has('--svg-only');
 const LIMIT = Number(value('--limit', '0')) || 0;
 const DELAY = Number(value('--delay', '1200'));
 const KIND = value('--kind');
@@ -101,9 +107,22 @@ function targets() {
 }
 
 // ---------------------------------------------------------------- geo source
-/** Coordinates for a code: repo dataset, then the OurAirports dump, then OSM. */
+/** Coordinates for a code: repo dataset, then the OurAirports dump, then the
+    hand-checked gaps in scripts/airport-coords.json, then OSM itself. */
 const coordsCache = new Map();
 const isMissing = (o) => !o || !Number.isFinite(o.lat) || !Number.isFinite(o.lng) || (o.lat === 0 && o.lng === 0);
+const handChecked = (() => {
+  try {
+    const file = JSON.parse(readFileSync(join(ROOT, 'scripts', 'airport-coords.json'), 'utf8'));
+    return Object.fromEntries(
+      Object.entries(file)
+        .filter(([code]) => /^[A-Z]{3}$/.test(code))
+        .map(([code, entry]) => [code, { lat: entry.lat, lng: entry.lng, from: `airport-coords.json (${entry.source})` }])
+    );
+  } catch {
+    return {};
+  }
+})();
 function coords(code) {
   if (coordsCache.has(code)) return coordsCache.get(code);
   const wa = JSON.parse(readFileSync(join(ROOT, 'public', 'data', 'world-airports.json'), 'utf8')).airports;
@@ -125,7 +144,7 @@ function coords(code) {
       break;
     }
   }
-  if (isMissing(out)) out = null;
+  if (isMissing(out)) out = handChecked[code] ?? null;
   coordsCache.set(code, out);
   return out;
 }
@@ -140,6 +159,7 @@ const MIRRORS = [
   'https://overpass.openstreetmap.fr/api/interpreter',
   'https://overpass.kumi.systems/api/interpreter',
   'https://overpass.private.coffee/api/interpreter',
+  'https://maps.mail.ru/osm/tools/overpass/api/interpreter',
 ];
 /** A mirror that is overloaded can hold a request open for minutes; without a
     deadline one hung socket stalls the whole run. Query-shaped work over a busy
@@ -264,6 +284,27 @@ out geom;`;
 }
 
 /**
+ * Everything in one request. The three staged queries exist because a wide box
+ * over a big city is too much for a single Overpass query; for the small and
+ * medium fields the search box is a couple of kilometres across, and asking for
+ * it in one go cuts the request count (and the load on the public instances) by
+ * two thirds. Roads and car parks therefore come from the search box rather than
+ * from the frame, which only affects what is drawn outside the visible frame.
+ */
+function queryAll(bbox) {
+  return `[out:json][timeout:120];
+(
+  way["aeroway"~"^(terminal|apron|parking|taxiway|runway|aerodrome)$"](${bbox});
+  nwr["amenity"="parking"](${bbox});
+  way["highway"~"^(motorway|trunk|primary|secondary|tertiary|service)$"](${bbox});
+  nwr["amenity"~"^(bus_station|car_rental|restaurant|fast_food|cafe)$"](${bbox});
+  nwr["tourism"="hotel"](${bbox});
+  nwr["highway"="bus_stop"](${bbox});
+);
+out geom;`;
+}
+
+/**
  * Overpass response cache. `retryEmpty` re-asks once when a query comes back
  * with nothing: an empty answer is also what a mirror outside its own region
  * returns, and caching that would drop an airport that is mapped perfectly well.
@@ -307,6 +348,10 @@ const MARGIN = 1.7;
 const isTerm = (e) => e.tags.aeroway === 'terminal';
 const isApron = (e) => e.tags.aeroway === 'apron';
 const isPark = (e) => e.tags.aeroway === 'parking' || e.tags.amenity === 'parking';
+/** Small strips are often mapped as an airfield outline plus a runway and
+    nothing else — no terminal polygon to frame on. */
+const isAerodrome = (e) => e.tags.aeroway === 'aerodrome';
+const isRunway = (e) => e.tags.aeroway === 'runway';
 
 const ICON = 62;
 const font = 'Arial, Helvetica, sans-serif';
@@ -389,8 +434,13 @@ function renderSvg({ iata, name, bounds, areas, detail, pois }) {
   }
   for (const e of areas) {
     if (isPark(e)) g.push(`<path d="${path(e, true)}" fill="${COLORS.parking}" stroke="${COLORS.parkingEdge}" stroke-width="2.5" stroke-linejoin="round"/>`);
-    else if (isApron(e)) g.push(`<path d="${path(e, true)}" fill="${COLORS.apron}" stroke="${COLORS.apronEdge}" stroke-width="2.5" stroke-linejoin="round"/>`);
+    else if (isApron(e) || isAerodrome(e)) g.push(`<path d="${path(e, true)}" fill="${COLORS.apron}" stroke="${COLORS.apronEdge}" stroke-width="2.5" stroke-linejoin="round"/>`);
     else if (isTerm(e)) g.push(`<path d="${path(e, true)}" fill="${COLORS.terminal}" stroke="${COLORS.terminalEdge}" stroke-width="4" stroke-linejoin="round"/>`);
+    // A runway is a line, not a shape: same treatment as a road, wider and paler.
+    else if (isRunway(e)) {
+      g.push(`<path d="${path(e)}" fill="none" stroke="${COLORS.apronEdge}" stroke-width="20" stroke-linecap="round"/>`);
+      g.push(`<path d="${path(e)}" fill="none" stroke="${COLORS.apron}" stroke-width="15" stroke-linecap="round"/>`);
+    }
   }
 
   // Badges: nearest to the field first, then drop ones that would overlap.
@@ -430,6 +480,15 @@ const coverPath = (code) => join(MAPS_DIR, `${code}.png`);
 const sha256 = (path) => createHash('sha256').update(readFileSync(path)).digest('hex');
 
 /**
+ * Windows parses a file named `AUX.png` (the IATA code for Araguaína) as the
+ * legacy DOS device `\\.\AUX` and refuses to write it, which silently stalled a
+ * whole batch run. The `\\?\` prefix selects the plain Win32 path parser, so the
+ * name is treated as the ordinary file it is on the Linux box the site deploys
+ * to. No-op everywhere else.
+ */
+const realPath = (path) => (process.platform === 'win32' ? `\\\\?\\${path}` : path);
+
+/**
  * Records provenance for codes whose files are on disk — what was rendered, from
  * where, under which licence. Called after every airport rather than once at the
  * end, so interrupting a long run does not lose the record of what it produced.
@@ -438,13 +497,13 @@ function recordProvenance(codes) {
   const previous = existsSync(MANIFEST) ? JSON.parse(readFileSync(MANIFEST, 'utf8')) : { entries: {} };
   const entries = { ...previous.entries };
   for (const code of codes) {
-    if (!existsSync(sourcePath(code)) || !existsSync(coverPath(code))) continue;
+    if (!existsSync(realPath(sourcePath(code))) || !existsSync(realPath(coverPath(code)))) continue;
     entries[code] = {
-      generatedAt: statSync(sourcePath(code)).mtime.toISOString(),
+      generatedAt: statSync(realPath(sourcePath(code))).mtime.toISOString(),
       generator: 'generate-airport-maps.mjs',
       dataSource: 'OpenStreetMap via Overpass API',
       dataLicence: 'ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)',
-      sha256: { source: sha256(sourcePath(code)), cover: sha256(coverPath(code)) },
+      sha256: { source: sha256(realPath(sourcePath(code))), cover: sha256(realPath(coverPath(code))) },
     };
   }
   writeFileSync(MANIFEST, JSON.stringify({
@@ -503,12 +562,42 @@ async function build(code) {
   // Stage A: the airport itself. The frame comes from terminal buildings —
   // aprons cover the whole movement area, so framing on those pulls in the
   // runways and turns a hub like PEK into a picture of the airfield.
-  const areaEls = (await cached(code, 'a', queryCore, box, { retryEmpty: true })).filter((e) => e.geometry);
+  const warnings = [];
+  const safe = async (label, fn) => {
+    try {
+      return await fn();
+    } catch (err) {
+      warnings.push(`${label} (${String(err.message).slice(0, 40)})`);
+      return [];
+    }
+  };
+  let areaEls;
+  let detail;
+  let poiEls;
+  if (COMPACT) {
+    let all = await cached(code, 'q', queryAll, box, { retryEmpty: true });
+    if (!all.some((e) => isTerm(e) || isApron(e))) {
+      // Small strips often have nothing but a runway tagged, and the stored
+      // coordinate for the ones that came from the 2018 OurAirports dump can be
+      // a few kilometres off. Widen the search once before declaring the field
+      // unmapped; a separate cache key keeps the two attempts apart.
+      const wide = bboxOf(point.lat, point.lng, (HALF_BOX[kind] ?? HALF_BOX.medium) * 3);
+      all = await cached(code, 'q2', queryAll, wide, { retryEmpty: true });
+      if (all.some((e) => isTerm(e) || isApron(e))) warnings.push('widened search');
+    }
+    areaEls = all.filter((e) => e.geometry && (isTerm(e) || isApron(e) || isPark(e) || isAerodrome(e) || isRunway(e)));
+    detail = all.filter((e) => e.geometry && (e.tags.aeroway === 'taxiway' || e.tags.highway));
+    poiEls = all;
+  } else {
+    areaEls = (await cached(code, 'a', queryCore, box, { retryEmpty: true })).filter((e) => e.geometry);
+    detail = null; // filled in below, once the frame is known
+  }
   const buildings = areaEls.filter((e) => isTerm(e) || isApron(e));
-  if (!buildings.length) throw new Error('no terminal/apron geometry in OSM for this field');
+  const fields = areaEls.filter((e) => isAerodrome(e) || isRunway(e));
+  if (!buildings.length && !fields.length) throw new Error('no airport geometry in OSM for this field');
   const terminals = areaEls.filter(isTerm);
   const aprons = areaEls.filter(isApron);
-  const frame = terminals.length ? terminals : aprons.length ? aprons : buildings;
+  const frame = terminals.length ? terminals : aprons.length ? aprons : buildings.length ? buildings : fields;
 
   const raw = extentOf(frame);
   // A regional field has a terminal a few hundred metres across. Flooring the
@@ -527,20 +616,14 @@ async function build(code) {
   };
   const tight = bboxOf(bounds.center[1], bounds.center[0], (MARGIN / 2) * Math.max(bounds.latSpan, bounds.lonSpan / 1.45));
 
-  // Stages B and C only look at that frame: airport roads and taxiways, then the
-  // POIs behind the legend. A stage that keeps timing out costs its own layer —
-  // the geometry from stage A is what the map is actually made of.
-  const warnings = [];
-  const safe = async (label, fn) => {
-    try {
-      return await fn();
-    } catch (err) {
-      warnings.push(`${label} (${String(err.message).slice(0, 40)})`);
-      return [];
-    }
-  };
-  const detail = (await safe('no roads', () => cached(code, 'b', queryDetail, tight, { retryEmpty: true }))).filter((e) => e.geometry);
-  const poiEls = await safe('no POIs', () => cached(code, 'c2', queryPois, tight, { retryEmpty: true }));
+  // The staged path looks up its second and third layers only around the frame:
+  // airport roads and taxiways, then the POIs behind the legend. A stage that
+  // keeps timing out costs its own layer — stage A's geometry is what the map is
+  // actually made of.
+  if (!COMPACT) {
+    detail = (await safe('no roads', () => cached(code, 'b', queryDetail, tight, { retryEmpty: true }))).filter((e) => e.geometry);
+    poiEls = await safe('no POIs', () => cached(code, 'c2', queryPois, tight, { retryEmpty: true }));
+  }
 
   /** Inside the frame, with room for shapes that overhang its edge. */
   const inside = (p, pad = 0.25) => p
@@ -549,6 +632,7 @@ async function build(code) {
 
   const areas = [
     ...buildings,
+    ...fields,
     ...poiEls.filter((e) => e.geometry && isPark(e) && inside(CENTROID(e))),
   ];
 
@@ -603,16 +687,22 @@ async function main() {
       const map = await build(code);
       const sourcePath = join(SOURCE_DIR, `${code}.png`);
       const coverPath = join(MAPS_DIR, `${code}.png`);
+      if (SVG_ONLY) {
+        const svgPath = join(SOURCE_DIR, `${code}.svg`);
+        writeFileSync(realPath(svgPath), map.svg);
+        console.log(`${label} svg — ${(map.svg.length / 1024).toFixed(0)}KB, ${map.imgW}x${map.imgH}, ${map.coreCount} core + ${map.detailCount} detail, ${map.badges} badges -> ${svgPath}`);
+        continue;
+      }
       const raster = await sharp(Buffer.from(map.svg));
-      await raster.clone().png({ compressionLevel: 9 }).toFile(sourcePath);
-      await raster.clone().resize({ width: 400, withoutEnlargement: false }).png({ compressionLevel: 9 }).toFile(coverPath);
+      await raster.clone().png({ compressionLevel: 9 }).toFile(realPath(sourcePath));
+      await raster.clone().resize({ width: 400, withoutEnlargement: false }).png({ compressionLevel: 9 }).toFile(realPath(coverPath));
 
       const sha = (p) => createHash('sha256').update(readFileSync(p)).digest('hex').slice(0, 16);
       done.push({ code, size: `${map.imgW}x${map.imgH}`, badges: map.badges });
       recordProvenance([code]);
       console.log(`${label} ok — ${map.imgW}x${map.imgH}, ${map.coreCount} core + ${map.detailCount} detail shapes, ${map.badges} badges (coords: ${map.point.from})${map.warnings.length ? ` [${map.warnings.join('; ')}]` : ''}`);
     } catch (err) {
-      if (/no terminal\/apron\/parking|no coordinates/.test(err.message)) {
+      if (/no airport geometry|no coordinates/.test(err.message)) {
         skipped.push({ code, reason: err.message });
         console.log(`${label} skipped — ${err.message}`);
       } else {

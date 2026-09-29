@@ -1,0 +1,24 @@
+{
+  "_readme": [
+    "Coordinates for airports that no dataset covers: not in",
+    "public/data/world-airports.json, not in data/world-airports.csv (the 2018",
+    "OurAirports dump) and not tagged with `iata` in OpenStreetMap — either the",
+    "code is a local/national one (QXB, ZCA) or the field has since closed (LYM).",
+    "",
+    "scripts/generate-airport-maps.mjs reads this file after the two datasets and",
+    "before its Overpass lookup, so a verified coordinate here is what puts these",
+    "fields on a map instead of leaving them without one. Each entry names where",
+    "the coordinate came from — keep that habit when adding one: looked up by IATA",
+    "code in Wikidata (P238 -> P625) or from the airport's Wikipedia article.",
+    "Coordinates are decimal degrees, WGS84."
+  ],
+  "ALL": { "lat": 44.045688, "lng": 8.12533, "source": "Wikidata, IATA ALL (Albenga/Riviera Airport)" },
+  "EDC": { "lat": 30.3999, "lng": -97.5735, "source": "en.wikipedia, Austin Executive Airport" },
+  "IEO": { "lat": 16.711111, "lng": -9.637778, "source": "Wikidata Q1626023, Aioun el Atrouss Airport" },
+  "LLU": { "lat": 60.464444, "lng": -45.577778, "source": "Wikidata, IATA LLU (Alluitsup Paa Heliport)" },
+  "LYM": { "lat": 51.083333, "lng": 1.016667, "source": "Wikidata, IATA LYM (Lympne Airport, Ashford)" },
+  "QNJ": { "lat": 46.192222, "lng": 6.268056, "source": "en.wikipedia, Annemasse Aerodrome" },
+  "QXB": { "lat": 43.505, "lng": 5.36841, "source": "Wikidata, IATA QXB (Aix-en-Provence Aerodrome)" },
+  "SAY": { "lat": 43.258611, "lng": 11.255, "source": "it.wikipedia, Aeroporto di Siena-Ampugnano" },
+  "ZCA": { "lat": 51.483333, "lng": 7.899333, "source": "Wikidata, IATA ZCA (Arnsberg-Menden airfield)" }
+}
