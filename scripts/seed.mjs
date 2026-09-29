@@ -1,12 +1,22 @@
 /**
- * Seeds PostgreSQL from scripts/legacy-data.json (extracted from the original
- * single-file version of the site) and the directory batch in
- * scripts/directory-data.json.
+ * Project database initialisation + seeding, in one command.
+ *
+ * `node scripts/seed.mjs` is the whole path from an empty PostgreSQL server to a
+ * working site database:
+ *
+ *   1. create the database when it does not exist   (scripts/db-create.mjs)
+ *   2. extensions  (pg_trgm)                        (db/extensions.sql)
+ *   3. schema                                       (drizzle-kit push)
+ *   4. triggers + views                             (db/custom.sql)
+ *   5. data: countries, airports, terminals, translations
+ *
+ * Steps 1–4 are skipped when the database is already initialised (detected by
+ * the presence of the `airports` table), so the command is safe to re-run; only
+ * the data step is destructive, and it is a TRUNCATE-and-re-insert of exactly
+ * what the two data files hold.
  *
  * Usage:
- *   node scripts/seed.mjs                 rebuild: TRUNCATE, then re-insert
- *                                         everything. Idempotent; use it after
- *                                         editing either data file.
+ *   node scripts/seed.mjs                 initialise if needed, then rebuild
  *   node scripts/seed.mjs --add-airports  insert only what is missing: airports
  *                                         (and the countries they need) that the
  *                                         database does not have yet. Existing
@@ -14,20 +24,68 @@
  *                                         stamped minutes old so they arrive at
  *                                         the top of the homepage order instead
  *                                         of behind every existing airport.
+ *   node scripts/seed.mjs --data-only     skip the initialisation steps entirely
+ *                                         (useful when the schema is known good)
+ *   node scripts/seed.mjs --migrate       build the schema from drizzle/*.sql
+ *                                         instead of drizzle-kit push
+ *   node scripts/seed.mjs --reset         drop and recreate the database first
+ *                                         (destructive: everything is lost)
  *
- * Adding an airport means adding it to one of those two data files first: the
+ * Adding an airport means adding it to one of the two data files first: the
  * curated set (legacy-data.json, with terminals and editorial copy) or the
  * directory batch (directory-data.json, base fields only — see
- * `npm run data:build-directory`).
+ * `node data/build-directory-data.mjs`), then `--add-airports`.
  */
 import { readFileSync, existsSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { join } from 'node:path';
 import pg from 'pg';
 import { databaseUrl, ROOT } from './_env.mjs';
 import { toHant, toHantName, SIMPLIFIED_ONLY } from './_hant.mjs';
 
-/** Insert-only mode: see the usage note above. */
+/** Modes: see the usage note above. */
 const ADD_AIRPORTS = process.argv.includes('--add-airports');
+const DATA_ONLY = process.argv.includes('--data-only');
+const USE_MIGRATE = process.argv.includes('--migrate');
+const RESET = process.argv.includes('--reset');
+
+/** Runs one initialisation step in this same process environment, loudly. */
+function step(command) {
+  const result = spawnSync(command, { shell: true, stdio: 'inherit', env: process.env });
+  if (result.status !== 0) {
+    throw new Error(`step failed (${result.status}): ${command}`);
+  }
+}
+
+/** True when the schema is already there — the signal that steps 2–4 are done. */
+async function schemaExists() {
+  const client = new pg.Client({ connectionString: databaseUrl() });
+  await client.connect();
+  try {
+    const { rows } = await client.query(
+      "SELECT 1 FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'airports'"
+    );
+    return rows.length > 0;
+  } finally {
+    await client.end();
+  }
+}
+
+/**
+ * Brings the server, database and schema up. Each step is idempotent, and the
+ * schema steps are skipped outright once `airports` exists, so running this
+ * against a live database changes nothing.
+ */
+async function initialise() {
+  step(`node scripts/db-create.mjs${RESET ? ' --reset' : ''}`);
+  if (await schemaExists()) {
+    console.log('schema already present — skipping extensions/push/custom');
+    return;
+  }
+  step('node scripts/db-apply-sql.mjs db/extensions.sql');
+  step(USE_MIGRATE ? 'npx drizzle-kit migrate' : 'npx drizzle-kit push --force');
+  step('node scripts/db-apply-sql.mjs db/custom.sql');
+}
 
 const CITY_EN = {
   上海: 'Shanghai', 东京: 'Tokyo', 亚特兰大: 'Atlanta', 伊斯坦布尔: 'Istanbul',
@@ -299,6 +357,9 @@ if (badGateRanges.length) {
     `gate ranges still contain CJK after translation:\n  ${[...new Set(badGateRanges)].join('\n  ')}`
   );
 }
+
+// ------------------------------------------------------------------- run
+if (!DATA_ONLY) await initialise();
 
 const client = new pg.Client({ connectionString: databaseUrl() });
 await client.connect();
