@@ -1,0 +1,65 @@
+---
+title: 阿克伦-坎顿机场指南
+summary: 阿克伦-坎顿机场（CAK）位于美国阿克伦，是一座中型机场。本页汇总它的机场地图、直飞航线与附近机场，并说明哪些信息还需以航司与机场公布为准。
+updated: 2026-09-29
+---
+
+阿克伦-坎顿机场（IATA 代码 **CAK**，ICAO 代码 KCAK）服务于美国阿克伦，按规模分类是一座中型机场。本页把分散在数据库、地图与航线数据集中的信息整理成一页，方便你在订票前后快速核对。
+
+## 基本信息
+
+| 项目 | 信息 |
+| --- | --- |
+| IATA / ICAO | CAK / KCAK |
+| 机场规模 | 中型机场 |
+| 所在地 | 美国 · 阿克伦（北美洲） |
+| 坐标 | 40.9161, -81.4422 |
+| 直飞目的地 | 11 个（见下表） |
+
+## 机场地图
+
+本页的机场地图由 OpenStreetMap 数据渲染：有航站楼多边形的机场会画出航站楼、停机坪与进场道路，小型机场则呈现机场轮廓与跑道；地图同时标注停车、巴士、餐饮、酒店、租车等符号（以 OSM 实际收录为准）。
+
+- **查看大图** —— 机场页的地图卡片可放大查看，2000px 原图支持下载保存。
+- **位置地图** —— 页面内的交互式地图可平移缩放，确认机场与城市、周边路网的相对位置。
+- **规模示意图** —— 该机场的航站楼结构数据尚未收录，页面会按登机口规模绘制一张示意图，仅表示体量，不是实际布局。
+
+## 直飞航线
+
+按飞行距离由近到远列出的直飞目的地（数据来自 OpenFlights 航线数据集，2014 年收录，供参考；实际航线以航司与机场公布为准）：
+
+| 目的地 | 距离 | 主要航司 |
+| --- | --- | --- |
+| Detroit Metropolitan Wayne County Airport（DTW） | 约 215 km | Delta Air Lines |
+| Ronald Reagan Washington National Airport（DCA） | 约 440 km | American Airlines、US Airways |
+| Philadelphia International Airport（PHL） | 约 538 km | American Airlines、US Airways |
+| 芝加哥奥黑尔国际机场（ORD） | 约 551 km | United Airlines |
+| Charlotte Douglas International Airport（CLT） | 约 636 km | American Airlines、US Airways |
+| 拉瓜迪亚机场（LGA） | 约 637 km | AirTran Airways、Southwest Airlines |
+| 哈茨菲尔德-杰克逊亚特兰大国际机场（ATL） | 约 851 km | Air France、Delta Air Lines |
+| Boston Logan International Airport（BOS） | 约 881 km | AirTran Airways、Southwest Airlines |
+
+完整列表见[阿克伦-坎顿机场航线图](/route/CAK)页面，含全部 11 个直飞目的地。
+
+## 附近机场
+
+若无合适航班或票价过高，可以比较附近这些机场：
+
+| 机场 | 直线距离 |
+| --- | --- |
+| 阿勒格尼县机场（AGC） | 142 km |
+| 拉特罗布阿诺德·帕尔默机场（LBE） | 186 km |
+| 阿尔图纳布莱尔县机场（AOO） | 272 km |
+
+## 规模与设施说明
+
+中型机场多为区域枢纽：航站楼集中、步行距离可控，值机与安检通常快于大型枢纽，但航班频次较低，误机后改签的余地也更小，建议按「起飞前 90–120 分钟到达」安排。
+
+需要说明的是：本站对该机场的航站楼布局、登机口分布、地面交通与设施清单**尚未完成编辑整理**，相关区块会随数据补充而更新。出行前的确定性信息（值机柜台位置、地面交通时刻）请以机场官网或航空公司为准。
+
+## 出行提示
+
+- 若你的目的地不在上表中，通常需要经Detroit Metropolitan Wayne County Airport（DTW）等较大机场中转。
+- 用页面顶部的搜索框可以直接比较其他机场：输入城市名或 IATA 代码即可查看附近的替代选择。
+- 旺季（节假日、大型活动期间）小机场的停车位与租车辆也紧张，如需自驾建议提前预订。
+

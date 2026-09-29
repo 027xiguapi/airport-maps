@@ -68,12 +68,32 @@ function readMarkdown(...segments: string[]): MarkdownDoc | null {
   return parseFrontmatter(readFileSync(path, 'utf8'));
 }
 
+/**
+ * Windows reserves the DOS device names (CON, PRN, AUX, NUL), so a file named
+ * `AUX.md` cannot be indexed by git from a Windows checkout — the same
+ * constraint that gives the AUX cover its `AUX_.png` name (see
+ * scripts/map-file-aliases.json). Guide files for such codes carry a trailing
+ * underscore on disk; these two helpers map code ↔ file name.
+ */
+const RESERVED_DEVICE_NAMES = new Set(['CON', 'PRN', 'AUX', 'NUL']);
+
+function guideFileName(code: string): string {
+  return `${RESERVED_DEVICE_NAMES.has(code) ? `${code}_` : code}.md`;
+}
+
+function guideFileCode(fileName: string): string {
+  const stem = fileName.slice(0, -3);
+  return stem.endsWith('_') && RESERVED_DEVICE_NAMES.has(stem.slice(0, -1))
+    ? stem.slice(0, -1)
+    : stem;
+}
+
 /** Long-form guide for an airport, falling back to the source language. */
 export function getAirportGuide(locale: Locale, iata: string): MarkdownDoc | null {
-  const code = iata.toUpperCase();
+  const file = guideFileName(iata.toUpperCase());
   return (
-    readMarkdown(locale, 'airports', `${code}.md`) ??
-    readMarkdown(SOURCE_LOCALE, 'airports', `${code}.md`)
+    readMarkdown(locale, 'airports', file) ??
+    readMarkdown(SOURCE_LOCALE, 'airports', file)
   );
 }
 
@@ -115,10 +135,10 @@ export function getPage(locale: Locale, slug: string): MarkdownDoc | null {
 
 /** IATA codes that have a guide, used to decide whether to link one. */
 export function hasAirportGuide(iata: string): boolean {
-  const code = iata.toUpperCase();
+  const file = guideFileName(iata.toUpperCase());
   return (
-    existsSync(join(process.cwd(), 'content', SOURCE_LOCALE, 'airports', `${code}.md`)) ||
-    existsSync(join(process.cwd(), 'content', 'en', 'airports', `${code}.md`))
+    existsSync(join(process.cwd(), 'content', SOURCE_LOCALE, 'airports', file)) ||
+    existsSync(join(process.cwd(), 'content', 'en', 'airports', file))
   );
 }
 
@@ -129,7 +149,7 @@ export function listGuidedAirports(locale: Locale): string[] {
     const path = join(process.cwd(), 'content', dir, 'airports');
     if (!existsSync(path)) continue;
     for (const file of readdirSync(path)) {
-      if (file.endsWith('.md')) codes.add(file.slice(0, -3).toUpperCase());
+      if (file.endsWith('.md')) codes.add(guideFileCode(file).toUpperCase());
     }
   }
   return [...codes].sort();

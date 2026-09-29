@@ -1,0 +1,20 @@
+{
+  "_readme": [
+    "Cover files whose IATA code cannot be a filename on Windows. `AUX` is a",
+    "legacy DOS device name, so `public/maps/AUX.png` resolves to the device",
+    "`\\\\.\\AUX` instead of a file: git cannot index it (add fails with",
+    "`open(...): No such file or directory` even though the entry is visible), so",
+    "the file can never be committed and the deploy box would never receive it.",
+    "The escaped name below is what actually lives on disk; every reader maps",
+    "code -> file name through this table:",
+    "  lib/map-images.ts                   URLs the site serves",
+    "  scripts/generate-airport-maps.mjs   what the generator writes",
+    "  scripts/generate-airport-guides.mjs cover existence check",
+    "  scripts/check-maps.mjs              coverage scanning",
+    "Every reader tolerates this file being absent (they then assume",
+    "<IATA>.png), but with AUX in the database its absence means the AUX page",
+    "silently loses its cover. CON / PRN / NUL are reserved the same way and",
+    "would need entries if they ever enter the airport set."
+  ],
+  "AUX": "AUX_.png"
+}

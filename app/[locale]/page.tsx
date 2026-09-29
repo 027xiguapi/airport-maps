@@ -93,6 +93,10 @@ export default async function HomePage({ params }: Props) {
   // Guide tiles show the same 400px /maps covers; a few guided airports have
   // no cover yet and render an IATA wordmark placeholder instead.
   const coverCodes = new Set(mapImageCodes());
+  // Every airport now carries a starter guide, so the section renders a fixed
+  // window (busiest first, the order getAirportsByCodes returns) instead of all
+  // 360+ tiles. The #browse card above still counts the full set.
+  const guidedTiles = guided.slice(0, 12);
 
   const shortcuts = await getAirportsByCodes(locale, SHORTCUTS);
 
@@ -466,7 +470,7 @@ export default async function HomePage({ params }: Props) {
             </div>
           </div>
           <div className="grid grid-cols-[repeat(auto-fill,minmax(min(260px,100%),1fr))] gap-3.5">
-            {guided.map((airport) => (
+            {guidedTiles.map((airport) => (
               <Link
                 className="group flex flex-col overflow-hidden bg-navy-900 text-white transition-[transform,box-shadow] duration-[180ms] [box-shadow:var(--shadow-sm)] hover:-translate-y-1 hover:[box-shadow:var(--shadow-lg)]"
                 href={localizedPath(locale, `/airport/${airport.iata}`)}

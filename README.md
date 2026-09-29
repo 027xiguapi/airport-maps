@@ -1,6 +1,6 @@
 # 全球机场地图 · World Airport Maps
 
-全球机场导航站点（生产域名 **worldairportmap.com**）：按国家 / 地区浏览 **363 座机场、92 个国家 / 地区**，查看每座机场的**航站楼平面示意图**、登机口范围、主要航司、地面交通与设施；可交互的**直飞航线图**与目的地列表；三个地理计算工具；以及用 **Markdown** 维护的长文（63 篇机场指南、37 篇国家介绍）。**默认语言为英语**，同时提供完整中文版。
+全球机场导航站点（生产域名 **worldairportmap.com**）：按国家 / 地区浏览 **363 座机场、92 个国家 / 地区**，查看每座机场的**航站楼平面示意图**、登机口范围、主要航司、地面交通与设施；可交互的**直飞航线图**与目的地列表；三个地理计算工具；以及用 **Markdown** 维护的长文（366 篇机场指南：60 篇精编手写 + 303 篇数据驱动起步稿、37 篇国家介绍）。**默认语言为英语**，同时提供完整中文版。
 
 由原来的单文件静态页面（`legacy/index.html`，哈希路由 + 内嵌 JS 数据）重构为 **Next.js App Router + PostgreSQL**：
 
@@ -93,6 +93,7 @@ npm run build && npm start
 | `node scripts/fetch-airport-images.mjs` | 批量下载机场封面图（`public/maps`）并记录每张图的来源、sha256 与许可说明；机场代码只能来自你自备的列表 / HTML / 库导出，脚本不爬站发现代码，默认遵守 robots.txt |
 | `node scripts/check-maps.mjs [--table]` | 检查 `public/maps` 封面图与机场的覆盖情况：哪些机场缺图、哪些图没有对应机场 |
 | `node scripts/check-search.mjs [词...]` | 检查搜索相关性排序与通配符转义 |
+| `node scripts/generate-airport-guides.mjs` | 为数据库里有、但还没有指南的机场写**数据驱动的起步稿**（`content/{zh,en}/airports/<IATA>.md` 成对）：内容只来自仓库数据（代码、位置、规模、坐标、OpenFlights 航线集、最近机场），航站楼 / 交通等未整理的信息明确标注「待补充」而不编造。**跳过精编 60 座的手写指南**（含孤儿 MEL/SZX/TPE），已存在的文件一律不覆盖；`--codes AAL,AAR` 限量、`--dry-run` 预演。跑完接 `node scripts/build-hant.mjs` 派生 tw。首页「机场指南」区块只展示客流最大的 12 座（`guidedTiles`），角标数字仍是全量 |
 | `node scripts/calibrate-hero-map.cjs` | 重新标定首页 hero 背景图（`public/world-airport-map.jpg`）的投影常量：自相关测出地图的横向平铺周期，再用全部机场坐标拟合相位与纬度映射，输出 `components/HeroRoutes.tsx` 顶部要填的四个数字；换背景图后跑一次即可 |
 
 `scripts/seed.mjs` 是数据入口（一次性迁移留下的 `scripts/legacy-data.json` 见文末）。
@@ -187,7 +188,7 @@ URL 方案（与生产站点地图一致）：
 
 `tw` 与中文同属一个书写系统，文案是**派生**而不是另写一份，因此它的第 2、4、5 步不同：
 
-- 消息目录 `lib/i18n/messages/tw.ts`、`content/tw/**`（63 篇机场指南 + 37 篇国家介绍 + 4 个静态页）由 `scripts/build-hant.mjs` 生成（`node scripts/build-hant.mjs`，加 `--check` 只校验不改写）：OpenCC `cn → twp` 转换，先过 `content/terminology/tw-phrases.json` 的 `phrases`（台湾用法例外：希斯洛、杜拜、雪梨、巴塞隆納…），再过 `corrections`（纠正 OpenCC 的过度替换：连接→連線、只→隻、绑定→繫結）。转换规则集中在 `scripts/_hant.mjs`（`toHant` 用于正文、`toHantName` 用于地名——台湾写法用「里」而不是 OpenCC 的「裡」）；转换前后会核对 `${}` 插值数量（防止词表替换破坏模板字符串）。简体残留用 `_hant.mjs` 里按 OpenCC 反推的字符集扫描，有残留时 seed 会直接报出来。
+- 消息目录 `lib/i18n/messages/tw.ts`、`content/tw/**`（366 篇机场指南 + 37 篇国家介绍 + 4 个静态页）由 `scripts/build-hant.mjs` 生成（`node scripts/build-hant.mjs`，加 `--check` 只校验不改写）：OpenCC `cn → twp` 转换，先过 `content/terminology/tw-phrases.json` 的 `phrases`（台湾用法例外：希斯洛、杜拜、雪梨、巴塞隆納…），再过 `corrections`（纠正 OpenCC 的过度替换：连接→連線、只→隻、绑定→繫結）。转换规则集中在 `scripts/_hant.mjs`（`toHant` 用于正文、`toHantName` 用于地名——台湾写法用「里」而不是 OpenCC 的「裡」）；转换前后会核对 `${}` 插值数量（防止词表替换破坏模板字符串）。简体残留用 `_hant.mjs` 里按 OpenCC 反推的字符集扫描，有残留时 seed 会直接报出来。
 - 重新生成会**覆盖** `content/tw`，所以要改文案就改词表（或改写生成器），不要直接改生成物。
 - 数据库侧没有 `terminology/tw.json`：`scripts/seed.mjs` 的 `DERIVED_LOCALES` 把 `tw` 标记为派生语言，各表 `_tw` 列由 `toHant()` / `toHantName()` 从中文源直接转换（`name_tw`、`city_tw`、`region_tw`、`gate_range_tw`、`airlines_tw`、`label_tw`、`description_tw`，简介写入 `airport_translations.locale='tw'`）。种子脚本最后打印 `derived (tw)` 的条数与简体残留数。
 - 名称类字段用 `toHantName()`：OpenCC 在音译里会把「里」读成「裡」（紐伯裡、庫裡蒂巴），名称里一律还原为「里」。
@@ -230,7 +231,7 @@ URL 方案（与生产站点地图一致）：
 ```
 content/
   terminology/en.json                     封闭词表（航站楼名 49、设施标签 13、交通方式 6）
-  zh/airports/HKG.md                      机场指南（63 篇，中英成对）
+  zh/airports/HKG.md                      机场指南（366 篇，中英成对）
   en/airports/HKG.md
   zh/countries/JP.md                      国家 / 地区机场介绍（37 篇，中英成对）
   en/countries/JP.md
