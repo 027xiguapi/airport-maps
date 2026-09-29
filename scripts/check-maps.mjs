@@ -7,7 +7,7 @@
  *   --table  print every missing airport as a table row (default lists codes)
  */
 import pg from 'pg';
-import { readdirSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { databaseUrl, ROOT } from './_env.mjs';
 
@@ -21,9 +21,22 @@ const { rows } = await client.query(
 await client.end();
 
 const files = new Set(
-  readdirSync(join(ROOT, 'public', 'maps')).filter((f) => /^[A-Z]{3}\.png$/.test(f))
+  readdirSync(join(ROOT, 'public', 'maps')).filter((f) => /^[A-Z]{3}_?\.png$/.test(f))
 );
-const coded = new Set([...files].map((f) => f.slice(0, 3)));
+// AUX gains a trailing underscore on disk (see scripts/map-file-aliases.json):
+// its plain IATA name is a DOS device on Windows, which git cannot index.
+const ALIASES = (() => {
+  try {
+    const file = JSON.parse(readFileSync(join(ROOT, 'scripts', 'map-file-aliases.json'), 'utf8'));
+    return Object.fromEntries(
+      Object.entries(file).filter(([code, name]) => /^[A-Z]{3}$/.test(code) && typeof name === 'string')
+    );
+  } catch {
+    return {};
+  }
+})();
+const byFile = new Map(Object.entries(ALIASES).map(([code, name]) => [name, code]));
+const coded = new Set([...files].map((f) => byFile.get(f) ?? f.slice(0, 3)));
 const dbCodes = new Set(rows.map((a) => a.iata));
 
 const missing = rows.filter((a) => !coded.has(a.iata));

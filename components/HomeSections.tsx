@@ -3,6 +3,7 @@ import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { formatNumber } from '@/lib/format';
 import { PlaneIcon } from '@/lib/icons';
+import { coverUrl } from '@/lib/map-images';
 import { routeImageUrl } from '@/lib/route-images';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
@@ -91,7 +92,7 @@ export function PopularCities({ locale, airports }: { locale: Locale; airports: 
           <span className="flex h-[150px] flex-none items-center justify-center bg-white p-2 max-[480px]:h-[124px]">
             <img
               className="h-full w-full object-contain"
-              src={`/maps/${airport.iata}.png`}
+              src={coverUrl(airport.iata)}
               alt={airport.name}
               loading="lazy"
             />
@@ -134,7 +135,7 @@ export function LatestMaps({ locale, airports }: { locale: Locale; airports: Air
           <span className="flex h-[150px] flex-none items-center justify-center bg-white p-2 max-[480px]:h-[124px]">
             <img
               className="h-full w-full object-contain"
-              src={`/maps/${airport.iata}.png`}
+              src={coverUrl(airport.iata)}
               alt={airport.name}
               loading="lazy"
             />

@@ -2,6 +2,31 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 /**
+ * Cover file names that differ from `<IATA>.png`. `AUX` is a legacy DOS device
+ * name, so on Windows `public/maps/AUX.png` is not a file at all — it resolves
+ * to `\\.\AUX`, which the generator cannot create and git cannot index. The
+ * table lives in scripts/map-file-aliases.json because the generator and the
+ * coverage checker read the same names.
+ */
+const ALIASES: Record<string, string> = (() => {
+  try {
+    const file = JSON.parse(
+      readFileSync(join(process.cwd(), 'scripts', 'map-file-aliases.json'), 'utf8')
+    );
+    return Object.fromEntries(
+      Object.entries(file).filter(([code, name]) => /^[A-Z]{3}$/.test(code) && typeof name === 'string')
+    ) as Record<string, string>;
+  } catch {
+    return {};
+  }
+})();
+
+/** The file name a cover for this code uses on disk. */
+function fileName(iata: string): string {
+  return ALIASES[iata.toUpperCase()] ?? `${iata.toUpperCase()}.png`;
+}
+
+/**
  * Cover images shipped in /public/maps, keyed by IATA code (PEK.png). The
  * directory is read once per process and cached; server-side only — never
  * import this from a client component.
@@ -19,17 +44,23 @@ function available(): Set<string> {
   return filenames;
 }
 
-/** `/maps/PEK.png` when a cover exists for the code, else null. */
+/** `/source-maps/PEK.png` when a cover exists for the code, else null. */
 export function mapImageUrl(iata: string): string | null {
-  const file = `${iata.toUpperCase()}.png`;
+  const file = fileName(iata);
   return available().has(file) ? `/source-maps/${file}` : null;
+}
+
+/** The 400px cover the homepage strips and cards render. */
+export function coverUrl(iata: string): string {
+  return `/maps/${fileName(iata)}`;
 }
 
 /** IATA codes that have a cover in /public/maps, sorted alphabetically. */
 export function mapImageCodes(): string[] {
+  const byFile = new Map(Object.entries(ALIASES).map(([code, file]) => [file, code]));
   return [...available()]
     .filter((file) => file.toLowerCase().endsWith('.png'))
-    .map((file) => file.slice(0, -4).toUpperCase())
+    .map((file) => byFile.get(file) ?? file.slice(0, -4).toUpperCase())
     .sort();
 }
 
@@ -49,7 +80,7 @@ export function latestMapCodes(limit = 12): string[] {
     const codes: string[] = [];
     for (const entry of index.maps ?? []) {
       const code = String(entry.iata ?? '').toUpperCase();
-      if (!code || !available_.has(`${code}.png`) || codes.includes(code)) continue;
+      if (!code || !available_.has(fileName(code)) || codes.includes(code)) continue;
       codes.push(code);
       if (codes.length >= limit) break;
     }

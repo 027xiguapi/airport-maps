@@ -25,7 +25,7 @@ import {
   getRegionCount,
   getStats,
 } from '@/lib/queries';
-import { latestMapCodes, mapImageCodes } from '@/lib/map-images';
+import { coverUrl, latestMapCodes, mapImageCodes } from '@/lib/map-images';
 import { routeDestinationCounts } from '@/lib/routes';
 import { absoluteUrl, ORG_NODE_ID, SITE_NAME, SITE_URL, WEBSITE_NODE_ID } from '@/lib/site';
 import { getAirportGeo } from '@/lib/airport-geo';
@@ -476,7 +476,7 @@ export default async function HomePage({ params }: Props) {
                   {coverCodes.has(airport.iata) ? (
                     <img
                       className="h-full w-full object-contain"
-                      src={`/maps/${airport.iata}.png`}
+                      src={coverUrl(airport.iata)}
                       alt={airport.name}
                       loading="lazy"
                     />

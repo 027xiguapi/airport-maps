@@ -1,6 +1,6 @@
 {
   "note": "Provenance for the covers this script generated. Images downloaded by scripts/fetch-airport-images.mjs are recorded by that script instead.",
-  "updatedAt": "2026-09-29T05:23:31.299Z",
+  "updatedAt": "2026-09-29T05:48:01.578Z",
   "entries": {
     "PVG": {
       "generatedAt": "2026-09-28T03:02:17.313Z",
@@ -1883,7 +1883,7 @@
       }
     },
     "AUX": {
-      "generatedAt": "2026-09-29T03:53:11.696Z",
+      "generatedAt": "2026-09-29T05:48:01.453Z",
       "generator": "generate-airport-maps.mjs",
       "dataSource": "OpenStreetMap via Overpass API",
       "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",

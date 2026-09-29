@@ -74,6 +74,24 @@ const MANIFEST = join(ROOT, 'scripts', 'maps-manifest.json');
 /** Page data for the homepage "latest maps" strip: newest first, no hashes. */
 const LATEST_INDEX = join(ROOT, 'public', 'data', 'latest-maps.json');
 
+/**
+ * Codes whose cover cannot be named `<IATA>.png`: on Windows, `AUX.png` is the
+ * DOS device `\\.\AUX` — unwritable and unindexable by git, so the file would
+ * never reach the repository. The table is shared with lib/map-images.ts (the
+ * URL the site serves) and check-maps.mjs (coverage scanning).
+ */
+const ALIASES = (() => {
+  try {
+    const file = JSON.parse(readFileSync(join(ROOT, 'scripts', 'map-file-aliases.json'), 'utf8'));
+    return Object.fromEntries(
+      Object.entries(file).filter(([code, name]) => /^[A-Z]{3}$/.test(code) && typeof name === 'string')
+    );
+  } catch {
+    return {};
+  }
+})();
+const fileName = (code) => (ALIASES[code] ?? `${code}.png`);
+
 // ------------------------------------------------------------------ targets
 const legacy = JSON.parse(readFileSync(join(ROOT, 'scripts', 'legacy-data.json'), 'utf8'));
 const directory = JSON.parse(readFileSync(join(ROOT, 'scripts', 'directory-data.json'), 'utf8'));
@@ -81,7 +99,16 @@ const kindOf = new Map(directory.airports.map((a) => [a.iata, a.kind]));
 const allCodes = [...new Set([...legacy.airports.map((a) => a.iata), ...directory.airports.map((a) => a.iata)])];
 const covered = () => {
   try {
-    return new Set(readdirSync(MAPS_DIR).filter((f) => /^[A-Z]{3}\.png$/.test(f)).map((f) => f.slice(0, 3)));
+    const files = new Set(readdirSync(MAPS_DIR));
+    const codes = new Set(
+      Object.entries(ALIASES)
+        .filter(([, name]) => files.has(name))
+        .map(([code]) => code)
+    );
+    for (const file of files) {
+      if (/^[A-Z]{3}\.png$/.test(file)) codes.add(file.slice(0, 3));
+    }
+    return codes;
   } catch {
     return new Set();
   }
@@ -475,8 +502,8 @@ ${g.join('\n')}
 }
 
 // ------------------------------------------------------------------- manifest
-const sourcePath = (code) => join(SOURCE_DIR, `${code}.png`);
-const coverPath = (code) => join(MAPS_DIR, `${code}.png`);
+const sourcePath = (code) => join(SOURCE_DIR, fileName(code));
+const coverPath = (code) => join(MAPS_DIR, fileName(code));
 const sha256 = (path) => createHash('sha256').update(readFileSync(path)).digest('hex');
 
 /**
@@ -685,17 +712,15 @@ async function main() {
         coordsCache.set(code, found);
       }
       const map = await build(code);
-      const sourcePath = join(SOURCE_DIR, `${code}.png`);
-      const coverPath = join(MAPS_DIR, `${code}.png`);
       if (SVG_ONLY) {
-        const svgPath = join(SOURCE_DIR, `${code}.svg`);
+        const svgPath = sourcePath(code).replace(/\.png$/, '.svg');
         writeFileSync(realPath(svgPath), map.svg);
         console.log(`${label} svg — ${(map.svg.length / 1024).toFixed(0)}KB, ${map.imgW}x${map.imgH}, ${map.coreCount} core + ${map.detailCount} detail, ${map.badges} badges -> ${svgPath}`);
         continue;
       }
       const raster = await sharp(Buffer.from(map.svg));
-      await raster.clone().png({ compressionLevel: 9 }).toFile(realPath(sourcePath));
-      await raster.clone().resize({ width: 400, withoutEnlargement: false }).png({ compressionLevel: 9 }).toFile(realPath(coverPath));
+      await raster.clone().png({ compressionLevel: 9 }).toFile(realPath(sourcePath(code)));
+      await raster.clone().resize({ width: 400, withoutEnlargement: false }).png({ compressionLevel: 9 }).toFile(realPath(coverPath(code)));
 
       const sha = (p) => createHash('sha256').update(readFileSync(p)).digest('hex').slice(0, 16);
       done.push({ code, size: `${map.imgW}x${map.imgH}`, badges: map.badges });
