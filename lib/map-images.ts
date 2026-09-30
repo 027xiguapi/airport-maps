@@ -65,32 +65,6 @@ export function mapImageCodes(): string[] {
 }
 
 /**
- * Covers generated most recently, newest first. The order comes from the index
- * scripts/generate-airport-maps.mjs writes to public/data/latest-maps.json —
- * downloaded covers predate that pipeline and are not in it, so this is exactly
- * "what the generator last produced". Returns [] when the index is absent, which
- * lets the caller drop the section instead of rendering it empty.
- */
-export function latestMapCodes(limit = 12): string[] {
-  try {
-    const index = JSON.parse(
-      readFileSync(join(process.cwd(), 'public', 'data', 'latest-maps.json'), 'utf8')
-    );
-    const available_ = available();
-    const codes: string[] = [];
-    for (const entry of index.maps ?? []) {
-      const code = String(entry.iata ?? '').toUpperCase();
-      if (!code || !available_.has(fileName(code)) || codes.includes(code)) continue;
-      codes.push(code);
-      if (codes.length >= limit) break;
-    }
-    return codes;
-  } catch {
-    return [];
-  }
-}
-
-/**
  * Full terminal-map files downloaded by scripts/fetch-terminal-maps.mjs into
  * /public/terminal-maps, keyed by IATA code (HKG/HKG_large.png + HKG.pdf).
  * Index is built once per process and cached; server-side only — never import

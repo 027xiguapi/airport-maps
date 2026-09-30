@@ -2,7 +2,12 @@
 
 import { useEffect, useState } from 'react';
 
-export type TocItem = { id: string; label: string };
+export type TocItem = {
+  id: string;
+  label: string;
+  /** 2 = top-level section, 3 = indented subsection (blog articles). */
+  level?: number;
+};
 
 /**
  * "On this page" rail for the airport page. Links are native hash anchors —
@@ -45,7 +50,11 @@ export default function TocNav({ items, label }: { items: TocItem[]; label: stri
       <div className="toc-title">{label}</div>
       <ul>
         {items.map((item) => (
-          <li key={item.id} data-active={active === item.id || undefined}>
+          <li
+            key={item.id}
+            data-level={item.level ?? 2}
+            data-active={active === item.id || undefined}
+          >
             <a href={`#${item.id}`}>{item.label}</a>
           </li>
         ))}

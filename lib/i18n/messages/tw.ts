@@ -150,14 +150,6 @@ export const tw: Messages = {
       en: 'Airport Maps',
       sub: '隨機展示全球機場的航站樓地圖封面，點選進入機場頁面檢視完整大圖。',
     },
-    /** 首頁「最新地圖」條：剛生成的封面，順序按 public/maps/maps-manifest.json 的時間。 */
-    latest: {
-      kicker: 'Just Added',
-      title: '最新機場地圖',
-      en: 'Latest Maps',
-      sub: '剛剛上線的機場平面圖：航站樓、停車場與地面交通位置一目瞭然。',
-      badge: '最新',
-    },
     recent: {
       kicker: 'Freshly Published',
       title: '最近更新',
@@ -603,6 +595,29 @@ export const tw: Messages = {
     en: 'Airport guides',
     sub: '除了航站樓示意圖，我們還為部分樞紐撰寫了長篇指南：如何讀懂登機口編號、如何在航站樓之間換乘、如何進城。',
     more: '檢視該機場',
+  },
+
+  /**
+   * Blog (`public/blog`, rendered by app/[locale]/blog). The articles are
+   * Chinese, so the routes only exist in zh / tw — but every locale's catalog
+   * still needs these keys, because they share one message shape.
+   */
+  blog: {
+    kicker: 'Journal',
+    title: '機場旅行指南',
+    /** 頂欄 / 頁尾導航用的短標籤。 */
+    nav: '部落格',
+    en: 'Travel notes',
+    sub: '把公眾號長文搬到這裡：入境通關、轉機換乘、航站樓設施與休憩攻略，都是實測過的流程。',
+    more: '檢視',
+    all: '全部文章',
+    /** 文章頁底部的相關文章列表。 */
+    morePosts: '更多文章',
+    back: '返回文章列表',
+    empty: '暫時還沒有文章。',
+    readingMinutes: (n: number) => `約 ${n} 分鐘讀完`,
+    source: (name: string) => `來源：${name}`,
+    tags: '標籤',
   },
 
   terminalMap: {

@@ -114,49 +114,6 @@ export function PopularCities({ locale, airports }: { locale: Locale; airports: 
   );
 }
 
-/**
- * Homepage "latest maps" strip: the covers the generator produced most recently,
- * dated by public/maps/maps-manifest.json (see lib/map-images.ts). Same tiles as
- * the popular strip, with a flag so the two read differently.
- */
-export function LatestMaps({ locale, airports }: { locale: Locale; airports: AirportSummary[] }) {
-  const t = getMessages(locale);
-  return (
-    <div className={`${STRIP} gap-4`}>
-      {airports.map((airport) => (
-        <Link
-          className={`${TILE} relative w-[230px] max-[480px]:w-[188px]`}
-          href={localizedPath(locale, `/airport/${airport.iata}`)}
-          key={airport.iata}
-        >
-          <span className="absolute left-3 top-3 z-10 rounded-full bg-amber px-[9px] py-[3px] font-display text-[11px] font-semibold tracking-[0.14em] text-navy-900 max-[480px]:left-2.5 max-[480px]:top-2.5">
-            {t.home.latest.badge}
-          </span>
-          <span className="flex h-[150px] flex-none items-center justify-center bg-white p-2 max-[480px]:h-[124px]">
-            <img
-              className="h-full w-full object-contain"
-              src={coverUrl(airport.iata)}
-              alt={airport.name}
-              loading="lazy"
-            />
-          </span>
-          <span className="flex min-w-0 flex-1 flex-col p-3.5">
-            <span className="font-display text-[12.5px] font-semibold tracking-[0.18em] text-amber">
-              {airport.iata}
-            </span>
-            <span className="mt-1 line-clamp-2 text-[15px] font-bold leading-snug">
-              {airport.name}
-            </span>
-            <span className="mt-auto truncate pt-1.5 text-[12px] text-white/60">
-              {airport.city} · {airport.countryName}
-            </span>
-          </span>
-        </Link>
-      ))}
-    </div>
-  );
-}
-
 /** One airport on the homepage route strip: the summary plus its destination count. */
 export type RouteNavItem = AirportSummary & { destinationCount: number };
 

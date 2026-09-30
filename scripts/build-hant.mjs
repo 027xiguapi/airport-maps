@@ -3,16 +3,19 @@
  *
  *   lib/i18n/messages/zh.ts  ->  lib/i18n/messages/tw.ts
  *   content/zh/**\/*.md       ->  content/tw/**\/*.md   (guides, country intros, pages)
+ *   public/blog/<slug>/<slug>.md -> public/blog/<slug>/<slug>.tw.md
  *
  * Everything goes through `toHant()` — copy, comments and all — because these
  * files are derived, never hand-edited. The catalog additionally gets a new
- * header and its export renamed; the markdown only changes character forms.
+ * header and its export renamed; the markdown only changes character forms
+ * (frontmatter included: slugs, dates and image paths are ASCII and pass
+ * through untouched).
  *
  * Usage:
  *   node scripts/build-hant.mjs            rewrite the tw files
  *   node scripts/build-hant.mjs --check    exit 1 if anything is out of date
  */
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { ROOT } from './_env.mjs';
 import { toHant } from './_hant.mjs';
@@ -21,6 +24,7 @@ const SOURCE = join(ROOT, 'lib', 'i18n', 'messages', 'zh.ts');
 const TARGET = join(ROOT, 'lib', 'i18n', 'messages', 'tw.ts');
 const CONTENT_SOURCE = join(ROOT, 'content', 'zh');
 const CONTENT_TARGET = join(ROOT, 'content', 'tw');
+const BLOG = join(ROOT, 'public', 'blog');
 
 /** Replaces zh.ts's own header; everything after it is converted body. */
 const HEADER = `import type { Messages } from './zh';
@@ -84,10 +88,27 @@ const emit = (path, text) => {
   }
 };
 
+/**
+ * Blog articles: `public/blog/<slug>/<slug>.md` gets a `<slug>.tw.md` sibling
+ * (same directory, so the relative `./images/...` references keep resolving).
+ * Only the article itself is derived — `images/` is language-neutral.
+ */
+function blogArticles() {
+  if (!existsSync(BLOG)) return [];
+  return readdirSync(BLOG, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && !entry.name.startsWith('_'))
+    .map((entry) => `${entry.name}/${entry.name}.md`)
+    .filter((rel) => existsSync(join(BLOG, rel)));
+}
+
 emit(TARGET, render(readFileSync(SOURCE, 'utf8')));
 const sources = markdownFiles(CONTENT_SOURCE);
 for (const rel of sources) {
   emit(join(CONTENT_TARGET, rel), toHant(readFileSync(join(CONTENT_SOURCE, rel), 'utf8')));
+}
+const articles = blogArticles();
+for (const rel of articles) {
+  emit(join(BLOG, rel.replace(/\.md$/, '.tw.md')), toHant(readFileSync(join(BLOG, rel), 'utf8')));
 }
 const orphans = (() => {
   try {
@@ -97,14 +118,18 @@ const orphans = (() => {
   }
 })();
 
+const total = sources.length + articles.length + 1;
+
 if (check) {
   if (stale.length) {
     console.error(`${stale.length} file(s) out of date — run \`node scripts/build-hant.mjs\`:\n  ${stale.slice(0, 10).join('\n  ')}`);
     process.exit(1);
   }
-  console.log(`tw is up to date (${sources.length + 1} files)`);
+  console.log(`tw is up to date (${total} files)`);
 } else {
-  console.log(`wrote ${written} file(s) of ${sources.length + 1} checked (messages + ${sources.length} markdown)`);
+  console.log(
+    `wrote ${written} file(s) of ${total} checked (messages + ${sources.length} markdown + ${articles.length} blog article)`
+  );
 }
 if (orphans.length) {
   console.warn(`note: content/tw has ${orphans.length} file(s) with no content/zh source (left alone): ${orphans.slice(0, 5).join(', ')}`);

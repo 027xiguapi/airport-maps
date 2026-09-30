@@ -158,14 +158,6 @@ export const en: Messages = {
       en: 'Airport Maps',
       sub: 'A rotating pick of terminal-map covers from airports worldwide — open an airport page for the full map.',
     },
-    /** Homepage "latest maps" strip: covers by the date they were generated in public/maps/maps-manifest.json. */
-    latest: {
-      kicker: 'Just Added',
-      title: 'Latest airport maps',
-      en: 'Latest Maps',
-      sub: 'Freshly published airport maps — terminal layout, parking and ground transport at a glance.',
-      badge: 'New',
-    },
     recent: {
       kicker: 'Freshly Published',
       title: 'Recently updated',
@@ -629,6 +621,27 @@ export const en: Messages = {
     en: 'Airport guides',
     sub: 'Beyond the terminal diagrams, we have written long-form guides for selected hubs: how to read the gate numbering, how to move between terminals and how to get into the city.',
     more: 'View this airport',
+  },
+
+  /**
+   * Blog (`public/blog`). The articles are published in Chinese, so the /blog
+   * routes only exist where that content does; these strings are the English
+   * wording of the same UI.
+   */
+  blog: {
+    kicker: 'Journal',
+    title: 'Travel notes',
+    nav: 'Blog',
+    en: 'Travel notes',
+    sub: 'Long-form notes from our publishing desk: arrival and immigration, transfers, terminal facilities and where to rest.',
+    more: 'Read',
+    all: 'All articles',
+    morePosts: 'More articles',
+    back: 'Back to the article list',
+    empty: 'No articles yet.',
+    readingMinutes: (n: number) => `${n} min read`,
+    source: (name: string) => `Source: ${name}`,
+    tags: 'Tags',
   },
 
   terminalMap: {

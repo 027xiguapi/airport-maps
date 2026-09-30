@@ -3,12 +3,14 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import AirportMap from '@/components/AirportMap';
 import { CountryGrid } from '@/components/AirportCard';
+import { BlogShowcase } from '@/components/Blog';
 import CategoryGrid, { type CategoryCard } from '@/components/CategoryGrid';
 import HeroRoutes from '@/components/HeroRoutes';
 import HomeIntro from '@/components/HomeIntro';
-import { LatestMaps, PopularCities, RouteNav, UpdateList } from '@/components/HomeSections';
+import { PopularCities, RouteNav, UpdateList } from '@/components/HomeSections';
 import JsonLd from '@/components/JsonLd';
 import SearchBox from '@/components/SearchBox';
+import { getLatestBlogPosts } from '@/lib/blog';
 import { listGuidedAirports } from '@/lib/content';
 import { formatNumber } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
@@ -25,7 +27,7 @@ import {
   getRegionCount,
   getStats,
 } from '@/lib/queries';
-import { coverUrl, latestMapCodes, mapImageCodes } from '@/lib/map-images';
+import { coverUrl, mapImageCodes } from '@/lib/map-images';
 import { routeDestinationCounts } from '@/lib/routes';
 import { absoluteUrl, ORG_NODE_ID, SITE_NAME, SITE_URL, WEBSITE_NODE_ID } from '@/lib/site';
 import { getAirportGeo } from '@/lib/airport-geo';
@@ -65,16 +67,13 @@ export default async function HomePage({ params }: Props) {
 
   const t = getMessages(locale);
   const guidedCodes = listGuidedAirports(locale);
-  // Newest generated covers, in the order the generator recorded them.
-  const latestCodes = latestMapCodes(12);
 
-  const [stats, popularPool, latestPool, recent, countries, airports, cityCount, regionCount, guided] =
+  const [stats, popularPool, recent, countries, airports, cityCount, regionCount, guided] =
     await Promise.all([
       getStats(),
       // Random 10 airports that have a /maps cover — reshuffles on every
       // (re)validation of the page.
       getAirportsByCodes(locale, mapImageCodes()),
-      getAirportsByCodes(locale, latestCodes),
       getRecentlyUpdated(locale, 5),
       getCountries(locale),
       getAirportSummaries(locale),
@@ -84,12 +83,6 @@ export default async function HomePage({ params }: Props) {
     ]);
 
   const popular = shuffled(popularPool).slice(0, 10);
-  // getAirportsByCodes orders by passengers; the strip wants newest first.
-  const latestByCode = new Map(latestPool.map((airport) => [airport.iata, airport]));
-  const latest = latestCodes.flatMap((code) => {
-    const airport = latestByCode.get(code);
-    return airport ? [airport] : [];
-  });
   // Guide tiles show the same 400px /maps covers; a few guided airports have
   // no cover yet and render an IATA wordmark placeholder instead.
   const coverCodes = new Set(mapImageCodes());
@@ -99,6 +92,10 @@ export default async function HomePage({ params }: Props) {
   const guidedTiles = guided.slice(0, 12);
 
   const shortcuts = await getAirportsByCodes(locale, SHORTCUTS);
+
+  // Blog articles are Chinese, so only the locales that publish them show the
+  // section at all.
+  const blogPosts = getLatestBlogPosts(locale, 5);
 
   // Route-map strip: rank the summaries already loaded above by how many
   // destinations the route dump gives them, keeping the order stable (count,
@@ -351,6 +348,36 @@ export default async function HomePage({ params }: Props) {
         </section>
       )}
 
+      {/* ------------------------------------------------------------ blog */}
+      {/* The one homepage section whose frame is inline utilities rather than
+          the shared `.section` family — same declarations, one-to-one. */}
+      {blogPosts.length > 0 && (
+          <section className="mx-auto max-w-[1240px] px-6 pb-[8px] pt-16" id="blog">
+            <div className="mb-7 flex items-end justify-between gap-5 max-[820px]:flex-wrap max-[820px]:items-start max-[820px]:gap-y-2.5">
+              <div className="min-w-0">
+                <div className="mb-2 inline-flex items-center gap-[9px] font-display text-[12.5px] font-semibold uppercase tracking-[0.24em] text-sky-600 before:h-[2px] before:w-[26px] before:bg-[var(--amber)] before:content-['']">
+                  {t.blog.kicker}
+                </div>
+                <h2 className="text-[27px] font-black tracking-[0.01em] text-ink-heading">
+                  {t.blog.title}
+                  <span className="ml-3 font-display text-[15px] font-medium uppercase tracking-[0.14em] text-ink-faint">
+                  {t.blog.en}
+                </span>
+                </h2>
+                <p className="mt-1.5 max-w-[760px] text-[14px] text-ink-soft">{t.blog.sub}</p>
+              </div>
+              <Link
+                  className="inline-flex items-center gap-1.5 whitespace-nowrap text-[14px] font-semibold text-sky-600 transition-[gap] duration-150 hover:gap-2.5 max-[820px]:flex-none"
+                  href={localizedPath(locale, '/blog')}
+              >
+                {t.blog.all}
+                <ArrowIcon />
+              </Link>
+            </div>
+            <BlogShowcase locale={locale} posts={blogPosts} />
+          </section>
+      )}
+
       {/* ------------------------------------------------------------- tools */}
       <section className="section" id="tools">
         <div className="section-head">
@@ -421,23 +448,6 @@ export default async function HomePage({ params }: Props) {
         </div>
         <PopularCities locale={locale} airports={popular} />
       </section>
-
-      {/* -------------------------------------------------------- latest maps */}
-      {latest.length > 0 && (
-        <section className="section" id="latest">
-          <div className="section-head">
-            <div>
-              <div className="section-kicker">{t.home.latest.kicker}</div>
-              <h2 className="section-title">
-                {t.home.latest.title}
-                <span className="en">{t.home.latest.en}</span>
-              </h2>
-              <p className="sec-sub">{t.home.latest.sub}</p>
-            </div>
-          </div>
-          <LatestMaps locale={locale} airports={latest} />
-        </section>
-      )}
 
       {/* ----------------------------------------------------------- route maps */}
       {routeNav.length > 0 && (

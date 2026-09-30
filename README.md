@@ -86,7 +86,7 @@ npm run build && npm start
 | `node scripts/verify.mjs` | 跑一遍站点依赖的关键查询 |
 | `node scripts/prepare-world-airports.mjs` | 从 `data/world-airports.csv` 生成地图数据：`public/data/world-airports.json`（前端加载，3244 座机场）与 `lib/world-airports-meta.json`（构建期统计） |
 | `node data/build-directory-data.mjs` | 把 `data/new-airports-a.{zh,en}.json` 合并成 `scripts/directory-data.json`（目录批次的灌库输入，见「数据模型」；改完数据后接 seed 生效） |
-| `node scripts/generate-airport-maps.mjs` | 用 OpenStreetMap 几何生成机场地图，写入 `public/source-maps/{CODE}.png`（2000px 宽）+ `public/maps/{CODE}.png`（400px 封面）：`--codes PEK,PVG` 指定机场、`--missing` 补所有还没有封面的机场（可配 `--kind large`）、`--dry-run` 预演、`--force` 重渲染、`--compact` 每座机场只发一个 Overpass 请求（小/中型机场用，请求数从 3 降到 1）、`--reindex` 只按磁盘上的图重写记录、`--limit N` 限量、`--delay MS` 调 Overpass 请求间隔。原始响应缓存在 `data/osm/`（已 gitignore，删掉某机场的文件即重新拉取），图上带 `© OpenStreetMap contributors` 归属行；来源 / sha256 / 许可写进 `scripts/maps-manifest.json`，首页「最新地图」读的小索引写进 `public/data/latest-maps.json`（两个目录里只有图片）。坐标来源依次是 `public/data/world-airports.json` → `data/world-airports.csv` → `scripts/airport-coords.json`（数据集都没覆盖的机场，人工从 Wikidata / 维基百科核定，条目里写明出处）→ Overpass 按 `iata` 标签反查；只有机场轮廓和跑道、没有航站楼的小机场会退化成「机场 + 跑道」的图，两者都没有才跳过 |
+| `node scripts/generate-airport-maps.mjs` | 用 OpenStreetMap 几何生成机场地图，写入 `public/source-maps/{CODE}.png`（2000px 宽）+ `public/maps/{CODE}.png`（400px 封面）：`--codes PEK,PVG` 指定机场、`--missing` 补所有还没有封面的机场（可配 `--kind large`）、`--dry-run` 预演、`--force` 重渲染、`--compact` 每座机场只发一个 Overpass 请求（小/中型机场用，请求数从 3 降到 1）、`--reindex` 只按磁盘上的图重写记录、`--limit N` 限量、`--delay MS` 调 Overpass 请求间隔。原始响应缓存在 `data/osm/`（已 gitignore，删掉某机场的文件即重新拉取），图上带 `© OpenStreetMap contributors` 归属行；来源 / sha256 / 许可写进 `scripts/maps-manifest.json`（两个图片目录里只有图片）。坐标来源依次是 `public/data/world-airports.json` → `data/world-airports.csv` → `scripts/airport-coords.json`（数据集都没覆盖的机场，人工从 Wikidata / 维基百科核定，条目里写明出处）→ Overpass 按 `iata` 标签反查；只有机场轮廓和跑道、没有航站楼的小机场会退化成「机场 + 跑道」的图，两者都没有才跳过 |
 | `node scripts/generate-route-images.mjs`（**脚本当前不在仓库里**，`public/route` 的图是它早期产物） | 按首页航线条目的排序，把每个机场的航线图渲染成 PNG 到 `public/route`（世界地图轮廓 + 大圆航线，经 sharp 栅格化；含反子午线处理）。默认只渲染前 12 座，且**已有文件一律跳过**（渲染慢，已提交的图是好的）；`--codes ICN,AMS` 指定机场、`--top N` 改数量、`--force` 重跑 |
 | `node scripts/fetch-terminal-maps.mjs` | 按机场代码批量下载航站楼地图 PNG + PDF（默认源 eoob.com；`--codes HKG,PEK` 指定、`--dry-run` 预演、`--png-only` / `--pdf-only`、`--force`）。文件落到 `public/terminal-maps/{CODE}/`，溯源信息在 `terminal-maps-manifest.json`（当前 63 座机场） |
 | `node scripts/compress-terminal-maps.mjs` | 原地压缩上一步的 PNG：量化为 8 位调色板（默认 `--quality 80`），尺寸不变，实测 52.8MB → 12.4MB 且登机口号、路名清晰可读；已压缩的自动跳过，`--force` 重压、`--max-width 1600` 可同时缩尺寸 |
@@ -274,7 +274,7 @@ updated: 2026-09-16
 app/
   [locale]/
     layout.tsx              语言布局：<html lang/dir>、顶栏、页脚、AdSense 脚本、回到顶部
-    page.tsx                首页：搜索英雄区 → 网站介绍 → 世界地图 → 工具 → 功能分区 → 热门 → 最新地图 → 航线 → 指南 → 最近更新 → 国家网格
+    page.tsx                首页：搜索英雄区 → 网站介绍 → 世界地图 → 工具 → 功能分区 → 热门 → 航线 → 指南 → 最近更新 → 国家网格
     airports/page.tsx       机场目录：搜索 + 国家筛选 + 排序 + 分页
     countries/page.tsx      国家索引（按区域分组，含区域跳转条）
     country/[code]/page.tsx 单个国家 / 地区：机场介绍 + 机场列表 + 相关链接 + 常见问题（右侧目录导航）
@@ -331,7 +331,7 @@ legacy/index.html           重构前的单文件版本（保留备查）
 
 | 目录 | 内容 |
 | --- | --- |
-| `maps/`（558 张） | 机场封面图，`lib/map-images.ts` 按 IATA 索引；机场页下载按钮与首页图片位使用。其中 296 张由 `node scripts/generate-airport-maps.mjs` 用 OpenStreetMap 几何生成（ODbL，图上带 `© OpenStreetMap contributors`，溯源在 `scripts/maps-manifest.json`），其余是第三方下载图。目录里只有图片：首页「最新地图」的顺序读 `public/data/latest-maps.json` |
+| `maps/`（558 张） | 机场封面图，`lib/map-images.ts` 按 IATA 索引；机场页下载按钮与首页图片位使用。其中 296 张由 `node scripts/generate-airport-maps.mjs` 用 OpenStreetMap 几何生成（ODbL，图上带 `© OpenStreetMap contributors`，溯源在 `scripts/maps-manifest.json`），其余是第三方下载图。目录里只有图片 |
 | `source-maps/`（558 张） | 上者的原始大图（宽 2000px），供需要原尺寸的场景。363 座机场里 **362 座有封面**，只有格陵兰的直升机场 LLU 在 OSM 里没有任何几何（见 `node scripts/check-maps.mjs`） |
 | `terminal-maps/{CODE}/`（63 座） | 航站楼平面图 PNG + PDF，带 `terminal-maps-manifest.json` 溯源（来源、sha256、许可说明）；缺文件时图片回退到封面或 SVG 示意图、PDF 回退到搜索 |
 | `route/`（12 张） | 首页航线条目的静态渲染图 |
@@ -368,11 +368,10 @@ URL 约定：
 4. **地理工具**（`#tools`）：三个工具卡片。
 5. **功能分区**（`#browse`）：六张指向真实目的地的卡片（全部机场、按国家浏览、按区域浏览、热门机场城市、最近更新、机场指南），角标数字来自数据库与内容目录，不写死。
 6. **热门机场**（`#popular`）：随机 10 张机场封面图。
-7. **最新地图**（`#latest`）：地图生成器最近产出的 N 张封面（顺序取 `public/data/latest-maps.json`，见「图片资产」与 `node scripts/generate-airport-maps.mjs`），每格带「最新 / New」角标；索引缺失时整段不渲染。
-8. **热门机场航线图**（`#routes`）：直飞目的地最多的机场，每格一张静态航线图并链接到航线页。
-9. **机场指南**（`#guides`）：有 Markdown 指南的机场，无指南时整段不渲染。
-10. **最近更新**（`#recent`，按 `updated_at` 倒序）。
-11. **按国家分类**（`#countries`）：国家 / 地区网格。
+7. **热门机场航线图**（`#routes`）：直飞目的地最多的机场，每格一张静态航线图并链接到航线页。
+8. **机场指南**（`#guides`）：有 Markdown 指南的机场，展示客流最大的 12 座，无指南时整段不渲染。
+9. **最近更新**（`#recent`，按 `updated_at` 倒序）。
+10. **按国家分类**（`#countries`）：国家 / 地区网格。
 
 `/countries` 按区域分组并带一条区域跳转条；每个区域块标注该区域的国家数与机场数。
 

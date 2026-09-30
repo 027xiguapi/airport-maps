@@ -6,16 +6,12 @@ import { getMessages, languageAlternates } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { absoluteUrl, SITE_NAME } from '@/lib/site';
 import { Button } from '@/components/ui/button';
+import { TOOL_SLUGS, type ToolSlug } from '@/lib/tools';
 import type { Messages } from '@/lib/i18n/messages/zh';
 
 /** One entry in the tools directory. Hub cards and "related" strips derive from this. */
-export type ToolSlug = 'coordinate-converter' | 'dms-converter' | 'distance-calculator';
-
-export const TOOL_SLUGS: ToolSlug[] = [
-  'coordinate-converter',
-  'dms-converter',
-  'distance-calculator',
-];
+export { TOOL_SLUGS };
+export type { ToolSlug };
 
 /**
  * The Card variant for clickable tool cards (hub + homepage tools strip).

@@ -789,6 +789,15 @@ html[data-theme="dark"] {
   .toc-nav a {
     @apply block py-1.5 pl-3.5 pr-0 text-[13.5px] leading-[1.45] text-ink-soft no-underline transition-[color] duration-[140ms];
   }
+  /* Subsections (blog articles' ### steps) sit one step in. Desktop rail only —
+     on narrow screens the rail becomes a chip strip and an asymmetric padding
+     would lopsided every chip. The airport page never sets data-level below 2,
+     so this only shows where a rail carries two levels. */
+  @media (min-width: 1081px) {
+    .toc-nav li[data-level='3'] > a {
+      @apply pl-7 text-[13px];
+    }
+  }
   .toc-nav a:hover {
     @apply text-ink;
   }

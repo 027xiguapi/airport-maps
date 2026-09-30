@@ -148,14 +148,6 @@ export const zh = {
       en: 'Airport Maps',
       sub: '随机展示全球机场的航站楼地图封面，点击进入机场页面查看完整大图。',
     },
-    /** 首页「最新地图」条：刚生成的封面，顺序按 public/maps/maps-manifest.json 的时间。 */
-    latest: {
-      kicker: 'Just Added',
-      title: '最新机场地图',
-      en: 'Latest Maps',
-      sub: '刚刚上线的机场平面图：航站楼、停车场与地面交通位置一目了然。',
-      badge: '最新',
-    },
     recent: {
       kicker: 'Freshly Published',
       title: '最近更新',
@@ -601,6 +593,29 @@ export const zh = {
     en: 'Airport guides',
     sub: '除了航站楼示意图，我们还为部分枢纽撰写了长篇指南：如何读懂登机口编号、如何在航站楼之间换乘、如何进城。',
     more: '查看该机场',
+  },
+
+  /**
+   * Blog (`public/blog`, rendered by app/[locale]/blog). The articles are
+   * Chinese, so the routes only exist in zh / tw — but every locale's catalog
+   * still needs these keys, because they share one message shape.
+   */
+  blog: {
+    kicker: 'Journal',
+    title: '机场旅行指南',
+    /** 顶栏 / 页脚导航用的短标签。 */
+    nav: '博客',
+    en: 'Travel notes',
+    sub: '把公众号长文搬到这里：入境通关、转机换乘、航站楼设施与休憩攻略，都是实测过的流程。',
+    more: '查看',
+    all: '全部文章',
+    /** 文章页底部的相关文章列表。 */
+    morePosts: '更多文章',
+    back: '返回文章列表',
+    empty: '暂时还没有文章。',
+    readingMinutes: (n: number) => `约 ${n} 分钟读完`,
+    source: (name: string) => `来源：${name}`,
+    tags: '标签',
   },
 
   terminalMap: {

@@ -6,6 +6,7 @@ import SearchBox from './SearchBox';
 import ThemeToggle from './ThemeToggle';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
+import { hasBlog } from '@/lib/blog';
 
 export default function Header({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
@@ -15,6 +16,9 @@ export default function Header({ locale }: { locale: Locale }) {
     { href: '/airports', label: t.nav.airports },
     { href: '/countries', label: t.nav.countries },
     { href: '/tool', label: t.nav.tools },
+    // Articles are published in Chinese, so the link appears only where the
+    // /blog routes exist instead of leading to a 404.
+    ...(hasBlog(locale) ? [{ href: '/blog', label: t.blog.nav }] : []),
     { href: '/about', label: t.nav.about },
   ];
 
