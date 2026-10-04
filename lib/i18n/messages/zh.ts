@@ -176,6 +176,48 @@ export const zh = {
       hint: '点击任意机场查看航站楼平面示意图。',
       more: '查看全部',
     },
+    /**
+     * 首页「列表与表格」区块：把站内数据整理成真正的列表与表格（而不是段落
+     * 文案），搜索引擎与 AI 引擎可以直接抽取、引用这些结构化区块。
+     */
+    facts: {
+      kicker: 'Lists & Tables',
+      title: '机场数据一览',
+      en: 'Lists & Tables',
+      sub: '把本站收录的机场数据整理成列表与表格：收录概览、年旅客量最大的机场，以及按大区统计的分布。',
+      coverageTitle: '收录概览',
+      coverage: {
+        airports: '机场',
+        countries: '国家和地区',
+        regions: '大区',
+        cities: '城市',
+        terminals: '航站楼',
+        gates: '登机口',
+        routes: '航线图',
+      },
+      busiest: {
+        title: '年旅客量最大的机场',
+        sub: '按年旅客吞吐量（百万）排序的前 12 座机场。',
+        caption: '按年旅客吞吐量排序的机场',
+        rank: '排名',
+        iata: 'IATA',
+        airport: '机场',
+        city: '城市',
+        country: '国家 / 地区',
+        terminals: '航站楼',
+        gates: '登机口',
+        pax: '年旅客量（百万）',
+      },
+      regions: {
+        title: '机场的大区分布',
+        sub: '按所在大区汇总的机场、航站楼与登机口数量。',
+        caption: '按大区汇总的机场数量',
+        region: '大区',
+        airports: '机场',
+        terminals: '航站楼',
+        gates: '登机口',
+      },
+    },
   },
 
   table: {

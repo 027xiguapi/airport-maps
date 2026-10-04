@@ -7,10 +7,12 @@ import {
   absoluteUrl,
   EDITORIAL_NODE_ID,
   ORG_NODE_ID,
+  SITE_IMAGE,
   SITE_NAME,
   SITE_URL,
   WEBSITE_NODE_ID,
 } from '@/lib/site';
+import { airportSchemaImage } from '@/lib/schema-images';
 import type { AirportDetail } from '@/lib/types';
 import type { FaqItem } from '@/components/Faq';
 
@@ -66,6 +68,9 @@ export function buildAirportGraph(input: {
   });
   const pageUrl = absoluteUrl(localizedPath(locale, `/airport/${airport.iata}`));
   const airportNodeId = `${SITE_URL}/#airport-${airport.iata}`;
+  // This airport's own picture — its cover when the repo has one, else the site
+  // photo — reused by the page wrapper and the Airport node so the two agree.
+  const pageImage = airportSchemaImage(airport.iata);
 
   return {
     '@context': 'https://schema.org',
@@ -78,6 +83,7 @@ export function buildAirportGraph(input: {
         name: SITE_NAME,
         url: `${SITE_URL}/`,
         logo: { '@type': 'ImageObject', url: absoluteUrl('/icon.png') },
+        image: SITE_IMAGE,
       },
       {
         '@type': 'Person',
@@ -93,6 +99,7 @@ export function buildAirportGraph(input: {
         name: SITE_NAME,
         url: `${SITE_URL}/`,
         publisher: { '@id': ORG_NODE_ID },
+        image: SITE_IMAGE.url,
       },
       {
         '@type': 'WebPage',
@@ -106,6 +113,8 @@ export function buildAirportGraph(input: {
         mainEntity: { '@id': airportNodeId },
         author: { '@id': EDITORIAL_NODE_ID },
         publisher: { '@id': ORG_NODE_ID },
+        image: pageImage,
+        primaryImageOfPage: { '@type': 'ImageObject', url: pageImage },
         datePublished: published,
         dateModified: modified,
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
@@ -118,6 +127,7 @@ export function buildAirportGraph(input: {
         iataCode: airport.iata,
         description: airport.descriptionMd,
         url: pageUrl,
+        image: pageImage,
         inLanguage: LOCALE_META[locale].htmlLang,
         address: {
           '@type': 'PostalAddress',

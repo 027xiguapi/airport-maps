@@ -178,6 +178,48 @@ export const tw: Messages = {
       hint: '點選任意機場檢視航站樓平面示意圖。',
       more: '檢視全部',
     },
+    /**
+     * 首頁「列表與表格」區塊：把站內資料整理成真正的列表與表格（而不是段落
+     * 文案），搜尋引擎與 AI 引擎可以直接抽取、引用這些結構化區塊。
+     */
+    facts: {
+      kicker: 'Lists & Tables',
+      title: '機場資料一覽',
+      en: 'Lists & Tables',
+      sub: '把本站收錄的機場資料整理成列表與表格：收錄概覽、年旅客量最大的機場，以及按大區統計的分布。',
+      coverageTitle: '收錄概覽',
+      coverage: {
+        airports: '機場',
+        countries: '國家和地區',
+        regions: '大區',
+        cities: '城市',
+        terminals: '航站樓',
+        gates: '登機口',
+        routes: '航線圖',
+      },
+      busiest: {
+        title: '年旅客量最大的機場',
+        sub: '按年旅客吞吐量（百萬）排序的前 12 座機場。',
+        caption: '按年旅客吞吐量排序的機場',
+        rank: '排名',
+        iata: 'IATA',
+        airport: '機場',
+        city: '城市',
+        country: '國家 / 地區',
+        terminals: '航站樓',
+        gates: '登機口',
+        pax: '年旅客量（百萬）',
+      },
+      regions: {
+        title: '機場的大區分布',
+        sub: '按所在大區彙總的機場、航站樓與登機口數量。',
+        caption: '按大區彙總的機場數量',
+        region: '大區',
+        airports: '機場',
+        terminals: '航站樓',
+        gates: '登機口',
+      },
+    },
   },
 
   table: {

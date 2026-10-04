@@ -26,3 +26,18 @@ export const PAGE_SIZE = 24;
 export function absoluteUrl(path: string): string {
   return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`;
 }
+
+/**
+ * The site's own picture — the 1718×624 photo the homepage hero draws. Structured
+ * data uses it for the site identity nodes (Organization, WebSite) and as the
+ * fallback for a page whose subject has no picture of its own.
+ */
+export const SITE_IMAGE_URL = absoluteUrl('/world-airport-map.jpg');
+
+/** The same image as an ImageObject, for the places that want dimensions. */
+export const SITE_IMAGE = {
+  '@type': 'ImageObject',
+  url: SITE_IMAGE_URL,
+  width: 1718,
+  height: 624,
+} as const;

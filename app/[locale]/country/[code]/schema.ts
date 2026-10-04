@@ -4,10 +4,12 @@ import {
   absoluteUrl,
   EDITORIAL_NODE_ID,
   ORG_NODE_ID,
+  SITE_IMAGE,
   SITE_NAME,
   SITE_URL,
   WEBSITE_NODE_ID,
 } from '@/lib/site';
+import { coverImageUrl } from '@/lib/map-images';
 import type { MarkdownDoc } from '@/lib/content';
 import type { AirportSummary, Country } from '@/lib/types';
 import type { FaqItem } from '@/components/Faq';
@@ -46,6 +48,7 @@ export function buildCountryGraph(input: {
         name: SITE_NAME,
         url: `${SITE_URL}/`,
         logo: { '@type': 'ImageObject', url: absoluteUrl('/icon.png') },
+        image: SITE_IMAGE,
       },
       {
         '@type': 'Person',
@@ -61,6 +64,7 @@ export function buildCountryGraph(input: {
         name: SITE_NAME,
         url: `${SITE_URL}/`,
         publisher: { '@id': ORG_NODE_ID },
+        image: SITE_IMAGE.url,
       },
       {
         '@type': 'WebPage',
@@ -74,6 +78,9 @@ export function buildCountryGraph(input: {
         mainEntity: { '@id': countryNodeId },
         author: { '@id': EDITORIAL_NODE_ID },
         publisher: { '@id': ORG_NODE_ID },
+        // No photo of a country exists, so the page wrapper carries the site photo.
+        image: SITE_IMAGE.url,
+        primaryImageOfPage: SITE_IMAGE,
         ...(intro?.updated && { dateModified: intro.updated }),
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
       },
@@ -91,12 +98,18 @@ export function buildCountryGraph(input: {
         name: title,
         inLanguage: LOCALE_META[locale].htmlLang,
         numberOfItems: airports.length,
-        itemListElement: airports.map((airport, i) => ({
-          '@type': 'ListItem',
-          position: i + 1,
-          name: `${airport.name} (${airport.iata})`,
-          url: absoluteUrl(localizedPath(locale, `/airport/${airport.iata}`)),
-        })),
+        itemListElement: airports.map((airport, i) => {
+          // Airports with a cover carry it on their list entry; the rest say
+          // nothing rather than pointing at an image that is not there.
+          const cover = coverImageUrl(airport.iata);
+          return {
+            '@type': 'ListItem',
+            position: i + 1,
+            name: `${airport.name} (${airport.iata})`,
+            url: absoluteUrl(localizedPath(locale, `/airport/${airport.iata}`)),
+            ...(cover && { image: absoluteUrl(cover) }),
+          };
+        }),
       },
       {
         '@type': 'BreadcrumbList',

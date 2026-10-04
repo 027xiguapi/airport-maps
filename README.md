@@ -87,14 +87,14 @@ npm run build && npm start
 | `node scripts/prepare-world-airports.mjs` | 从 `data/world-airports.csv` 生成地图数据：`public/data/world-airports.json`（前端加载，3244 座机场）与 `lib/world-airports-meta.json`（构建期统计） |
 | `node data/build-directory-data.mjs` | 把 `data/new-airports-a.{zh,en}.json` 合并成 `scripts/directory-data.json`（目录批次的灌库输入，见「数据模型」；改完数据后接 seed 生效） |
 | `node scripts/generate-airport-maps.mjs` | 用 OpenStreetMap 几何生成机场地图，写入 `public/source-maps/{CODE}.png`（2000px 宽）+ `public/maps/{CODE}.png`（400px 封面）：`--codes PEK,PVG` 指定机场、`--missing` 补所有还没有封面的机场（可配 `--kind large`）、`--dry-run` 预演、`--force` 重渲染、`--compact` 每座机场只发一个 Overpass 请求（小/中型机场用，请求数从 3 降到 1）、`--reindex` 只按磁盘上的图重写记录、`--limit N` 限量、`--delay MS` 调 Overpass 请求间隔。原始响应缓存在 `data/osm/`（已 gitignore，删掉某机场的文件即重新拉取），图上带 `© OpenStreetMap contributors` 归属行；来源 / sha256 / 许可写进 `scripts/maps-manifest.json`（两个图片目录里只有图片）。坐标来源依次是 `public/data/world-airports.json` → `data/world-airports.csv` → `scripts/airport-coords.json`（数据集都没覆盖的机场，人工从 Wikidata / 维基百科核定，条目里写明出处）→ Overpass 按 `iata` 标签反查；只有机场轮廓和跑道、没有航站楼的小机场会退化成「机场 + 跑道」的图，两者都没有才跳过 |
-| `node scripts/generate-route-images.mjs`（**脚本当前不在仓库里**，`public/route` 的图是它早期产物） | 按首页航线条目的排序，把每个机场的航线图渲染成 PNG 到 `public/route`（世界地图轮廓 + 大圆航线，经 sharp 栅格化；含反子午线处理）。默认只渲染前 12 座，且**已有文件一律跳过**（渲染慢，已提交的图是好的）；`--codes ICN,AMS` 指定机场、`--top N` 改数量、`--force` 重跑 |
+| `node scripts/generate-route-images.mjs` | 按首页航线条目的排序，把每个机场的航线图渲染成 PNG 到 `public/route`（世界地图轮廓 + 大圆航线，经 sharp 栅格化；含反子午线处理）。默认只渲染前 12 座，且**已有文件一律跳过**（渲染慢，已提交的图是好的）；`--codes ICN,AMS` 指定机场、`--top N` 改数量、`--force` 重跑 |
 | `node scripts/fetch-terminal-maps.mjs` | 按机场代码批量下载航站楼地图 PNG + PDF（默认源 eoob.com；`--codes HKG,PEK` 指定、`--dry-run` 预演、`--png-only` / `--pdf-only`、`--force`）。文件落到 `public/terminal-maps/{CODE}/`，溯源信息在 `terminal-maps-manifest.json`（当前 63 座机场） |
 | `node scripts/compress-terminal-maps.mjs` | 原地压缩上一步的 PNG：量化为 8 位调色板（默认 `--quality 80`），尺寸不变，实测 52.8MB → 12.4MB 且登机口号、路名清晰可读；已压缩的自动跳过，`--force` 重压、`--max-width 1600` 可同时缩尺寸 |
 | `node scripts/fetch-airport-images.mjs` | 批量下载机场封面图（`public/maps`）并记录每张图的来源、sha256 与许可说明；机场代码只能来自你自备的列表 / HTML / 库导出，脚本不爬站发现代码，默认遵守 robots.txt |
 | `node scripts/check-maps.mjs [--table]` | 检查 `public/maps` 封面图与机场的覆盖情况：哪些机场缺图、哪些图没有对应机场 |
 | `node scripts/check-search.mjs [词...]` | 检查搜索相关性排序与通配符转义 |
 | `node scripts/generate-airport-guides.mjs` | 为数据库里有、但还没有指南的机场写**数据驱动的起步稿**（`content/{zh,en}/airports/<IATA>.md` 成对）：内容只来自仓库数据（代码、位置、规模、坐标、OpenFlights 航线集、最近机场），航站楼 / 交通等未整理的信息明确标注「待补充」而不编造。**跳过精编 60 座的手写指南**（含孤儿 MEL/SZX/TPE），已存在的文件一律不覆盖；`--codes AAL,AAR` 限量、`--dry-run` 预演。跑完接 `node scripts/build-hant.mjs` 派生 tw。首页「机场指南」区块只展示客流最大的 12 座（`guidedTiles`），角标数字仍是全量 |
-| `node scripts/calibrate-hero-map.cjs` | 重新标定首页 hero 背景图（`public/world-airport-map.jpg`）的投影常量：自相关测出地图的横向平铺周期，再用全部机场坐标拟合相位与纬度映射，输出 `components/HeroRoutes.tsx` 顶部要填的四个数字；换背景图后跑一次即可 |
+| `node scripts/calibrate-hero-map.cjs`（**脚本不在仓库里**） | 重新标定首页 hero 背景图（`public/world-airport-map.jpg`）的投影常量：自相关测出地图的横向平铺周期，再用全部机场坐标拟合相位与纬度映射，输出 `components/HeroRoutes.tsx` 顶部要填的四个数字；换背景图后跑一次即可 |
 
 `scripts/seed.mjs` 是数据入口（一次性迁移留下的 `scripts/legacy-data.json` 见文末）。
 
@@ -274,7 +274,7 @@ updated: 2026-09-16
 app/
   [locale]/
     layout.tsx              语言布局：<html lang/dir>、顶栏、页脚、AdSense 脚本、回到顶部
-    page.tsx                首页：搜索英雄区 → 网站介绍 → 世界地图 → 工具 → 功能分区 → 热门 → 航线 → 指南 → 最近更新 → 国家网格
+    page.tsx                首页：搜索英雄区 → 网站介绍 → 世界地图 → 工具 → 功能分区 → 热门 → 航线 → 指南 → 最近更新 → 国家网格 → 列表与表格
     airports/page.tsx       机场目录：搜索 + 国家筛选 + 排序 + 分页
     countries/page.tsx      国家索引（按区域分组，含区域跳转条）
     country/[code]/page.tsx 单个国家 / 地区：机场介绍 + 机场列表 + 相关链接 + 常见问题（右侧目录导航）
@@ -311,11 +311,11 @@ legacy/index.html           重构前的单文件版本（保留备查）
 
 ## 航线数据与航线页
 
-- 原始数据是 **OpenFlights 的 2014-06 快照**（ODbL，67663 条原始航线 → 62793 条直飞航线，覆盖 2643 座机场、499 家航司），由 `node scripts/fetch-routes.mjs` 生成 `data/airport-routes.json`（约 1.7MB，**只在服务端从磁盘读取，不进浏览器包**）。页面会打印数据快照日期，因为这份数据不新。
+- 原始数据是 **OpenFlights 的 2014-06 快照**（ODbL，67663 条原始航线 → 62793 条直飞航线，覆盖 2643 座机场、499 家航司），由 `scripts/fetch-routes.mjs`（**脚本不在仓库里**，`data/airport-routes.json` 已提交）生成 `data/airport-routes.json`（约 1.7MB，**只在服务端从磁盘读取，不进浏览器包**）。页面会打印数据快照日期，因为这份数据不新。
 - 目的地的坐标与英文地名来自 `public/data/world-airports.json`（同一份首页地图索引）；本站目录收录的目的地则换成本站自己的译名。站点 363 座机场里有 **224 座有航线数据**，只有这些才生成 `/route/<IATA>` 页面（其余不在 `generateStaticParams` 里，直接 404）。
 - 航线页（`components/airport/RouteMapSection.tsx`）由三块组成：**Leaflet 航线图**、**目的地表**（城市、国家、距离、执飞航司）、**数据下载**（`/api/routes/<IATA>` 的 CSV / JSON，普通 `<a download>`，无 JS 也可用；CSV 带 BOM 以便 Excel 正确识别中文）。
 - 航线图的交互（`components/airport/RouteMap.tsx`）：主题化的 ± 缩放按钮（到边界自动禁用）、⌘/Ctrl + 滚轮与触控板捏合缩放（普通滚轮留给页面滚动，地图不抢），**目录收录的目的地圆点本身就是指向该机场页面的真实链接**（可中键 / 右键新开标签），未收录的目的地只有悬停提示。颜色分级见 `lib/route-tiers.ts`（按执飞航司数量）。
-- 首页的航线条目用**静态渲染图**（`public/route/*.png`，由 `node scripts/generate-route-images.mjs` 生成——该脚本目前不在仓库里）：世界地图轮廓 + 大圆航线，处理了反子午线，缺图时回退为纯文字卡片。取景是**固定的世界全图**（经度 −180~180 横跨整幅、赤道居中），因此每张图的海岸线都落在同一位置、航线朝哪个方向飞一目了然；新增渲染图时不要改成按航线范围缩放。机场页的「航线图」区块用的是同一批图：该机场有渲染图时，图片本身就是通往 `/route/<IATA>` 的链接（`components/airport/RouteMapTeaser.tsx`，与航线页的航站楼地图卡片同一套样式），没有则回退为按钮——**站点目前只有 13 座机场有图**（首页那 12 座 + ICN），所以这条区块的样子本来就因机场而异。
+- 首页的航线条目用**静态渲染图**（`public/route/*.png`，由 `node scripts/generate-route-images.mjs` 生成）：世界地图轮廓 + 大圆航线，处理了反子午线，缺图时回退为纯文字卡片。取景是**固定的世界全图**（经度 −180~180 横跨整幅、赤道居中），因此每张图的海岸线都落在同一位置、航线朝哪个方向飞一目了然；新增渲染图时不要改成按航线范围缩放。机场页的「航线图」区块用的是同一批图：该机场有渲染图时，图片本身就是通往 `/route/<IATA>` 的链接（`components/airport/RouteMapTeaser.tsx`，与航线页的航站楼地图卡片同一套样式），没有则回退为按钮——**站点目前只有 13 座机场有图**（首页那 12 座 + ICN），所以这条区块的样子本来就因机场而异。
 
 ## 地图与静态图片资产
 
@@ -334,7 +334,7 @@ legacy/index.html           重构前的单文件版本（保留备查）
 | `maps/`（558 张） | 机场封面图，`lib/map-images.ts` 按 IATA 索引；机场页下载按钮与首页图片位使用。其中 296 张由 `node scripts/generate-airport-maps.mjs` 用 OpenStreetMap 几何生成（ODbL，图上带 `© OpenStreetMap contributors`，溯源在 `scripts/maps-manifest.json`），其余是第三方下载图。目录里只有图片 |
 | `source-maps/`（558 张） | 上者的原始大图（宽 2000px），供需要原尺寸的场景。363 座机场里 **362 座有封面**，只有格陵兰的直升机场 LLU 在 OSM 里没有任何几何（见 `node scripts/check-maps.mjs`） |
 | `terminal-maps/{CODE}/`（63 座） | 航站楼平面图 PNG + PDF，带 `terminal-maps-manifest.json` 溯源（来源、sha256、许可说明）；缺文件时图片回退到封面或 SVG 示意图、PDF 回退到搜索 |
-| `route/`（12 张） | 首页航线条目的静态渲染图 |
+| `route/`（13 张） | 航线图的静态渲染图：首页航线条目那 12 座，加上机场页航线区单独渲染的 ICN（`scripts/generate-route-images.mjs --codes ICN`） |
 | `terminal-maps.png` | 首页「网站介绍」区块的照片（`components/HomeIntro.tsx`，1023×600） |
 | `flags/`（92 张） | 国家 / 地区旗帜（与 `countries` 数量一致） |
 | `data/world-airports.json`、`world-airport-map.jpg` | 首页地图索引与英雄区世界地图底图（`components/HeroRoutes.tsx` 在它上面用服务端 SVG 画大圆航线动画，`prefers-reduced-motion` 时静止） |
@@ -346,7 +346,9 @@ legacy/index.html           重构前的单文件版本（保留备查）
 - 每个已发布语言 × 每座机场 / 国家 / 有航线的机场都是预渲染页面（`generateStaticParams`），`revalidate = 3600` 每小时增量再生成；每个语言约 690 个页面（363 机场 + 92 国家 + 224 航线页 + 11 个固定页）
 - `<title>` / `description` 按语言与机场数据生成；机场页标题用 `latestAirportTitle` 带当前年份（随 ISR 滚动）
 - 结构化数据：`WebSite` + `SearchAction`（首页）、`Airport` + `BreadcrumbList` + `FAQPage`（机场页）、`Country` + `ItemList` + `BreadcrumbList` + `FAQPage`（国家页），均带 `inLanguage`；品牌名统一为 `World Airport Maps`（`lib/site.ts` 的 `SITE_NAME`），可见文案可本地化，机器可读字段只有一种拼法
+- **结构化数据里的图片**（`lib/schema-images.ts`）：每页给的是它自己显示的那张图——机场页用 `public/maps` 的封面，航线页用 `public/route` 的航线渲染图，站点身份节点（`Organization` / `WebSite`）与没有专属图的页面（国家页、没有封面的机场、没有渲染图的航线页）用 `public/world-airport-map.jpg`。写在 `WebPage.image` + `primaryImageOfPage` 与被描述实体（`Airport`）的 `image` 上，国家页的机场 `ItemList` 也逐条带封面。两个要点：URL 一律用绝对地址（`absoluteUrl`），且**只输出真实存在的文件**——封面与渲染图都走 `lib/map-images.ts` / `lib/route-images.ts` 的目录索引，没有就退回站点大图，不产出 404 的图片地址（363 座机场里 LLU、AUX 没有封面，给的就是大图）
 - 机场页 FAQ 由数据库字段按语言生成（航站楼构成、距市中心距离、如何进市区、设施、所属城市国家），同时用于页面展示与 `FAQPage` 富结果；国家页 FAQ 同理
+- 首页的 `#facts` 区块把同一批数据再写成 **`<dl>` 与 `<table>`**（`components/HomeFacts.tsx`）：AI 引擎与摘要式搜索更容易从列表 / 表格里抽事实，纯段落文案则难。带 `caption` 与 `scope`，机场名是通往详情页的真实链接
 - `sitemap.xml` 收录全部地址的已发布语言版本并附带 `xhtml:link` alternates；`robots.txt` 屏蔽 `/api/`
 
 URL 约定：
@@ -372,6 +374,7 @@ URL 约定：
 8. **机场指南**（`#guides`）：有 Markdown 指南的机场，展示客流最大的 12 座，无指南时整段不渲染。
 9. **最近更新**（`#recent`，按 `updated_at` 倒序）。
 10. **按国家分类**（`#countries`）：国家 / 地区网格。
+11. **列表与表格**（`#facts`，`components/HomeFacts.tsx`）：把同一批数据写成真正的 `<dl>` 与 `<table>`——「收录概览」七项（机场 / 国家地区 / 大区 / 城市 / 航站楼 / 登机口 / 航线图），「年旅客量最大的机场」12 行（排名、IATA、机场、城市、国家、航站楼、登机口、年旅客量，机场名链到详情页），以及「机场的大区分布」（按 `airports.region` 汇总机场 / 航站楼 / 登机口）。数据全部来自首页已经加载的 `airports` 与 `stats`，不额外查库；航线数用「目录内且有航线数据的机场数」（224），不是航线文件里全世界的 2643。两张表都有（视觉隐藏的）`caption` 与 `scope`，窄屏在 `overflow-x-auto` 容器里横向滚动。
 
 `/countries` 按区域分组并带一条区域跳转条；每个区域块标注该区域的国家数与机场数。
 

@@ -186,6 +186,49 @@ export const en: Messages = {
       hint: 'Select any airport to see its terminal layout.',
       more: 'View all',
     },
+    /**
+     * Homepage "Lists & Tables" block: the coverage data reshaped as real lists
+     * and tables rather than running prose, so search and AI engines can lift
+     * and cite the figures directly.
+     */
+    facts: {
+      kicker: 'Lists & Tables',
+      title: 'Airport data at a glance',
+      en: 'Lists & Tables',
+      sub: 'The directory figures laid out as lists and tables: coverage at a glance, the busiest airports by annual passengers, and the regional split.',
+      coverageTitle: 'Coverage at a glance',
+      coverage: {
+        airports: 'Airports',
+        countries: 'Countries & regions',
+        regions: 'World regions',
+        cities: 'Cities',
+        terminals: 'Terminals',
+        gates: 'Gates',
+        routes: 'Route maps',
+      },
+      busiest: {
+        title: 'Busiest airports by annual passengers',
+        sub: 'The 12 airports with the highest annual passenger traffic, ranked.',
+        caption: 'Airports ranked by annual passenger traffic',
+        rank: 'Rank',
+        iata: 'IATA',
+        airport: 'Airport',
+        city: 'City',
+        country: 'Country',
+        terminals: 'Terminals',
+        gates: 'Gates',
+        pax: 'Annual passengers (m)',
+      },
+      regions: {
+        title: 'Airports by region',
+        sub: 'Airport, terminal and gate counts grouped by world region.',
+        caption: 'Airport counts grouped by world region',
+        region: 'Region',
+        airports: 'Airports',
+        terminals: 'Terminals',
+        gates: 'Gates',
+      },
+    },
   },
 
   table: {

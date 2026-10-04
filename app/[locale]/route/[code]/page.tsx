@@ -17,6 +17,7 @@ import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { mapImageUrl } from '@/lib/map-images';
 import { getAirportByCode, getAirportRoutes } from '@/lib/queries';
 import { getAirportRouteMap, routeAirportCodes, routeStats } from '@/lib/routes';
+import { routeSchemaImage } from '@/lib/schema-images';
 import { absoluteUrl, SITE_NAME, WEBSITE_NODE_ID } from '@/lib/site';
 import { buildRouteFaq } from './faq';
 
@@ -112,6 +113,8 @@ export default async function AirportRoutePage({ params }: Props) {
   const mapImg = mapImageUrl(airport.iata);
   const pageUrl = absoluteUrl(localizedPath(locale, `/route/${airport.iata}`));
   const airportUrl = absoluteUrl(localizedPath(locale, `/airport/${airport.iata}`));
+  // The render this page draws — else the airport's cover, else the site photo.
+  const pageImage = routeSchemaImage(airport.iata);
 
   /** Sections that render, in order — drives the contents rail. */
   const tocItems: TocItem[] = [
@@ -155,11 +158,14 @@ export default async function AirportRoutePage({ params }: Props) {
               description: t.route.metaDescription(airport.name, airport.iata, count),
               inLanguage: LOCALE_META[locale].htmlLang,
               isPartOf: { '@id': WEBSITE_NODE_ID },
+              image: pageImage,
+              primaryImageOfPage: { '@type': 'ImageObject', url: pageImage },
               about: {
                 '@type': 'Airport',
                 name: airport.name,
                 iataCode: airport.iata,
                 url: airportUrl,
+                image: pageImage,
               },
             },
             {

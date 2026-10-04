@@ -55,6 +55,16 @@ export function coverUrl(iata: string): string {
   return `/maps/${fileName(iata)}`;
 }
 
+/**
+ * `/maps/PEK.png` when a cover exists for the code, else null. Same lookup the
+ * page images use, alias included, for callers that must not emit a dead URL
+ * (structured data — see lib/schema-images.ts).
+ */
+export function coverImageUrl(iata: string): string | null {
+  const file = fileName(iata);
+  return available().has(file) ? `/maps/${file}` : null;
+}
+
 /** IATA codes that have a cover in /public/maps, sorted alphabetically. */
 export function mapImageCodes(): string[] {
   const byFile = new Map(Object.entries(ALIASES).map(([code, file]) => [file, code]));

@@ -6,6 +6,7 @@ import { CountryGrid } from '@/components/AirportCard';
 import { BlogShowcase } from '@/components/Blog';
 import CategoryGrid, { type CategoryCard } from '@/components/CategoryGrid';
 import HeroRoutes from '@/components/HeroRoutes';
+import HomeFacts from '@/components/HomeFacts';
 import HomeIntro from '@/components/HomeIntro';
 import { PopularCities, RouteNav, UpdateList } from '@/components/HomeSections';
 import JsonLd from '@/components/JsonLd';
@@ -29,7 +30,7 @@ import {
 } from '@/lib/queries';
 import { coverUrl, mapImageCodes } from '@/lib/map-images';
 import { routeDestinationCounts } from '@/lib/routes';
-import { absoluteUrl, ORG_NODE_ID, SITE_NAME, SITE_URL, WEBSITE_NODE_ID } from '@/lib/site';
+import { absoluteUrl, ORG_NODE_ID, SITE_IMAGE, SITE_NAME, SITE_URL, WEBSITE_NODE_ID } from '@/lib/site';
 import { getAirportGeo } from '@/lib/airport-geo';
 import worldAirportsMeta from '@/lib/world-airports-meta.json';
 
@@ -101,8 +102,10 @@ export default async function HomePage({ params }: Props) {
   // destinations the route dump gives them, keeping the order stable (count,
   // then IATA) so the internal links do not churn between revalidations.
   const routeCounts = routeDestinationCounts();
-  const routeNav = airports
-    .filter((airport) => routeCounts.has(airport.iata))
+  // The dump is worldwide; only the airports the directory also covers get a
+  // route page, so this — not routeCounts.size — is the site's route-map total.
+  const routed = airports.filter((airport) => routeCounts.has(airport.iata));
+  const routeNav = routed
     .sort(
       (a, b) =>
         routeCounts.get(b.iata)! - routeCounts.get(a.iata)! || a.iata.localeCompare(b.iata)
@@ -177,7 +180,7 @@ export default async function HomePage({ params }: Props) {
       title: t.categories.routes.title,
       body: t.categories.routes.body,
       // Airports the route dump covers, not just the twelve on the strip.
-      meta: formatNumber(airports.filter((a) => routeCounts.has(a.iata)).length, locale),
+      meta: formatNumber(routed.length, locale),
     },
   ];
 
@@ -190,6 +193,8 @@ export default async function HomePage({ params }: Props) {
     description: t.site.description,
     inLanguage: LOCALE_META[locale].htmlLang,
     publisher: { '@id': ORG_NODE_ID },
+    // The hero's own backdrop is the site picture, so the graph names it here too.
+    image: SITE_IMAGE,
     potentialAction: {
       '@type': 'SearchAction',
       target: {
@@ -209,6 +214,7 @@ export default async function HomePage({ params }: Props) {
         name: SITE_NAME,
         url: `${SITE_URL}/`,
         logo: { '@type': 'ImageObject', url: absoluteUrl('/icon.png') },
+        image: SITE_IMAGE,
       },
       websiteNode,
     ],
@@ -574,6 +580,18 @@ export default async function HomePage({ params }: Props) {
         </div>
         <CountryGrid locale={locale} countries={countries} />
       </section>
+
+      {/* ------------------------------------------------- lists and tables */}
+      {/* The prose intro below says what the directory covers; this section says
+          it again as lists and tables, which is what AI engines extract. */}
+      <HomeFacts
+        locale={locale}
+        airports={airports}
+        stats={stats}
+        cityCount={cityCount}
+        regionCount={regionCount}
+        routeCount={routed.length}
+      />
 
       {/* -------------------------------------------------------- site intro */}
       <HomeIntro locale={locale} />
