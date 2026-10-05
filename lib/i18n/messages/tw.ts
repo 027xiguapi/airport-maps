@@ -77,7 +77,7 @@ export const tw: Messages = {
     ariaLabel: '搜尋機場',
     placeholder: '搜尋機場、城市或 IATA 程式碼',
     heroPlaceholder: '搜尋機場名稱、城市或 IATA 程式碼，如 PEK / 杜拜 / 希斯洛',
-    submit: '查詢機場',
+    submit: '尋找機場',
     loading: '搜尋中…',
     empty: '未找到匹配的機場',
     resultsTitle: (term: string) => `“${term}” 的搜尋結果`,
@@ -117,7 +117,7 @@ export const tw: Messages = {
         },
         {
           title: '可互動的機場航站樓地圖與樓層示意圖',
-          body: '大型國際機場往往擁有多座航站樓和複雜的內部結構。詳細的機場地圖幫您定位登機口、查詢設施、規劃中轉銜接，並高效通過安檢、出發區與到達大廳，不必再為找路來回折返。',
+          body: '大型國際機場往往擁有多座航站樓和複雜的內部結構。詳細的機場地圖幫您定位登機口、尋找設施、規劃中轉銜接，並高效通過安檢、出發區與到達大廳，不必再為找路來回折返。',
         },
         {
           title: '機場交通與到達方式資訊',
@@ -186,7 +186,7 @@ export const tw: Messages = {
       kicker: 'Lists & Tables',
       title: '機場資料一覽',
       en: 'Lists & Tables',
-      sub: '把本站收錄的機場資料整理成列表與表格：收錄概覽、年旅客量最大的機場，以及按大區統計的分布。',
+      sub: '把本站收錄的機場資料整理成列表與表格：收錄概覽、年旅客量最大的機場，以及按大區統計的分佈。',
       coverageTitle: '收錄概覽',
       coverage: {
         airports: '機場',
@@ -211,7 +211,7 @@ export const tw: Messages = {
         pax: '年旅客量（百萬）',
       },
       regions: {
-        title: '機場的大區分布',
+        title: '機場的大區分佈',
         sub: '按所在大區彙總的機場、航站樓與登機口數量。',
         caption: '按大區彙總的機場數量',
         region: '大區',

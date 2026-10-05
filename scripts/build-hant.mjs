@@ -101,7 +101,13 @@ function blogArticles() {
     .filter((rel) => existsSync(join(BLOG, rel)));
 }
 
-emit(TARGET, render(readFileSync(SOURCE, 'utf8')));
+// The catalog is re-rendered rather than only transliterated, and `render()`
+// matches zh.ts's header and trailing type declaration with LF patterns — a
+// CRLF checkout would leave both in the output and emit a tw.ts that redeclares
+// `Messages`. The markdown below is read verbatim: toHant is line-ending
+// agnostic and the existing content/tw files are CRLF, so normalising there
+// would rewrite all 400 of them for nothing.
+emit(TARGET, render(readFileSync(SOURCE, 'utf8').replace(/\r\n/g, '\n')));
 const sources = markdownFiles(CONTENT_SOURCE);
 for (const rel of sources) {
   emit(join(CONTENT_TARGET, rel), toHant(readFileSync(join(CONTENT_SOURCE, rel), 'utf8')));
