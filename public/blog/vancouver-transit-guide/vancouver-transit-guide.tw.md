@@ -42,10 +42,10 @@ Clear Canada Customs Primary Inspection.
 Take the escalator to level 3 Departures to your next flight.
 （乘坐自動扶梯至 3 層出發廳，前往下一程航班。）
 
-### 5. 托執行李說明
+### 5. 託運行李說明
 
 Your checked baggage will be delivered to the final destination, unless advised otherwise at check-in.
-（您的托執行李將直接運達最終目的地，除非在值機時另有通知。）
+（您的託運行李將直接運達最終目的地，除非在值機時另有通知。）
 
 ## 衛星廳主要檢查
 
