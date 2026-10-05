@@ -2,8 +2,7 @@
 slug: ios-26-wallet-boarding-pass-airport-map
 title: 'iOS 26 Boarding Passes: Airport Maps and Luggage Tracking in Apple Wallet'
 summary: What iOS 26 adds to Apple Wallet — an airport map inside the boarding pass for gates, lounges and baggage carousels, Find My luggage tracking with AirTag and in-wallet lost-bag reports, plus Apple Intelligence order tracking, system-wide credit card autofill and a US passport digital ID.
-date: 2025-06-15
-updated: 2026-10-05
+date: 2026-10-05
 tags: iOS 26, Apple Wallet, boarding pass, airport map, luggage tracking
 cover: images/0.webp
 ---

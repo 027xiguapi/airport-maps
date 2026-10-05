@@ -2,7 +2,7 @@
 slug: shanghai-pudong-airport-map
 title: Shanghai Pudong International Airport: Terminal Maps (Complete)
 summary: Floor-by-floor diagrams of Pudong's T1 and T2 terminals and the S1 and S2 satellite halls — five runways, over 50 million passengers a year, arrivals on 1F and 2F, departures on 3F, and the one thing you cannot do between S1 and S2.
-date: 2026-04-16
+date: 2026-09-30
 updated: 2026-09-30
 source: 懿旅航空票务 (Yilv Air Ticketing)
 tags: Shanghai Pudong Airport, Pudong terminals, satellite halls, terminal maps

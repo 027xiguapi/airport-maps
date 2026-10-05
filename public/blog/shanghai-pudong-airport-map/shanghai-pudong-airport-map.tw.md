@@ -2,7 +2,7 @@
 slug: shanghai-pudong-airport-map
 title: 上海浦東國際機場示意圖（全）
 summary: 浦東國際機場 T1、T2 航站樓與 S1、S2 衛星廳各樓層示意圖：5 條跑道、旅客吞吐量 5000 萬+，1F／2F 到達、3F 出發，附衛星廳隔離與樓層分佈提示。
-date: 2026-04-16
+date: 2026-09-30
 updated: 2026-09-30
 source: 懿旅航空票務
 tags: 上海浦東機場, 浦東機場航站樓, 衛星廳, 機場示意圖

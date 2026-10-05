@@ -2,8 +2,7 @@
 slug: ios-26-wallet-boarding-pass-airport-map
 title: iOS 26 登機牌升級：機場地圖 + 行李追蹤，一張卡全搞定
 summary: iOS 26 錢包（Wallet）升級一覽：登機牌內整合機場地圖，可查登機口、休息室與行李轉盤；與「尋找」聯動追蹤 AirTag 行李並可直接報失；另有 Apple Intelligence 訂單追蹤、信用卡系統級自動填充與美國護照數字身份證。
-date: 2025-06-15
-updated: 2026-10-05
+date: 2026-10-05
 tags: iOS 26, Apple 錢包, 登機牌, 機場地圖, 行李追蹤
 cover: images/0.webp
 ---

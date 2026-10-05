@@ -2,7 +2,7 @@
 slug: haneda-airport-guide
 title: Tokyo Haneda Airport Guide: Japan's Number One Airport
 summary: A guide to Tokyo Haneda International Airport — the airport-exclusive Goshoin stamp and what each mark on it means, three terminals and how to move between them, the best sukiyaki and sushi at T3, Haneda-only souvenirs, and how to reach central Tokyo in 15 minutes.
-date: 2025-01-16
+date: 2026-09-30
 updated: 2026-09-30
 source: Japan National Tourism Organization
 tags: Tokyo Haneda, Goshoin stamp, Japan travel, airport guide
