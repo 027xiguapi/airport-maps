@@ -15,7 +15,7 @@ As one of the country's domestic transfer hubs, Haneda connects the bustle of th
 
 **Today, let us begin with Haneda's Goshoin stamp and take you through the appeal of this five-star airport.**
 
-![Tokyo International Airport at dusk](./images/0.webp)
+![The Tokyo International Airport terminal and apron at dusk](./images/0.webp)
 
 ## Goshoin（ごしょういん / goshōin）
 
@@ -25,7 +25,7 @@ A "sky goshuin" available only at airports around Japan. It began as a Japan Air
 
 See the links at the end of this article for guides to other airports.
 
-![The Goshoin stamp](./images/1.webp)
+![The Haneda Tokyo International Airport goshoin stamp](./images/1.webp)
 
 ### Goshoin data
 
@@ -37,25 +37,19 @@ See the links at the end of this article for guides to other airports.
 - **The round stamp in the centre:** a character from the airport's name or location, rotated — here it is the character 羽 (ha) turned on its side.
 - **Where to buy it:** T1, JAL PLAZA
 
-![Goshoin details](./images/2.webp)
-
-![Goshoin details](./images/3.webp)
-
 ## Central Tokyo in just 15 minutes
 
 Haneda International Airport is made up of three terminals, with international flights concentrated at T3. A free shuttle bus, the Keikyu line and the monorail all connect the three terminals. **Several cities in China now have direct flights to Haneda, including Beijing, Tianjin, Qingdao, Dalian, Shanghai, Guangzhou and Shenzhen,** which makes travelling between the two countries far easier.
 
-![Terminals and connections](./images/4.png)
+![Diagram of the T1, T2 and T3 terminals with the monorail and Keikyu connections](./images/4.webp)
 
 Once you land at Haneda, the options into the city are quick and varied. From the T3 station, the fast monorail reaches Hamamatsucho — close to Tokyo Tower — in about 15 minutes, where you can change onto the JR Yamanote line. On the Keikyu line, Shinagawa takes about 12 minutes, Asakusa about 36 minutes, and Yokohama only around 25 minutes.
 
 Narita Airport is about 1 hour 30 minutes away. There are also highway buses to Tochigi, Gunma, Shizuoka, Yamanashi, Nagano and Sendai, so sightseeing in the city and travelling further afield both start easily.
 
-![Access into Tokyo](./images/5.webp)
+![Tokyo Monorail route map from the Haneda terminals to Hamamatsucho](./images/5.webp)
 
-![Access into Tokyo](./images/6.webp)
-
-![Access into Tokyo](./images/7.webp)
+![Keikyu line route map towards Shinagawa, Asakusa, Yokohama and Narita](./images/6.webp)
 
 ## What you have to eat at Haneda
 
@@ -66,11 +60,11 @@ Narita Airport is about 1 hour 30 minutes away. There are also highway buses to 
 
 A long-established sukiyaki house from Ningyocho in Tokyo's Nihonbashi, its airport branch wraps an Edo-style facade around the same refinement as the original. There are several ways to have your sukiyaki — set meals, courses, gozen — each built around selected Japanese Black wagyu from female cattle: tender, juicy and full of flavour. The house sauce lifts the aroma of the aged beef, and careful cooking keeps every bit of that richness in the meat.
 
-![Sukiyaki at Ningyocho Imahan](./images/8.webp)
+![The Edo-style frontage of Ningyocho Imahan at Haneda](./images/8.webp)
 
-![Sukiyaki at Ningyocho Imahan](./images/9.webp)
+![Wagyu and vegetables for sukiyaki at Ningyocho Imahan](./images/9.webp)
 
-![Sukiyaki at Ningyocho Imahan](./images/10.webp)
+![A sukiyaki set meal at Ningyocho Imahan](./images/10.webp)
 
 ### Must-eat number two: Uogashi Nihon-Ichi
 
@@ -79,13 +73,11 @@ A long-established sukiyaki house from Ningyocho in Tokyo's Nihonbashi, its airp
 
 A standing-sushi chain, and its branch inside Haneda's departure area keeps the same Edomae tradition. The shop selects fresh produce from Tsukiji market and forms each piece in front of you; you can order a set or pick your own fish and count. For passengers about to fly out, or anyone wanting one more taste of proper sushi before leaving Japan, it is both convenient and very good.
 
-![Sushi at Uogashi Nihon-Ichi](./images/11.webp)
+![The Uogashi Nihon-Ichi shop and its menu boards](./images/11.webp)
 
-![Sushi at Uogashi Nihon-Ichi](./images/12.webp)
+![An Edomae sushi set at Uogashi Nihon-Ichi](./images/12.webp)
 
-![Sushi at Uogashi Nihon-Ichi](./images/13.webp)
-
-![Sushi at Uogashi Nihon-Ichi](./images/14.webp)
+![Tuna and sea urchin sashimi at Uogashi Nihon-Ichi](./images/13.webp)
 
 ## Haneda-only souvenirs
 
@@ -96,9 +88,9 @@ A standing-sushi chain, and its branch inside Haneda's departure area keeps the 
 
 This Haneda-exclusive sweet is built around deep coffee aroma: fine Belgian chocolate with a crisp biscuit centre, for a layered bite that goes perfectly with coffee. The coffee is coarsely ground beans from Sanbon Coffee, a Yokohama roaster founded in 1957 and prized for its quality, and the confection itself is made by La Maison Shirokane, the high-end patisserie that began in Tokyo's Shirokane. Coffee, chocolate and biscuit in one — elegant enough to keep and ideal as a gift.
 
-![CAFÉ CHOCOLAT WICH](./images/16.webp)
+![CAFÉ CHOCOLAT WICH coffee and chocolate sandwich biscuits](./images/16.webp)
 
-![CAFÉ CHOCOLAT WICH](./images/17.webp)
+![The CAFÉ CHOCOLAT WICH gift box and wrapped pieces](./images/17.webp)
 
 ### Ito-ya "AIRPORT NOTEBOOK"
 
@@ -111,15 +103,11 @@ Its playful "airport" notebook is a particular draw: the front and back covers t
 
 With time before your flight, it is worth a look.
 
-![Ito-ya AIRPORT NOTEBOOK](./images/19.webp)
+![The Ito-ya shop at Haneda's Edo-koji](./images/19.webp)
 
-![Ito-ya AIRPORT NOTEBOOK](./images/20.webp)
+![Ito-ya's airport-themed stationery and postcards](./images/20.webp)
 
-![Ito-ya AIRPORT NOTEBOOK](./images/21.webp)
-
-![Ito-ya AIRPORT NOTEBOOK](./images/22.webp)
-
-![Ito-ya AIRPORT NOTEBOOK](./images/23.webp)
+![The cover of the Ito-ya AIRPORT NOTEBOOK](./images/21.webp)
 
 ## At the airport and nearby
 
@@ -132,11 +120,11 @@ As the name suggests, this is a café where you sit under a projected starry sky
 
 With time to spare before your flight, why not take a short trip through the stars?
 
-![PLANETARIUM Starry Cafe](./images/24.png)
+![The entrance to PLANETARIUM Starry Cafe](./images/24.webp)
 
-![PLANETARIUM Starry Cafe](./images/25.webp)
+![Stars projected across the planetarium dome](./images/25.webp)
 
-![PLANETARIUM Starry Cafe](./images/26.webp)
+![A drink under the projected night sky at Starry Cafe](./images/26.webp)
 
 ### Haneda Airport Garden
 
@@ -148,19 +136,17 @@ Opened in 2023 and connected directly to Terminal 3, this complex is for more th
 
 Izumi Tenku no Yu Haneda Airport has a rare sense of space, with Mount Fuji visible on clear days; the facilities include men's and women's open-air baths, a rock sauna and dining areas, making it an ideal day at the hot springs. Soaking in the open-air bath while aircraft take off and land is an experience of its own.
 
-![Haneda Airport Garden](./images/27.webp)
+![The Haneda Airport Garden entrance and atrium](./images/27.webp)
 
-![Haneda Airport Garden](./images/28.webp)
+![The Haneda Airport Garden building from outside](./images/28.webp)
 
-![Haneda Airport Garden](./images/29.webp)
+![Haneda Airport Garden lit up at night across the water](./images/29.webp)
 
-![Haneda Airport Garden](./images/30.webp)
+![The open-air bath at Izumi Tenku no Yu, looking out over the runway](./images/30.webp)
 
-![Haneda Airport Garden](./images/31.webp)
+![The indoor bath at Izumi Tenku no Yu](./images/31.webp)
 
-![Haneda Airport Garden](./images/32.webp)
-
-![Haneda Airport Garden](./images/33.webp)
+![The outdoor terrace at Haneda Airport Garden at dusk](./images/32.webp)
 
 Next time you pass through Haneda, leave yourself some time to take in everything this place offers — and enjoy a different kind of journey.
 
@@ -191,6 +177,3 @@ Some images are from the following sites:
 - https://www.sankei.com/article/20221006-7S2A3FJ42FIMPMLBJU5QXCXC6E/photo/XGGOBJJ5F5MBVBLLXJAQNCXTKQ/
 - https://www.fashion-press.net/news/56398
 
-**END**
-
-![Haneda Airport](./images/34.webp)

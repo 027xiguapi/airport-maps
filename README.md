@@ -95,6 +95,7 @@ npm run build && npm start
 | `node scripts/check-search.mjs [词...]` | 检查搜索相关性排序与通配符转义 |
 | `node scripts/generate-airport-guides.mjs` | 为数据库里有、但还没有指南的机场写**数据驱动的起步稿**（`content/{zh,en}/airports/<IATA>.md` 成对）：内容只来自仓库数据（代码、位置、规模、坐标、OpenFlights 航线集、最近机场），航站楼 / 交通等未整理的信息明确标注「待补充」而不编造。**跳过精编 60 座的手写指南**（含孤儿 MEL/SZX/TPE），已存在的文件一律不覆盖；`--codes AAL,AAR` 限量、`--dry-run` 预演。跑完接 `node scripts/build-hant.mjs` 派生 tw。首页「机场指南」区块只展示客流最大的 12 座（`guidedTiles`），角标数字仍是全量 |
 | `node scripts/calibrate-hero-map.cjs`（**脚本不在仓库里**） | 重新标定首页 hero 背景图（`public/world-airport-map.jpg`）的投影常量：自相关测出地图的横向平铺周期，再用全部机场坐标拟合相位与纬度映射，输出 `components/HeroRoutes.tsx` 顶部要填的四个数字；换背景图后跑一次即可 |
+| `node scripts/strip-blog-watermark.mjs [图片目录]` | 去掉博客插图上「服务号 · 懿旅航空票务」的水印（上海浦东那批 16 张）。水印是一层约 30.7% 不透明度的黑，逐像素反解 `background = (observed − α) / (1 − α)` 就能把压在字下的地图标签一起还原，不涂抹、不模糊；每张图的缩放/偏移先按「只看白底上被覆盖像素」的能量指标拟合（同批次的图实测精确到 0）。`--ref` 换参考图、`--out` 输出到别处、`--crop-bottom N` 处理另一批浅色水印压在照片上的素材（`0.png` 用的就是裁剪）。**就地写回**，再次运行会因「水印已不在」而跳过；PNG 必须 `palette: false`，否则 sharp 会静默走调色板量化 |
 
 `scripts/seed.mjs` 是数据入口（一次性迁移留下的 `scripts/legacy-data.json` 见文末）。
 
