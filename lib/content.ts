@@ -98,6 +98,25 @@ export function getAirportGuide(locale: Locale, iata: string): MarkdownDoc | nul
 }
 
 /**
+ * Newest frontmatter `updated` date among the given locales' guides for an
+ * airport, or undefined when no guide carries one. All guide dates are
+ * `YYYY-MM-DD`, so a lexicographic max is the chronological one. The airport
+ * page folds this into its JSON-LD dateModified; the sitemap uses the same
+ * value for `<lastmod>` so both surfaces report the same freshness.
+ */
+export function latestAirportGuideUpdated(
+  iata: string,
+  locales: readonly Locale[]
+): string | undefined {
+  let latest: string | undefined;
+  for (const locale of locales) {
+    const updated = getAirportGuide(locale, iata)?.updated;
+    if (updated && (!latest || updated > latest)) latest = updated;
+  }
+  return latest;
+}
+
+/**
  * Long-form introduction for a country page, falling back to the source
  * language. Optional: the country page always renders a data-derived overview,
  * and this article is appended to it when the file exists.

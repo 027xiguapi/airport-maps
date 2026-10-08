@@ -257,6 +257,19 @@ export const en: Messages = {
     sortName: 'Name',
     sortIata: 'IATA code',
     sortUpdated: 'Last updated',
+    /**
+     * Titles and descriptions for the indexable `?country=` / `?sort=` views of
+     * the directory: distinct copy, so they do not read as copies of the bare
+     * directory or of a country page.
+     */
+    viewTitle: (country: string, sortLabel: string) =>
+      country
+        ? `All ${country} airport maps${sortLabel ? ` — sorted by ${sortLabel}` : ''}`
+        : `All airport maps — sorted by ${sortLabel}`,
+    viewDescription: (country: string, sortLabel: string) =>
+      country
+        ? `Every ${country} airport map in the directory on one page: terminal layouts, gate ranges and ground transport${sortLabel ? `, ordered by ${sortLabel}` : ''}.`
+        : `The full airport map directory on one page: terminal layouts, gate ranges and ground transport${sortLabel ? `, ordered by ${sortLabel}` : ''}.`,
   },
 
   countries: {

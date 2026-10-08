@@ -5,7 +5,7 @@ import {
   listBlogPosts,
   listBlogSlugs,
 } from '@/lib/blog';
-import { listPageSlugs } from '@/lib/content';
+import { listPageSlugs, latestAirportGuideUpdated } from '@/lib/content';
 import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import {
   DEFAULT_LOCALE,
@@ -69,6 +69,21 @@ function localeEntries(
   ];
 }
 
+/**
+ * `<lastmod>` for an airport page: the newest of the airport record's
+ * `updated_at` and any published guide's frontmatter date — the same value the
+ * page reports as dateModified in its JSON-LD (see the airport page's
+ * `publicationDates`). Reporting the record date alone understated pages whose
+ * guide text was written later, which is exactly the freshness signal a crawler
+ * uses to prioritise a refetch.
+ */
+function airportLastModified(iata: string, recordUpdatedAt: string): Date {
+  const guideUpdated = latestAirportGuideUpdated(iata, PUBLISHED_LOCALES);
+  return new Date(
+    guideUpdated && guideUpdated > recordUpdatedAt ? guideUpdated : recordUpdatedAt
+  );
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [airports, countries] = await Promise.all([getAirportRoutes(), getAllCountryCodes()]);
   const staticPages = listPageSlugs(SOURCE_LOCALE);
@@ -125,7 +140,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       localeEntries(`/airport/${airport.iata}`, {
         changeFrequency: 'weekly',
         priority: 0.8,
-        lastModified: new Date(airport.updated_at),
+        lastModified: airportLastModified(airport.iata, airport.updated_at),
       })
     ),
     ...airports

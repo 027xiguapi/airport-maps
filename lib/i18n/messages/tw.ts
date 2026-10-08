@@ -248,6 +248,18 @@ export const tw: Messages = {
     sortName: '名稱',
     sortIata: 'IATA 程式碼',
     sortUpdated: '更新時間',
+    /**
+     * `?country=` / `?sort=` 檢視（可被索引）的標題與描述：寫明它們與乾淨目錄頁、
+     * 各國家頁的區別，避免幾套文案爭奪同一段搜尋結果。
+     */
+    viewTitle: (country: string, sortLabel: string) =>
+      country
+        ? `${country}全部機場地圖${sortLabel ? `（按${sortLabel}排序）` : ''}`
+        : `全部機場地圖（按${sortLabel}排序）`,
+    viewDescription: (country: string, sortLabel: string) =>
+      country
+        ? `彙總本站收錄的全部${country}機場地圖：航站樓平面圖、登機口分佈與地面交通${sortLabel ? `，按${sortLabel}排序` : ''}。`
+        : `本站收錄的全部機場地圖彙總在一頁：航站樓平面圖、登機口分佈與地面交通${sortLabel ? `，按${sortLabel}排序` : ''}。`,
   },
 
   countries: {

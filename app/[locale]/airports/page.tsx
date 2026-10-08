@@ -5,6 +5,7 @@ import AirportCard, { CountryChips } from '@/components/AirportCard';
 import AirportTable from '@/components/AirportTable';
 import Breadcrumb from '@/components/Breadcrumb';
 import FilterBar from '@/components/FilterBar';
+import { DIRECTORY_SORTS, directoryPath, directorySortLabel } from '@/lib/directory';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { oneOf, param, type RawSearchParams } from '@/lib/params';
@@ -12,8 +13,6 @@ import { getAirportSummaries, getCountries, listAirports } from '@/lib/queries';
 import type { AirportSort, AirportSummary } from '@/lib/types';
 
 export const revalidate = 3600;
-
-const SORTS = ['pax', 'name', 'iata', 'updated'] as const;
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -26,22 +25,37 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const t = getMessages(locale);
   const sp = await searchParams;
   const q = param(sp, 'q');
-  const country = param(sp, 'country');
-  const sort = oneOf(sp, 'sort', SORTS, 'pax');
+  const country = param(sp, 'country').toUpperCase();
+  const sort: AirportSort = oneOf(sp, 'sort', DIRECTORY_SORTS, 'pax');
+
+  // The country-filtered and re-sorted views are a finite set of real pages
+  // with their own heading, so they are indexable and canonicalise to their own
+  // normalised URL, language alternates included. Two views stay out of the
+  // index: free-text search results (one URL per query) and country codes the
+  // directory does not know — those render an empty listing.
+  const activeCountry =
+    country && !q ? (await getCountries(locale)).find((item) => item.code === country) : undefined;
+  const filtered = !!country || sort !== 'pax';
+  const variant = !q && filtered && (!country || activeCountry != null);
+  const sortLabel = sort === 'pax' ? '' : directorySortLabel(t, sort);
+  const path = variant ? directoryPath({ country, sort }) : '/airports';
 
   return {
-    title: q ? t.search.resultsTitle(q) : t.home.all.title,
-    description: t.countries.description,
+    title: q
+      ? t.search.resultsTitle(q)
+      : variant
+        ? t.filters.viewTitle(activeCountry?.name ?? '', sortLabel)
+        : t.home.all.title,
+    description: variant
+      ? t.filters.viewDescription(activeCountry?.name ?? '', sortLabel)
+      : t.countries.description,
     alternates: {
-      canonical: localizedPath(locale, '/airports'),
-      languages: languageAlternates('/airports'),
+      canonical: localizedPath(locale, path),
+      languages: languageAlternates(path),
     },
-    // Filtered and re-sorted views duplicate the canonical directory, so keep
-    // them out of the index.
-    robots:
-      q || country || sort !== 'pax'
-        ? { index: false, follow: true }
-        : { index: true, follow: true },
+    // No meta robots tag at all for the indexable views: the layout default
+    // (index, follow + googleBot image/snippet hints) is the one we want.
+    ...(q || (filtered && !variant) ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -69,7 +83,7 @@ export default async function AirportsPage({ params, searchParams }: Props) {
   const sp = await searchParams;
   const q = param(sp, 'q');
   const country = param(sp, 'country').toUpperCase();
-  const sort: AirportSort = oneOf(sp, 'sort', SORTS, 'pax');
+  const sort: AirportSort = oneOf(sp, 'sort', DIRECTORY_SORTS, 'pax');
 
   const [countries, searchResult, allAirports] = await Promise.all([
     getCountries(locale),

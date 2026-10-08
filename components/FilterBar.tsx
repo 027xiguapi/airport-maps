@@ -1,36 +1,21 @@
 import Link from 'next/link';
+import {
+  DIRECTORY_SORTS,
+  directoryHref,
+  directorySortLabel,
+  type DirectoryFilters,
+} from '@/lib/directory';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import type { CountryWithCount } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-export type DirectoryFilters = {
-  q: string;
-  country: string;
-  sort: string;
-};
-
-const SORT_VALUES = ['pax', 'name', 'iata', 'updated'] as const;
-
-function href(
-  locale: Locale,
-  filters: DirectoryFilters,
-  patch: Partial<DirectoryFilters>
-) {
-  const next = { ...filters, ...patch };
-  const search = new URLSearchParams();
-  if (next.q) search.set('q', next.q);
-  if (next.country) search.set('country', next.country);
-  if (next.sort && next.sort !== 'pax') search.set('sort', next.sort);
-  const qs = search.toString();
-  const base = localizedPath(locale, '/airports');
-  return qs ? `${base}?${qs}` : base;
-}
-
 /**
  * Country + sort filters for the directory. Every control is a plain link or a
- * GET form, so filtering works without JavaScript and stays crawlable.
+ * GET form, so filtering works without JavaScript. Those links also point at
+ * the canonical URL of each filtered view — the views are indexable, so link
+ * and canonical must not drift (see lib/directory.ts).
  */
 export default function FilterBar({
   locale,
@@ -44,12 +29,6 @@ export default function FilterBar({
   total: number;
 }) {
   const t = getMessages(locale);
-  const sortLabels: Record<string, string> = {
-    pax: t.filters.sortPax,
-    name: t.filters.sortName,
-    iata: t.filters.sortIata,
-    updated: t.filters.sortUpdated,
-  };
 
   return (
     <div className="filterbar">
@@ -78,7 +57,7 @@ export default function FilterBar({
         <span className="label">{t.filters.country}</span>
         <Link
           className={`chip${filters.country ? '' : ' on'}`}
-          href={href(locale, filters, { country: '' })}
+          href={directoryHref(locale, { ...filters, country: '' })}
         >
           {t.filters.all}
           <span className="n">{total}</span>
@@ -88,7 +67,7 @@ export default function FilterBar({
           .map((country) => (
             <Link
               className={`chip${filters.country === country.code ? ' on' : ''}`}
-              href={href(locale, filters, { country: country.code })}
+              href={directoryHref(locale, { ...filters, country: country.code })}
               key={country.code}
             >
               {country.name}
@@ -99,13 +78,13 @@ export default function FilterBar({
 
       <div className="group">
         <span className="label">{t.filters.sort}</span>
-        {SORT_VALUES.map((value) => (
+        {DIRECTORY_SORTS.map((value) => (
           <Link
             className={`chip${filters.sort === value ? ' on' : ''}`}
-            href={href(locale, filters, { sort: value })}
+            href={directoryHref(locale, { ...filters, sort: value })}
             key={value}
           >
-            {sortLabels[value]}
+            {directorySortLabel(t, value)}
           </Link>
         ))}
       </div>

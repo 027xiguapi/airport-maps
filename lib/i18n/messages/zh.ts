@@ -246,6 +246,18 @@ export const zh = {
     sortName: '名称',
     sortIata: 'IATA 代码',
     sortUpdated: '更新时间',
+    /**
+     * `?country=` / `?sort=` 视图（可被索引）的标题与描述：写明它们与干净目录页、
+     * 各国家页的区别，避免几套文案争夺同一段搜索结果。
+     */
+    viewTitle: (country: string, sortLabel: string) =>
+      country
+        ? `${country}全部机场地图${sortLabel ? `（按${sortLabel}排序）` : ''}`
+        : `全部机场地图（按${sortLabel}排序）`,
+    viewDescription: (country: string, sortLabel: string) =>
+      country
+        ? `汇总本站收录的全部${country}机场地图：航站楼平面图、登机口分布与地面交通${sortLabel ? `，按${sortLabel}排序` : ''}。`
+        : `本站收录的全部机场地图汇总在一页：航站楼平面图、登机口分布与地面交通${sortLabel ? `，按${sortLabel}排序` : ''}。`,
   },
 
   countries: {
