@@ -193,6 +193,7 @@ export default async function AirportRoutePage({ params }: Props) {
           { label: t.toc.routes },
         ]}
         title={t.route.heading(airport.name)}
+        lead={null}
         facts={[
           { num: count, label: t.route.factDestinations },
           { num: formatNumber(stats.airlineCount, locale), label: t.route.factAirlines },

@@ -1,0 +1,742 @@
+{
+ "source": "OurAirports via data/world-airports.csv — airports with a scheduled-service flag, IATA code and coordinates (large/medium/small).",
+ "maps": {
+  "CH": {
+   "file": "CH.png",
+   "width": 1600,
+   "height": 1002,
+   "airports": 5,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "CN": {
+   "file": "CN.png",
+   "width": 1600,
+   "height": 1153,
+   "airports": 262,
+   "covered": 14,
+   "generated": "2026-10-10"
+  },
+  "DE": {
+   "file": "DE.png",
+   "width": 1384,
+   "height": 2000,
+   "airports": 41,
+   "covered": 6,
+   "generated": "2026-10-10"
+  },
+  "GB": {
+   "file": "GB.png",
+   "width": 973,
+   "height": 2000,
+   "airports": 55,
+   "covered": 5,
+   "generated": "2026-10-10"
+  },
+  "JP": {
+   "file": "JP.png",
+   "width": 1600,
+   "height": 1865,
+   "airports": 83,
+   "covered": 8,
+   "generated": "2026-10-10"
+  },
+  "SG": {
+   "file": "SG.png",
+   "width": 1600,
+   "height": 1600,
+   "airports": 2,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "US": {
+   "file": "US.png",
+   "width": 1600,
+   "height": 1084,
+   "airports": 651,
+   "covered": 63,
+   "generated": "2026-10-10"
+  },
+  "AE": {
+   "file": "AE.png",
+   "width": 1600,
+   "height": 603,
+   "airports": 9,
+   "covered": 4,
+   "generated": "2026-10-10"
+  },
+  "AR": {
+   "file": "AR.png",
+   "width": 898,
+   "height": 2000,
+   "airports": 46,
+   "covered": 7,
+   "generated": "2026-10-10"
+  },
+  "AT": {
+   "file": "AT.png",
+   "width": 1600,
+   "height": 721,
+   "airports": 6,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "AU": {
+   "file": "AU.png",
+   "width": 1600,
+   "height": 1315,
+   "airports": 156,
+   "covered": 10,
+   "generated": "2026-10-10"
+  },
+  "BE": {
+   "file": "BE.png",
+   "width": 1600,
+   "height": 1183,
+   "airports": 5,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "BR": {
+   "file": "BR.png",
+   "width": 1600,
+   "height": 1415,
+   "airports": 132,
+   "covered": 12,
+   "generated": "2026-10-10"
+  },
+  "BS": {
+   "file": "BS.png",
+   "width": 1600,
+   "height": 1615,
+   "airports": 22,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "CA": {
+   "file": "CA.png",
+   "width": 1600,
+   "height": 1596,
+   "airports": 255,
+   "covered": 12,
+   "generated": "2026-10-10"
+  },
+  "CG": {
+   "file": "CG.png",
+   "width": 1600,
+   "height": 572,
+   "airports": 2,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "CK": {
+   "file": "CK.png",
+   "width": 650,
+   "height": 2000,
+   "airports": 6,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "CL": {
+   "file": "CL.png",
+   "width": 1600,
+   "height": 1685,
+   "airports": 19,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "CO": {
+   "file": "CO.png",
+   "width": 1600,
+   "height": 1981,
+   "airports": 53,
+   "covered": 9,
+   "generated": "2026-10-10"
+  },
+  "CR": {
+   "file": "CR.png",
+   "width": 1600,
+   "height": 1270,
+   "airports": 10,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "CU": {
+   "file": "CU.png",
+   "width": 1600,
+   "height": 636,
+   "airports": 15,
+   "covered": 3,
+   "generated": "2026-10-10"
+  },
+  "CV": {
+   "file": "CV.png",
+   "width": 1600,
+   "height": 1496,
+   "airports": 7,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "CY": {
+   "file": "CY.png",
+   "width": 1600,
+   "height": 1600,
+   "airports": 4,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "DJ": {
+   "file": "DJ.png",
+   "width": 1600,
+   "height": 1600,
+   "airports": 1,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "DK": {
+   "file": "DK.png",
+   "width": 1600,
+   "height": 1070,
+   "airports": 11,
+   "covered": 3,
+   "generated": "2026-10-10"
+  },
+  "DO": {
+   "file": "DO.png",
+   "width": 1600,
+   "height": 925,
+   "airports": 9,
+   "covered": 0,
+   "generated": "2026-10-10"
+  },
+  "DZ": {
+   "file": "DZ.png",
+   "width": 1600,
+   "height": 1588,
+   "airports": 31,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "EG": {
+   "file": "EG.png",
+   "width": 1506,
+   "height": 2000,
+   "airports": 18,
+   "covered": 4,
+   "generated": "2026-10-10"
+  },
+  "ER": {
+   "file": "ER.png",
+   "width": 1600,
+   "height": 981,
+   "airports": 2,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "ES": {
+   "file": "ES.png",
+   "width": 1600,
+   "height": 1403,
+   "airports": 44,
+   "covered": 8,
+   "generated": "2026-10-10"
+  },
+  "ET": {
+   "file": "ET.png",
+   "width": 1600,
+   "height": 1337,
+   "airports": 24,
+   "covered": 4,
+   "generated": "2026-10-10"
+  },
+  "FR": {
+   "file": "FR.png",
+   "width": 1600,
+   "height": 1436,
+   "airports": 56,
+   "covered": 12,
+   "generated": "2026-10-10"
+  },
+  "GG": {
+   "file": "GG.png",
+   "width": 1600,
+   "height": 1600,
+   "airports": 2,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "GL": {
+   "file": "GL.png",
+   "width": 1600,
+   "height": 1625,
+   "airports": 14,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "GR": {
+   "file": "GR.png",
+   "width": 1600,
+   "height": 1198,
+   "airports": 42,
+   "covered": 7,
+   "generated": "2026-10-10"
+  },
+  "GU": {
+   "file": "GU.png",
+   "width": 1600,
+   "height": 1600,
+   "airports": 2,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "HN": {
+   "file": "HN.png",
+   "width": 1600,
+   "height": 955,
+   "airports": 9,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "HT": {
+   "file": "HT.png",
+   "width": 1600,
+   "height": 1250,
+   "airports": 4,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "ID": {
+   "file": "ID.png",
+   "width": 1600,
+   "height": 577,
+   "airports": 123,
+   "covered": 9,
+   "generated": "2026-10-10"
+  },
+  "IE": {
+   "file": "IE.png",
+   "width": 1261,
+   "height": 2000,
+   "airports": 10,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "IN": {
+   "file": "IN.png",
+   "width": 1600,
+   "height": 1737,
+   "airports": 119,
+   "covered": 14,
+   "generated": "2026-10-10"
+  },
+  "IQ": {
+   "file": "IQ.png",
+   "width": 1533,
+   "height": 2000,
+   "airports": 8,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "IR": {
+   "file": "IR.png",
+   "width": 1600,
+   "height": 1697,
+   "airports": 45,
+   "covered": 4,
+   "generated": "2026-10-10"
+  },
+  "IS": {
+   "file": "IS.png",
+   "width": 1600,
+   "height": 1121,
+   "airports": 9,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "IT": {
+   "file": "IT.png",
+   "width": 1457,
+   "height": 2000,
+   "airports": 45,
+   "covered": 7,
+   "generated": "2026-10-10"
+  },
+  "JO": {
+   "file": "JO.png",
+   "width": 1016,
+   "height": 2000,
+   "airports": 3,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "KE": {
+   "file": "KE.png",
+   "width": 1600,
+   "height": 1493,
+   "airports": 12,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "KR": {
+   "file": "KR.png",
+   "width": 1084,
+   "height": 2000,
+   "airports": 15,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "KZ": {
+   "file": "KZ.png",
+   "width": 1600,
+   "height": 888,
+   "airports": 24,
+   "covered": 4,
+   "generated": "2026-10-10"
+  },
+  "LK": {
+   "file": "LK.png",
+   "width": 576,
+   "height": 2000,
+   "airports": 8,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "MA": {
+   "file": "MA.png",
+   "width": 1600,
+   "height": 1489,
+   "airports": 17,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "MG": {
+   "file": "MG.png",
+   "width": 984,
+   "height": 2000,
+   "airports": 26,
+   "covered": 11,
+   "generated": "2026-10-10"
+  },
+  "ML": {
+   "file": "ML.png",
+   "width": 1600,
+   "height": 609,
+   "airports": 5,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "MM": {
+   "file": "MM.png",
+   "width": 775,
+   "height": 2000,
+   "airports": 24,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "MN": {
+   "file": "MN.png",
+   "width": 1600,
+   "height": 611,
+   "airports": 13,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "MR": {
+   "file": "MR.png",
+   "width": 1600,
+   "height": 1390,
+   "airports": 5,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "MX": {
+   "file": "MX.png",
+   "width": 1600,
+   "height": 1036,
+   "airports": 63,
+   "covered": 3,
+   "generated": "2026-10-10"
+  },
+  "MY": {
+   "file": "MY.png",
+   "width": 1600,
+   "height": 461,
+   "airports": 34,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "NG": {
+   "file": "NG.png",
+   "width": 1600,
+   "height": 1354,
+   "airports": 24,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "NL": {
+   "file": "NL.png",
+   "width": 1193,
+   "height": 2000,
+   "airports": 5,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "NO": {
+   "file": "NO.png",
+   "width": 963,
+   "height": 2000,
+   "airports": 46,
+   "covered": 5,
+   "generated": "2026-10-10"
+  },
+  "NZ": {
+   "file": "NZ.png",
+   "width": 1600,
+   "height": 1574,
+   "airports": 29,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "PA": {
+   "file": "PA.png",
+   "width": 1600,
+   "height": 718,
+   "airports": 12,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "PE": {
+   "file": "PE.png",
+   "width": 1600,
+   "height": 1964,
+   "airports": 25,
+   "covered": 3,
+   "generated": "2026-10-10"
+  },
+  "PF": {
+   "file": "PF.png",
+   "width": 1600,
+   "height": 1404,
+   "airports": 38,
+   "covered": 4,
+   "generated": "2026-10-10"
+  },
+  "PH": {
+   "file": "PH.png",
+   "width": 919,
+   "height": 2000,
+   "airports": 43,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "PK": {
+   "file": "PK.png",
+   "width": 1600,
+   "height": 1567,
+   "airports": 23,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "PR": {
+   "file": "PR.png",
+   "width": 1600,
+   "height": 1096,
+   "airports": 9,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "PT": {
+   "file": "PT.png",
+   "width": 1600,
+   "height": 754,
+   "airports": 19,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "QA": {
+   "file": "QA.png",
+   "width": 1600,
+   "height": 1600,
+   "airports": 3,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "RO": {
+   "file": "RO.png",
+   "width": 1600,
+   "height": 1080,
+   "airports": 16,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "RU": {
+   "file": "RU.png",
+   "width": 1600,
+   "height": 551,
+   "airports": 148,
+   "covered": 6,
+   "generated": "2026-10-10"
+  },
+  "SA": {
+   "file": "SA.png",
+   "width": 1600,
+   "height": 1790,
+   "airports": 29,
+   "covered": 6,
+   "generated": "2026-10-10"
+  },
+  "SB": {
+   "file": "SB.png",
+   "width": 1600,
+   "height": 766,
+   "airports": 20,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "SD": {
+   "file": "SD.png",
+   "width": 1600,
+   "height": 999,
+   "airports": 8,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "SE": {
+   "file": "SE.png",
+   "width": 834,
+   "height": 2000,
+   "airports": 38,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "SO": {
+   "file": "SO.png",
+   "width": 1330,
+   "height": 2000,
+   "airports": 8,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "SY": {
+   "file": "SY.png",
+   "width": 1600,
+   "height": 1348,
+   "airports": 4,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "TD": {
+   "file": "TD.png",
+   "width": 1600,
+   "height": 484,
+   "airports": 2,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "TH": {
+   "file": "TH.png",
+   "width": 999,
+   "height": 2000,
+   "airports": 33,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "TM": {
+   "file": "TM.png",
+   "width": 1600,
+   "height": 815,
+   "airports": 6,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "TR": {
+   "file": "TR.png",
+   "width": 1600,
+   "height": 663,
+   "airports": 53,
+   "covered": 9,
+   "generated": "2026-10-10"
+  },
+  "TT": {
+   "file": "TT.png",
+   "width": 1600,
+   "height": 1600,
+   "airports": 2,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "TZ": {
+   "file": "TZ.png",
+   "width": 1600,
+   "height": 1378,
+   "airports": 16,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "UG": {
+   "file": "UG.png",
+   "width": 1600,
+   "height": 1767,
+   "airports": 6,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "UZ": {
+   "file": "UZ.png",
+   "width": 1600,
+   "height": 856,
+   "airports": 13,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "VC": {
+   "file": "VC.png",
+   "width": 1600,
+   "height": 1600,
+   "airports": 5,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "VE": {
+   "file": "VE.png",
+   "width": 1600,
+   "height": 1058,
+   "airports": 24,
+   "covered": 4,
+   "generated": "2026-10-10"
+  },
+  "VN": {
+   "file": "VN.png",
+   "width": 965,
+   "height": 2000,
+   "airports": 22,
+   "covered": 1,
+   "generated": "2026-10-10"
+  },
+  "VU": {
+   "file": "VU.png",
+   "width": 1098,
+   "height": 2000,
+   "airports": 19,
+   "covered": 2,
+   "generated": "2026-10-10"
+  },
+  "YE": {
+   "file": "YE.png",
+   "width": 1600,
+   "height": 602,
+   "airports": 8,
+   "covered": 3,
+   "generated": "2026-10-10"
+  },
+  "ZA": {
+   "file": "ZA.png",
+   "width": 1600,
+   "height": 1194,
+   "airports": 24,
+   "covered": 3,
+   "generated": "2026-10-10"
+  }
+ },
+ "generated": "2026-10-10"
+}

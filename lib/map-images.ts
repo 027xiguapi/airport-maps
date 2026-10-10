@@ -120,3 +120,27 @@ function terminalMapsAvailable(): Map<string, TerminalMapFiles> {
 export function terminalMapDownloads(iata: string): TerminalMapFiles {
   return terminalMapsAvailable().get(iata.toUpperCase()) ?? { png: null, pdf: null };
 }
+
+/**
+ * Country distribution maps rendered by scripts/generate-country-maps.mjs into
+ * /public/country-maps, keyed by ISO code (JP.png). Same read-once-per-process
+ * pattern as the cover index above; server-side only.
+ */
+let countryMaps: Set<string> | null = null;
+
+function countryMapsAvailable(): Set<string> {
+  if (!countryMaps) {
+    try {
+      countryMaps = new Set(readdirSync(join(process.cwd(), 'public', 'country-maps')));
+    } catch {
+      countryMaps = new Set();
+    }
+  }
+  return countryMaps;
+}
+
+/** `/country-maps/JP.png` when the distribution map exists for the code, else null. */
+export function countryMapUrl(iso: string): string | null {
+  const file = `${iso.toUpperCase()}.png`;
+  return countryMapsAvailable().has(file) ? `/country-maps/${file}` : null;
+}

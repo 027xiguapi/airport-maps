@@ -45,15 +45,26 @@ export const en: Messages = {
     viewMap: 'View map',
     terminalMap: 'Terminal map',
     /**
-     * Airport page <title>/og:title, mirroring the Chinese "2026年最新…地图".
-     * Name and code lead because the layout template appends the site name and
-     * the SERP truncates the tail; "All Terminals" matches the searches that
-     * ask for a map of every terminal at once.
+     * Airport page <title>/og:title. Airports with compiled data lead with the
+     * counts Google is asked for ("how many terminals/gates does X have"); the
+     * 303 directory airports without terminal data get an honest location-map
+     * title instead of promising a terminal map the page cannot show.
      */
-    latestAirportTitle: (year: number, name: string, iata: string) =>
-      `${name} (${iata}) Terminal Map — All Terminals ${year}`,
-    /** H1 on the airport page, carrying the phrase the title tag leads with. */
-    airportHeading: (name: string) => `${name} Terminal Map`,
+    latestAirportTitle: (
+      year: number,
+      name: string,
+      iata: string,
+      counts?: { terminals: number; gates: number }
+    ) =>
+      counts
+        ? `${name} (${iata}): ${counts.terminals} terminal${
+            counts.terminals === 1 ? '' : 's'
+          }${counts.gates > 0 ? `, ${counts.gates} gate${counts.gates === 1 ? '' : 's'}` : ''} — Terminal Map`
+        : `${name} (${iata}) — Location Map & Airport Guide ${year}`,
+    /** H1 on the airport page; without terminal data the name stands alone
+        (it already ends in "Airport"), so H1/title never read "Airport … Airport". */
+    airportHeading: (name: string, hasTerminals = true) =>
+      hasTerminals ? `${name} Terminal Map` : name,
     airportGuide: 'Airport guide',
     lastUpdated: 'Recently updated',
     updatedOn: (date: string) => `Updated ${date}`,
@@ -283,9 +294,12 @@ export const en: Messages = {
   },
 
   country: {
-    title: (name: string) => `${name} airport maps`,
-    description: (name: string, nameEn: string, region: string, count: number) =>
-      `Terminal maps for ${count} airport${count === 1 ? '' : 's'} in ${name} (${nameEn}), covering the main international hubs and regional airports of ${region}. See gates, terminal layouts and ground transport.`,
+    title: (name: string, count?: number) =>
+      count ? `${name} Airport Map — All ${count} Airports` : `${name} airport maps`,
+    description: (name: string, nameEn: string, region: string, count: number, total?: number) =>
+      total
+        ? `${name}${nameEn !== name ? ` (${nameEn})` : ''} has ${total} scheduled airports; terminal maps are compiled for ${count} of them. See the airport distribution map, full airport list, gates and ground transport.`
+        : `Terminal maps for ${count} airport${count === 1 ? '' : 's'} in ${name} (${nameEn}), covering the main international hubs and regional airports of ${region}. See gates, terminal layouts and ground transport.`,
     chip: (nameEn: string) => `${nameEn.toUpperCase()} AIRPORTS`,
     kicker: 'Airport Maps',
     titleOf: (name: string) => `Airports in ${name}`,
@@ -310,8 +324,8 @@ export const en: Messages = {
       nameEn: string;
       region: string;
       airports: string;
-      terminals: string;
-      gates: string;
+      terminals: string | null;
+      gates: string | null;
       cities: string;
       busiest: string | null;
       busiestIata: string;
@@ -319,13 +333,36 @@ export const en: Messages = {
       mapsNote: string;
     }) =>
       // `o.nameEn` is empty when it equals `o.name` (both are "Japan").
-      `${o.name}${o.nameEn ? ` (${o.nameEn})` : ''} lies in ${o.region}. This site covers ${o.airports}, ${o.terminals} and ${o.gates} there.` +
+      `${o.name}${o.nameEn ? ` (${o.nameEn})` : ''} lies in ${o.region}. This site covers ${o.airports}${
+        o.terminals ? `, ${o.terminals}` : ''
+      }${o.gates ? ` and ${o.gates}` : ''} there.` +
       (o.busiest
         ? ` ${o.busiest} (${o.busiestIata}) is the largest by annual passengers, at ${o.busiestPax}.`
         : '') +
       ` The airports serve cities including ${o.cities}. ${o.mapsNote}`,
     introMapsNote:
       'Every airport has a terminal layout diagram, gate ranges and ground transport notes.',
+
+    /** "Airport distribution": the national airport list and its map. */
+    distribution: {
+      kicker: 'Distribution',
+      title: (name: string) => `${name} airport distribution map`,
+      en: 'Airport Distribution',
+      sub: (covered: string, total: string) =>
+        `${total} scheduled airports nationwide (large, medium and small); terminal maps are compiled for ${covered} of them. The full list follows.`,
+      mapAlt: (name: string, total: string) =>
+        `${name} airport distribution map: ${total} scheduled airports`,
+      siteTag: 'Covered here',
+      colAirport: 'Airport',
+      colCity: 'City',
+      colType: 'Type',
+      types: {
+        large: 'Large',
+        medium: 'Medium',
+        small: 'Small',
+      },
+      empty: 'No national airport list available yet.',
+    },
 
     /** Related links */
     linksTitle: 'Related links',
@@ -338,6 +375,9 @@ export const en: Messages = {
     faqTitle: 'Frequently asked questions',
     faqEn: 'Questions',
     faq: {
+      airportTotal: (name: string) => `How many airports are there in ${name}?`,
+      airportTotalAnswer: (name: string, total: string, covered: string) =>
+        `${name} has ${total} airports with scheduled passenger service (large, medium and small); this site covers ${covered} of them in detail. See the distribution map and the full list above.`,
       airportCount: (name: string) => `Which airports are covered in ${name}?`,
       airportCountAnswer: (name: string, count: string, list: string) =>
         `This site covers ${count} in ${name}: ${list}.`,
@@ -383,7 +423,27 @@ export const en: Messages = {
           }${
             o.distance ? `, ${o.distance} from the city centre` : ''
           }. Terminal map showing all terminals, gate ranges and ground transport.`
-        : `${o.name} (${o.iata}) serves ${o.city}, ${o.country}. Terminal layout, airport facts and ground transport.`,
+        : `${o.name} (${o.iata}) serves ${o.city}, ${o.country}. Location map, airport facts and ground transport.`,
+    /**
+     * Lead answer sentence under the H1: the full-sentence answer to "how many
+     * terminals / gates" and "where is …", which the FAQ otherwise hides inside
+     * a collapsed accordion.
+     */
+    quickAnswer: (o: {
+      name: string;
+      iata: string;
+      terminals: number;
+      gates: number;
+      city: string;
+      distance: string;
+    }) =>
+      o.terminals > 0
+        ? `${o.name} (${o.iata}) has ${o.terminals} terminal${
+            o.terminals === 1 ? '' : 's'
+          }${o.gates > 0 ? ` and ${o.gates} gate${o.gates === 1 ? '' : 's'}` : ''}${
+            o.distance ? `, about ${o.distance} from central ${o.city}` : ''
+          }.`
+        : `${o.name} (${o.iata}) serves ${o.city}; see the location map, airport code and travel details below.`,
     mapTitle: (iata: string) => `${iata} · Terminal layout`,
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} Airport Terminal Map — Gates & Navigation`,
@@ -401,7 +461,8 @@ export const en: Messages = {
     downloadKicker: 'Download',
     downloadTitle: 'Download Airport Maps',
     downloadEn: 'Downloads',
-    downloadMapLabel: (year: number, iata: string) => `${year} Latest ${iata} Airport Terminal Map Download`,
+    downloadMapLabel: (year: number, iata: string) =>
+      `${year} Latest ${iata} Airport Terminal Map & Floor Plan Download`,
     downloadPdfLabel: (year: number, iata: string) =>
       `${year} Latest ${iata} Airport Terminal Map PDF Download`,
     timeKicker: 'Time',
@@ -548,6 +609,11 @@ export const en: Messages = {
     gateCount: (name: string) => `How many gates does ${name} have?`,
     gateCountAnswer: (name: string, iata: string, gates: string, list: string) =>
       `${name} (${iata}) has ${gates} gates in total: ${list}.`,
+    whereIs: (iata: string) => `Where is ${iata}?`,
+    whereIsAnswer: (iata: string, name: string, nameEn: string, city: string, cityEn: string, country: string) =>
+      `${iata} is the IATA code for ${name} (${nameEn}), located in ${city}${
+        cityEn ? ` (${cityEn})` : ''
+      }, ${country}.`,
     distance: (name: string, city: string) => `How far is ${name} from central ${city}?`,
     distanceAnswer: (name: string, city: string, distance: string, transit: string) =>
       `${name} is about ${distance} from central ${city}. You can reach the city by ${transit}.`,
@@ -591,6 +657,7 @@ export const en: Messages = {
     facilities: 'Facilities',
     faq: 'FAQ',
     intro: 'Airport overview',
+    distribution: 'Airport distribution',
     airports: 'Airport list',
   },
 

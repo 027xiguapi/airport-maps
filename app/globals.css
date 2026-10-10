@@ -699,6 +699,36 @@ html[data-theme="dark"] {
   .cairport-grid {
     @apply grid grid-cols-[repeat(auto-fill,minmax(min(300px,100%),1fr))] gap-4;
   }
+
+  /* ============ 国家页 · 机场分布 ============ */
+  .cdist-map {
+    @apply mb-6 overflow-hidden rounded-[14px] border border-line bg-white;
+  }
+  .cdist-map img {
+    @apply block h-auto w-full;
+  }
+  .cdist-scroll {
+    @apply max-h-[560px] overflow-auto rounded-[14px] border border-line bg-white;
+  }
+  .cdist-table {
+    @apply w-full border-collapse text-[13.5px];
+  }
+  .cdist-table th {
+    @apply sticky top-0 z-10 bg-paper px-3.5 py-2.5 text-left font-display text-[12px] font-semibold uppercase tracking-[0.08em] text-ink-faint;
+    box-shadow: 0 1px 0 rgba(18, 38, 58, 0.08);
+  }
+  .cdist-table td {
+    @apply border-t border-line px-3.5 py-2 align-top text-ink-soft;
+  }
+  .cdist-table td.iata {
+    @apply font-semibold tracking-[0.04em] text-ink;
+  }
+  .cdist-table tr.is-site td {
+    @apply bg-amber/6;
+  }
+  .cdist-tag {
+    @apply ml-2 inline-block rounded-full bg-amber/14 px-2 py-px text-[11px] leading-[1.6] text-ink;
+  }
   /* `.cairport-card` and its descendants moved into the shadcn Card in
      components/AirportCard.tsx as utilities (cover bleed, fact Badges, …). */
 
@@ -731,6 +761,11 @@ html[data-theme="dark"] {
   .ap-title .city .flag {
     @apply h-[17px] w-[26px] rounded-[3px] object-cover;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+  }
+  /* Lead answer sentence under the title row. Plain visible text (not an
+     accordion) so the terminal/gate counts are quotable body copy. */
+  .ap-lead {
+    @apply mt-3.5 max-w-[780px] text-[15.5px] leading-[1.65] text-white/78;
   }
   /* Author / last-updated byline. Sits on the dark navy .ap-head, so it uses
      white-alpha like .ap-title .city. */

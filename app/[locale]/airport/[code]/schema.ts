@@ -52,7 +52,10 @@ export function buildAirportGraph(input: {
   const pageTitle = t.common.latestAirportTitle(
     new Date().getFullYear(),
     airport.name,
-    airport.iata
+    airport.iata,
+    airport.terminals.length > 0
+      ? { terminals: airport.terminals.length, gates: airport.gateCount }
+      : undefined
   );
   const pageDescription = t.airport.metaDescription({
     name: airport.name,

@@ -278,4 +278,10 @@ ATMs are at the arrivals hall, gates C/D/F/G, the Plaza, car park 8, Terminals 1
 - **Power and work:** gates F and G have dedicated work spaces where you can plug in and use a laptop.
 - **SIM cards and repairs:** Mr. Mobile offers phone, tablet and laptop repairs, loan handsets and prepaid SIM cards.
 
+## Related links
+
+- **On this site**: [Vienna International Airport (VIE)](/airport/VIE), [Austria (AT)](/country/AT)
+- **Wikipedia**: [Vienna International Airport](https://en.wikipedia.org/wiki/Vienna_International_Airport)
+- **Baidu Baike**: [Vienna International Airport](https://baike.baidu.com/item/%E7%BB%B4%E4%B9%9F%E7%BA%B3%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
 Image source: Vienna Airport. Fares, opening hours and counter locations are as published by the airport and the operators; check their websites on the day you travel.

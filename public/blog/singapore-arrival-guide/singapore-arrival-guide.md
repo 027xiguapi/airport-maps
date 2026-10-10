@@ -49,3 +49,15 @@ cover: images/0.webp
 ## 附：新加坡地铁路线图
 
 ![新加坡地铁（MRT）系统线路图](./images/6.png)
+
+## 相关链接
+
+- **本站页面**：[新加坡樟宜机场（SIN）](/zh/airport/SIN)、[新加坡（SG）](/zh/country/SG)
+- **维基百科**：[新加坡樟宜机场](https://zh.wikipedia.org/wiki/%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%A8%9F%E5%AE%9C%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[新加坡樟宜机场](https://baike.baidu.com/item/%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%A8%9F%E5%AE%9C%E6%9C%BA%E5%9C%BA)
+
+## 相关链接
+
+- **本站页面**：[新加坡樟宜机场（SIN）](/zh/airport/SIN)、[新加坡（SG）](/zh/country/SG)
+- **维基百科**：[新加坡樟宜机场](https://zh.wikipedia.org/wiki/%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%A8%9F%E5%AE%9C%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[新加坡樟宜机场](https://baike.baidu.com/item/%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%A8%9F%E5%AE%9C%E6%9C%BA%E5%9C%BA)

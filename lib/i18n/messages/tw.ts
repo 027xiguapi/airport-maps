@@ -11,10 +11,10 @@ export const tw: Messages = {
     name: '全球機場地圖',
     nameAccent: '地圖',
     nameLead: '全球機場',
-    tagline: '探索機場和航站樓地圖',
+    tagline: '探索機場和航廈地圖',
     description:
-      '瀏覽按國家和地區組織的全球機場航站樓地圖。從主要國際樞紐到區域機場，檢視登機口、值機區、行李提取處、商店、餐廳、貴賓室和地面交通的詳細布局。',
-    keywords: ['機場地圖', '航站樓地圖', '機場平面圖', '登機口', '機場交通', 'airport maps', 'terminal maps'],
+      '瀏覽按國家和地區組織的全球機場航廈地圖。從主要國際樞紐到區域機場，檢視閘口、值機區、行李提取處、商店、餐廳、貴賓室和地面交通的詳細布局。',
+    keywords: ['機場地圖', '航廈地圖', '機場平面圖', '閘口', '機場交通', 'airport maps', 'terminal maps'],
     numberOfItems: (n: number) => `${n} 座機場`,
   },
 
@@ -37,16 +37,26 @@ export const tw: Messages = {
     breadcrumbLabel: '麵包屑導航',
     home: '首頁',
     viewMap: '檢視地圖',
-    terminalMap: '航站樓地圖',
+    terminalMap: '航廈地圖',
     /**
-     * 機場頁 <title>/og:title：「2026年最新廣州白雲國際機場（CAN）航站樓地圖」。
-     * 中文搜尋大量用 IATA 程式碼（"mxp 機場"）和"航站樓地圖/平面圖"，所以標題裡
-     * 帶上程式碼與"航站樓"，而不是只有機場名加"地圖"。
+     * 機場頁 <title>/og:title。有航廈資料的機場（60 座）把"幾座航廈、
+     * 幾個閘口"直接寫進標題，對上 "how many terminals/gates" 與"幾個航廈"
+     * 這類問題式搜尋；沒有資料的 303 座用誠實版本，不再承諾"航廈地圖"。
      */
-    latestAirportTitle: (year: number, name: string, iata: string) =>
-      `${year}年最新${name}（${iata}）航站樓地圖`,
-    /** 機場頁 H1，與標題同一主詞。 */
-    airportHeading: (name: string) => `${name}航站樓地圖`,
+    latestAirportTitle: (
+      year: number,
+      name: string,
+      iata: string,
+      counts?: { terminals: number; gates: number }
+    ) =>
+      counts
+        ? `${name}（${iata}）航廈地圖：${counts.terminals}座航廈${
+            counts.gates > 0 ? `、${counts.gates}個閘口` : ''
+          }`
+        : `${year}年最新${name}（${iata}）位置與地圖`,
+    /** 機場頁 H1，與標題同一主詞；無航廈資料時只留機場名（名字本身已含「機場」）。 */
+    airportHeading: (name: string, hasTerminals = true) =>
+      hasTerminals ? `${name}航廈地圖` : name,
     airportGuide: '機場指南',
     lastUpdated: '最近更新',
     updatedOn: (date: string) => `更新於 ${date}`,
@@ -56,19 +66,19 @@ export const tw: Messages = {
 
   units: {
     /** 機場頁關鍵資料格的標籤（不含數量）。 */
-    terminalsFact: '航站樓',
-    gatesFact: '登機口',
-    terminals: (n: number) => `${n} 座航站樓`,
-    terminalsShort: (n: number) => `${n} 航站樓`,
-    gates: (n: number) => `${n} 個登機口`,
+    terminalsFact: '航廈',
+    gatesFact: '閘口',
+    terminals: (n: number) => `${n} 座航廈`,
+    terminalsShort: (n: number) => `${n} 航廈`,
+    gates: (n: number) => `${n} 個閘口`,
     airports: (n: number) => `${n} 座機場`,
     airportsChip: (n: number) => `${n} 機場`,
     pax: '年旅客',
     paxFull: '年旅客量',
     distance: '距市中心',
     distanceFrom: (city: string) => `距${city}市中心`,
-    gatesLabel: (range: string) => `登機口 ${range}`,
-    gatesCount: (n: number) => `${n} 個登機口`,
+    gatesLabel: (range: string) => `閘口 ${range}`,
+    gatesCount: (n: number) => `${n} 個閘口`,
     satellite: '衛星廳',
     airlinesLabel: '主要航司：',
   },
@@ -93,12 +103,12 @@ export const tw: Messages = {
   hero: {
     eyebrow: 'World Airport Directory',
     titleLead: '探索機場和',
-    titleAccent: '航站樓地圖',
-    sub: '使用我們完整的機場和航站樓地圖輕鬆找到您的路。瀏覽按國家和地區組織的機場航站樓地圖，從主要國際樞紐到區域機場。',
+    titleAccent: '航廈地圖',
+    sub: '使用我們完整的機場和航廈地圖輕鬆找到您的路。瀏覽按國家和地區組織的機場航廈地圖，從主要國際樞紐到區域機場。',
     stats: {
       countries: '覆蓋國家 / 地區',
       airports: '收錄機場',
-      terminals: '航站樓平面圖',
+      terminals: '航廈平面圖',
     },
   },
 
@@ -109,19 +119,19 @@ export const tw: Messages = {
      */
     intro: {
       ariaLabel: '關於本站',
-      imageAlt: '清晨時分，停在玻璃幕牆航站樓登機口前的客機',
+      imageAlt: '清晨時分，停在玻璃幕牆航廈閘口前的客機',
       blocks: [
         {
-          title: '用詳細的航站樓地圖，輕鬆導航任何機場',
-          body: '在全球機場與航站樓之間穿行並不容易。本站收錄的機場地圖詳細呈現航站樓、登機口、值機區、行李提取、商店、餐廳、休息室與交通樞紐的分佈，讓您在出發前就把路線規劃好，旅途更從容。',
+          title: '用詳細的航廈地圖，輕鬆導航任何機場',
+          body: '在全球機場與航廈之間穿行並不容易。本站收錄的機場地圖詳細呈現航廈、閘口、值機區、行李提取、商店、餐廳、休息室與交通樞紐的分佈，讓您在出發前就把路線規劃好，旅途更從容。',
         },
         {
-          title: '可互動的機場航站樓地圖與樓層示意圖',
-          body: '大型國際機場往往擁有多座航站樓和複雜的內部結構。詳細的機場地圖幫您定位登機口、尋找設施、規劃中轉銜接，並高效通過安檢、出發區與到達大廳，不必再為找路來回折返。',
+          title: '可互動的機場航廈地圖與樓層示意圖',
+          body: '大型國際機場往往擁有多座航廈和複雜的內部結構。詳細的機場地圖幫您定位閘口、尋找設施、規劃中轉銜接，並高效通過安檢、出發區與到達大廳，不必再為找路來回折返。',
         },
         {
           title: '機場交通與到達方式資訊',
-          body: '除了航站樓佈局，機場指南還收錄了交通方式、停車資訊與到達路線。無論您需要找到通往登機口的最快路徑、在航站樓之間中轉，還是搭乘火車、巴士、計程車或租車前往市區，都能在這裡找到合適的方案。',
+          body: '除了航廈佈局，機場指南還收錄了交通方式、停車資訊與到達路線。無論您需要找到通往閘口的最快路徑、在航廈之間中轉，還是搭乘火車、巴士、計程車或租車前往市區，都能在這裡找到合適的方案。',
         },
       ],
     },
@@ -130,14 +140,14 @@ export const tw: Messages = {
       title: '機場分佈地圖',
       en: 'Airport Map',
       sub: (airports: string, world: string) =>
-        `在地圖上定位全球 ${world} 座定期航班機場，其中 ${airports} 座已收錄航站樓地圖。點選圓點檢視所屬國家 / 地區與機場詳情。`,
+        `在地圖上定位全球 ${world} 座定期航班機場，其中 ${airports} 座已收錄航廈地圖。點選圓點檢視所屬國家 / 地區與機場詳情。`,
       all: '全部',
       gEurope: '歐洲',
       gAsia: '亞洲',
       gAmericas: '美洲',
       gAfrica: '非洲',
       gOceania: '大洋洲',
-      legendSite: '本站收錄 · 點選檢視航站樓地圖',
+      legendSite: '本站收錄 · 點選檢視航廈地圖',
       legendWorld: '全球其他定期航班機場',
       countTemplate: '顯示 {n} 座機場',
       download: '下載資料',
@@ -148,7 +158,7 @@ export const tw: Messages = {
       kicker: 'Terminal Maps',
       title: '熱門機場地圖',
       en: 'Airport Maps',
-      sub: '隨機展示全球機場的航站樓地圖封面，點選進入機場頁面檢視完整大圖。',
+      sub: '隨機展示全球機場的航廈地圖封面，點選進入機場頁面檢視完整大圖。',
     },
     recent: {
       kicker: 'Freshly Published',
@@ -167,7 +177,7 @@ export const tw: Messages = {
       kicker: 'By Country',
       title: '按國家分類的機場地圖',
       en: 'Countries',
-      sub: '瀏覽按國家和地區組織的機場航站樓地圖。從主要國際樞紐到區域機場。',
+      sub: '瀏覽按國家和地區組織的機場航廈地圖。從主要國際樞紐到區域機場。',
       more: '全部國家',
     },
     all: {
@@ -175,7 +185,7 @@ export const tw: Messages = {
       title: '全部機場地圖',
       en: 'All Airports',
       sub: '世界上最繁忙的機場和旅行樞紐的機場地圖。',
-      hint: '點選任意機場檢視航站樓平面示意圖。',
+      hint: '點選任意機場檢視航廈平面示意圖。',
       more: '檢視全部',
     },
     /**
@@ -193,8 +203,8 @@ export const tw: Messages = {
         countries: '國家和地區',
         regions: '大區',
         cities: '城市',
-        terminals: '航站樓',
-        gates: '登機口',
+        terminals: '航廈',
+        gates: '閘口',
         routes: '航線圖',
       },
       busiest: {
@@ -206,18 +216,18 @@ export const tw: Messages = {
         airport: '機場',
         city: '城市',
         country: '國家 / 地區',
-        terminals: '航站樓',
-        gates: '登機口',
+        terminals: '航廈',
+        gates: '閘口',
         pax: '年旅客量（百萬）',
       },
       regions: {
         title: '機場的大區分佈',
-        sub: '按所在大區彙總的機場、航站樓與登機口數量。',
+        sub: '按所在大區彙總的機場、航廈與閘口數量。',
         caption: '按大區彙總的機場數量',
         region: '大區',
         airports: '機場',
-        terminals: '航站樓',
-        gates: '登機口',
+        terminals: '航廈',
+        gates: '閘口',
       },
     },
   },
@@ -258,29 +268,33 @@ export const tw: Messages = {
         : `全部機場地圖（按${sortLabel}排序）`,
     viewDescription: (country: string, sortLabel: string) =>
       country
-        ? `彙總本站收錄的全部${country}機場地圖：航站樓平面圖、登機口分佈與地面交通${sortLabel ? `，按${sortLabel}排序` : ''}。`
-        : `本站收錄的全部機場地圖彙總在一頁：航站樓平面圖、登機口分佈與地面交通${sortLabel ? `，按${sortLabel}排序` : ''}。`,
+        ? `彙總本站收錄的全部${country}機場地圖：航廈平面圖、閘口分佈與地面交通${sortLabel ? `，按${sortLabel}排序` : ''}。`
+        : `本站收錄的全部機場地圖彙總在一頁：航廈平面圖、閘口分佈與地面交通${sortLabel ? `，按${sortLabel}排序` : ''}。`,
   },
 
   countries: {
     title: '按國家瀏覽機場',
     description:
-      '按國家和地區瀏覽全球機場航站樓地圖目錄，從主要國際樞紐到區域機場，檢視每個國家的機場數量與航站樓資訊。',
+      '按國家和地區瀏覽全球機場航廈地圖目錄，從主要國際樞紐到區域機場，檢視每個國家的機場數量與航廈資訊。',
     sub: (countries: string, airports: string, terminals: string) =>
-      `從主要國際樞紐到區域機場，共 ${countries} 個國家 / 地區、${airports} 座機場、${terminals} 座航站樓。`,
+      `從主要國際樞紐到區域機場，共 ${countries} 個國家 / 地區、${airports} 座機場、${terminals} 座航廈。`,
     regionCount: (countries: number, airports: number) =>
       `${countries} 個國家 / 地區 · ${airports} 座機場`,
   },
 
   country: {
-    title: (name: string) => `${name}機場地圖`,
-    description: (name: string, nameEn: string, region: string, count: number) =>
-      `${name}（${nameEn}）共收錄 ${count} 座機場的航站樓地圖，覆蓋${region}主要國際樞紐與區域機場，可檢視登機口、航站樓佈局與地面交通。`,
+    /** 有全國機場清單時標題帶上總數，對上"XX機場地圖/分佈圖"與"XX有幾個機場"。 */
+    title: (name: string, count?: number) =>
+      count ? `${name}機場地圖：全 ${count} 座機場分佈圖` : `${name}機場地圖`,
+    description: (name: string, nameEn: string, region: string, count: number, total?: number) =>
+      total
+        ? `${name}（${nameEn}）共有 ${total} 座定期航班機場，本站收錄其中 ${count} 座的航廈地圖。檢視${region}機場分佈圖、完整機場清單與閘口分佈。`
+        : `${name}（${nameEn}）共收錄 ${count} 座機場的航廈地圖，覆蓋${region}主要國際樞紐與區域機場，可檢視閘口、航廈佈局與地面交通。`,
     chip: (nameEn: string) => `${nameEn.toUpperCase()} AIRPORTS`,
     kicker: 'Airport Maps',
     titleOf: (name: string) => `${name}的機場`,
     en: 'Airports',
-    sub: '點選任意機場檢視航站樓平面示意圖、登機口分佈與地面交通方式。',
+    sub: '點選任意機場檢視航廈平面示意圖、閘口分佈與地面交通方式。',
     empty: '該國家 / 地區暫未收錄機場。',
     moreKicker: 'Other Countries',
     moreTitle: '瀏覽其他國家',
@@ -298,8 +312,8 @@ export const tw: Messages = {
       nameEn: string;
       region: string;
       airports: string;
-      terminals: string;
-      gates: string;
+      terminals: string | null;
+      gates: string | null;
       cities: string;
       busiest: string | null;
       busiestIata: string;
@@ -307,10 +321,34 @@ export const tw: Messages = {
       mapsNote: string;
     }) =>
       // `o.nameEn` is empty when it equals `o.name` (both are "日本" / "Japan").
-      `${o.name}${o.nameEn ? `（${o.nameEn}）` : ''}位於${o.region}，本站共收錄 ${o.airports}、${o.terminals}、${o.gates}。` +
+      // Terminals and gates drop out for countries whose airports have no
+      // compiled counts, rather than reading "0 座航廈".
+      `${o.name}${o.nameEn ? `（${o.nameEn}）` : ''}位於${o.region}，本站共收錄 ${o.airports}${
+        o.terminals ? `、${o.terminals}` : ''
+      }${o.gates ? `、${o.gates}` : ''}。` +
       (o.busiest ? `其中${o.busiest}（${o.busiestIata}）規模最大，年旅客量${o.busiestPax}。` : '') +
       `機場分佈在${o.cities}等城市，${o.mapsNote}`,
-    introMapsNote: '每座機場都有航站樓平面示意圖、登機口分佈與地面交通說明。',
+    introMapsNote: '每座機場都有航廈平面示意圖、閘口分佈與地面交通說明。',
+
+    /** 「機場分佈」板塊：全國定期航班機場的分佈圖與完整清單。 */
+    distribution: {
+      kicker: 'Distribution',
+      title: (name: string) => `${name}機場分佈圖`,
+      en: 'Airport Distribution',
+      sub: (covered: string, total: string) =>
+        `全國共有 ${total} 座定期航班機場（含大型、中型與小型），本站已為其中 ${covered} 座繪製航廈地圖；下方為完整清單。`,
+      mapAlt: (name: string, total: string) => `${name}機場分佈圖：共 ${total} 座定期航班機場`,
+      siteTag: '本站詳解',
+      colAirport: '機場',
+      colCity: '城市',
+      colType: '類型',
+      types: {
+        large: '大型機場',
+        medium: '中型機場',
+        small: '小型機場',
+      },
+      empty: '暫無全國機場清單資料。',
+    },
 
     /** 相關連結 */
     linksTitle: '相關連結',
@@ -323,28 +361,31 @@ export const tw: Messages = {
     faqTitle: '常見問題',
     faqEn: 'Questions',
     faq: {
+      airportTotal: (name: string) => `${name}有多少座機場？`,
+      airportTotalAnswer: (name: string, total: string, covered: string) =>
+        `${name}共有 ${total} 座開通定期航班的機場（含大型、中型與小型）；本站已收錄其中 ${covered} 座的詳細資料，完整清單見上方的機場分佈圖。`,
       airportCount: (name: string) => `${name}有哪些機場？`,
       airportCountAnswer: (name: string, count: string, list: string) =>
         `本站收錄${name} ${count}：${list}。`,
       busiest: (name: string) => `${name}最繁忙的機場是哪座？`,
       busiestAnswer: (busiest: string, iata: string, pax: string) =>
         `按年旅客吞吐量，${busiest}（${iata}）是本站收錄的該國家 / 地區機場中規模最大的，${pax}。`,
-      terminals: (name: string) => `${name}的機場共有多少座航站樓？`,
+      terminals: (name: string) => `${name}的機場共有多少座航廈？`,
       terminalsAnswer: (name: string, terminals: string, gates: string, list: string) =>
         `${name}的機場合計 ${terminals}、${gates}：${list}。`,
       cities: (name: string) => `${name}的機場分佈在哪些城市？`,
       citiesAnswer: (name: string, cities: string) =>
         `本站收錄的${name}機場位於${cities}等城市，可按城市或 IATA 程式碼在機場目錄中篩選。`,
-      maps: (name: string) => `${name}的機場有航站樓地圖嗎？`,
+      maps: (name: string) => `${name}的機場有航廈地圖嗎？`,
       mapsAnswer: (name: string, count: string) =>
-        `有。本站為${name}收錄的 ${count}都繪製了航站樓平面示意圖，標註航站樓位置、登機口範圍、主要航司與地面交通方式，點選任意機場即可檢視。`,
+        `有。本站為${name}收錄的 ${count}都繪製了航廈平面示意圖，標註航廈位置、閘口範圍、主要航司與地面交通方式，點選任意機場即可檢視。`,
     },
   },
 
   airport: {
     /** Meta description assembled from formatted airport facts. Terminals and
         gates are null for directory airports with no compiled counts, and the
-        clause drops out instead of reading "共有 0 座航站樓". */
+        clause drops out instead of reading "共有 0 座航廈". */
     metaDescription: (o: {
       name: string;
       nameEn: string;
@@ -357,14 +398,38 @@ export const tw: Messages = {
       distance: string;
     }) =>
       `${o.name}（${o.iata}，${o.nameEn}）位於${o.city}${
-        o.terminals ? `，共有 ${o.terminals} 座航站樓、${o.gates} 個登機口` : ''
-      }${o.pax ? `，年旅客量${o.pax}` : ''}${o.distance ? `，距市中心約 ${o.distance}` : ''}。檢視航站樓地圖、登機口分佈與地面交通方式。`,
-    mapTitle: (iata: string) => `${iata} · 航站樓平面示意圖`,
+        o.terminals
+          ? `，共有 ${o.terminals} 座航廈${o.gates ? `、${o.gates} 個閘口` : ''}`
+          : ''
+      }${o.pax ? `，年旅客量${o.pax}` : ''}${o.distance ? `，距市中心約 ${o.distance}` : ''}。${
+        o.terminals
+          ? '檢視航廈地圖、閘口分佈與地面交通方式。'
+          : '檢視機場位置地圖、程式碼與出行資訊。'
+      }`,
+    /**
+     * 首屏一句話答案：渲染在機場頁 H1 正下方，用完整句子直接回答
+     * "幾座航廈 / 多少個閘口 / 在哪裡"。這兩族查詢佔站內展示的一半以上，
+     * 此前答案只存在於摺疊的 FAQ 面板裡。
+     */
+    quickAnswer: (o: {
+      name: string;
+      iata: string;
+      terminals: number;
+      gates: number;
+      city: string;
+      distance: string;
+    }) =>
+      o.terminals > 0
+        ? `${o.name}（${o.iata}）共有 ${o.terminals} 座航廈${
+            o.gates > 0 ? `、${o.gates} 個閘口` : ''
+          }${o.distance ? `，距${o.city}市中心約 ${o.distance}` : ''}。`
+        : `${o.name}（${o.iata}）位於${o.city}，可在下方檢視位置地圖、機場程式碼與出行資訊。`,
+    mapTitle: (iata: string) => `${iata} · 航廈平面示意圖`,
     mapNote: 'TERMINAL LAYOUT',
-    realMapTitle: (iata: string) => `${iata} 機場航站樓地圖 — 登機口與導航`,
-    /** 航站樓地圖圖片的 alt：補上機場全稱與程式碼，上方的小標題只有程式碼。 */
+    realMapTitle: (iata: string) => `${iata} 機場航廈地圖 — 閘口與導航`,
+    /** 航廈地圖圖片的 alt：補上機場全稱與程式碼，上方的小標題只有程式碼。 */
     mapAlt: (name: string, iata: string) =>
-      `${name}（${iata}）航站樓地圖，含各航站樓、登機口與指廊分佈`,
+      `${name}（${iata}）航廈地圖，含各航廈、閘口與指廊分佈`,
     realMapNote: 'TERMINAL MAP',
     /** 終端圖下方的下載按鈕：圖片直接下載，PDF 按鈕跳轉谷歌搜尋官方 PDF。 */
     zoomLabel: '放大',
@@ -374,9 +439,9 @@ export const tw: Messages = {
     downloadKicker: 'Download',
     downloadTitle: '下載機場地圖',
     downloadEn: 'Downloads',
-    downloadMapLabel: (year: number, iata: string) => `${year}年最新  ${iata} 機場地圖下載`,
+    downloadMapLabel: (year: number, iata: string) => `${year}年最新 ${iata} 機場地圖與平面圖下載`,
     downloadPdfLabel: (year: number, iata: string) =>
-      `${year}年最新 ${iata} 機場地圖 PDF 下載`,
+      `${year}年最新 ${iata} 機場航廈平面圖 PDF 下載`,
     timeKicker: 'Time',
     timeTitle: (iata: string) => `機場時間資訊 — ${iata} 當前時間`,
     timeEn: 'Airport Time',
@@ -432,15 +497,15 @@ export const tw: Messages = {
     routeCarriersMore: (n: number) => ` 等 ${n} 家`,
     routeMapNote: (date: string) =>
       `航線資料快照：${date}，僅統計直飛航線。資料來源：`,
-    legendTerminal: '航站樓建築',
+    legendTerminal: '航廈建築',
     legendTransit: '地面交通節點',
-    legendCorridor: '航站樓間連廊',
+    legendCorridor: '航廈間連廊',
     terminalsKicker: 'Terminals',
-    terminalsTitle: '航站樓資訊',
+    terminalsTitle: '航廈資訊',
     terminalsEn: 'Terminal Guide',
-    terminalsSub: (name: string) => `${name}各航站樓的登機口範圍、主要航司與設施分佈。`,
+    terminalsSub: (name: string) => `${name}各航廈的閘口範圍、主要航司與設施分佈。`,
     transitTitle: '地面交通',
-    facilitiesTitle: '航站樓設施',
+    facilitiesTitle: '航廈設施',
     faqKicker: 'FAQ',
     faqTitle: '常見問題',
     faqEn: 'Questions',
@@ -486,10 +551,10 @@ export const tw: Messages = {
     dataFields: 'CSV 適合 Excel / Numbers 等表格軟體，JSON 適合程式處理；均為 UTF-8 編碼。',
     dataCsv: '下載 CSV',
     dataJson: '下載 JSON',
-    /** 點選跳轉機場頁的航站樓地圖卡片。 */
+    /** 點選跳轉機場頁的航廈地圖卡片。 */
     airportMapSub:
-      '機場航站樓與登機口分佈示意；點選圖片前往機場頁，檢視完整地圖、航站樓設施與地面交通。',
-    airportMapCta: (iata: string) => `檢視 ${iata} 完整航站樓地圖`,
+      '機場航廈與閘口分佈示意；點選圖片前往機場頁，檢視完整地圖、航廈設施與地面交通。',
+    airportMapCta: (iata: string) => `檢視 ${iata} 完整航廈地圖`,
     /** 頁頭指標格。 */
     factDestinations: '直飛目的地',
     factAirlines: '執飛航司',
@@ -514,12 +579,17 @@ export const tw: Messages = {
   },
 
   faq: {
-    terminalCount: (name: string) => `${name}有幾座航站樓？`,
+    terminalCount: (name: string) => `${name}有幾座航廈？`,
     terminalCountAnswer: (name: string, iata: string, terminals: string, gates: string, list: string) =>
-      `${name}（${iata}）共有 ${terminals} 座航站樓，合計 ${gates} 個登機口：${list}。`,
-    gateCount: (name: string) => `${name}有多少個登機口？`,
+      `${name}（${iata}）共有 ${terminals} 座航廈，合計 ${gates} 個閘口：${list}。`,
+    gateCount: (name: string) => `${name}有幾多個閘口？`,
     gateCountAnswer: (name: string, iata: string, gates: string, list: string) =>
-      `${name}（${iata}）共有 ${gates} 個登機口：${list}。`,
+      `${name}（${iata}）共有 ${gates} 個閘口：${list}。`,
+    whereIs: (iata: string) => `${iata} 是哪裡？`,
+    whereIsAnswer: (iata: string, name: string, nameEn: string, city: string, cityEn: string, country: string) =>
+      `${iata} 是${name}（${nameEn}）的 IATA 程式碼，機場位於${country}的${city}${
+        cityEn ? `（${cityEn}）` : ''
+      }。`,
     distance: (name: string, city: string) => `${name}距離${city}市中心有多遠？`,
     distanceAnswer: (name: string, city: string, distance: string, transit: string) =>
       `${name}距離${city}市中心約 ${distance}，可搭乘${transit}等交通方式往返市區。`,
@@ -527,15 +597,15 @@ export const tw: Messages = {
     accessAnswer: (options: string) => `${options}。`,
     facilities: (name: string) => `${name}提供哪些設施與服務？`,
     facilitiesAnswer: (name: string, facilities: string) =>
-      `${name}提供${facilities}等設施與服務，各航站樓的具體設施分佈請參考上方的航站樓平面示意圖。`,
+      `${name}提供${facilities}等設施與服務，各航廈的具體設施分佈請參考上方的航廈平面示意圖。`,
     location: (name: string) => `${name}位於哪個城市和國家？`,
     locationAnswer: (name: string, nameEn: string, iata: string, city: string, cityEn: string, country: string) =>
       `${name}（英文名 ${nameEn}，IATA 程式碼 ${iata}）位於${country}的${city}${
         cityEn ? `（${cityEn}）` : ''
       }。`,
-    airlines: (name: string) => `${name}各航站樓主要運營哪些航空公司？`,
+    airlines: (name: string) => `${name}各航廈主要運營哪些航空公司？`,
     airlinesAnswer: (name: string, list: string) =>
-      `${name}各航站樓的主要航空公司：${list}。航司與登機口分配可能調整，請以登機牌與機場現場指引為準。`,
+      `${name}各航廈的主要航空公司：${list}。航司與閘口分配可能調整，請以登機牌與機場現場指引為準。`,
     timezone: (name: string) => `${name}使用什麼時區？`,
     timezoneAnswer: (name: string, iata: string, tz: string) =>
       `${name}（${iata}）使用 ${tz} 時區，可與頁面上方的機場時鐘對照當前時間。`,
@@ -551,18 +621,19 @@ export const tw: Messages = {
   /** 機場頁右側目錄導航（按當前機場實際展示的板塊動態生成）。 */
   toc: {
     label: '頁面導航',
-    map: '航站樓地圖',
+    map: '航廈地圖',
     time: '機場時間',
     details: '機場資訊',
     links: '相關連結',
     location: '位置地圖',
     routes: '航線圖',
     guide: '機場指南',
-    terminals: '航站樓資訊',
+    terminals: '航廈資訊',
     transport: '地面交通',
     facilities: '設施服務',
     faq: '常見問題',
     intro: '機場介紹',
+    distribution: '機場分佈',
     airports: '收錄機場',
   },
 
@@ -576,18 +647,18 @@ export const tw: Messages = {
   },
 
   footer: {
-    mapsTitle: '詳細航站樓地圖',
+    mapsTitle: '詳細航廈地圖',
     mapsBody:
-      '導航世界各地的機場和航站樓可能很有挑戰性。我們的機場地圖提供航站樓、登機口、值機區、行李提取處、商店、餐廳、貴賓室和交通樞紐的詳細布局，讓您的旅行體驗更順暢。',
-    plansTitle: '互動航站樓平面圖',
+      '導航世界各地的機場和航廈可能很有挑戰性。我們的機場地圖提供航廈、閘口、值機區、行李提取處、商店、餐廳、貴賓室和交通樞紐的詳細布局，讓您的旅行體驗更順暢。',
+    plansTitle: '互動航廈平面圖',
     plansBody:
-      '主要國際機場擁有多個航站樓和複雜佈局。我們的詳細地圖幫助您定位登機口、找到設施、規劃轉機，並高效地通過安檢點、出發區和到達大廳。',
+      '主要國際機場擁有多個航廈和複雜佈局。我們的詳細地圖幫助您定位閘口、找到設施、規劃轉機，並高效地通過安檢點、出發區和到達大廳。',
     transitTitle: '機場交通與出入資訊',
     transitBody:
-      '除了航站樓佈局，我們還整理了交通選項、停車資訊和出入路線。找到到達登機口的最佳方式、在航站樓間轉接，以及使用包括火車、巴士、計程車和租車在內的地面交通。',
+      '除了航廈佈局，我們還整理了交通選項、停車資訊和出入路線。找到到達閘口的最佳方式、在航廈間轉接，以及使用包括火車、巴士、計程車和租車在內的地面交通。',
     stats: (countries: string, airports: string, terminals: string) =>
-      `覆蓋 ${countries} 個國家 / 地區 · ${airports} 座機場 · ${terminals} 座航站樓 · 航站樓平面示意圖`,
-    fallback: '全球機場航站樓平面示意圖與地面交通指南',
+      `覆蓋 ${countries} 個國家 / 地區 · ${airports} 座機場 · ${terminals} 座航廈 · 航廈平面示意圖`,
+    fallback: '全球機場航廈平面示意圖與地面交通指南',
     linksLabel: '頁尾導航',
     about: '關於本站',
     contact: '聯絡我們',
@@ -618,7 +689,7 @@ export const tw: Messages = {
     },
     byCountry: {
       title: '按國家瀏覽',
-      body: '檢視每個國家 / 地區收錄的機場、航站樓與登機口數量。',
+      body: '檢視每個國家 / 地區收錄的機場、航廈與閘口數量。',
     },
     byRegion: {
       title: '按區域瀏覽',
@@ -634,7 +705,7 @@ export const tw: Messages = {
     },
     guides: {
       title: '機場指南',
-      body: '航站樓換乘、進城方式與實用提示，長篇圖文指南。',
+      body: '航廈換乘、進城方式與實用提示，長篇圖文指南。',
     },
     routes: {
       title: '航線圖',
@@ -647,7 +718,7 @@ export const tw: Messages = {
     kicker: 'Guides',
     title: '機場指南',
     en: 'Airport guides',
-    sub: '除了航站樓示意圖，我們還為部分樞紐撰寫了長篇指南：如何讀懂登機口編號、如何在航站樓之間換乘、如何進城。',
+    sub: '除了航廈示意圖，我們還為部分樞紐撰寫了長篇指南：如何讀懂閘口編號、如何在航廈之間換乘、如何進城。',
     more: '檢視該機場',
   },
 
@@ -662,7 +733,7 @@ export const tw: Messages = {
     /** 頂欄 / 頁尾導航用的短標籤。 */
     nav: '部落格',
     en: 'Travel notes',
-    sub: '把公眾號長文搬到這裡：入境通關、轉機換乘、航站樓設施與休憩攻略，都是實測過的流程。',
+    sub: '把公眾號長文搬到這裡：入境通關、轉機換乘、航廈設施與休憩攻略，都是實測過的流程。',
     more: '檢視',
     all: '全部文章',
     /** 文章頁底部的相關文章列表。 */
@@ -675,12 +746,12 @@ export const tw: Messages = {
   },
 
   terminalMap: {
-    ariaLabel: (name: string) => `${name}航站樓平面示意圖`,
-    gates: '登機口',
-    terminal: '航站樓',
+    ariaLabel: (name: string) => `${name}航廈平面示意圖`,
+    gates: '閘口',
+    terminal: '航廈',
     corridor: '連廊',
     transit: '地面交通',
-    footer: (iata: string) => `${iata} · 航站樓平面示意`,
+    footer: (iata: string) => `${iata} · 航廈平面示意`,
   },
 
   /** 工具中心（/tool）與各工具頁。 */

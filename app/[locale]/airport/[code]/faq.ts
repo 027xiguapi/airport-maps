@@ -99,6 +99,20 @@ export function buildFaq(
           },
         ]
       : []),
+    // "HKG是哪裡" / "where is DXB airport": the code-explainer question phrased
+    // the way people type it. Rendered on every airport page — location data
+    // exists everywhere, unlike terminal counts.
+    {
+      q: t.faq.whereIs(airport.iata),
+      a: t.faq.whereIsAnswer(
+        airport.iata,
+        airport.name,
+        airport.nameEn,
+        airport.city,
+        airport.cityEn ?? '',
+        airport.countryName
+      ),
+    },
     ...(airlineList
       ? [
           {

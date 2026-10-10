@@ -70,3 +70,15 @@ iOS 26 把信用卡的自动填充功能从 Safari 扩展到了整个系统：
 - 默认开启，需手动关闭。
 
 赶紧试试 GET 到的新技巧吧。
+
+## 相关链接
+
+- **本站页面**：[洛杉矶 LAX](/zh/airport/LAX)、[美国（US）](/zh/country/US)
+- **维基百科**：[洛杉矶 LAX](https://zh.wikipedia.org/wiki/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[洛杉矶 LAX](https://baike.baidu.com/item/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## 相关链接
+
+- **本站页面**：[洛杉矶 LAX](/zh/airport/LAX)、[美国（US）](/zh/country/US)
+- **维基百科**：[洛杉矶 LAX](https://zh.wikipedia.org/wiki/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[洛杉矶 LAX](https://baike.baidu.com/item/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

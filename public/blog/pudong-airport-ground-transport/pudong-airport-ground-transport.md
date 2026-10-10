@@ -204,4 +204,16 @@ cover: images/3.webp
 
 PS：上述信息供参考，请以实际情况为准。
 
+## 相关链接
+
+- **本站页面**：[上海浦东国际机场（PVG）](/zh/airport/PVG)、[中国（CN）](/zh/country/CN)
+- **维基百科**：[上海浦东国际机场](https://zh.wikipedia.org/wiki/%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[上海浦东国际机场](https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## 相关链接
+
+- **本站页面**：[上海浦东国际机场（PVG）](/zh/airport/PVG)、[中国（CN）](/zh/country/CN)
+- **维基百科**：[上海浦东国际机场](https://zh.wikipedia.org/wiki/%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[上海浦东国际机场](https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
 部分来源：上海机场集团、浦东国际机场

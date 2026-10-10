@@ -7,8 +7,10 @@ import Faq from '@/components/Faq';
 import JsonLd from '@/components/JsonLd';
 import TocNav, { type TocItem } from '@/components/TocNav';
 import CountryIntro from '@/components/country/CountryIntro';
+import CountryDistribution from '@/components/country/CountryDistribution';
 import CountryLinks from '@/components/country/CountryLinks';
 import { getCountryIntro } from '@/lib/content';
+import { getCountryAirports } from '@/lib/country-airports';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { localizedPath } from '@/lib/i18n/config';
@@ -37,12 +39,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!country) notFound();
 
   const airports = await getAirportsByCountry(locale, country.code);
-  const title = t.country.title(country.name);
+  const national = getCountryAirports(country.code);
+  const title = t.country.title(country.name, national?.total);
   const description = t.country.description(
     country.name,
     country.nameEn,
     country.region,
-    airports.length
+    airports.length,
+    national?.total
   );
 
   return {
@@ -76,9 +80,12 @@ export default async function CountryPage({ params }: Props) {
   ]);
 
   const intro = getCountryIntro(locale, country.code);
-  const faqItems = buildCountryFaq(locale, country, airports);
+  const national = getCountryAirports(country.code);
+  const faqItems = buildCountryFaq(locale, country, airports, national);
   const terminalTotal = airports.reduce((sum, a) => sum + a.terminalCount, 0);
   const gateTotal = airports.reduce((sum, a) => sum + a.gateCount, 0);
+  // IATA codes with a detail page here — the distribution table links to them.
+  const covered = new Set(airports.map((a) => a.iata));
 
   // Onward navigation: other countries with airports, current one excluded.
   const neighbours = allCountries
@@ -86,19 +93,21 @@ export default async function CountryPage({ params }: Props) {
     .slice(0, 12);
 
   /** Sections that actually render on this country's page, in order. */
-  const tocItems: TocItem[] =
-    airports.length > 0
+  const tocItems: TocItem[] = [
+    ...(airports.length > 0 ? [{ id: 'airport-intro', label: t.toc.intro }] : []),
+    ...(national ? [{ id: 'airport-distribution', label: t.toc.distribution }] : []),
+    ...(airports.length > 0
       ? [
-          { id: 'airport-intro', label: t.toc.intro },
           { id: 'airport-list', label: t.toc.airports },
           { id: 'related-links', label: t.toc.links },
-          ...(faqItems.length > 0 ? [{ id: 'faq', label: t.toc.faq }] : []),
         ]
-      : [];
+      : []),
+    ...(faqItems.length > 0 ? [{ id: 'faq', label: t.toc.faq }] : []),
+  ];
 
   return (
     <>
-      <JsonLd data={buildCountryGraph({ locale, country, airports, intro, faqItems })} />
+      <JsonLd data={buildCountryGraph({ locale, country, airports, intro, faqItems, nationalTotal: national?.total })} />
 
       <div className="page-head">
         <div className="page-head-inner">
@@ -115,8 +124,9 @@ export default async function CountryPage({ params }: Props) {
             <div>
               <h1>{country.name}</h1>
               <div className="sub">
-                {country.region} · {t.units.airports(airports.length)} ·{' '}
-                {t.units.terminals(terminalTotal)} · {t.units.gates(gateTotal)}
+                {country.region} · {t.units.airports(airports.length)}
+                {terminalTotal > 0 && <> · {t.units.terminals(terminalTotal)}</>}
+                {gateTotal > 0 && <> · {t.units.gates(gateTotal)}</>}
               </div>
               <span className="iata-chip">{t.country.chip(country.nameEn)}</span>
             </div>
@@ -130,7 +140,7 @@ export default async function CountryPage({ params }: Props) {
       <div className="ap-with-toc">
         {/* Only when there are sections to navigate: TocNav renders nothing
             below three items, and an empty rail would still take its column. */}
-        {airports.length > 0 && (
+        {tocItems.length >= 3 && (
           <aside className="ap-toc">
             <TocNav items={tocItems} label={t.toc.label} />
           </aside>
@@ -139,6 +149,15 @@ export default async function CountryPage({ params }: Props) {
         <div className="ap-body">
           {airports.length > 0 && (
             <CountryIntro locale={locale} country={country} airports={airports} intro={intro} />
+          )}
+
+          {national && (
+            <CountryDistribution
+              locale={locale}
+              country={country}
+              national={national}
+              covered={covered}
+            />
           )}
 
           <section className="ap-extra" id="airport-list">

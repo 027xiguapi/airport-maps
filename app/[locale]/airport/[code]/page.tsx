@@ -60,7 +60,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = t.common.latestAirportTitle(
     new Date().getFullYear(),
     airport.name,
-    airport.iata
+    airport.iata,
+    airport.terminals.length > 0
+      ? { terminals: airport.terminals.length, gates: airport.gateCount }
+      : undefined
   );
   const description = t.airport.metaDescription({
     name: airport.name,
@@ -158,7 +161,7 @@ export default async function AirportPage({ params }: Props) {
         airport={airport}
         published={published}
         modified={modified}
-        title={t.common.airportHeading(airport.name)}
+        title={t.common.airportHeading(airport.name, airport.terminals.length > 0)}
       />
 
       {/* Aside precedes the body in DOM so it stays on top when the rail

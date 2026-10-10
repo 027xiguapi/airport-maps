@@ -140,4 +140,16 @@ the Chinese-language services, family-friendly facilities and varied airport exp
 
 **looking forward to meeting every journey.**
 
+## Related links
+
+- **On this site**: [Istanbul Airport (IST)](/airport/IST), [Türkiye (TR)](/country/TR)
+- **Wikipedia**: [Istanbul Airport](https://en.wikipedia.org/wiki/Istanbul_Airport)
+- **Baidu Baike**: [Istanbul Airport](https://baike.baidu.com/item/%E4%BC%8A%E6%96%AF%E5%9D%A6%E5%B8%83%E5%B0%94%E6%9C%BA%E5%9C%BA)
+
+## Related links
+
+- **On this site**: [Istanbul Airport (IST)](/airport/IST), [Türkiye (TR)](/country/TR)
+- **Wikipedia**: [Istanbul Airport](https://en.wikipedia.org/wiki/Istanbul_Airport)
+- **Baidu Baike**: [Istanbul Airport](https://baike.baidu.com/item/%E4%BC%8A%E6%96%AF%E5%9D%A6%E5%B8%83%E5%B0%94%E6%9C%BA%E5%9C%BA)
+
 Source of images: [istairport.com](http://istairport.com)

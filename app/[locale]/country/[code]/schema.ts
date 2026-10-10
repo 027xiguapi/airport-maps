@@ -26,15 +26,18 @@ export function buildCountryGraph(input: {
   airports: AirportSummary[];
   intro: MarkdownDoc | null;
   faqItems: FaqItem[];
+  /** National scheduled-airport total, from scripts/country-airports.json. */
+  nationalTotal?: number;
 }): Record<string, unknown> {
-  const { locale, country, airports, intro, faqItems } = input;
+  const { locale, country, airports, intro, faqItems, nationalTotal } = input;
   const t = getMessages(locale);
-  const title = t.country.title(country.name);
+  const title = t.country.title(country.name, nationalTotal);
   const description = t.country.description(
     country.name,
     country.nameEn,
     country.region,
-    airports.length
+    airports.length,
+    nationalTotal
   );
   const pageUrl = absoluteUrl(localizedPath(locale, `/country/${country.code}`));
   const countryNodeId = `${SITE_URL}/#country-${country.code}`;

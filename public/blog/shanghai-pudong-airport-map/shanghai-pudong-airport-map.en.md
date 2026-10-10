@@ -81,3 +81,15 @@ cover: images/0.png
 ![S2 satellite hall, floor 2](./images/14.webp)
 
 ![S2 satellite hall, floor 3](./images/15.png)
+
+## Related links
+
+- **On this site**: [Shanghai Pudong International Airport (PVG)](/airport/PVG), [China (CN)](/country/CN)
+- **Wikipedia**: [Shanghai Pudong International Airport](https://en.wikipedia.org/wiki/Shanghai_Pudong_International_Airport)
+- **Baidu Baike**: [Shanghai Pudong International Airport](https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## Related links
+
+- **On this site**: [Shanghai Pudong International Airport (PVG)](/airport/PVG), [China (CN)](/country/CN)
+- **Wikipedia**: [Shanghai Pudong International Airport](https://en.wikipedia.org/wiki/Shanghai_Pudong_International_Airport)
+- **Baidu Baike**: [Shanghai Pudong International Airport](https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

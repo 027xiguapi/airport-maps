@@ -37,14 +37,24 @@ export const zh = {
     viewMap: '查看地图',
     terminalMap: '航站楼地图',
     /**
-     * 机场页 <title>/og:title：「2026年最新广州白云国际机场（CAN）航站楼地图」。
-     * 中文搜索大量用 IATA 代码（"mxp 機場"）和"航站楼地图/平面图"，所以标题里
-     * 带上代码与"航站楼"，而不是只有机场名加"地图"。
+     * 机场页 <title>/og:title。有航站楼数据的机场（60 座）把"几座航站楼、
+     * 几个登机口"直接写进标题，对上 "how many terminals/gates" 与"几个航站楼"
+     * 这类问题式搜索；没有数据的 303 座用诚实版本，不再承诺"航站楼地图"。
      */
-    latestAirportTitle: (year: number, name: string, iata: string) =>
-      `${year}年最新${name}（${iata}）航站楼地图`,
-    /** 机场页 H1，与标题同一主词。 */
-    airportHeading: (name: string) => `${name}航站楼地图`,
+    latestAirportTitle: (
+      year: number,
+      name: string,
+      iata: string,
+      counts?: { terminals: number; gates: number }
+    ) =>
+      counts
+        ? `${name}（${iata}）航站楼地图：${counts.terminals}座航站楼${
+            counts.gates > 0 ? `、${counts.gates}个登机口` : ''
+          }`
+        : `${year}年最新${name}（${iata}）位置与地图`,
+    /** 机场页 H1，与标题同一主词；无航站楼数据时只留机场名（名字本身已含「机场」）。 */
+    airportHeading: (name: string, hasTerminals = true) =>
+      hasTerminals ? `${name}航站楼地图` : name,
     airportGuide: '机场指南',
     lastUpdated: '最近更新',
     updatedOn: (date: string) => `更新于 ${date}`,
@@ -271,9 +281,13 @@ export const zh = {
   },
 
   country: {
-    title: (name: string) => `${name}机场地图`,
-    description: (name: string, nameEn: string, region: string, count: number) =>
-      `${name}（${nameEn}）共收录 ${count} 座机场的航站楼地图，覆盖${region}主要国际枢纽与区域机场，可查看登机口、航站楼布局与地面交通。`,
+    /** 有全国机场清单时标题带上总数，对上"XX机场地图/分布图"与"XX有几个机场"。 */
+    title: (name: string, count?: number) =>
+      count ? `${name}机场地图：全 ${count} 座机场分布图` : `${name}机场地图`,
+    description: (name: string, nameEn: string, region: string, count: number, total?: number) =>
+      total
+        ? `${name}（${nameEn}）共有 ${total} 座定期航班机场，本站收录其中 ${count} 座的航站楼地图。查看${region}机场分布图、完整机场清单与登机口分布。`
+        : `${name}（${nameEn}）共收录 ${count} 座机场的航站楼地图，覆盖${region}主要国际枢纽与区域机场，可查看登机口、航站楼布局与地面交通。`,
     chip: (nameEn: string) => `${nameEn.toUpperCase()} AIRPORTS`,
     kicker: 'Airport Maps',
     titleOf: (name: string) => `${name}的机场`,
@@ -296,8 +310,8 @@ export const zh = {
       nameEn: string;
       region: string;
       airports: string;
-      terminals: string;
-      gates: string;
+      terminals: string | null;
+      gates: string | null;
       cities: string;
       busiest: string | null;
       busiestIata: string;
@@ -305,10 +319,34 @@ export const zh = {
       mapsNote: string;
     }) =>
       // `o.nameEn` is empty when it equals `o.name` (both are "日本" / "Japan").
-      `${o.name}${o.nameEn ? `（${o.nameEn}）` : ''}位于${o.region}，本站共收录 ${o.airports}、${o.terminals}、${o.gates}。` +
+      // Terminals and gates drop out for countries whose airports have no
+      // compiled counts, rather than reading "0 座航站楼".
+      `${o.name}${o.nameEn ? `（${o.nameEn}）` : ''}位于${o.region}，本站共收录 ${o.airports}${
+        o.terminals ? `、${o.terminals}` : ''
+      }${o.gates ? `、${o.gates}` : ''}。` +
       (o.busiest ? `其中${o.busiest}（${o.busiestIata}）规模最大，年旅客量${o.busiestPax}。` : '') +
       `机场分布在${o.cities}等城市，${o.mapsNote}`,
     introMapsNote: '每座机场都有航站楼平面示意图、登机口分布与地面交通说明。',
+
+    /** 「机场分布」板块：全国定期航班机场的分布图与完整清单。 */
+    distribution: {
+      kicker: 'Distribution',
+      title: (name: string) => `${name}机场分布图`,
+      en: 'Airport Distribution',
+      sub: (covered: string, total: string) =>
+        `全国共有 ${total} 座定期航班机场（含大型、中型与小型），本站已为其中 ${covered} 座绘制航站楼地图；下方为完整清单。`,
+      mapAlt: (name: string, total: string) => `${name}机场分布图：共 ${total} 座定期航班机场`,
+      siteTag: '本站详解',
+      colAirport: '机场',
+      colCity: '城市',
+      colType: '类型',
+      types: {
+        large: '大型机场',
+        medium: '中型机场',
+        small: '小型机场',
+      },
+      empty: '暂无全国机场清单数据。',
+    },
 
     /** 相关链接 */
     linksTitle: '相关链接',
@@ -321,6 +359,9 @@ export const zh = {
     faqTitle: '常见问题',
     faqEn: 'Questions',
     faq: {
+      airportTotal: (name: string) => `${name}有多少座机场？`,
+      airportTotalAnswer: (name: string, total: string, covered: string) =>
+        `${name}共有 ${total} 座开通定期航班的机场（含大型、中型与小型）；本站已收录其中 ${covered} 座的详细资料，完整清单见上方的机场分布图。`,
       airportCount: (name: string) => `${name}有哪些机场？`,
       airportCountAnswer: (name: string, count: string, list: string) =>
         `本站收录${name} ${count}：${list}。`,
@@ -355,8 +396,32 @@ export const zh = {
       distance: string;
     }) =>
       `${o.name}（${o.iata}，${o.nameEn}）位于${o.city}${
-        o.terminals ? `，共有 ${o.terminals} 座航站楼、${o.gates} 个登机口` : ''
-      }${o.pax ? `，年旅客量${o.pax}` : ''}${o.distance ? `，距市中心约 ${o.distance}` : ''}。查看航站楼地图、登机口分布与地面交通方式。`,
+        o.terminals
+          ? `，共有 ${o.terminals} 座航站楼${o.gates ? `、${o.gates} 个登机口` : ''}`
+          : ''
+      }${o.pax ? `，年旅客量${o.pax}` : ''}${o.distance ? `，距市中心约 ${o.distance}` : ''}。${
+        o.terminals
+          ? '查看航站楼地图、登机口分布与地面交通方式。'
+          : '查看机场位置地图、代码与出行信息。'
+      }`,
+    /**
+     * 首屏一句话答案：渲染在机场页 H1 正下方，用完整句子直接回答
+     * "几座航站楼 / 多少个登机口 / 在哪里"。这两族查询占站内展示的一半以上，
+     * 此前答案只存在于折叠的 FAQ 面板里。
+     */
+    quickAnswer: (o: {
+      name: string;
+      iata: string;
+      terminals: number;
+      gates: number;
+      city: string;
+      distance: string;
+    }) =>
+      o.terminals > 0
+        ? `${o.name}（${o.iata}）共有 ${o.terminals} 座航站楼${
+            o.gates > 0 ? `、${o.gates} 个登机口` : ''
+          }${o.distance ? `，距${o.city}市中心约 ${o.distance}` : ''}。`
+        : `${o.name}（${o.iata}）位于${o.city}，可在下方查看位置地图、机场代码与出行信息。`,
     mapTitle: (iata: string) => `${iata} · 航站楼平面示意图`,
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} 机场航站楼地图 — 登机口与导航`,
@@ -372,9 +437,9 @@ export const zh = {
     downloadKicker: 'Download',
     downloadTitle: '下载机场地图',
     downloadEn: 'Downloads',
-    downloadMapLabel: (year: number, iata: string) => `${year}年最新  ${iata} 机场地图下载`,
+    downloadMapLabel: (year: number, iata: string) => `${year}年最新 ${iata} 机场地图与平面图下载`,
     downloadPdfLabel: (year: number, iata: string) =>
-      `${year}年最新 ${iata} 机场地图 PDF 下载`,
+      `${year}年最新 ${iata} 机场航站楼平面图 PDF 下载`,
     timeKicker: 'Time',
     timeTitle: (iata: string) => `机场时间信息 — ${iata} 当前时间`,
     timeEn: 'Airport Time',
@@ -518,6 +583,11 @@ export const zh = {
     gateCount: (name: string) => `${name}有多少个登机口？`,
     gateCountAnswer: (name: string, iata: string, gates: string, list: string) =>
       `${name}（${iata}）共有 ${gates} 个登机口：${list}。`,
+    whereIs: (iata: string) => `${iata} 是哪里？`,
+    whereIsAnswer: (iata: string, name: string, nameEn: string, city: string, cityEn: string, country: string) =>
+      `${iata} 是${name}（${nameEn}）的 IATA 代码，机场位于${country}的${city}${
+        cityEn ? `（${cityEn}）` : ''
+      }。`,
     distance: (name: string, city: string) => `${name}距离${city}市中心有多远？`,
     distanceAnswer: (name: string, city: string, distance: string, transit: string) =>
       `${name}距离${city}市中心约 ${distance}，可搭乘${transit}等交通方式往返市区。`,
@@ -561,6 +631,7 @@ export const zh = {
     facilities: '设施服务',
     faq: '常见问题',
     intro: '机场介绍',
+    distribution: '机场分布',
     airports: '收录机场',
   },
 

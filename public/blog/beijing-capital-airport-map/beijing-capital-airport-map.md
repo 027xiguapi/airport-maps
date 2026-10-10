@@ -84,3 +84,15 @@ cover: images/0.webp
 ![T3E 2F 层示意图](./images/15.webp)
 
 ![T3E 3F 层示意图](./images/16.webp)
+
+## 相关链接
+
+- **本站页面**：[北京首都国际机场（PEK）](/zh/airport/PEK)、[中国（CN）](/zh/country/CN)
+- **维基百科**：[北京首都国际机场](https://zh.wikipedia.org/wiki/%E5%8C%97%E4%BA%AC%E9%A6%96%E9%83%BD%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[北京首都国际机场](https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E9%A6%96%E9%83%BD%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## 相关链接
+
+- **本站页面**：[北京首都国际机场（PEK）](/zh/airport/PEK)、[中国（CN）](/zh/country/CN)
+- **维基百科**：[北京首都国际机场](https://zh.wikipedia.org/wiki/%E5%8C%97%E4%BA%AC%E9%A6%96%E9%83%BD%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[北京首都国际机场](https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E9%A6%96%E9%83%BD%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

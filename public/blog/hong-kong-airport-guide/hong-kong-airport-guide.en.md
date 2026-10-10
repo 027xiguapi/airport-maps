@@ -163,3 +163,15 @@ Hong Kong is Cathay Pacific's home base, so the airline has several lounges here
 ## One thing to note: the departure tax has gone up
 
 Hong Kong's Civil Aviation Department has announced that for tickets issued on or after 1 October 2025, the **Air Passenger Departure Tax on flights departing Hong Kong rises from HK$120 to HK$200** (transiting passengers on the same day are excluded). Under the new rules, travellers who stay in Hong Kong for no more than 48 hours can apply for a full refund of the tax.
+
+## Related links
+
+- **On this site**: [Hong Kong International Airport (HKG)](/airport/HKG)
+- **Wikipedia**: [Hong Kong International Airport](https://en.wikipedia.org/wiki/Hong_Kong_International_Airport)
+- **Baidu Baike**: [Hong Kong International Airport](https://baike.baidu.com/item/%E9%A6%99%E6%B8%AF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## Related links
+
+- **On this site**: [Hong Kong International Airport (HKG)](/airport/HKG)
+- **Wikipedia**: [Hong Kong International Airport](https://en.wikipedia.org/wiki/Hong_Kong_International_Airport)
+- **Baidu Baike**: [Hong Kong International Airport](https://baike.baidu.com/item/%E9%A6%99%E6%B8%AF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

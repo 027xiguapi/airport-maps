@@ -24,6 +24,7 @@ export default function AirportHead({
   trail,
   title,
   facts,
+  lead,
 }: {
   locale: Locale;
   airport: AirportDetail;
@@ -35,10 +36,23 @@ export default function AirportHead({
   title?: string;
   /** Key-facts cells; defaults to terminals/gates/pax/distance. */
   facts?: HeadFact[];
+  /** Lead answer sentence; defaults to the airport's quick answer, `null` hides it. */
+  lead?: string | null;
 }) {
   const t = getMessages(locale);
   const pax = formatPax(airport.annualPaxM, locale);
   const distance = formatDistance(airport.distanceKm, locale);
+  const leadText =
+    lead === undefined
+      ? t.airport.quickAnswer({
+          name: airport.name,
+          iata: airport.iata,
+          terminals: airport.terminals.length,
+          gates: airport.gateCount,
+          city: airport.city,
+          distance: distance ?? '',
+        })
+      : lead;
   const crumbs: Crumb[] = trail ?? [
     { label: t.common.home, href: '/' },
     { label: t.nav.airports, href: '/airports' },
@@ -77,6 +91,10 @@ export default function AirportHead({
             </div>
           </div>
         </div>
+        {/* Full-sentence answer to the questions this page ranks for ("how many
+            terminals / gates", "where is …") — kept out of the accordion so it
+            is plain, quotable body text. */}
+        {leadText && <p className="ap-lead">{leadText}</p>}
         {/* E-E-A-T byline: visible author attribution and freshness dates. */}
         <p className="ap-byline">
           <span>

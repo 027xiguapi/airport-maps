@@ -70,3 +70,15 @@ Apple has finally addressed a long-standing complaint with a "Offers & Promotion
 - It is on by default, so it has to be switched off manually.
 
 Give the new tricks a try.
+
+## Related links
+
+- **On this site**: [Los Angeles LAX](/airport/LAX), [United States (US)](/country/US)
+- **Wikipedia**: [Los Angeles LAX](https://en.wikipedia.org/wiki/Los_Angeles_International_Airport)
+- **Baidu Baike**: [Los Angeles LAX](https://baike.baidu.com/item/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## Related links
+
+- **On this site**: [Los Angeles LAX](/airport/LAX), [United States (US)](/country/US)
+- **Wikipedia**: [Los Angeles LAX](https://en.wikipedia.org/wiki/Los_Angeles_International_Airport)
+- **Baidu Baike**: [Los Angeles LAX](https://baike.baidu.com/item/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

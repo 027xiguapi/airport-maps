@@ -9,7 +9,8 @@
  * files are derived, never hand-edited. The catalog additionally gets a new
  * header and its export renamed; the markdown only changes character forms
  * (frontmatter included: slugs, dates and image paths are ASCII and pass
- * through untouched).
+ * through untouched), except that a blog article's internal link prefixes and
+ * Baidu Baike bullet are adjusted for the tw side — see `twBlogArticle()`.
  *
  * Usage:
  *   node scripts/build-hant.mjs            rewrite the tw files
@@ -101,6 +102,21 @@ function blogArticles() {
     .filter((rel) => existsSync(join(BLOG, rel)));
 }
 
+/**
+ * A blog article's source is written from the Chinese side, so its internal
+ * links carry the `/zh/` prefix; the derived file has to point at `/tw/…` or a
+ * reader who clicks one is dropped into the simplified layer. The Baidu Baike
+ * bullet goes the other way: the encyclopedia is simplified-only, so the site's
+ * own /tw surfaces leave it out (components/airport/RelatedLinks.tsx) and the
+ * derived article does the same. Only link targets and that one bullet line are
+ * touched — no prose.
+ */
+function twBlogArticle(text) {
+  return toHant(text)
+    .replace(/\]\(\/zh\//g, '](/tw/')
+    .replace(/^- \*\*百度百科\*\*：.*\n?/gm, '');
+}
+
 // The catalog is re-rendered rather than only transliterated, and `render()`
 // matches zh.ts's header and trailing type declaration with LF patterns — a
 // CRLF checkout would leave both in the output and emit a tw.ts that redeclares
@@ -114,7 +130,7 @@ for (const rel of sources) {
 }
 const articles = blogArticles();
 for (const rel of articles) {
-  emit(join(BLOG, rel.replace(/\.md$/, '.tw.md')), toHant(readFileSync(join(BLOG, rel), 'utf8')));
+  emit(join(BLOG, rel.replace(/\.md$/, '.tw.md')), twBlogArticle(readFileSync(join(BLOG, rel), 'utf8')));
 }
 const orphans = (() => {
   try {

@@ -187,3 +187,9 @@ Straight along Konggang Avenue into the Konggang Tunnel, keep right out of the t
 **To P2 (Terminal 2 underground car park):** follow the Terminal 2 loop road and keep left into P2.
 
 ![The route to P2](./images/14.webp)
+
+## Related links
+
+- **On this site**: [China (CN)](/country/CN)
+- **Wikipedia**: [Wuhan Tianhe International Airport](https://en.wikipedia.org/wiki/Wuhan_Tianhe_International_Airport)
+- **Baidu Baike**: [Wuhan Tianhe International Airport](https://baike.baidu.com/item/%E6%AD%A6%E6%B1%89%E5%A4%A9%E6%B2%B3%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

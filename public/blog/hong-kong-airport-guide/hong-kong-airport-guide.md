@@ -163,3 +163,15 @@ cover: images/0.webp
 ## 温馨提示：离境税上调
 
 香港民航处宣布，对于 2025 年 10 月 1 日或之后开立的机票，从香港出发的航班（不包括当日转机乘客）的**航空旅客离境税由 HK$120 上调至 HK$200**。新税制容许停留香港不超过 48 小时的旅客申请全额退还离境税。
+
+## 相关链接
+
+- **本站页面**：[香港国际机场（HKG）](/zh/airport/HKG)
+- **维基百科**：[香港国际机场](https://zh.wikipedia.org/wiki/%E9%A6%99%E6%B8%AF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[香港国际机场](https://baike.baidu.com/item/%E9%A6%99%E6%B8%AF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## 相关链接
+
+- **本站页面**：[香港国际机场（HKG）](/zh/airport/HKG)
+- **维基百科**：[香港国际机场](https://zh.wikipedia.org/wiki/%E9%A6%99%E6%B8%AF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[香港国际机场](https://baike.baidu.com/item/%E9%A6%99%E6%B8%AF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

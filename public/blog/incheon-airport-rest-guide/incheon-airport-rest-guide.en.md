@@ -97,4 +97,16 @@ Long layover and you would like to freshen up? Both terminals have **paid Shower
 
 _💡 A tip: if your layover is long, plan your rest and shower times in advance and bring a plug adapter. Enjoy your connection!_
 
+## Related links
+
+- **On this site**: [Incheon International Airport (ICN)](/airport/ICN), [South Korea (KR)](/country/KR)
+- **Wikipedia**: [Incheon International Airport](https://en.wikipedia.org/wiki/Incheon_International_Airport)
+- **Baidu Baike**: [Incheon International Airport](https://baike.baidu.com/item/%E4%BB%81%E5%B7%9D%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## Related links
+
+- **On this site**: [Incheon International Airport (ICN)](/airport/ICN), [South Korea (KR)](/country/KR)
+- **Wikipedia**: [Incheon International Airport](https://en.wikipedia.org/wiki/Incheon_International_Airport)
+- **Baidu Baike**: [Incheon International Airport](https://baike.baidu.com/item/%E4%BB%81%E5%B7%9D%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
 Source: Incheon Airport's official Xiaohongshu account

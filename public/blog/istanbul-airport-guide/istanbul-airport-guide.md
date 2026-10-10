@@ -140,4 +140,16 @@ iGA伊斯坦布尔机场深耕旅客出行体验，
 
 **期待与每一段旅程相遇**。
 
+## 相关链接
+
+- **本站页面**：[伊斯坦布尔机场（IST）](/zh/airport/IST)、[土耳其（TR）](/zh/country/TR)
+- **维基百科**：[伊斯坦布尔机场](https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%9D%A6%E5%B8%83%E5%B0%94%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[伊斯坦布尔机场](https://baike.baidu.com/item/%E4%BC%8A%E6%96%AF%E5%9D%A6%E5%B8%83%E5%B0%94%E6%9C%BA%E5%9C%BA)
+
+## 相关链接
+
+- **本站页面**：[伊斯坦布尔机场（IST）](/zh/airport/IST)、[土耳其（TR）](/zh/country/TR)
+- **维基百科**：[伊斯坦布尔机场](https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%9D%A6%E5%B8%83%E5%B0%94%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[伊斯坦布尔机场](https://baike.baidu.com/item/%E4%BC%8A%E6%96%AF%E5%9D%A6%E5%B8%83%E5%B0%94%E6%9C%BA%E5%9C%BA)
+
 图片来源： [istairport.com](http://istairport.com)

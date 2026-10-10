@@ -58,3 +58,9 @@ In English this is the **Satellite Primary Inspection**. Passengers complete the
 ![Vancouver International Airport main terminal map, with walking times](./images/0.webp)
 
 ![Level 4: where the train to the city departs](./images/1.webp)
+
+## Related links
+
+- **On this site**: [Vancouver International Airport (YVR)](/airport/YVR), [Canada (CA)](/country/CA)
+- **Wikipedia**: [Vancouver International Airport](https://en.wikipedia.org/wiki/Vancouver_International_Airport)
+- **Baidu Baike**: [Vancouver International Airport](https://baike.baidu.com/item/%E6%B8%A9%E5%93%A5%E5%8D%8E%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

@@ -15,11 +15,26 @@ import type { AirportSummary, Country } from '@/lib/types';
 export function buildCountryFaq(
   locale: Locale,
   country: Country,
-  airports: AirportSummary[]
+  airports: AirportSummary[],
+  national?: { total: number } | null
 ): FaqItem[] {
-  if (airports.length === 0) return [];
-
   const t = getMessages(locale);
+
+  // "X 有多少座机场" — answered from the national dataset (all scheduled
+  // airports), so the page can answer it even where detail pages are thin.
+  const items: FaqItem[] = national
+    ? [
+        {
+          q: t.country.faq.airportTotal(country.name),
+          a: t.country.faq.airportTotalAnswer(
+            country.name,
+            formatNumber(national.total, locale),
+            formatNumber(airports.length, locale)
+          ),
+        },
+      ]
+    : [];
+  if (airports.length === 0) return items;
   const listSeparator = locale === 'en' ? ', ' : '、';
   const airportsCount = formatNumber(airports.length, locale);
   const terminals = airports.reduce((sum, a) => sum + a.terminalCount, 0);
@@ -46,7 +61,7 @@ export function buildCountryFaq(
   // Distinct cities, in the order the airports appear.
   const cities = [...new Set(airports.map((a) => a.city))].join(listSeparator);
 
-  return [
+  items.push(
     {
       q: t.country.faq.airportCount(country.name),
       a: t.country.faq.airportCountAnswer(
@@ -67,15 +82,21 @@ export function buildCountryFaq(
           },
         ]
       : []),
-    {
-      q: t.country.faq.terminals(country.name),
-      a: t.country.faq.terminalsAnswer(
-        country.name,
-        t.units.terminals(terminals),
-        t.units.gates(gates),
-        terminalList
-      ),
-    },
+    // Same guard the airport pages use: without compiled counts this item
+    // would answer "0 座航站楼、0 个登机口" for every airport in the list.
+    ...(terminals > 0
+      ? [
+          {
+            q: t.country.faq.terminals(country.name),
+            a: t.country.faq.terminalsAnswer(
+              country.name,
+              t.units.terminals(terminals),
+              t.units.gates(gates),
+              terminalList
+            ),
+          },
+        ]
+      : []),
     {
       q: t.country.faq.cities(country.name),
       a: t.country.faq.citiesAnswer(country.name, cities),
@@ -83,6 +104,7 @@ export function buildCountryFaq(
     {
       q: t.country.faq.maps(country.name),
       a: t.country.faq.mapsAnswer(country.name, airportsCount),
-    },
-  ];
+    }
+  );
+  return items;
 }

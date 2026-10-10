@@ -84,3 +84,15 @@ cover: images/0.webp
 ![T3E, floor 2](./images/15.webp)
 
 ![T3E, floor 3](./images/16.webp)
+
+## Related links
+
+- **On this site**: [Beijing Capital International Airport (PEK)](/airport/PEK), [China (CN)](/country/CN)
+- **Wikipedia**: [Beijing Capital International Airport](https://en.wikipedia.org/wiki/Beijing_Capital_International_Airport)
+- **Baidu Baike**: [Beijing Capital International Airport](https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E9%A6%96%E9%83%BD%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## Related links
+
+- **On this site**: [Beijing Capital International Airport (PEK)](/airport/PEK), [China (CN)](/country/CN)
+- **Wikipedia**: [Beijing Capital International Airport](https://en.wikipedia.org/wiki/Beijing_Capital_International_Airport)
+- **Baidu Baike**: [Beijing Capital International Airport](https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E9%A6%96%E9%83%BD%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

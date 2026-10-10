@@ -49,3 +49,15 @@ If you are only transiting, the map is worth a look — it shows how the termina
 ## Appendix: Singapore MRT map
 
 ![Singapore MRT system map](./images/6.png)
+
+## Related links
+
+- **On this site**: [Singapore Changi Airport (SIN)](/airport/SIN), [Singapore (SG)](/country/SG)
+- **Wikipedia**: [Singapore Changi Airport](https://en.wikipedia.org/wiki/Singapore_Changi_Airport)
+- **Baidu Baike**: [Singapore Changi Airport](https://baike.baidu.com/item/%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%A8%9F%E5%AE%9C%E6%9C%BA%E5%9C%BA)
+
+## Related links
+
+- **On this site**: [Singapore Changi Airport (SIN)](/airport/SIN), [Singapore (SG)](/country/SG)
+- **Wikipedia**: [Singapore Changi Airport](https://en.wikipedia.org/wiki/Singapore_Changi_Airport)
+- **Baidu Baike**: [Singapore Changi Airport](https://baike.baidu.com/item/%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%A8%9F%E5%AE%9C%E6%9C%BA%E5%9C%BA)

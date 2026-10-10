@@ -205,3 +205,15 @@ Leaving by the **international / Hong Kong, Macau and Taiwan arrivals exit**, cr
 PS: the information above is for reference — please check the situation on the ground.
 
 Some sources: Shanghai Airport Authority, Pudong International Airport
+
+## Related links
+
+- **On this site**: [Shanghai Pudong International Airport (PVG)](/airport/PVG), [China (CN)](/country/CN)
+- **Wikipedia**: [Shanghai Pudong International Airport](https://en.wikipedia.org/wiki/Shanghai_Pudong_International_Airport)
+- **Baidu Baike**: [Shanghai Pudong International Airport](https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## Related links
+
+- **On this site**: [Shanghai Pudong International Airport (PVG)](/airport/PVG), [China (CN)](/country/CN)
+- **Wikipedia**: [Shanghai Pudong International Airport](https://en.wikipedia.org/wiki/Shanghai_Pudong_International_Airport)
+- **Baidu Baike**: [Shanghai Pudong International Airport](https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

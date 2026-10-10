@@ -58,3 +58,9 @@ Your checked baggage will be delivered to the final destination, unless advised 
 ![温哥华国际机场主航站楼平面图（含步行时间）](./images/0.webp)
 
 ![LEVEL 4 连接市区列车位置示意图](./images/1.webp)
+
+## 相关链接
+
+- **本站页面**：[温哥华国际机场（YVR）](/zh/airport/YVR)、[加拿大（CA）](/zh/country/CA)
+- **维基百科**：[温哥华国际机场](https://zh.wikipedia.org/wiki/%E6%B8%A9%E5%93%A5%E5%8D%8E%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[温哥华国际机场](https://baike.baidu.com/item/%E6%B8%A9%E5%93%A5%E5%8D%8E%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

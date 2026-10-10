@@ -155,3 +155,15 @@ Pace 巴士在芝加哥郊区运行，其 Pulse Dempster 专线更可快速**将
 ## 出行提示
 
 无论选择哪种交通工具，都要小心并警惕周围环境，上车和下车前也不要忘记检查有否遗漏行李。
+
+## 相关链接
+
+- **本站页面**：[芝加哥 ORD](/zh/airport/ORD)、[美国（US）](/zh/country/US)
+- **维基百科**：[芝加哥 ORD](https://zh.wikipedia.org/wiki/%E5%A5%A5%E9%BB%91%E5%B0%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[芝加哥 ORD](https://baike.baidu.com/item/%E5%A5%A5%E9%BB%91%E5%B0%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
+## 相关链接
+
+- **本站页面**：[芝加哥 ORD](/zh/airport/ORD)、[美国（US）](/zh/country/US)
+- **维基百科**：[芝加哥 ORD](https://zh.wikipedia.org/wiki/%E5%A5%A5%E9%BB%91%E5%B0%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+- **百度百科**：[芝加哥 ORD](https://baike.baidu.com/item/%E5%A5%A5%E9%BB%91%E5%B0%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
