@@ -7,8 +7,8 @@ import { getMessages, languageAlternates } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { getPage } from '@/lib/content';
 
-/** Slugs available to the about / contact / privacy / terms routes. */
-export type PageSlug = 'about' | 'contact' | 'privacy' | 'terms';
+/** Slugs available to the about / contact / sources / privacy / terms routes. */
+export type PageSlug = 'about' | 'contact' | 'sources' | 'privacy' | 'terms';
 
 /** Shared metadata for a Markdown page, driven by its frontmatter. */
 export async function contentPageMetadata(locale: Locale, slug: PageSlug): Promise<Metadata> {
@@ -34,14 +34,13 @@ export default function ContentPage({ locale, slug }: { locale: Locale; slug: Pa
   if (!doc) notFound();
 
   const t = getMessages(locale);
-  const navLabel =
-    slug === 'about'
-      ? t.footer.about
-      : slug === 'contact'
-        ? t.footer.contact
-        : slug === 'privacy'
-          ? t.footer.privacy
-          : t.footer.terms;
+  const navLabel = {
+    about: t.footer.about,
+    contact: t.footer.contact,
+    sources: t.footer.sources,
+    privacy: t.footer.privacy,
+    terms: t.footer.terms,
+  }[slug];
 
   return (
     <>

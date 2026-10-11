@@ -307,7 +307,6 @@ data/                       航线原始数据、目录批次输入、world-airp
 content/                    Markdown 内容与术语表
 proxy.ts                    语言重写与重定向（Next 16 的 middleware）
 scripts/                    提取、建库、灌数、抓取与自检脚本
-legacy/index.html           重构前的单文件版本（保留备查）
 ```
 
 ## 航线数据与航线页

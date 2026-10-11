@@ -660,6 +660,7 @@ export const zh = {
     linksLabel: '页脚导航',
     about: '关于本站',
     contact: '联系我们',
+    sources: '数据来源',
     privacy: '隐私政策',
     terms: '使用条款',
   },

@@ -283,4 +283,5 @@ ATM 分佈在到達大廳、C／D／F／G 閘口、Plaza、car park 8 停車場�
 - **本站頁面**：[維也納國際機場（VIE）](/tw/airport/VIE)、[奧地利（AT）](/tw/country/AT)
 - **維基百科**：[維也納國際機場](https://zh.wikipedia.org/wiki/%E7%BB%B4%E4%B9%9F%E7%BA%B3%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 
+
 圖片來源：VIE 維也納機場。文中票價、營業時間與櫃檯位置為機場及各運營方公佈的資料，出行前請以官網當日資訊為準。

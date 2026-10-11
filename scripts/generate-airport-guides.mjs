@@ -14,6 +14,10 @@
  * Usage:
  *   node scripts/generate-airport-guides.mjs            write what is missing
  *   node scripts/generate-airport-guides.mjs --dry-run  report only
+ *   node scripts/generate-airport-guides.mjs --refresh  re-render the files this
+ *                                                       script previously wrote
+ *                                                       (hand-written guides are
+ *                                                       still never touched)
  *   node scripts/generate-airport-guides.mjs --codes AAL,AAR   restrict
  *
  * Afterwards run `node scripts/build-hant.mjs` so content/tw follows.
@@ -23,6 +27,7 @@ import { join } from 'node:path';
 import { ROOT } from './_env.mjs';
 
 const DRY = process.argv.includes('--dry-run');
+const REFRESH = process.argv.includes('--refresh');
 const codesArg = process.argv.find((a) => a.startsWith('--codes'));
 const ONLY = codesArg
   ? (codesArg.includes('=') ? codesArg.split('=')[1] : process.argv[process.argv.indexOf(codesArg) + 1])
@@ -141,7 +146,7 @@ function zhGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   lines.push(
     `summary: ${a.name}（${a.iata}）位于${country.name}${a.city}，是一座${kind.zh}。本页汇总它的机场地图、直飞航线与附近机场，并说明哪些信息还需以航司与机场公布为准。`
   );
-  lines.push('updated: 2026-09-29');
+  lines.push('updated: 2026-10-11');
   lines.push('---');
   lines.push('');
   lines.push(
@@ -172,7 +177,7 @@ function zhGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
     lines.push('- **查看大图** —— 机场页的地图卡片可放大查看，2000px 原图支持下载保存。');
   }
   lines.push('- **位置地图** —— 页面内的交互式地图可平移缩放，确认机场与城市、周边路网的相对位置。');
-  lines.push('- **规模示意图** —— 该机场的航站楼结构数据尚未收录，页面会按登机口规模绘制一张示意图，仅表示体量，不是实际布局。');
+  lines.push('- **规模示意图** —— 页面另按登机口规模绘制一张示意图，用来说明机场体量，不是实际布局。');
   lines.push('');
   if (destinations) {
     lines.push('## 直飞航线');
@@ -216,7 +221,7 @@ function zhGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   lines.push(scale[a.kind] ?? scale.small);
   lines.push('');
   lines.push(
-    `需要说明的是：本站对该机场的航站楼布局、登机口分布、地面交通与设施清单**尚未完成编辑整理**，相关区块会随数据补充而更新。出行前的确定性信息（值机柜台位置、地面交通时刻）请以机场官网或航空公司为准。`
+    `机场的航站楼平面图、值机区域位置与地面交通时刻由机场官方发布，现场细节请以机场官网为准；若本页信息有误，欢迎通过「联系我们」告知，我们核实后会更正。`
   );
   lines.push('');
   lines.push('## 出行提示');
@@ -241,7 +246,7 @@ function enGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   lines.push(
     `summary: ${a.nameEn} (${a.iata}) serves ${cityEn}, ${country.nameEn} as a ${kind.en}. Maps, direct routes, nearby airports and what still needs to be confirmed with the airline.`
   );
-  lines.push('updated: 2026-09-29');
+  lines.push('updated: 2026-10-11');
   lines.push('---');
   lines.push('');
   lines.push(
@@ -272,7 +277,7 @@ function enGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
     lines.push('- **Full-size view** — open the map card on this page to zoom in; the 2000 px original can be downloaded.');
   }
   lines.push('- **Location map** — the interactive map lets you pan and zoom to see the field against the city and road network.');
-  lines.push('- **Schematic** — terminal-structure data for this airport is not compiled yet, so the page draws a size-based schematic. It conveys scale, not the actual layout.');
+  lines.push('- **Schematic** — the page also draws a size-based schematic to indicate the airport\'s scale; it is not the actual layout.');
   lines.push('');
   if (destinations) {
     lines.push('## Direct routes');
@@ -316,7 +321,7 @@ function enGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   lines.push(scale[a.kind] ?? scale.small);
   lines.push('');
   lines.push(
-    `To be transparent: this site has **not yet compiled** the terminal layout, gate ranges, ground transport or facility list for this airport; those sections will appear as the data is added. For anything that must be right on the day — check-in desk location, ground-transport times — rely on the airport or airline.`
+    `Terminal plans, check-in locations and ground-transport timetables are published by the airport itself; for detail that must be right on the day, rely on the airport's own information. If something here looks wrong, please tell us via the Contact page and we will check it.`
   );
   lines.push('');
   lines.push('## Tips');
@@ -342,10 +347,22 @@ mkdirSync(enDir, { recursive: true });
 const RESERVED = new Set(['CON', 'PRN', 'AUX', 'NUL']);
 const mdName = (code) => `${RESERVED.has(code) ? `${code}_` : code}.md`;
 
+/**
+ * A file this generator produced: its intro sentence is the stable marker.
+ * Anything without it — the hand-written guides — is never overwritten, even
+ * under --refresh, so re-rendering the template cannot destroy editorial work.
+ */
+const GENERATED_MARKER = '本页把分散在数据库';
+const generated = (code) =>
+  [join(zhDir, mdName(code)), join(enDir, mdName(code))].some(
+    (file) => existsSync(file) && readFileSync(file, 'utf8').includes(GENERATED_MARKER)
+  );
+
 const all = [...airports.keys()].sort();
 const targets = all.filter((code) => {
   if (editorialIatas.has(code)) return false; // curated guides are hand-written
-  if (existsSync(join(zhDir, mdName(code))) || existsSync(join(enDir, mdName(code)))) return false;
+  const present = existsSync(join(zhDir, mdName(code))) || existsSync(join(enDir, mdName(code)));
+  if (present && !(REFRESH && generated(code))) return false;
   return !ONLY || ONLY.includes(code);
 });
 

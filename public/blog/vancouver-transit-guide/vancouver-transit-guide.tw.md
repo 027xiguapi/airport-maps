@@ -63,3 +63,4 @@ Your checked baggage will be delivered to the final destination, unless advised 
 
 - **本站頁面**：[溫哥華國際機場（YVR）](/tw/airport/YVR)、[加拿大（CA）](/tw/country/CA)
 - **維基百科**：[溫哥華國際機場](https://zh.wikipedia.org/wiki/%E6%B8%A9%E5%93%A5%E5%8D%8E%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+

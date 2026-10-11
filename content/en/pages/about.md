@@ -1,10 +1,21 @@
 ---
 title: About
-summary: What World Airport Maps covers, where the data comes from, and how to use the terminal layout diagrams to plan a trip.
-updated: 2026-09-16
+summary: Who runs World Airport Maps, what it covers, its editorial standards, where the data comes from, and how to use the terminal layout diagrams to plan a trip.
+updated: 2026-10-11
 ---
 
-World Airport Maps is an airport navigation directory. It organises **illustrated terminal layouts**, gate ranges, ground transport and terminal facilities for airports worldwide, by country and region — so you know how an airport is put together before you get there.
+World Airport Maps is an independently run airport navigation directory. It organises **illustrated terminal layouts**, gate ranges, ground transport and terminal facilities for airports worldwide, by country and region — so you know how an airport is put together before you get there, especially for the two steps travellers get wrong most often: **connecting flights and changing terminal**.
+
+## Who runs this site
+
+The site is run by an editorial team focused on airports and civil aviation, responsible for entering data, writing guides and correcting errors. We are not an airport, an airline or a booking platform, and we do not sell tickets.
+
+**Editorial standards:**
+
+- **Written independently** — airport guides are written by our editors, not copied from airport websites, and we accept no paid listings or paid ranking.
+- **Checkable** — every data point traces to a public source or official airport information; sources and licences are set out together on the [Data sources and editorial method](/sources) page.
+- **Labelled honestly** — every record carries an update date, and the difference between a diagram and a surveyed plan is stated rather than blurred.
+- **Corrections welcome** — a report is checked against official information before we change the record and advance the page's update date.
 
 ## What we cover
 
@@ -12,6 +23,7 @@ World Airport Maps is an airport navigation directory. It organises **illustrate
 - **Terminal guides** — gate ranges, gate counts, main airlines and available facilities for each terminal.
 - **Ground transport** — how to get from the airport into the city: rail, bus, taxi, car and ferry.
 - **Airport facilities** — duty-free shopping, lounges, free Wi-Fi, currency exchange, left luggage, medical rooms, food and parking.
+- **Airport guides** — long-form pieces for the main hubs, covering which terminals airlines use, what matters when connecting, and how to get into the city.
 
 ## How to use the site
 
@@ -26,14 +38,15 @@ World Airport Maps is an airport navigation directory. It organises **illustrate
 
 The terminal layout diagrams are **drawn automatically from the number of terminals, the gate count and the ground transport node**. They are intended to convey the overall shape of an airport and how its terminals relate to one another. They are **not surveyed, to-scale floor plans** and are no substitute for the official terminal maps published by an airport.
 
-Terminal counts, gate counts, main airlines, annual passenger volumes and ground transport details are compiled from public sources. Airports are rebuilt and extended frequently, so treat this as a planning aid and confirm details with the airport.
+Terminal counts, gate counts, main airlines, annual passenger volumes and ground transport details are compiled from public sources and official airport information. Airports are rebuilt and extended frequently, so treat this as a planning aid and confirm details with the airport. The full list of sources and licences is on the [Data sources and editorial method](/sources) page.
 
 ## Languages
 
 | Language | Address | Status |
 | --- | --- | --- |
-| English | `/en/` | Complete — site default |
-| 中文 | `/zh/` | Complete |
+| English | `/` | Complete — site default |
+| 简体中文 (Simplified Chinese) | `/zh/` | Complete |
+| 繁體中文 (Traditional Chinese) | `/tw/` | Complete |
 
 English is the default language, so the site root (`/`) opens the English version. Switching language keeps you on the airport or country you were viewing rather than sending you back to the homepage. Airport and terminal names, facility labels, ground transport modes and the labels inside the terminal diagrams are all localized.
 

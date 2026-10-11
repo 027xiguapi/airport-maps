@@ -101,9 +101,11 @@ _💡溫馨提示：轉機時間較長的話，建議提前規劃好休息和洗
 - **本站頁面**：[首爾仁川國際機場（ICN）](/tw/airport/ICN)、[韓國（KR）](/tw/country/KR)
 - **維基百科**：[首爾仁川國際機場](https://zh.wikipedia.org/wiki/%E4%BB%81%E5%B7%9D%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 
+
 ## 相關連結
 
 - **本站頁面**：[首爾仁川國際機場（ICN）](/tw/airport/ICN)、[韓國（KR）](/tw/country/KR)
 - **維基百科**：[首爾仁川國際機場](https://zh.wikipedia.org/wiki/%E4%BB%81%E5%B7%9D%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+
 
 圖片來源：仁川機場小紅書官方賬號

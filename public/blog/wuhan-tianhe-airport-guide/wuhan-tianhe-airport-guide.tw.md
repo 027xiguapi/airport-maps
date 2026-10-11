@@ -192,3 +192,4 @@ S19／S18 → 空港大道 → 交通中心停車場 → 交通中心 2 層 1、
 
 - **本站頁面**：[中國（CN）](/tw/country/CN)
 - **維基百科**：[武漢天河國際機場](https://zh.wikipedia.org/wiki/%E6%AD%A6%E6%B1%89%E5%A4%A9%E6%B2%B3%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
+

@@ -662,6 +662,7 @@ export const tw: Messages = {
     linksLabel: '頁尾導航',
     about: '關於本站',
     contact: '聯絡我們',
+    sources: '資料來源',
     privacy: '隱私政策',
     terms: '使用條款',
   },

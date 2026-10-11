@@ -1,7 +1,7 @@
 ---
 title: Contact
-summary: How to get in touch with World Airport Maps — report an error in an airport map or terminal guide, or ask for a new airport to be added.
-updated: 2026-09-20
+summary: How to reach the World Airport Maps editorial team — report an error in an airport map or terminal guide, suggest an airport to add, or ask about partnerships and data.
+updated: 2026-10-11
 ---
 
 Found something wrong, or want an airport added? We read every message and verify corrections against official airport sources before publishing, so the next traveller gets a more accurate map.
@@ -12,7 +12,7 @@ The fastest way to reach the editorial team:
 
 **[contact@globalairportmaps.com](mailto:contact@globalairportmaps.com)**
 
-We answer in English or Chinese (中文亦可).
+We answer in English or Chinese (中文亦可), usually within **three working days**. Corrections that need checking with an airport or airline may take a little longer.
 
 ## What to include
 
@@ -26,4 +26,8 @@ We answer in English or Chinese (中文亦可).
 2. The airport record is corrected and the page's updated date advances, so you can see when it last changed.
 3. Larger changes (new terminals, renumbered gates) are also reflected in the terminal layout diagram.
 
-For anything else — partnership enquiries, data questions, feedback on the site — the same address works.
+The full description of how we handle data and licences is on the [Data sources and editorial method](/sources) page.
+
+## Anything else
+
+Partnership enquiries, data questions, site feedback and airports you would like added all go to the same address. We do not accept paid listings or paid ranking.

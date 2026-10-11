@@ -30,6 +30,7 @@ export default async function Footer({ locale }: { locale: Locale }) {
     ...(hasBlog(locale) ? [{ href: '/blog', label: t.blog.nav }] : []),
     { href: '/about', label: t.footer.about },
     { href: '/contact', label: t.footer.contact },
+    { href: '/sources', label: t.footer.sources },
     { href: '/privacy', label: t.footer.privacy },
     { href: '/terms', label: t.footer.terms },
   ];

@@ -686,6 +686,7 @@ export const en: Messages = {
     linksLabel: 'Footer navigation',
     about: 'About',
     contact: 'Contact',
+    sources: 'Data sources',
     privacy: 'Privacy policy',
     terms: 'Terms of use',
   },
