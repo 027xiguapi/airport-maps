@@ -1,27 +1,20 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ADSTERRA_UNITS, adsterraBannerSrcDoc, type AdsterraUnitId } from '@/lib/ads';
-
-/**
- * Minimum viewport (px) at which each unit still fits where it sits: the
- * leaderboard needs a content column that can hold 728px plus the section
- * padding, while the 160px rail units share the sidebar layout's desktop
- * breakpoint (1081px in globals.css).
- */
-const MIN_VIEWPORT_WIDTH: Record<AdsterraUnitId, number> = {
-  leaderboard: 800,
-  'half-page': 1081,
-  skyscraper: 1081,
-};
+import {
+  ADSTERRA_RANGE,
+  ADSTERRA_UNITS,
+  adsterraBannerSrcDoc,
+  type AdsterraUnitId,
+} from '@/lib/ads';
 
 /**
  * A fixed-size Adsterra banner. The snippet runs inside the iframe's own
- * document (see lib/ads.ts for why). The iframe is only
- * mounted once the viewport can show the whole unit, because an iframe parked
- * in a `display:none` box still loads and would book a hidden impression; the
- * wrapper's matching display rules in globals.css only collapse the empty
- * server-rendered box on those same viewports.
+ * document (see lib/ads.ts for why). The iframe only mounts while the viewport
+ * sits inside the unit's ADSTERRA_RANGE window — an iframe parked in a
+ * `display:none` box still loads and would book a hidden impression — so
+ * outside the window the component renders an empty wrapper, which
+ * globals.css collapses with `:empty`. A mounted ad is never hidden.
  */
 export default function AdsterraBanner({
   unit,
@@ -35,16 +28,18 @@ export default function AdsterraBanner({
   className?: string;
 }) {
   const { width, height } = ADSTERRA_UNITS[unit];
-  const minWidth = MIN_VIEWPORT_WIDTH[unit];
+  const { min, max } = ADSTERRA_RANGE[unit];
   const [live, setLive] = useState(false);
 
   useEffect(() => {
-    const query = window.matchMedia(`(min-width: ${minWidth}px)`);
+    const query = window.matchMedia(
+      `(min-width: ${min}px)${max ? ` and (max-width: ${max}px)` : ''}`
+    );
     const sync = () => setLive(query.matches);
     sync();
     query.addEventListener('change', sync);
     return () => query.removeEventListener('change', sync);
-  }, [minWidth]);
+  }, [min, max]);
 
   return (
     <div className={className} data-ad-slot={unit}>

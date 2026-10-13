@@ -31,7 +31,7 @@ import TerminalsSection from '@/components/airport/TerminalsSection';
 import TransitFacilities from '@/components/airport/TransitFacilities';
 import RelatedAirports from '@/components/airport/RelatedAirports';
 import AdsterraBanner from '@/components/ads/AdsterraBanner';
-import AdsterraNative from '@/components/ads/AdsterraNative';
+import AdsterraStrip from '@/components/ads/AdsterraStrip';
 
 export const revalidate = 3600;
 
@@ -191,7 +191,7 @@ export default async function AirportPage({ params }: Props) {
             terminalPdfUrl={terminalMap.pdf}
           />
 
-          <AdsterraBanner unit="leaderboard" title={t.common.advertisement} className="my-12" />
+          <AdsterraStrip title={t.common.advertisement} className="my-12" />
 
           {geo && <AirportTimeSection locale={locale} iata={airport.iata} timeZone={geo.tz} />}
 
@@ -229,7 +229,7 @@ export default async function AirportPage({ params }: Props) {
 
           <TransitFacilities locale={locale} transit={airport.transit} facilities={airport.facilities} />
 
-          <AdsterraNative className="my-12" />
+          <AdsterraBanner unit="medium-rectangle" title={t.common.advertisement} className="my-12" />
 
           <div className="section-head" id="faq" style={{ marginTop: 46, marginBottom: 18 }}>
             <div>

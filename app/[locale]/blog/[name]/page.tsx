@@ -7,7 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import Markdown from '@/components/Markdown';
 import TocNav from '@/components/TocNav';
 import AdsterraBanner from '@/components/ads/AdsterraBanner';
-import AdsterraNative from '@/components/ads/AdsterraNative';
+import AdsterraStrip from '@/components/ads/AdsterraStrip';
 import { formatDate } from '@/lib/format';
 import {
   blogCoverUrl,
@@ -187,8 +187,9 @@ export default async function BlogPostPage({ params }: Props) {
             </Markdown>
 
             {/* Mid-article when the body splits before its third h2 (see
-                splitBeforeHeading), the end-of-article slot otherwise. */}
-            <AdsterraBanner unit="leaderboard" title={t.common.advertisement} className="my-12" />
+                splitBeforeHeading), the end-of-article slot otherwise. The
+                strip picks 320×50 / 468×60 / 728×90 by viewport. */}
+            <AdsterraStrip title={t.common.advertisement} className="my-12" />
 
             {bodyRest && (
               <Markdown
@@ -200,6 +201,8 @@ export default async function BlogPostPage({ params }: Props) {
               </Markdown>
             )}
           </div>
+
+          <AdsterraBanner unit="medium-rectangle" title={t.common.advertisement} className="my-12" />
 
           {related.length > 0 && (
             <div className="mt-12">
@@ -218,8 +221,6 @@ export default async function BlogPostPage({ params }: Props) {
               <PostGrid locale={locale} posts={related} />
             </div>
           )}
-
-          <AdsterraNative className="my-12" />
         </div>
       </section>
     </>

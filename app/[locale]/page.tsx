@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import AirportMap from '@/components/AirportMap';
 import AdsterraBanner from '@/components/ads/AdsterraBanner';
+import AdsterraStrip from '@/components/ads/AdsterraStrip';
 import { CountryGrid } from '@/components/AirportCard';
 import { BlogShowcase } from '@/components/Blog';
 import CategoryGrid, { type CategoryCard } from '@/components/CategoryGrid';
@@ -355,7 +356,7 @@ export default async function HomePage({ params }: Props) {
         </section>
       )}
 
-      <AdsterraBanner unit="leaderboard" title={t.common.advertisement} className="my-12" />
+      <AdsterraStrip title={t.common.advertisement} className="my-12" />
 
       {/* ------------------------------------------------------------ blog */}
       {/* The one homepage section whose frame is inline utilities rather than
@@ -457,6 +458,8 @@ export default async function HomePage({ params }: Props) {
         </div>
         <PopularCities locale={locale} airports={popular} />
       </section>
+
+      <AdsterraBanner unit="medium-rectangle" title={t.common.advertisement} className="my-12" />
 
       {/* ----------------------------------------------------------- route maps */}
       {routeNav.length > 0 && (

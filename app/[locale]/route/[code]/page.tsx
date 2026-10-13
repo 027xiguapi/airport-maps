@@ -9,7 +9,7 @@ import AirportMapCard from '@/components/airport/AirportMapCard';
 import RouteDataDownloads from '@/components/airport/RouteDataDownloads';
 import RouteMapSection from '@/components/airport/RouteMapSection';
 import AdsterraBanner from '@/components/ads/AdsterraBanner';
-import AdsterraNative from '@/components/ads/AdsterraNative';
+import AdsterraStrip from '@/components/ads/AdsterraStrip';
 import { Button } from '@/components/ui/button';
 import { formatNumber } from '@/lib/format';
 import { BackIcon } from '@/lib/icons';
@@ -223,7 +223,7 @@ export default async function AirportRoutePage({ params }: Props) {
             map={map}
           />
 
-          <AdsterraBanner unit="leaderboard" title={t.common.advertisement} className="my-12" />
+          <AdsterraStrip title={t.common.advertisement} className="my-12" />
 
           <section className="ap-extra" id="route-data">
             <div className="section-head">
@@ -254,7 +254,7 @@ export default async function AirportRoutePage({ params }: Props) {
             </section>
           )}
 
-          <AdsterraNative className="my-12" />
+          <AdsterraBanner unit="medium-rectangle" title={t.common.advertisement} className="my-12" />
 
           <div className="section-head" id="faq" style={{ marginTop: 46, marginBottom: 18 }}>
             <div>

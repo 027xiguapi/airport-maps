@@ -667,8 +667,6 @@ export const tw: Messages = {
     sources: '資料來源',
     privacy: '隱私政策',
     terms: '使用條款',
-    /** 頁尾的 Adsterra smartlink 入口（付費外鏈，另加 rel=sponsored）。 */
-    sponsored: '贊助商連結',
   },
 
   /** Mode labels keyed by the transport icon stored on ground_transport.icon.

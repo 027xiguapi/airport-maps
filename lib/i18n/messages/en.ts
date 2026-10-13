@@ -691,8 +691,6 @@ export const en: Messages = {
     sources: 'Data sources',
     privacy: 'Privacy policy',
     terms: 'Terms of use',
-    /** The Adsterra smartlink entry (a paid link, rel=sponsored). */
-    sponsored: 'Sponsored',
   },
 
   /** Mode labels keyed by the transport icon stored on ground_transport.icon.

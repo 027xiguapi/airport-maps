@@ -665,8 +665,6 @@ export const zh = {
     sources: '数据来源',
     privacy: '隐私政策',
     terms: '使用条款',
-    /** 页脚的 Adsterra smartlink 入口（付费外链，另加 rel=sponsored）。 */
-    sponsored: '赞助商链接',
   },
 
   /** Mode labels keyed by the transport icon stored on ground_transport.icon.
