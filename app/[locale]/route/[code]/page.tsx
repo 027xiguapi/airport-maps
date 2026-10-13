@@ -8,6 +8,8 @@ import AirportHead from '@/components/airport/AirportHead';
 import AirportMapCard from '@/components/airport/AirportMapCard';
 import RouteDataDownloads from '@/components/airport/RouteDataDownloads';
 import RouteMapSection from '@/components/airport/RouteMapSection';
+import AdsterraBanner from '@/components/ads/AdsterraBanner';
+import AdsterraNative from '@/components/ads/AdsterraNative';
 import { Button } from '@/components/ui/button';
 import { formatNumber } from '@/lib/format';
 import { BackIcon } from '@/lib/icons';
@@ -207,6 +209,9 @@ export default async function AirportRoutePage({ params }: Props) {
       <div className="ap-with-toc">
         <aside className="ap-toc">
           <TocNav items={tocItems} label={t.toc.label} />
+          {/* 160×300 below the contents list; the wrapper hides itself below
+              the desktop breakpoint (globals.css). */}
+          <AdsterraBanner unit="half-page" title={t.common.advertisement} className="mt-6" />
         </aside>
 
         <div className="ap-body">
@@ -217,6 +222,8 @@ export default async function AirportRoutePage({ params }: Props) {
             iata={airport.iata}
             map={map}
           />
+
+          <AdsterraBanner unit="leaderboard" title={t.common.advertisement} className="my-12" />
 
           <section className="ap-extra" id="route-data">
             <div className="section-head">
@@ -246,6 +253,8 @@ export default async function AirportRoutePage({ params }: Props) {
               <AirportMapCard locale={locale} iata={airport.iata} img={mapImg} />
             </section>
           )}
+
+          <AdsterraNative className="my-12" />
 
           <div className="section-head" id="faq" style={{ marginTop: 46, marginBottom: 18 }}>
             <div>

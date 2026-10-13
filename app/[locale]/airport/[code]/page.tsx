@@ -30,6 +30,8 @@ import GuideSection from '@/components/airport/GuideSection';
 import TerminalsSection from '@/components/airport/TerminalsSection';
 import TransitFacilities from '@/components/airport/TransitFacilities';
 import RelatedAirports from '@/components/airport/RelatedAirports';
+import AdsterraBanner from '@/components/ads/AdsterraBanner';
+import AdsterraNative from '@/components/ads/AdsterraNative';
 
 export const revalidate = 3600;
 
@@ -170,6 +172,9 @@ export default async function AirportPage({ params }: Props) {
       <div className="ap-with-toc">
         <aside className="ap-toc">
           <TocNav items={tocItems} label={t.toc.label} />
+          {/* 160×300 below the contents list; the wrapper hides itself below
+              the desktop breakpoint (globals.css). */}
+          <AdsterraBanner unit="half-page" title={t.common.advertisement} className="mt-6" />
         </aside>
 
         <div className="ap-body">
@@ -185,6 +190,8 @@ export default async function AirportPage({ params }: Props) {
             terminalMapUrl={terminalMap.png}
             terminalPdfUrl={terminalMap.pdf}
           />
+
+          <AdsterraBanner unit="leaderboard" title={t.common.advertisement} className="my-12" />
 
           {geo && <AirportTimeSection locale={locale} iata={airport.iata} timeZone={geo.tz} />}
 
@@ -221,6 +228,8 @@ export default async function AirportPage({ params }: Props) {
           />
 
           <TransitFacilities locale={locale} transit={airport.transit} facilities={airport.facilities} />
+
+          <AdsterraNative className="my-12" />
 
           <div className="section-head" id="faq" style={{ marginTop: 46, marginBottom: 18 }}>
             <div>

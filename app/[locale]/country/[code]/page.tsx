@@ -9,6 +9,8 @@ import TocNav, { type TocItem } from '@/components/TocNav';
 import CountryIntro from '@/components/country/CountryIntro';
 import CountryDistribution from '@/components/country/CountryDistribution';
 import CountryLinks from '@/components/country/CountryLinks';
+import AdsterraBanner from '@/components/ads/AdsterraBanner';
+import AdsterraNative from '@/components/ads/AdsterraNative';
 import { getCountryIntro } from '@/lib/content';
 import { getCountryAirports } from '@/lib/country-airports';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
@@ -143,6 +145,9 @@ export default async function CountryPage({ params }: Props) {
         {tocItems.length >= 3 && (
           <aside className="ap-toc">
             <TocNav items={tocItems} label={t.toc.label} />
+            {/* 160×300 below the contents list; the wrapper hides itself
+                below the desktop breakpoint (globals.css). */}
+            <AdsterraBanner unit="half-page" title={t.common.advertisement} className="mt-6" />
           </aside>
         )}
 
@@ -158,6 +163,10 @@ export default async function CountryPage({ params }: Props) {
               national={national}
               covered={covered}
             />
+          )}
+
+          {airports.length > 0 && (
+            <AdsterraBanner unit="leaderboard" title={t.common.advertisement} className="my-12" />
           )}
 
           <section className="ap-extra" id="airport-list">
@@ -190,6 +199,8 @@ export default async function CountryPage({ params }: Props) {
           {airports.length > 0 && (
             <CountryLinks locale={locale} country={country} airports={airports} />
           )}
+
+          <AdsterraNative className="my-12" />
 
           {faqItems.length > 0 && (
             <section className="ap-extra" id="faq">

@@ -36,6 +36,8 @@ export const zh = {
     home: '首页',
     viewMap: '查看地图',
     terminalMap: '航站楼地图',
+    /** 广告位 iframe 的无障碍标题（components/ads/）。 */
+    advertisement: '广告',
     /**
      * 机场页 <title>/og:title。有航站楼数据的机场（60 座）把"几座航站楼、
      * 几个登机口"直接写进标题，对上 "how many terminals/gates" 与"几个航站楼"
@@ -663,6 +665,8 @@ export const zh = {
     sources: '数据来源',
     privacy: '隐私政策',
     terms: '使用条款',
+    /** 页脚的 Adsterra smartlink 入口（付费外链，另加 rel=sponsored）。 */
+    sponsored: '赞助商链接',
   },
 
   /** Mode labels keyed by the transport icon stored on ground_transport.icon.

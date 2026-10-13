@@ -25,6 +25,7 @@ export default function Markdown({
   children,
   className,
   imageBase,
+  nextId: sharedIdAllocator,
 }: {
   children: string;
   className?: string;
@@ -35,11 +36,20 @@ export default function Markdown({
    * them relatively; guides and pages have no local images, so they omit this.
    */
   imageBase?: string;
+  /**
+   * Heading-id allocator to keep drawing from, for one document rendered as
+   * several <Markdown> islands (lib/markdown-toc.ts splitBeforeHeading sets a
+   * mid-article ad between two of them). Sharing one allocator across the
+   * islands keeps their ids identical to the ids extractHeadings computes
+   * over the whole body; without it each island would restart the sequence
+   * and repeated heading texts would collide with the rail's anchors.
+   */
+  nextId?: (text: string) => string;
 }) {
   // Heading ids for the page rail. lib/markdown-toc.ts runs the same allocator
   // over the same plain text in the same document order, so the ids it lists
   // always match the ones rendered here.
-  const nextId = createIdAllocator();
+  const nextId = sharedIdAllocator ?? createIdAllocator();
   const heading = (level: 2 | 3) =>
     function Heading({ children: headingChildren }: { children?: ReactNode }) {
       const id = nextId(plainHeadingText(childText(headingChildren)));

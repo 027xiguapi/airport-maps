@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { hasBlog } from '@/lib/blog';
+import { ADSTERRA_SMARTLINK } from '@/lib/ads';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { formatNumber } from '@/lib/format';
@@ -85,6 +86,16 @@ export default async function Footer({ locale }: { locale: Locale }) {
               {link.label}
             </Link>
           ))}
+          {/* The Adsterra smartlink: a paid direct-link offer, so it carries
+              rel="sponsored" and sits outside the site navigation proper. */}
+          <a
+            className={LINK_CLASSES}
+            href={ADSTERRA_SMARTLINK}
+            target="_blank"
+            rel="sponsored nofollow noopener noreferrer"
+          >
+            {t.footer.sponsored}
+          </a>
         </nav>
       </div>
     </footer>

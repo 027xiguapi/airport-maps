@@ -1,7 +1,7 @@
 ---
 title: Privacy policy
 summary: What this site collects, how cookies are used, which third-party services are involved, and your rights over your data.
-updated: 2026-09-16
+updated: 2026-10-13
 ---
 
 This page explains how World Airport Maps (the "site") handles information when you visit.
@@ -18,17 +18,18 @@ We may passively collect the following **non-personal** technical information in
 
 ## Cookies and local storage
 
-The site uses **essential cookies only**:
+The site itself uses **essential cookies only**:
 
 | Name | Purpose | Lifetime |
 | --- | --- | --- |
 | `preferred-locale` | Remembers the interface language you chose so your next visit opens in it | 1 year |
 
-You can clear or block cookies in your browser settings. With cookies blocked your language preference will not be remembered, but **no airport content becomes unavailable** — every language version is directly addressable (`/zh/`, `/en/`).
+Third-party ad services on the page may set cookies of their own (see "Third-party services" below); those are not set by the site. You can clear or block cookies in your browser settings. With cookies blocked your language preference will not be remembered, but **no airport content becomes unavailable** — every language version is directly addressable (`/zh/`, `/en/`). Ads still display, though they may be less relevant.
 
 ## Third-party services
 
 - **Fonts**: web fonts are served by Google Fonts. Loading them makes a request to that service, and its privacy policy applies.
+- **Advertising**: the site carries ads served by third-party ad networks (Google AdSense and Adsterra) to fund its operation. Those services may use cookies, web beacons or similar device identifiers, combined with browsing records (including a coarse location inferred from your IP address), to serve and measure ads. Their handling of ad data is governed by their own terms and privacy policies; you can manage personalised advertising in [Google Ads Settings](https://adssettings.google.com/). Ad slots are loaded by the third party, and the site cannot read or control the specific data they collect.
 - **Analytics**: where analytics are enabled, we review aggregate figures only; they are not used to identify individuals.
 
 We do not sell, rent or trade visitor data.

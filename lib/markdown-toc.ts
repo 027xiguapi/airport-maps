@@ -72,3 +72,33 @@ export function extractHeadings(body: string): HeadingAnchor[] {
   }
   return items;
 }
+
+/**
+ * Split a document immediately before its `index`-th h2 heading (1-based) —
+ * the blog page renders the two halves as separate <Markdown> islands so an
+ * ad slot can sit between major sections. Returns null when the document has
+ * fewer than `index` h2s, and never splits inside a fenced code block, so the
+ * two halves are valid Markdown on their own. Heading ids stay continuous
+ * across the halves because both <Markdown> instances draw from one shared
+ * allocator (components/Markdown.tsx accepts one as `nextId`), which matches
+ * what extractHeadings computes over the whole document.
+ */
+export function splitBeforeHeading(body: string, index: number): [string, string] | null {
+  const lines = body.split('\n');
+  let inFence = false;
+  let seen = 0;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (FENCE.test(line)) {
+      inFence = !inFence;
+      continue;
+    }
+    if (inFence) continue;
+    if (!/^##\s+\S/.test(line)) continue;
+    seen += 1;
+    if (seen === index) {
+      return [lines.slice(0, i).join('\n'), lines.slice(i).join('\n')];
+    }
+  }
+  return null;
+}

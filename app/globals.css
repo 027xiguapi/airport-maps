@@ -891,6 +891,36 @@ html[data-theme="dark"] {
       @apply border-sky-600;
     }
   }
+  /* A rail taller than the viewport — long contents list plus an ad slot —
+     would pin with its bottom permanently out of reach; let it scroll
+     internally instead (desktop layout only, desktop column only). */
+  @media (min-width: 1081px) {
+    .ap-toc {
+      max-height: calc(100vh - 108px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+  }
+
+  /* Ad slots (components/ads/AdsterraBanner.tsx). The wrapper is rendered on
+     the server; the component mounts the ad iframe only on viewports that can
+     show the unit whole, so these rules merely collapse the empty wrapper on
+     the screens where the component never mounts — a mounted ad is never
+     hidden. */
+  [data-ad-slot] {
+    @apply flex justify-center;
+  }
+  @media (max-width: 799px) {
+    [data-ad-slot='leaderboard'] {
+      display: none;
+    }
+  }
+  @media (max-width: 1080px) {
+    [data-ad-slot='half-page'],
+    [data-ad-slot='skyscraper'] {
+      display: none;
+    }
+  }
 
   .ap-desc {
     @apply mb-1.5 max-w-[860px] text-[15px] leading-[1.85] text-ink;

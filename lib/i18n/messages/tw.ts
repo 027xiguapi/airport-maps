@@ -38,6 +38,8 @@ export const tw: Messages = {
     home: '首頁',
     viewMap: '檢視地圖',
     terminalMap: '航廈地圖',
+    /** 廣告位 iframe 的無障礙標題（components/ads/）。 */
+    advertisement: '廣告',
     /**
      * 機場頁 <title>/og:title。有航廈資料的機場（60 座）把"幾座航廈、
      * 幾個閘口"直接寫進標題，對上 "how many terminals/gates" 與"幾個航廈"
@@ -665,6 +667,8 @@ export const tw: Messages = {
     sources: '資料來源',
     privacy: '隱私政策',
     terms: '使用條款',
+    /** 頁尾的 Adsterra smartlink 入口（付費外鏈，另加 rel=sponsored）。 */
+    sponsored: '贊助商連結',
   },
 
   /** Mode labels keyed by the transport icon stored on ground_transport.icon.

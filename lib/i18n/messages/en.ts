@@ -44,6 +44,8 @@ export const en: Messages = {
     home: 'Home',
     viewMap: 'View map',
     terminalMap: 'Terminal map',
+    /** Accessible iframe title on the ad slots (components/ads/). */
+    advertisement: 'Advertisement',
     /**
      * Airport page <title>/og:title. Airports with compiled data lead with the
      * counts Google is asked for ("how many terminals/gates does X have"); the
@@ -689,6 +691,8 @@ export const en: Messages = {
     sources: 'Data sources',
     privacy: 'Privacy policy',
     terms: 'Terms of use',
+    /** The Adsterra smartlink entry (a paid link, rel=sponsored). */
+    sponsored: 'Sponsored',
   },
 
   /** Mode labels keyed by the transport icon stored on ground_transport.icon.
