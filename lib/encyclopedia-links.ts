@@ -37,6 +37,7 @@ const AIRPORT_ENCYCLOPEDIA_TITLES: Record<string, string> = {
   GRU: '圣保罗/瓜鲁柳斯国际机场',
   HND: '羽田机场',
   ICN: '仁川国际机场',
+  ORY: '巴黎-奥利机场',
   JFK: '约翰·肯尼迪国际机场',
   KIX: '关西国际机场',
   NRT: '成田国际机场',
