@@ -4,7 +4,7 @@ import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
 import type { MarkdownDoc } from '@/lib/content';
 
-/** Optional long-form guide from content/<locale>/airports/<IATA>.md */
+/** Optional long-form guide from the content_documents store (kind='airport') */
 export default function GuideSection({
   locale,
   guide,

@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start -p 3003",
     "typecheck": "tsc --noEmit",
+    "content:import": "node scripts/content-import.mjs",
+    "content:export": "node scripts/content-export.mjs",
     "db:seed": "node scripts/seed.mjs",
     "db:create": "node scripts/db-create.mjs",
     "db:push": "drizzle-kit push",

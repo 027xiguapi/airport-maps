@@ -1,30 +1,33 @@
 /**
  * Regenerates the Traditional Chinese layer from the Chinese source:
  *
- *   lib/i18n/messages/zh.ts  ->  lib/i18n/messages/tw.ts
- *   content/zh/**\/*.md       ->  content/tw/**\/*.md   (guides, country intros, pages)
- *   public/blog/<slug>/<slug>.md -> public/blog/<slug>/<slug>.tw.md
+ *   lib/i18n/messages/zh.ts          ->  lib/i18n/messages/tw.ts
+ *   content_documents (locale 'zh')  ->  content_documents (locale 'tw')
+ *   public/blog/<slug>/<slug>.md     ->  public/blog/<slug>/<slug>.tw.md
+ *
+ * The content documents used to be `content/zh/**\/*.md` files; they now live in
+ * the `content_documents` table (db/schema.ts), so this script reads the zh rows
+ * and upserts their tw counterparts in place — same kind/subject, locale 'tw'.
  *
  * Everything goes through `toHant()` — copy, comments and all — because these
- * files are derived, never hand-edited. The catalog additionally gets a new
- * header and its export renamed; the markdown only changes character forms
- * (frontmatter included: slugs, dates and image paths are ASCII and pass
- * through untouched), except that a blog article's internal link prefixes and
- * Baidu Baike bullet are adjusted for the tw side — see `twBlogArticle()`.
+ * rows are derived, never hand-edited. The catalog additionally gets a new
+ * header and its export renamed; the documents only change character forms
+ * (title/summary/body; the `updated` date is ASCII and passes through), except
+ * that a blog article's internal link prefixes and Baidu Baike bullet are
+ * adjusted for the tw side — see `twBlogArticle()`.
  *
  * Usage:
- *   node scripts/build-hant.mjs            rewrite the tw files
+ *   node scripts/build-hant.mjs            rewrite the tw layer
  *   node scripts/build-hant.mjs --check    exit 1 if anything is out of date
  */
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { join, relative } from 'node:path';
-import { ROOT } from './_env.mjs';
+import { join } from 'node:path';
+import pg from 'pg';
+import { databaseUrl, ROOT } from './_env.mjs';
 import { toHant } from './_hant.mjs';
 
 const SOURCE = join(ROOT, 'lib', 'i18n', 'messages', 'zh.ts');
 const TARGET = join(ROOT, 'lib', 'i18n', 'messages', 'tw.ts');
-const CONTENT_SOURCE = join(ROOT, 'content', 'zh');
-const CONTENT_TARGET = join(ROOT, 'content', 'tw');
 const BLOG = join(ROOT, 'public', 'blog');
 
 /** Replaces zh.ts's own header; everything after it is converted body. */
@@ -33,7 +36,7 @@ const HEADER = `import type { Messages } from './zh';
 /**
  * Traditional Chinese (Taiwan) catalog, derived from \`zh.ts\` by
  * \`scripts/build-hant.mjs\` (OpenCC cn->twp plus the wording exceptions in
- * \`content/terminology/tw-phrases.json\`). Re-running the generator overwrites
+ * \`db/terminology/tw-phrases.json\`). Re-running the generator overwrites
  * this file, so adjust the phrase list rather than editing copy here.
  */
 `;
@@ -58,21 +61,11 @@ export function render(source) {
   return HEADER + converted;
 }
 
-/** Relative paths of every markdown file under a content directory. */
-function markdownFiles(dir, base = dir) {
-  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) =>
-    entry.isDirectory()
-      ? markdownFiles(join(dir, entry.name), base)
-      : entry.name.endsWith('.md')
-        ? [relative(base, join(dir, entry.name))]
-        : []
-  );
-}
-
 const check = process.argv.includes('--check');
 const stale = [];
 let written = 0;
 
+/** File emit for the catalog: unchanged only when byte-identical. */
 const emit = (path, text) => {
   const current = (() => {
     try {
@@ -90,9 +83,36 @@ const emit = (path, text) => {
 };
 
 /**
+ * Markdown emit for the blog articles. Blank-line runs and line endings are
+ * ignored when deciding whether a file is out of date: the checked-in `.tw.md`
+ * files carry CRLF and an occasional extra blank line from the tooling that
+ * wrote them, and none of that changes what Markdown renders — comparing
+ * exactly flagged all 14 articles as "stale" while their text was already the
+ * derived one. A real content difference still rewrites the file (canonically,
+ * LF and collapsed).
+ */
+const emitMarkdown = (path, text) => {
+  const normalise = (value) => value.replace(/\r\n/g, '\n').trim().replace(/\n{2,}/g, '\n\n');
+  const current = (() => {
+    try {
+      return readFileSync(path, 'utf8');
+    } catch {
+      return null;
+    }
+  })();
+  if (current !== null && normalise(current) === normalise(text)) return;
+  stale.push(path.replace(ROOT, '.'));
+  if (!check) {
+    writeFileSync(path, text);
+    written++;
+  }
+};
+
+/**
  * Blog articles: `public/blog/<slug>/<slug>.md` gets a `<slug>.tw.md` sibling
  * (same directory, so the relative `./images/...` references keep resolving).
- * Only the article itself is derived — `images/` is language-neutral.
+ * Only the article itself is derived — `images/` is language-neutral. Articles
+ * stay on disk; only the guides/intros/pages moved into the database.
  */
 function blogArticles() {
   if (!existsSync(BLOG)) return [];
@@ -117,42 +137,102 @@ function twBlogArticle(text) {
     .replace(/^- \*\*百度百科\*\*：.*\n?/gm, '');
 }
 
+/** The tw document a zh document derives to. */
+function derive(zh) {
+  return {
+    title: toHant(zh.title),
+    summary: toHant(zh.summary),
+    updated: zh.updated,
+    body: toHant(zh.body),
+  };
+}
+
+/**
+ * Content documents: read every zh row, compare/upsert its tw counterpart on
+ * (kind, subject, locale='tw'). Reports rows that differ (or are missing) and,
+ * as a warning, tw rows whose zh source has been deleted — left alone rather
+ * than dropped, since only re-running the seed or a hand edit removes content.
+ */
+async function syncDocuments() {
+  const client = new pg.Client({ connectionString: databaseUrl() });
+  await client.connect();
+  try {
+    const { rows: zhRows } = await client.query(
+      `SELECT kind, subject, title, summary, updated::text AS updated, body
+         FROM content_documents WHERE locale = 'zh' ORDER BY kind, subject`
+    );
+    const { rows: twRows } = await client.query(
+      `SELECT id, kind, subject, title, summary, updated::text AS updated, body
+         FROM content_documents WHERE locale = 'tw'`
+    );
+    const twByKey = new Map(twRows.map((r) => [`${r.kind}|${r.subject}`, r]));
+    const zhKeys = new Set(zhRows.map((r) => `${r.kind}|${r.subject}`));
+
+    await client.query('BEGIN');
+    let changed = 0;
+    for (const zh of zhRows) {
+      const expected = derive(zh);
+      const current = twByKey.get(`${zh.kind}|${zh.subject}`);
+      const identical =
+        current &&
+        (current.title ?? null) === (expected.title ?? null) &&
+        (current.summary ?? null) === (expected.summary ?? null) &&
+        (current.updated ?? null) === (expected.updated ?? null) &&
+        current.body === expected.body;
+      if (identical) continue;
+      stale.push(`content_documents ${zh.kind} ${zh.subject} tw`);
+      changed++;
+      if (!check) {
+        await client.query(
+          `INSERT INTO content_documents (kind, subject, locale, title, summary, updated, body)
+           VALUES ($1, $2, 'tw', $3, $4, $5, $6)
+           ON CONFLICT (kind, subject, locale) DO UPDATE SET
+             title = EXCLUDED.title,
+             summary = EXCLUDED.summary,
+             updated = EXCLUDED.updated,
+             body = EXCLUDED.body,
+             updated_at = now()`,
+          [zh.kind, zh.subject, expected.title, expected.summary, expected.updated, expected.body]
+        );
+      }
+    }
+    await client.query(check ? 'ROLLBACK' : 'COMMIT');
+    written += changed;
+
+    const orphaned = twRows.filter((r) => !zhKeys.has(`${r.kind}|${r.subject}`));
+    if (orphaned.length) {
+      console.warn(
+        `note: ${orphaned.length} tw document(s) with no zh source (left alone): ` +
+          orphaned.slice(0, 5).map((r) => `${r.kind}:${r.subject}`).join(', ')
+      );
+    }
+    return { total: zhRows.length, changed };
+  } finally {
+    await client.end();
+  }
+}
+
 // The catalog is re-rendered rather than only transliterated, and `render()`
 // matches zh.ts's header and trailing type declaration with LF patterns — a
 // CRLF checkout would leave both in the output and emit a tw.ts that redeclares
-// `Messages`. The markdown below is read verbatim: toHant is line-ending
-// agnostic and the existing content/tw files are CRLF, so normalising there
-// would rewrite all 400 of them for nothing.
+// `Messages`.
 emit(TARGET, render(readFileSync(SOURCE, 'utf8').replace(/\r\n/g, '\n')));
-const sources = markdownFiles(CONTENT_SOURCE);
-for (const rel of sources) {
-  emit(join(CONTENT_TARGET, rel), toHant(readFileSync(join(CONTENT_SOURCE, rel), 'utf8')));
-}
 const articles = blogArticles();
 for (const rel of articles) {
-  emit(join(BLOG, rel.replace(/\.md$/, '.tw.md')), twBlogArticle(readFileSync(join(BLOG, rel), 'utf8')));
+  emitMarkdown(join(BLOG, rel.replace(/\.md$/, '.tw.md')), twBlogArticle(readFileSync(join(BLOG, rel), 'utf8')));
 }
-const orphans = (() => {
-  try {
-    return markdownFiles(CONTENT_TARGET).filter((rel) => !sources.includes(rel));
-  } catch {
-    return [];
-  }
-})();
+const documents = await syncDocuments();
 
-const total = sources.length + articles.length + 1;
+const total = documents.total + articles.length + 1;
 
 if (check) {
   if (stale.length) {
-    console.error(`${stale.length} file(s) out of date — run \`node scripts/build-hant.mjs\`:\n  ${stale.slice(0, 10).join('\n  ')}`);
+    console.error(`${stale.length} target(s) out of date — run \`node scripts/build-hant.mjs\`:\n  ${stale.slice(0, 30).join('\n  ')}`);
     process.exit(1);
   }
-  console.log(`tw is up to date (${total} files)`);
+  console.log(`tw is up to date (messages + ${documents.total} document(s) + ${articles.length} blog article)`);
 } else {
   console.log(
-    `wrote ${written} file(s) of ${total} checked (messages + ${sources.length} markdown + ${articles.length} blog article)`
+    `wrote ${written} target(s) of ${total} checked (messages + ${documents.total} document(s), ${documents.changed} changed + ${articles.length} blog article)`
   );
-}
-if (orphans.length) {
-  console.warn(`note: content/tw has ${orphans.length} file(s) with no content/zh source (left alone): ${orphans.slice(0, 5).join(', ')}`);
 }

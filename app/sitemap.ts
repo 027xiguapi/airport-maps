@@ -5,7 +5,7 @@ import {
   listBlogPosts,
   listBlogSlugs,
 } from '@/lib/blog';
-import { listPageSlugs, latestAirportGuideUpdated } from '@/lib/content';
+import { airportGuideUpdatedMap, listPageSlugs } from '@/lib/content';
 import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import {
   DEFAULT_LOCALE,
@@ -71,22 +71,28 @@ function localeEntries(
 
 /**
  * `<lastmod>` for an airport page: the newest of the airport record's
- * `updated_at` and any published guide's frontmatter date — the same value the
+ * `updated_at` and any published guide's revision date — the same value the
  * page reports as dateModified in its JSON-LD (see the airport page's
  * `publicationDates`). Reporting the record date alone understated pages whose
  * guide text was written later, which is exactly the freshness signal a crawler
- * uses to prioritise a refetch.
+ * uses to prioritise a refetch. `guideUpdated` is the whole directory's map
+ * (lib/content.ts), fetched once rather than per airport.
  */
-function airportLastModified(iata: string, recordUpdatedAt: string): Date {
-  const guideUpdated = latestAirportGuideUpdated(iata, PUBLISHED_LOCALES);
-  return new Date(
-    guideUpdated && guideUpdated > recordUpdatedAt ? guideUpdated : recordUpdatedAt
-  );
+function airportLastModified(
+  iata: string,
+  recordUpdatedAt: string,
+  guideUpdated: Map<string, string>
+): Date {
+  const guide = guideUpdated.get(iata);
+  return new Date(guide && guide > recordUpdatedAt ? guide : recordUpdatedAt);
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [airports, countries] = await Promise.all([getAirportRoutes(), getAllCountryCodes()]);
-  const staticPages = listPageSlugs(SOURCE_LOCALE);
+  const [staticPages, guideUpdated] = await Promise.all([
+    listPageSlugs(SOURCE_LOCALE),
+    airportGuideUpdatedMap(PUBLISHED_LOCALES),
+  ]);
   // Route maps exist for a subset of the directory only; publishing URLs for the
   // rest would just be a crawl of 404s.
   const withRoutes = new Set(routeAirportCodes());
@@ -140,7 +146,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       localeEntries(`/airport/${airport.iata}`, {
         changeFrequency: 'weekly',
         priority: 0.8,
-        lastModified: airportLastModified(airport.iata, airport.updated_at),
+        lastModified: airportLastModified(airport.iata, airport.updated_at, guideUpdated),
       })
     ),
     ...airports

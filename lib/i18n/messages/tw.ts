@@ -3,7 +3,7 @@ import type { Messages } from './zh';
 /**
  * Traditional Chinese (Taiwan) catalog, derived from `zh.ts` by
  * `scripts/build-hant.mjs` (OpenCC cn->twp plus the wording exceptions in
- * `content/terminology/tw-phrases.json`). Re-running the generator overwrites
+ * `db/terminology/tw-phrases.json`). Re-running the generator overwrites
  * this file, so adjust the phrase list rather than editing copy here.
  */
 export const tw: Messages = {
@@ -304,7 +304,7 @@ export const tw: Messages = {
     all: '全部國家',
     notFound: '國家不存在',
 
-    /** 機場介紹：由資料庫欄位拼出的概述，長文可另寫 content/<locale>/countries/<CC>.md */
+    /** 機場介紹：由資料庫欄位拼出的概述，長文放在 content_documents（kind='country'） */
     introKicker: 'Overview',
     introTitle: (name: string) => `${name}機場介紹`,
     introEn: 'Airport Overview',

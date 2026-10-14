@@ -132,9 +132,9 @@ const REGION_EN = {
  * `zh` is the editorial source language (see SOURCE_LOCALE in
  * lib/i18n/config.ts): its descriptions come from the legacy content and its
  * terminology needs no file. `en` is generated + looked up in
- * content/terminology/en.json. `tw` is *derived*: its columns are the Chinese
+ * db/terminology/en.json. `tw` is *derived*: its columns are the Chinese
  * source run through toHant()/toHantName() (OpenCC + the exceptions in
- * content/terminology/tw-phrases.json), so it needs no terminology file either.
+ * db/terminology/tw-phrases.json), so it needs no terminology file either.
  * Order here does not matter.
  */
 const SEED_LOCALES = ['zh', 'en', 'tw'];
@@ -147,15 +147,15 @@ const DERIVED_LOCALES = new Set(['tw']);
  * language and `tw` is derived from it, so neither needs a file.
  */
 function loadTerminology(locale) {
-  const path = join(ROOT, 'content', 'terminology', `${locale}.json`);
+  const path = join(ROOT, 'db', 'terminology', `${locale}.json`);
   if (locale === 'zh' || DERIVED_LOCALES.has(locale)) return null;
   if (!existsSync(path)) {
-    throw new Error(`missing terminology file: content/terminology/${locale}.json`);
+    throw new Error(`missing terminology file: db/terminology/${locale}.json`);
   }
   const data = JSON.parse(readFileSync(path, 'utf8'));
   for (const key of ['terminalNames', 'labels']) {
     if (!data[key] || typeof data[key] !== 'object') {
-      throw new Error(`content/terminology/${locale}.json is missing "${key}"`);
+      throw new Error(`db/terminology/${locale}.json is missing "${key}"`);
     }
   }
   return data;
@@ -338,7 +338,7 @@ for (const locale of SEED_LOCALES) {
 }
 if (missingTerms.length) {
   throw new Error(
-    `content/terminology/*.json is incomplete:\n  ${[...new Set(missingTerms)].join('\n  ')}`
+    `db/terminology/*.json is incomplete:\n  ${[...new Set(missingTerms)].join('\n  ')}`
   );
 }
 
@@ -556,7 +556,7 @@ const twLeftovers = [
 if (twLeftovers.length) {
   console.warn(
     `tw text still contains simplified characters: ${twLeftovers.join(' ')}` +
-      ' — add the word to content/terminology/tw-phrases.json'
+      ' — add the word to db/terminology/tw-phrases.json'
   );
 }
 

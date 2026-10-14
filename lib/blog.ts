@@ -8,8 +8,8 @@ import { LOCALE_META, SOURCE_LOCALE, localizedPath, type Locale } from './i18n/c
  * that can be dropped in from the publishing tool of the day and checked by
  * `scripts/check-blog.mjs`. The Markdown is read at build time; the images are
  * served straight out of `public/`, which is why they live there rather than in
- * `content/` (see lib/content.ts for the long-form guides that travel with the
- * build instead).
+ * the database with the long-form guides (lib/content.ts) — an article is a
+ * folder of images with text, not a single document.
  *
  *   public/blog/<slug>/<slug>.md      article: flat frontmatter + Markdown body
  *   public/blog/<slug>/<slug>.en.md   English version

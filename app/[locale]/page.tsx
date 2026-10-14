@@ -69,7 +69,7 @@ export default async function HomePage({ params }: Props) {
   if (!locale) notFound();
 
   const t = getMessages(locale);
-  const guidedCodes = listGuidedAirports(locale);
+  const guidedCodes = await listGuidedAirports(locale);
 
   const [stats, popularPool, recent, countries, airports, cityCount, regionCount, guided] =
     await Promise.all([

@@ -10,9 +10,9 @@ import { getPage } from '@/lib/content';
 /** Slugs available to the about / contact / sources / privacy / terms routes. */
 export type PageSlug = 'about' | 'contact' | 'sources' | 'privacy' | 'terms';
 
-/** Shared metadata for a Markdown page, driven by its frontmatter. */
+/** Shared metadata for a Markdown page, driven by its stored title/summary. */
 export async function contentPageMetadata(locale: Locale, slug: PageSlug): Promise<Metadata> {
-  const doc = getPage(locale, slug);
+  const doc = await getPage(locale, slug);
   if (!doc) return { title: getMessages(locale).error.notFoundTitle };
 
   return {
@@ -26,11 +26,12 @@ export async function contentPageMetadata(locale: Locale, slug: PageSlug): Promi
 }
 
 /**
- * Renders a static Markdown page from content/<locale>/pages/<slug>.md. Missing
- * translations fall back to the default locale (see lib/content.ts).
+ * Renders a static Markdown page from the `content_documents` store
+ * (kind='page'). Missing translations fall back to the default locale (see
+ * lib/content.ts).
  */
-export default function ContentPage({ locale, slug }: { locale: Locale; slug: PageSlug }) {
-  const doc = getPage(locale, slug);
+export default async function ContentPage({ locale, slug }: { locale: Locale; slug: PageSlug }) {
+  const doc = await getPage(locale, slug);
   if (!doc) notFound();
 
   const t = getMessages(locale);

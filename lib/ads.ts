@@ -62,6 +62,19 @@ export const ADSTERRA_RANGE: Record<AdsterraUnitId, { min: number; max?: number 
 /** Invocation host for the iframe-format units (Adsterra's /22/ path). */
 const BANNER_HOST = 'https://bauval.org';
 
+/**
+ * Hostnames that never serve ads: the dev server and anything only reachable
+ * from a private network (loopback, LAN ranges, mDNS `.local` / `.localhost`).
+ * An impression booked from here would be a fake one against the account, and
+ * an ad host asked for repeatedly from a host it has never served is what
+ * Adsterra's anti-fraud filter reacts to — it blacklists the client for a few
+ * minutes and answers 403. Tested against `window.location.hostname` in the
+ * banners (components/ads/AdsterraBanner.tsx), so `next dev` stays ad-free
+ * whether it is reached as localhost, by LAN address or by host name.
+ */
+export const DEV_HOST =
+  /^(localhost|127(\.\d+){3}|\[?::1\]?|10(\.\d+){3}|192\.168(\.\d+){2}|172\.(1[6-9]|2\d|3[01])(\.\d+){2}|[^.]*\.local|.*\.localhost)$/;
+
 /** The document loaded into a banner's ad iframe: Adsterra's two tags in order. */
 export function adsterraBannerSrcDoc(id: AdsterraUnitId): string {
   const { key, width, height } = ADSTERRA_UNITS[id];

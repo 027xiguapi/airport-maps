@@ -81,7 +81,7 @@ export default async function CountryPage({ params }: Props) {
     getCountries(locale),
   ]);
 
-  const intro = getCountryIntro(locale, country.code);
+  const intro = await getCountryIntro(locale, country.code);
   const national = getCountryAirports(country.code);
   const faqItems = buildCountryFaq(locale, country, airports, national);
   const terminalTotal = airports.reduce((sum, a) => sum + a.terminalCount, 0);

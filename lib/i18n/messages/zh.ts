@@ -302,7 +302,7 @@ export const zh = {
     all: '全部国家',
     notFound: '国家不存在',
 
-    /** 机场介绍：由数据库字段拼出的概述，长文可另写 content/<locale>/countries/<CC>.md */
+    /** 机场介绍：由数据库字段拼出的概述，长文放在 content_documents（kind='country'） */
     introKicker: 'Overview',
     introTitle: (name: string) => `${name}机场介绍`,
     introEn: 'Airport Overview',

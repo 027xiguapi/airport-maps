@@ -57,7 +57,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const pax = formatPax(airport.annualPaxM, locale);
   const distance = formatDistance(airport.distanceKm, locale);
-  const { published, modified } = publicationDates(airport, getAirportGuide(locale, airport.iata)?.updated);
+  const guide = await getAirportGuide(locale, airport.iata);
+  const { published, modified } = publicationDates(airport, guide?.updated);
   // Title is rendered at build/ISR time, so the year rolls over with revalidate.
   const title = t.common.latestAirportTitle(
     new Date().getFullYear(),
@@ -121,7 +122,7 @@ export default async function AirportPage({ params }: Props) {
 
   const [related, guide, routeMap] = await Promise.all([
     getRelatedAirports(locale, airport.countryCode, airport.iata, 6),
-    Promise.resolve(getAirportGuide(locale, airport.iata)),
+    getAirportGuide(locale, airport.iata),
     getAirportRouteMap(locale, airport.iata),
   ]);
 

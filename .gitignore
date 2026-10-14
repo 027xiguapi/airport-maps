@@ -27,6 +27,10 @@
 # downloaded map images (scripts/fetch-airport-images.mjs default output)
 /maps-import/
 
+# content-export default output — documents live in the database now, so an
+# exported tree dropped in the repo is a backup, never a commit candidate
+/content/
+
 # cached Overpass responses (scripts/generate-airport-maps.mjs scratch)
 /data/osm/
 

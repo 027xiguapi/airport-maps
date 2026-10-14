@@ -315,7 +315,7 @@ export const en: Messages = {
     notFound: 'Country not found',
 
     /** Airport overview: assembled from database fields; a longer article can
-        live in content/<locale>/countries/<CC>.md */
+        live in the content_documents store (kind='country') */
     introKicker: 'Overview',
     introTitle: (name: string) => `${name} airport overview`,
     introEn: 'Airport Overview',

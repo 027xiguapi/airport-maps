@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import {
   ADSTERRA_RANGE,
   ADSTERRA_UNITS,
+  DEV_HOST,
   adsterraBannerSrcDoc,
   type AdsterraUnitId,
 } from '@/lib/ads';
@@ -32,6 +33,7 @@ export default function AdsterraBanner({
   const [live, setLive] = useState(false);
 
   useEffect(() => {
+    if (DEV_HOST.test(window.location.hostname)) return;
     const query = window.matchMedia(
       `(min-width: ${min}px)${max ? ` and (max-width: ${max}px)` : ''}`
     );

@@ -9,8 +9,8 @@ import type { AirportSummary, Country } from '@/lib/types';
  * Airport overview: the scale of the country's airports, its largest hub and
  * the cities they serve. The opening paragraph is assembled from database
  * fields so the section renders for every country; the optional article from
- * content/<locale>/countries/<CC>.md is appended to it in the same prose
- * column, which keeps paragraph spacing and the `.md` typography uniform.
+ * the content_documents store (kind='country') is appended to it in the same
+ * prose column, which keeps paragraph spacing and the `.md` typography uniform.
  *
  * `airports` arrives ordered by annual passengers (see getAirportsByCountry),
  * so the first entry with a figure is the busiest.

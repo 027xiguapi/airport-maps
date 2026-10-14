@@ -1,7 +1,7 @@
 /**
  * Simplified → Traditional (Taiwan) conversion, shared by the seed and the `tw`
- * catalog generator. `content/terminology/tw-phrases.json` holds the two
- * exception lists; both are applied here, in this order:
+ * catalog generator. `db/terminology/tw-phrases.json` holds the two exception
+ * lists; both are applied here, in this order:
  *
  *   1. `phrases` — Taiwan wording OpenCC would not produce on its own
  *      (希思罗 → 希斯洛, 悉尼 → 雪梨). Applied to the simplified source, longest
@@ -19,7 +19,7 @@ import opencc from 'opencc-js';
 import { ROOT } from './_env.mjs';
 
 const { phrases, corrections } = JSON.parse(
-  readFileSync(join(ROOT, 'content', 'terminology', 'tw-phrases.json'), 'utf8')
+  readFileSync(join(ROOT, 'db', 'terminology', 'tw-phrases.json'), 'utf8')
 );
 
 const PHRASE_ENTRIES = Object.entries(phrases).sort((a, b) => b[0].length - a[0].length);

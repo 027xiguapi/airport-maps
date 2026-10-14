@@ -1,175 +1,151 @@
-import { readFileSync, existsSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
+import { query } from './db';
 import { SOURCE_LOCALE, type Locale } from './i18n/config';
 
 /**
- * Markdown content store. Long-form editorial text lives on disk under
- * `content/<locale>/` (versioned, reviewable); structured airport data lives in
- * PostgreSQL. Both render through the same Markdown component.
+ * Long-form editorial Markdown — airport guides, country introductions and the
+ * static pages — read from the `content_documents` table (db/schema.ts), one
+ * row per (kind, subject, locale):
  *
- *   content/<locale>/airports/<IATA>.md   optional long-form airport guide
- *   content/<locale>/countries/<CC>.md    optional long-form country introduction
- *   content/<locale>/pages/<slug>.md      static pages (about, privacy, terms)
+ *   kind='airport'  subject=IATA       optional long-form airport guide
+ *   kind='country'  subject=ISO code   optional long-form country introduction
+ *   kind='page'     subject=page slug  static pages (about, privacy, terms)
  *
- * Every path is built inline from `process.cwd()` so the bundler can statically
- * scope file tracing to the `content` directory instead of the whole project.
+ * The documents used to live on disk under `content/<locale>/`; they were moved
+ * into the database so adding a language is an insert rather than a directory of
+ * new files. Both representations meet in `scripts/content-import.mjs` /
+ * `scripts/content-export.mjs` (file naming and frontmatter live in
+ * scripts/content-md.mjs), and `tw` is derived from the Chinese source by
+ * `scripts/build-hant.mjs`.
+ *
+ * Every reader falls back to the authored source language when the requested
+ * locale has no row — the same chain the file readers used, so a missing
+ * translation never blanks a section.
  */
 
 export type MarkdownDoc = {
-  /** Frontmatter `title`, when present. */
+  /** `title` column — page heading and metadata title. */
   title?: string;
-  /** Frontmatter `summary` — used as the meta description. */
+  /** `summary` column — used as the meta description. */
   summary?: string;
-  /** Frontmatter `updated` (ISO date), when present. */
+  /** `updated` column (ISO date), the editorial revision date. */
   updated?: string;
-  /** Markdown body with frontmatter stripped. */
+  /** Markdown body. */
   body: string;
 };
 
+export type ContentKind = 'airport' | 'country' | 'page';
+
+type DocumentRow = {
+  title: string | null;
+  summary: string | null;
+  updated: string | null;
+  body: string;
+};
+
+/** Columns every document query returns, with `updated` formatted in SQL. */
+const DOCUMENT_COLUMNS = 'title, summary, updated::text AS updated, body';
+
 /**
- * Splits a leading `---` frontmatter block from the body. Values are flat
- * `key: value` pairs — deliberately not a YAML parser, so nothing silently
- * acquires structure it was not meant to have.
+ * `date` comes back from the pg driver as a JS Date; formatting it in SQL keeps
+ * it the plain `YYYY-MM-DD` string the frontmatter held, with no timezone shift.
  */
-function parseFrontmatter(raw: string): MarkdownDoc {
-  const normalised = raw.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n');
-  const match = /^---\n([\s\S]*?)\n---\n?/.exec(normalised);
-
-  if (!match) return { body: normalised.trim() };
-
-  const meta: Record<string, string> = {};
-  for (const line of match[1].split('\n')) {
-    const trimmed = line.trim();
-    if (!trimmed || trimmed.startsWith('#')) continue;
-    const separator = trimmed.indexOf(':');
-    if (separator < 0) continue;
-    const key = trimmed.slice(0, separator).trim();
-    let value = trimmed.slice(separator + 1).trim();
-    if (
-      (value.startsWith('"') && value.endsWith('"')) ||
-      (value.startsWith("'") && value.endsWith("'"))
-    ) {
-      value = value.slice(1, -1);
-    }
-    meta[key] = value;
-  }
-
+function toDoc(row: DocumentRow): MarkdownDoc {
   return {
-    title: meta.title,
-    summary: meta.summary,
-    updated: meta.updated,
-    body: normalised.slice(match[0].length).trim(),
+    title: row.title ?? undefined,
+    summary: row.summary ?? undefined,
+    updated: row.updated ?? undefined,
+    body: row.body,
   };
 }
 
-function readMarkdown(...segments: string[]): MarkdownDoc | null {
-  const path = join(process.cwd(), 'content', ...segments);
-  if (!existsSync(path)) return null;
-  return parseFrontmatter(readFileSync(path, 'utf8'));
+/** Requested locale first, then the authored source — first match wins. */
+function localeChain(locale: Locale): Locale[] {
+  return locale === SOURCE_LOCALE ? [locale] : [locale, SOURCE_LOCALE];
 }
 
-/**
- * Windows reserves the DOS device names (CON, PRN, AUX, NUL), so a file named
- * `AUX.md` cannot be indexed by git from a Windows checkout — the same
- * constraint that gives the AUX cover its `AUX_.png` name (see
- * scripts/map-file-aliases.json). Guide files for such codes carry a trailing
- * underscore on disk; these two helpers map code ↔ file name.
- */
-const RESERVED_DEVICE_NAMES = new Set(['CON', 'PRN', 'AUX', 'NUL']);
-
-function guideFileName(code: string): string {
-  return `${RESERVED_DEVICE_NAMES.has(code) ? `${code}_` : code}.md`;
-}
-
-function guideFileCode(fileName: string): string {
-  const stem = fileName.slice(0, -3);
-  return stem.endsWith('_') && RESERVED_DEVICE_NAMES.has(stem.slice(0, -1))
-    ? stem.slice(0, -1)
-    : stem;
+/** One document in the best available language, or null when none exists. */
+async function getDocument(
+  kind: ContentKind,
+  locale: Locale,
+  subject: string
+): Promise<MarkdownDoc | null> {
+  const chain = localeChain(locale);
+  const rows = await query<DocumentRow>(
+    `SELECT ${DOCUMENT_COLUMNS}
+       FROM content_documents
+      WHERE kind = $1 AND subject = $2 AND locale = ANY($3)
+      ORDER BY array_position($3::text[], locale)
+      LIMIT 1`,
+    [kind, subject, chain]
+  );
+  return rows[0] ? toDoc(rows[0]) : null;
 }
 
 /** Long-form guide for an airport, falling back to the source language. */
-export function getAirportGuide(locale: Locale, iata: string): MarkdownDoc | null {
-  const file = guideFileName(iata.toUpperCase());
-  return (
-    readMarkdown(locale, 'airports', file) ??
-    readMarkdown(SOURCE_LOCALE, 'airports', file)
-  );
+export function getAirportGuide(locale: Locale, iata: string): Promise<MarkdownDoc | null> {
+  return getDocument('airport', locale, iata.toUpperCase());
 }
 
 /**
- * Newest frontmatter `updated` date among the given locales' guides for an
- * airport, or undefined when no guide carries one. All guide dates are
- * `YYYY-MM-DD`, so a lexicographic max is the chronological one. The airport
- * page folds this into its JSON-LD dateModified; the sitemap uses the same
- * value for `<lastmod>` so both surfaces report the same freshness.
+ * Newest `updated` date per airport among the given locales' guides, as a map
+ * keyed by IATA. The sitemap needs this for every airport at once — asking
+ * per-airport would be 363 round trips for the same rows.
  */
-export function latestAirportGuideUpdated(
-  iata: string,
+export async function airportGuideUpdatedMap(
   locales: readonly Locale[]
-): string | undefined {
-  let latest: string | undefined;
-  for (const locale of locales) {
-    const updated = getAirportGuide(locale, iata)?.updated;
-    if (updated && (!latest || updated > latest)) latest = updated;
-  }
-  return latest;
+): Promise<Map<string, string>> {
+  const rows = await query<{ subject: string; updated: string }>(
+    `SELECT subject, max(updated)::text AS updated
+       FROM content_documents
+      WHERE kind = 'airport' AND locale = ANY($1)
+      GROUP BY subject`,
+    [locales]
+  );
+  return new Map(rows.map((row) => [row.subject, row.updated]));
 }
 
 /**
  * Long-form introduction for a country page, falling back to the source
  * language. Optional: the country page always renders a data-derived overview,
- * and this article is appended to it when the file exists.
+ * and this article is appended to it when a row exists.
  */
-export function getCountryIntro(locale: Locale, code: string): MarkdownDoc | null {
+export function getCountryIntro(locale: Locale, code: string): Promise<MarkdownDoc | null> {
   const cc = code.toUpperCase();
-  if (!/^[A-Z]{2}$/.test(cc)) return null;
-  return (
-    readMarkdown(locale, 'countries', `${cc}.md`) ??
-    readMarkdown(SOURCE_LOCALE, 'countries', `${cc}.md`)
-  );
+  if (!/^[A-Z]{2}$/.test(cc)) return Promise.resolve(null);
+  return getDocument('country', locale, cc);
 }
 
-/** Slugs of every static page available in a locale (or its fallback). */
-export function listPageSlugs(locale: Locale): string[] {
-  const slugs = new Set<string>();
-  for (const dir of [locale, SOURCE_LOCALE]) {
-    const path = join(process.cwd(), 'content', dir, 'pages');
-    if (!existsSync(path)) continue;
-    for (const file of readdirSync(path)) {
-      if (file.endsWith('.md')) slugs.add(file.slice(0, -3));
-    }
-  }
-  return [...slugs].sort();
+/**
+ * Slugs of every static page available in a locale (or its fallback). Pages are
+ * authored per locale, so a page that exists in one language and not another
+ * would 404 there — the union of the locale and its source is what routes are
+ * generated from.
+ */
+export async function listPageSlugs(locale: Locale): Promise<string[]> {
+  const rows = await query<{ subject: string }>(
+    `SELECT DISTINCT subject
+       FROM content_documents
+      WHERE kind = 'page' AND locale = ANY($1)
+      ORDER BY subject`,
+    [localeChain(locale)]
+  );
+  return rows.map((row) => row.subject);
 }
 
 /** A static Markdown page such as about / privacy / terms. */
-export function getPage(locale: Locale, slug: string): MarkdownDoc | null {
-  if (!/^[a-z0-9-]+$/.test(slug)) return null;
-  return (
-    readMarkdown(locale, 'pages', `${slug}.md`) ??
-    readMarkdown(SOURCE_LOCALE, 'pages', `${slug}.md`)
-  );
+export function getPage(locale: Locale, slug: string): Promise<MarkdownDoc | null> {
+  if (!/^[a-z0-9-]+$/.test(slug)) return Promise.resolve(null);
+  return getDocument('page', locale, slug);
 }
 
-/** IATA codes that have a guide, used to decide whether to link one. */
-export function hasAirportGuide(iata: string): boolean {
-  const file = guideFileName(iata.toUpperCase());
-  return (
-    existsSync(join(process.cwd(), 'content', SOURCE_LOCALE, 'airports', file)) ||
-    existsSync(join(process.cwd(), 'content', 'en', 'airports', file))
+/** IATA codes that have a guide in this locale (or its source fallback). */
+export async function listGuidedAirports(locale: Locale): Promise<string[]> {
+  const rows = await query<{ subject: string }>(
+    `SELECT DISTINCT subject
+       FROM content_documents
+      WHERE kind = 'airport' AND locale = ANY($1)
+      ORDER BY subject`,
+    [localeChain(locale)]
   );
-}
-
-/** IATA codes that have a guide in this locale, newest-first is not meaningful — sorted by code. */
-export function listGuidedAirports(locale: Locale): string[] {
-  const codes = new Set<string>();
-  for (const dir of [locale, SOURCE_LOCALE]) {
-    const path = join(process.cwd(), 'content', dir, 'airports');
-    if (!existsSync(path)) continue;
-    for (const file of readdirSync(path)) {
-      if (file.endsWith('.md')) codes.add(guideFileCode(file).toUpperCase());
-    }
-  }
-  return [...codes].sort();
+  return rows.map((row) => row.subject);
 }

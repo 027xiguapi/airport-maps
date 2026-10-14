@@ -1,9 +1,12 @@
 /**
- * Writes starter guides (content/{zh,en}/airports/<IATA>.md) for airports that
- * have a database row but no guide yet — today the 303 directory-batch fields.
+ * Writes starter guides for airports that have a database row but no guide yet
+ * — today the 303 directory-batch fields. Guides live in the `content_documents`
+ * table (db/schema.ts), one row per (kind='airport', subject=IATA, locale), so
+ * this script writes rows rather than files; `node scripts/content-export.mjs`
+ * turns them back into a `.md` tree if one is ever needed.
  *
- * The existing 60 curated guides are hand-written editorial; this script never
- * touches them (it skips any airport whose zh OR en file already exists), and it
+ * The existing curated guides are hand-written editorial; this script never
+ * touches them (it skips any airport whose zh OR en row already exists), and it
  * deliberately does not invent facts: everything it writes comes from the repo's
  * own data — codes, names, airport class, coordinates, the OpenFlights route
  * dump (data/airport-routes.json, 2014-06) and the nearest-airport calculation
@@ -14,17 +17,18 @@
  * Usage:
  *   node scripts/generate-airport-guides.mjs            write what is missing
  *   node scripts/generate-airport-guides.mjs --dry-run  report only
- *   node scripts/generate-airport-guides.mjs --refresh  re-render the files this
+ *   node scripts/generate-airport-guides.mjs --refresh  re-render the guides this
  *                                                       script previously wrote
  *                                                       (hand-written guides are
  *                                                       still never touched)
  *   node scripts/generate-airport-guides.mjs --codes AAL,AAR   restrict
  *
- * Afterwards run `node scripts/build-hant.mjs` so content/tw follows.
+ * Afterwards run `node scripts/build-hant.mjs` so the derived tw rows follow.
  */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { ROOT } from './_env.mjs';
+import pg from 'pg';
+import { databaseUrl, ROOT } from './_env.mjs';
 
 const DRY = process.argv.includes('--dry-run');
 const REFRESH = process.argv.includes('--refresh');
@@ -139,16 +143,11 @@ const fmtKm = (km) => (km >= 100 ? Math.round(km) : Math.round(km * 10) / 10);
 const airlineNames = (codes) =>
   codes.slice(0, 2).map((c) => routes.airlines[c] ?? c).join('、');
 
+/** Returns the stored document shape: { title, summary, updated, body }. */
 function zhGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
+  const title = `${a.name}指南`;
+  const summary = `${a.name}（${a.iata}）位于${country.name}${a.city}，是一座${kind.zh}。本页汇总它的机场地图、直飞航线与附近机场，并说明哪些信息还需以航司与机场公布为准。`;
   const lines = [];
-  lines.push('---');
-  lines.push(`title: ${a.name}指南`);
-  lines.push(
-    `summary: ${a.name}（${a.iata}）位于${country.name}${a.city}，是一座${kind.zh}。本页汇总它的机场地图、直飞航线与附近机场，并说明哪些信息还需以航司与机场公布为准。`
-  );
-  lines.push('updated: 2026-10-11');
-  lines.push('---');
-  lines.push('');
   lines.push(
     `${a.name}（IATA 代码 **${a.iata}**${a.icao ? `，ICAO 代码 ${a.icao}` : ''}）服务于${country.name}${a.city}，按规模分类是一座${kind.zh}。本页把分散在数据库、地图与航线数据集中的信息整理成一页，方便你在订票前后快速核对。`
   );
@@ -233,22 +232,16 @@ function zhGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   }
   lines.push('- 用页面顶部的搜索框可以直接比较其他机场：输入城市名或 IATA 代码即可查看附近的替代选择。');
   lines.push('- 旺季（节假日、大型活动期间）小机场的停车位与租车辆也紧张，如需自驾建议提前预订。');
-  lines.push('');
-  return lines.join('\n');
+  return { title, summary, updated: '2026-10-11', body: lines.join('\n').trim() };
 }
 
+/** Returns the stored document shape: { title, summary, updated, body }. */
 function enGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   const region = country.region ? REGION_EN[country.region] ?? '' : '';
   const cityEn = a.cityEn ?? a.city;
+  const title = `${a.nameEn} Guide`;
+  const summary = `${a.nameEn} (${a.iata}) serves ${cityEn}, ${country.nameEn} as a ${kind.en}. Maps, direct routes, nearby airports and what still needs to be confirmed with the airline.`;
   const lines = [];
-  lines.push('---');
-  lines.push(`title: ${a.nameEn} Guide`);
-  lines.push(
-    `summary: ${a.nameEn} (${a.iata}) serves ${cityEn}, ${country.nameEn} as a ${kind.en}. Maps, direct routes, nearby airports and what still needs to be confirmed with the airline.`
-  );
-  lines.push('updated: 2026-10-11');
-  lines.push('---');
-  lines.push('');
   lines.push(
     `${a.nameEn} (IATA **${a.iata}**${a.icao ? `, ICAO ${a.icao}` : ''}) serves ${cityEn}, ${country.nameEn}${region ? `, ${region}` : ''}, and is classified as a ${kind.en}. This page gathers what the site's database, maps and route dataset say about it in one place.`
   );
@@ -331,52 +324,71 @@ function enGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   }
   lines.push('- Use the search box at the top of the page to compare alternatives: type a city name or IATA code.');
   lines.push('- In peak season parking and rental cars run short at small fields too — book ahead if you are driving.');
-  lines.push('');
-  return lines.join('\n');
+  return { title, summary, updated: '2026-10-11', body: lines.join('\n').trim() };
 }
 
 // ----------------------------------------------------------------------- run
-const zhDir = join(ROOT, 'content', 'zh', 'airports');
-const enDir = join(ROOT, 'content', 'en', 'airports');
-mkdirSync(zhDir, { recursive: true });
-mkdirSync(enDir, { recursive: true });
-
-/** Windows DOS device names cannot be git-indexed as `AUX.md`; the content file
-    carries a trailing underscore, mirroring the cover file convention
-    (scripts/map-file-aliases.json) and lib/content.ts's guideFileName(). */
-const RESERVED = new Set(['CON', 'PRN', 'AUX', 'NUL']);
-const mdName = (code) => `${RESERVED.has(code) ? `${code}_` : code}.md`;
-
 /**
- * A file this generator produced: its intro sentence is the stable marker.
+ * A guide this generator produced: its intro sentence is the stable marker.
  * Anything without it — the hand-written guides — is never overwritten, even
  * under --refresh, so re-rendering the template cannot destroy editorial work.
  */
 const GENERATED_MARKER = '本页把分散在数据库';
+
+const client = new pg.Client({ connectionString: databaseUrl() });
+await client.connect();
+
+const { rows: existing } = await client.query(
+  `SELECT subject, locale, body FROM content_documents WHERE kind = 'airport' AND locale = ANY($1)`,
+  [['zh', 'en']]
+);
+const stored = new Map(existing.map((row) => [`${row.subject}|${row.locale}`, row.body]));
+const present = (code) => stored.has(`${code}|zh`) || stored.has(`${code}|en`);
 const generated = (code) =>
-  [join(zhDir, mdName(code)), join(enDir, mdName(code))].some(
-    (file) => existsSync(file) && readFileSync(file, 'utf8').includes(GENERATED_MARKER)
+  [stored.get(`${code}|zh`), stored.get(`${code}|en`)].some(
+    (body) => body !== undefined && body.includes(GENERATED_MARKER)
   );
 
 const all = [...airports.keys()].sort();
 const targets = all.filter((code) => {
   if (editorialIatas.has(code)) return false; // curated guides are hand-written
-  const present = existsSync(join(zhDir, mdName(code))) || existsSync(join(enDir, mdName(code)));
-  if (present && !(REFRESH && generated(code))) return false;
+  if (present(code) && !(REFRESH && generated(code))) return false;
   return !ONLY || ONLY.includes(code);
 });
 
 console.log(`${targets.length} airport(s) need guides${DRY ? ' (dry run)' : ''}`);
 if (DRY) {
   console.log(targets.join(' '));
+  await client.end();
   process.exit(0);
 }
 
+const upsert = `
+  INSERT INTO content_documents (kind, subject, locale, title, summary, updated, body)
+  VALUES ('airport', $1, $2, $3, $4, $5, $6)
+  ON CONFLICT (kind, subject, locale) DO UPDATE SET
+    title = EXCLUDED.title,
+    summary = EXCLUDED.summary,
+    updated = EXCLUDED.updated,
+    body = EXCLUDED.body,
+    updated_at = now()`;
+
 let written = 0;
-for (const code of targets) {
-  const data = guideData(code);
-  writeFileSync(join(zhDir, mdName(code)), zhGuide(data) + '\n');
-  writeFileSync(join(enDir, mdName(code)), enGuide(data) + '\n');
-  written++;
+try {
+  await client.query('BEGIN');
+  for (const code of targets) {
+    const data = guideData(code);
+    const zh = zhGuide(data);
+    const en = enGuide(data);
+    await client.query(upsert, [code, 'zh', zh.title, zh.summary, zh.updated, zh.body]);
+    await client.query(upsert, [code, 'en', en.title, en.summary, en.updated, en.body]);
+    written++;
+  }
+  await client.query('COMMIT');
+} catch (err) {
+  await client.query('ROLLBACK').catch(() => {});
+  throw err;
+} finally {
+  await client.end();
 }
 console.log(`wrote ${written} guide pair(s) — now run: node scripts/build-hant.mjs`);
