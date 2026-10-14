@@ -10,6 +10,7 @@ import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { localizedPath } from '@/lib/i18n/config';
 import { getAirportGuide } from '@/lib/content';
 import { getAirportByCode, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
+import { getAirportFacts } from '@/lib/airport-facts';
 import { getAirportGeo } from '@/lib/airport-geo';
 import { getAirportRouteMap } from '@/lib/routes';
 import { routeImageUrl } from '@/lib/route-images';
@@ -127,6 +128,15 @@ export default async function AirportPage({ params }: Props) {
   ]);
 
   const geo = getAirportGeo(airport.iata);
+  const facts = getAirportFacts(airport.iata);
+  // Coordinates power the location map and the FAQ/service details that do not
+  // need a timezone: hand-checked values first, the compiled facts otherwise.
+  // The time section still requires the hand-checked timezone.
+  const coords = geo
+    ? { lat: geo.lat, lng: geo.lng }
+    : facts?.lat != null && facts.lng != null
+      ? { lat: facts.lat, lng: facts.lng }
+      : null;
   const faqItems = buildFaq(locale, airport, formatDistance(airport.distanceKm, locale), geo?.tz ?? null);
   const { published, modified } = publicationDates(airport, guide?.updated);
   const mapImg = mapImageUrl(airport.iata);
@@ -147,7 +157,7 @@ export default async function AirportPage({ params }: Props) {
     ...(routeMap ? [{ id: 'airport-routes', label: t.toc.routes }] : []),
     { id: 'airport-details', label: t.toc.details },
     { id: 'related-links', label: t.toc.links },
-    ...(geo ? [{ id: 'location-map', label: t.toc.location }] : []),
+    ...(coords ? [{ id: 'location-map', label: t.toc.location }] : []),
     ...(guide ? [{ id: 'guide', label: t.toc.guide }] : []),
     ...(airport.terminals.length > 0 ? [{ id: 'terminals', label: t.toc.terminals }] : []),
     ...(airport.transit.length > 0 ? [{ id: 'transport', label: t.toc.transport }] : []),
@@ -206,7 +216,12 @@ export default async function AirportPage({ params }: Props) {
             />
           )}
 
-          <AirportDetailsSection locale={locale} airport={airport} geo={geo} />
+          <AirportDetailsSection
+            locale={locale}
+            airport={airport}
+            coords={coords}
+            tz={geo?.tz ?? null}
+          />
 
           <RelatedLinks
             locale={locale}
@@ -218,7 +233,7 @@ export default async function AirportPage({ params }: Props) {
             website={airportWebsite(airport.iata)}
           />
 
-          {geo && <LocationMapSection locale={locale} airportName={airport.name} geo={geo} />}
+          {coords && <LocationMapSection locale={locale} airportName={airport.name} geo={coords} />}
 
           {guide && <GuideSection locale={locale} guide={guide} />}
 

@@ -1247,6 +1247,20 @@ html[data-theme="dark"] {
     @apply mt-2.5 flex flex-wrap gap-2.5;
   }
   /* `.ext-btn` became the shadcn Button (variant=outline). */
+  /* 具名来源引用行，紧随相关链接按钮：Answer-First 审计要求「具名来源 + 出站
+     链接」，与 schema WebPage.citation 引用同一组来源。 */
+  .ap-sources {
+    @apply mt-4 text-[13px] leading-[1.7] text-ink-soft;
+  }
+  .ap-sources a {
+    @apply font-medium text-sky-600 underline underline-offset-2;
+  }
+  .ap-sources a:hover {
+    @apply text-sky-700;
+  }
+  .ap-sources .sep {
+    @apply mx-1 opacity-55;
+  }
 
   /* ---------- 工具页表单 ---------- */
   /* Shared form controls for the /tool client components; mirrors the

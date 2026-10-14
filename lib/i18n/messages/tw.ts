@@ -6,6 +6,14 @@ import type { Messages } from './zh';
  * `db/terminology/tw-phrases.json`). Re-running the generator overwrites
  * this file, so adjust the phrase list rather than editing copy here.
  */
+/** Airport class wording for the lead sentence (schema.org's airport type). */
+const AIRPORT_KIND = {
+  large: '大型機場',
+  medium: '中型機場',
+  small: '小型機場',
+  heliport: '直升機場',
+} as const;
+
 export const tw: Messages = {
   site: {
     name: '全球機場地圖',
@@ -87,14 +95,14 @@ export const tw: Messages = {
 
   search: {
     ariaLabel: '搜尋機場',
-    placeholder: '搜尋機場、城市或 IATA 程式碼',
-    heroPlaceholder: '搜尋機場名稱、城市或 IATA 程式碼，如 PEK / 杜拜 / 希斯洛',
+    placeholder: '搜尋機場、城市或 IATA 代碼',
+    heroPlaceholder: '搜尋機場名稱、城市或 IATA 代碼，如 PEK / 杜拜 / 希斯洛',
     submit: '尋找機場',
     loading: '搜尋中…',
     empty: '未找到匹配的機場',
     resultsTitle: (term: string) => `“${term}” 的搜尋結果`,
     resultsCount: (n: number) => `共找到 ${n} 座匹配的機場。`,
-    noResults: '沒有找到匹配的機場，請嘗試其他關鍵詞，例如城市名或 IATA 程式碼。',
+    noResults: '沒有找到匹配的機場，請嘗試其他關鍵詞，例如城市名或 IATA 代碼。',
     noResultsHint: '沒有找到想要的機場？',
     viewAll: (n: number) => `檢視全部 ${n} 座機場`,
     orBrowseByCountry: '按國家瀏覽',
@@ -251,14 +259,14 @@ export const tw: Messages = {
   },
 
   filters: {
-    searchPlaceholder: '搜尋機場、城市或 IATA 程式碼',
+    searchPlaceholder: '搜尋機場、城市或 IATA 代碼',
     submit: '搜尋',
     country: '國家',
     all: '全部',
     sort: '排序',
     sortPax: '旅客量',
     sortName: '名稱',
-    sortIata: 'IATA 程式碼',
+    sortIata: 'IATA 代碼',
     sortUpdated: '更新時間',
     /**
      * `?country=` / `?sort=` 檢視（可被索引）的標題與描述：寫明它們與乾淨目錄頁、
@@ -377,7 +385,7 @@ export const tw: Messages = {
         `${name}的機場合計 ${terminals}、${gates}：${list}。`,
       cities: (name: string) => `${name}的機場分佈在哪些城市？`,
       citiesAnswer: (name: string, cities: string) =>
-        `本站收錄的${name}機場位於${cities}等城市，可按城市或 IATA 程式碼在機場目錄中篩選。`,
+        `本站收錄的${name}機場位於${cities}等城市，可按城市或 IATA 代碼在機場目錄中篩選。`,
       maps: (name: string) => `${name}的機場有航廈地圖嗎？`,
       mapsAnswer: (name: string, count: string) =>
         `有。本站為${name}收錄的 ${count}都繪製了航廈平面示意圖，標註航廈位置、閘口範圍、主要航司與地面交通方式，點選任意機場即可檢視。`,
@@ -406,30 +414,39 @@ export const tw: Messages = {
       }${o.pax ? `，年旅客量${o.pax}` : ''}${o.distance ? `，距市中心約 ${o.distance}` : ''}。${
         o.terminals
           ? '檢視航廈地圖、閘口分佈與地面交通方式。'
-          : '檢視機場位置地圖、程式碼與出行資訊。'
+          : '檢視機場位置地圖、代碼與出行資訊。'
       }`,
     /**
      * 首屏一句話答案：渲染在機場頁 H1 正下方，用完整句子直接回答
-     * "幾座航廈 / 多少個閘口 / 在哪裡"。這兩族查詢佔站內展示的一半以上，
-     * 此前答案只存在於摺疊的 FAQ 面板裡。
+     * "這是哪座機場 / 在哪裡 / 幾座航廈 / 多少個閘口"。前兩族查詢佔站內
+     * 展示的一半以上，此前答案只存在於摺疊的 FAQ 面板裡。
+     * kind / icao 來自 lib/airport-facts.json；city 與 country 相同（新加坡等）
+     * 時只保留一次，避免"位於新加坡新加坡"。
      */
     quickAnswer: (o: {
       name: string;
       iata: string;
+      icao: string | null;
+      kind: 'large' | 'medium' | 'small' | 'heliport' | null;
+      city: string;
+      country: string;
       terminals: number;
       gates: number;
-      city: string;
       distance: string;
-    }) =>
-      o.terminals > 0
-        ? `${o.name}（${o.iata}）共有 ${o.terminals} 座航廈${
+    }) => {
+      const where = o.city === o.country ? o.city : `${o.country}${o.city}`;
+      const kind = o.kind ? AIRPORT_KIND[o.kind] : '機場';
+      const head = `${o.name}（IATA: ${o.iata}${o.icao ? `，ICAO: ${o.icao}` : ''}）是位於${where}的${kind}`;
+      return o.terminals > 0
+        ? `${head}，共有 ${o.terminals} 座航廈${
             o.gates > 0 ? `、${o.gates} 個閘口` : ''
           }${o.distance ? `，距${o.city}市中心約 ${o.distance}` : ''}。`
-        : `${o.name}（${o.iata}）位於${o.city}，可在下方檢視位置地圖、機場程式碼與出行資訊。`,
+        : `${head}。`;
+    },
     mapTitle: (iata: string) => `${iata} · 航廈平面示意圖`,
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} 機場航廈地圖 — 閘口與導航`,
-    /** 航廈地圖圖片的 alt：補上機場全稱與程式碼，上方的小標題只有程式碼。 */
+    /** 航廈地圖圖片的 alt：補上機場全稱與代碼，上方的小標題只有代碼。 */
     mapAlt: (name: string, iata: string) =>
       `${name}（${iata}）航廈地圖，含各航廈、閘口與指廊分佈`,
     realMapNote: 'TERMINAL MAP',
@@ -453,7 +470,7 @@ export const tw: Messages = {
     infoKicker: 'Info',
     infoTitle: '機場資訊與詳情',
     infoEn: 'Airport Details',
-    infoIata: '機場 IATA 程式碼',
+    infoIata: '機場 IATA 代碼',
     infoLocation: '機場位置',
     infoCoords: '地理座標',
     infoTimezone: '時區',
@@ -465,6 +482,11 @@ export const tw: Messages = {
     officialSite: '機場官網',
     wikiLabel: '維基百科',
     baikeLabel: '百度百科',
+    /** 連結按鈕下方的具名來源引用（Answer-First 審計要求的外鏈引用）。 */
+    sourcesLabel: '資料來源：',
+    sourcesWikipedia: '維基百科',
+    sourcesOurAirports: 'OurAirports 開放資料',
+    sourcesNote: '機場代碼、座標與規模等基礎資料整理自開放資料；頁面資訊以機場官方網站為準。',
     mapEmbedKicker: 'Map',
     mapEmbedTitle: (name: string) => `${name}互動地圖 — 機場位置`,
     mapEmbedEn: 'Interactive Map',
@@ -536,7 +558,7 @@ export const tw: Messages = {
     teaserSub: (count: string) => `共 ${count} 個直飛目的地：航線示意、執飛航司與飛行距離。`,
     /** 首頁導航條上一格的字數說明。 */
     cardMeta: (count: string) => `${count} 個直飛目的地`,
-    /** 各區塊標題都帶上機場名（`en` 行的引數是機場的英文名 / IATA 程式碼）。 */
+    /** 各區塊標題都帶上機場名（`en` 行的引數是機場的英文名 / IATA 代碼）。 */
     mapSectionTitle: (name: string) => `${name}直飛航線圖`,
     tableKicker: (iata: string) => `${iata} · Destinations`,
     tableSectionTitle: (name: string) => `${name}直飛目的地列表`,
@@ -549,7 +571,7 @@ export const tw: Messages = {
     dataTitle: '航線資料下載',
     dataEn: 'Data',
     dataSub: (count: number) =>
-      `${count} 條直飛航線資料，含目的地、IATA 程式碼、城市、國家/地區、飛行距離與執飛航司，可用於表格軟體或指令碼處理。`,
+      `${count} 條直飛航線資料，含目的地、IATA 代碼、城市、國家/地區、飛行距離與執飛航司，可用於表格軟體或指令碼處理。`,
     dataFields: 'CSV 適合 Excel / Numbers 等表格軟體，JSON 適合程式處理；均為 UTF-8 編碼。',
     dataCsv: '下載 CSV',
     dataJson: '下載 JSON',
@@ -589,7 +611,7 @@ export const tw: Messages = {
       `${name}（${iata}）共有 ${gates} 個閘口：${list}。`,
     whereIs: (iata: string) => `${iata} 是哪裡？`,
     whereIsAnswer: (iata: string, name: string, nameEn: string, city: string, cityEn: string, country: string) =>
-      `${iata} 是${name}（${nameEn}）的 IATA 程式碼，機場位於${country}的${city}${
+      `${iata} 是${name}（${nameEn}）的 IATA 代碼，機場位於${country}的${city}${
         cityEn ? `（${cityEn}）` : ''
       }。`,
     distance: (name: string, city: string) => `${name}距離${city}市中心有多遠？`,
@@ -602,7 +624,7 @@ export const tw: Messages = {
       `${name}提供${facilities}等設施與服務，各航廈的具體設施分佈請參考上方的航廈平面示意圖。`,
     location: (name: string) => `${name}位於哪個城市和國家？`,
     locationAnswer: (name: string, nameEn: string, iata: string, city: string, cityEn: string, country: string) =>
-      `${name}（英文名 ${nameEn}，IATA 程式碼 ${iata}）位於${country}的${city}${
+      `${name}（英文名 ${nameEn}，IATA 代碼 ${iata}）位於${country}的${city}${
         cityEn ? `（${cityEn}）` : ''
       }。`,
     airlines: (name: string) => `${name}各航廈主要運營哪些航空公司？`,

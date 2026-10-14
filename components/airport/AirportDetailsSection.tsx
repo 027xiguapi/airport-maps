@@ -2,15 +2,22 @@ import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
 import type { AirportDetail } from '@/lib/types';
 
-/** Static airport facts: IATA code, location, coordinates and time zone. */
+/**
+ * Static airport facts: IATA code, location, coordinates and time zone.
+ * Coordinates and timezone are separate props because their coverage differs:
+ * compiled coordinates exist for ~all airports, the hand-checked timezone only
+ * for the major ones — so each row drops out on its own rather than hiding both.
+ */
 export default function AirportDetailsSection({
   locale,
   airport,
-  geo,
+  coords,
+  tz,
 }: {
   locale: Locale;
   airport: AirportDetail;
-  geo: { lat: number; lng: number; tz: string } | null;
+  coords: { lat: number; lng: number } | null;
+  tz: string | null;
 }) {
   const t = getMessages(locale);
 
@@ -36,19 +43,19 @@ export default function AirportDetailsSection({
             {airport.city} · {airport.countryName}
           </div>
         </div>
-        {geo && (
-          <>
-            <div className="detail-item">
-              <div className="k">{t.airport.infoCoords}</div>
-              <div className="v">
-                {geo.lat.toFixed(4)}, {geo.lng.toFixed(4)}
-              </div>
+        {coords && (
+          <div className="detail-item">
+            <div className="k">{t.airport.infoCoords}</div>
+            <div className="v">
+              {coords.lat.toFixed(4)}, {coords.lng.toFixed(4)}
             </div>
-            <div className="detail-item">
-              <div className="k">{t.airport.infoTimezone}</div>
-              <div className="v">{geo.tz}</div>
-            </div>
-          </>
+          </div>
+        )}
+        {tz && (
+          <div className="detail-item">
+            <div className="k">{t.airport.infoTimezone}</div>
+            <div className="v">{tz}</div>
+          </div>
         )}
       </div>
     </section>

@@ -1,5 +1,13 @@
 import type { Messages } from './zh';
 
+/** Airport class wording for the lead sentence (schema.org's airport type). */
+const AIRPORT_KIND = {
+  large: 'large airport',
+  medium: 'medium-sized airport',
+  small: 'small airport',
+  heliport: 'heliport',
+} as const;
+
 /**
  * English catalog. Typed against the Chinese source of truth, so any missing or
  * renamed key fails the build.
@@ -425,27 +433,36 @@ export const en: Messages = {
           }${
             o.distance ? `, ${o.distance} from the city centre` : ''
           }. Terminal map showing all terminals, gate ranges and ground transport.`
-        : `${o.name} (${o.iata}) serves ${o.city}, ${o.country}. Location map, airport facts and ground transport.`,
+        : `${o.name} (${o.iata}) serves ${o.city}, ${o.country}. Location map, airport codes and travel information.`,
     /**
-     * Lead answer sentence under the H1: the full-sentence answer to "how many
-     * terminals / gates" and "where is …", which the FAQ otherwise hides inside
-     * a collapsed accordion.
+     * Lead answer sentence under the H1: the full-sentence answer to "what is
+     * this airport / where is it" plus the terminal and gate counts the FAQ
+     * otherwise hides inside a collapsed accordion. kind/icao come from
+     * lib/airport-facts.json; city and country collapse into one when equal
+     * (Singapore) so the sentence never reads "serving Singapore, Singapore".
      */
     quickAnswer: (o: {
       name: string;
       iata: string;
+      icao: string | null;
+      kind: 'large' | 'medium' | 'small' | 'heliport' | null;
+      city: string;
+      country: string;
       terminals: number;
       gates: number;
-      city: string;
       distance: string;
-    }) =>
-      o.terminals > 0
-        ? `${o.name} (${o.iata}) has ${o.terminals} terminal${
+    }) => {
+      const where = o.city === o.country ? o.city : `${o.city}, ${o.country}`;
+      const kind = o.kind ? AIRPORT_KIND[o.kind] : 'airport';
+      const head = `${o.name} (IATA: ${o.iata}${o.icao ? `, ICAO ${o.icao}` : ''}) is a ${kind} serving ${where}`;
+      return o.terminals > 0
+        ? `${head}, with ${o.terminals} terminal${
             o.terminals === 1 ? '' : 's'
           }${o.gates > 0 ? ` and ${o.gates} gate${o.gates === 1 ? '' : 's'}` : ''}${
             o.distance ? `, about ${o.distance} from central ${o.city}` : ''
           }.`
-        : `${o.name} (${o.iata}) serves ${o.city}; see the location map, airport code and travel details below.`,
+        : `${head}.`;
+    },
     mapTitle: (iata: string) => `${iata} · Terminal layout`,
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} Airport Terminal Map — Gates & Navigation`,
@@ -488,6 +505,12 @@ export const en: Messages = {
     officialSite: 'Official website',
     wikiLabel: 'Wikipedia',
     baikeLabel: 'Baidu Baike',
+    /** Named sources cited under the link buttons (answer-first audit). */
+    sourcesLabel: 'Sources: ',
+    sourcesWikipedia: 'Wikipedia',
+    sourcesOurAirports: 'OurAirports open data',
+    sourcesNote:
+      "Airport codes, coordinates and airport class are compiled from open data; page details follow each airport's official publications.",
     mapEmbedKicker: 'Map',
     mapEmbedTitle: (name: string) => `Interactive map — ${name} location`,
     mapEmbedEn: 'Interactive Map',

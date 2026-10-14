@@ -4,6 +4,15 @@
  * translation is a compile error. Count-dependent strings are functions because
  * English needs plural forms and Chinese does not.
  */
+
+/** Airport class wording for the lead sentence (schema.org's airport type). */
+const AIRPORT_KIND = {
+  large: '大型机场',
+  medium: '中型机场',
+  small: '小型机场',
+  heliport: '直升机场',
+} as const;
+
 export const zh = {
   site: {
     name: '全球机场地图',
@@ -408,22 +417,31 @@ export const zh = {
       }`,
     /**
      * 首屏一句话答案：渲染在机场页 H1 正下方，用完整句子直接回答
-     * "几座航站楼 / 多少个登机口 / 在哪里"。这两族查询占站内展示的一半以上，
-     * 此前答案只存在于折叠的 FAQ 面板里。
+     * "这是哪座机场 / 在哪里 / 几座航站楼 / 多少个登机口"。前两族查询占站内
+     * 展示的一半以上，此前答案只存在于折叠的 FAQ 面板里。
+     * kind / icao 来自 lib/airport-facts.json；city 与 country 相同（新加坡等）
+     * 时只保留一次，避免"位于新加坡新加坡"。
      */
     quickAnswer: (o: {
       name: string;
       iata: string;
+      icao: string | null;
+      kind: 'large' | 'medium' | 'small' | 'heliport' | null;
+      city: string;
+      country: string;
       terminals: number;
       gates: number;
-      city: string;
       distance: string;
-    }) =>
-      o.terminals > 0
-        ? `${o.name}（${o.iata}）共有 ${o.terminals} 座航站楼${
+    }) => {
+      const where = o.city === o.country ? o.city : `${o.country}${o.city}`;
+      const kind = o.kind ? AIRPORT_KIND[o.kind] : '机场';
+      const head = `${o.name}（IATA: ${o.iata}${o.icao ? `，ICAO: ${o.icao}` : ''}）是位于${where}的${kind}`;
+      return o.terminals > 0
+        ? `${head}，共有 ${o.terminals} 座航站楼${
             o.gates > 0 ? `、${o.gates} 个登机口` : ''
           }${o.distance ? `，距${o.city}市中心约 ${o.distance}` : ''}。`
-        : `${o.name}（${o.iata}）位于${o.city}，可在下方查看位置地图、机场代码与出行信息。`,
+        : `${head}。`;
+    },
     mapTitle: (iata: string) => `${iata} · 航站楼平面示意图`,
     mapNote: 'TERMINAL LAYOUT',
     realMapTitle: (iata: string) => `${iata} 机场航站楼地图 — 登机口与导航`,
@@ -463,6 +481,11 @@ export const zh = {
     officialSite: '机场官网',
     wikiLabel: '维基百科',
     baikeLabel: '百度百科',
+    /** 链接按钮下方的具名来源引用（Answer-First 审计要求的外链引用）。 */
+    sourcesLabel: '资料来源：',
+    sourcesWikipedia: '维基百科',
+    sourcesOurAirports: 'OurAirports 开放数据',
+    sourcesNote: '机场代码、坐标与规模等基础数据整理自开放数据；页面信息以机场官方网站为准。',
     mapEmbedKicker: 'Map',
     mapEmbedTitle: (name: string) => `${name}互动地图 — 机场位置`,
     mapEmbedEn: 'Interactive Map',

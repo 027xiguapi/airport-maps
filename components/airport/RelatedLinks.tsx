@@ -1,4 +1,9 @@
-import { airportEncyclopediaTitle, baikeUrl, wikiUrl } from '@/lib/encyclopedia-links';
+import {
+  airportEncyclopediaTitle,
+  baikeUrl,
+  OURAIRPORTS_DATA_URL,
+  wikiUrl,
+} from '@/lib/encyclopedia-links';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
 import { Button } from '@/components/ui/button';
@@ -7,6 +12,10 @@ import { Button } from '@/components/ui/button';
  * External reference links: the official website (curated table in
  * lib/airport-links.ts — the button is omitted when no URL is curated), the
  * Wikipedia article matching the page locale, and the Baidu Baike entry.
+ * Underneath them the sources line names the reference works the page's data
+ * is compiled from, with outbound links — the citation half of the
+ * answer-first audit (the machine-readable mirror lives in the WebPage node's
+ * `citation` set in app/[locale]/airport/[code]/schema.ts).
  */
 export default function RelatedLinks({
   locale,
@@ -24,6 +33,7 @@ export default function RelatedLinks({
   const t = getMessages(locale);
   const titleZh = airportEncyclopediaTitle(iata, nameZh);
   const wikiTitle = locale === 'en' ? nameEn : titleZh;
+  const wikiHref = wikiUrl(locale === 'en' ? 'en' : 'zh', wikiTitle);
 
   return (
     <section className="ap-extra" id="related-links">
@@ -46,11 +56,7 @@ export default function RelatedLinks({
           </Button>
         )}
         <Button asChild variant="outline">
-          <a
-            href={wikiUrl(locale === 'en' ? 'en' : 'zh', wikiTitle)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={wikiHref} target="_blank" rel="noopener noreferrer">
             {t.airport.wikiLabel} ↗
           </a>
         </Button>
@@ -63,6 +69,18 @@ export default function RelatedLinks({
           </Button>
         )}
       </div>
+      <p className="ap-sources">
+        <span>{t.airport.sourcesLabel}</span>
+        <a href={wikiHref} target="_blank" rel="noopener noreferrer">
+          {t.airport.sourcesWikipedia}
+        </a>
+        <span className="sep">·</span>
+        <a href={OURAIRPORTS_DATA_URL} target="_blank" rel="noopener noreferrer">
+          {t.airport.sourcesOurAirports}
+        </a>
+        <span className="sep">—</span>
+        <span>{t.airport.sourcesNote}</span>
+      </p>
     </section>
   );
 }

@@ -41,6 +41,7 @@ import { spawnSync } from 'node:child_process';
 import { join } from 'node:path';
 import pg from 'pg';
 import { databaseUrl, ROOT } from './_env.mjs';
+import { directoryDescriptions } from './_describe.mjs';
 import { toHant, toHantName, SIMPLIFIED_ONLY } from './_hant.mjs';
 
 /** Modes: see the usage note above. */
@@ -237,29 +238,20 @@ function englishDescription(a, paxM, distanceKm, modes) {
   return parts.filter(Boolean).join(' ');
 }
 
-const KIND_ZH = { large: '大型', medium: '中型', small: '小型', heliport: '直升机' };
-const KIND_EN = {
-  large: 'large airport',
-  medium: 'medium-sized airport',
-  small: 'small airport',
-  heliport: 'heliport',
-};
-
 /**
- * Description for the directory batch (scripts/directory-data.json), derived
- * purely from its own fields — those airports carry no editorial copy yet.
- * Returns the [zh, en] pair for airport_translations.
+ * Descriptions for the directory batch live in scripts/_describe.mjs (shared
+ * with scripts/update-airport-descriptions.mjs, which rewrites an existing
+ * database to the same text). This helper only resolves the per-airport facts.
  */
-function directoryDescriptions(a) {
-  const country = countries[a.country];
-  const kindZh = KIND_ZH[a.kind] ?? '';
-  const kindEn = KIND_EN[a.kind] ?? 'airport';
-  return [
-    `${a.name}(IATA:${a.iata})位于${country.name}${a.city}，是一座${kindZh}机场。详细航站楼、登机口及交通信息将陆续补充。`,
-    `${a.nameEn} (${a.iata}) is a ${kindEn} serving ${a.cityEn}, ${country.nameEn}. ` +
-      'Terminal, gate and ground-transport details will be added as they are compiled.',
-  ];
-}
+const airportFacts = (() => {
+  try {
+    return JSON.parse(readFileSync(join(ROOT, 'lib', 'airport-facts.json'), 'utf8')).airports;
+  } catch {
+    // Older checkouts without the compiled facts still seed; the description
+    // then just carries fewer clauses.
+    return {};
+  }
+})();
 
 /** "a, b and c" */
 function joinList(items) {
@@ -502,7 +494,11 @@ try {
       ]
     );
     added.push(a.iata);
-    const [descZh, descEn] = directoryDescriptions(a);
+    const [descZh, descEn] = directoryDescriptions(
+      a,
+      countries[a.country],
+      airportFacts[a.iata]
+    );
     await client.query(
       `INSERT INTO airport_translations (airport_iata, locale, description_md)
        VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4)`,

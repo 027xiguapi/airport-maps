@@ -52,14 +52,17 @@
     "打车": "叫車",
     "航站楼": "航廈",
     "登机口": "閘口",
-    "有多少个登机口？": "有幾多個閘口？"
+    "有多少个登机口？": "有幾多個閘口？",
+    "交通信息": "交通資訊"
   },
   "corrections": {
     "_readme": [
       "Applied AFTER OpenCC, to undo its over-reach: OpenCC rewrites both 连接 and",
       "連接 as 連線 (a network link) and both 绑定/綁定 as 繫結, which this site's",
       "text never means. Keep each entry tied to a phrase seen in the corpus — a",
-      "bare character swap would break the cases OpenCC gets right (一隻狗, 連線網路)."
+      "bare character swap would break the cases OpenCC gets right (一隻狗, 連線網路).",
+      "程式碼: OpenCC's twp output for 代码 — Taiwan writes airport/IATA codes as",
+      "代碼; 程式碼 is program source code and wrong everywhere in this corpus."
     ],
     "隻是": "只是",
     "隻有": "只有",
@@ -80,6 +83,7 @@
     "出租車": "計程車",
     "執行時間": "運行時間",
     "執行頻次": "運行頻次",
-    "型別": "類型"
+    "型別": "類型",
+    "程式碼": "代碼"
   }
 }

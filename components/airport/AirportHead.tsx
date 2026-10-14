@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Breadcrumb, { type Crumb } from '@/components/Breadcrumb';
+import { getAirportFacts } from '@/lib/airport-facts';
 import { formatDate, formatNumber, formatPax, formatDistance } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
@@ -42,14 +43,20 @@ export default function AirportHead({
   const t = getMessages(locale);
   const pax = formatPax(airport.annualPaxM, locale);
   const distance = formatDistance(airport.distanceKm, locale);
+  // ICAO code and airport class for the lead sentence; absent data simply drops
+  // the clause (see lib/airport-facts.json for coverage).
+  const airportFacts = getAirportFacts(airport.iata);
   const leadText =
     lead === undefined
       ? t.airport.quickAnswer({
           name: airport.name,
           iata: airport.iata,
+          icao: airportFacts?.icao ?? null,
+          kind: airportFacts?.type ?? null,
+          city: airport.city,
+          country: airport.countryName,
           terminals: airport.terminals.length,
           gates: airport.gateCount,
-          city: airport.city,
           distance: distance ?? '',
         })
       : lead;

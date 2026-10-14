@@ -18,6 +18,13 @@ export const wikiUrl = (lang: 'en' | 'zh', title: string) =>
 export const baikeUrl = (title: string) => `https://baike.baidu.com/item/${encodeURIComponent(title)}`;
 
 /**
+ * OurAirports open data (CC0) — where the site's airport codes, coordinates and
+ * airport classes come from. Cited on the airport page's sources line and in
+ * the WebPage node's citation set.
+ */
+export const OURAIRPORTS_DATA_URL = 'https://ourairports.com/data/';
+
+/**
  * Canonical Chinese encyclopedia titles for airports whose database name is
  * not the zh-Wikipedia / Baidu Baike entry title (e.g. ICN is stored as
  * "首尔仁川国际机场" while both encyclopedias carry the entry as "仁川国际机

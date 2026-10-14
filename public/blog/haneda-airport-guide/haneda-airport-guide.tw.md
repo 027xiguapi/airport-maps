@@ -30,7 +30,7 @@ cover: images/0.webp
 ### 御翔印 DATA
 
 - **機場名**：羽田東京國際機場
-- **機場程式碼**：HND
+- **機場代碼**：HND
 - **第一番朱印**：象徵著羽田東京國際機場為日本航空開通日本國內航線的第1個機場
 - **機場跑道**：位於機場名稱下方的灰色標識，為羽田東京國際機場實際使用的跑道設計
 - **紅色飛機**：代表羽田東京國際機場內日本航空的主要機型，此處為A350-900
@@ -182,9 +182,7 @@ cover: images/0.webp
 - **本站頁面**：[東京羽田機場（HND）](/tw/airport/HND)、[日本（JP）](/tw/country/JP)
 - **維基百科**：[東京羽田機場](https://zh.wikipedia.org/wiki/%E7%BE%BD%E7%94%B0%E6%9C%BA%E5%9C%BA)
 
-
 ## 相關連結
 
 - **本站頁面**：[東京羽田機場（HND）](/tw/airport/HND)、[日本（JP）](/tw/country/JP)
 - **維基百科**：[東京羽田機場](https://zh.wikipedia.org/wiki/%E7%BE%BD%E7%94%B0%E6%9C%BA%E5%9C%BA)
-

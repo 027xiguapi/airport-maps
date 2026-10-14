@@ -2,7 +2,9 @@ import { getMessages } from '@/lib/i18n';
 import { LOCALE_META, localizedPath, type Locale } from '@/lib/i18n/config';
 import { formatNumber, formatPax, formatDistance } from '@/lib/format';
 import type { MarkdownDoc } from '@/lib/content';
+import { getAirportFacts } from '@/lib/airport-facts';
 import { getAirportGeo } from '@/lib/airport-geo';
+import { airportEncyclopediaTitle, OURAIRPORTS_DATA_URL, wikiUrl } from '@/lib/encyclopedia-links';
 import {
   absoluteUrl,
   EDITORIAL_NODE_ID,
@@ -45,7 +47,21 @@ export function buildAirportGraph(input: {
   const { locale, airport, guide, faqItems } = input;
   const t = getMessages(locale);
   const geo = getAirportGeo(airport.iata);
+  const facts = getAirportFacts(airport.iata);
   const { published, modified } = publicationDates(airport, guide?.updated);
+  // Hand-checked coordinates win; the compiled facts cover the other ~300
+  // airports so every Airport node carries geo.
+  const coords = geo
+    ? { lat: geo.lat, lng: geo.lng }
+    : facts?.lat != null && facts.lng != null
+      ? { lat: facts.lat, lng: facts.lng }
+      : null;
+  // Entity consolidation: the English article OurAirports ties to this exact
+  // airport (falling back to the article its English name implies) and the
+  // zh-Wikipedia entry under the encyclopedia title the related-links button
+  // already uses, so schema and visible links never disagree.
+  const enWikiUrl = facts?.wikiEn ?? wikiUrl('en', airport.nameEn);
+  const zhWikiUrl = wikiUrl('zh', airportEncyclopediaTitle(airport.iata, airport.nameZh));
 
   const pax = formatPax(airport.annualPaxM, locale);
   const distance = formatDistance(airport.distanceKm, locale);
@@ -121,6 +137,16 @@ export function buildAirportGraph(input: {
         datePublished: published,
         dateModified: modified,
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+        // Named sources the page itself cites (the related-links sources line),
+        // so the citation set is machine-readable as well.
+        citation: [
+          {
+            '@type': 'WebPage',
+            name: `${airport.name} · ${t.airport.sourcesWikipedia}`,
+            url: locale === 'en' ? enWikiUrl : zhWikiUrl,
+          },
+          { '@type': 'CreativeWork', name: t.airport.sourcesOurAirports, url: OURAIRPORTS_DATA_URL },
+        ],
       },
       {
         '@type': 'Airport',
@@ -128,21 +154,23 @@ export function buildAirportGraph(input: {
         name: airport.name,
         alternateName: airport.nameEn,
         iataCode: airport.iata,
+        ...(facts?.icao && { icaoCode: facts.icao }),
         description: airport.descriptionMd,
         url: pageUrl,
         image: pageImage,
         inLanguage: LOCALE_META[locale].htmlLang,
+        sameAs: [enWikiUrl, zhWikiUrl],
         address: {
           '@type': 'PostalAddress',
           addressLocality: airport.city,
           addressCountry: airport.countryCode,
         },
         containedInPlace: { '@type': 'Country', name: airport.countryName },
-        ...(geo && {
+        ...(coords && {
           geo: {
             '@type': 'GeoCoordinates',
-            latitude: geo.lat,
-            longitude: geo.lng,
+            latitude: coords.lat,
+            longitude: coords.lng,
           },
         }),
       },

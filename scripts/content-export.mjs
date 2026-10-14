@@ -75,6 +75,12 @@ const pathFor = (row) =>
   join(OUT, row.locale, KIND_DIRS[row.kind], `${fileStem(row.kind, row.subject)}.md`);
 
 if (CHECK_DIR) {
+  if (!existsSync(CHECK_DIR)) {
+    // Without this guard the compare loop reports every row as a missing file,
+    // which buries the actual problem (a path typo) under 1224 lines.
+    console.error(`check directory not found: ${CHECK_DIR}\nPass an existing tree, e.g. --check ../airport-maps-content-backup-2026-10-14`);
+    process.exit(1);
+  }
   // Compare through the app's reader: every selected row must reproduce an
   // identical { title, summary, updated, body } in the tree.
   const fileFor = (row) => join(CHECK_DIR, row.locale, KIND_DIRS[row.kind], `${fileStem(row.kind, row.subject)}.md`);

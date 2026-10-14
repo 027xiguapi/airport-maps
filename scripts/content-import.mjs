@@ -1,26 +1,32 @@
 /**
- * Imports long-form content documents from a `.md` tree into the database
- * (`content_documents` — the runtime store the app reads through
- * lib/content.ts). This is how the original `content/` tree was migrated, and
- * how a new or updated language batch gets in later: hand the translator a
+ * Imports long-form content documents into the database (`content_documents` —
+ * the runtime store the app reads through lib/content.ts). This is how the
+ * original `content/` tree was migrated, and how a new or updated language
+ * batch gets in later: hand the translator a
  * `node scripts/content-export.mjs --locale zh --out <dir>` tree, drop the
  * translated files under `<dir>/<locale>/…`, and import that.
  *
+ * Two input forms are accepted, both written by `content-export`:
+ *
+ *   --dir <tree>   a directory of `<locale>/<kind>/<subject>.md` files
+ *   --dir <file>   a single-file JSON snapshot (`.json`, from `--json`), which
+ *                  is the easier thing to copy between machines
+ *
  *   node scripts/content-import.mjs                      ./content → database
- *   node scripts/content-import.mjs --dir <path>         another tree root
+ *   node scripts/content-import.mjs --dir <path>         another tree root or snapshot file
  *   node scripts/content-import.mjs --only zh,en         restrict locales
  *   node scripts/content-import.mjs --dry-run            report, write nothing
  *   node scripts/content-import.mjs --prune              also delete rows of an
  *                                                        imported locale that
- *                                                        have no file any more
+ *                                                        have no document any more
  *
- * Rows are upserted on (kind, subject, locale), so re-importing an unchanged
- * tree changes nothing. Files whose frontmatter cannot supply a `title`,
- * `summary` or `updated` are still imported with those fields NULL — matching
- * the reader, which treats all three as optional — but every skip, warning or
- * orphaned subject is printed.
+ * Rows are upserted on (kind, subject, locale), so re-importing unchanged input
+ * changes nothing. Documents whose `title`, `summary` or `updated` is absent
+ * are still imported with those fields NULL — matching the reader, which treats
+ * all three as optional — but every skip, warning or orphaned subject is
+ * printed.
  */
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { isAbsolute, join, relative } from 'node:path';
 import pg from 'pg';
 import { databaseUrl, ROOT } from './_env.mjs';
@@ -42,11 +48,24 @@ const TREE = isAbsolute(dir) ? dir : join(ROOT, dir);
 const ONLY = flagValue('--only')?.split(',').map((s) => s.trim()).filter(Boolean) ?? null;
 
 if (!existsSync(TREE)) {
+  // The everyday mistake is a POSIX path typed without its leading slash
+  // (`--dir tmp/export` for `/tmp/export`), which resolves into the repo.
+  const slashMissing = !isAbsolute(dir) && existsSync(`/${dir}`);
   console.error(
-    `tree not found: ${TREE}\n` +
-      'Pass --dir <path> (the content lives in the database now; a tree is whatever\n' +
-      '`content-export` produced — the 2026-10-14 migration export sits next to the repo).'
+    `input not found: ${TREE}\n` +
+      (slashMissing
+        ? `note: something exists at /${dir} — did you mean the absolute path?\n`
+        : '') +
+      'Pass --dir <path> — a `.md` tree or a `.json` snapshot written by\n' +
+      'content-export (the content lives in the database now; the 2026-10-14\n' +
+      'migration export sits next to the repo).'
   );
+  process.exit(1);
+}
+
+const IS_SNAPSHOT = statSync(TREE).isFile();
+if (IS_SNAPSHOT && !TREE.toLowerCase().endsWith('.json')) {
+  console.error(`--dir must be a directory or a .json snapshot, got a file: ${TREE}`);
   process.exit(1);
 }
 
@@ -96,9 +115,55 @@ function collect() {
   return { rows, skipped };
 }
 
-const { rows, skipped } = collect();
+/**
+ * Reads a single-file snapshot (`content-export --json`): `{ exported_at,
+ * documents: [{ kind, subject, locale, title, summary, updated, body }] }`.
+ * No frontmatter or file naming is involved, so the values go in as they are —
+ * this is lossless and survives a change of tree layout.
+ */
+function readSnapshot() {
+  const parsed = JSON.parse(readFileSync(TREE, 'utf8'));
+  const documents = Array.isArray(parsed) ? parsed : parsed?.documents;
+  if (!Array.isArray(documents)) {
+    throw new Error(`${TREE} is not a content snapshot (no "documents" array)`);
+  }
+  const rows = [];
+  const skipped = [];
+  for (const [index, doc] of documents.entries()) {
+    const where = `${relative(ROOT, TREE)}#${index}`;
+    if (!doc || typeof doc !== 'object' || !(doc.kind in KIND_DIRS)) {
+      skipped.push(`${where} (unknown kind: ${JSON.stringify(doc?.kind)})`);
+      continue;
+    }
+    const subject = String(doc.subject ?? '');
+    const locale = String(doc.locale ?? '');
+    if (!subject || !locale) {
+      skipped.push(`${where} (missing subject or locale)`);
+      continue;
+    }
+    if (typeof doc.body !== 'string' || !doc.body.trim()) {
+      skipped.push(`${where} (empty body)`);
+      continue;
+    }
+    if (!doc.updated) skipped.push(`${where} (no updated date)`);
+    if (ONLY && !ONLY.includes(locale)) continue;
+    rows.push({
+      kind: doc.kind,
+      subject: doc.kind === 'page' ? subject : subject.toUpperCase(),
+      locale,
+      title: doc.title ?? null,
+      summary: doc.summary ?? null,
+      updated: doc.updated ?? null,
+      body: doc.body.trim(),
+      file: `${doc.kind}:${subject}:${locale}`,
+    });
+  }
+  return { rows, skipped };
+}
+
+const { rows, skipped } = IS_SNAPSHOT ? readSnapshot() : collect();
 if (rows.length === 0) {
-  console.error(`no documents found under ${TREE}`);
+  console.error(`no documents found in ${TREE}`);
   process.exit(1);
 }
 
@@ -159,6 +224,9 @@ try {
   for (const r of orphanCountries) console.warn(`  note: ${r.file} — no '${r.subject}' row in countries`);
 
   await client.query('BEGIN');
+  // The WHERE guard makes an unchanged document a no-op: nothing is written,
+  // `updated_at` does not move, and no row comes back — which is what lets the
+  // report say "unchanged" instead of claiming 1224 updates on a re-import.
   const upsert = `
     INSERT INTO content_documents (kind, subject, locale, title, summary, updated, body)
     VALUES ($1, $2, $3, $4, $5, $6, $7)
@@ -168,11 +236,14 @@ try {
       updated = EXCLUDED.updated,
       body = EXCLUDED.body,
       updated_at = now()
+    WHERE (content_documents.title, content_documents.summary, content_documents.updated, content_documents.body)
+      IS DISTINCT FROM (EXCLUDED.title, EXCLUDED.summary, EXCLUDED.updated, EXCLUDED.body)
     RETURNING (xmax = 0) AS inserted`;
   let inserted = 0;
   let updated = 0;
+  let unchanged = 0;
   for (const r of rows) {
-    const { rows: [result] } = await client.query(upsert, [
+    const { rows: written } = await client.query(upsert, [
       r.kind,
       r.subject,
       r.locale,
