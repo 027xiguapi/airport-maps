@@ -1,0 +1,8 @@
+{
+  "_note": "The Baidu downloads were simulator screenshots and a satellite view; the AirTurkHaber leads were news graphics (headline overlay), a site banner and an opening-ceremony group photo. The kept picture is the February 2025 aerial of the terminal; its news headline bar was cropped off the top before publication.",
+  "_skip": ["ayt-baidu-1.webp", "ayt-baidu-2.webp", "ayt-baidu-3.webp"],
+  "ayt-page-1.webp": {
+    "zh": "安塔利亚机场航拍：环形卫星厅四周停满客机，登机桥呈放射状排开（原图顶部带新闻标题栏，已裁去）。",
+    "en": "Antalya Airport from the air — airliners parked in a fan around the circular satellite, jet bridges radiating out (the photo's news headline bar has been cropped away)."
+  }
+}

@@ -449,6 +449,18 @@ export const zh = {
     mapAlt: (name: string, iata: string) =>
       `${name}（${iata}）航站楼地图，含各航站楼、登机口与指廊分布`,
     realMapNote: 'TERMINAL MAP',
+    /** 机场实景照片板块：照片下载自公开网络来源，署名行链接回原始页面。 */
+    photosKicker: 'Photos',
+    photosTitle: '机场实景照片',
+    photosEn: 'Airport Photos',
+    photosSub:
+      '以下为该机场的实景照片，均来自公开网络来源并在每张图下标明出处，版权归原作者所有。点击图片可放大查看，点击署名可打开原始页面。',
+    photosCredit: (host: string) => `来源：${host}`,
+    /** 未写编辑说明时的 alt 兜底：机场全称 + 代码 + 序号。 */
+    photosAlt: (name: string, iata: string, index: number) =>
+      `${name}（${iata}）机场实景照片 ${index}`,
+    /** 图片按钮的无障碍标签（点击打开灯箱）。 */
+    photosZoom: (name: string, index: number) => `放大查看 ${name} 的第 ${index} 张照片`,
     /** 终端图下方的下载按钮：图片直接下载，PDF 按钮跳转谷歌搜索官方 PDF。 */
     zoomLabel: '放大',
     zoomClose: '关闭',
@@ -645,6 +657,7 @@ export const zh = {
   toc: {
     label: '页面导航',
     map: '航站楼地图',
+    photos: '实景照片',
     time: '机场时间',
     details: '机场信息',
     links: '相关链接',

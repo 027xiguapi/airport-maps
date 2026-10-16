@@ -55,6 +55,144 @@ const aliases = (() => {
   }
 })();
 
+/**
+ * Authored 「机场历史」 lines (scripts/airport-history.json), keyed by IATA —
+ * written from the raw extracts in scripts/airport-history.raw.json
+ * (airports-worldwide.com, a Wikipedia CC BY-SA mirror; see
+ * scripts/fetch-airport-history.mjs). Airports without an entry simply have no
+ * history section rather than a padded one.
+ */
+const history = (() => {
+  try {
+    return read('scripts/airport-history.json');
+  } catch {
+    return {};
+  }
+})();
+
+/** Compiled hard facts (elevation, scheduled service) for the navigation block. */
+const hardFacts = (() => {
+  try {
+    return read('lib/airport-facts.json').airports ?? {};
+  } catch {
+    return {};
+  }
+})();
+
+/** The guide's revision date, stamped on every generated document. */
+const UPDATED = '2026-10-16';
+
+/** Published gallery photos for a code (public/photos/captions/<IATA>.json). */
+function photosFor(code, locale) {
+  try {
+    const doc = JSON.parse(
+      readFileSync(join(ROOT, 'public', 'photos', 'captions', `${code}.json`), 'utf8')
+    );
+    return Object.entries(doc)
+      .filter(([file, value]) => !file.startsWith('_') && value && typeof value === 'object' && value[locale])
+      .map(([file, value]) => ({ file, caption: value[locale] }));
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * 「机场实景」 — the page's published photos, image then caption, in manifest
+ * order. Only captioned photos exist here (the caption is the gallery's
+ * publication gate), so the guide never shows an un-reviewed picture.
+ */
+function photoBlock(lines, code, locale) {
+  const photos = photosFor(code, locale);
+  if (!photos.length) return;
+  lines.push(locale === 'zh' ? '## 机场实景' : '## Airport photos', '');
+  for (const photo of photos) {
+    lines.push(`![${photo.caption}](/photos/${code}/${photo.file})`, '');
+    lines.push(photo.caption, '');
+  }
+  lines.push(
+    locale === 'zh'
+      ? '照片来自公开网络来源，版权归原作者所有；每张图的完整署名与原始出处见本页「机场实景照片」图集。'
+      : 'The photos come from public web sources and remain the copyright of their photographers; full credits and source links sit in the photo gallery on this page.',
+    ''
+  );
+}
+
+/** 「机场历史」 — only where an authored, sourced paragraph exists. */
+function historyBlock(lines, code, locale) {
+  const entry = history[code];
+  const text = entry?.[locale];
+  if (!text) return;
+  lines.push(locale === 'zh' ? '## 机场历史与概况' : '## History & profile', '');
+  lines.push(text, '');
+  if (entry.source) {
+    lines.push(
+      locale === 'zh'
+        ? `资料参考：[${entry.sourceTitle ?? '机场条目'}](${entry.source})（内容源自维基百科，按自由许可使用，由本站整理改写）。`
+        : `Source: [${entry.sourceTitle ?? 'airport entry'}](${entry.source}) — content from Wikipedia under its free licence, condensed and rewritten by this site.`,
+      ''
+    );
+  }
+}
+
+/**
+ * 「机场导航」 — what the page knows for actually getting to the field:
+ * coordinates, elevation, service status, city distance when the curated data
+ * has it, and one-tap links into the three mapping services. Details it cannot
+ * know (driving routes, timetables, parking) stay with the airport's own
+ * information, as the closing note says.
+ */
+function navBlock(lines, { a, point }, locale) {
+  const facts = hardFacts[a.iata] ?? {};
+  const name = locale === 'zh' ? a.name : a.nameEn ?? a.name;
+  lines.push(locale === 'zh' ? '## 机场导航' : '## Getting there', '');
+  const bits = [];
+  if (point) {
+    bits.push(
+      locale === 'zh'
+        ? `坐标为 ${point.lat.toFixed(4)}, ${point.lng.toFixed(4)}`
+        : `coordinates ${point.lat.toFixed(4)}, ${point.lng.toFixed(4)}`
+    );
+  }
+  if (facts.elevFt != null) {
+    const metres = Math.round(facts.elevFt * 0.3048);
+    bits.push(locale === 'zh' ? `海拔约 ${metres} 米` : `elevation about ${metres} m`);
+  }
+  if (a.distance) {
+    bits.push(locale === 'zh' ? `距市中心约 ${a.distance}` : `about ${a.distance} from the city centre`);
+  }
+  if (facts.scheduled === false) {
+    bits.push(
+      locale === 'zh'
+        ? '目前没有定期客运航班，主要用于通用航空与包机'
+        : 'no scheduled passenger service today — mostly general aviation and charters'
+    );
+  }
+  if (bits.length) {
+    lines.push(locale === 'zh' ? `机场${bits.join('，')}。` : `The airport: ${bits.join('; ')}.`, '');
+  }
+  if (point) {
+    const lat = point.lat.toFixed(4);
+    const lng = point.lng.toFixed(4);
+    const encoded = encodeURIComponent(name);
+    lines.push(locale === 'zh' ? '直接导航到机场：' : 'Navigate straight to the field:', '');
+    const links = [
+      `[高德地图](https://uri.amap.com/marker?position=${lng},${lat}&name=${encoded}&coordinate=wgs84)`,
+      `[百度地图](https://api.map.baidu.com/marker?location=${lat},${lng}&title=${encoded}&content=${encoded}&output=html&coord_type=wgs84&zoom=15)`,
+      `[Google Maps](https://www.google.com/maps/search/?api=1&query=${lat},${lng})`,
+    ];
+    lines.push(
+      locale === 'zh' ? `- 驾车/打车：${links.join('｜')}` : `- Driving / taxi: ${links.join(' | ')}`,
+      ''
+    );
+    lines.push(
+      locale === 'zh'
+        ? '本页「位置地图」可以查看机场与城市、路网的相对位置；「地面交通」列出已收录的公共交通方式。驾车路线、班次与停车信息请以机场官网公布为准。'
+        : 'The location map on this page shows the field against the city and road network, and the ground-transport section lists the public transport recorded for it. For driving routes, timetables and parking, rely on the airport\'s own information.',
+      ''
+    );
+  }
+}
+
 const countries = { ...legacy.countries, ...directory.countries };
 const editorialIatas = new Set(legacy.airports.map((a) => a.iata));
 /** Every DB airport with its base fields (curated entries keep their richer shape). */
@@ -152,6 +290,7 @@ function zhGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
     `${a.name}（IATA 代码 **${a.iata}**${a.icao ? `，ICAO 代码 ${a.icao}` : ''}）服务于${country.name}${a.city}，按规模分类是一座${kind.zh}。本页把分散在数据库、地图与航线数据集中的信息整理成一页，方便你在订票前后快速核对。`
   );
   lines.push('');
+  photoBlock(lines, a.iata, 'zh');
   lines.push('## 基本信息');
   lines.push('');
   lines.push('| 项目 | 信息 |');
@@ -162,6 +301,7 @@ function zhGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   if (point) lines.push(`| 坐标 | ${point.lat.toFixed(4)}, ${point.lng.toFixed(4)} |`);
   if (destinations) lines.push(`| 直飞目的地 | ${destinations.length} 个（见下表） |`);
   lines.push('');
+  historyBlock(lines, a.iata, 'zh');
   lines.push('## 机场地图');
   lines.push('');
   if (hasCover) {
@@ -209,6 +349,7 @@ function zhGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
     }
     lines.push('');
   }
+  navBlock(lines, { a, point }, 'zh');
   lines.push('## 规模与设施说明');
   lines.push('');
   const scale = {
@@ -232,7 +373,7 @@ function zhGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   }
   lines.push('- 用页面顶部的搜索框可以直接比较其他机场：输入城市名或 IATA 代码即可查看附近的替代选择。');
   lines.push('- 旺季（节假日、大型活动期间）小机场的停车位与租车辆也紧张，如需自驾建议提前预订。');
-  return { title, summary, updated: '2026-10-11', body: lines.join('\n').trim() };
+  return { title, summary, updated: UPDATED, body: lines.join('\n').trim() };
 }
 
 /** Returns the stored document shape: { title, summary, updated, body }. */
@@ -246,6 +387,7 @@ function enGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
     `${a.nameEn} (IATA **${a.iata}**${a.icao ? `, ICAO ${a.icao}` : ''}) serves ${cityEn}, ${country.nameEn}${region ? `, ${region}` : ''}, and is classified as a ${kind.en}. This page gathers what the site's database, maps and route dataset say about it in one place.`
   );
   lines.push('');
+  photoBlock(lines, a.iata, 'en');
   lines.push('## Facts at a glance');
   lines.push('');
   lines.push('| | |');
@@ -256,6 +398,7 @@ function enGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   if (point) lines.push(`| Coordinates | ${point.lat.toFixed(4)}, ${point.lng.toFixed(4)} |`);
   if (destinations) lines.push(`| Direct destinations | ${destinations.length} (see below) |`);
   lines.push('');
+  historyBlock(lines, a.iata, 'en');
   lines.push('## Airport map');
   lines.push('');
   if (hasCover) {
@@ -303,6 +446,7 @@ function enGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
     }
     lines.push('');
   }
+  navBlock(lines, { a, point }, 'en');
   lines.push('## Size and facilities');
   lines.push('');
   const scale = {
@@ -324,7 +468,7 @@ function enGuide({ a, country, point, destinations, hasCover, nearest, kind }) {
   }
   lines.push('- Use the search box at the top of the page to compare alternatives: type a city name or IATA code.');
   lines.push('- In peak season parking and rental cars run short at small fields too — book ahead if you are driving.');
-  return { title, summary, updated: '2026-10-11', body: lines.join('\n').trim() };
+  return { title, summary, updated: UPDATED, body: lines.join('\n').trim() };
 }
 
 // ----------------------------------------------------------------------- run

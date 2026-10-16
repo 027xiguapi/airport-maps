@@ -1,0 +1,8 @@
+{
+  "_note": "ahn-baidu-2 and ahn-baidu-3 are Athens International Airport in Greece, not Athens-Ben Epps in Georgia.",
+  "_skip": ["ahn-baidu-2.webp", "ahn-baidu-3.webp"],
+  "ahn-baidu-1.webp": {
+    "zh": "航站楼外的飞行中心：砖砌立面上写着「Athens – Ben Epps Flight Center」，门前立着一头大象雕塑。",
+    "en": "Outside the terminal: the brick Ben Epps Flight Center, with an elephant statue on the forecourt."
+  }
+}

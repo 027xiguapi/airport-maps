@@ -1,0 +1,12 @@
+{
+  "_note": "aog-baidu-3 is a near-duplicate of aog-baidu-2 from the same spot, kept out to avoid three copies of one facade.",
+  "_skip": ["aog-baidu-3.webp"],
+  "aog-baidu-1.webp": {
+    "zh": "鞍山腾鳌机场航站楼正面：楼顶立着红色「鞍山」字样与 An Shan 标识，广场上只有零星车辆。",
+    "en": "The front of Anshan Teng'ao Airport's terminal — red '鞍山' characters and 'An Shan' lettering on the roof, an almost empty forecourt below."
+  },
+  "aog-baidu-2.webp": {
+    "zh": "航站楼近景：玻璃幕墙前的台阶与灯笼，左侧是圆形的塔台。",
+    "en": "A closer view of the terminal — steps and lanterns before the glazed frontage, the round control tower to the left."
+  }
+}

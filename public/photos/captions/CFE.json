@@ -1,0 +1,12 @@
+{
+  "_note": "cfe-baidu-1 is a hotel listing photo (ibis Styles), not the airport.",
+  "_skip": ["cfe-baidu-1.webp"],
+  "cfe-baidu-2.webp": {
+    "zh": "公务航空航站楼（terminal affaires）：深色外墙上写着「départs · departures」，门前是旋转门与落客车道。",
+    "en": "The business-aviation terminal — 'départs / departures' across its dark façade, a revolving door and drop-off lane in front."
+  },
+  "cfe-baidu-3.webp": {
+    "zh": "停机坪上的一架达索猎鹰公务机，后方是机场塔台与航站楼。",
+    "en": "A Dassault Falcon business jet on the apron, with the control tower and terminal behind it."
+  }
+}

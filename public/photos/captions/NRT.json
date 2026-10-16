@@ -1,0 +1,12 @@
+{
+  "_note": "nrt-baidu-2 is a real photo but carries heavy social-post text overlays ('成田', 'HELLO:)', a slogan), which reads as a post rather than a gallery picture.",
+  "_skip": ["nrt-baidu-2.webp"],
+  "nrt-baidu-1.webp": {
+    "zh": "第 1 航站楼的国内出发大厅：指示牌以日中韩英四语标出「国内线 出发」。",
+    "en": "Terminal 1's domestic departures hall, the sign reading 'Domestic Departures' in Japanese, Chinese, Korean and English."
+  },
+  "nrt-baidu-3.webp": {
+    "zh": "从航站楼望向机坪：全日空的 787 与两架香草航空的 A320 停在远处。",
+    "en": "The apron seen from the terminal — an ANA 787 and two Vanilla Air A320s parked beyond."
+  }
+}

@@ -450,6 +450,18 @@ export const tw: Messages = {
     mapAlt: (name: string, iata: string) =>
       `${name}（${iata}）航廈地圖，含各航廈、閘口與指廊分佈`,
     realMapNote: 'TERMINAL MAP',
+    /** 機場實景照片板塊：照片下載自公開網路來源，署名行連結回原始頁面。 */
+    photosKicker: 'Photos',
+    photosTitle: '機場實景照片',
+    photosEn: 'Airport Photos',
+    photosSub:
+      '以下為該機場的實景照片，均來自公開網路來源並在每張圖下標明出處，版權歸原作者所有。點選圖片可放大檢視，點選署名可開啟原始頁面。',
+    photosCredit: (host: string) => `來源：${host}`,
+    /** 未寫編輯說明時的 alt 兜底：機場全稱 + 代碼 + 序號。 */
+    photosAlt: (name: string, iata: string, index: number) =>
+      `${name}（${iata}）機場實景照片 ${index}`,
+    /** 圖片按鈕的無障礙標籤（點選開啟燈箱）。 */
+    photosZoom: (name: string, index: number) => `放大檢視 ${name} 的第 ${index} 張照片`,
     /** 終端圖下方的下載按鈕：圖片直接下載，PDF 按鈕跳轉谷歌搜尋官方 PDF。 */
     zoomLabel: '放大',
     zoomClose: '關閉',
@@ -646,6 +658,7 @@ export const tw: Messages = {
   toc: {
     label: '頁面導航',
     map: '航廈地圖',
+    photos: '實景照片',
     time: '機場時間',
     details: '機場資訊',
     links: '相關連結',

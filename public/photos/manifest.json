@@ -1,1 +1,3299 @@
-{"note":"Airport photos with attribution, written by scripts/fetch-airport-photos.mjs. Run it where Wikimedia is reachable.","airports":{"AAA":[{"file":"aaa-bing-1.webp","width":900,"height":600,"source":"bing","host":"maps.flightsfrom.com","pageUrl":"https://www.flightsfrom.com/AAA","imageUrl":"https://maps.flightsfrom.com/flightsfrom/airport-from-routes/aaa-900x600.webp","title":"Direct (non-stop) flights from Anaa Airport (AAA) - FlightsFrom.com","licenseFilter":null,"query":"Anaa Airport"},{"file":"aaa-bing-2.webp","width":900,"height":900,"source":"bing","host":"maps.directflights.com","pageUrl":"https://www.directflights.com/to/AAA","imageUrl":"https://maps.directflights.com/directflights/airport-to-routes/aaa-900x900.webp","title":"Direct flights to Anaa - AAA, French Polynesia - Directflights.com","licenseFilter":null,"query":"Anaa Airport"},{"file":"aaa-bing-3.webp","width":670,"height":365,"source":"bing","host":"kupi.com","pageUrl":"https://www.kupi.com/en-ae/explore/french-polynesia/anaa/anaa","imageUrl":"https://www.kupi.com/kland-storage/images/670x0/30x30/anyports/pf/anaa/26c84210-ac4a-4438-89ec-08ffd9337a95.webp","title":"Anaa Airport (AAA) guide – map, terminals and transport","licenseFilter":null,"query":"Anaa Airport"}],"AAL":[{"file":"aal-bing-1.webp","width":960,"height":580,"source":"bing","host":"aalborgairport.net","pageUrl":"https://aalborgairport.net/","imageUrl":"https://aalborgairport.net/media/0fzfixef/aalborg-airport-aal.jpg?anchor=center&mode=crop&width=960&height=580&format=auto&quality=90&rnd=132362593332200000","title":"Aalborg Airport | Guide to Aalborg Airport (AAL)","licenseFilter":null,"query":"Aalborg Airport"},{"file":"aal-bing-2.webp","width":650,"height":319,"source":"bing","host":"aeropuertos.net","pageUrl":"https://www.aeropuertos.net/aeropuerto-de-aalborg/","imageUrl":"https://www.aeropuertos.net/imagenes/Aeropuerto-de-Aalborg.jpg","title":"Aeropuerto de Aalborg (AAL) - Aeropuertos.Net","licenseFilter":null,"query":"Aalborg Airport"},{"file":"aal-bing-3.webp","width":800,"height":533,"source":"bing","host":"discover-airport.com","pageUrl":"https://www.discover-airport.com/aalborg/","imageUrl":"https://www.discover-airport.com/aalborg/images/aalborg-airport.jpg","title":"Aalborg Airport (AAL)","licenseFilter":null,"query":"Aalborg Airport"}],"AAN":[{"file":"aan-bing-1.webp","width":1000,"height":416,"source":"bing","host":"airportterminalservices.net","pageUrl":"https://www.airportterminalservices.net/gulf-air-aan-terminal-al-ain-international-airport/","imageUrl":"https://www.airportterminalservices.net/wp-content/uploads/2023/06/Al-Ain-International-Airport.jpg","title":"Gulf Air AAN Terminal – Al Ain International Airport ...","licenseFilter":null,"query":"Al Ain International Airport"},{"file":"aan-bing-2.webp","width":860,"height":433,"source":"bing","host":"waimaoribao.com","pageUrl":"https://www.waimaoribao.com/3/56789.html","imageUrl":"https://www.waimaoribao.com/wp-content/uploads/2022/09/aan.jpg","title":"艾因国际机场 - Al Ain International Airport","licenseFilter":null,"query":"Al Ain International Airport"}],"ABD":[{"file":"abd-bing-1.webp","width":1280,"height":720,"source":"bing","host":"flyterminals.com","pageUrl":"https://www.flyterminals.com/qeshm-air/qeshm-air-terminal-omh-airport/","imageUrl":"https://www.flyterminals.com/wp-content/uploads/2025/11/abadan-international-airport.webp","title":"Qeshm Air OMH Terminal - Urmia Intl. Airport - FlyTerminals","licenseFilter":null,"query":"Abadan Ayatollah Jami International Airport"},{"file":"abd-bing-2.webp","width":1200,"height":630,"source":"bing","host":"iata-codes.com","pageUrl":"https://iata-codes.com/fr/aeroport/ABD","imageUrl":"https://iata-codes.com/og-image.php?type=airport&code=ABD&title=Abadan+Airport&subtitle=Abadan+Airport%2C+IR","title":"Abadan Airport (ABD) | Infos Aéroport, Radar en Direct & METAR","licenseFilter":null,"query":"Abadan Ayatollah Jami International Airport"},{"file":"abd-bing-3.webp","width":800,"height":500,"source":"bing","host":"safarmarket.com","pageUrl":"https://safarmarket.com/blog/attractions/iran/abadan/abadan-ayatollah-jami-international-airport","imageUrl":"https://safarmarket.com/blog/data/uploaded_files/57e42f2997deb9b772ea2a4d.jpg","title":"اطلاعات پرواز فرودگاه آبادان","licenseFilter":null,"query":"Abadan Ayatollah Jami International Airport"}],"ABQ":[{"file":"abq-bing-1.webp","width":960,"height":580,"source":"bing","host":"albuquerqueairport.net","pageUrl":"https://albuquerqueairport.net/","imageUrl":"https://albuquerqueairport.net/media/x20bbeag/albuquerque-international-sunport-abq.jpg?anchor=center&mode=crop&width=960&height=580&format=auto&quality=90&rnd=133082461165900000","title":"Albuquerque Sunport Airport | Guide to Albuquerque Sunport Airport (ABQ)","licenseFilter":null,"query":"Albuquerque International Sunport"},{"file":"abq-bing-2.webp","width":1400,"height":975,"source":"bing","host":"airportindustry-news.com","pageUrl":"https://airportindustry-news.com/albuquerque-international-sunport-to-upgrade-terminal-infrastructure/","imageUrl":"https://airportindustry-news.com/wp-content/uploads/sites/2/2022/01/Alburquerque-International-Sunport.jpeg","title":"Albuquerque International Sunport to Upgrade Terminal Infrastructure ...","licenseFilter":null,"query":"Albuquerque International Sunport"},{"file":"abq-bing-3.webp","width":1400,"height":788,"source":"bing","host":"images.ifly.com","pageUrl":"https://www.ifly.com/airports/albuquerque-international-sunport-airport","imageUrl":"https://images.ifly.com/ABQ/Albuquerque-Airport-ABQ-aerial-view.jpg?tr=w-2048","title":"Albuquerque Airport ABQ: Help & Info Guide - iFLY","licenseFilter":null,"query":"Albuquerque International Sunport"}],"ABR":[{"file":"abr-bing-1.webp","width":866,"height":675,"source":"bing","host":"aberdeenregionalairport.us","pageUrl":"https://aberdeenregionalairport.us/about/","imageUrl":"https://aberdeenregionalairport.us/wp-content/uploads/aberdeen-regional-airport-mural.jpg","title":"Learn About The Aberdeen Regional Airport","licenseFilter":null,"query":"Aberdeen Regional Airport"},{"file":"abr-bing-2.webp","width":1400,"height":874,"source":"bing","host":"aberdeenregionalairport.com","pageUrl":"https://aberdeenregionalairport.com/36-2/","imageUrl":"https://aberdeenregionalairport.com/wp-content/uploads/2021/03/ABR_Terminal-3.jpg","title":"Getting You Back on Vacation – Aberdeen Regional Airport","licenseFilter":null,"query":"Aberdeen Regional Airport"},{"file":"abr-bing-3.webp","width":750,"height":1000,"source":"bing","host":"s3-media0.fl.yelpcdn.com","pageUrl":"https://www.yelp.com/biz/aberdeen-regional-airport-aberdeen","imageUrl":"https://s3-media0.fl.yelpcdn.com/bphoto/_bJPvKDOulXYosGHZsTgUQ/o.jpg","title":"ABERDEEN REGIONAL AIRPORT - Updated March 2026 - 4740 6th Ave SE ...","licenseFilter":null,"query":"Aberdeen Regional Airport"}],"ABS":[{"file":"abs-bing-1.webp","width":1400,"height":1050,"source":"bing","host":"airports-worldwide.com","pageUrl":"https://www.airports-worldwide.com/egypt/abu_simbel_egypt.php","imageUrl":"https://www.airports-worldwide.com/img/w/abu_simbel_airport.jpg","title":"Abu Simbel Airport","licenseFilter":null,"query":"Abu Simbel Airport"},{"file":"abs-bing-2.webp","width":1200,"height":800,"source":"bing","host":"egypttoursportal.com","pageUrl":"https://www.egypttoursportal.com/en-gb/egypt-travel-blogs/egypt-airports/","imageUrl":"https://www.egypttoursportal.com/images/2024/01/Abu-Simbel-International-Airport-Egypt-Airports-Egypt-Tours-Portal.jpg","title":"Egypt Airports: The Most 19 Famous Airports in Egypt","licenseFilter":null,"query":"Abu Simbel Airport"},{"file":"abs-bing-3.webp","width":1320,"height":650,"source":"bing","host":"egyptatours.com","pageUrl":"https://egyptatours.com/abu-simbel-airport/","imageUrl":"https://egyptatours.com/wp-content/uploads/2025/10/bu-Simbel-Airport-Terminal-Building-EgyptaTours.webp","title":"Abu Simbel Airport – Gateway to Magnificent Temples","licenseFilter":null,"query":"Abu Simbel Airport"}],"ACY":[{"file":"acy-bing-1.webp","width":1400,"height":748,"source":"bing","host":"airportix.com","pageUrl":"https://airportix.com/acy/","imageUrl":"https://airportix.com/wp-content/uploads/2018/03/atlantic-city-airport.jpg","title":"Atlantic City (ACY) International Airport | New Jersey","licenseFilter":null,"query":"Atlantic City International Airport"},{"file":"acy-bing-2.webp","width":980,"height":653,"source":"bing","host":"townsquare.media","pageUrl":"https://wpgtalkradio.com/allegiant-airlines-atlantic-city-international-airport/","imageUrl":"https://townsquare.media/site/564/files/2025/05/attachment-Atlantic-City-International-Airport.jpg?w=980&q=75","title":"Allegiant Airlines Announces Flights at Atlantic City Airport","licenseFilter":null,"query":"Atlantic City International Airport"},{"file":"acy-bing-3.webp","width":1400,"height":930,"source":"bing","host":"costar.brightspotcdn.com","pageUrl":"https://www.costar.com/article/595092364/industrial-realty-secures-400-acres-at-atlantic-city-airport-for-logistics-development","imageUrl":"https://costar.brightspotcdn.com/dims4/default/ec33011/2147483647/strip/true/crop/2100x1395+0+0/resize/2100x1395!/quality/100/?url=http:%2F%2Fcostar-brightspot.s3.us-east-1.amazonaws.com%2F6e%2F1f%2Fa2f194794758ac25086c6b83b78c%2Facy-aerial.jpg","title":"News | Industrial Realty Secures 400 Acres at Atlantic City Airport for ...","licenseFilter":null,"query":"Atlantic City International Airport"}],"AAP":[{"file":"aap-bing-1.webp","width":680,"height":453,"source":"bing","host":"indonesiaairport.com","pageUrl":"https://indonesiaairport.com/provinces/kalimantan/samarinda_airport.htm","imageUrl":"https://www.indonesiaairport.com/images/airports/kalimantan/samarinda_airport.jpg","title":"Aji Pangeran Tumenggung Pranoto International Airport ...","licenseFilter":null,"query":"Samarinda Airport"},{"file":"aap-bing-2.webp","width":750,"height":1125,"source":"bing","host":"airportdetails.de","pageUrl":"https://airportdetails.de/aji-pangeran-tumenggung-pranoto-international-airport/","imageUrl":"https://airportdetails.de/wp-content/uploads/airport-samarinda.png","title":"Airport Samarinda 2026: Der ultimative Reiseführer für Ihren perfekten ...","licenseFilter":null,"query":"Samarinda Airport"},{"file":"aap-bing-3.webp","width":1280,"height":721,"source":"bing","host":"nbg1.your-objectstorage.com","pageUrl":"https://thresholdx.net/nuspra/","imageUrl":"https://nbg1.your-objectstorage.com/thx/wp-images/inline/652705938ec40fbe723ee985_327204_3.jpeg","title":"Nu Simulation Releases Pranoto Samarinda International Airport for MSFS ...","licenseFilter":null,"query":"Samarinda Airport"}],"AAX":[{"file":"aax-bing-1.webp","width":1200,"height":300,"source":"bing","host":"images.trvl-media.com","pageUrl":"https://www.expedia.com/Car-Rentals-In-Romeu-Zema.d6177030.Car-Rental-Guide","imageUrl":"https://images.trvl-media.com/place/6034157/1755bce2-c534-48c5-8007-c148c040d259.jpg?impolicy=fcrop&w=1200&h=300&q=medium","title":"Romeu Zema (AAX) Airport Car Rental in Araxá - Expedia","licenseFilter":null,"query":"Romeu Zema Airport"},{"file":"aax-bing-2.webp","width":1024,"height":576,"source":"bing","host":"tvaraxa.com.br","pageUrl":"https://tvaraxa.com.br/2025/11/10/aeroporto-municipal-de-araxa-recebe-nova-iluminacao-e-esta-pronto-para-operar-voos-noturnos/","imageUrl":"https://tvaraxa.com.br/wp-content/uploads/2025/11/Aeroporto-Romeu-Zema-10112025-2-1024x576.jpeg","title":"Aeroporto Municipal de Araxá recebe nova iluminação e está pronto para ...","licenseFilter":null,"query":"Araxá Airport"},{"file":"aax-bing-3.webp","width":1024,"height":648,"source":"bing","host":"aeroin.net","pageUrl":"https://aeroin.net/aeroporto-romeu-zema-em-minas-gerais-e-reaberto-com-voos-de-pilatus-e-querendo-a-azul/","imageUrl":"https://aeroin.net/wp-content/uploads/2021/09/Aeroporto-Araxa-21091101-1024x648.jpg","title":"Aeroporto Romeu Zema, em Minas Gerais, é reaberto com voos de Pilatus e ...","licenseFilter":null,"query":"Romeu Zema Airport"}],"ABA":[{"file":"aba-bing-1.webp","width":1004,"height":652,"source":"bing","host":"yuncargo.cn","pageUrl":"https://www.yuncargo.cn/aba/","imageUrl":"https://www.yuncargo.cn/wp-content/uploads/2024/05/Tupolev_Tu-154M_Pulkovo_Airlines_AN3.jpg","title":"食品添加剂色素从中国深圳空运到阿巴坎国际机场三字代码ABA – 云泽国际物流YUNcargo","licenseFilter":null,"query":"Abakan International Airport"}],"ABB":[{"file":"abb-bing-1.webp","width":800,"height":533,"source":"bing","host":"nyongesasande.com","pageUrl":"https://www.nyongesasande.com/asaba-international-airport/","imageUrl":"https://www.nyongesasande.com/wp-content/uploads/2023/07/AsabaInternationalAirport-AerialView.jpg","title":"Asaba International Airport","licenseFilter":null,"query":"Asaba International Airport"},{"file":"abb-bing-2.webp","width":800,"height":533,"source":"bing","host":"media.premiumtimesng.com","pageUrl":"https://www.premiumtimesng.com/regional/south-south-regional/421894-delta-lawmakers-approve-concessioning-of-asaba-airport.html","imageUrl":"https://media.premiumtimesng.com/wp-content/files/2020/08/AsabaAirport-e1596736776907.jpeg","title":"Delta lawmakers approve concessioning of Asaba Airport","licenseFilter":null,"query":"Asaba International Airport"},{"file":"abb-bing-3.webp","width":800,"height":600,"source":"bing","host":"cimages.timbu.com","pageUrl":"https://hotels.ng/guides/airtravel-airports-terminals/asaba-international-airport-latest-updates/","imageUrl":"https://cimages.timbu.com/guides/2020/09/225c408b-asaba-international-airport.jpg","title":"Asaba International Airport - POPULAR DESTINATIONS, TERMINALS AND ...","licenseFilter":null,"query":"Asaba International Airport"}],"ABI":[{"file":"abi-bing-1.webp","width":1200,"height":630,"source":"bing","host":"abilenevisitors.com","pageUrl":"https://www.abilenevisitors.com/plan/traveling-to-abilene/abilene-regional-airport/","imageUrl":"https://www.abilenevisitors.com/imager/cmsimages/701280/Abilene-Regional-Airport_91852798b59be8b28fc00edfe4aec23a.JPG","title":"Abilene Regional Airport Flights & Info | Abilene, TX","licenseFilter":null,"query":"Abilene Regional Airport"},{"file":"abi-bing-2.webp","width":986,"height":554,"source":"bing","host":"ktxs.com","pageUrl":"https://ktxs.com/archive/abilene-regional-airport-reopens-after-runway-thaws","imageUrl":"https://ktxs.com/resources/media/2fd34443-e228-41c7-8806-6a31a75ce089-large16x9_abileneregionalairport1514827539133jpg9857002ver10.jpg?1515359279027","title":"Abilene Regional Airport reopens...","licenseFilter":null,"query":"Abilene Regional Airport"},{"file":"abi-bing-3.webp","width":960,"height":640,"source":"bing","host":"garverusa.blob.core.windows.net","pageUrl":"https://garverusa.com/markets/aviation/projects/abilene-regional-airport","imageUrl":"https://garverusa.blob.core.windows.net/images/project-photos/aviation/abilene-regional-airport/_960x640_crop_center-center_60_none/abilene-regional-airport1.jpg","title":"ABI Runway Rehabilitation - Runway 17L-35R Rehabilitation - Garver","licenseFilter":null,"query":"Abilene Regional Airport"}],"ACD":[{"file":"acd-bing-1.webp","width":750,"height":500,"source":"bing","host":"choco7dias.com","pageUrl":"https://choco7dias.com/adecuan-el-aeropuerto-alcides-fernandez-de-acandi/","imageUrl":"https://choco7dias.com/wp-content/uploads/2020/10/aeropuerto-acandi-choco.jpg","title":"Adecúan el aeropuerto ‘Alcides Fernández’ de Acandí - Chocó7días.com","licenseFilter":null,"query":"Acandí Airport"},{"file":"acd-bing-2.webp","width":1400,"height":700,"source":"bing","host":"images.ctfassets.net","pageUrl":"https://rutas-destinos.satena.com/es/vuelos-baratos-desde-villavicencio-a-acandi","imageUrl":"https://images.ctfassets.net/1nwnyod3i2qh/3itle5XaSQ86s7BRvhpyI2/404a476fed3ac3ece3db622b8893548d/Satena-vuelos-a-acandi-colombia-tiquetes-acd.jpg?w=1900&h=950&fm=webp&q=50&fit=scale","title":"Vuelos desde Villavicencio a Acandi (VVC-ACD)","licenseFilter":null,"query":"Acandí Airport"},{"file":"acd-bing-3.webp","width":1200,"height":900,"source":"bing","host":"edge.wego.com","pageUrl":"https://www.wego.com.co/vuelos/mde/acd/vuelos-mas-baratos-desde-medellin-a-acandi","imageUrl":"https://edge.wego.com/image/upload/w_1200,c_fill,f_auto,fl_lossy,q_auto:good,g_auto/destinations/cities/ACD.jpg","title":"Vuelos baratos de Medellin a Acandí desde | MDE - ACD | www.wego.com.co","licenseFilter":null,"query":"Acandí Airport"}],"ACE":[{"file":"ace-bing-1.webp","width":1200,"height":630,"source":"bing","host":"bigairports.com","pageUrl":"https://www.bigairports.com/airport/ACE/","imageUrl":"https://www.bigairports.com/og/ACE.jpg","title":"San Bartolomé ACE — #14 Airport in Africa | BigAirports","licenseFilter":null,"query":"San Bartolomé Airport"},{"file":"ace-bing-2.webp","width":1030,"height":541,"source":"bing","host":"gazettelife.com","pageUrl":"https://gazettelife.com/news/san-bartolome-offer-to-tidy-lanzarote-airport-grounds/","imageUrl":"https://gazettelife.com/wp-content/uploads/2025/09/airport-play-main-1030x541.jpg","title":"San Bartolomé offer to tidy Lanzarote Airport grounds","licenseFilter":null,"query":"San Bartolomé Airport"}],"ACV":[{"file":"acv-bing-1.webp","width":986,"height":555,"source":"bing","host":"krcrtv.com","pageUrl":"https://krcrtv.com/north-coast-news/eureka-local-news/airports-in-humboldt-county-receive-18-million-in-funding-from-the-care-act","imageUrl":"https://krcrtv.com/resources/media/2feeb1e3-bed7-4762-8816-9f70d8c5e874-large16x9_airportarcata.PNG?1647413569960","title":"Airports in Humboldt County receive $18 million in funding from the ...","licenseFilter":null,"query":"Arcata/Eureka Airport"},{"file":"acv-bing-2.webp","width":640,"height":400,"source":"bing","host":"parkingaccess.com","pageUrl":"https://resource.christoph-schaarschmidt.de/arcataeureka-airport-acv-airlines/","imageUrl":"https://parkingaccess.com/airport-lots-map/ACV","title":"Arcata-Eureka Airport Acv – Airlines – RXFRF","licenseFilter":null,"query":"Arcata/Eureka Airport"},{"file":"acv-bing-3.webp","width":750,"height":1000,"source":"bing","host":"s3-media0.fl.yelpcdn.com","pageUrl":"https://www.yelp.com/biz/arcata-eureka-airport-acv-mckinleyville","imageUrl":"https://s3-media0.fl.yelpcdn.com/bphoto/v94gLPjItwYQgFEK9h1MtA/o.jpg","title":"ARCATA-EUREKA AIRPORT - ACV - Updated July 2026 - 123 Photos & 69 ...","licenseFilter":null,"query":"Arcata/Eureka Airport"}],"ADE":[{"file":"ade-bing-1.webp","width":1280,"height":720,"source":"bing","host":"images.nomadlawyer.org","pageUrl":"https://www.nomadlawyer.org/yemen-aden-airport-drone-attack-middle-east-aviation-security-2026","imageUrl":"https://images.nomadlawyer.org/images/blog/travel-alert/2026/10/yemen-aden-airport-drone-attack-middle-east-aviation-security-2026.jpg","title":"Aden Airport Drone Escalation Triggers Middle East...","licenseFilter":null,"query":"Aden International Airport"},{"file":"ade-bing-2.webp","width":640,"height":359,"source":"bing","host":"thediplomaticinsight.com","pageUrl":"https://thediplomaticinsight.com/houthis-target-aden-airport-missile-attacks-ksa/","imageUrl":"https://thediplomaticinsight.com/wp-content/uploads/Houthis-Target-Aden-Airport-as-Missile-Attacks-Intensify-Against-Saudi-Arabia.webp","title":"Houthis Target Aden Airport as Missile Attacks Intensify Against Saudi ...","licenseFilter":null,"query":"Aden International Airport"},{"file":"ade-bing-3.webp","width":640,"height":400,"source":"bing","host":"static-cdn.toi-media.com","pageUrl":"https://www.timesofisrael.com/houthis-attack-aden-airport-with-missiles-and-drones-amid-yemen-government-counteroffensive/","imageUrl":"https://static-cdn.toi-media.com/www/uploads/2026/10/AFP__20230511__33EU3VA__v1__HighRes__YemenConflictAirport-640x400.jpg","title":"Houthis attack Aden airport with missiles and drones, amid Yemen ...","licenseFilter":null,"query":"Aden International Airport"}],"ADK":[{"file":"adk-bing-1.webp","width":780,"height":438,"source":"bing","host":"explore.com","pageUrl":"https://www.explore.com/2032849/adak-alaska-westernmost-commercial-airport-us-unique-experience-upon-arrival/","imageUrl":"https://www.explore.com/img/gallery/the-westernmost-commercial-airport-in-the-us-offers-a-unique-experience-upon-arrival/why-adak-airport-feels-so-different-1763680516.jpg","title":"The Westernmost Commercial Airport In The US Offers A Unique Experience ...","licenseFilter":null,"query":"Adak Airport"},{"file":"adk-bing-2.webp","width":670,"height":365,"source":"bing","host":"kupi.com","pageUrl":"https://www.kupi.com/en/explore/united-states/adak/adak-airport","imageUrl":"https://www.kupi.com/kland-storage/images/670x0/30x30/anyports/us/adak-airport/014e79c0-e06f-49f9-90a9-b03ef1fa6010.webp","title":"Adak Airport (ADK) guide – flights, history and tips","licenseFilter":null,"query":"Adak Airport"},{"file":"adk-bing-3.webp","width":640,"height":480,"source":"bing","host":"airports-worldwide.com","pageUrl":"https://www.airports-worldwide.com/usa/alaska/adak_alaska.htm","imageUrl":"https://www.airports-worldwide.com/img/usa/alaska/big/adak_alaska_usa_03_big.jpg","title":"Adak Airport","licenseFilter":null,"query":"Adak Airport"}],"ADM":[{"file":"adm-bing-1.webp","width":1400,"height":1050,"source":"bing","host":"image.airport-data.com","pageUrl":"https://airport-data.com/airport/photo/006811","imageUrl":"https://image.airport-data.com/airport/006811.jpg","title":"Ardmore Municipal Airport Photo by B.Pine (Photo ID: AP6811)","licenseFilter":null,"query":"Ardmore Municipal Airport"},{"file":"adm-bing-2.webp","width":1080,"height":1350,"source":"bing","host":"skybirdsupply.com","pageUrl":"https://skybirdsupply.com/products/adm-airport-map-ardmore-municipal-airport-print","imageUrl":"https://skybirdsupply.com/cdn/shop/files/8fad88b9-1ba3-459e-8c4e-60611754a993_1038817c-0ffd-4ca0-9f8a-628b95b0d31b.jpg?v=1780471420&width=1080","title":"Ardmore Municipal Airport Map Wall Art Framed Print – ADM Aviation ...","licenseFilter":null,"query":"Ardmore Municipal Airport"},{"file":"adm-bing-3.webp","width":1200,"height":630,"source":"bing","host":"bloximages.chicago2.vip.townnews.com","pageUrl":"https://www.kten.com/new-airport-apron-coming-to-ardmore-municipal-airport/article_0d349559-b3f2-55fa-8a2f-2a58ead58a11.html","imageUrl":"https://bloximages.chicago2.vip.townnews.com/kten.com/content/tncms/assets/v3/editorial/3/14/3143af3c-0e57-5261-afdf-2abf214dcb91/668eff188af1a.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize","title":"New airport apron coming to Ardmore Municipal Airport | | kten.com","licenseFilter":null,"query":"Ardmore Municipal Airport"}]}}
+{
+  "note": "Airport photos with attribution, written by scripts/fetch-airport-photos.mjs. Run it where Wikimedia is reachable.",
+  "airports": {
+    "AAA": [
+      {
+        "file": "aaa-bing-1.webp",
+        "width": 900,
+        "height": 600,
+        "source": "bing",
+        "host": "maps.flightsfrom.com",
+        "pageUrl": "https://www.flightsfrom.com/AAA",
+        "imageUrl": "https://maps.flightsfrom.com/flightsfrom/airport-from-routes/aaa-900x600.webp",
+        "title": "Direct (non-stop) flights from Anaa Airport (AAA) - FlightsFrom.com",
+        "licenseFilter": null,
+        "query": "Anaa Airport"
+      },
+      {
+        "file": "aaa-bing-2.webp",
+        "width": 900,
+        "height": 900,
+        "source": "bing",
+        "host": "maps.directflights.com",
+        "pageUrl": "https://www.directflights.com/to/AAA",
+        "imageUrl": "https://maps.directflights.com/directflights/airport-to-routes/aaa-900x900.webp",
+        "title": "Direct flights to Anaa - AAA, French Polynesia - Directflights.com",
+        "licenseFilter": null,
+        "query": "Anaa Airport"
+      },
+      {
+        "file": "aaa-bing-3.webp",
+        "width": 670,
+        "height": 365,
+        "source": "bing",
+        "host": "kupi.com",
+        "pageUrl": "https://www.kupi.com/en-ae/explore/french-polynesia/anaa/anaa",
+        "imageUrl": "https://www.kupi.com/kland-storage/images/670x0/30x30/anyports/pf/anaa/26c84210-ac4a-4438-89ec-08ffd9337a95.webp",
+        "title": "Anaa Airport (AAA) guide – map, terminals and transport",
+        "licenseFilter": null,
+        "query": "Anaa Airport"
+      },
+      {
+        "file": "aaa-page-1.webp",
+        "width": 1600,
+        "height": 1089,
+        "source": "page",
+        "host": "eol.jsc.nasa.gov",
+        "pageUrl": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS007&roll=E&frame=14624",
+        "imageUrl": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS007/ISS007-E-14624.JPG",
+        "title": "Anaa atoll from the International Space Station (NASA ISS007-E-14624, public domain)",
+        "licenseFilter": null,
+        "query": "page:eol.jsc.nasa.gov"
+      }
+    ],
+    "AAL": [
+      {
+        "file": "aal-bing-1.webp",
+        "width": 960,
+        "height": 580,
+        "source": "bing",
+        "host": "aalborgairport.net",
+        "pageUrl": "https://aalborgairport.net/",
+        "imageUrl": "https://aalborgairport.net/media/0fzfixef/aalborg-airport-aal.jpg?anchor=center&mode=crop&width=960&height=580&format=auto&quality=90&rnd=132362593332200000",
+        "title": "Aalborg Airport | Guide to Aalborg Airport (AAL)",
+        "licenseFilter": null,
+        "query": "Aalborg Airport"
+      },
+      {
+        "file": "aal-bing-2.webp",
+        "width": 650,
+        "height": 319,
+        "source": "bing",
+        "host": "aeropuertos.net",
+        "pageUrl": "https://www.aeropuertos.net/aeropuerto-de-aalborg/",
+        "imageUrl": "https://www.aeropuertos.net/imagenes/Aeropuerto-de-Aalborg.jpg",
+        "title": "Aeropuerto de Aalborg (AAL) - Aeropuertos.Net",
+        "licenseFilter": null,
+        "query": "Aalborg Airport"
+      },
+      {
+        "file": "aal-bing-3.webp",
+        "width": 800,
+        "height": 533,
+        "source": "bing",
+        "host": "discover-airport.com",
+        "pageUrl": "https://www.discover-airport.com/aalborg/",
+        "imageUrl": "https://www.discover-airport.com/aalborg/images/aalborg-airport.jpg",
+        "title": "Aalborg Airport (AAL)",
+        "licenseFilter": null,
+        "query": "Aalborg Airport"
+      }
+    ],
+    "AAN": [
+      {
+        "file": "aan-bing-1.webp",
+        "width": 1000,
+        "height": 416,
+        "source": "bing",
+        "host": "airportterminalservices.net",
+        "pageUrl": "https://www.airportterminalservices.net/gulf-air-aan-terminal-al-ain-international-airport/",
+        "imageUrl": "https://www.airportterminalservices.net/wp-content/uploads/2023/06/Al-Ain-International-Airport.jpg",
+        "title": "Gulf Air AAN Terminal – Al Ain International Airport ...",
+        "licenseFilter": null,
+        "query": "Al Ain International Airport"
+      },
+      {
+        "file": "aan-bing-2.webp",
+        "width": 860,
+        "height": 433,
+        "source": "bing",
+        "host": "waimaoribao.com",
+        "pageUrl": "https://www.waimaoribao.com/3/56789.html",
+        "imageUrl": "https://www.waimaoribao.com/wp-content/uploads/2022/09/aan.jpg",
+        "title": "艾因国际机场 - Al Ain International Airport",
+        "licenseFilter": null,
+        "query": "Al Ain International Airport"
+      }
+    ],
+    "ABD": [
+      {
+        "file": "abd-bing-1.webp",
+        "width": 1280,
+        "height": 720,
+        "source": "bing",
+        "host": "flyterminals.com",
+        "pageUrl": "https://www.flyterminals.com/qeshm-air/qeshm-air-terminal-omh-airport/",
+        "imageUrl": "https://www.flyterminals.com/wp-content/uploads/2025/11/abadan-international-airport.webp",
+        "title": "Qeshm Air OMH Terminal - Urmia Intl. Airport - FlyTerminals",
+        "licenseFilter": null,
+        "query": "Abadan Ayatollah Jami International Airport"
+      },
+      {
+        "file": "abd-bing-2.webp",
+        "width": 1200,
+        "height": 630,
+        "source": "bing",
+        "host": "iata-codes.com",
+        "pageUrl": "https://iata-codes.com/fr/aeroport/ABD",
+        "imageUrl": "https://iata-codes.com/og-image.php?type=airport&code=ABD&title=Abadan+Airport&subtitle=Abadan+Airport%2C+IR",
+        "title": "Abadan Airport (ABD) | Infos Aéroport, Radar en Direct & METAR",
+        "licenseFilter": null,
+        "query": "Abadan Ayatollah Jami International Airport"
+      },
+      {
+        "file": "abd-bing-3.webp",
+        "width": 800,
+        "height": 500,
+        "source": "bing",
+        "host": "safarmarket.com",
+        "pageUrl": "https://safarmarket.com/blog/attractions/iran/abadan/abadan-ayatollah-jami-international-airport",
+        "imageUrl": "https://safarmarket.com/blog/data/uploaded_files/57e42f2997deb9b772ea2a4d.jpg",
+        "title": "اطلاعات پرواز فرودگاه آبادان",
+        "licenseFilter": null,
+        "query": "Abadan Ayatollah Jami International Airport"
+      }
+    ],
+    "ABQ": [
+      {
+        "file": "abq-bing-1.webp",
+        "width": 960,
+        "height": 580,
+        "source": "bing",
+        "host": "albuquerqueairport.net",
+        "pageUrl": "https://albuquerqueairport.net/",
+        "imageUrl": "https://albuquerqueairport.net/media/x20bbeag/albuquerque-international-sunport-abq.jpg?anchor=center&mode=crop&width=960&height=580&format=auto&quality=90&rnd=133082461165900000",
+        "title": "Albuquerque Sunport Airport | Guide to Albuquerque Sunport Airport (ABQ)",
+        "licenseFilter": null,
+        "query": "Albuquerque International Sunport"
+      },
+      {
+        "file": "abq-bing-2.webp",
+        "width": 1400,
+        "height": 975,
+        "source": "bing",
+        "host": "airportindustry-news.com",
+        "pageUrl": "https://airportindustry-news.com/albuquerque-international-sunport-to-upgrade-terminal-infrastructure/",
+        "imageUrl": "https://airportindustry-news.com/wp-content/uploads/sites/2/2022/01/Alburquerque-International-Sunport.jpeg",
+        "title": "Albuquerque International Sunport to Upgrade Terminal Infrastructure ...",
+        "licenseFilter": null,
+        "query": "Albuquerque International Sunport"
+      },
+      {
+        "file": "abq-bing-3.webp",
+        "width": 1400,
+        "height": 788,
+        "source": "bing",
+        "host": "images.ifly.com",
+        "pageUrl": "https://www.ifly.com/airports/albuquerque-international-sunport-airport",
+        "imageUrl": "https://images.ifly.com/ABQ/Albuquerque-Airport-ABQ-aerial-view.jpg?tr=w-2048",
+        "title": "Albuquerque Airport ABQ: Help & Info Guide - iFLY",
+        "licenseFilter": null,
+        "query": "Albuquerque International Sunport"
+      }
+    ],
+    "ABR": [
+      {
+        "file": "abr-bing-1.webp",
+        "width": 866,
+        "height": 675,
+        "source": "bing",
+        "host": "aberdeenregionalairport.us",
+        "pageUrl": "https://aberdeenregionalairport.us/about/",
+        "imageUrl": "https://aberdeenregionalairport.us/wp-content/uploads/aberdeen-regional-airport-mural.jpg",
+        "title": "Learn About The Aberdeen Regional Airport",
+        "licenseFilter": null,
+        "query": "Aberdeen Regional Airport"
+      },
+      {
+        "file": "abr-bing-2.webp",
+        "width": 1400,
+        "height": 874,
+        "source": "bing",
+        "host": "aberdeenregionalairport.com",
+        "pageUrl": "https://aberdeenregionalairport.com/36-2/",
+        "imageUrl": "https://aberdeenregionalairport.com/wp-content/uploads/2021/03/ABR_Terminal-3.jpg",
+        "title": "Getting You Back on Vacation – Aberdeen Regional Airport",
+        "licenseFilter": null,
+        "query": "Aberdeen Regional Airport"
+      },
+      {
+        "file": "abr-bing-3.webp",
+        "width": 750,
+        "height": 1000,
+        "source": "bing",
+        "host": "s3-media0.fl.yelpcdn.com",
+        "pageUrl": "https://www.yelp.com/biz/aberdeen-regional-airport-aberdeen",
+        "imageUrl": "https://s3-media0.fl.yelpcdn.com/bphoto/_bJPvKDOulXYosGHZsTgUQ/o.jpg",
+        "title": "ABERDEEN REGIONAL AIRPORT - Updated March 2026 - 4740 6th Ave SE ...",
+        "licenseFilter": null,
+        "query": "Aberdeen Regional Airport"
+      }
+    ],
+    "ABS": [
+      {
+        "file": "abs-bing-1.webp",
+        "width": 1400,
+        "height": 1050,
+        "source": "bing",
+        "host": "airports-worldwide.com",
+        "pageUrl": "https://www.airports-worldwide.com/egypt/abu_simbel_egypt.php",
+        "imageUrl": "https://www.airports-worldwide.com/img/w/abu_simbel_airport.jpg",
+        "title": "Abu Simbel Airport",
+        "licenseFilter": null,
+        "query": "Abu Simbel Airport"
+      },
+      {
+        "file": "abs-bing-2.webp",
+        "width": 1200,
+        "height": 800,
+        "source": "bing",
+        "host": "egypttoursportal.com",
+        "pageUrl": "https://www.egypttoursportal.com/en-gb/egypt-travel-blogs/egypt-airports/",
+        "imageUrl": "https://www.egypttoursportal.com/images/2024/01/Abu-Simbel-International-Airport-Egypt-Airports-Egypt-Tours-Portal.jpg",
+        "title": "Egypt Airports: The Most 19 Famous Airports in Egypt",
+        "licenseFilter": null,
+        "query": "Abu Simbel Airport"
+      },
+      {
+        "file": "abs-bing-3.webp",
+        "width": 1320,
+        "height": 650,
+        "source": "bing",
+        "host": "egyptatours.com",
+        "pageUrl": "https://egyptatours.com/abu-simbel-airport/",
+        "imageUrl": "https://egyptatours.com/wp-content/uploads/2025/10/bu-Simbel-Airport-Terminal-Building-EgyptaTours.webp",
+        "title": "Abu Simbel Airport – Gateway to Magnificent Temples",
+        "licenseFilter": null,
+        "query": "Abu Simbel Airport"
+      }
+    ],
+    "ACY": [
+      {
+        "file": "acy-bing-1.webp",
+        "width": 1400,
+        "height": 748,
+        "source": "bing",
+        "host": "airportix.com",
+        "pageUrl": "https://airportix.com/acy/",
+        "imageUrl": "https://airportix.com/wp-content/uploads/2018/03/atlantic-city-airport.jpg",
+        "title": "Atlantic City (ACY) International Airport | New Jersey",
+        "licenseFilter": null,
+        "query": "Atlantic City International Airport"
+      },
+      {
+        "file": "acy-bing-2.webp",
+        "width": 980,
+        "height": 653,
+        "source": "bing",
+        "host": "townsquare.media",
+        "pageUrl": "https://wpgtalkradio.com/allegiant-airlines-atlantic-city-international-airport/",
+        "imageUrl": "https://townsquare.media/site/564/files/2025/05/attachment-Atlantic-City-International-Airport.jpg?w=980&q=75",
+        "title": "Allegiant Airlines Announces Flights at Atlantic City Airport",
+        "licenseFilter": null,
+        "query": "Atlantic City International Airport"
+      },
+      {
+        "file": "acy-bing-3.webp",
+        "width": 1400,
+        "height": 930,
+        "source": "bing",
+        "host": "costar.brightspotcdn.com",
+        "pageUrl": "https://www.costar.com/article/595092364/industrial-realty-secures-400-acres-at-atlantic-city-airport-for-logistics-development",
+        "imageUrl": "https://costar.brightspotcdn.com/dims4/default/ec33011/2147483647/strip/true/crop/2100x1395+0+0/resize/2100x1395!/quality/100/?url=http:%2F%2Fcostar-brightspot.s3.us-east-1.amazonaws.com%2F6e%2F1f%2Fa2f194794758ac25086c6b83b78c%2Facy-aerial.jpg",
+        "title": "News | Industrial Realty Secures 400 Acres at Atlantic City Airport for ...",
+        "licenseFilter": null,
+        "query": "Atlantic City International Airport"
+      }
+    ],
+    "AAP": [
+      {
+        "file": "aap-bing-1.webp",
+        "width": 680,
+        "height": 453,
+        "source": "bing",
+        "host": "indonesiaairport.com",
+        "pageUrl": "https://indonesiaairport.com/provinces/kalimantan/samarinda_airport.htm",
+        "imageUrl": "https://www.indonesiaairport.com/images/airports/kalimantan/samarinda_airport.jpg",
+        "title": "Aji Pangeran Tumenggung Pranoto International Airport ...",
+        "licenseFilter": null,
+        "query": "Samarinda Airport"
+      },
+      {
+        "file": "aap-bing-2.webp",
+        "width": 750,
+        "height": 1125,
+        "source": "bing",
+        "host": "airportdetails.de",
+        "pageUrl": "https://airportdetails.de/aji-pangeran-tumenggung-pranoto-international-airport/",
+        "imageUrl": "https://airportdetails.de/wp-content/uploads/airport-samarinda.png",
+        "title": "Airport Samarinda 2026: Der ultimative Reiseführer für Ihren perfekten ...",
+        "licenseFilter": null,
+        "query": "Samarinda Airport"
+      },
+      {
+        "file": "aap-bing-3.webp",
+        "width": 1280,
+        "height": 721,
+        "source": "bing",
+        "host": "nbg1.your-objectstorage.com",
+        "pageUrl": "https://thresholdx.net/nuspra/",
+        "imageUrl": "https://nbg1.your-objectstorage.com/thx/wp-images/inline/652705938ec40fbe723ee985_327204_3.jpeg",
+        "title": "Nu Simulation Releases Pranoto Samarinda International Airport for MSFS ...",
+        "licenseFilter": null,
+        "query": "Samarinda Airport"
+      }
+    ],
+    "AAX": [
+      {
+        "file": "aax-bing-1.webp",
+        "width": 1200,
+        "height": 300,
+        "source": "bing",
+        "host": "images.trvl-media.com",
+        "pageUrl": "https://www.expedia.com/Car-Rentals-In-Romeu-Zema.d6177030.Car-Rental-Guide",
+        "imageUrl": "https://images.trvl-media.com/place/6034157/1755bce2-c534-48c5-8007-c148c040d259.jpg?impolicy=fcrop&w=1200&h=300&q=medium",
+        "title": "Romeu Zema (AAX) Airport Car Rental in Araxá - Expedia",
+        "licenseFilter": null,
+        "query": "Romeu Zema Airport"
+      },
+      {
+        "file": "aax-bing-2.webp",
+        "width": 1024,
+        "height": 576,
+        "source": "bing",
+        "host": "tvaraxa.com.br",
+        "pageUrl": "https://tvaraxa.com.br/2025/11/10/aeroporto-municipal-de-araxa-recebe-nova-iluminacao-e-esta-pronto-para-operar-voos-noturnos/",
+        "imageUrl": "https://tvaraxa.com.br/wp-content/uploads/2025/11/Aeroporto-Romeu-Zema-10112025-2-1024x576.jpeg",
+        "title": "Aeroporto Municipal de Araxá recebe nova iluminação e está pronto para ...",
+        "licenseFilter": null,
+        "query": "Araxá Airport"
+      },
+      {
+        "file": "aax-bing-3.webp",
+        "width": 1024,
+        "height": 648,
+        "source": "bing",
+        "host": "aeroin.net",
+        "pageUrl": "https://aeroin.net/aeroporto-romeu-zema-em-minas-gerais-e-reaberto-com-voos-de-pilatus-e-querendo-a-azul/",
+        "imageUrl": "https://aeroin.net/wp-content/uploads/2021/09/Aeroporto-Araxa-21091101-1024x648.jpg",
+        "title": "Aeroporto Romeu Zema, em Minas Gerais, é reaberto com voos de Pilatus e ...",
+        "licenseFilter": null,
+        "query": "Romeu Zema Airport"
+      }
+    ],
+    "ABA": [
+      {
+        "file": "aba-bing-1.webp",
+        "width": 1004,
+        "height": 652,
+        "source": "bing",
+        "host": "yuncargo.cn",
+        "pageUrl": "https://www.yuncargo.cn/aba/",
+        "imageUrl": "https://www.yuncargo.cn/wp-content/uploads/2024/05/Tupolev_Tu-154M_Pulkovo_Airlines_AN3.jpg",
+        "title": "食品添加剂色素从中国深圳空运到阿巴坎国际机场三字代码ABA – 云泽国际物流YUNcargo",
+        "licenseFilter": null,
+        "query": "Abakan International Airport"
+      },
+      {
+        "file": "aba-page-1.webp",
+        "width": 1210,
+        "height": 738,
+        "source": "page",
+        "host": "airportabakan.ru",
+        "pageUrl": "https://airportabakan.ru/en/",
+        "imageUrl": "https://airportabakan.ru/images/parking_en.jpg",
+        "title": "Home page of The Abakan Airport - Международный аэропорт Абакан",
+        "licenseFilter": null,
+        "query": "page:airportabakan.ru"
+      },
+      {
+        "file": "aba-page-2.webp",
+        "width": 660,
+        "height": 243,
+        "source": "page",
+        "host": "yablor.ru",
+        "pageUrl": "https://yablor.ru/blogs/po-doroge-iz-abakana-v-moskvu/5073759",
+        "imageUrl": "https://yablor.ru/img/inf.png",
+        "title": "По дороге из Абакана в Москву  | Yablor.ru",
+        "licenseFilter": null,
+        "query": "page:yablor.ru"
+      }
+    ],
+    "ABB": [
+      {
+        "file": "abb-bing-1.webp",
+        "width": 800,
+        "height": 533,
+        "source": "bing",
+        "host": "nyongesasande.com",
+        "pageUrl": "https://www.nyongesasande.com/asaba-international-airport/",
+        "imageUrl": "https://www.nyongesasande.com/wp-content/uploads/2023/07/AsabaInternationalAirport-AerialView.jpg",
+        "title": "Asaba International Airport",
+        "licenseFilter": null,
+        "query": "Asaba International Airport"
+      },
+      {
+        "file": "abb-bing-2.webp",
+        "width": 800,
+        "height": 533,
+        "source": "bing",
+        "host": "media.premiumtimesng.com",
+        "pageUrl": "https://www.premiumtimesng.com/regional/south-south-regional/421894-delta-lawmakers-approve-concessioning-of-asaba-airport.html",
+        "imageUrl": "https://media.premiumtimesng.com/wp-content/files/2020/08/AsabaAirport-e1596736776907.jpeg",
+        "title": "Delta lawmakers approve concessioning of Asaba Airport",
+        "licenseFilter": null,
+        "query": "Asaba International Airport"
+      },
+      {
+        "file": "abb-bing-3.webp",
+        "width": 800,
+        "height": 600,
+        "source": "bing",
+        "host": "cimages.timbu.com",
+        "pageUrl": "https://hotels.ng/guides/airtravel-airports-terminals/asaba-international-airport-latest-updates/",
+        "imageUrl": "https://cimages.timbu.com/guides/2020/09/225c408b-asaba-international-airport.jpg",
+        "title": "Asaba International Airport - POPULAR DESTINATIONS, TERMINALS AND ...",
+        "licenseFilter": null,
+        "query": "Asaba International Airport"
+      }
+    ],
+    "ABI": [
+      {
+        "file": "abi-bing-1.webp",
+        "width": 1200,
+        "height": 630,
+        "source": "bing",
+        "host": "abilenevisitors.com",
+        "pageUrl": "https://www.abilenevisitors.com/plan/traveling-to-abilene/abilene-regional-airport/",
+        "imageUrl": "https://www.abilenevisitors.com/imager/cmsimages/701280/Abilene-Regional-Airport_91852798b59be8b28fc00edfe4aec23a.JPG",
+        "title": "Abilene Regional Airport Flights & Info | Abilene, TX",
+        "licenseFilter": null,
+        "query": "Abilene Regional Airport"
+      },
+      {
+        "file": "abi-bing-2.webp",
+        "width": 986,
+        "height": 554,
+        "source": "bing",
+        "host": "ktxs.com",
+        "pageUrl": "https://ktxs.com/archive/abilene-regional-airport-reopens-after-runway-thaws",
+        "imageUrl": "https://ktxs.com/resources/media/2fd34443-e228-41c7-8806-6a31a75ce089-large16x9_abileneregionalairport1514827539133jpg9857002ver10.jpg?1515359279027",
+        "title": "Abilene Regional Airport reopens...",
+        "licenseFilter": null,
+        "query": "Abilene Regional Airport"
+      },
+      {
+        "file": "abi-bing-3.webp",
+        "width": 960,
+        "height": 640,
+        "source": "bing",
+        "host": "garverusa.blob.core.windows.net",
+        "pageUrl": "https://garverusa.com/markets/aviation/projects/abilene-regional-airport",
+        "imageUrl": "https://garverusa.blob.core.windows.net/images/project-photos/aviation/abilene-regional-airport/_960x640_crop_center-center_60_none/abilene-regional-airport1.jpg",
+        "title": "ABI Runway Rehabilitation - Runway 17L-35R Rehabilitation - Garver",
+        "licenseFilter": null,
+        "query": "Abilene Regional Airport"
+      }
+    ],
+    "ACD": [
+      {
+        "file": "acd-bing-1.webp",
+        "width": 750,
+        "height": 500,
+        "source": "bing",
+        "host": "choco7dias.com",
+        "pageUrl": "https://choco7dias.com/adecuan-el-aeropuerto-alcides-fernandez-de-acandi/",
+        "imageUrl": "https://choco7dias.com/wp-content/uploads/2020/10/aeropuerto-acandi-choco.jpg",
+        "title": "Adecúan el aeropuerto ‘Alcides Fernández’ de Acandí - Chocó7días.com",
+        "licenseFilter": null,
+        "query": "Acandí Airport"
+      },
+      {
+        "file": "acd-bing-2.webp",
+        "width": 1400,
+        "height": 700,
+        "source": "bing",
+        "host": "images.ctfassets.net",
+        "pageUrl": "https://rutas-destinos.satena.com/es/vuelos-baratos-desde-villavicencio-a-acandi",
+        "imageUrl": "https://images.ctfassets.net/1nwnyod3i2qh/3itle5XaSQ86s7BRvhpyI2/404a476fed3ac3ece3db622b8893548d/Satena-vuelos-a-acandi-colombia-tiquetes-acd.jpg?w=1900&h=950&fm=webp&q=50&fit=scale",
+        "title": "Vuelos desde Villavicencio a Acandi (VVC-ACD)",
+        "licenseFilter": null,
+        "query": "Acandí Airport"
+      },
+      {
+        "file": "acd-bing-3.webp",
+        "width": 1200,
+        "height": 900,
+        "source": "bing",
+        "host": "edge.wego.com",
+        "pageUrl": "https://www.wego.com.co/vuelos/mde/acd/vuelos-mas-baratos-desde-medellin-a-acandi",
+        "imageUrl": "https://edge.wego.com/image/upload/w_1200,c_fill,f_auto,fl_lossy,q_auto:good,g_auto/destinations/cities/ACD.jpg",
+        "title": "Vuelos baratos de Medellin a Acandí desde | MDE - ACD | www.wego.com.co",
+        "licenseFilter": null,
+        "query": "Acandí Airport"
+      }
+    ],
+    "ACE": [
+      {
+        "file": "ace-bing-1.webp",
+        "width": 1200,
+        "height": 630,
+        "source": "bing",
+        "host": "bigairports.com",
+        "pageUrl": "https://www.bigairports.com/airport/ACE/",
+        "imageUrl": "https://www.bigairports.com/og/ACE.jpg",
+        "title": "San Bartolomé ACE — #14 Airport in Africa | BigAirports",
+        "licenseFilter": null,
+        "query": "San Bartolomé Airport"
+      },
+      {
+        "file": "ace-bing-2.webp",
+        "width": 1030,
+        "height": 541,
+        "source": "bing",
+        "host": "gazettelife.com",
+        "pageUrl": "https://gazettelife.com/news/san-bartolome-offer-to-tidy-lanzarote-airport-grounds/",
+        "imageUrl": "https://gazettelife.com/wp-content/uploads/2025/09/airport-play-main-1030x541.jpg",
+        "title": "San Bartolomé offer to tidy Lanzarote Airport grounds",
+        "licenseFilter": null,
+        "query": "San Bartolomé Airport"
+      }
+    ],
+    "ACV": [
+      {
+        "file": "acv-bing-1.webp",
+        "width": 986,
+        "height": 555,
+        "source": "bing",
+        "host": "krcrtv.com",
+        "pageUrl": "https://krcrtv.com/north-coast-news/eureka-local-news/airports-in-humboldt-county-receive-18-million-in-funding-from-the-care-act",
+        "imageUrl": "https://krcrtv.com/resources/media/2feeb1e3-bed7-4762-8816-9f70d8c5e874-large16x9_airportarcata.PNG?1647413569960",
+        "title": "Airports in Humboldt County receive $18 million in funding from the ...",
+        "licenseFilter": null,
+        "query": "Arcata/Eureka Airport"
+      },
+      {
+        "file": "acv-bing-2.webp",
+        "width": 640,
+        "height": 400,
+        "source": "bing",
+        "host": "parkingaccess.com",
+        "pageUrl": "https://resource.christoph-schaarschmidt.de/arcataeureka-airport-acv-airlines/",
+        "imageUrl": "https://parkingaccess.com/airport-lots-map/ACV",
+        "title": "Arcata-Eureka Airport Acv – Airlines – RXFRF",
+        "licenseFilter": null,
+        "query": "Arcata/Eureka Airport"
+      },
+      {
+        "file": "acv-bing-3.webp",
+        "width": 750,
+        "height": 1000,
+        "source": "bing",
+        "host": "s3-media0.fl.yelpcdn.com",
+        "pageUrl": "https://www.yelp.com/biz/arcata-eureka-airport-acv-mckinleyville",
+        "imageUrl": "https://s3-media0.fl.yelpcdn.com/bphoto/v94gLPjItwYQgFEK9h1MtA/o.jpg",
+        "title": "ARCATA-EUREKA AIRPORT - ACV - Updated July 2026 - 123 Photos & 69 ...",
+        "licenseFilter": null,
+        "query": "Arcata/Eureka Airport"
+      }
+    ],
+    "ADE": [
+      {
+        "file": "ade-bing-1.webp",
+        "width": 1280,
+        "height": 720,
+        "source": "bing",
+        "host": "images.nomadlawyer.org",
+        "pageUrl": "https://www.nomadlawyer.org/yemen-aden-airport-drone-attack-middle-east-aviation-security-2026",
+        "imageUrl": "https://images.nomadlawyer.org/images/blog/travel-alert/2026/10/yemen-aden-airport-drone-attack-middle-east-aviation-security-2026.jpg",
+        "title": "Aden Airport Drone Escalation Triggers Middle East...",
+        "licenseFilter": null,
+        "query": "Aden International Airport"
+      },
+      {
+        "file": "ade-bing-2.webp",
+        "width": 640,
+        "height": 359,
+        "source": "bing",
+        "host": "thediplomaticinsight.com",
+        "pageUrl": "https://thediplomaticinsight.com/houthis-target-aden-airport-missile-attacks-ksa/",
+        "imageUrl": "https://thediplomaticinsight.com/wp-content/uploads/Houthis-Target-Aden-Airport-as-Missile-Attacks-Intensify-Against-Saudi-Arabia.webp",
+        "title": "Houthis Target Aden Airport as Missile Attacks Intensify Against Saudi ...",
+        "licenseFilter": null,
+        "query": "Aden International Airport"
+      },
+      {
+        "file": "ade-bing-3.webp",
+        "width": 640,
+        "height": 400,
+        "source": "bing",
+        "host": "static-cdn.toi-media.com",
+        "pageUrl": "https://www.timesofisrael.com/houthis-attack-aden-airport-with-missiles-and-drones-amid-yemen-government-counteroffensive/",
+        "imageUrl": "https://static-cdn.toi-media.com/www/uploads/2026/10/AFP__20230511__33EU3VA__v1__HighRes__YemenConflictAirport-640x400.jpg",
+        "title": "Houthis attack Aden airport with missiles and drones, amid Yemen ...",
+        "licenseFilter": null,
+        "query": "Aden International Airport"
+      }
+    ],
+    "ADK": [
+      {
+        "file": "adk-bing-1.webp",
+        "width": 780,
+        "height": 438,
+        "source": "bing",
+        "host": "explore.com",
+        "pageUrl": "https://www.explore.com/2032849/adak-alaska-westernmost-commercial-airport-us-unique-experience-upon-arrival/",
+        "imageUrl": "https://www.explore.com/img/gallery/the-westernmost-commercial-airport-in-the-us-offers-a-unique-experience-upon-arrival/why-adak-airport-feels-so-different-1763680516.jpg",
+        "title": "The Westernmost Commercial Airport In The US Offers A Unique Experience ...",
+        "licenseFilter": null,
+        "query": "Adak Airport"
+      },
+      {
+        "file": "adk-bing-2.webp",
+        "width": 670,
+        "height": 365,
+        "source": "bing",
+        "host": "kupi.com",
+        "pageUrl": "https://www.kupi.com/en/explore/united-states/adak/adak-airport",
+        "imageUrl": "https://www.kupi.com/kland-storage/images/670x0/30x30/anyports/us/adak-airport/014e79c0-e06f-49f9-90a9-b03ef1fa6010.webp",
+        "title": "Adak Airport (ADK) guide – flights, history and tips",
+        "licenseFilter": null,
+        "query": "Adak Airport"
+      },
+      {
+        "file": "adk-bing-3.webp",
+        "width": 640,
+        "height": 480,
+        "source": "bing",
+        "host": "airports-worldwide.com",
+        "pageUrl": "https://www.airports-worldwide.com/usa/alaska/adak_alaska.htm",
+        "imageUrl": "https://www.airports-worldwide.com/img/usa/alaska/big/adak_alaska_usa_03_big.jpg",
+        "title": "Adak Airport",
+        "licenseFilter": null,
+        "query": "Adak Airport"
+      }
+    ],
+    "ADM": [
+      {
+        "file": "adm-bing-1.webp",
+        "width": 1400,
+        "height": 1050,
+        "source": "bing",
+        "host": "image.airport-data.com",
+        "pageUrl": "https://airport-data.com/airport/photo/006811",
+        "imageUrl": "https://image.airport-data.com/airport/006811.jpg",
+        "title": "Ardmore Municipal Airport Photo by B.Pine (Photo ID: AP6811)",
+        "licenseFilter": null,
+        "query": "Ardmore Municipal Airport"
+      },
+      {
+        "file": "adm-bing-2.webp",
+        "width": 1080,
+        "height": 1350,
+        "source": "bing",
+        "host": "skybirdsupply.com",
+        "pageUrl": "https://skybirdsupply.com/products/adm-airport-map-ardmore-municipal-airport-print",
+        "imageUrl": "https://skybirdsupply.com/cdn/shop/files/8fad88b9-1ba3-459e-8c4e-60611754a993_1038817c-0ffd-4ca0-9f8a-628b95b0d31b.jpg?v=1780471420&width=1080",
+        "title": "Ardmore Municipal Airport Map Wall Art Framed Print – ADM Aviation ...",
+        "licenseFilter": null,
+        "query": "Ardmore Municipal Airport"
+      },
+      {
+        "file": "adm-bing-3.webp",
+        "width": 1200,
+        "height": 630,
+        "source": "bing",
+        "host": "bloximages.chicago2.vip.townnews.com",
+        "pageUrl": "https://www.kten.com/new-airport-apron-coming-to-ardmore-municipal-airport/article_0d349559-b3f2-55fa-8a2f-2a58ead58a11.html",
+        "imageUrl": "https://bloximages.chicago2.vip.townnews.com/kten.com/content/tncms/assets/v3/editorial/3/14/3143af3c-0e57-5261-afdf-2abf214dcb91/668eff188af1a.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+        "title": "New airport apron coming to Ardmore Municipal Airport | | kten.com",
+        "licenseFilter": null,
+        "query": "Ardmore Municipal Airport"
+      }
+    ],
+    "AEP": [
+      {
+        "file": "aep-baidu-1.webp",
+        "width": 800,
+        "height": 1054,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=2017260500,2902621259&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1054",
+        "title": "布宜诺斯艾利斯aep机场攻略",
+        "licenseFilter": null,
+        "query": "布宜诺斯艾利斯霍尔赫·纽伯里机场"
+      },
+      {
+        "file": "aep-baidu-2.webp",
+        "width": 499,
+        "height": 278,
+        "source": "baidu",
+        "host": "www.spotterguide.net",
+        "pageUrl": "https://www.spotterguide.net/",
+        "imageUrl": "https://img2.baidu.com/it/u=2472642089,3799181420&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=278",
+        "title": "buenos aires aeroparque jorge newbery airport spotting guide",
+        "licenseFilter": null,
+        "query": "Aeroparque Jorge Newbery"
+      },
+      {
+        "file": "aep-baidu-3.webp",
+        "width": 898,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.spotterguide.net",
+        "pageUrl": "https://www.spotterguide.net/",
+        "imageUrl": "https://img2.baidu.com/it/u=309834588,911703655&fm=253&fmt=auto&app=138&f=JPEG?w=898&h=500",
+        "title": "buenos aires aeroparque jorge newbery airport spotting guide",
+        "licenseFilter": null,
+        "query": "Aeroparque Jorge Newbery"
+      }
+    ],
+    "AHB": [
+      {
+        "file": "ahb-baidu-1.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "zhuanlan.zhihu.com",
+        "pageUrl": "https://zhuanlan.zhihu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=2791684926,3259394240&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "沙特阿拉伯艾卜哈国际机场揭开激动人心的转型面纱 - 知乎",
+        "licenseFilter": null,
+        "query": "艾卜哈国际机场"
+      },
+      {
+        "file": "ahb-baidu-2.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "wap.yzwb.net",
+        "pageUrl": "https://wap.yzwb.net/",
+        "imageUrl": "https://img2.baidu.com/it/u=1940115169,2230614969&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "无人机袭击后 沙特艾卜哈国际机场已恢复正常运行",
+        "licenseFilter": null,
+        "query": "艾卜哈国际机场"
+      },
+      {
+        "file": "ahb-baidu-3.webp",
+        "width": 825,
+        "height": 500,
+        "source": "baidu",
+        "host": "news.qq.com",
+        "pageUrl": "https://news.qq.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3434862954,175663664&fm=253&fmt=auto&app=138&f=JPEG?w=825&h=500",
+        "title": "超过100家公司竞标运营沙特艾卜哈机场_腾讯新闻",
+        "licenseFilter": null,
+        "query": "艾卜哈国际机场"
+      }
+    ],
+    "AHN": [
+      {
+        "file": "ahn-baidu-1.webp",
+        "width": 638,
+        "height": 479,
+        "source": "baidu",
+        "host": "en.wikipedia.org",
+        "pageUrl": "https://en.wikipedia.org/",
+        "imageUrl": "https://img2.baidu.com/it/u=37161635,1819922666&fm=253&fmt=auto&app=138&f=JPEG?w=638&h=479",
+        "title": "athens ben epps airport",
+        "licenseFilter": null,
+        "query": "Athens Ben Epps Airport"
+      },
+      {
+        "file": "ahn-baidu-2.webp",
+        "width": 500,
+        "height": 333,
+        "source": "baidu",
+        "host": "news.gtp.gr",
+        "pageUrl": "https://news.gtp.gr/",
+        "imageUrl": "https://img2.baidu.com/it/u=3694581463,2507363382&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=333",
+        "title": "invests €30m in aviation training center at athens airport",
+        "licenseFilter": null,
+        "query": "Athens Ben Epps Airport"
+      },
+      {
+        "file": "ahn-baidu-3.webp",
+        "width": 608,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.tripadvisor.cn",
+        "pageUrl": "https://www.tripadvisor.cn/",
+        "imageUrl": "https://img0.baidu.com/it/u=425201885,1218542994&fm=253&fmt=auto&app=138&f=JPEG?w=608&h=500",
+        "title": "athens international airport eleftherios venizelos",
+        "licenseFilter": null,
+        "query": "Athens Ben Epps Airport"
+      }
+    ],
+    "AHO": [
+      {
+        "file": "aho-baidu-1.webp",
+        "width": 500,
+        "height": 566,
+        "source": "baidu",
+        "host": "www.ufsoo.com",
+        "pageUrl": "https://www.ufsoo.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1568620257,1237895849&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=566",
+        "title": "阿尔盖罗-菲尔蒂利亚机场(aho,liea)|阿尔盖罗机场|alghero-fertilia ",
+        "licenseFilter": null,
+        "query": "阿尔盖罗-费尔蒂利亚机场"
+      },
+      {
+        "file": "aho-baidu-2.webp",
+        "width": 729,
+        "height": 410,
+        "source": "baidu",
+        "host": "www.yuncargo.cn",
+        "pageUrl": "https://www.yuncargo.cn/",
+        "imageUrl": "https://img2.baidu.com/it/u=4086260565,3149414004&fm=253&fmt=auto&app=138&f=JPEG?w=729&h=410",
+        "title": "棉袄从中国佛山空运到阿尔盖罗-费尔蒂利亚机场三字代码aho – 云泽国",
+        "licenseFilter": null,
+        "query": "阿尔盖罗-费尔蒂利亚机场"
+      },
+      {
+        "file": "aho-baidu-3.webp",
+        "width": 608,
+        "height": 342,
+        "source": "baidu",
+        "host": "www.yuncargo.cn",
+        "pageUrl": "https://www.yuncargo.cn/",
+        "imageUrl": "https://img1.baidu.com/it/u=1145304904,3831336132&fm=253&fmt=auto&app=138&f=JPEG?w=608&h=342",
+        "title": "棉袄从中国佛山空运到阿尔盖罗-费尔蒂利亚机场三字代码aho – 云泽国",
+        "licenseFilter": null,
+        "query": "阿尔盖罗-费尔蒂利亚机场"
+      }
+    ],
+    "AKR": [
+      {
+        "file": "akr-baidu-1.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.agoda.com",
+        "pageUrl": "https://www.agoda.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=346633634,3574012361&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "阿库雷akure airport hotel - agoda 网上最低价格保证,即时订房服务",
+        "licenseFilter": null,
+        "query": "Akure Airport"
+      },
+      {
+        "file": "akr-baidu-2.webp",
+        "width": 752,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.agoda.com",
+        "pageUrl": "https://www.agoda.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=4238363584,75683277&fm=253&fmt=auto&app=138&f=JPEG?w=752&h=500",
+        "title": "阿库雷akure airport hotel - agoda 网上最低价格保证,即时订房服务",
+        "licenseFilter": null,
+        "query": "Akure Airport"
+      },
+      {
+        "file": "akr-page-1.webp",
+        "width": 960,
+        "height": 540,
+        "source": "page",
+        "host": "cimages.timbu.com",
+        "pageUrl": "https://hotels.ng/guides/airtravel-airports-terminals/akure-airport-popular-destination-terminals-check-in-and-nearby-hotels",
+        "imageUrl": "https://cimages.timbu.com/guides/2020/09/akure-airport-terminal.jpg",
+        "title": "Akure Airport- TERMINALS, POPULAR DESTINATION, AND NEARBY HOTELS",
+        "licenseFilter": null,
+        "query": "page:cimages.timbu.com"
+      },
+      {
+        "file": "akr-page-2.webp",
+        "width": 780,
+        "height": 520,
+        "source": "page",
+        "host": "cimages.timbu.com",
+        "pageUrl": "https://hotels.ng/guides/airtravel-airports-terminals/akure-airport-popular-destination-terminals-check-in-and-nearby-hotels",
+        "imageUrl": "https://cimages.timbu.com/guides/2020/09/Akure-airport-runway-1.jpg",
+        "title": "Akure Airport- TERMINALS, POPULAR DESTINATION, AND NEARBY HOTELS",
+        "licenseFilter": null,
+        "query": "page:cimages.timbu.com"
+      },
+      {
+        "file": "akr-page-3.webp",
+        "width": 1024,
+        "height": 458,
+        "source": "page",
+        "host": "cimages.timbu.com",
+        "pageUrl": "https://hotels.ng/guides/airtravel-airports-terminals/akure-airport-popular-destination-terminals-check-in-and-nearby-hotels",
+        "imageUrl": "https://cimages.timbu.com/guides/2020/09/overland-airways-akure-airport-1024x458.jpg",
+        "title": "Akure Airport- TERMINALS, POPULAR DESTINATION, AND NEARBY HOTELS",
+        "licenseFilter": null,
+        "query": "page:cimages.timbu.com"
+      }
+    ],
+    "ALA": [
+      {
+        "file": "ala-baidu-1.webp",
+        "width": 972,
+        "height": 648,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=868481807,2271979535&fm=253&fmt=auto&app=120&f=JPEG?w=972&h=648",
+        "title": "阿拉木图国际机场",
+        "licenseFilter": null,
+        "query": "阿拉木图国际机场"
+      },
+      {
+        "file": "ala-baidu-2.webp",
+        "width": 640,
+        "height": 360,
+        "source": "baidu",
+        "host": "k.sina.com.cn",
+        "pageUrl": "https://k.sina.com.cn/",
+        "imageUrl": "https://img0.baidu.com/it/u=1723154622,683063165&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=360",
+        "title": "哈萨克斯坦阿拉木图国际机场被反政府人员控制|哈萨克斯坦|阿拉木图_",
+        "licenseFilter": null,
+        "query": "阿拉木图国际机场"
+      },
+      {
+        "file": "ala-baidu-3.webp",
+        "width": 758,
+        "height": 398,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3220276136,1970007723&fm=253&fmt=auto&app=120&f=JPEG?w=758&h=398",
+        "title": "阿拉木图国际机场",
+        "licenseFilter": null,
+        "query": "阿拉木图国际机场"
+      }
+    ],
+    "ALJ": [
+      {
+        "file": "alj-baidu-1.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "commons.wikimedia.org",
+        "pageUrl": "https://commons.wikimedia.org/",
+        "imageUrl": "https://img2.baidu.com/it/u=3857299281,1638672838&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "file:skopje alexander the great airport.jpg - wikimedia commons",
+        "licenseFilter": null,
+        "query": "亚历山大湾机场"
+      }
+    ],
+    "ALM": [
+      {
+        "file": "alm-baidu-1.webp",
+        "width": 561,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.ufsoo.com",
+        "pageUrl": "https://www.ufsoo.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=542391975,3032765963&fm=253&fmt=auto&app=138&f=JPEG?w=561&h=500",
+        "title": "阿拉莫戈多-白沙地区机场(alm,kalm)|阿拉穆古多机场|alamogordo-whit",
+        "licenseFilter": null,
+        "query": "阿拉莫戈多白沙地区机场"
+      },
+      {
+        "file": "alm-baidu-2.webp",
+        "width": 561,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.ufsoo.com",
+        "pageUrl": "https://www.ufsoo.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=542391975,3032765963&fm=253&fmt=auto&app=138&f=JPEG?w=561&h=500",
+        "title": "阿拉莫戈多-白沙地区机场(alm,kalm)|阿拉穆古多机场|alamogordo-whit",
+        "licenseFilter": null,
+        "query": "Alamogordo White Sands Regional Airport"
+      },
+      {
+        "file": "alm-page-1.webp",
+        "width": 1024,
+        "height": 376,
+        "source": "page",
+        "host": "silverhawkauthor.com",
+        "pageUrl": "https://silverhawkauthor.com/aviation/aviation-united-states-of-america/warplanes-of-the-usa-new-mexico-alamogordo-to-truth-or-consequences/",
+        "imageUrl": "https://silverhawkauthor.com/wp-content/uploads/2026/01/66abe295288dc5ad6ef27659_6105811a80d85a43cea11365_Lockheed_P-2H-AT-_Neptune-_Black_Hills_Aviation_AN1663929.jpg",
+        "title": "Warplanes preserved in the USA: New Mexico: Alamogordo to Truth or Consequences - SilverHawkAuthor Website Military Hist",
+        "licenseFilter": null,
+        "query": "page:silverhawkauthor.com"
+      },
+      {
+        "file": "alm-page-2.webp",
+        "width": 1012,
+        "height": 381,
+        "source": "page",
+        "host": "silverhawkauthor.com",
+        "pageUrl": "https://silverhawkauthor.com/aviation/aviation-united-states-of-america/warplanes-of-the-usa-new-mexico-alamogordo-to-truth-or-consequences/",
+        "imageUrl": "https://silverhawkauthor.com/wp-content/uploads/2026/01/66abe295288dc5ad6ef2765c_6105811a4927c55df139617e_Lockheed_P-2H-AT-_Neptune-_Black_Hills_Aviation_AN1046733.jpg",
+        "title": "Warplanes preserved in the USA: New Mexico: Alamogordo to Truth or Consequences - SilverHawkAuthor Website Military Hist",
+        "licenseFilter": null,
+        "query": "page:silverhawkauthor.com"
+      }
+    ],
+    "ALY": [
+      {
+        "file": "aly-baidu-1.webp",
+        "width": 500,
+        "height": 375,
+        "source": "baidu",
+        "host": "zh.wikipedia.org",
+        "pageUrl": "https://zh.wikipedia.org/",
+        "imageUrl": "https://img2.baidu.com/it/u=560663424,3681087671&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=375",
+        "title": "亚历山大国际机场 - 维基百科,自由的百科全书",
+        "licenseFilter": null,
+        "query": "亚历山大国际机场"
+      },
+      {
+        "file": "aly-baidu-2.webp",
+        "width": 501,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.ufsoo.com",
+        "pageUrl": "https://www.ufsoo.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=1644883104,1451226374&fm=253&fmt=auto&app=138&f=JPEG?w=501&h=500",
+        "title": "alexandria international airport (iata: aex, icao: kaex, faa lid",
+        "licenseFilter": null,
+        "query": "Alexandria International Airport"
+      }
+    ],
+    "AMD": [
+      {
+        "file": "amd-baidu-1.webp",
+        "width": 1138,
+        "height": 553,
+        "source": "baidu",
+        "host": "baijiahao.baidu.com",
+        "pageUrl": "https://baijiahao.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1659686560,356396794&fm=253&fmt=auto?w=1138&h=553",
+        "title": "突发!印度艾哈迈达巴德机场客机坠毁,机上或载133人引全球关注",
+        "licenseFilter": null,
+        "query": "艾哈迈达巴德国际机场"
+      },
+      {
+        "file": "amd-baidu-2.webp",
+        "width": 794,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.hunterdouglas.cn",
+        "pageUrl": "https://www.hunterdouglas.cn/",
+        "imageUrl": "https://img0.baidu.com/it/u=4278014257,3340134543&fm=253&fmt=auto&app=138&f=JPEG?w=794&h=500",
+        "title": "project - 印度艾哈迈达巴德机场",
+        "licenseFilter": null,
+        "query": "艾哈迈达巴德国际机场"
+      },
+      {
+        "file": "amd-baidu-3.webp",
+        "width": 640,
+        "height": 475,
+        "source": "baidu",
+        "host": "baijiahao.baidu.com",
+        "pageUrl": "https://baijiahao.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1254597424,860345901&fm=253&fmt=auto?w=640&h=475",
+        "title": "印度客机艾哈迈达巴德机场坠毁:伤亡情况不明影响严重",
+        "licenseFilter": null,
+        "query": "艾哈迈达巴德国际机场"
+      }
+    ],
+    "AND": [
+      {
+        "file": "and-baidu-1.webp",
+        "width": 800,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=1476906146,2689516788&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=500",
+        "title": "anderson international airport(1)",
+        "licenseFilter": null,
+        "query": "Anderson Regional Airport"
+      }
+    ],
+    "ANR": [
+      {
+        "file": "anr-baidu-1.webp",
+        "width": 885,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3408258031,2394229081&fm=253&fmt=auto&app=138&f=JPEG?w=885&h=500",
+        "title": "aerosoft 发布安特卫普机场 - 哔哩哔哩",
+        "licenseFilter": null,
+        "query": "安特卫普国际机场"
+      },
+      {
+        "file": "anr-baidu-2.webp",
+        "width": 527,
+        "height": 321,
+        "source": "baidu",
+        "host": "weibo.com",
+        "pageUrl": "https://weibo.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=973296272,3685137225&fm=253&fmt=auto&app=138&f=JPEG?w=527&h=321",
+        "title": "比利时安特卫普机场客流量第一季度恢复趋... 来自环球时报环球旅游 -",
+        "licenseFilter": null,
+        "query": "安特卫普国际机场"
+      },
+      {
+        "file": "anr-baidu-3.webp",
+        "width": 892,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=85990308,2900106825&fm=253&fmt=auto&app=138&f=JPEG?w=892&h=500",
+        "title": "aerosoft 发布安特卫普机场 - 哔哩哔哩",
+        "licenseFilter": null,
+        "query": "安特卫普国际机场"
+      }
+    ],
+    "AOG": [
+      {
+        "file": "aog-baidu-1.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=294797917,4121120088&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "鞍山腾鳌机场",
+        "licenseFilter": null,
+        "query": "鞍山腾鳌机场"
+      },
+      {
+        "file": "aog-baidu-2.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.xiaohongshu.com",
+        "pageUrl": "https://www.xiaohongshu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=144261862,1217676980&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "一座如同车站般的飞机场,辽宁鞍山腾鳌机场",
+        "licenseFilter": null,
+        "query": "鞍山腾鳌机场"
+      },
+      {
+        "file": "aog-baidu-3.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=4167515565,2649806373&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "鞍山腾鳌机场",
+        "licenseFilter": null,
+        "query": "鞍山腾鳌机场"
+      }
+    ],
+    "AOJ": [
+      {
+        "file": "aoj-baidu-1.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=2970988727,2449251929&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "青森机场",
+        "licenseFilter": null,
+        "query": "青森机场"
+      },
+      {
+        "file": "aoj-baidu-2.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1453077856,1963433991&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "青森机场",
+        "licenseFilter": null,
+        "query": "青森机场"
+      },
+      {
+        "file": "aoj-baidu-3.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=178942840,1019771171&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "青森机场",
+        "licenseFilter": null,
+        "query": "青森机场"
+      }
+    ],
+    "AQJ": [
+      {
+        "file": "aqj-baidu-1.webp",
+        "width": 475,
+        "height": 379,
+        "source": "baidu",
+        "host": "www.agoda.com",
+        "pageUrl": "https://www.agoda.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3236209277,3628991358&fm=253&fmt=auto&app=138&f=JPEG?w=475&h=379",
+        "title": "2025年亚喀巴侯赛因国王国际机场附近的酒店(约旦亚喀巴) | agoda",
+        "licenseFilter": null,
+        "query": "亚喀巴侯赛因国王国际机场"
+      },
+      {
+        "file": "aqj-baidu-2.webp",
+        "width": 656,
+        "height": 437,
+        "source": "baidu",
+        "host": "weibo.com",
+        "pageUrl": "https://weibo.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2002007289,2588053883&fm=253&fmt=auto&app=120&f=JPEG?w=656&h=437",
+        "title": "(king hussein international airport)2024年12月12日布林肯国务卿",
+        "licenseFilter": null,
+        "query": "King Hussein International Airport"
+      },
+      {
+        "file": "aqj-baidu-3.webp",
+        "width": 759,
+        "height": 466,
+        "source": "baidu",
+        "host": "mt.sohu.com",
+        "pageUrl": "https://mt.sohu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=3591858874,27457168&fm=253&fmt=auto&app=120&f=JPEG?w=759&h=466",
+        "title": "推进萨勒曼国王国际机场(king salman international airport)的建设",
+        "licenseFilter": null,
+        "query": "King Hussein International Airport"
+      }
+    ],
+    "ARC": [
+      {
+        "file": "arc-baidu-1.webp",
+        "width": 550,
+        "height": 330,
+        "source": "baidu",
+        "host": "archives.dailynews.lk",
+        "pageUrl": "https://archives.dailynews.lk/",
+        "imageUrl": "https://img0.baidu.com/it/u=2776985457,2972994382&fm=253&fmt=auto&app=138&f=JPEG?w=550&h=330",
+        "title": "day stranded at londons heathrow airport monday as arctic",
+        "licenseFilter": null,
+        "query": "Arctic Village Airport"
+      }
+    ],
+    "ARK": [
+      {
+        "file": "ark-baidu-1.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.douban.com",
+        "pageUrl": "https://www.douban.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1018714929,242074093&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "坦桑尼亚阿鲁沙机场——去过的最破的茅草塑料篷露...",
+        "licenseFilter": null,
+        "query": "阿鲁沙机场"
+      },
+      {
+        "file": "ark-baidu-2.webp",
+        "width": 890,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.douban.com",
+        "pageUrl": "https://www.douban.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=949128405,2121444820&fm=253&fmt=auto&app=138&f=JPEG?w=890&h=500",
+        "title": "坦桑尼亚阿鲁沙机场——去过的最破的茅草塑料篷露天机场",
+        "licenseFilter": null,
+        "query": "阿鲁沙机场"
+      },
+      {
+        "file": "ark-baidu-3.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.douban.com",
+        "pageUrl": "https://www.douban.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=3255014159,3701029481&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "坦桑尼亚阿鲁沙机场——去过的最破的茅草塑料篷露天机场",
+        "licenseFilter": null,
+        "query": "阿鲁沙机场"
+      }
+    ],
+    "ASB": [
+      {
+        "file": "asb-baidu-1.webp",
+        "width": 500,
+        "height": 667,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=939048130,347809640&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667",
+        "title": "阿什哈巴德国际机场",
+        "licenseFilter": null,
+        "query": "阿什哈巴德国际机场"
+      },
+      {
+        "file": "asb-baidu-2.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3808659042,1193115585&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "阿什哈巴德国际机场",
+        "licenseFilter": null,
+        "query": "阿什哈巴德国际机场"
+      },
+      {
+        "file": "asb-baidu-3.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=2970249404,2301294826&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "阿什哈巴德国际机场",
+        "licenseFilter": null,
+        "query": "阿什哈巴德国际机场"
+      }
+    ],
+    "ASJ": [
+      {
+        "file": "asj-baidu-1.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=394953460,395243980&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "奄美机场",
+        "licenseFilter": null,
+        "query": "奄美机场"
+      },
+      {
+        "file": "asj-baidu-2.webp",
+        "width": 456,
+        "height": 342,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=3452566374,1266830072&fm=253&fmt=auto&app=138&f=JPEG?w=456&h=342",
+        "title": "奄美机场",
+        "licenseFilter": null,
+        "query": "奄美机场"
+      },
+      {
+        "file": "asj-baidu-3.webp",
+        "width": 455,
+        "height": 327,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1819108745,170589273&fm=253&fmt=auto&app=138&f=JPEG?w=455&h=327",
+        "title": "奄美机场",
+        "licenseFilter": null,
+        "query": "奄美机场"
+      }
+    ],
+    "ASP": [
+      {
+        "file": "asp-baidu-1.webp",
+        "width": 767,
+        "height": 460,
+        "source": "baidu",
+        "host": "airport-motel.innorthernterritory.com",
+        "pageUrl": "https://airport-motel.innorthernterritory.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=3054169864,2938977818&fm=253&fmt=auto&app=138&f=JPEG?w=767&h=460",
+        "title": "alice springs airport motel 艾丽丝泉, nt",
+        "licenseFilter": null,
+        "query": "Alice Springs Airport"
+      },
+      {
+        "file": "asp-baidu-2.webp",
+        "width": 500,
+        "height": 300,
+        "source": "baidu",
+        "host": "airport-motel.innorthernterritory.com",
+        "pageUrl": "https://airport-motel.innorthernterritory.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2018505979,1150152890&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=300",
+        "title": "alice springs airport motel 艾丽丝泉, nt",
+        "licenseFilter": null,
+        "query": "Alice Springs Airport"
+      },
+      {
+        "file": "asp-baidu-3.webp",
+        "width": 767,
+        "height": 460,
+        "source": "baidu",
+        "host": "airport-motel.innorthernterritory.com",
+        "pageUrl": "https://airport-motel.innorthernterritory.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=4184901734,3732293589&fm=253&fmt=auto&app=138&f=JPEG?w=767&h=460",
+        "title": "alice springs airport motel 艾丽丝泉, nt",
+        "licenseFilter": null,
+        "query": "Alice Springs Airport"
+      },
+      {
+        "file": "asp-page-1.webp",
+        "width": 1280,
+        "height": 869,
+        "source": "page",
+        "host": "flugzeugbilder.de",
+        "pageUrl": "https://flugzeugbilder.de/v3/show_en.php?id=1347299",
+        "imageUrl": "https://flugzeugbilder.de/a/134/72/1422469341.jpg",
+        "title": "Aircraft photo VH-NXM - Boeing 717-231 - QantasLink (National Jet Systems) | PlanePictures.net",
+        "licenseFilter": null,
+        "query": "page:flugzeugbilder.de"
+      },
+      {
+        "file": "asp-page-2.webp",
+        "width": 625,
+        "height": 419,
+        "source": "page",
+        "host": "www.airwaysmuseum.com",
+        "pageUrl": "https://www.airwaysmuseum.com/AS%20TWR%20ext.htm",
+        "imageUrl": "https://www.airwaysmuseum.com/facilities%20images/AS-TWR-Fokker-F27-VH-TFE-CAHS-Terry-Martin-625.jpg",
+        "title": "Alice Springs Tower",
+        "licenseFilter": null,
+        "query": "page:www.airwaysmuseum.com"
+      },
+      {
+        "file": "asp-page-3.webp",
+        "width": 625,
+        "height": 415,
+        "source": "page",
+        "host": "www.airwaysmuseum.com",
+        "pageUrl": "https://www.airwaysmuseum.com/AS%20TWR%20ext.htm",
+        "imageUrl": "https://www.airwaysmuseum.com/facilities%20images/AS-aerial-ND-4-CAHS-625.jpg",
+        "title": "Alice Springs Tower",
+        "licenseFilter": null,
+        "query": "page:www.airwaysmuseum.com"
+      }
+    ],
+    "ATW": [
+      {
+        "file": "atw-baidu-1.webp",
+        "width": 751,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.expedia.cn",
+        "pageUrl": "https://www.expedia.cn/",
+        "imageUrl": "https://img1.baidu.com/it/u=1541821408,1521755834&fm=253&fmt=auto&app=138&f=JPEG?w=751&h=500",
+        "title": "comfort suites appleton airport (appleton, usa) |",
+        "licenseFilter": null,
+        "query": "Appleton International Airport"
+      },
+      {
+        "file": "atw-baidu-2.webp",
+        "width": 753,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.booking.com",
+        "pageUrl": "https://www.booking.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=4005648556,3579954325&fm=253&fmt=auto&app=138&f=JPEG?w=753&h=500",
+        "title": "cobblestone hotel & suites appleton international airport,尼纳(2",
+        "licenseFilter": null,
+        "query": "Appleton International Airport"
+      },
+      {
+        "file": "atw-baidu-3.webp",
+        "width": 500,
+        "height": 282,
+        "source": "baidu",
+        "host": "fox11online.com",
+        "pageUrl": "https://fox11online.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3448463433,4268367568&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=282",
+        "title": "appleton international airport hosts 'pulling for honor' | wluk",
+        "licenseFilter": null,
+        "query": "Appleton International Airport"
+      }
+    ],
+    "AUG": [
+      {
+        "file": "aug-baidu-1.webp",
+        "width": 500,
+        "height": 518,
+        "source": "baidu",
+        "host": "www.ufsoo.com",
+        "pageUrl": "https://www.ufsoo.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=2493434510,974561938&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=518",
+        "title": "奥古斯塔港机场(pug,ypag)|奥古斯塔港机场|port augusta airport-世",
+        "licenseFilter": null,
+        "query": "奥古斯塔州机场"
+      },
+      {
+        "file": "aug-baidu-2.webp",
+        "width": 500,
+        "height": 518,
+        "source": "baidu",
+        "host": "www.ufsoo.com",
+        "pageUrl": "https://www.ufsoo.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=2493434510,974561938&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=518",
+        "title": "port augusta airport (iata: pug, icao: ypag)",
+        "licenseFilter": null,
+        "query": "Augusta State Airport"
+      },
+      {
+        "file": "aug-baidu-3.webp",
+        "width": 699,
+        "height": 500,
+        "source": "baidu",
+        "host": "uk.flightaware.com",
+        "pageUrl": "https://uk.flightaware.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2075405953,1953389255&fm=253&fmt=auto&app=138&f=JPEG?w=699&h=500",
+        "title": "air 350 (n199y) - landing runway 35 at augusta regional airport",
+        "licenseFilter": null,
+        "query": "Augusta State Airport"
+      }
+    ],
+    "AUH": [
+      {
+        "file": "auh-baidu-1.webp",
+        "width": 738,
+        "height": 500,
+        "source": "baidu",
+        "host": "mt.sohu.com",
+        "pageUrl": "https://mt.sohu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1077850890,1500902739&fm=253&fmt=auto&app=120&f=JPEG?w=738&h=500",
+        "title": "阿布扎比扎耶德国际机场被评为\"世界最美机场\"_全球_内容_prix",
+        "licenseFilter": null,
+        "query": "阿布扎比扎耶德国际机场"
+      },
+      {
+        "file": "auh-baidu-2.webp",
+        "width": 894,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=757822108,3459046521&fm=253&fmt=auto&app=138&f=JPEG?w=894&h=500",
+        "title": "inibuilds 为 msfs 发布阿布扎比扎耶德国际机场 - 哔哩哔哩",
+        "licenseFilter": null,
+        "query": "阿布扎比扎耶德国际机场"
+      },
+      {
+        "file": "auh-baidu-3.webp",
+        "width": 888,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1508466970,1319516627&fm=253&fmt=auto&app=138&f=JPEG?w=888&h=500",
+        "title": "inibuilds 为 msfs 发布阿布扎比扎耶德国际机场 - 哔哩哔哩",
+        "licenseFilter": null,
+        "query": "阿布扎比扎耶德国际机场"
+      }
+    ],
+    "AUS": [
+      {
+        "file": "aus-baidu-1.webp",
+        "width": 500,
+        "height": 290,
+        "source": "baidu",
+        "host": "www.xyyao.com",
+        "pageUrl": "https://www.xyyao.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=2661382223,3501146189&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=290",
+        "title": "fsx [imaginesim]美国奥斯汀机场(kaus austin bergstrom 2015)",
+        "licenseFilter": null,
+        "query": "Austin Bergstrom International Airport"
+      },
+      {
+        "file": "aus-baidu-2.webp",
+        "width": 500,
+        "height": 266,
+        "source": "baidu",
+        "host": "www.fsxchina.com",
+        "pageUrl": "https://www.fsxchina.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=1423942872,3041231503&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=266",
+        "title": "【fsx/se】[imaginesim]美国奥斯汀机场(kaus austin bergstrom)",
+        "licenseFilter": null,
+        "query": "Austin Bergstrom International Airport"
+      },
+      {
+        "file": "aus-baidu-3.webp",
+        "width": 500,
+        "height": 266,
+        "source": "baidu",
+        "host": "www.fsxchina.com",
+        "pageUrl": "https://www.fsxchina.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3176466347,2724602107&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=266",
+        "title": "【fsx/se】[imaginesim]美国奥斯汀机场(kaus austin bergstrom)",
+        "licenseFilter": null,
+        "query": "Austin Bergstrom International Airport"
+      },
+      {
+        "file": "aus-page-1.webp",
+        "width": 1600,
+        "height": 1494,
+        "source": "page",
+        "host": "austin.widen.net",
+        "pageUrl": "https://www.flyaustin.com/",
+        "imageUrl": "https://austin.widen.net/content/wxkv20fl1y/web/parking-widget.jpg?crop=yes&w=1920&h=1793&itok=QrF3Tu9g",
+        "title": "Austin-Bergstrom International Airport | Airport",
+        "licenseFilter": null,
+        "query": "page:austin.widen.net"
+      },
+      {
+        "file": "aus-page-2.webp",
+        "width": 556,
+        "height": 312,
+        "source": "page",
+        "host": "austin.widen.net",
+        "pageUrl": "https://www.flyaustin.com/",
+        "imageUrl": "https://austin.widen.net/content/g5eennxtug/web/Airport%20-%20Web_August%202026%20line%20graph.png?crop=yes&w=556&h=312&itok=N9w9b3hB",
+        "title": "Austin-Bergstrom International Airport | Airport",
+        "licenseFilter": null,
+        "query": "page:austin.widen.net"
+      },
+      {
+        "file": "aus-page-3.webp",
+        "width": 556,
+        "height": 312,
+        "source": "page",
+        "host": "austin.widen.net",
+        "pageUrl": "https://www.flyaustin.com/",
+        "imageUrl": "https://austin.widen.net/content/6oqivlomgq/web/Airport%20-%20Web_Screenshot%202026-06-23%20120423.png?crop=yes&w=556&h=312&itok=VOZ6jSK5",
+        "title": "Austin-Bergstrom International Airport | Airport",
+        "licenseFilter": null,
+        "query": "page:austin.widen.net"
+      }
+    ],
+    "AVA": [
+      {
+        "file": "ava-baidu-1.webp",
+        "width": 888,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.anshunjkq.gov.cn",
+        "pageUrl": "https://www.anshunjkq.gov.cn/",
+        "imageUrl": "https://img2.baidu.com/it/u=180727889,2622247626&fm=253&fmt=auto&app=138&f=JPEG?w=888&h=500",
+        "title": "【迎中秋 庆国庆】安顺黄果树机场优化服务举措 保障旅客顺利出行",
+        "licenseFilter": null,
+        "query": "安顺黄果树机场"
+      },
+      {
+        "file": "ava-baidu-2.webp",
+        "width": 768,
+        "height": 500,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=2572872356,1447471531&fm=253&fmt=auto&app=138&f=JPEG?w=768&h=500",
+        "title": "安顺黄果树机场:旅游支线机场的变迁与挑战",
+        "licenseFilter": null,
+        "query": "安顺黄果树机场"
+      },
+      {
+        "file": "ava-baidu-3.webp",
+        "width": 1067,
+        "height": 800,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=327261070,2237159271&fm=253&fmt=auto&app=120&f=JPEG?w=1067&h=800",
+        "title": "贵州省安顺市,安顺黄果树机场.安顺黄果树机场(icao:zuas;iata:ava),",
+        "licenseFilter": null,
+        "query": "安顺黄果树机场"
+      }
+    ],
+    "AVL": [
+      {
+        "file": "avl-baidu-1.webp",
+        "width": 500,
+        "height": 377,
+        "source": "baidu",
+        "host": "www.agoda.com",
+        "pageUrl": "https://www.agoda.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3149715091,3509667599&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=377",
+        "title": "弗莱切(nc)凯瑞华晟酒店-阿什维尔机场 (clarion inn asheville airpo",
+        "licenseFilter": null,
+        "query": "阿什维尔地区机场"
+      },
+      {
+        "file": "avl-baidu-2.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.agoda.com",
+        "pageUrl": "https://www.agoda.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=64094617,1592799475&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "弗莱切(nc)阿什维尔机场康福特茵酒店 (comfort inn asheville airpor",
+        "licenseFilter": null,
+        "query": "阿什维尔地区机场"
+      },
+      {
+        "file": "avl-baidu-3.webp",
+        "width": 663,
+        "height": 500,
+        "source": "baidu",
+        "host": "hkg.agoda.com",
+        "pageUrl": "https://hkg.agoda.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3661876500,854532210&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500",
+        "title": "阿什维尔机场康福特茵酒店 (comfort inn asheville airport) (弗莱彻",
+        "licenseFilter": null,
+        "query": "阿什维尔地区机场"
+      }
+    ],
+    "AVV": [
+      {
+        "file": "avv-baidu-1.webp",
+        "width": 790,
+        "height": 500,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3983478879,933275300&fm=253&fmt=auto&app=138&f=JPEG?w=790&h=500",
+        "title": "🛫探秘墨尔本阿瓦隆机场🛬",
+        "licenseFilter": null,
+        "query": "墨尔本阿瓦隆国际机场"
+      },
+      {
+        "file": "avv-baidu-2.webp",
+        "width": 784,
+        "height": 500,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=3586696249,517980574&fm=253&fmt=auto&app=138&f=JPEG?w=784&h=500",
+        "title": "🛫探秘墨尔本阿瓦隆机场🛬",
+        "licenseFilter": null,
+        "query": "墨尔本阿瓦隆国际机场"
+      },
+      {
+        "file": "avv-baidu-3.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=920719887,123995430&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500",
+        "title": "️澳大利亚墨尔本阿瓦隆机场航空拍摄 melbourne airport plane spo",
+        "licenseFilter": null,
+        "query": "墨尔本阿瓦隆国际机场"
+      }
+    ],
+    "AWZ": [
+      {
+        "file": "awz-baidu-1.webp",
+        "width": 717,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.ufsoo.com",
+        "pageUrl": "https://www.ufsoo.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=1427799124,4009511915&fm=253&fmt=auto&app=138&f=JPEG?w=717&h=500",
+        "title": "阿瓦士国际机场(awz,oiaw)|阿瓦士机场|ahvaz international airport-",
+        "licenseFilter": null,
+        "query": "阿瓦士国际机场"
+      }
+    ],
+    "AXT": [
+      {
+        "file": "axt-baidu-1.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3960882350,1880895905&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "秋田机场",
+        "licenseFilter": null,
+        "query": "秋田机场"
+      },
+      {
+        "file": "axt-baidu-2.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=1632019079,2022413963&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "秋田机场",
+        "licenseFilter": null,
+        "query": "秋田机场"
+      },
+      {
+        "file": "axt-baidu-3.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=23962521,3513169400&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "秋田机场",
+        "licenseFilter": null,
+        "query": "秋田机场"
+      }
+    ],
+    "AXU": [
+      {
+        "file": "axu-baidu-1.webp",
+        "width": 500,
+        "height": 750,
+        "source": "baidu",
+        "host": "www.veer.com",
+        "pageUrl": "https://www.veer.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=152858382,939496489&fm=253&fmt=auto?w=500&h=750",
+        "title": "阿克苏姆机场,埃塞俄比亚",
+        "licenseFilter": null,
+        "query": "阿克苏姆机场"
+      },
+      {
+        "file": "axu-baidu-2.webp",
+        "width": 826,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.veer.com",
+        "pageUrl": "https://www.veer.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=339795403,4067825178&fm=253&fmt=auto?w=826&h=500",
+        "title": "阿克苏姆机场,埃塞俄比亚",
+        "licenseFilter": null,
+        "query": "阿克苏姆机场"
+      },
+      {
+        "file": "axu-baidu-3.webp",
+        "width": 500,
+        "height": 773,
+        "source": "baidu",
+        "host": "www.veer.com",
+        "pageUrl": "https://www.veer.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=406749906,1129910856&fm=253&fmt=auto?w=500&h=773",
+        "title": "阿克苏姆机场,埃塞俄比亚",
+        "licenseFilter": null,
+        "query": "阿克苏姆机场"
+      },
+      {
+        "file": "axu-page-1.webp",
+        "width": 960,
+        "height": 540,
+        "source": "page",
+        "host": "www.ena.et",
+        "pageUrl": "https://www.ena.et/web/eng/w/eng_4573922",
+        "imageUrl": "https://www.ena.et/documents/42142/0/%E1%8A%A0%E1%8A%AD%E1%88%B1%E1%88%9D1.jpg/bba2fc43-2894-b104-9384-6f1a7cd3e691?version=1.0&t=1717946885817&download=true",
+        "title": "Ethiopian Airlines Resumes Domestic Flight Service to Axum - ENA English - ENA",
+        "licenseFilter": null,
+        "query": "page:www.ena.et"
+      },
+      {
+        "file": "axu-page-2.webp",
+        "width": 960,
+        "height": 540,
+        "source": "page",
+        "host": "www.ena.et",
+        "pageUrl": "https://www.ena.et/web/eng/w/eng_4573922",
+        "imageUrl": "https://www.ena.et/o/adaptive-media/image/4573896/Preview-1000x0/%E1%8A%A0%E1%8A%AD%E1%88%B1%E1%88%9D1.jpg",
+        "title": "Ethiopian Airlines Resumes Domestic Flight Service to Axum - ENA English - ENA",
+        "licenseFilter": null,
+        "query": "page:www.ena.et"
+      },
+      {
+        "file": "axu-page-3.webp",
+        "width": 1000,
+        "height": 468,
+        "source": "page",
+        "host": "www.ena.et",
+        "pageUrl": "https://www.ena.et/web/eng/w/eng_4573922",
+        "imageUrl": "https://www.ena.et/o/adaptive-media/image/4573909/Preview-1000x0/GYTACHEW.jpg?t=1717946993601",
+        "title": "Ethiopian Airlines Resumes Domestic Flight Service to Axum - ENA English - ENA",
+        "licenseFilter": null,
+        "query": "page:www.ena.et"
+      }
+    ],
+    "AYQ": [
+      {
+        "file": "ayq-baidu-1.webp",
+        "width": 800,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=644900987,3783906328&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500",
+        "title": "捷星航空空客a320 降落艾尔斯岩机场",
+        "licenseFilter": null,
+        "query": "艾尔斯岩机场"
+      },
+      {
+        "file": "ayq-baidu-2.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.ginatw.com",
+        "pageUrl": "https://www.ginatw.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=2472427109,3495436978&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "【飞uluru乌鲁鲁攻略】艾尔斯岩机场(ayers rock airport)机票比价,订",
+        "licenseFilter": null,
+        "query": "艾尔斯岩机场"
+      },
+      {
+        "file": "ayq-baidu-3.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=2349165149,3151386873&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500",
+        "title": "[p3dv5] fslabs a321 艾尔斯岩机场-31号跑道-ndb进近 yaye ndb y rwy",
+        "licenseFilter": null,
+        "query": "艾尔斯岩机场"
+      }
+    ],
+    "AYT": [
+      {
+        "file": "ayt-baidu-1.webp",
+        "width": 815,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.biubiu001.com",
+        "pageUrl": "https://www.biubiu001.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3624603285,3025649052&fm=253&fmt=auto&app=138&f=JPEG?w=815&h=500",
+        "title": "xplane 11 补充内容aerosoft 安塔利亚机场加速器免费下载_10plane 11",
+        "licenseFilter": null,
+        "query": "安塔利亚机场"
+      },
+      {
+        "file": "ayt-baidu-2.webp",
+        "width": 815,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.biubiu001.com",
+        "pageUrl": "https://www.biubiu001.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1714526291,4200115944&fm=253&fmt=auto&app=138&f=JPEG?w=815&h=500",
+        "title": "xplane 11 补充内容aerosoft 安塔利亚机场加速器免费下载_10plane 11",
+        "licenseFilter": null,
+        "query": "安塔利亚机场"
+      },
+      {
+        "file": "ayt-baidu-3.webp",
+        "width": 800,
+        "height": 1067,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3613430652,732411401&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067",
+        "title": "安塔利亚机场 土耳其地中海沿岸旅游胜地大型机场 - 哔哩哔哩",
+        "licenseFilter": null,
+        "query": "安塔利亚机场"
+      },
+      {
+        "file": "ayt-page-1.webp",
+        "width": 700,
+        "height": 370,
+        "source": "page",
+        "host": "www.airturkhaber.com",
+        "pageUrl": "https://www.airturkhaber.com/haberler/antalyada-yenilenen-terminal-geri-sayimda/",
+        "imageUrl": "https://www.airturkhaber.com/wp-content/uploads/2025/02/ANTLF9.jpg",
+        "title": "Antalya Airport terminal aerial (news headline bar cropped off) — AirTurkHaber, February 2025",
+        "licenseFilter": null,
+        "query": "page:www.airturkhaber.com"
+      }
+    ],
+    "BBU": [
+      {
+        "file": "bbu-baidu-1.webp",
+        "width": 569,
+        "height": 428,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1947048609,1514648955&fm=253&fmt=auto&app=138&f=JPEG?w=569&h=428",
+        "title": "斯特奥托佩尼国际机场(bucharest otopeni international airport),又",
+        "licenseFilter": null,
+        "query": "Bucharest Băneasa Aurel Vlaicu International Airport"
+      },
+      {
+        "file": "bbu-baidu-2.webp",
+        "width": 499,
+        "height": 193,
+        "source": "baidu",
+        "host": "www.kayak.sg",
+        "pageUrl": "https://www.kayak.sg/",
+        "imageUrl": "https://img0.baidu.com/it/u=3847966835,4066629972&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=193",
+        "title": "bucharest otopeni intl airport car hire reviews and directory",
+        "licenseFilter": null,
+        "query": "Bucharest Băneasa Aurel Vlaicu International Airport"
+      },
+      {
+        "file": "bbu-page-1.webp",
+        "width": 1280,
+        "height": 869,
+        "source": "page",
+        "host": "www.flugzeugbilder.de",
+        "pageUrl": "https://www.flugzeugbilder.de/v3/show.php?id=1760554",
+        "imageUrl": "https://www.flugzeugbilder.de/a/176/05/1731085476.jpg",
+        "title": "Flugzeugfoto 037 - Raytheon T-6 Texan II - Greece - Air Force | Flugzeugbilder.de",
+        "licenseFilter": null,
+        "query": "page:www.flugzeugbilder.de"
+      },
+      {
+        "file": "bbu-page-2.webp",
+        "width": 1280,
+        "height": 736,
+        "source": "page",
+        "host": "www.flugzeugbilder.de",
+        "pageUrl": "https://www.flugzeugbilder.de/v3/show.php?id=1680192",
+        "imageUrl": "https://www.flugzeugbilder.de/a/168/01/1653992829.jpg",
+        "title": "Flugzeugfoto 05-8158 - Lockheed C-130J-30 Hercules - USA - Air Force | Flugzeugbilder.de",
+        "licenseFilter": null,
+        "query": "page:www.flugzeugbilder.de"
+      }
+    ],
+    "BYH": [
+      {
+        "file": "byh-baidu-1.webp",
+        "width": 924,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.weathernationtv.com",
+        "pageUrl": "https://www.weathernationtv.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3080102403,1889939345&fm=253&fmt=auto&app=138&f=JPEG?w=924&h=500",
+        "title": "100 mph winds destroy airport in arkansas - weathernation",
+        "licenseFilter": null,
+        "query": "Arkansas International Airport"
+      }
+    ],
+    "CAI": [
+      {
+        "file": "cai-baidu-1.webp",
+        "width": 500,
+        "height": 652,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=2901333873,1187636003&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=652",
+        "title": "🛫 开罗国际机场简介 🛬",
+        "licenseFilter": null,
+        "query": "开罗国际机场"
+      },
+      {
+        "file": "cai-baidu-2.webp",
+        "width": 500,
+        "height": 667,
+        "source": "baidu",
+        "host": "new.qq.com",
+        "pageUrl": "https://new.qq.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=3972847038,637252710&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=667",
+        "title": "非洲第二繁忙机场:开罗国际机场_腾讯新闻",
+        "licenseFilter": null,
+        "query": "开罗国际机场"
+      },
+      {
+        "file": "cai-baidu-3.webp",
+        "width": 500,
+        "height": 667,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2578094545,2029314250&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667",
+        "title": "非洲第二繁忙的机场:开罗国际机场!",
+        "licenseFilter": null,
+        "query": "开罗国际机场"
+      },
+      {
+        "file": "cai-page-1.webp",
+        "width": 1280,
+        "height": 960,
+        "source": "page",
+        "host": "mediadr.sis.gov.eg",
+        "pageUrl": "https://mediadr.sis.gov.eg/handle/123456789/86119",
+        "imageUrl": "https://mediadr.sis.gov.eg/bitstream/handle/123456789/86119/MOCA20250101_0803.jpeg?sequence=4&isAllowed=y",
+        "title": "Egyptian Ministry of Civil Aviation tour of Cairo International Airport, January 2025 (Egyptian State Information Service)",
+        "licenseFilter": null,
+        "query": "page:mediadr.sis.gov.eg"
+      },
+      {
+        "file": "cai-page-2.webp",
+        "width": 960,
+        "height": 719,
+        "source": "page",
+        "host": "mediadr.sis.gov.eg",
+        "pageUrl": "https://mediadr.sis.gov.eg/handle/123456789/13909",
+        "imageUrl": "https://mediadr.sis.gov.eg/bitstream/handle/123456789/13909/MOCA20210828_0802.jpg?sequence=3&isAllowed=y",
+        "title": "وزير الطيران يقوم بجولة مفاجئة بمبنى الركاب ٢و٣ بمطار القاهرة",
+        "licenseFilter": null,
+        "query": "page:mediadr.sis.gov.eg"
+      }
+    ],
+    "CAK": [
+      {
+        "file": "cak-baidu-1.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.partners.agoda.com",
+        "pageUrl": "https://www.partners.agoda.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=1135301455,1045357255&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "亚克朗(oh)希尔顿花园酒店-阿克伦坎顿机场 (hilton garden inn akron",
+        "licenseFilter": null,
+        "query": "阿克伦-坎顿机场"
+      },
+      {
+        "file": "cak-baidu-2.webp",
+        "width": 749,
+        "height": 500,
+        "source": "baidu",
+        "host": "hotels.corporatetravel.ctrip.com",
+        "pageUrl": "https://hotels.corporatetravel.ctrip.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3403246804,2842292020&fm=253&fmt=auto&app=138&f=JPEG?w=749&h=500",
+        "title": "阿克伦-坎顿机场坎布里亚酒店预订价格,联系电话位置地址【携程酒店】",
+        "licenseFilter": null,
+        "query": "阿克伦-坎顿机场"
+      },
+      {
+        "file": "cak-baidu-3.webp",
+        "width": 749,
+        "height": 500,
+        "source": "baidu",
+        "host": "hotels.corporatetravel.ctrip.com",
+        "pageUrl": "https://hotels.corporatetravel.ctrip.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1827899196,1769836451&fm=253&fmt=auto&app=138&f=JPEG?w=749&h=500",
+        "title": "阿克伦-坎顿机场坎布里亚酒店预订价格,联系电话位置地址【携程酒店】",
+        "licenseFilter": null,
+        "query": "阿克伦-坎顿机场"
+      }
+    ],
+    "CDG": [
+      {
+        "file": "cdg-baidu-1.webp",
+        "width": 888,
+        "height": 500,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3739727662,1383885955&fm=253&fmt=auto&app=138&f=JPEG?w=888&h=500",
+        "title": "巴黎戴高乐机场内,吃货打包半打正宗马卡龙,然后到餐厅吃个简餐,也不",
+        "licenseFilter": null,
+        "query": "巴黎戴高乐机场"
+      },
+      {
+        "file": "cdg-baidu-2.webp",
+        "width": 500,
+        "height": 661,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=272643498,1270739072&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=661",
+        "title": "巴黎戴高乐机场,4小时攻略!",
+        "licenseFilter": null,
+        "query": "巴黎戴高乐机场"
+      },
+      {
+        "file": "cdg-baidu-3.webp",
+        "width": 500,
+        "height": 654,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=2761090183,756190644&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=654",
+        "title": "巴黎戴高乐机场:法国门户探秘",
+        "licenseFilter": null,
+        "query": "巴黎戴高乐机场"
+      }
+    ],
+    "CFE": [
+      {
+        "file": "cfe-baidu-1.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.booking.com",
+        "pageUrl": "https://www.booking.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2942211731,807152483&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "ibis styles clermont-ferrand aéroport克莱蒙费朗机场宜必思尚品酒",
+        "licenseFilter": null,
+        "query": "克莱蒙费朗奥弗涅机场"
+      },
+      {
+        "file": "cfe-baidu-2.webp",
+        "width": 897,
+        "height": 500,
+        "source": "baidu",
+        "host": "aviapages.com",
+        "pageUrl": "https://aviapages.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3232679813,2157384471&fm=253&fmt=auto&app=138&f=JPEG?w=897&h=500",
+        "title": "vinci airports clermont-ferrand auvergne fbo - fbo",
+        "licenseFilter": null,
+        "query": "Clermont-Ferrand Auvergne airport"
+      },
+      {
+        "file": "cfe-baidu-3.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "aviapages.com",
+        "pageUrl": "https://aviapages.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=259865042,2777436709&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500",
+        "title": "vinci airports clermont-ferrand auvergne fbo - fbo",
+        "licenseFilter": null,
+        "query": "Clermont-Ferrand Auvergne airport"
+      }
+    ],
+    "CGK": [
+      {
+        "file": "cgk-baidu-1.webp",
+        "width": 608,
+        "height": 456,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1798540007,710948469&fm=253&fmt=auto&app=120&f=JPEG?w=608&h=456",
+        "title": "苏加诺-哈达国际机场|benda苏加诺-哈达国际机场打卡啦",
+        "licenseFilter": null,
+        "query": "苏加诺-哈达国际机场"
+      },
+      {
+        "file": "cgk-baidu-2.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "travel.qunar.com",
+        "pageUrl": "https://travel.qunar.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=3012712431,3711159949&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "2019苏加诺-哈达国际机场_旅游攻略_门票_地址_游记点评,雅加达旅游景",
+        "licenseFilter": null,
+        "query": "苏加诺-哈达国际机场"
+      },
+      {
+        "file": "cgk-baidu-3.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.fsx.org.cn",
+        "pageUrl": "https://www.fsx.org.cn/",
+        "imageUrl": "https://img1.baidu.com/it/u=3969709934,1596763001&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500",
+        "title": "[首发] binersim - 苏加诺-哈达国际机场 [最新fsx fsx se版]-fsx/p3d",
+        "licenseFilter": null,
+        "query": "苏加诺-哈达国际机场"
+      }
+    ],
+    "CMF": [
+      {
+        "file": "cmf-baidu-1.webp",
+        "width": 1378,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.spotterguide.net",
+        "pageUrl": "https://www.spotterguide.net/",
+        "imageUrl": "https://img1.baidu.com/it/u=2152291524,798995778&fm=253&fmt=auto&app=138&f=JPEG?w=1378&h=500",
+        "title": "chambéry savoie airport spotting guide – spotterguide.net",
+        "licenseFilter": null,
+        "query": "Chambéry Aix les Bains airport"
+      }
+    ],
+    "CWB": [
+      {
+        "file": "cwb-baidu-1.webp",
+        "width": 500,
+        "height": 333,
+        "source": "baidu",
+        "host": "www.spotterguide.net",
+        "pageUrl": "https://www.spotterguide.net/",
+        "imageUrl": "https://img0.baidu.com/it/u=1787543449,3536834833&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=333",
+        "title": "curitiba afonso pena intl. airport spotting guide – spotterguid",
+        "licenseFilter": null,
+        "query": "Curitiba-Afonso Pena International Airport"
+      },
+      {
+        "file": "cwb-baidu-2.webp",
+        "width": 500,
+        "height": 313,
+        "source": "baidu",
+        "host": "www.spotterguide.net",
+        "pageUrl": "https://www.spotterguide.net/",
+        "imageUrl": "https://img2.baidu.com/it/u=3022009721,4130288841&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=313",
+        "title": "curitiba afonso pena intl. airport spotting guide – spotterguid",
+        "licenseFilter": null,
+        "query": "Curitiba-Afonso Pena International Airport"
+      },
+      {
+        "file": "cwb-baidu-3.webp",
+        "width": 499,
+        "height": 193,
+        "source": "baidu",
+        "host": "www.kayak.sg",
+        "pageUrl": "https://www.kayak.sg/",
+        "imageUrl": "https://img1.baidu.com/it/u=4280914981,2584054173&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=193",
+        "title": "car rentals at curitiba afonso pena airport - kayak",
+        "licenseFilter": null,
+        "query": "Curitiba-Afonso Pena International Airport"
+      }
+    ],
+    "EDC": [
+      {
+        "file": "edc-baidu-1.webp",
+        "width": 500,
+        "height": 290,
+        "source": "baidu",
+        "host": "www.xyyao.com",
+        "pageUrl": "https://www.xyyao.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=2661382223,3501146189&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=290",
+        "title": "fsx [imaginesim]美国奥斯汀机场(kaus austin bergstrom 2015)_※地",
+        "licenseFilter": null,
+        "query": "奥斯汀商务机场"
+      },
+      {
+        "file": "edc-baidu-2.webp",
+        "width": 570,
+        "height": 380,
+        "source": "baidu",
+        "host": "hotels.corporatetravel.ctrip.com",
+        "pageUrl": "https://hotels.corporatetravel.ctrip.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=2477220594,379536698&fm=253&fmt=auto&app=138&f=JPEG?w=570&h=380",
+        "title": "奥斯汀机场凯悦嘉轩酒店(hyatt place austin airport)预订价格,联系",
+        "licenseFilter": null,
+        "query": "奥斯汀商务机场"
+      },
+      {
+        "file": "edc-baidu-3.webp",
+        "width": 500,
+        "height": 750,
+        "source": "baidu",
+        "host": "www.advancedatc.com",
+        "pageUrl": "https://www.advancedatc.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3311916004,3180384721&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=750",
+        "title": "austin executive airport",
+        "licenseFilter": null,
+        "query": "Austin Executive Airport"
+      }
+    ],
+    "FRA": [
+      {
+        "file": "fra-baidu-1.webp",
+        "width": 500,
+        "height": 894,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1496404597,1077143172&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=894",
+        "title": "法兰克福机场入境体验:快速通关无烦恼",
+        "licenseFilter": null,
+        "query": "法兰克福机场"
+      },
+      {
+        "file": "fra-baidu-2.webp",
+        "width": 751,
+        "height": 500,
+        "source": "baidu",
+        "host": "zhidao.baidu.com",
+        "pageUrl": "https://zhidao.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=2487237838,3479486751&fm=253&fmt=auto&app=138&f=JPEG?w=751&h=500",
+        "title": "法兰克福机场有两座航站楼,由走廊连接,也可以使用旅客运送工具和巴士",
+        "licenseFilter": null,
+        "query": "法兰克福机场"
+      },
+      {
+        "file": "fra-baidu-3.webp",
+        "width": 780,
+        "height": 500,
+        "source": "baidu",
+        "host": "travel.sohu.com",
+        "pageUrl": "https://travel.sohu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=442155886,368395308&fm=253&fmt=auto&app=120&f=JPEG?w=780&h=500",
+        "title": "德国法兰克福机场年客运量5935万人次,深圳宝安机场是多少?",
+        "licenseFilter": null,
+        "query": "法兰克福机场"
+      }
+    ],
+    "HKG": [
+      {
+        "file": "hkg-baidu-1.webp",
+        "width": 500,
+        "height": 888,
+        "source": "baidu",
+        "host": "quanmin.baidu.com",
+        "pageUrl": "https://quanmin.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2748830680,3518252603&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=888",
+        "title": "香港国际机场真大,飞机滑行都要好长时间.",
+        "licenseFilter": null,
+        "query": "香港国际机场"
+      },
+      {
+        "file": "hkg-baidu-2.webp",
+        "width": 500,
+        "height": 667,
+        "source": "baidu",
+        "host": "weibo.com",
+        "pageUrl": "https://weibo.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=2735757499,2328166355&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=667",
+        "title": "被香港国际机场暖心到了,同频的人出发才是旅行的意义!!",
+        "licenseFilter": null,
+        "query": "香港国际机场"
+      },
+      {
+        "file": "hkg-baidu-3.webp",
+        "width": 920,
+        "height": 500,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3528975296,3982494877&fm=253&fmt=auto&app=138&f=JPEG?w=920&h=500",
+        "title": "🌍 探索香港国际机场的绝美地景 🛫",
+        "licenseFilter": null,
+        "query": "香港国际机场"
+      }
+    ],
+    "HUU": [
+      {
+        "file": "huu-baidu-1.webp",
+        "width": 500,
+        "height": 748,
+        "source": "baidu",
+        "host": "dy.163.com",
+        "pageUrl": "https://dy.163.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3864574375,3167030013&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=748",
+        "title": "小七瘦成美少女!david beckham和女儿最新机场街拍曝光_网易订阅",
+        "licenseFilter": null,
+        "query": "大卫·费格罗亚·费尔南迪尼机场"
+      },
+      {
+        "file": "huu-baidu-2.webp",
+        "width": 500,
+        "height": 750,
+        "source": "baidu",
+        "host": "baijiahao.baidu.com",
+        "pageUrl": "https://baijiahao.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2217918836,3879939609&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=750",
+        "title": "小七瘦成美少女!david beckham和女儿最新机场街拍曝光",
+        "licenseFilter": null,
+        "query": "大卫·费格罗亚·费尔南迪尼机场"
+      },
+      {
+        "file": "huu-baidu-3.webp",
+        "width": 500,
+        "height": 748,
+        "source": "baidu",
+        "host": "baijiahao.baidu.com",
+        "pageUrl": "https://baijiahao.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2630999205,4084528390&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=748",
+        "title": "小七瘦成美少女!david beckham和女儿最新机场街拍曝光",
+        "licenseFilter": null,
+        "query": "大卫·费格罗亚·费尔南迪尼机场"
+      },
+      {
+        "file": "huu-page-1.webp",
+        "width": 1600,
+        "height": 899,
+        "source": "page",
+        "host": "portalapp.corpac.gob.pe",
+        "pageUrl": "https://portalapp.corpac.gob.pe/Storage/tbl_fichas_tecnicas/fld_1097_Ficha_tenica_file/8-Wd1Cr2Jc8Ks9Ey0.pdf",
+        "imageUrl": "https://portalapp.corpac.gob.pe/Storage/tbl_fichas_tecnicas/fld_1097_Ficha_tenica_file/8-Wd1Cr2Jc8Ks9Ey0.pdf",
+        "title": "CORPAC official technical data sheet for Huánuco airport (photos embedded in the PDF)",
+        "licenseFilter": null,
+        "query": "page:portalapp.corpac.gob.pe"
+      },
+      {
+        "file": "huu-page-2.webp",
+        "width": 1280,
+        "height": 961,
+        "source": "page",
+        "host": "portalapp.corpac.gob.pe",
+        "pageUrl": "https://portalapp.corpac.gob.pe/Storage/tbl_fichas_tecnicas/fld_1097_Ficha_tenica_file/8-Wd1Cr2Jc8Ks9Ey0.pdf",
+        "imageUrl": "https://portalapp.corpac.gob.pe/Storage/tbl_fichas_tecnicas/fld_1097_Ficha_tenica_file/8-Wd1Cr2Jc8Ks9Ey0.pdf",
+        "title": "CORPAC official technical data sheet for Huánuco airport (photos embedded in the PDF)",
+        "licenseFilter": null,
+        "query": "page:portalapp.corpac.gob.pe"
+      }
+    ],
+    "IXA": [
+      {
+        "file": "ixa-baidu-1.webp",
+        "width": 499,
+        "height": 247,
+        "source": "baidu",
+        "host": "www.sohu.com",
+        "pageUrl": "https://www.sohu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=886063539,4008774172&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=247",
+        "title": "国际凯伦 | 融合防水在印度 助力打造阿加尔塔拉机场项目_股份",
+        "licenseFilter": null,
+        "query": "阿加尔塔拉机场"
+      },
+      {
+        "file": "ixa-baidu-2.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.sohu.com",
+        "pageUrl": "https://www.sohu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=268694554,4232899289&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "国际凯伦 | 融合防水在印度 助力打造阿加尔塔拉机场项目_股份",
+        "licenseFilter": null,
+        "query": "阿加尔塔拉机场"
+      },
+      {
+        "file": "ixa-baidu-3.webp",
+        "width": 500,
+        "height": 333,
+        "source": "baidu",
+        "host": "www.sohu.com",
+        "pageUrl": "https://www.sohu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1899055016,707558768&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=333",
+        "title": "国际凯伦 | 融合防水在印度 助力打造阿加尔塔拉机场项目_股份",
+        "licenseFilter": null,
+        "query": "阿加尔塔拉机场"
+      }
+    ],
+    "IXU": [
+      {
+        "file": "ixu-baidu-1.webp",
+        "width": 1200,
+        "height": 675,
+        "source": "baidu",
+        "host": "www.veer.com",
+        "pageUrl": "https://www.veer.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1536406251,1844216730&fm=253&fmt=auto?w=1200&h=675",
+        "title": "奥兰加巴德机场",
+        "licenseFilter": null,
+        "query": "奥兰加巴德机场"
+      },
+      {
+        "file": "ixu-baidu-2.webp",
+        "width": 720,
+        "height": 500,
+        "source": "baidu",
+        "host": "hotels.ctrip.com",
+        "pageUrl": "https://hotels.ctrip.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3027707770,782517134&fm=253&fmt=auto&app=138&f=JPEG?w=720&h=500",
+        "title": "凯悦嘉轩奥兰加巴德机场预订价格,联系电话位置地址【携程酒店】",
+        "licenseFilter": null,
+        "query": "奥兰加巴德机场"
+      },
+      {
+        "file": "ixu-baidu-3.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "hotels.ctrip.com",
+        "pageUrl": "https://hotels.ctrip.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3085652223,1486124752&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "凯悦嘉轩奥兰加巴德机场预订价格,联系电话位置地址【携程酒店】",
+        "licenseFilter": null,
+        "query": "奥兰加巴德机场"
+      }
+    ],
+    "LEI": [
+      {
+        "file": "lei-baidu-1.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.biubiu001.com",
+        "pageUrl": "https://www.biubiu001.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3818340043,1511122807&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500",
+        "title": "xplane 11 扩展包 飞行员 leam 阿尔梅里亚机场加速器免费下载_10plan",
+        "licenseFilter": null,
+        "query": "阿尔梅里亚机场"
+      },
+      {
+        "file": "lei-baidu-2.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.biubiu001.com",
+        "pageUrl": "https://www.biubiu001.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=4210028023,3853910666&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500",
+        "title": "xplane 11 扩展包 飞行员 leam 阿尔梅里亚机场加速器免费下载_10plan",
+        "licenseFilter": null,
+        "query": "阿尔梅里亚机场"
+      },
+      {
+        "file": "lei-baidu-3.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.biubiu001.com",
+        "pageUrl": "https://www.biubiu001.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3992536353,3095292027&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500",
+        "title": "xplane 11 扩展包 飞行员 leam 阿尔梅里亚机场加速器免费下载_10plan",
+        "licenseFilter": null,
+        "query": "阿尔梅里亚机场"
+      }
+    ],
+    "LFK": [
+      {
+        "file": "lfk-baidu-1.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.ziegenhals.org",
+        "pageUrl": "https://www.ziegenhals.org/",
+        "imageUrl": "https://img2.baidu.com/it/u=4022230705,2767289969&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "angelina county airport",
+        "licenseFilter": null,
+        "query": "Angelina County Airport"
+      }
+    ],
+    "LHR": [
+      {
+        "file": "lhr-baidu-1.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3970048630,4293729121&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "伦敦希思罗机场",
+        "licenseFilter": null,
+        "query": "伦敦希思罗机场"
+      },
+      {
+        "file": "lhr-baidu-2.webp",
+        "width": 500,
+        "height": 653,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=803823810,3879588024&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653",
+        "title": "🛫伦敦希思罗机场交通全攻略🚇",
+        "licenseFilter": null,
+        "query": "伦敦希思罗机场"
+      },
+      {
+        "file": "lhr-baidu-3.webp",
+        "width": 770,
+        "height": 500,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=354964064,358499750&fm=253&fmt=auto&app=138&f=JPEG?w=770&h=500",
+        "title": "🛫 伦敦希思罗机场航站楼航班调整指南 🛬",
+        "licenseFilter": null,
+        "query": "伦敦希思罗机场"
+      }
+    ],
+    "MOL": [
+      {
+        "file": "mol-baidu-1.webp",
+        "width": 569,
+        "height": 427,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=1870511562,4210291&fm=253&fmt=auto&app=138&f=JPEG?w=569&h=427",
+        "title": "莫尔德阿罗机场",
+        "licenseFilter": null,
+        "query": "莫尔德阿罗机场"
+      },
+      {
+        "file": "mol-baidu-2.webp",
+        "width": 500,
+        "height": 281,
+        "source": "baidu",
+        "host": "you.big5.ctrip.com",
+        "pageUrl": "https://you.big5.ctrip.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1342250285,725871336&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281",
+        "title": "【携程攻略】莫尔德阿罗机场怎麼样/怎麼去,莫尔德阿罗机场用户点评/",
+        "licenseFilter": null,
+        "query": "莫尔德阿罗机场"
+      },
+      {
+        "file": "mol-baidu-3.webp",
+        "width": 500,
+        "height": 889,
+        "source": "baidu",
+        "host": "you.big5.ctrip.com",
+        "pageUrl": "https://you.big5.ctrip.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1340627143,3871757870&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889",
+        "title": "【携程攻略】莫尔德阿罗机场怎麼样/怎麼去,莫尔德阿罗机场用户点评/",
+        "licenseFilter": null,
+        "query": "莫尔德阿罗机场"
+      }
+    ],
+    "NRT": [
+      {
+        "file": "nrt-baidu-1.webp",
+        "width": 500,
+        "height": 667,
+        "source": "baidu",
+        "host": "weibo.com",
+        "pageUrl": "https://weibo.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1780231986,3121784268&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=667",
+        "title": "顺利抵达 东京成田机场 ✈️",
+        "licenseFilter": null,
+        "query": "东京成田机场"
+      },
+      {
+        "file": "nrt-baidu-2.webp",
+        "width": 500,
+        "height": 653,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=809419763,3753306903&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653",
+        "title": "东京成田机场nrt的飞行体验",
+        "licenseFilter": null,
+        "query": "东京成田机场"
+      },
+      {
+        "file": "nrt-baidu-3.webp",
+        "width": 686,
+        "height": 500,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=450664964,1987940317&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500",
+        "title": "🛫 东京成田机场全攻略 🌍",
+        "licenseFilter": null,
+        "query": "东京成田机场"
+      }
+    ],
+    "OVD": [
+      {
+        "file": "ovd-baidu-1.webp",
+        "width": 500,
+        "height": 281,
+        "source": "baidu",
+        "host": "www.fsx.org.cn",
+        "pageUrl": "https://www.fsx.org.cn/",
+        "imageUrl": "https://img2.baidu.com/it/u=3777005635,1475298672&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281",
+        "title": "orbx - leas 西班牙 阿斯图里亚斯机场 转换版 [x-plane11]-x-plane-",
+        "licenseFilter": null,
+        "query": "阿斯图里亚斯机场"
+      },
+      {
+        "file": "ovd-baidu-2.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.fsxchina.com",
+        "pageUrl": "https://www.fsxchina.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=254085199,1139514712&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500",
+        "title": "[免费][p3dv4] orbx - leas asturias 西班牙阿斯图里亚斯机场 v1.00 ",
+        "licenseFilter": null,
+        "query": "阿斯图里亚斯机场"
+      },
+      {
+        "file": "ovd-baidu-3.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.fsxchina.com",
+        "pageUrl": "https://www.fsxchina.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3754077421,4112770621&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500",
+        "title": "[免费][p3dv4] orbx - leas asturias 西班牙阿斯图里亚斯机场 v1.00 ",
+        "licenseFilter": null,
+        "query": "阿斯图里亚斯机场"
+      }
+    ],
+    "PVG": [
+      {
+        "file": "pvg-baidu-1.webp",
+        "width": 500,
+        "height": 667,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3805448492,1081341890&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667",
+        "title": "大气的上海浦东国际机场",
+        "licenseFilter": null,
+        "query": "上海浦东国际机场"
+      },
+      {
+        "file": "pvg-baidu-2.webp",
+        "width": 800,
+        "height": 1523,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=960906513,915449120&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1523",
+        "title": "上海浦东国际机场:我的飞行记忆",
+        "licenseFilter": null,
+        "query": "上海浦东国际机场"
+      },
+      {
+        "file": "pvg-baidu-3.webp",
+        "width": 666,
+        "height": 500,
+        "source": "baidu",
+        "host": "baijiahao.baidu.com",
+        "pageUrl": "https://baijiahao.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3757049659,2662994473&fm=253&fmt=auto&app=120&f=JPEG?w=666&h=500",
+        "title": "上海浦东机场航班突返航,乘客亲述惊魂六小时,领空打仗广播令人后怕,",
+        "licenseFilter": null,
+        "query": "上海浦东国际机场"
+      }
+    ],
+    "RAE": [
+      {
+        "file": "rae-baidu-1.webp",
+        "width": 1025,
+        "height": 650,
+        "source": "baidu",
+        "host": "baijiahao.baidu.com",
+        "pageUrl": "https://baijiahao.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3035519323,2002499320&fm=253&fmt=auto&app=120&f=JPEG?w=1025&h=650",
+        "title": "兰舍空调系统助力阿拉尔机场应对极端气候挑战",
+        "licenseFilter": null,
+        "query": "阿拉尔机场"
+      },
+      {
+        "file": "rae-baidu-2.webp",
+        "width": 1026,
+        "height": 740,
+        "source": "baidu",
+        "host": "baijiahao.baidu.com",
+        "pageUrl": "https://baijiahao.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=363808720,3413193933&fm=253&fmt=auto&app=120&f=JPEG?w=1026&h=740",
+        "title": "阿拉尔机场通航:塔克拉玛干沙漠的绿色飞跃",
+        "licenseFilter": null,
+        "query": "阿拉尔机场"
+      }
+    ],
+    "RUA": [
+      {
+        "file": "rua-baidu-1.webp",
+        "width": 723,
+        "height": 500,
+        "source": "baidu",
+        "host": "m.mafengwo.cn",
+        "pageUrl": "https://m.mafengwo.cn/",
+        "imageUrl": "https://img2.baidu.com/it/u=4025713256,356502914&fm=253&fmt=auto&app=138&f=JPEG?w=723&h=500",
+        "title": "阿鲁阿机场攻略,阿鲁阿机场门票_地址,阿鲁阿机场景点攻略 - 马蜂窝",
+        "licenseFilter": null,
+        "query": "阿鲁阿机场"
+      },
+      {
+        "file": "rua-baidu-2.webp",
+        "width": 871,
+        "height": 500,
+        "source": "baidu",
+        "host": "m.mafengwo.cn",
+        "pageUrl": "https://m.mafengwo.cn/",
+        "imageUrl": "https://img2.baidu.com/it/u=2578753621,1905624584&fm=253&fmt=auto&app=138&f=JPEG?w=871&h=500",
+        "title": "阿鲁阿机场攻略,阿鲁阿机场门票_地址,阿鲁阿机场景点攻略 - 马蜂窝",
+        "licenseFilter": null,
+        "query": "阿鲁阿机场"
+      },
+      {
+        "file": "rua-baidu-3.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "m.mafengwo.cn",
+        "pageUrl": "https://m.mafengwo.cn/",
+        "imageUrl": "https://img2.baidu.com/it/u=2488369328,1909249176&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "阿鲁阿机场攻略,阿鲁阿机场门票_地址,阿鲁阿机场景点攻略 - 马蜂窝",
+        "licenseFilter": null,
+        "query": "阿鲁阿机场"
+      },
+      {
+        "file": "rua-page-1.webp",
+        "width": 752,
+        "height": 361,
+        "source": "page",
+        "host": "caa.go.ug",
+        "pageUrl": "https://caa.go.ug/Download/105/sep-and-eprp-for-the-proposed-arua-aerodrome-project/81625/esia-report-expansion-of-arua-aerodrome",
+        "imageUrl": "https://caa.go.ug/Download/105/sep-and-eprp-for-the-proposed-arua-aerodrome-project/81625/esia-report-expansion-of-arua-aerodrome",
+        "title": "Arua aerodrome, photo embedded in the UCAA ESIA report (July 2025)",
+        "licenseFilter": null,
+        "query": "page:caa.go.ug"
+      }
+    ],
+    "SCL": [
+      {
+        "file": "scl-baidu-1.webp",
+        "width": 808,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=1389855826,101889900&fm=253&fmt=auto&app=138&f=JPEG?w=808&h=500",
+        "title": "国际机场(comodoro arturo merino benitez international airport, a",
+        "licenseFilter": null,
+        "query": "Comodoro Arturo Merino Benítez International Airport"
+      },
+      {
+        "file": "scl-baidu-2.webp",
+        "width": 749,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1787535026,1031398344&fm=253&fmt=auto&app=138&f=JPEG?w=749&h=500",
+        "title": "国际机场(comodoro arturo merino benitez international airport, a",
+        "licenseFilter": null,
+        "query": "Comodoro Arturo Merino Benítez International Airport"
+      },
+      {
+        "file": "scl-baidu-3.webp",
+        "width": 801,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1325050260,516033836&fm=253&fmt=auto&app=138&f=JPEG?w=801&h=500",
+        "title": "国际机场(comodoro arturo merino benitez international airport, a",
+        "licenseFilter": null,
+        "query": "Comodoro Arturo Merino Benítez International Airport"
+      }
+    ],
+    "SCO": [
+      {
+        "file": "sco-baidu-1.webp",
+        "width": 666,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=2814060118,1096412317&fm=253&fmt=auto&app=120&f=JPEG?w=666&h=500",
+        "title": "飞狮航空fs7621 阿克套机场起飞 飞向巴库",
+        "licenseFilter": null,
+        "query": "阿克套国际机场"
+      }
+    ],
+    "SCU": [
+      {
+        "file": "scu-baidu-1.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "flexfacades.com",
+        "pageUrl": "https://flexfacades.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=3027046711,4033526078&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "san antonio international airport consolidated rental car facili",
+        "licenseFilter": null,
+        "query": "Antonio Maceo International Airport"
+      },
+      {
+        "file": "scu-baidu-2.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "flexfacades.com",
+        "pageUrl": "https://flexfacades.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=821952379,2550575395&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "san antonio international airport consolidated rental car facili",
+        "licenseFilter": null,
+        "query": "Antonio Maceo International Airport"
+      }
+    ],
+    "SDN": [
+      {
+        "file": "sdn-baidu-1.webp",
+        "width": 726,
+        "height": 408,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2301394755,3211573240&fm=253&fmt=auto&app=138&f=JPEG?w=726&h=408",
+        "title": "stockholm arlanda international airport",
+        "licenseFilter": null,
+        "query": "桑达内机场"
+      },
+      {
+        "file": "sdn-baidu-2.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "zhuanlan.zhihu.com",
+        "pageUrl": "https://zhuanlan.zhihu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=100833563,553776115&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "斯德哥尔摩阿兰达arlanda机场——候机流程跟习惯的完全不一样 - 知乎",
+        "licenseFilter": null,
+        "query": "桑达内机场"
+      },
+      {
+        "file": "sdn-baidu-3.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "zhuanlan.zhihu.com",
+        "pageUrl": "https://zhuanlan.zhihu.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=1054221204,2450979128&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "斯德哥尔摩阿兰达arlanda机场——候机流程跟习惯的完全不一样 - 知乎",
+        "licenseFilter": null,
+        "query": "桑达内机场"
+      },
+      {
+        "file": "sdn-page-1.webp",
+        "width": 1280,
+        "height": 871,
+        "source": "page",
+        "host": "www.planepictures.net",
+        "pageUrl": "https://www.planepictures.net/v3/show_en.php?id=1787694",
+        "imageUrl": "https://www.planepictures.net/a/178/76/1763924492.jpg",
+        "title": "Aircraft photo LN-WIY - De Havilland Canada DHC-8-103Q - Wideroe | PlanePictures.net",
+        "licenseFilter": null,
+        "query": "page:www.planepictures.net"
+      },
+      {
+        "file": "sdn-page-2.webp",
+        "width": 600,
+        "height": 423,
+        "source": "page",
+        "host": "breogfjellsport.com",
+        "pageUrl": "https://breogfjellsport.com/dir/pictures/album_window_picture0fbd.html?pictureID=2619",
+        "imageUrl": "https://breogfjellsport.com/files/pictures/bildenr2619.jpg",
+        "title": "Breogfjellsport.no - Vis bilde - Dash 8",
+        "licenseFilter": null,
+        "query": "page:breogfjellsport.com"
+      }
+    ],
+    "SOC": [
+      {
+        "file": "soc-baidu-1.webp",
+        "width": 664,
+        "height": 373,
+        "source": "baidu",
+        "host": "zhuanlan.zhihu.com",
+        "pageUrl": "https://zhuanlan.zhihu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=196075523,1896687701&fm=253&fmt=auto&app=138&f=JPEG?w=664&h=373",
+        "title": "印尼梭罗市adisoemarmo国际机场将开通飞往中国昆明的航线",
+        "licenseFilter": null,
+        "query": "Adisoemarmo International Airport"
+      }
+    ],
+    "SPI": [
+      {
+        "file": "spi-baidu-1.webp",
+        "width": 751,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.hotels.cn",
+        "pageUrl": "https://www.hotels.cn/",
+        "imageUrl": "https://img2.baidu.com/it/u=3946595391,525454115&fm=253&fmt=auto&app=138&f=JPEG?w=751&h=500",
+        "title": "capital o airport 24/7预订, 2019坎昆capital o airport 24/7价格| ",
+        "licenseFilter": null,
+        "query": "Abraham Lincoln Capital Airport"
+      },
+      {
+        "file": "spi-baidu-2.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.agoda.com",
+        "pageUrl": "https://www.agoda.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=2641959654,2603554006&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "新德里 capital o 7331 hotel airport park blue_舒适型_预订优惠价",
+        "licenseFilter": null,
+        "query": "Abraham Lincoln Capital Airport"
+      },
+      {
+        "file": "spi-baidu-3.webp",
+        "width": 750,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.agoda.com",
+        "pageUrl": "https://www.agoda.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1903395992,3445357973&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+        "title": "lincoln airport i-80预订-2025特价",
+        "licenseFilter": null,
+        "query": "Abraham Lincoln Capital Airport"
+      },
+      {
+        "file": "spi-page-1.webp",
+        "width": 1200,
+        "height": 650,
+        "source": "page",
+        "host": "www.flyspi.com",
+        "pageUrl": "https://www.flyspi.com/",
+        "imageUrl": "https://www.flyspi.com/Resources/63a76dd0-5d15-461e-9949-de639d92da60/flyspi-og.jpg",
+        "title": "Fly SPI at Abraham Lincoln Capital Airport in Springfield",
+        "licenseFilter": null,
+        "query": "page:www.flyspi.com"
+      },
+      {
+        "file": "spi-page-2.webp",
+        "width": 1600,
+        "height": 417,
+        "source": "page",
+        "host": "www.flyspi.com",
+        "pageUrl": "https://www.flyspi.com/",
+        "imageUrl": "https://www.flyspi.com/images/lists/234/9b944e9a-8133-4b2a-a717-8bbafeb5fcf2.jpg",
+        "title": "Fly SPI at Abraham Lincoln Capital Airport in Springfield",
+        "licenseFilter": null,
+        "query": "page:www.flyspi.com"
+      },
+      {
+        "file": "spi-page-3.webp",
+        "width": 1600,
+        "height": 417,
+        "source": "page",
+        "host": "www.flyspi.com",
+        "pageUrl": "https://www.flyspi.com/",
+        "imageUrl": "https://www.flyspi.com/images/lists/200/8bb82b6c-10c8-4237-b331-d390f0fc6384.jpg",
+        "title": "Fly SPI at Abraham Lincoln Capital Airport in Springfield",
+        "licenseFilter": null,
+        "query": "page:www.flyspi.com"
+      }
+    ],
+    "SVD": [
+      {
+        "file": "svd-baidu-1.webp",
+        "width": 667,
+        "height": 500,
+        "source": "baidu",
+        "host": "wanderlog.com",
+        "pageUrl": "https://wanderlog.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=3970592306,209947593&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "argyle grand hotel nairobi airport, 内罗毕, 肯尼亚 - 评论,评分,",
+        "licenseFilter": null,
+        "query": "Argyle International Airport"
+      },
+      {
+        "file": "svd-baidu-2.webp",
+        "width": 500,
+        "height": 500,
+        "source": "baidu",
+        "host": "skyvector.com",
+        "pageUrl": "https://skyvector.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=121204904,1996490913&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+        "title": "arriving into terminal 1- argyle airport | skyvector",
+        "licenseFilter": null,
+        "query": "Argyle International Airport"
+      },
+      {
+        "file": "svd-baidu-3.webp",
+        "width": 727,
+        "height": 500,
+        "source": "baidu",
+        "host": "argylegrandnairobiairport.argyles.cn",
+        "pageUrl": "https://argylegrandnairobiairport.argyles.cn/",
+        "imageUrl": "https://img1.baidu.com/it/u=176213059,3229581599&fm=253&fmt=auto&app=138&f=JPEG?w=727&h=500",
+        "title": "argyle grand hotel nairobi airport official site! best price gua",
+        "licenseFilter": null,
+        "query": "Argyle International Airport"
+      }
+    ],
+    "TTQ": [
+      {
+        "file": "ttq-baidu-1.webp",
+        "width": 725,
+        "height": 475,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=802692828,2497222447&fm=253&fmt=auto&app=138&f=JPEG?w=725&h=475",
+        "title": "图卢姆机场设施现代化",
+        "licenseFilter": null,
+        "query": "图卢姆机场"
+      },
+      {
+        "file": "ttq-baidu-2.webp",
+        "width": 677,
+        "height": 500,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2371713613,1561337978&fm=253&fmt=auto&app=138&f=JPEG?w=677&h=500",
+        "title": "图卢姆机场设施现代化",
+        "licenseFilter": null,
+        "query": "图卢姆机场"
+      },
+      {
+        "file": "ttq-baidu-3.webp",
+        "width": 500,
+        "height": 667,
+        "source": "baidu",
+        "host": "hotels.ctrip.com",
+        "pageUrl": "https://hotels.ctrip.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1674109182,2402613387&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667",
+        "title": "玛雅世界图卢姆机场酒店预订价格,联系电话位置地址【携程酒店】",
+        "licenseFilter": null,
+        "query": "图卢姆机场"
+      },
+      {
+        "file": "ttq-page-1.webp",
+        "width": 1024,
+        "height": 699,
+        "source": "page",
+        "host": "www.flugzeugbilder.de",
+        "pageUrl": "https://www.flugzeugbilder.de/show.php?id=1790657",
+        "imageUrl": "https://www.flugzeugbilder.de/a/179/06/1767567195.jpg",
+        "title": "Flugzeugfoto  - Overview - Airport | Flugzeugbilder.de",
+        "licenseFilter": null,
+        "query": "page:www.flugzeugbilder.de"
+      }
+    ],
+    "VBA": [
+      {
+        "file": "vba-baidu-1.webp",
+        "width": 800,
+        "height": 1050,
+        "source": "baidu",
+        "host": "mbd.baidu.com",
+        "pageUrl": "https://mbd.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=881272862,2892204878&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1050",
+        "title": "🛫探秘济宁大安机场🛬",
+        "licenseFilter": null,
+        "query": "安机场"
+      },
+      {
+        "file": "vba-baidu-2.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "baijiahao.baidu.com",
+        "pageUrl": "https://baijiahao.baidu.com/",
+        "imageUrl": "https://img2.baidu.com/it/u=3931997975,1171931651&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500",
+        "title": "济宁大安机场将于12月28日正式转场通航",
+        "licenseFilter": null,
+        "query": "安机场"
+      },
+      {
+        "file": "vba-baidu-3.webp",
+        "width": 754,
+        "height": 500,
+        "source": "baidu",
+        "host": "baike.baidu.com",
+        "pageUrl": "https://baike.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=3179328869,242063244&fm=253&fmt=auto&app=138&f=JPEG?w=754&h=500",
+        "title": "济宁大安机场",
+        "licenseFilter": null,
+        "query": "安机场"
+      }
+    ],
+    "XJD": [
+      {
+        "file": "xjd-baidu-1.webp",
+        "width": 500,
+        "height": 529,
+        "source": "baidu",
+        "host": "news.sohu.com",
+        "pageUrl": "https://news.sohu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=2632336171,474083056&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=529",
+        "title": "乌代德空军基地快速机场跑道损坏修复(radr)演练与启示_crater_batch_",
+        "licenseFilter": null,
+        "query": "乌代德空军基地"
+      }
+    ],
+    "YLT": [
+      {
+        "file": "ylt-baidu-1.webp",
+        "width": 1200,
+        "height": 800,
+        "source": "baidu",
+        "host": "baijiahao.baidu.com",
+        "pageUrl": "https://baijiahao.baidu.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1681410326,2104846932&fm=253&fmt=auto?w=1200&h=800",
+        "title": "「reuters」mount etna on red alert as catania airport closes",
+        "licenseFilter": null,
+        "query": "Alert Airport"
+      }
+    ],
+    "YYW": [
+      {
+        "file": "yyw-baidu-1.webp",
+        "width": 889,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.bilibili.com",
+        "pageUrl": "https://www.bilibili.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=3986156902,224711196&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500",
+        "title": "肝新奥尔良路易斯阿姆斯特朗国际机场(msy) 08 疯狂肝等级中",
+        "licenseFilter": null,
+        "query": "阿姆斯特朗机场"
+      },
+      {
+        "file": "yyw-baidu-2.webp",
+        "width": 440,
+        "height": 608,
+        "source": "baidu",
+        "host": "m.iqiyi.com",
+        "pageUrl": "https://m.iqiyi.com/",
+        "imageUrl": "https://img1.baidu.com/it/u=1369381339,2284308716&fm=253&fmt=auto&app=120&f=JPEG?w=440&h=608",
+        "title": "阿姆斯特朗机场,质量很好的折叠玻璃门",
+        "licenseFilter": null,
+        "query": "阿姆斯特朗机场"
+      },
+      {
+        "file": "yyw-baidu-3.webp",
+        "width": 867,
+        "height": 500,
+        "source": "baidu",
+        "host": "www.iqiyi.com",
+        "pageUrl": "https://www.iqiyi.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=365532559,1017916618&fm=253&fmt=auto&app=138&f=JPEG?w=867&h=500",
+        "title": "【选调生】阿姆斯特朗机场,质量很好的折叠玻璃门-原创视频-免费在线",
+        "licenseFilter": null,
+        "query": "阿姆斯特朗机场"
+      }
+    ]
+  }
+}

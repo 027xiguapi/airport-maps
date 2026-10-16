@@ -252,7 +252,9 @@ try {
       r.updated,
       r.body,
     ]);
-    if (result.inserted) inserted++;
+    // No row back means the WHERE guard skipped the write (document unchanged).
+    if (written.length === 0) unchanged++;
+    else if (written[0].inserted) inserted++;
     else updated++;
   }
 

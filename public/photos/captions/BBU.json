@@ -1,0 +1,4 @@
+{
+  "_note": "The two Baidu downloads were an Otopeni terminal and a Vienna street scene. The two catalogue photos (flugzeugbilder.de) are aircraft subjects — a Greek T-6 Texan II in a display pass and the inside of a C-130J's cargo hold — with no view of the airport itself, so Băneasa stays without a photo until an apron/terminal shot is found. planespotters.net, which has several BBU apron photos, disallows crawling in its robots.txt.",
+  "_skip": ["bbu-baidu-1.webp", "bbu-baidu-2.webp", "bbu-page-1.webp", "bbu-page-2.webp"]
+}

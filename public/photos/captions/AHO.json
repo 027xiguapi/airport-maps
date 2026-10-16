@@ -1,0 +1,8 @@
+{
+  "_note": "aho-baidu-1 is a satellite-map screenshot; aho-baidu-3 is a stock United 777 shot unrelated to Alghero.",
+  "_skip": ["aho-baidu-1.webp", "aho-baidu-3.webp"],
+  "aho-baidu-2.webp": {
+    "zh": "瑞安航空的波音 737 停在阿尔盖罗机场的机坪上，后方是航站楼与地面保障设备。",
+    "en": "A Ryanair Boeing 737 on the Alghero apron, with the terminal and ground equipment behind it."
+  }
+}

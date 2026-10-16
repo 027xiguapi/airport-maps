@@ -1,0 +1,8 @@
+{
+  "_note": "aap-bing-2 is a promotional graphic and aap-bing-3 a flight-simulator scenery render — neither is a real photo.",
+  "_skip": ["aap-bing-2.webp", "aap-bing-3.webp"],
+  "aap-bing-1.webp": {
+    "zh": "三马林达 APT Pranoto 国际机场航站楼外景：斜向的白色钢架撑起大跨度玻璃幕墙，雨棚一路延伸到落客区。",
+    "en": "The terminal of Samarinda's APT Pranoto International Airport: a wide glass façade braced by angled white steelwork, with the canopy reaching out over the drop-off area."
+  }
+}

@@ -471,6 +471,16 @@ export const en: Messages = {
     mapAlt: (name: string, iata: string) =>
       `${name} (${iata}) terminal map showing all terminals, gate ranges and concourses`,
     realMapNote: 'TERMINAL MAP',
+    /** Photo gallery: public web sources, each credited under its picture. */
+    photosKicker: 'Photos',
+    photosTitle: 'Airport photos',
+    photosEn: 'Airport Photos',
+    photosSub:
+      'Real photos of this airport, each credited to the public web page it was found on; copyright stays with the original photographers. Click a photo to zoom in, or a credit line to open its source page.',
+    photosCredit: (host: string) => `Source: ${host}`,
+    photosAlt: (name: string, iata: string, index: number) =>
+      `${name} (${iata}) airport photo ${index}`,
+    photosZoom: (name: string, index: number) => `Zoom in on photo ${index} of ${name}`,
     /** Download buttons under the map: the image downloads directly, the PDF
         button links out to a Google search for the official PDF. */
     zoomLabel: 'Zoom',
@@ -671,6 +681,7 @@ export const en: Messages = {
   toc: {
     label: 'On this page',
     map: 'Terminal map',
+    photos: 'Airport photos',
     time: 'Airport time',
     details: 'Airport details',
     links: 'Related links',

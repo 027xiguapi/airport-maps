@@ -1,0 +1,12 @@
+{
+  "_note": "acv-bing-2 is a Google Maps screenshot, not a photo.",
+  "_skip": ["acv-bing-2.webp"],
+  "acv-bing-1.webp": {
+    "zh": "航站楼外墙上的「ARCATA – EUREKA AIRPORT」字样，点出这座机场服务的两座城市。",
+    "en": "The 'ARCATA – EUREKA AIRPORT' lettering on the terminal's outer wall, naming both cities the airport serves."
+  },
+  "acv-bing-3.webp": {
+    "zh": "机场旁的景象：机库前的道路上车流往来，一架螺旋桨小飞机正从跑道上空爬升。",
+    "en": "Beside the airfield: traffic passing the hangars while a light propeller plane climbs out over the runway."
+  }
+}

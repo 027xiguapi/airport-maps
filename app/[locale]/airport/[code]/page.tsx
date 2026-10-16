@@ -12,6 +12,7 @@ import { getAirportGuide } from '@/lib/content';
 import { getAirportByCode, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
 import { getAirportFacts } from '@/lib/airport-facts';
 import { getAirportGeo } from '@/lib/airport-geo';
+import { getAirportPhotos } from '@/lib/airport-photos';
 import { getAirportRouteMap } from '@/lib/routes';
 import { routeImageUrl } from '@/lib/route-images';
 import { airportWebsite } from '@/lib/airport-links';
@@ -28,6 +29,7 @@ import RelatedLinks from '@/components/airport/RelatedLinks';
 import LocationMapSection from '@/components/airport/LocationMapSection';
 import RouteMapTeaser from '@/components/airport/RouteMapTeaser';
 import GuideSection from '@/components/airport/GuideSection';
+import PhotosSection from '@/components/airport/PhotosSection';
 import TerminalsSection from '@/components/airport/TerminalsSection';
 import TransitFacilities from '@/components/airport/TransitFacilities';
 import RelatedAirports from '@/components/airport/RelatedAirports';
@@ -59,6 +61,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const pax = formatPax(airport.annualPaxM, locale);
   const distance = formatDistance(airport.distanceKm, locale);
   const guide = await getAirportGuide(locale, airport.iata);
+  // Gallery photos double as the link-preview picture when the repo holds any
+  // for this code; airports without a photo batch keep whatever the layout sets.
+  const photos = getAirportPhotos(locale, airport.iata);
+  const leadPhoto = photos[0];
   const { published, modified } = publicationDates(airport, guide?.updated);
   // Title is rendered at build/ISR time, so the year rolls over with revalidate.
   const title = t.common.latestAirportTitle(
@@ -103,6 +109,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: published,
       modifiedTime: modified,
       authors: [absoluteUrl(localizedPath(locale, '/about'))],
+      ...(leadPhoto && {
+        images: [
+          {
+            url: absoluteUrl(leadPhoto.src),
+            ...(leadPhoto.width && leadPhoto.height
+              ? { width: leadPhoto.width, height: leadPhoto.height }
+              : {}),
+            alt: leadPhoto.caption ?? t.airport.photosAlt(airport.name, airport.iata, 1),
+          },
+        ],
+      }),
     },
   };
 }
@@ -129,6 +146,9 @@ export default async function AirportPage({ params }: Props) {
 
   const geo = getAirportGeo(airport.iata);
   const facts = getAirportFacts(airport.iata);
+  // Real photos of this airport, when a batch has been downloaded for the code
+  // (public/photos + manifest). Empty for most airports today.
+  const photos = getAirportPhotos(locale, airport.iata);
   // Coordinates power the location map and the FAQ/service details that do not
   // need a timezone: hand-checked values first, the compiled facts otherwise.
   // The time section still requires the hand-checked timezone.
@@ -153,6 +173,7 @@ export default async function AirportPage({ params }: Props) {
       airports whose data has not been compiled yet. */
   const tocItems: TocItem[] = [
     { id: 'terminal-map', label: t.toc.map },
+    ...(photos.length > 0 ? [{ id: 'photos', label: t.toc.photos }] : []),
     ...(geo ? [{ id: 'airport-time', label: t.toc.time }] : []),
     ...(routeMap ? [{ id: 'airport-routes', label: t.toc.routes }] : []),
     { id: 'airport-details', label: t.toc.details },
@@ -167,7 +188,7 @@ export default async function AirportPage({ params }: Props) {
 
   return (
     <>
-      <JsonLd data={buildAirportGraph({ locale, airport, guide, faqItems })} />
+      <JsonLd data={buildAirportGraph({ locale, airport, guide, faqItems, photos })} />
 
       <AirportHead
         locale={locale}
@@ -203,6 +224,10 @@ export default async function AirportPage({ params }: Props) {
           />
 
           <AdsterraStrip title={t.common.advertisement} className="my-12" />
+
+          {photos.length > 0 && (
+            <PhotosSection locale={locale} iata={airport.iata} name={airport.name} photos={photos} />
+          )}
 
           {geo && <AirportTimeSection locale={locale} iata={airport.iata} timeZone={geo.tz} />}
 

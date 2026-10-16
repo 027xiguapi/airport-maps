@@ -1,0 +1,8 @@
+{
+  "_note": "The three Bing downloads are unusable (two route-map screenshots, one AI image). The usable picture came from NASA: the ISS photo of Anaa atoll from the Japanese Wikipedia entry, fetched straight from NASA's Earth-observation image server — public domain, credited NASA in the caption.",
+  "_skip": ["aaa-bing-1.webp", "aaa-bing-2.webp", "aaa-bing-3.webp"],
+  "aaa-page-1.webp": {
+    "zh": "国际空间站上的宇航员拍摄的阿纳环礁（NASA 照片，编号 ISS007-E-14624，公有领域）：狭长的环礁、白色礁缘与碧色潟湖清晰可辨，机场就建在图中主岛上。",
+    "en": "Anaa atoll photographed from the International Space Station (NASA image ISS007-E-14624, public domain) — the narrow atoll with its white reef edge and turquoise lagoon; the airport sits on the main islet."
+  }
+}

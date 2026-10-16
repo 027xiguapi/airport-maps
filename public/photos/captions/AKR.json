@@ -1,0 +1,12 @@
+{
+  "_note": "akr-baidu-1/2 are hotel and generator photos; akr-page-2 is a generic night runway shot of a twin-aisle jet — Akure takes no widebodies and its runway is unlit.",
+  "_skip": ["akr-baidu-1.webp", "akr-baidu-2.webp", "akr-page-2.webp"],
+  "akr-page-1.webp": {
+    "zh": "阿库雷机场的航站楼：米黄色墙面配蓝色屋檐，入口上方是弧形雨棚，路缘刷着蓝白相间的标线。",
+    "en": "Akure Airport's terminal — cream walls under a blue roof, curved canopies over the entrances and a blue-and-white kerb line."
+  },
+  "akr-page-3.webp": {
+    "zh": "Overland Airways 的 ATR 72 涡桨客机停在阿库雷机场的机坪上（注册号 5N-BPE）。",
+    "en": "An Overland Airways ATR 72 (registration 5N-BPE) parked on Akure's apron."
+  }
+}

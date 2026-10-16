@@ -1,0 +1,8 @@
+{
+  "_note": "ade-bing-1 is an AI-generated departure-lounge image (Gemini sparkle watermark); ade-bing-2 shows a missile-attack explosion (news coverage) — neither belongs in a travel gallery.",
+  "_skip": ["ade-bing-1.webp", "ade-bing-2.webp"],
+  "ade-bing-3.webp": {
+    "zh": "亚丁国际机场的航站楼与塔台：墙上写着阿拉伯语的机场名，前景停着两辆飞机牵引车。",
+    "en": "Aden International Airport's terminal and control tower — the airport's name in Arabic on the wall, with two pushback tractors parked in front."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_note": "adm-bing-2 is a product photo of a framed airport-map poster (skybirdsupply.com), not the airport itself.",
+  "_skip": ["adm-bing-2.webp"],
+  "adm-bing-1.webp": {
+    "zh": "从空中俯瞰阿德莫尔市机场：两条跑道在草地上交叉，航站楼与机库集中在场地西南侧。",
+    "en": "Airborne view of Ardmore Municipal Airport — two runways crossing over green fields, the terminal and hangars clustered on the south-west side."
+  },
+  "adm-bing-3.webp": {
+    "zh": "机场入口的标识墙：石砌基座上写着「ARDMORE MUNICIPAL AIRPORT」，旁边是驻场企业的名录牌。",
+    "en": "The entrance sign at Ardmore Municipal Airport — the name on a stone base beside a directory of airport businesses."
+  }
+}

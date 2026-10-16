@@ -1,0 +1,8 @@
+{
+  "_note": "auh-baidu-2 and auh-baidu-3 carry an 'iniBuilds' watermark — they are flight-simulator renders of Zayed International, not photographs.",
+  "_skip": ["auh-baidu-2.webp", "auh-baidu-3.webp"],
+  "auh-baidu-1.webp": {
+    "zh": "扎耶德国际机场航站楼的波浪形屋顶：一架客机正好从屋顶上方飞过，前景是落客车道与遮阳棚。",
+    "en": "The wave-form roof of Zayed International Airport — an airliner passing overhead, with the drop-off road and sun canopies in the foreground."
+  }
+}

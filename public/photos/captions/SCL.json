@@ -1,0 +1,8 @@
+{
+  "_note": "scl-baidu-2 duplicates scl-baidu-1 from nearly the same spot, and scl-baidu-3 is a satellite view.",
+  "_skip": ["scl-baidu-2.webp", "scl-baidu-3.webp"],
+  "scl-baidu-1.webp": {
+    "zh": "航站楼外景：弧形拱顶横跨在钢架玻璃幕墙之上，站前连廊连接着车道与停车场。",
+    "en": "The terminal from outside — an arched roof spanning the steel-and-glass frontage, a walkway linking the roadway to the car parks."
+  }
+}

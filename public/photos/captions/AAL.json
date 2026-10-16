@@ -1,0 +1,12 @@
+{
+  "_note": "aal-bing-1 is an aerial of Aalborg city (from the guide site's homepage), not the airport.",
+  "_skip": ["aal-bing-1.webp"],
+  "aal-bing-2.webp": {
+    "zh": "奥尔堡机场航站楼正面：低矮的雨棚由一排立柱撑起，入口藏在玻璃幕墙后面。",
+    "en": "The front of Aalborg Airport's terminal — a low canopy carried on a row of columns, with the glazed entrance behind it."
+  },
+  "aal-bing-3.webp": {
+    "zh": "停机坪上的登机场景：旅客沿舷梯登上大西洋航空的客机，地勤人员在旁作业。",
+    "en": "Boarding on the apron: passengers climbing the stairs to an Atlantic Airways jet while ground crew stand by."
+  }
+}

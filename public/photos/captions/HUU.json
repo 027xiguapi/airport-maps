@@ -1,0 +1,12 @@
+{
+  "_note": "The three Baidu downloads were celebrity-gossip photos. The two usable pictures come from CORPAC's official airport data sheet (ficha técnica) PDF for Huánuco — photos embedded in the document, extracted and converted. planespotters.net (a lead for Bucharest's BBU) disallows crawling in its robots.txt.",
+  "_skip": ["huu-baidu-1.webp", "huu-baidu-2.webp", "huu-baidu-3.webp"],
+  "huu-page-1.webp": {
+    "zh": "瓦努科机场跑道旁的橙色风向袋：蓝色围栏后是依山而建的城区（照片出自 CORPAC 官方机场资料表，2023 年 9 月）。",
+    "en": "The orange windsock beside Huánuco's runway — the hillside city rising beyond the blue fence (photo from CORPAC's official airport data sheet, September 2023)."
+  },
+  "huu-page-2.webp": {
+    "zh": "候机大厅内景：整面落地玻璃朝向跑道，旅客坐在联排座椅上候机（照片出自 CORPAC 官方机场资料表）。",
+    "en": "The departure lounge — floor-to-ceiling glazing onto the airfield, passengers waiting in rows (photo from CORPAC's official airport data sheet)."
+  }
+}

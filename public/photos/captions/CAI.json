@@ -1,0 +1,12 @@
+{
+  "_note": "The three Baidu downloads were satellite-map imagery. The two usable pictures came from the Egyptian State Information Service's archive of Ministry of Civil Aviation photo releases (mediadr.sis.gov.eg) — the lounge interior from the January 2025 tour, the check-in hall from the August 2021 one; the remaining tour photos are mostly officials and were left out.",
+  "_skip": ["cai-baidu-1.webp", "cai-baidu-2.webp", "cai-baidu-3.webp"],
+  "cai-page-1.webp": {
+    "zh": "开罗国际机场内的埃及航空／星空联盟贵宾休息室接待区：木质墙板配大理石茶几，门后是安静的休息区（埃及民航部 2025 年 1 月拍摄，埃及新闻署发布）。",
+    "en": "The EgyptAir / Star Alliance lounge reception at Cairo International — timber panelling and a marble coffee table, quiet seating beyond the doors (Egyptian Ministry of Civil Aviation, January 2025, via the State Information Service)."
+  },
+  "cai-page-2.webp": {
+    "zh": "埃及航空商务舱值机区：蓝色柜台与航班显示屏一字排开，旅客正在办理登机手续（埃及民航部 2021 年 8 月拍摄，埃及新闻署发布）。",
+    "en": "EgyptAir's business-class check-in area — blue counters beneath the flight displays as passengers check in (Egyptian Ministry of Civil Aviation, August 2021, via the State Information Service)."
+  }
+}

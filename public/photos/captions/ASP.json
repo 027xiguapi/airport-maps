@@ -1,0 +1,12 @@
+{
+  "_note": "The Baidu downloads were hotel listings and a cabin interior. The two usable pictures come from the Airways Museum's Alice Springs tower page (CAHS collection photographs, credits as captioned): the tower with a Fokker F.27 on the apron (c. 1970) and an aerial of the field.",
+  "_skip": ["asp-baidu-1.webp", "asp-baidu-2.webp", "asp-baidu-3.webp", "asp-page-1.webp"],
+  "asp-page-2.webp": {
+    "zh": "爱丽丝泉机场的老塔台：砖砌塔身顶着玻璃指挥室，机坪上一架福克 F.27 客机正待出发（约 1970 年；Terry Martin 摄，澳大利亚民航史学会 CAHS 收藏，经 Airways Museum 提供）。",
+    "en": "Alice Springs' old control tower — a brick shaft under the glazed cab, a Fokker F.27 waiting on the apron (c. 1970; photo Terry Martin, CAHS collection, via the Airways Museum)."
+  },
+  "asp-page-3.webp": {
+    "zh": "爱丽丝泉机场俯瞰：跑道与滑行道铺在红土荒漠上，塔台、航站楼与停机坪排成一列（澳大利亚民航史学会 CAHS 收藏，经 Airways Museum 提供）。",
+    "en": "Alice Springs from the air — runways and taxiways laid across the red desert, the tower, terminal and apron lined up along the field (CAHS collection, via the Airways Museum)."
+  }
+}

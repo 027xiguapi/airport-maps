@@ -1,0 +1,8 @@
+{
+  "_note": "svd-baidu-1 and svd-baidu-3 are listings for a Nairobi hotel that merely shares the 'Argyle' name.",
+  "_skip": ["svd-baidu-1.webp", "svd-baidu-3.webp"],
+  "svd-baidu-2.webp": {
+    "zh": "雨后的阿盖尔国际机场：蓝色弧形屋顶的航站楼前停着 LIAT 的客机，湿漉漉的机坪映着天空，山丘在云下层叠。",
+    "en": "Argyle International after rain — a LIAT aircraft before the blue-vaulted terminal, the wet apron mirroring the sky, hills layered under cloud."
+  }
+}

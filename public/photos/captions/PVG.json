@@ -1,0 +1,8 @@
+{
+  "_note": "pvg-baidu-2 carries a large social-post title overlay; pvg-baidu-3 is a news photo from a flight-return incident.",
+  "_skip": ["pvg-baidu-2.webp", "pvg-baidu-3.webp"],
+  "pvg-baidu-1.webp": {
+    "zh": "从客机舷窗看浦东航站楼：屋面上是「上海 SHANGHAI」字样，廊桥旁停着东航的客机。",
+    "en": "Pudong's terminal from a cabin window — '上海 SHANGHAI' on the roofline, China Eastern aircraft at the gates."
+  }
+}

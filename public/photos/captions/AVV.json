@@ -1,0 +1,12 @@
+{
+  "_note": "avv-baidu-3 is a line of Qantas 747s that does not read as a real scene at Avalon (and 747s do not operate there); kept out.",
+  "_skip": ["avv-baidu-3.webp"],
+  "avv-baidu-1.webp": {
+    "zh": "航站楼外的膜结构雨棚：白色的张拉膜在钢架间铺开，遮蔽着落客区与步行道。",
+    "en": "The tensioned-fabric canopy outside the terminal, spreading over the forecourt and walkways on its steel frame."
+  },
+  "avv-baidu-2.webp": {
+    "zh": "到达与出发门口：外墙标着「国内到达」与「国际及国内出发」，旁边还有中文指示（阿瓦隆机场长期接待中国航线）。",
+    "en": "The arrivals and departures doors — 'Domestic Arrivals' beside 'International & Domestic Departures', the signage in Chinese as well for Avalon's China services."
+  }
+}

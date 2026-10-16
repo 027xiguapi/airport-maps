@@ -652,10 +652,10 @@
    "icao": "MRAO",
    "country": "CR",
    "kind": "medium",
-   "name": "图卢姆机场",
-   "city": "图卢姆",
+   "name": "托尔图格罗机场",
+   "city": "托尔图格罗",
    "nameEn": "Aerotortuguero Airport",
-   "cityEn": "Tulum"
+   "cityEn": "Tortuguero"
   },
   {
    "iata": "CWB",
@@ -2452,7 +2452,7 @@
    "icao": "OERR",
    "country": "SA",
    "kind": "medium",
-   "name": "阿拉尔机场",
+   "name": "阿拉尔机场（沙特）",
    "city": "阿拉尔",
    "nameEn": "Arar Domestic Airport",
    "cityEn": "Arar"

@@ -4,6 +4,7 @@ import { formatNumber, formatPax, formatDistance } from '@/lib/format';
 import type { MarkdownDoc } from '@/lib/content';
 import { getAirportFacts } from '@/lib/airport-facts';
 import { getAirportGeo } from '@/lib/airport-geo';
+import type { AirportPhoto } from '@/lib/airport-photos';
 import { airportEncyclopediaTitle, OURAIRPORTS_DATA_URL, wikiUrl } from '@/lib/encyclopedia-links';
 import {
   absoluteUrl,
@@ -43,8 +44,10 @@ export function buildAirportGraph(input: {
   airport: AirportDetail;
   guide: MarkdownDoc | null;
   faqItems: FaqItem[];
+  /** Gallery photos, when the repo holds any for this code (lib/airport-photos.ts). */
+  photos?: AirportPhoto[];
 }): Record<string, unknown> {
-  const { locale, airport, guide, faqItems } = input;
+  const { locale, airport, guide, faqItems, photos } = input;
   const t = getMessages(locale);
   const geo = getAirportGeo(airport.iata);
   const facts = getAirportFacts(airport.iata);
@@ -90,6 +93,16 @@ export function buildAirportGraph(input: {
   // This airport's own picture — its cover when the repo has one, else the site
   // photo — reused by the page wrapper and the Airport node so the two agree.
   const pageImage = airportSchemaImage(airport.iata);
+  // Gallery photos as ImageObjects: the page really shows these, so the graph
+  // names them too, each carrying the credit the figure prints below it.
+  const photoImages = (photos ?? []).map((photo) => ({
+    '@type': 'ImageObject',
+    url: absoluteUrl(photo.src),
+    ...(photo.width && photo.height ? { width: photo.width, height: photo.height } : {}),
+    ...(photo.caption ? { caption: photo.caption } : {}),
+    ...(photo.credit.host ? { creditText: photo.credit.host } : {}),
+  }));
+  const pageImages = photoImages.length > 0 ? [pageImage, ...photoImages] : pageImage;
 
   return {
     '@context': 'https://schema.org',
@@ -132,7 +145,7 @@ export function buildAirportGraph(input: {
         mainEntity: { '@id': airportNodeId },
         author: { '@id': EDITORIAL_NODE_ID },
         publisher: { '@id': ORG_NODE_ID },
-        image: pageImage,
+        image: pageImages,
         primaryImageOfPage: { '@type': 'ImageObject', url: pageImage },
         datePublished: published,
         dateModified: modified,
@@ -157,7 +170,7 @@ export function buildAirportGraph(input: {
         ...(facts?.icao && { icaoCode: facts.icao }),
         description: airport.descriptionMd,
         url: pageUrl,
-        image: pageImage,
+        image: pageImages,
         inLanguage: LOCALE_META[locale].htmlLang,
         sameAs: [enWikiUrl, zhWikiUrl],
         address: {
