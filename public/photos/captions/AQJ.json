@@ -1,4 +1,12 @@
 {
-  "_note": "aqj-baidu-1 is a resort beach scene, aqj-baidu-2 a diplomatic press scrum on the apron, and aqj-baidu-3 a 3D render of Riyadh's King Salman International Airport — none pictures King Hussein International.",
-  "_skip": ["aqj-baidu-1.webp", "aqj-baidu-2.webp", "aqj-baidu-3.webp"]
+  "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "aqj-baidu-1.webp",
+    "aqj-baidu-2.webp",
+    "aqj-baidu-3.webp"
+  ],
+  "aqj-sat-1.webp": {
+    "zh": "卫星视角：一条跑道与平行滑行道铺在沙漠中，航站楼与机坪在跑道中段。",
+    "en": "Satellite view: a runway and parallel taxiway laid across desert, with the terminal and apron at its midpoint."
+  }
 }

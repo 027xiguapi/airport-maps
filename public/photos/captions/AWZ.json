@@ -1,4 +1,10 @@
 {
-  "_note": "the only download is a satellite-map screenshot labelled '阿瓦士国际机场', not a photograph.",
-  "_skip": ["awz-baidu-1.webp"]
+  "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "awz-baidu-1.webp"
+  ],
+  "awz-sat-1.webp": {
+    "zh": "卫星视角：跑道平行于阿瓦士的城市路网，航站楼与机坪在跑道中段。",
+    "en": "Satellite view: the runway runs parallel to Ahvaz's street grid, with the terminal and apron at its midpoint."
+  }
 }

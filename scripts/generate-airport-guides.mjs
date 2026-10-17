@@ -41,6 +41,21 @@ const ONLY = codesArg
   : null;
 
 const read = (p) => JSON.parse(readFileSync(join(ROOT, p), 'utf8'));
+
+/** Code -> escaped stem for filenames Windows cannot use (`AUX`). */
+const PHOTO_STEMS = (() => {
+  try {
+    const file = read('scripts/photo-file-aliases.json');
+    return Object.fromEntries(
+      Object.entries(file).filter(
+        ([code, stem]) => /^[A-Z]{3}$/.test(code) && typeof stem === 'string'
+      )
+    );
+  } catch {
+    return {};
+  }
+})();
+const photoStem = (code) => PHOTO_STEMS[code] ?? code;
 const legacy = read('scripts/legacy-data.json');
 const directory = read('scripts/directory-data.json');
 const worldAirports = read('public/data/world-airports.json').airports;
@@ -86,7 +101,7 @@ const UPDATED = '2026-10-16';
 function photosFor(code, locale) {
   try {
     const doc = JSON.parse(
-      readFileSync(join(ROOT, 'public', 'photos', 'captions', `${code}.json`), 'utf8')
+      readFileSync(join(ROOT, 'public', 'photos', 'captions', `${photoStem(code)}.json`), 'utf8')
     );
     return Object.entries(doc)
       .filter(([file, value]) => !file.startsWith('_') && value && typeof value === 'object' && value[locale])

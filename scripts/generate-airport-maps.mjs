@@ -132,8 +132,9 @@ function targets() {
 }
 
 // ---------------------------------------------------------------- geo source
-/** Coordinates for a code: repo dataset, then the OurAirports dump, then the
-    hand-checked gaps in scripts/airport-coords.json, then OSM itself. */
+/** Coordinates for a code: hand-checked corrections first, then the repo
+    dataset, then the OurAirports dump, then OSM itself. An explicit entry in
+    airport-coords.json must win when an IATA code has been reused. */
 const coordsCache = new Map();
 const isMissing = (o) => !o || !Number.isFinite(o.lat) || !Number.isFinite(o.lng) || (o.lat === 0 && o.lng === 0);
 const handChecked = (() => {
@@ -150,6 +151,11 @@ const handChecked = (() => {
 })();
 function coords(code) {
   if (coordsCache.has(code)) return coordsCache.get(code);
+  const hand = handChecked[code];
+  if (hand) {
+    coordsCache.set(code, hand);
+    return hand;
+  }
   const wa = JSON.parse(readFileSync(join(ROOT, 'public', 'data', 'world-airports.json'), 'utf8')).airports;
   const hit = wa.find((r) => String(r[0]).toUpperCase() === code);
   let out = hit ? { lat: hit[6], lng: hit[7], from: 'world-airports.json' } : null;
@@ -169,7 +175,7 @@ function coords(code) {
       break;
     }
   }
-  if (isMissing(out)) out = handChecked[code] ?? null;
+  if (isMissing(out)) out = null;
   coordsCache.set(code, out);
   return out;
 }

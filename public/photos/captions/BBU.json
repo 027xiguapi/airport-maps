@@ -1,4 +1,13 @@
 {
-  "_note": "The two Baidu downloads were an Otopeni terminal and a Vienna street scene. The two catalogue photos (flugzeugbilder.de) are aircraft subjects — a Greek T-6 Texan II in a display pass and the inside of a C-130J's cargo hold — with no view of the airport itself, so Băneasa stays without a photo until an apron/terminal shot is found. planespotters.net, which has several BBU apron photos, disallows crawling in its robots.txt.",
-  "_skip": ["bbu-baidu-1.webp", "bbu-baidu-2.webp", "bbu-page-1.webp", "bbu-page-2.webp"]
+  "_note": "2026-10-17: a verifiable dusk view of the Băneasa terminal and tower (bbu-page-3) is published; earlier wrong-airport images remain skipped.",
+  "_skip": [
+    "bbu-baidu-1.webp",
+    "bbu-baidu-2.webp",
+    "bbu-page-1.webp",
+    "bbu-page-2.webp"
+  ],
+  "bbu-page-3.webp": {
+    "zh": "暮色中的伯尼亚萨机场：蓝色航站楼与塔台亮着灯，机坪上停着巴士与一架客机。",
+    "en": "Băneasa at dusk — the blue terminal and tower lit up, buses and an airliner on the apron."
+  }
 }

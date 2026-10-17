@@ -1,4 +1,10 @@
 {
-  "_note": "the download is a Catania (Sicily) airport photo from an Etna 'red alert' news story — YLT is Alert in Nunavut; the search matched the word 'alert'.",
-  "_skip": ["ylt-baidu-1.webp"]
+  "_note": "2026-10-17: the Catania mismatch remains skipped; a labelled Esri World Imagery satellite view of Alert airport is published instead.",
+  "_skip": [
+    "ylt-baidu-1.webp"
+  ],
+  "ylt-sat-1.webp": {
+    "zh": "卫星视角：碎石跑道铺在阿勒特的海岸冻原上，周围是海冰与荒原。",
+    "en": "Satellite view: a gravel runway on the coastal tundra at Alert, surrounded by sea ice and barren ground."
+  }
 }

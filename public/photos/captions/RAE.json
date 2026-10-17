@@ -1,4 +1,11 @@
 {
-  "_note": "both photographs show China's Alaer airport in Xinjiang (阿拉尔, Tarim), a different airport that shares the Chinese transliteration with Saudi Arabia's Arar (RAE/Arar Domestic Airport).",
-  "_skip": ["rae-baidu-1.webp", "rae-baidu-2.webp"]
+  "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "rae-baidu-1.webp",
+    "rae-baidu-2.webp"
+  ],
+  "rae-sat-1.webp": {
+    "zh": "卫星视角：一条跑道斜穿阿拉尔郊外的干旱平原，机坪与航站楼在跑道一侧。",
+    "en": "Satellite view: a runway cuts across arid plain outside Arar, with the apron and terminal alongside it."
+  }
 }

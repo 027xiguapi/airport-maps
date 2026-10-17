@@ -18,7 +18,7 @@
  * was fetched this way). Image downloads check each source host's robots.txt
  * too, cached per host, under the same flag.
  *
- * Two sources, picked with --source:
+ * Three sources, picked with --source:
  *   bing (default)  international Bing image search, English queries from the
  *                   DB's name_en. Needs a network where www.bing.com answers
  *                   with real results — the China edge (cn.bing.com) returns
@@ -29,6 +29,9 @@
  *                   network, and the site's primary audience is Chinese anyway.
  *                   Downloads run through Baidu's own image cache (img*.baidu.com);
  *                   the manifest still credits the original page.
+ *   360             image.so.com's JSON endpoint. Rows carry the original page
+ *                   URL, so credit is more precise than Baidu's; queries append
+ *                   航站楼 / terminal to reduce hotel and flight-sim results.
  *
  * Every download is verified by magic bytes and by real pixel size (a 200 HTML
  * error page can never be saved as .webp, and icons/thumbs below --min-width
@@ -57,12 +60,27 @@
  * the photos it already fetched and the next run simply continues.
  */
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import pg from 'pg';
 import sharp from 'sharp';
 import { databaseUrl, ROOT } from './_env.mjs';
 import { robotsAllows, sniffImage } from './fetch-airport-images.mjs';
+
+/** Code -> escaped stem for directories Windows cannot name (`AUX`). */
+const PHOTO_STEMS = (() => {
+  try {
+    const file = JSON.parse(readFileSync(join(ROOT, 'scripts', 'photo-file-aliases.json'), 'utf8'));
+    return Object.fromEntries(
+      Object.entries(file).filter(
+        ([code, stem]) => /^[A-Z]{3}$/.test(code) && typeof stem === 'string'
+      )
+    );
+  } catch {
+    return {};
+  }
+})();
+const photoStem = (code) => PHOTO_STEMS[code] ?? code;
 
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
@@ -363,6 +381,7 @@ async function search(query, opts) {
 // ---------------------------------------------------------------- baidu source
 
 const BAIDU = 'https://image.baidu.com';
+const SO360 = 'https://image.so.com';
 /** Session cookies from a first page load; the JSON endpoint refuses without them. */
 let baiduCookies = null;
 
@@ -386,6 +405,64 @@ function parseBaiduJson(text) {
   } catch {
     return JSON.parse(text.replace(/\\'/g, "'"));
   }
+}
+
+/**
+ * One query's image results from 360 Images (`image.so.com/j`). Unlike Baidu,
+ * each row carries the original page URL and the full-size image URL, so the
+ * manifest can credit the page the picture came from. Rows whose declared
+ * width is below --min-width are dropped before downloading.
+ */
+async function so360Search(query, opts) {
+  const path = `/j?q=${encodeURIComponent(query)}&pn=0&rn=30`;
+  const allowed = await hostAllows(SO360, path, opts);
+  if (!allowed.ok) {
+    throw new Error(
+      `360 image search is not allowed by robots.txt (${allowed.reason}). ` +
+        'Re-run with --robots ignore if this sourcing decision is yours to make.'
+    );
+  }
+  const res = await paced(opts.delay, () =>
+    fetchWithTimeout(
+      `${SO360}${path}`,
+      {
+        headers: {
+          'user-agent': UA,
+          accept: 'application/json, text/plain, */*',
+          'accept-language': 'zh-CN,zh;q=0.9',
+          referer: `${SO360}/`,
+        },
+        timeout: opts.timeout,
+      },
+      opts.retries
+    )
+  );
+  if (!res.ok) throw new Error(`360 answered HTTP ${res.status}`);
+  let json;
+  try {
+    json = JSON.parse(await res.text());
+  } catch {
+    throw new Error('360 answered with non-JSON (bot check)');
+  }
+  const seen = new Set();
+  const out = [];
+  for (const row of json.list ?? []) {
+    const murl = row?.img || row?.thumb || '';
+    if (!murl || !/^https?:\/\//.test(murl)) continue;
+    const width = Number(row.width);
+    if (Number.isFinite(width) && width < opts.minWidth) continue;
+    const key = row.imgkey || murl;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push({
+      murl,
+      purl: row.link || '',
+      creditHost: row.site || '',
+      title: String(row.title || '').replace(/<[^>]*>/g, ''),
+      md5: key,
+    });
+  }
+  return out;
 }
 
 /**
@@ -517,7 +594,7 @@ async function grab(candidate, iata, index, opts) {
       /* keep the image host */
     }
   }
-  const outDir = join(opts.out, iata);
+  const outDir = join(opts.out, photoStem(iata));
   const outPath = join(outDir, file);
   if (opts.dryRun) {
     return {
@@ -602,8 +679,8 @@ async function namesFor(codes) {
 
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
-  if (!['bing', 'baidu'].includes(opts.source)) {
-    throw new Error(`--source must be bing or baidu (got "${opts.source}")`);
+  if (!['bing', 'baidu', '360'].includes(opts.source)) {
+    throw new Error(`--source must be bing, baidu or 360 (got "${opts.source}")`);
   }
   const label = (info) => info.nameEn || info.name || '-';
   const manifestPath = join(opts.out, 'manifest.json');
@@ -642,16 +719,21 @@ async function main() {
     const queries =
       opts.source === 'baidu'
         ? [...(info.name ? [info.name] : []), ...(info.nameEn ? [info.nameEn] : [])]
-        : [
-            ...(info.nameEn ? [info.nameEn, `${code} ${info.nameEn}`] : [`${code} airport`]),
-            ...(info.city && !info.nameEn.toLowerCase().includes(info.city.toLowerCase())
-              ? [`${info.city} airport`]
-              : []),
-          ];
+        : opts.source === '360'
+          ? [
+              ...(info.name ? [`${info.name} 航站楼`, info.name] : []),
+              ...(info.nameEn ? [`${info.nameEn} terminal`, info.nameEn] : []),
+            ]
+          : [
+              ...(info.nameEn ? [info.nameEn, `${code} ${info.nameEn}`] : [`${code} airport`]),
+              ...(info.city && !info.nameEn.toLowerCase().includes(info.city.toLowerCase())
+                ? [`${info.city} airport`]
+                : []),
+            ];
     if (opts.force) delete manifest.airports[code];
     const entries = [];
     const queryErrors = [];
-    const searchFn = opts.source === 'baidu' ? baiduSearch : search;
+    const searchFn = opts.source === 'baidu' ? baiduSearch : opts.source === '360' ? so360Search : search;
 
     try {
       for (const query of [...new Set(queries)]) {

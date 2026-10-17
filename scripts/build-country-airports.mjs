@@ -125,10 +125,16 @@ const siteAirports = [
   ...JSON.parse(readFileSync(join(ROOT, 'scripts', 'legacy-data.json'), 'utf8')).airports.map((a) => ({
     iata: a.iata,
     country: a.country,
+    name: a.nameEn || a.name,
+    city: a.cityEn || a.city,
+    type: a.kind,
   })),
   ...JSON.parse(readFileSync(join(ROOT, 'scripts', 'directory-data.json'), 'utf8')).airports.map((a) => ({
     iata: a.iata,
     country: a.country,
+    name: a.nameEn || a.name,
+    city: a.cityEn || a.city,
+    type: a.kind,
   })),
 ];
 
@@ -141,13 +147,15 @@ for (const a of siteAirports) {
   if (list.has(a.iata)) continue;
   const row = byIata.get(a.iata);
   const coord = extraCoords[a.iata];
+  // A hand-checked coordinate marks a reused or missing IATA code, so the
+  // curated name wins over whatever airport the dump attached to that code.
   const entry = {
     iata: a.iata,
-    name: row?.name ?? a.iata,
-    city: row?.city ?? '',
-    type: row?.type ?? 'medium',
-    lat: row?.lat ?? (coord ? round4(coord.lat) : null),
-    lng: row?.lng ?? (coord ? round4(coord.lng) : null),
+    name: coord ? a.name ?? a.iata : row?.name ?? a.iata,
+    city: coord ? a.city ?? '' : row?.city ?? '',
+    type: a.type ?? row?.type ?? 'medium',
+    lat: coord ? round4(coord.lat) : row?.lat ?? null,
+    lng: coord ? round4(coord.lng) : row?.lng ?? null,
   };
   list.set(a.iata, entry);
   merged.push(`${a.iata} (${iso}${row ? '' : ', not in CSV'})`);

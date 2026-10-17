@@ -1,6 +1,10 @@
 {
-  "alj-baidu-1.webp": {
-    "zh": "斯科普里「亚历山大大帝机场」航站楼外景：立面顶部是西里尔字母的机场名「АЕРОДРОМ АЛЕКСАНДАР ВЕЛИКИ」。",
-    "en": "The terminal of Skopje's Alexander the Great Airport, its name in Cyrillic — 'АЕРОДРОМ АЛЕКСАНДАР ВЕЛИКИ' — running along the roofline."
+  "_note": "2026-10-17: the previous image was Skopje Alexander the Great Airport (wrong airport), now skipped. A labelled Esri World Imagery satellite view of Alexander Bay is published instead.",
+  "_skip": [
+    "alj-baidu-1.webp"
+  ],
+  "alj-sat-1.webp": {
+    "zh": "卫星视角：亚历山大湾机场的跑道铺在奥兰治河入海口附近的干旱海岸上，航站楼与机坪在跑道一侧。",
+    "en": "Satellite view: the runways at Alexander Bay lie on the arid coast near the Orange River mouth, with the terminal and apron alongside."
   }
 }

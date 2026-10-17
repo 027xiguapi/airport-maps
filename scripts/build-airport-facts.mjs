@@ -59,27 +59,31 @@ parseLine(lines[0]).forEach((name, i) => (col[name] = i));
  * KAAA/AAA case in OurAirports).
  */
 const TYPE_RANK = { large_airport: 3, medium_airport: 2, small_airport: 1, heliport: 1 };
+const csvRecord = (c) => ({
+  type: c[col.type],
+  icao: c[col.icao_code] || undefined,
+  elev: c[col.elevation_ft] === '' ? undefined : Number(c[col.elevation_ft]),
+  wiki: /^https?:\/\/en\.wikipedia\.org\/wiki\/\S+$/.test(c[col.wikipedia_link])
+    ? c[col.wikipedia_link]
+    : undefined,
+  scheduled: c[col.scheduled_service] === '1' ? true : c[col.scheduled_service] === '0' ? false : undefined,
+  lat: c[col.latitude_deg] === '' ? undefined : Number(c[col.latitude_deg]),
+  lng: c[col.longitude_deg] === '' ? undefined : Number(c[col.longitude_deg]),
+});
 const csvIndex = new Map();
+/** A curated ICAO is authoritative when an IATA code has been reused. */
+const csvByIcao = new Map();
 for (let i = 1; i < lines.length; i++) {
   if (!lines[i]) continue;
   const c = parseLine(lines[i]);
+  const rec = csvRecord(c);
+  if (rec.icao && !csvByIcao.has(rec.icao)) csvByIcao.set(rec.icao, rec);
   const iata = c[col.iata_code];
   if (!/^[A-Z]{3}$/.test(iata)) continue;
   const rank = (TYPE_RANK[c[col.type]] ?? 0) * 10 + (c[col.scheduled_service] === '1' ? 1 : 0);
   const prev = csvIndex.get(iata);
   if (prev && prev.rank > rank) continue;
-  csvIndex.set(iata, {
-    rank,
-    type: c[col.type],
-    icao: c[col.icao_code] || undefined,
-    elev: c[col.elevation_ft] === '' ? undefined : Number(c[col.elevation_ft]),
-    wiki: /^https?:\/\/en\.wikipedia\.org\/wiki\/\S+$/.test(c[col.wikipedia_link])
-      ? c[col.wikipedia_link]
-      : undefined,
-    scheduled: c[col.scheduled_service] === '1' ? true : c[col.scheduled_service] === '0' ? false : undefined,
-    lat: c[col.latitude_deg] === '' ? undefined : Number(c[col.latitude_deg]),
-    lng: c[col.longitude_deg] === '' ? undefined : Number(c[col.longitude_deg]),
-  });
+  csvIndex.set(iata, { ...rec, rank });
 }
 
 /**
@@ -118,8 +122,14 @@ const dirIndex = new Map(directory.airports.map((a) => [a.iata, a]));
 const out = {};
 const stats = { type: 0, icao: 0, elevFt: 0, wikiEn: 0, lat: 0, scheduled: 0 };
 for (const iata of codes.sort()) {
-  const csv = csvIndex.get(iata);
+  const exact = csvIndex.get(iata);
   const dir = dirIndex.get(iata);
+  // A reused IATA (GOY is Tura in OurAirports, Ampara in this directory) must
+  // not overwrite facts for the airport the curated ICAO identifies.
+  const csv =
+    exact && (!dir?.icao || exact.icao === dir.icao)
+      ? exact
+      : csvByIcao.get(dir?.icao) ?? exact;
   const hand = handCoords[iata];
   const byIdent = identIndex.get(dir?.icao ?? csv?.icao);
   const lat = csv?.lat ?? byIdent?.lat ?? hand?.lat;

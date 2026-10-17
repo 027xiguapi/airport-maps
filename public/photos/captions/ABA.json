@@ -1,4 +1,12 @@
 {
-  "_note": "nothing usable yet: aba-bing-1 is a Tu-154 stock shot at another airport; aba-page-1 is the official site's parking-lot diagram (a graphic, not a photo) and aba-page-2 a Yablor.ru widget card. The good sources for Abakan (a LiveJournal photo report, its CDN ic.pics.livejournal.com) are unreachable from this network.",
-  "_skip": ["aba-bing-1.webp", "aba-page-1.webp", "aba-page-2.webp"]
+  "_note": "2026-10-17: no verifiable ground photo was reachable; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "aba-bing-1.webp",
+    "aba-page-1.webp",
+    "aba-page-2.webp"
+  ],
+  "aba-sat-1.webp": {
+    "zh": "卫星视角：阿巴坎机场的跑道沿城市边缘展开，机坪与航站楼在跑道中段一侧。",
+    "en": "Satellite view: the runway runs along the edge of Abakan, with the apron and terminal beside its midpoint."
+  }
 }

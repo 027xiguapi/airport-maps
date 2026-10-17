@@ -28,6 +28,21 @@ import sharp from 'sharp';
 import { ROOT } from './_env.mjs';
 import { robotsAllows, sniffImage } from './fetch-airport-images.mjs';
 
+/** Code -> escaped stem for directories Windows cannot name (`AUX`). */
+const PHOTO_STEMS = (() => {
+  try {
+    const file = JSON.parse(readFileSync(join(ROOT, 'scripts', 'photo-file-aliases.json'), 'utf8'));
+    return Object.fromEntries(
+      Object.entries(file).filter(
+        ([code, stem]) => /^[A-Z]{3}$/.test(code) && typeof stem === 'string'
+      )
+    );
+  } catch {
+    return {};
+  }
+})();
+const photoStem = (code) => PHOTO_STEMS[code] ?? code;
+
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
 
@@ -227,7 +242,7 @@ for (const [code, pages] of Object.entries(from)) {
           console.log(`  [dry] ${code} ${file} ← ${candidate.url.slice(0, 90)} (${meta.width}x${meta.height}, ${candidate.how})`);
           continue;
         }
-        const outDir = join(photosDir, code);
+        const outDir = join(photosDir, photoStem(code));
         const image = sharp(buf).rotate();
         if (meta.width > MAX_WIDTH) image.resize({ width: MAX_WIDTH });
         const info = await image.webp({ quality: 80 }).toFile(join(outDir, file));

@@ -1,4 +1,12 @@
 {
-  "_note": "two hotel listings (Comfort Suites, Cobblestone) and a winter 'pulling for honor' event photo — none shows the airport itself.",
-  "_skip": ["atw-baidu-1.webp", "atw-baidu-2.webp", "atw-baidu-3.webp"]
+  "_note": "2026-10-17: no verifiable ground photo could be fetched; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "atw-baidu-1.webp",
+    "atw-baidu-2.webp",
+    "atw-baidu-3.webp"
+  ],
+  "atw-sat-1.webp": {
+    "zh": "卫星视角：两条跑道在农田与城镇之间交叉，航站楼与机坪位于机场中部。",
+    "en": "Satellite view: two runways cross between farmland and town, with the terminal and apron in the middle of the field."
+  }
 }

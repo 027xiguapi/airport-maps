@@ -1,4 +1,16 @@
 {
-  "_note": "all three are hotel listings (Hilton Garden Inn, Cambria Suites) near the airport, not the airport itself.",
-  "_skip": ["cak-baidu-1.webp", "cak-baidu-2.webp", "cak-baidu-3.webp"]
+  "_note": "2026-10-17: the airport's official site now yields a check-in counter and an arrivals-corridor photo; earlier hotel listings stay skipped.",
+  "_skip": [
+    "cak-baidu-1.webp",
+    "cak-baidu-2.webp",
+    "cak-baidu-3.webp"
+  ],
+  "cak-page-1.webp": {
+    "zh": "美国航空值机柜台：工作人员在柜台后为旅客办理行李托运，背景是蓝白渐变的美国航空标识。",
+    "en": "An American Airlines check-in counter — an agent handling a bag while passengers look on, the airline's blue-and-white branding behind."
+  },
+  "cak-page-2.webp": {
+    "zh": "航站楼内的到达通道：旅客拖着行李走向出口，头顶是「Arrivals」指示牌。",
+    "en": "The arrivals corridor — travellers with bags heading for the exit beneath the 'Arrivals' sign."
+  }
 }

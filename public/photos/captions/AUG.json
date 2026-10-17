@@ -1,4 +1,12 @@
 {
-  "_note": "All three downloads belong to Port Augusta Airport in Australia (PUG/YPAG), not Augusta State Airport in Maine (AUG/KAUG): two identical satellite screenshots labelled 'Port Augusta A-port' and a photo of a light twin. This is the AUG/PUG code mix-up the relevance filter could not see.",
-  "_skip": ["aug-baidu-1.webp", "aug-baidu-2.webp", "aug-baidu-3.webp"]
+  "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "aug-baidu-1.webp",
+    "aug-baidu-2.webp",
+    "aug-baidu-3.webp"
+  ],
+  "aug-sat-1.webp": {
+    "zh": "卫星视角：短跑道嵌在林地与城镇之间，航站楼与机坪位于跑道一侧。",
+    "en": "Satellite view: a short runway set between woods and town, with the terminal and apron alongside it."
+  }
 }

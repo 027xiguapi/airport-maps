@@ -417,6 +417,18 @@
         "title": "По дороге из Абакана в Москву  | Yablor.ru",
         "licenseFilter": null,
         "query": "page:yablor.ru"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Abakan International Airport (ABA) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "aba-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "ABB": [
@@ -975,6 +987,18 @@
         "title": "file:skopje alexander the great airport.jpg - wikimedia commons",
         "licenseFilter": null,
         "query": "亚历山大湾机场"
+      },
+      {
+        "file": "alj-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alexander Bay Airport (ALJ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
       }
     ],
     "ALM": [
@@ -1089,6 +1113,66 @@
         "title": "印度客机艾哈迈达巴德机场坠毁:伤亡情况不明影响严重",
         "licenseFilter": null,
         "query": "艾哈迈达巴德国际机场"
+      },
+      {
+        "file": "amd-page-1.webp",
+        "width": 686,
+        "height": 492,
+        "source": "page",
+        "host": "www.adaniairports.com",
+        "pageUrl": "https://www.adaniairports.com/",
+        "imageUrl": "https://www.adaniairports.com/-/media/Project/AAHL/Home/Airport-bussiness-image/Homepage/Who-We-Are.jpg",
+        "title": "Adani Airport Holdings Limited (AAHL) - Future Plans, Our Vision, Reshaping India&#x27;s Airports",
+        "licenseFilter": null,
+        "query": "page:www.adaniairports.com"
+      },
+      {
+        "file": "amd-page-2.webp",
+        "width": 800,
+        "height": 800,
+        "source": "page",
+        "host": "www.adaniairports.com",
+        "pageUrl": "https://www.adaniairports.com/",
+        "imageUrl": "https://www.adaniairports.com/-/media/Project/AAHL/Home/Airport-bussiness-image/Homepage/Expertise-1.jpg",
+        "title": "Adani Airport Holdings Limited (AAHL) - Future Plans, Our Vision, Reshaping India&#x27;s Airports",
+        "licenseFilter": null,
+        "query": "page:www.adaniairports.com"
+      },
+      {
+        "source": "page",
+        "host": "svpia-ahmedabad.adaniairports.com",
+        "pageUrl": "https://svpia-ahmedabad.adaniairports.com/en",
+        "imageUrl": "https://svpia-ahmedabad.adaniairports.com/-/media/Images/AdaniAirAhmedabad/Optimized-Images/AMD/AMD/Homepage/Homepage-Banner-Image.jpg",
+        "title": "Sardar Vallabhbhai Patel International Airport — terminal at night",
+        "file": "amd-page-3.webp",
+        "width": 1600,
+        "height": 867,
+        "licenseFilter": null,
+        "query": ""
+      },
+      {
+        "source": "page",
+        "host": "svpia-ahmedabad.adaniairports.com",
+        "pageUrl": "https://svpia-ahmedabad.adaniairports.com/en/airport-terminal-maps",
+        "imageUrl": "https://svpia-ahmedabad.adaniairports.com/-/media/Images/AdaniAirAhmedabad/Optimized-Images/AMD/AMD/Terminal-Map/tERMINAL-MAP-BANNER.jpg",
+        "title": "Sardar Vallabhbhai Patel International Airport — terminal forecourt",
+        "file": "amd-page-4.webp",
+        "width": 1600,
+        "height": 444,
+        "licenseFilter": null,
+        "query": ""
+      },
+      {
+        "source": "page",
+        "host": "svpia-ahmedabad.adaniairports.com",
+        "pageUrl": "https://svpia-ahmedabad.adaniairports.com/en/about-us",
+        "imageUrl": "https://svpia-ahmedabad.adaniairports.com/-/media/Images/AdaniAirAhmedabad/Optimized-Images/AMD/AMD/About-us/About-SVPIA.jpg",
+        "title": "Sardar Vallabhbhai Patel International Airport — terminal art wall",
+        "file": "amd-page-5.webp",
+        "width": 631,
+        "height": 378,
+        "licenseFilter": null,
+        "query": ""
       }
     ],
     "AND": [
@@ -1103,6 +1187,18 @@
         "title": "anderson international airport(1)",
         "licenseFilter": null,
         "query": "Anderson Regional Airport"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Anderson Regional Airport (AND) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "and-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "ANR": [
@@ -1255,6 +1351,18 @@
         "title": "推进萨勒曼国王国际机场(king salman international airport)的建设",
         "licenseFilter": null,
         "query": "King Hussein International Airport"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — King Hussein International Airport (AQJ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "aqj-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "ARC": [
@@ -1269,6 +1377,18 @@
         "title": "day stranded at londons heathrow airport monday as arctic",
         "licenseFilter": null,
         "query": "Arctic Village Airport"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arctic Village Airport (ARC) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "arc-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "ARK": [
@@ -1495,6 +1615,18 @@
         "title": "appleton international airport hosts 'pulling for honor' | wluk",
         "licenseFilter": null,
         "query": "Appleton International Airport"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Appleton International Airport (ATW) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "atw-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "AUG": [
@@ -1533,6 +1665,18 @@
         "title": "air 350 (n199y) - landing runway 35 at augusta regional airport",
         "licenseFilter": null,
         "query": "Augusta State Airport"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Augusta State Airport (AUG) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "aug-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "AUH": [
@@ -1645,6 +1789,30 @@
         "title": "Austin-Bergstrom International Airport | Airport",
         "licenseFilter": null,
         "query": "page:austin.widen.net"
+      },
+      {
+        "source": "page",
+        "host": "www.flyaustin.com",
+        "pageUrl": "https://www.flyaustin.com/about-austin-bergstrom-international-airport-aus",
+        "imageUrl": "https://austin.widen.net/content/6fdbc1bf-b86e-42bf-96a9-57fc7ecf926b/web/Airport%20-%20Web_aus-fountain.jpg?crop=yes&w=1920&h=450&itok=o2NBHSo5",
+        "title": "Austin-Bergstrom International Airport entrance fountain",
+        "file": "aus-page-4.webp",
+        "width": 1600,
+        "height": 375,
+        "licenseFilter": null,
+        "query": ""
+      },
+      {
+        "source": "page",
+        "host": "www.flyaustin.com",
+        "pageUrl": "https://www.flyaustin.com/about-austin-bergstrom-international-airport-aus",
+        "imageUrl": "https://austin.widen.net/content/d5e6a5d9-7dbc-484d-a458-2eebdc45fb36/web/h_about.jpg",
+        "title": "Barbara Jordan Terminal interior",
+        "file": "aus-page-5.webp",
+        "width": 700,
+        "height": 400,
+        "licenseFilter": null,
+        "query": ""
       }
     ],
     "AVA": [
@@ -1721,6 +1889,42 @@
         "title": "阿什维尔机场康福特茵酒店 (comfort inn asheville airport) (弗莱彻",
         "licenseFilter": null,
         "query": "阿什维尔地区机场"
+      },
+      {
+        "file": "avl-page-1.webp",
+        "width": 1024,
+        "height": 684,
+        "source": "page",
+        "host": "avlairport.com",
+        "pageUrl": "https://avlairport.com/",
+        "imageUrl": "https://avlairport.com/media/kdnk5icw/asheville-airport-avl.jpg?anchor=center&mode=crop&width=1024&rnd=133128730781330000",
+        "title": "Asheville Airport | Asheville Regional Airport (AVL)",
+        "licenseFilter": null,
+        "query": "page:avlairport.com"
+      },
+      {
+        "file": "avl-page-2.webp",
+        "width": 1600,
+        "height": 816,
+        "source": "page",
+        "host": "avlairport.com",
+        "pageUrl": "https://avlairport.com/",
+        "imageUrl": "https://avlairport.com/media/spwdyi3o/airport-lounges.jpg?anchor=center&mode=crop&width=1920&height=979&format=auto&quality=90&rnd=133161130197000000",
+        "title": "Asheville Airport | Asheville Regional Airport (AVL)",
+        "licenseFilter": null,
+        "query": "page:avlairport.com"
+      },
+      {
+        "source": "360",
+        "host": "carolina.americachineselife.com",
+        "pageUrl": "http://carolina.americachineselife.com/%e5%a5%bd%e6%b6%88%e6%81%af%ef%bc%81%e9%98%bf%e4%bb%80%e7%bb%b4%e5%b0%94%e5%9c%b0%e5%8c%ba%e6%9c%ba%e5%9c%ba%e5%ae%a3%e5%b8%83%e6%96%b0%e7%9a%84%e7%9b%b4%e9%a3%9e%e4%b8%b9%e4%bd%9b%e7%9a%84%e8%88%aa/",
+        "imageUrl": "http://carolina.americachineselife.com/wp-content/uploads/sites/2/2023/05/1684994198-6BE3A58B-9D1F-459F-B171-1D5780C67978-640x360.png",
+        "title": "Asheville Regional Airport entrance sign",
+        "file": "avl-page-3.webp",
+        "width": 640,
+        "height": 360,
+        "licenseFilter": null,
+        "query": ""
       }
     ],
     "AVV": [
@@ -1773,6 +1977,18 @@
         "title": "阿瓦士国际机场(awz,oiaw)|阿瓦士机场|ahvaz international airport-",
         "licenseFilter": null,
         "query": "阿瓦士国际机场"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ahvaz International Airport (AWZ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "awz-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "AXT": [
@@ -2023,6 +2239,18 @@
         "title": "Flugzeugfoto 05-8158 - Lockheed C-130J-30 Hercules - USA - Air Force | Flugzeugbilder.de",
         "licenseFilter": null,
         "query": "page:www.flugzeugbilder.de"
+      },
+      {
+        "source": "360",
+        "host": "baike.so.com",
+        "pageUrl": "https://baike.so.com/doc/5377346-5613477.html",
+        "imageUrl": "https://so1.360tres.com/t0105b22dfed71539a8.jpg",
+        "title": "Bucharest Băneasa Aurel Vlaicu International Airport — terminal at dusk",
+        "file": "bbu-page-3.webp",
+        "width": 900,
+        "height": 675,
+        "licenseFilter": null,
+        "query": ""
       }
     ],
     "BYH": [
@@ -2037,6 +2265,18 @@
         "title": "100 mph winds destroy airport in arkansas - weathernation",
         "licenseFilter": null,
         "query": "Arkansas International Airport"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arkansas International Airport (BYH) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "byh-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "CAI": [
@@ -2137,6 +2377,30 @@
         "title": "阿克伦-坎顿机场坎布里亚酒店预订价格,联系电话位置地址【携程酒店】",
         "licenseFilter": null,
         "query": "阿克伦-坎顿机场"
+      },
+      {
+        "source": "page",
+        "host": "www.akroncantonairport.com",
+        "pageUrl": "https://www.akroncantonairport.com/about-airport",
+        "imageUrl": "https://www.akroncantonairport.com/sites/default/files/styles/uncropped_xl_1600_wide/public/assets/banners/cak-counter.jpg?itok=bsxLdrPv",
+        "title": "Akron-Canton Airport — American Airlines check-in counter",
+        "file": "cak-page-1.webp",
+        "width": 1200,
+        "height": 675,
+        "licenseFilter": null,
+        "query": ""
+      },
+      {
+        "source": "page",
+        "host": "www.akroncantonairport.com",
+        "pageUrl": "https://www.akroncantonairport.com/terminal-amenities",
+        "imageUrl": "https://www.akroncantonairport.com/sites/default/files/styles/rect_large_600x400/public/assets/gallery/cak-0234.jpg?h=1dcd1023&itok=zLYz6cEe",
+        "title": "Akron-Canton Airport — arrivals corridor",
+        "file": "cak-page-2.webp",
+        "width": 600,
+        "height": 400,
+        "licenseFilter": null,
+        "query": ""
       }
     ],
     "CDG": [
@@ -2265,6 +2529,18 @@
         "title": "chambéry savoie airport spotting guide – spotterguide.net",
         "licenseFilter": null,
         "query": "Chambéry Aix les Bains airport"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Chambéry Savoie Mont Blanc Airport (CMF) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "cmf-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "CWB": [
@@ -2555,6 +2831,42 @@
         "title": "凯悦嘉轩奥兰加巴德机场预订价格,联系电话位置地址【携程酒店】",
         "licenseFilter": null,
         "query": "奥兰加巴德机场"
+      },
+      {
+        "source": "page",
+        "host": "www.aai.aero",
+        "pageUrl": "https://www.aai.aero/en/airports/aurangabad",
+        "imageUrl": "https://www.aai.aero/sites/default/files/Airport%20Images/aurangabad%20airport%20pic%201.jpg",
+        "title": "Aurangabad Airport — terminal forecourt",
+        "file": "ixu-page-1.webp",
+        "width": 1400,
+        "height": 779,
+        "licenseFilter": null,
+        "query": ""
+      },
+      {
+        "source": "page",
+        "host": "www.aai.aero",
+        "pageUrl": "https://www.aai.aero/en/airports/aurangabad",
+        "imageUrl": "https://www.aai.aero/sites/default/files/Airport%20Images/auranagabad%20airport%20picture%202.jpg",
+        "title": "Aurangabad Airport — terminal and control tower",
+        "file": "ixu-page-2.webp",
+        "width": 1400,
+        "height": 750,
+        "licenseFilter": null,
+        "query": ""
+      },
+      {
+        "source": "page",
+        "host": "www.aai.aero",
+        "pageUrl": "https://www.aai.aero/en/airports/aurangabad",
+        "imageUrl": "https://www.aai.aero/sites/default/files/Airport%20Images/dep%20air_1.jpg",
+        "title": "Aurangabad Airport — departures entrance",
+        "file": "ixu-page-3.webp",
+        "width": 1600,
+        "height": 934,
+        "licenseFilter": null,
+        "query": ""
       }
     ],
     "LEI": [
@@ -2593,6 +2905,18 @@
         "title": "xplane 11 扩展包 飞行员 leam 阿尔梅里亚机场加速器免费下载_10plan",
         "licenseFilter": null,
         "query": "阿尔梅里亚机场"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Almería Airport (LEI) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "lei-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "LFK": [
@@ -2759,6 +3083,18 @@
         "title": "[免费][p3dv4] orbx - leas asturias 西班牙阿斯图里亚斯机场 v1.00 ",
         "licenseFilter": null,
         "query": "阿斯图里亚斯机场"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Asturias Airport (OVD) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "ovd-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "PVG": [
@@ -2823,6 +3159,18 @@
         "title": "阿拉尔机场通航:塔克拉玛干沙漠的绿色飞跃",
         "licenseFilter": null,
         "query": "阿拉尔机场"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arar Airport (RAE) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "rae-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "RUA": [
@@ -2951,6 +3299,18 @@
         "title": "san antonio international airport consolidated rental car facili",
         "licenseFilter": null,
         "query": "Antonio Maceo International Airport"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Antonio Maceo International Airport (SCU) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "scu-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "SDN": [
@@ -3101,6 +3461,54 @@
         "title": "Fly SPI at Abraham Lincoln Capital Airport in Springfield",
         "licenseFilter": null,
         "query": "page:www.flyspi.com"
+      },
+      {
+        "file": "spi-page-4.webp",
+        "width": 1200,
+        "height": 650,
+        "source": "page",
+        "host": "www.flyspi.com",
+        "pageUrl": "https://www.flyspi.com/",
+        "imageUrl": "https://www.flyspi.com/Resources/63a76dd0-5d15-461e-9949-de639d92da60/flyspi-og.jpg",
+        "title": "Fly SPI at Abraham Lincoln Capital Airport in Springfield",
+        "licenseFilter": null,
+        "query": "page:www.flyspi.com"
+      },
+      {
+        "file": "spi-page-5.webp",
+        "width": 1600,
+        "height": 417,
+        "source": "page",
+        "host": "www.flyspi.com",
+        "pageUrl": "https://www.flyspi.com/",
+        "imageUrl": "https://www.flyspi.com/images/lists/234/9b944e9a-8133-4b2a-a717-8bbafeb5fcf2.jpg",
+        "title": "Fly SPI at Abraham Lincoln Capital Airport in Springfield",
+        "licenseFilter": null,
+        "query": "page:www.flyspi.com"
+      },
+      {
+        "source": "360",
+        "host": "dy.163.com",
+        "pageUrl": "https://dy.163.com/article/EAGAEAM50515AA35.html",
+        "imageUrl": "https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2FuKx2clRu3kk2RiSh7hskSSi7IM4X1BooYmyHikRQzNNKt1552821570122.jpg&thumbnail=660x2147483647&quality=80&type=jpg",
+        "title": "Abraham Lincoln Capital Airport entrance sign",
+        "file": "spi-page-6.webp",
+        "width": 640,
+        "height": 413,
+        "licenseFilter": null,
+        "query": ""
+      },
+      {
+        "source": "baidu",
+        "host": "zh.flightaware.com",
+        "pageUrl": "https://zh.flightaware.com/",
+        "imageUrl": "https://img0.baidu.com/it/u=2996683480,2351524457&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",
+        "title": "KSPI Abraham Lincoln Capital Airport — C-47 on the apron",
+        "file": "spi-page-7.webp",
+        "width": 667,
+        "height": 500,
+        "licenseFilter": null,
+        "query": ""
       }
     ],
     "SVD": [
@@ -3227,6 +3635,18 @@
         "title": "济宁大安机场",
         "licenseFilter": null,
         "query": "安机场"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ann Airport (VBA) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "vba-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "XJD": [
@@ -3241,6 +3661,18 @@
         "title": "乌代德空军基地快速机场跑道损坏修复(radr)演练与启示_crater_batch_",
         "licenseFilter": null,
         "query": "乌代德空军基地"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Al Udeid Air Base (XJD) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "xjd-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "YLT": [
@@ -3255,6 +3687,18 @@
         "title": "「reuters」mount etna on red alert as catania airport closes",
         "licenseFilter": null,
         "query": "Alert Airport"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alert Airport (YLT) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "ylt-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
       }
     ],
     "YYW": [
@@ -3293,6 +3737,3924 @@
         "title": "【选调生】阿姆斯特朗机场,质量很好的折叠玻璃门-原创视频-免费在线",
         "licenseFilter": null,
         "query": "阿姆斯特朗机场"
+      },
+      {
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Armstrong Airport (YYW) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "file": "yyw-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "query": ""
+      }
+    ],
+    "ALC": [
+      {
+        "file": "alc-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alicante-Elche Airport (ALC) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ADB": [
+      {
+        "file": "adb-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Izmir Adnan Menderes Airport (ADB) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LHE": [
+      {
+        "file": "lhe-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Allama Iqbal International Airport (LHE) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ADL": [
+      {
+        "file": "adl-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Adelaide Airport (ADL) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ALB": [
+      {
+        "file": "alb-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Albany International Airport (ALB) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "FMM": [
+      {
+        "file": "fmm-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Memmingen Airport (FMM) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "CLO": [
+      {
+        "file": "clo-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alfonso Bonilla Aragon International Airport (CLO) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LIT": [
+      {
+        "file": "lit-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Bill and Hillary Clinton National Airport (LIT) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SID": [
+      {
+        "file": "sid-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Amilcar Cabral International Airport (SID) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "JOG": [
+      {
+        "file": "jog-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Adisutjipto International Airport (JOG) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "JIB": [
+      {
+        "file": "jib-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Djibouti-Ambouli International Airport (JIB) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "COR": [
+      {
+        "file": "cor-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Cordoba Ambrosio Taravella International Airport (COR) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "NSK": [
+      {
+        "file": "nsk-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alykel International Airport (NSK) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AES": [
+      {
+        "file": "aes-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alesund Airport (AES) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "OUD": [
+      {
+        "file": "oud-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Oujda Angads Airport (OUD) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "PNR": [
+      {
+        "file": "pnr-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Antonio Agostinho Neto International Airport (PNR) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "PVK": [
+      {
+        "file": "pvk-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aktion National Airport (PVK) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AAR": [
+      {
+        "file": "aar-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aarhus Airport (AAR) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SRG": [
+      {
+        "file": "srg-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Jenderal Ahmad Yani International Airport (SRG) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AAE": [
+      {
+        "file": "aae-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Annaba Rabah Bitat Airport (AAE) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ALF": [
+      {
+        "file": "alf-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alta Airport (ALF) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AQG": [
+      {
+        "file": "aqg-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Anqing Tianzhushan Airport (AQG) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ASF": [
+      {
+        "file": "asf-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Astrakhan Narimanovo Airport (ASF) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ASM": [
+      {
+        "file": "asm-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Asmara International Airport (ASM) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "BPS": [
+      {
+        "file": "bps-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Porto Seguro International Airport (BPS) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "CJS": [
+      {
+        "file": "cjs-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Abraham Gonzalez International Airport (CJS) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "GUW": [
+      {
+        "file": "guw-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Atyrau International Airport (GUW) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "GZP": [
+      {
+        "file": "gzp-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Gazipasa-Alanya Airport (GZP) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LCG": [
+      {
+        "file": "lcg-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — A Coruna Airport (LCG) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MGQ": [
+      {
+        "file": "mgq-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aden Adde International Airport (MGQ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "REL": [
+      {
+        "file": "rel-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Almirante Zar Airport (REL) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "VLN": [
+      {
+        "file": "vln-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arturo Michelena International Airport (VLN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ATZ": [
+      {
+        "file": "atz-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Asyut International Airport (ATZ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "CUZ": [
+      {
+        "file": "cuz-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alejandro Velasco Astete International Airport (CUZ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "DIE": [
+      {
+        "file": "die-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arrachart Airport (DIE) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "TGZ": [
+      {
+        "file": "tgz-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Angel Albino Corzo International Airport (TGZ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "GRB": [
+      {
+        "file": "grb-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Austin Straubel International Airport (GRB) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "QSF": [
+      {
+        "file": "qsf-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ain Arnat Airport (QSF) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SNU": [
+      {
+        "file": "snu-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Abel Santamaria International Airport (SNU) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "TAB": [
+      {
+        "file": "tab-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — A.N.R. Robinson International Airport (TAB) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ABT": [
+      {
+        "file": "abt-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Al Baha Airport (ABT) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AEX": [
+      {
+        "file": "aex-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alexandria International Airport (AEX) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AGS": [
+      {
+        "file": "ags-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Augusta Regional Airport (AGS) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AJL": [
+      {
+        "file": "ajl-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Lengpui Airport (AJL) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AKJ": [
+      {
+        "file": "akj-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Asahikawa Airport (AKJ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AKX": [
+      {
+        "file": "akx-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aktobe International Airport (AKX) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ANI": [
+      {
+        "file": "ani-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aniak Airport (ANI) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ANX": [
+      {
+        "file": "anx-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Andoya Airport (ANX) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ASW": [
+      {
+        "file": "asw-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aswan International Airport (ASW) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AZN": [
+      {
+        "file": "azn-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Andijan International Airport (AZN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "GPA": [
+      {
+        "file": "gpa-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Patras Araxos Airport (GPA) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "HOF": [
+      {
+        "file": "hof-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Al-Ahsa International Airport (HOF) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "JEG": [
+      {
+        "file": "jeg-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "tiles.maps.eox.at",
+        "pageUrl": "https://s2maps.eu/",
+        "imageUrl": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/g/14/{y}/{x}.jpg",
+        "title": "Sentinel-2 cloudless — Aasiaat Airport (JEG) satellite view",
+        "licenseFilter": "Sentinel-2 cloudless © EOX — attribution required",
+        "query": ""
+      }
+    ],
+    "LBE": [
+      {
+        "file": "lbe-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arnold Palmer Regional Airport (LBE) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "OAJ": [
+      {
+        "file": "oaj-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Albert J Ellis Airport (OAJ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ABX": [
+      {
+        "file": "abx-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Albury Airport (ABX) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ACI": [
+      {
+        "file": "aci-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alderney Airport (ACI) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ADF": [
+      {
+        "file": "adf-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Adiyaman Airport (ADF) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ADU": [
+      {
+        "file": "adu-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ardabil Airport (ADU) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AGR": [
+      {
+        "file": "agr-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Agra Airport (AGR) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AHE": [
+      {
+        "file": "ahe-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ahe Airport (AHE) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AJF": [
+      {
+        "file": "ajf-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Al-Jawf International Airport (AJF) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AJI": [
+      {
+        "file": "aji-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Agri Airport (AJI) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AKU": [
+      {
+        "file": "aku-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aksu Hongqipo Airport (AKU) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AOO": [
+      {
+        "file": "aoo-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Altoona Blair County Airport (AOO) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "APN": [
+      {
+        "file": "apn-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alpena County Regional Airport (APN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "APO": [
+      {
+        "file": "apo-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Antonio Roldan Betancur Airport (APO) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ARU": [
+      {
+        "file": "aru-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aracatuba Airport (ARU) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ASE": [
+      {
+        "file": "ase-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aspen-Pitkin County Airport (ASE) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ATC": [
+      {
+        "file": "atc-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arthur's Town Airport (ATC) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ATK": [
+      {
+        "file": "atk-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Atqasuk Edward Burnell Sr Memorial Airport (ATK) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ATM": [
+      {
+        "file": "atm-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Altamira Airport (ATM) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "FON": [
+      {
+        "file": "fon-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "tiles.maps.eox.at",
+        "pageUrl": "https://s2maps.eu/",
+        "imageUrl": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/g/15/{y}/{x}.jpg",
+        "title": "Sentinel-2 cloudless — La Fortuna Arenal Airport (FON) satellite view",
+        "licenseFilter": "Sentinel-2 cloudless © EOX — attribution required",
+        "query": ""
+      }
+    ],
+    "IXD": [
+      {
+        "file": "ixd-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Prayagraj Airport (IXD) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MDQ": [
+      {
+        "file": "mdq-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Astor Piazzolla International Airport (MDQ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MLG": [
+      {
+        "file": "mlg-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Abdul Rachman Saleh Airport (MLG) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "PSO": [
+      {
+        "file": "pso-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Antonio Narino Airport (PSO) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "YXX": [
+      {
+        "file": "yxx-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Abbotsford International Airport (YXX) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AAT": [
+      {
+        "file": "aat-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Altay Xuedu Airport (AAT) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AAY": [
+      {
+        "file": "aay-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Al Ghaydah International Airport (AAY) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ABL": [
+      {
+        "file": "abl-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ambler Airport (ABL) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AEY": [
+      {
+        "file": "aey-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Akureyri Airport (AEY) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AFL": [
+      {
+        "file": "afl-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alta Floresta Airport (AFL) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AGX": [
+      {
+        "file": "agx-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Agatti Airport (AGX) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AIA": [
+      {
+        "file": "aia-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alliance Municipal Airport (AIA) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AJR": [
+      {
+        "file": "ajr-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arvidsjaur Airport (AJR) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AKP": [
+      {
+        "file": "akp-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Anaktuvuk Pass Airport (AKP) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ALH": [
+      {
+        "file": "alh-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Albany Airport (ALH) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AMH": [
+      {
+        "file": "amh-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arba Minch Airport (AMH) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ANV": [
+      {
+        "file": "anv-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Anvik Airport (ANV) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AOE": [
+      {
+        "file": "aoe-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Hasan Polatkan Airport (AOE) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AQA": [
+      {
+        "file": "aqa-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Araraquara Airport (AQA) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ARM": [
+      {
+        "file": "arm-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Armidale Airport (ARM) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ARW": [
+      {
+        "file": "arw-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arad International Airport (ARW) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ASO": [
+      {
+        "file": "aso-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Asosa Airport (ASO) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ASV": [
+      {
+        "file": "asv-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Amboseli Airport (ASV) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AUR": [
+      {
+        "file": "aur-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aurillac Airport (AUR) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AXR": [
+      {
+        "file": "axr-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arutua Airport (AXR) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "CPC": [
+      {
+        "file": "cpc-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aviador C. Campos Airport (CPC) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "CUM": [
+      {
+        "file": "cum-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Antonio Jose de Sucre Airport (CUM) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ABU": [
+      {
+        "file": "abu-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — AA Bere Tallo (Haliwen) Airport (ABU)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AEH": [
+      {
+        "file": "aeh-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Abeche Airport (AEH)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AEU": [
+      {
+        "file": "aeu-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Abu Musa Island Airport (AEU)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ARA": [
+      {
+        "file": "ara-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Acadiana Regional Airport (ARA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AIP": [
+      {
+        "file": "aip-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Adampur Airport (AIP)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ADS": [
+      {
+        "file": "ads-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Addison Airport (ADS)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SLK": [
+      {
+        "file": "slk-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Adirondack Regional Airport (SLK)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AEG": [
+      {
+        "file": "aeg-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aek Godang Airport (AEG)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "RAF": [
+      {
+        "file": "raf-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Rafaela Airport (RAF)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AFY": [
+      {
+        "file": "afy-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Afyon Air Base (AFY)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AGZ": [
+      {
+        "file": "agz-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aggeneys Airport (AGZ)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AGQ": [
+      {
+        "file": "agq-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Dhokimion Airfield (AGQ)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "OCV": [
+      {
+        "file": "ocv-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aguas Claras Airport (OCV)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AHS": [
+      {
+        "file": "ahs-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ahuas Airport (AHS)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "IEO": [
+      {
+        "file": "ieo-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aioun el Atrouss Airport (IEO)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AIT": [
+      {
+        "file": "ait-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aitutaki Airport (AIT)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "QXB": [
+      {
+        "file": "qxb-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aix Les Milles airport (QXB)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LAK": [
+      {
+        "file": "lak-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aklavik/Freddie Carmichael Airport (LAK)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AKD": [
+      {
+        "file": "akd-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Akola Airport (AKD)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AKT": [
+      {
+        "file": "akt-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — RAF Akrotiri (AKT)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AKV": [
+      {
+        "file": "akv-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Akulivik Airport (AKV)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "KQA": [
+      {
+        "file": "kqa-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Akutan Airport (KQA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "IQA": [
+      {
+        "file": "iqa-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Al Asad Air Base (IQA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "DHF": [
+      {
+        "file": "dhf-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Al Dhafra Air Base (DHF)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "TQD": [
+      {
+        "file": "tqd-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Al Taqaddum Air Base (TQD)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AUK": [
+      {
+        "file": "auk-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alakanuk Airport (AUK)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ABC": [
+      {
+        "file": "abc-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Albacete Airport / Los Llanos Air Base (ABC)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ALL": [
+      {
+        "file": "all-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Riviera Villanova d'Albenga International Airport (ALL)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "BYF": [
+      {
+        "file": "byf-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Albert Bray airport (BYF)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SPG": [
+      {
+        "file": "spg-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Albert Whitted Airport (SPG)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MRD": [
+      {
+        "file": "mrd-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alberto Carnevalli Airport (MRD)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "TND": [
+      {
+        "file": "tnd-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alberto Delgado Airport (TND)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ALQ": [
+      {
+        "file": "alq-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alegrete Novo Airport (ALQ)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "WKK": [
+      {
+        "file": "wkk-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aleknagik / New Airport (WKK)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ALP": [
+      {
+        "file": "alp-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aleppo International Airport (ALP)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ALR": [
+      {
+        "file": "alr-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alexandra Aerodrome (ALR)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "JSI": [
+      {
+        "file": "jsi-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Skiathos Island National Airport (JSI)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "PKH": [
+      {
+        "file": "pkh-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alexion Airport (PKH)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "VUP": [
+      {
+        "file": "vup-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alfonso López Pumarejo Airport (VUP)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LET": [
+      {
+        "file": "let-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alfredo Vásquez Cobo International Airport (LET)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ALI": [
+      {
+        "file": "ali-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alice International Airport (ALI)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "HRH": [
+      {
+        "file": "hrh-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aligarh Airport (HRH)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AET": [
+      {
+        "file": "aet-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Allakaket Airport (AET)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AGC": [
+      {
+        "file": "agc-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Allegheny County Airport (AGC)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "BIG": [
+      {
+        "file": "big-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Allen Army Airfield (BIG)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LLU": [
+      {
+        "file": "llu-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "tiles.maps.eox.at",
+        "pageUrl": "https://s2maps.eu/",
+        "imageUrl": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/g/13/{y}/{x}.jpg",
+        "title": "Sentinel-2 cloudless — Alluitsup Paa Heliport (LLU)",
+        "licenseFilter": "Sentinel-2 cloudless © EOX — attribution required",
+        "query": ""
+      }
+    ],
+    "RCH": [
+      {
+        "file": "rch-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Almirante Padilla Airport (RCH)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "CTD": [
+      {
+        "file": "ctd-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alonso Valderrama Airport (CTD)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LTI": [
+      {
+        "file": "lti-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Altai Airport (LTI)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AOC": [
+      {
+        "file": "aoc-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Leipzig–Altenburg Airport (AOC)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LTS": [
+      {
+        "file": "lts-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Altus Air Force Base (LTS)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ALU": [
+      {
+        "file": "alu-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alula Airport (ALU)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AXF": [
+      {
+        "file": "axf-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Alxa Left Banner Bayanhot Airport (AXF)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AXJ": [
+      {
+        "file": "axj-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Amakusa Airport (AXJ)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "WAI": [
+      {
+        "file": "wai-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ambalabe Airport (WAI)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "IVA": [
+      {
+        "file": "iva-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ampampamena Airport (IVA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "WAM": [
+      {
+        "file": "wam-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ambatondrazaka Airport (WAM)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AMB": [
+      {
+        "file": "amb-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ambilobe Airport (AMB)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MZI": [
+      {
+        "file": "mzi-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Mopti Airport (MZI)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AMV": [
+      {
+        "file": "amv-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Amderma Airport (AMV)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "GOY": [
+      {
+        "file": "goy-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ampara Airport (GOY)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SAY": [
+      {
+        "file": "say-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Siena-Ampugnano Airport (SAY)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AVR": [
+      {
+        "file": "avr-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Amravati  Airport (AVR)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AAO": [
+      {
+        "file": "aao-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Anaco Airport (AAO)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "YAA": [
+      {
+        "file": "yaa-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Anahim Lake Airport (YAA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "HVA": [
+      {
+        "file": "hva-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Analalava Airport (HVA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ANS": [
+      {
+        "file": "ans-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Andahuaylas Airport (ANS)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ZWA": [
+      {
+        "file": "zwa-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Andapa Airport (ZWA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "UAM": [
+      {
+        "file": "uam-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Andersen Air Force Base (UAM)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "PYR": [
+      {
+        "file": "pyr-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Andravida Air Base (PYR)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ADW": [
+      {
+        "file": "adw-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Joint Base Andrews (ADW)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ASD": [
+      {
+        "file": "asd-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Andros Town Airport (ASD)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AUY": [
+      {
+        "file": "auy-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aneityum Airport (AUY)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ANE": [
+      {
+        "file": "ane-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Angers Marcé airport (ANE)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "VLY": [
+      {
+        "file": "vly-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Anglesey Airport (VLY)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AWD": [
+      {
+        "file": "awd-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aniwa Airport (AWD)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AKA": [
+      {
+        "file": "aka-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ankang Fuqiang Airport (AKA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "JVA": [
+      {
+        "file": "jva-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ankavandra Airport (JVA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "QNJ": [
+      {
+        "file": "qnj-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Annemasse Airfield (QNJ)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ANN": [
+      {
+        "file": "ann-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Annette Island Airport (ANN)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ANB": [
+      {
+        "file": "anb-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Anniston Regional Airport (ANB)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "OES": [
+      {
+        "file": "oes-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Antoine de Saint Exupéry Airport (OES)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "CYA": [
+      {
+        "file": "cya-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Antoine-Simon International Airport (CYA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ARE": [
+      {
+        "file": "are-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Antonio Nery Juarbe Pol Airport (ARE)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "WAQ": [
+      {
+        "file": "waq-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Antsalova Airport (WAQ)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ANM": [
+      {
+        "file": "anm-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Antsirabe Airport (ANM)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "HQQ": [
+      {
+        "file": "hqq-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Anyang Hongqiqu Airport (HQQ)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AOT": [
+      {
+        "file": "aot-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aosta Corrado Gex Airport (AOT)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "APK": [
+      {
+        "file": "apk-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Apataki Airport (APK)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ARX": [
+      {
+        "file": "arx-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aracati Dragão do Mar Regional Airport (ARX)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ACF": [
+      {
+        "file": "acf-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aral Tarim Airport (ACF)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ACR": [
+      {
+        "file": "acr-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Araracuara Airport (ACR)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "OBS": [
+      {
+        "file": "obs-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aubenas-South Ardèche Airport (OBS)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "GYL": [
+      {
+        "file": "gyl-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Argyle Airport (GYL)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AIR": [
+      {
+        "file": "air-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aripuanã Airport (AIR)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "KSO": [
+      {
+        "file": "kso-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Kastoria National Airport Aristotle (KSO)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SBK": [
+      {
+        "file": "sbk-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Saint-Brieuc-Armor Airport (SBK)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LME": [
+      {
+        "file": "lme-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Le Mans-Arnage Airport (LME)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ZCA": [
+      {
+        "file": "zca-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arnsberg Menden Airport (ZCA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "EPS": [
+      {
+        "file": "eps-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arroyo Barril Airport (EPS)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AVK": [
+      {
+        "file": "avk-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arvaikheer Airport (AVK)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "YEK": [
+      {
+        "file": "yek-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arviat Airport (YEK)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "YIE": [
+      {
+        "file": "yie-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Arxan Yi'ershi Airport (YIE)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LYM": [
+      {
+        "file": "lym-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ashford Airport (LYM)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ASA": [
+      {
+        "file": "asa-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Assab International Airport (ASA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "JTY": [
+      {
+        "file": "jty-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Astypalaia Airport (JTY)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AXK": [
+      {
+        "file": "axk-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ataq Airport (AXK)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ATR": [
+      {
+        "file": "atr-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Atar International Airport (ATR)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ISL": [
+      {
+        "file": "isl-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — İstanbul Atatürk Airport (ISL)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ATB": [
+      {
+        "file": "atb-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Atbara Airport (ATB)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "YIB": [
+      {
+        "file": "yib-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Atikokan Municipal Airport (YIB)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AIU": [
+      {
+        "file": "aiu-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Enua Airport (AIU)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "YAT": [
+      {
+        "file": "yat-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Attawapiskat Airport (YAT)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "PXA": [
+      {
+        "file": "pxa-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Atung Bungsu Airport (PXA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AGB": [
+      {
+        "file": "agb-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Augsburg Airport (AGB)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AKS": [
+      {
+        "file": "aks-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Gwaunaru'u Airport (AKS)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "YPJ": [
+      {
+        "file": "ypj-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aupaluk Airport (YPJ)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AUU": [
+      {
+        "file": "auu-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aurukun Airport (AUU)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "WMR": [
+      {
+        "file": "wmr-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Mananara Nord Airport (WMR)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AVB": [
+      {
+        "file": "avb-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Aviano Air Base (AVB)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AWA": [
+      {
+        "file": "awa-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Hawassa International Airport (AWA)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AYJ": [
+      {
+        "file": "ayj-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Maharshi Valmiki International Airport (AYJ)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AZH": [
+      {
+        "file": "azh-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Azamgarh Airport (AZH)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AUX": [
+      {
+        "file": "aux-sat-1.webp",
+        "width": 768,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Araguaína Airport (AUX)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AKL": [
+      {
+        "file": "akl-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Auckland Airport (AKL) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "AMS": [
+      {
+        "file": "ams-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Amsterdam Airport Schiphol (AMS) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ARN": [
+      {
+        "file": "arn-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Stockholm Arlanda Airport (ARN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ATH": [
+      {
+        "file": "ath-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Athens International Airport (ATH) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ATL": [
+      {
+        "file": "atl-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Hartsfield–Jackson Atlanta International Airport (ATL) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "BCN": [
+      {
+        "file": "bcn-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Barcelona–El Prat Airport (BCN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "BKK": [
+      {
+        "file": "bkk-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Suvarnabhumi Airport (BKK) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "CAN": [
+      {
+        "file": "can-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Guangzhou Baiyun International Airport (CAN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "CPH": [
+      {
+        "file": "cph-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Copenhagen Airport Kastrup (CPH) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "CPT": [
+      {
+        "file": "cpt-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Cape Town International Airport (CPT) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "DEL": [
+      {
+        "file": "del-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Indira Gandhi International Airport (DEL) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "DOH": [
+      {
+        "file": "doh-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Hamad International Airport (DOH) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "DUB": [
+      {
+        "file": "dub-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Dublin Airport (DUB) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "DXB": [
+      {
+        "file": "dxb-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Dubai International Airport (DXB) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "EWR": [
+      {
+        "file": "ewr-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Newark Liberty International Airport (EWR) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "FCO": [
+      {
+        "file": "fco-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Rome Fiumicino Airport (FCO) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "GRU": [
+      {
+        "file": "gru-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — São Paulo/Guarulhos International Airport (GRU) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "HND": [
+      {
+        "file": "hnd-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Tokyo Haneda Airport (HND) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "HPN": [
+      {
+        "file": "hpn-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Westchester County Airport (HPN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "IAD": [
+      {
+        "file": "iad-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Washington Dulles International Airport (IAD) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ICN": [
+      {
+        "file": "icn-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Incheon International Airport (ICN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "IST": [
+      {
+        "file": "ist-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Istanbul Airport (IST) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "JFK": [
+      {
+        "file": "jfk-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — John F. Kennedy International Airport (JFK) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "KIX": [
+      {
+        "file": "kix-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Kansai International Airport (KIX) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "KUL": [
+      {
+        "file": "kul-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Kuala Lumpur International Airport (KUL) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LAX": [
+      {
+        "file": "lax-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Los Angeles International Airport (LAX) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LGA": [
+      {
+        "file": "lga-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — LaGuardia Airport (LGA) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LGW": [
+      {
+        "file": "lgw-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Gatwick Airport (LGW) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "LIS": [
+      {
+        "file": "lis-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Humberto Delgado Airport (LIS) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MAD": [
+      {
+        "file": "mad-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Madrid–Barajas Airport (MAD) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MEX": [
+      {
+        "file": "mex-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Mexico City International Airport (MEX) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MIA": [
+      {
+        "file": "mia-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Miami International Airport (MIA) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MNL": [
+      {
+        "file": "mnl-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Ninoy Aquino International Airport (MNL) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MUC": [
+      {
+        "file": "muc-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Munich Airport (MUC) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MXP": [
+      {
+        "file": "mxp-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Milan Malpensa Airport (MXP) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "OKC": [
+      {
+        "file": "okc-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Will Rogers World Airport (OKC) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ORD": [
+      {
+        "file": "ord-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — O'Hare International Airport (ORD) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ORY": [
+      {
+        "file": "ory-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Paris Orly Airport (ORY) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "PEK": [
+      {
+        "file": "pek-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Beijing Capital International Airport (PEK) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "RUH": [
+      {
+        "file": "ruh-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — King Khalid International Airport (RUH) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SEA": [
+      {
+        "file": "sea-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Seattle–Tacoma International Airport (SEA) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SFO": [
+      {
+        "file": "sfo-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — San Francisco International Airport (SFO) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SGN": [
+      {
+        "file": "sgn-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Tan Son Nhat International Airport (SGN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SIN": [
+      {
+        "file": "sin-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Singapore Changi Airport (SIN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "STN": [
+      {
+        "file": "stn-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — London Stansted Airport (STN) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SVO": [
+      {
+        "file": "svo-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Sheremetyevo International Airport (SVO) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SYD": [
+      {
+        "file": "syd-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Sydney Kingsford Smith Airport (SYD) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "TAS": [
+      {
+        "file": "tas-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Islam Karimov Tashkent International Airport (TAS) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "VIE": [
+      {
+        "file": "vie-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Vienna International Airport (VIE) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "YVR": [
+      {
+        "file": "yvr-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Vancouver International Airport (YVR) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "YYZ": [
+      {
+        "file": "yyz-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Toronto Pearson International Airport (YYZ) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "ZRH": [
+      {
+        "file": "zrh-sat-1.webp",
+        "width": 1024,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Zurich Airport (ZRH) satellite view",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "MEL": [
+      {
+        "file": "mel-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Melbourne Airport (MEL)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "SZX": [
+      {
+        "file": "szx-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Shenzhen Bao'an International Airport (SZX)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
+      }
+    ],
+    "TPE": [
+      {
+        "file": "tpe-sat-1.webp",
+        "width": 1280,
+        "height": 768,
+        "source": "satellite",
+        "host": "server.arcgisonline.com",
+        "pageUrl": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+        "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/14/{y}/{x}",
+        "title": "Esri World Imagery — Taoyuan International Airport (TPE)",
+        "licenseFilter": "Esri World Imagery — attribution required",
+        "query": ""
       }
     ]
   }

@@ -1,0 +1,15 @@
+{
+  "_readme": [
+    "Photo directories and caption files whose IATA code cannot be a filename on",
+    "Windows. `AUX` is a legacy DOS device name: `public/photos/AUX/` resolves to",
+    "the device rather than a directory, and git cannot index anything under it",
+    "(`open(...): No such file or directory`). The escaped stem below is what",
+    "actually lives on disk; readers map code -> stem through this table:",
+    "  lib/airport-photos.ts                 gallery paths and caption lookup",
+    "  scripts/build-photo-captions.mjs      caption / disk validation",
+    "  scripts/generate-airport-guides.mjs   inline photo block in generated guides",
+    "  scripts/fetch-airport-photos*.mjs     download output directories",
+    "The manifest key and the `captions.tw.json` key stay the real IATA code."
+  ],
+  "AUX": "AUX_"
+}

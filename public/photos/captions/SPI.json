@@ -1,4 +1,21 @@
 {
-  "_note": "The three Baidu downloads were hotel booking pages. The official site (flyspi.com) only yielded its logo and two marketing banners ('Start Here. Go Anywhere.' with an American tail) — no photograph of the airport.",
-  "_skip": ["spi-baidu-1.webp", "spi-baidu-2.webp", "spi-baidu-3.webp", "spi-page-1.webp", "spi-page-2.webp", "spi-page-3.webp"]
+  "_note": "2026-10-17: the entrance monument (spi-page-6) and a C-47 on the apron (spi-page-7) are published; earlier hotel and logo images remain skipped.",
+  "_skip": [
+    "spi-baidu-1.webp",
+    "spi-baidu-2.webp",
+    "spi-baidu-3.webp",
+    "spi-page-1.webp",
+    "spi-page-2.webp",
+    "spi-page-3.webp",
+    "spi-page-4.webp",
+    "spi-page-5.webp"
+  ],
+  "spi-page-6.webp": {
+    "zh": "机场入口的亚伯拉罕·林肯首府机场标志墙：石碑上刻着机场全名与「AT SPRINGFIELD」字样。",
+    "en": "The entrance monument at Abraham Lincoln Capital Airport — the full name and \"AT SPRINGFIELD\" carved into the stone."
+  },
+  "spi-page-7.webp": {
+    "zh": "一架 C-47 运输机停在斯普林菲尔德的机坪上，螺旋桨与军用涂装清晰可见。",
+    "en": "A C-47 transport on the Springfield apron, its propellers and military markings clearly visible."
+  }
 }

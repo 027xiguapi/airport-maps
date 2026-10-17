@@ -1,4 +1,10 @@
 {
-  "_note": "the download is news footage of storm-wrecked hangars and aircraft — real, but a destruction scene is not what a travel gallery should show.",
-  "_skip": ["byh-baidu-1.webp"]
+  "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "byh-baidu-1.webp"
+  ],
+  "byh-sat-1.webp": {
+    "zh": "卫星视角：一条长跑道斜穿农田，机坪与机库在跑道中段一侧。",
+    "en": "Satellite view: a long runway cuts diagonally across farmland, with the apron and hangars beside its midpoint."
+  }
 }

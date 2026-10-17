@@ -1,4 +1,19 @@
 {
-  "_note": "The three Baidu downloads were simulator screenshots. The official site (flyaustin.com) is JS-driven: its assets are a parking-widget graphic and small site thumbnails, none a photograph of the airport.",
-  "_skip": ["aus-baidu-1.webp", "aus-baidu-2.webp", "aus-baidu-3.webp", "aus-page-1.webp", "aus-page-2.webp", "aus-page-3.webp"]
+  "_note": "2026-10-17: flyaustin.com's own pages yield the entrance fountain and the Barbara Jordan Terminal interior; simulator screenshots remain skipped.",
+  "_skip": [
+    "aus-baidu-1.webp",
+    "aus-baidu-2.webp",
+    "aus-baidu-3.webp",
+    "aus-page-1.webp",
+    "aus-page-2.webp",
+    "aus-page-3.webp"
+  ],
+  "aus-page-4.webp": {
+    "zh": "奥斯汀-伯格斯特罗姆机场的入口标志墙与喷泉：暮色中亮着机场全名与标志。",
+    "en": "The entrance monument and fountain at Austin-Bergstrom — the airport's name and mark lit at dusk."
+  },
+  "aus-page-5.webp": {
+    "zh": "芭芭拉·乔丹航站楼内景：旅客拖着行李经过「C Gates 1–25」指示牌与航班信息屏。",
+    "en": "Inside the Barbara Jordan Terminal — travellers with bags passing the \"C Gates 1–25\" sign and departure screens."
+  }
 }

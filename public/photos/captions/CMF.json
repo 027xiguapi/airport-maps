@@ -1,4 +1,10 @@
 {
-  "_note": "the only download is a wide shot of a shed and perimeter fence outside the airfield — real, but not a usable picture of the airport.",
-  "_skip": ["cmf-baidu-1.webp"]
+  "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "cmf-baidu-1.webp"
+  ],
+  "cmf-sat-1.webp": {
+    "zh": "卫星视角：跑道铺在尚贝里郊外的绿地中，航站楼与机坪在跑道一侧。",
+    "en": "Satellite view: the runway lies in green countryside outside Chambéry, with the terminal and apron alongside it."
+  }
 }

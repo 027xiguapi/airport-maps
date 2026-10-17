@@ -1,4 +1,10 @@
 {
-  "_note": "the only download is a photo of a collection of diecast model airliners on a desk, not the airport.",
-  "_skip": ["and-baidu-1.webp"]
+  "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "and-baidu-1.webp"
+  ],
+  "and-sat-1.webp": {
+    "zh": "卫星视角：两条跑道在绿地上交叉，航站楼与机坪位于交叉点附近。",
+    "en": "Satellite view: two runways cross in green countryside, with the terminal and apron near the intersection."
+  }
 }

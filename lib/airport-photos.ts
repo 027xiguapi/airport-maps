@@ -60,6 +60,35 @@ export type AirportPhoto = {
 const PHOTOS_DIR = join(process.cwd(), 'public', 'photos');
 const CAPTIONS_DIR = join(PHOTOS_DIR, 'captions');
 
+/**
+ * Photo directories whose IATA code cannot be a filename on Windows. `AUX` is
+ * a legacy DOS device name, so its directory and caption file use the escaped
+ * stem; the manifest key stays the real code. The table is shared with the
+ * generator/validation scripts so the on-disk names cannot drift.
+ */
+const PHOTO_STEMS: Record<string, string> = (() => {
+  try {
+    const file = JSON.parse(
+      readFileSync(join(process.cwd(), 'scripts', 'photo-file-aliases.json'), 'utf8')
+    );
+    return Object.fromEntries(
+      Object.entries(file).filter(
+        ([code, stem]) => /^[A-Z]{3}$/.test(code) && typeof stem === 'string'
+      )
+    ) as Record<string, string>;
+  } catch {
+    return {};
+  }
+})();
+
+function photoStem(iata: string): string {
+  return PHOTO_STEMS[iata.toUpperCase()] ?? iata.toUpperCase();
+}
+
+const STEM_TO_CODE: Record<string, string> = Object.fromEntries(
+  Object.entries(PHOTO_STEMS).map(([code, stem]) => [stem, code])
+);
+
 /** manifest.json → the per-airport photo lists, read once per process. */
 let manifest: Record<string, ManifestPhoto[]> | null | undefined;
 
@@ -86,7 +115,7 @@ function diskFiles(iata: string): Set<string> {
   if (cached) return cached;
   let set = new Set<string>();
   try {
-    set = new Set(readdirSync(join(PHOTOS_DIR, iata)));
+    set = new Set(readdirSync(join(PHOTOS_DIR, photoStem(iata))));
   } catch {
     // No directory for this airport — an empty set, so nothing renders.
   }
@@ -111,8 +140,10 @@ function captionIndex(): Map<string, Map<string, Record<string, string>>> {
   skipped = new Map();
   try {
     for (const name of readdirSync(CAPTIONS_DIR)) {
-      if (!/^[A-Z]{3}\.json$/.test(name)) continue;
-      const iata = name.slice(0, 3);
+      const match = name.match(/^([A-Z]{3})_?\.json$/);
+      if (!match) continue;
+      const stem = match[1];
+      const iata = STEM_TO_CODE[stem] ?? stem;
       const rows = JSON.parse(readFileSync(join(CAPTIONS_DIR, name), 'utf8')) as Record<
         string,
         Record<string, string> | string[]
@@ -185,7 +216,7 @@ export function getAirportPhotos(locale: Locale, iata: string): AirportPhoto[] {
         entry.file && onDisk.has(entry.file) && !skip?.has(entry.file) && caption !== null
     )
     .map(({ entry, caption }) => ({
-      src: `/photos/${code}/${entry.file}`,
+      src: `/photos/${photoStem(code)}/${entry.file}`,
       width: entry.width ?? null,
       height: entry.height ?? null,
       caption,

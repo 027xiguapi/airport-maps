@@ -1,4 +1,22 @@
 {
-  "_note": "all three are unusable: a Chinese stock apron shot from another airport (China Southern at a gate), a ceiling-product photograph watermarked HunterDouglas Architectural, and a city aerial with no airport in it.",
-  "_skip": ["amd-baidu-1.webp", "amd-baidu-2.webp", "amd-baidu-3.webp"]
+  "_note": "2026-10-17: the airport's own Adani site now yields three verifiable AMD photographs (lit frontage, drop-off canopies, interior art wall). Earlier stock/hotel/crash images remain skipped.",
+  "_skip": [
+    "amd-baidu-1.webp",
+    "amd-baidu-2.webp",
+    "amd-baidu-3.webp",
+    "amd-page-1.webp",
+    "amd-page-2.webp"
+  ],
+  "amd-page-3.webp": {
+    "zh": "艾哈迈达巴德机场航站楼的夜景：紫色灯光照亮悬挑屋面，斜撑立柱下是车道与落客区，檐口可见古吉拉特语的机场名。",
+    "en": "The terminal at night — purple light washing the cantilevered roof, columns over the kerbside, and the airport name in Gujarati along the fascia."
+  },
+  "amd-page-4.webp": {
+    "zh": "从落客区望向航站楼正面：白色张拉膜雨棚在车道上方展开，玻璃幕墙与斜撑构成连续立面。",
+    "en": "The terminal from the drop-off area — white tensile canopies over the roadway, with a continuous glass-and-steel frontage."
+  },
+  "amd-page-5.webp": {
+    "zh": "航站楼内的艺术墙：线描城市景观前立着两件铜色人物浮雕，右侧信息屏显示机场全名。",
+    "en": "An art wall inside the terminal — two bronze figures in front of a line-drawn cityscape, with a screen showing the airport full name."
+  }
 }

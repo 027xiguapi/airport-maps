@@ -1,4 +1,10 @@
 {
-  "_note": "the only download is a snow-day apron photo taken at Heathrow (Ryanair and Monarch aircraft), not Arctic Village.",
-  "_skip": ["arc-baidu-1.webp"]
+  "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "arc-baidu-1.webp"
+  ],
+  "arc-sat-1.webp": {
+    "zh": "卫星视角：碎石跑道穿过北极村附近的林地与湖泊，村庄在跑道北端。",
+    "en": "Satellite view: a gravel runway cuts through woods and lakes near Arctic Village, with the village at its northern end."
+  }
 }

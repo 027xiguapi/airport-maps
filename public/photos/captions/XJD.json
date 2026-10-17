@@ -1,4 +1,10 @@
 {
-  "_note": "the download is an annotated satellite map of Al Udeid Air Base, not a photograph.",
-  "_skip": ["xjd-baidu-1.webp"]
+  "_note": "2026-10-17: a clean, attributed Esri World Imagery satellite view of the air base replaces the earlier annotated map; it is not a ground photograph.",
+  "_skip": [
+    "xjd-baidu-1.webp"
+  ],
+  "xjd-sat-1.webp": {
+    "zh": "卫星视角：乌代德空军基地的平行跑道与大型机坪，基地建筑群分布在跑道东侧。",
+    "en": "Satellite view: the parallel runways and large apron of Al Udeid Air Base, with the base buildings east of the field."
+  }
 }

@@ -1,4 +1,11 @@
 {
-  "_note": "both are building-product photographs of the consolidated rental-car facility at San Antonio International Airport, Texas — a different airport from Santiago de Cuba's Antonio Maceo.",
-  "_skip": ["scu-baidu-1.webp", "scu-baidu-2.webp"]
+  "_note": "2026-10-17: the San Antonio (Texas) images remain skipped; a labelled Esri World Imagery satellite view of Santiago de Cuba airport is published instead.",
+  "_skip": [
+    "scu-baidu-1.webp",
+    "scu-baidu-2.webp"
+  ],
+  "scu-sat-1.webp": {
+    "zh": "卫星视角：跑道紧邻圣地亚哥-德古巴海岸，航站楼与机坪在跑道一侧，加勒比海在下方。",
+    "en": "Satellite view: the runway lies beside the Santiago de Cuba coast, with the terminal and apron alongside it and the Caribbean below."
+  }
 }

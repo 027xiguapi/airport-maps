@@ -1,4 +1,14 @@
 {
-  "_note": "all three are hotel exteriors (Clarion Inn, Comfort Inn) with airport shuttles parked outside, not the airport.",
-  "_skip": ["avl-baidu-1.webp", "avl-baidu-2.webp", "avl-baidu-3.webp"]
+  "_note": "2026-10-17: the airport entrance sign is published (avl-page-3); hotel exteriors and generic lounge shots remain skipped.",
+  "_skip": [
+    "avl-baidu-1.webp",
+    "avl-baidu-2.webp",
+    "avl-baidu-3.webp",
+    "avl-page-1.webp",
+    "avl-page-2.webp"
+  ],
+  "avl-page-3.webp": {
+    "zh": "阿什维尔地区机场的入口标志：绿色字样旁是 SHUTTLE LOT 电子屏，后方是山峦与树线。",
+    "en": "The entrance sign at Asheville Regional Airport — green lettering beside a SHUTTLE LOT display, with wooded hills behind."
+  }
 }

@@ -1,4 +1,12 @@
 {
-  "_note": "all three carry 'XPLANE11 / Almeria Airport' watermarks — flight-simulator screenshots of an add-on scenery.",
-  "_skip": ["lei-baidu-1.webp", "lei-baidu-2.webp", "lei-baidu-3.webp"]
+  "_note": "2026-10-17: the simulator screenshots remain skipped; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "lei-baidu-1.webp",
+    "lei-baidu-2.webp",
+    "lei-baidu-3.webp"
+  ],
+  "lei-sat-1.webp": {
+    "zh": "卫星视角：跑道沿阿尔梅里亚海岸展开，航站楼与机坪在跑道西端，地中海在下方。",
+    "en": "Satellite view: the runway follows the Almería coast, with the terminal and apron at its western end and the Mediterranean below."
+  }
 }

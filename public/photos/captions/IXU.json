@@ -1,4 +1,20 @@
 {
-  "_note": "ixu-baidu-1 is a 'Veer图库' stock photograph of the terminal (licensing untraceable), and the other two are a hotel exterior and a ballroom.",
-  "_skip": ["ixu-baidu-1.webp", "ixu-baidu-2.webp", "ixu-baidu-3.webp"]
+  "_note": "2026-10-17: the Airports Authority of India page now yields three terminal photos; earlier stock/hotel images stay skipped.",
+  "_skip": [
+    "ixu-baidu-1.webp",
+    "ixu-baidu-2.webp",
+    "ixu-baidu-3.webp"
+  ],
+  "ixu-page-1.webp": {
+    "zh": "奥兰加巴德机场航站楼外景：白色弧顶下是落客车道与出发层入口。",
+    "en": "The terminal forecourt — a white barrel-vaulted roof over the drop-off lane and departures entrance."
+  },
+  "ixu-page-2.webp": {
+    "zh": "从草坪望向航站楼：弧形屋面沿立面展开，塔台在右侧远处。",
+    "en": "The terminal from the lawn — the curved roof running along the frontage, with the control tower far to the right."
+  },
+  "ixu-page-3.webp": {
+    "zh": "出发层入口：雨棚上写着「WELCOME TO CHHATRAPATI SAMBHAJINAGAR AIRPORT」与「प्रस्थान DEPARTURE」。",
+    "en": "The departures entrance — the canopy lettered 'WELCOME TO CHHATRAPATI SAMBHAJINAGAR AIRPORT' and 'प्रस्थान DEPARTURE'."
+  }
 }

@@ -54,6 +54,24 @@ const CAPTIONS = join(PHOTOS, 'captions');
 const TW_FILE = join(PHOTOS, 'captions.tw.json');
 const JSON_INDENT = 2;
 
+/** Code -> escaped stem for directories/files Windows cannot name (`AUX`). */
+const PHOTO_STEMS = (() => {
+  try {
+    const file = JSON.parse(readFileSync(join(ROOT, 'scripts', 'photo-file-aliases.json'), 'utf8'));
+    return Object.fromEntries(
+      Object.entries(file).filter(
+        ([code, stem]) => /^[A-Z]{3}$/.test(code) && typeof stem === 'string'
+      )
+    );
+  } catch {
+    return {};
+  }
+})();
+const STEM_TO_CODE = Object.fromEntries(
+  Object.entries(PHOTO_STEMS).map(([code, stem]) => [stem, code])
+);
+const photoStem = (code) => PHOTO_STEMS[code] ?? code;
+
 const readJson = (path, fallback) => {
   try {
     return JSON.parse(readFileSync(path, 'utf8'));
@@ -72,11 +90,13 @@ const captions = new Map();
 const skips = new Map();
 if (existsSync(CAPTIONS)) {
   for (const name of readdirSync(CAPTIONS).sort()) {
-    if (!/^[A-Z]{3}\.json$/.test(name)) {
-      warnings.push(`captions/${name} ignored (expected <IATA>.json)`);
+    const match = name.match(/^([A-Z]{3})_?\.json$/);
+    if (!match) {
+      warnings.push(`captions/${name} ignored (expected <IATA>.json or an escaped stem)`);
       continue;
     }
-    const code = name.slice(0, 3);
+    const stem = match[1];
+    const code = STEM_TO_CODE[stem] ?? stem;
     const rows = readJson(join(CAPTIONS, name), null);
     if (rows === null) {
       errors.push(`captions/${name} is not valid JSON`);
@@ -109,7 +129,7 @@ for (const code of codes) {
     errors.push(`${code}: manifest entry is not a list`);
     continue;
   }
-  const dir = join(PHOTOS, code);
+  const dir = join(PHOTOS, photoStem(code));
   const onDisk = new Set(existsSync(dir) ? readdirSync(dir) : []);
   const authored = captions.get(code) ?? new Map();
   const skip = skips.get(code) ?? new Set();
@@ -174,7 +194,7 @@ for (const code of codes) {
 // Codes that have captions but no manifest photos at all.
 for (const code of captions.keys()) {
   if (!manifest[code] && !(ONLY && !ONLY.has(code))) {
-    errors.push(`captions/${code}.json: no photos for this code in the manifest`);
+    errors.push(`captions/${photoStem(code)}.json: no photos for this code in the manifest`);
   }
 }
 

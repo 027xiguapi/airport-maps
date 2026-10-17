@@ -1,4 +1,12 @@
 {
-  "_note": "all three are ORBX scenery-add-on posts for X-Plane/P3D — simulator renders of Asturias, not photographs.",
-  "_skip": ["ovd-baidu-1.webp", "ovd-baidu-2.webp", "ovd-baidu-3.webp"]
+  "_note": "2026-10-17: the simulator renders remain skipped; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "ovd-baidu-1.webp",
+    "ovd-baidu-2.webp",
+    "ovd-baidu-3.webp"
+  ],
+  "ovd-sat-1.webp": {
+    "zh": "卫星视角：跑道位于海岸与山丘之间的台地上，航站楼与机坪在跑道中段。",
+    "en": "Satellite view: the runway sits on a plateau between the coast and the hills, with the terminal and apron at its midpoint."
+  }
 }

@@ -1,4 +1,12 @@
 {
-  "_note": "the downloads are New Orleans (MSY 'Armstrong') flight-sim streams and a glass-door product video — none is Armstrong, Ontario.",
-  "_skip": ["yyw-baidu-1.webp", "yyw-baidu-2.webp", "yyw-baidu-3.webp"]
+  "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "_skip": [
+    "yyw-baidu-1.webp",
+    "yyw-baidu-2.webp",
+    "yyw-baidu-3.webp"
+  ],
+  "yyw-sat-1.webp": {
+    "zh": "卫星视角：一条跑道穿过安大略北部的森林，机坪与小型航站楼在跑道中段。",
+    "en": "Satellite view: a runway cuts through forest in northern Ontario, with the apron and small terminal at its midpoint."
+  }
 }
