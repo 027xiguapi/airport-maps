@@ -8,6 +8,7 @@ import {
   SITE_NAME,
   SITE_URL,
   WEBSITE_NODE_ID,
+  webPageRights,
 } from '@/lib/site';
 
 /**
@@ -64,6 +65,7 @@ export function buildBlogPostGraph({
         mainEntity: { '@id': articleId },
         author: { '@id': EDITORIAL_NODE_ID },
         publisher: { '@id': ORG_NODE_ID },
+        ...webPageRights(locale),
         datePublished: post.date,
         dateModified: post.updated ?? post.date,
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },

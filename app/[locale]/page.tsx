@@ -32,7 +32,7 @@ import {
 } from '@/lib/queries';
 import { coverUrl, mapImageCodes } from '@/lib/map-images';
 import { routeDestinationCounts } from '@/lib/routes';
-import { absoluteUrl, ORG_NODE_ID, SITE_IMAGE, SITE_NAME, SITE_URL, WEBSITE_NODE_ID } from '@/lib/site';
+import { absoluteUrl, ORG_NODE_ID, SITE_IMAGE, SITE_NAME, SITE_URL, WEBSITE_NODE_ID, webPageRights } from '@/lib/site';
 import { getAirportGeo } from '@/lib/airport-geo';
 import worldAirportsMeta from '@/lib/world-airports-meta.json';
 
@@ -195,6 +195,7 @@ export default async function HomePage({ params }: Props) {
     description: t.site.description,
     inLanguage: LOCALE_META[locale].htmlLang,
     publisher: { '@id': ORG_NODE_ID },
+    ...webPageRights(locale),
     // The hero's own backdrop is the site picture, so the graph names it here too.
     image: SITE_IMAGE,
     potentialAction: {

@@ -14,6 +14,7 @@ import {
   SITE_NAME,
   SITE_URL,
   WEBSITE_NODE_ID,
+  webPageRights,
 } from '@/lib/site';
 import { airportSchemaImage } from '@/lib/schema-images';
 import type { AirportDetail } from '@/lib/types';
@@ -145,6 +146,7 @@ export function buildAirportGraph(input: {
         mainEntity: { '@id': airportNodeId },
         author: { '@id': EDITORIAL_NODE_ID },
         publisher: { '@id': ORG_NODE_ID },
+        ...webPageRights(locale),
         image: pageImages,
         primaryImageOfPage: { '@type': 'ImageObject', url: pageImage },
         datePublished: published,

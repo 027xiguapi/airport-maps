@@ -8,6 +8,7 @@ import {
   SITE_NAME,
   SITE_URL,
   WEBSITE_NODE_ID,
+  webPageRights,
 } from '@/lib/site';
 import { coverImageUrl } from '@/lib/map-images';
 import type { MarkdownDoc } from '@/lib/content';
@@ -81,6 +82,7 @@ export function buildCountryGraph(input: {
         mainEntity: { '@id': countryNodeId },
         author: { '@id': EDITORIAL_NODE_ID },
         publisher: { '@id': ORG_NODE_ID },
+        ...webPageRights(locale),
         // No photo of a country exists, so the page wrapper carries the site photo.
         image: SITE_IMAGE.url,
         primaryImageOfPage: SITE_IMAGE,

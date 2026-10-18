@@ -1,5 +1,7 @@
 /** Site-wide constants that do not vary by locale. */
 
+import { localizedPath, type Locale } from '@/lib/i18n/config';
+
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000').replace(
   /\/$/,
   ''
@@ -41,3 +43,21 @@ export const SITE_IMAGE = {
   width: 1718,
   height: 624,
 } as const;
+
+/**
+ * The attribution and licensing fields every page's WebPage node carries, so a
+ * page's rights are machine-readable (schema.org CreativeWork properties). The
+ * terms page is the licence the site offers its content under; the contact page
+ * is where permission beyond those terms can be requested. `license` points at
+ * the terms page rather than a Creative Commons deed because that is what the
+ * terms actually grant (personal use and attributed quoting, no wholesale
+ * reproduction).
+ */
+export function webPageRights(locale: Locale) {
+  return {
+    creator: { '@id': ORG_NODE_ID },
+    license: absoluteUrl(localizedPath(locale, '/terms')),
+    acquireLicensePage: absoluteUrl(localizedPath(locale, '/contact')),
+    copyrightNotice: `© ${new Date().getFullYear()} ${SITE_NAME}`,
+  };
+}

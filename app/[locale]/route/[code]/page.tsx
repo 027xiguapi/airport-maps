@@ -20,7 +20,7 @@ import { mapImageUrl } from '@/lib/map-images';
 import { getAirportByCode, getAirportRoutes } from '@/lib/queries';
 import { getAirportRouteMap, routeAirportCodes, routeStats } from '@/lib/routes';
 import { routeSchemaImage } from '@/lib/schema-images';
-import { absoluteUrl, SITE_NAME, WEBSITE_NODE_ID } from '@/lib/site';
+import { absoluteUrl, SITE_NAME, WEBSITE_NODE_ID, webPageRights } from '@/lib/site';
 import { buildRouteFaq } from './faq';
 
 export const revalidate = 3600;
@@ -160,6 +160,7 @@ export default async function AirportRoutePage({ params }: Props) {
               description: t.route.metaDescription(airport.name, airport.iata, count),
               inLanguage: LOCALE_META[locale].htmlLang,
               isPartOf: { '@id': WEBSITE_NODE_ID },
+              ...webPageRights(locale),
               image: pageImage,
               primaryImageOfPage: { '@type': 'ImageObject', url: pageImage },
               about: {
