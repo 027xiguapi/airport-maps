@@ -14,9 +14,11 @@ import {
   SITE_NAME,
   SITE_URL,
   WEBSITE_NODE_ID,
+  imageRights,
   webPageRights,
 } from '@/lib/site';
 import { airportSchemaImage } from '@/lib/schema-images';
+import { mapImageUrl } from '@/lib/map-images';
 import type { AirportDetail } from '@/lib/types';
 import type { FaqItem } from '@/components/Faq';
 
@@ -94,11 +96,25 @@ export function buildAirportGraph(input: {
   // This airport's own picture — its cover when the repo has one, else the site
   // photo — reused by the page wrapper and the Airport node so the two agree.
   const pageImage = airportSchemaImage(airport.iata);
+  // The terminal-map image the page actually shows, when the repo hosts one for
+  // this code. That render is the site's own work (scripts/generate-airport-maps.mjs),
+  // so it is the image the page marks with license metadata — the gallery photos
+  // below are third-party and keep only their source credits.
+  const mapImg = mapImageUrl(airport.iata);
+  const primaryImage = {
+    '@type': 'ImageObject',
+    '@id': `${pageUrl}#primary-image`,
+    contentUrl: mapImg ? absoluteUrl(mapImg) : pageImage,
+    ...imageRights(locale),
+  };
   // Gallery photos as ImageObjects: the page really shows these, so the graph
-  // names them too, each carrying the credit the figure prints below it.
+  // names them too, each carrying the credit the figure prints below it. They
+  // are third-party pictures, so they carry no license fields — the rights stay
+  // with the original photographers, exactly as the photo note on the page says.
   const photoImages = (photos ?? []).map((photo) => ({
     '@type': 'ImageObject',
     url: absoluteUrl(photo.src),
+    contentUrl: absoluteUrl(photo.src),
     ...(photo.width && photo.height ? { width: photo.width, height: photo.height } : {}),
     ...(photo.caption ? { caption: photo.caption } : {}),
     ...(photo.credit.host ? { creditText: photo.credit.host } : {}),
@@ -148,7 +164,7 @@ export function buildAirportGraph(input: {
         publisher: { '@id': ORG_NODE_ID },
         ...webPageRights(locale),
         image: pageImages,
-        primaryImageOfPage: { '@type': 'ImageObject', url: pageImage },
+        primaryImageOfPage: primaryImage,
         datePublished: published,
         dateModified: modified,
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },

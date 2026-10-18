@@ -20,7 +20,7 @@ import { mapImageUrl } from '@/lib/map-images';
 import { getAirportByCode, getAirportRoutes } from '@/lib/queries';
 import { getAirportRouteMap, routeAirportCodes, routeStats } from '@/lib/routes';
 import { routeSchemaImage } from '@/lib/schema-images';
-import { absoluteUrl, SITE_NAME, WEBSITE_NODE_ID, webPageRights } from '@/lib/site';
+import { absoluteUrl, SITE_NAME, WEBSITE_NODE_ID, imageRights, webPageRights } from '@/lib/site';
 import { buildRouteFaq } from './faq';
 
 export const revalidate = 3600;
@@ -116,7 +116,15 @@ export default async function AirportRoutePage({ params }: Props) {
   const pageUrl = absoluteUrl(localizedPath(locale, `/route/${airport.iata}`));
   const airportUrl = absoluteUrl(localizedPath(locale, `/airport/${airport.iata}`));
   // The render this page draws — else the airport's cover, else the site photo.
+  // Each of those is the site's own render, so the image carries the site's
+  // license metadata.
   const pageImage = routeSchemaImage(airport.iata);
+  const primaryImage = {
+    '@type': 'ImageObject',
+    '@id': `${pageUrl}#primary-image`,
+    contentUrl: pageImage,
+    ...imageRights(locale),
+  };
 
   /** Sections that render, in order — drives the contents rail. */
   const tocItems: TocItem[] = [
@@ -162,7 +170,7 @@ export default async function AirportRoutePage({ params }: Props) {
               isPartOf: { '@id': WEBSITE_NODE_ID },
               ...webPageRights(locale),
               image: pageImage,
-              primaryImageOfPage: { '@type': 'ImageObject', url: pageImage },
+              primaryImageOfPage: primaryImage,
               about: {
                 '@type': 'Airport',
                 name: airport.name,

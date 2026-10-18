@@ -45,19 +45,39 @@ export const SITE_IMAGE = {
 } as const;
 
 /**
- * The attribution and licensing fields every page's WebPage node carries, so a
- * page's rights are machine-readable (schema.org CreativeWork properties). The
- * terms page is the licence the site offers its content under; the contact page
- * is where permission beyond those terms can be requested. `license` points at
- * the terms page rather than a Creative Commons deed because that is what the
- * terms actually grant (personal use and attributed quoting, no wholesale
- * reproduction).
+ * The three rights fields shared by page-level (WebPage) and image-level
+ * (ImageObject) structured data. The terms page is the licence the site offers
+ * its content under; the contact page is where permission beyond those terms
+ * can be requested. `license` points at the terms page rather than a Creative
+ * Commons deed because that is what the terms actually grant (personal use and
+ * attributed quoting, no wholesale reproduction).
  */
-export function webPageRights(locale: Locale) {
+function rightsFields(locale: Locale) {
   return {
-    creator: { '@id': ORG_NODE_ID },
     license: absoluteUrl(localizedPath(locale, '/terms')),
     acquireLicensePage: absoluteUrl(localizedPath(locale, '/contact')),
     copyrightNotice: `© ${new Date().getFullYear()} ${SITE_NAME}`,
+  };
+}
+
+/**
+ * Page-level attribution for a page's WebPage node: the site's Organization is
+ * the creator of the page, referenced so the graph stays self-contained.
+ */
+export function webPageRights(locale: Locale) {
+  return { creator: { '@id': ORG_NODE_ID }, ...rightsFields(locale) };
+}
+
+/**
+ * Image-level attribution for images the site itself renders (terminal maps,
+ * route network renders). Unlike webPageRights the creator is inlined with
+ * @type and name, so consumers that do not resolve @id references still see
+ * who made the image.
+ */
+export function imageRights(locale: Locale) {
+  return {
+    creator: { '@type': 'Organization', '@id': ORG_NODE_ID, name: SITE_NAME },
+    creditText: SITE_NAME,
+    ...rightsFields(locale),
   };
 }
