@@ -134,7 +134,9 @@ function blogArticles() {
 function twBlogArticle(text) {
   return toHant(text)
     .replace(/\]\(\/zh\//g, '](/tw/')
-    .replace(/^- \*\*百度百科\*\*：.*\n?/gm, '');
+    // `[^\r\n]*` rather than `.*`: a CRLF source would otherwise leave the
+    // `\r` behind and emit a stray blank line where the bullet used to be.
+    .replace(/^- \*\*百度百科\*\*：[^\r\n]*\r?\n?/gm, '');
 }
 
 /** The tw document a zh document derives to. */
