@@ -6,10 +6,8 @@ date: 2026-10-21
 updated: 2026-10-21
 source: 安利帶你看世界
 tags: 慕尼黑機場, 德國入境, EES系統, 海關申報, MUC
-cover: images/0.webp
+cover: images/1.webp
 ---
-
-![慕尼黑機場入境通關指南](./images/0.webp)
 
 為方便各位順利辦理德國入境手續，特整理德國入境須知及機場通關指南。建議提前仔細閱讀出行提醒、熟悉入境流程，安心開啟慕尼黑之行。
 
@@ -25,7 +23,7 @@ cover: images/0.webp
 
 ## EES 出入境資訊系統
 
-![EES 系統自助登記步驟](./images/1.webp)
+![EES 系統自助登記步驟](./images/0.webp)
 
 歐盟已正式啟動**「出入境資訊系統」（Entry/Exit System，EES）**：所有持非歐盟護照、以旅遊、商務等目的短期訪問申根區的旅客，再次入境時（三年內）系統可比對既有資料，縮短查驗時間。
 
@@ -51,47 +49,45 @@ cover: images/0.webp
 
 ## 接機牌標識
 
-美花手舉牌為現場接機牌標識。
-
-![接機牌標識](./images/2.webp)
+現場接機牌為「美花」手舉牌，出關後留意舉牌的工作人員即可。
 
 ## T1 航廈抵達入境流程
 
 1. 飛機落地後沿通道前往航廈。
 
-![落地後沿通道前往航廈](./images/3.webp)
+![落地後沿通道前往航廈](./images/1.webp)
 
 2. 按指引前行。
 
-![按指引前行](./images/4.webp)
+![按指引前行](./images/2.webp)
 
 3. 根據指示牌「Gates A-D」繼續向前。
 
-![指示牌 Gates A-D（一）](./images/5.webp)
+![指示牌 Gates A-D（一）](./images/3.webp)
 
-![指示牌 Gates A-D（二）](./images/6.webp)
+![指示牌 Gates A-D（二）](./images/4.webp)
 
-![指示牌 Gates A-D（三）](./images/7.webp)
+![指示牌 Gates A-D（三）](./images/5.webp)
 
 4. 沿電梯下樓，進行 EES 自助登記，過海關。
 
-![沿電梯下樓](./images/8.webp)
+![沿電梯下樓](./images/6.webp)
 
-![EES 自助登記區域](./images/9.webp)
+![EES 自助登記區域](./images/7.webp)
 
-![過海關](./images/10.webp)
+![過海關](./images/8.webp)
 
 5. 在行李轉盤處等待領取行李。
 
-![行李轉盤（一）](./images/11.webp)
+![行李轉盤（一）](./images/9.webp)
 
-![行李轉盤（二）](./images/12.webp)
+![行李轉盤（二）](./images/10.webp)
 
 6. 取到行李後，按「Goods to declare／Nothing to declare」的指示，走有／無申報通道入境。
 
 **T1 集合點**：B 出口大屏（自行安排航班的集合點）。
 
-![T1 集合點：B 出口大屏](./images/13.webp)
+![T1 集合點：B 出口大屏](./images/11.webp)
 
 ## T2 航廈抵達入境流程
 
@@ -99,27 +95,27 @@ cover: images/0.webp
 
 下圖左邊藍色標識為歐盟、瑞士等地區公民或長期簽證持有者通道，右邊橘色標識為非歐盟護照通道。
 
-![藍色與橘色入境通道標識](./images/14.webp)
+![藍色與橘色入境通道標識](./images/12.webp)
 
 1. 下飛機後先在右側進行 EES 自助登記。
 
-![EES 自助登記](./images/15.webp)
+![EES 自助登記](./images/13.webp)
 
 2. 隨後在人工櫃檯排隊進行最終身份確認，此時請拿好您的檔案資料包備查。
 
-![人工櫃檯最終確認](./images/16.webp)
+![人工櫃檯最終確認](./images/14.webp)
 
 3. 查驗通過後來到小火車乘車點，從 Gates JKL 乘坐至 Gates GH。
 
-![小火車乘車點](./images/17.webp)
+![小火車乘車點](./images/15.webp)
 
 4. 乘坐完小火車後，跟隨行李提取標識上樓。
 
-![跟隨行李提取標識上樓](./images/18.webp)
+![跟隨行李提取標識上樓](./images/16.webp)
 
 5. 在行李提取處領取您的託運行李。
 
-![行李提取處](./images/19.webp)
+![行李提取處](./images/17.webp)
 
 **T2 集合點**：出口右手星巴克（自行安排航班的集合點）。
 

@@ -6,10 +6,8 @@ date: 2026-10-21
 updated: 2026-10-21
 source: 安利带你看世界 (Amway China)
 tags: Munich Airport, German entry, EES system, customs declaration, MUC
-cover: images/0.webp
+cover: images/1.webp
 ---
-
-![The Munich Airport arrival guide](./images/0.webp)
 
 To help everyone get through German entry smoothly, here is what you need to know about arriving in Germany and clearing Munich Airport. Read the reminders ahead of time and know the flow, so the trip starts calmly.
 
@@ -25,7 +23,7 @@ Keep everything you need on landing in your cabin bag, not your checked luggage:
 
 ## The EES entry/exit system
 
-![The EES self-service steps](./images/1.webp)
+![The EES self-service steps](./images/0.webp)
 
 The EU has now brought in the **Entry/Exit System (EES)**: travellers on non-EU passports visiting the Schengen area for short stays — tourism, business and so on — have their data matched against existing records when they re-enter (within three years), which shortens the check.
 
@@ -51,47 +49,45 @@ The border officer may ask a few questions to confirm your identity and the purp
 
 ## The pick-up sign
 
-The "美花" sign marks the meeting point in the arrivals hall.
-
-![The pick-up sign](./images/2.webp)
+Staff meet arriving groups with a hand-held "美花" sign — once you are through, look for the person holding it.
 
 ## Terminal 1 arrival flow
 
 1. After landing, follow the corridor to the terminal.
 
-![Following the corridor after landing](./images/3.webp)
+![Following the corridor after landing](./images/1.webp)
 
 2. Follow the signs.
 
-![Following the signs](./images/4.webp)
+![Following the signs](./images/2.webp)
 
 3. Keep going past the "Gates A-D" signs.
 
-![The Gates A-D sign (1)](./images/5.webp)
+![The Gates A-D sign (1)](./images/3.webp)
 
-![The Gates A-D sign (2)](./images/6.webp)
+![The Gates A-D sign (2)](./images/4.webp)
 
-![The Gates A-D sign (3)](./images/7.webp)
+![The Gates A-D sign (3)](./images/5.webp)
 
 4. Take the escalator down, do the EES self-service registration and clear customs.
 
-![Taking the escalator down](./images/8.webp)
+![Taking the escalator down](./images/6.webp)
 
-![The EES self-service area](./images/9.webp)
+![The EES self-service area](./images/7.webp)
 
-![Clearing customs](./images/10.webp)
+![Clearing customs](./images/8.webp)
 
 5. Wait for your baggage at the carousel.
 
-![The baggage carousel (1)](./images/11.webp)
+![The baggage carousel (1)](./images/9.webp)
 
-![The baggage carousel (2)](./images/12.webp)
+![The baggage carousel (2)](./images/10.webp)
 
 6. With your bags in hand, follow the "Goods to declare / Nothing to declare" signs and leave through the appropriate channel.
 
 **T1 meeting point:** the large screen at exit B (for those who arranged their own flights).
 
-![The T1 meeting point at exit B](./images/13.webp)
+![The T1 meeting point at exit B](./images/11.webp)
 
 ## Terminal 2 arrival flow
 
@@ -99,27 +95,27 @@ The "美花" sign marks the meeting point in the arrivals hall.
 
 The blue sign on the left marks the channel for EU and Swiss citizens and long-term visa holders; the orange sign on the right is the channel for non-EU passports.
 
-![The blue and orange arrival channel signs](./images/14.webp)
+![The blue and orange arrival channel signs](./images/12.webp)
 
 1. After leaving the aircraft, do the EES self-service registration on the right first.
 
-![EES self-service registration](./images/15.webp)
+![EES self-service registration](./images/13.webp)
 
 2. Then queue at the manned counter for the final identity check — have your document folder ready.
 
-![The manned counter](./images/16.webp)
+![The manned counter](./images/14.webp)
 
 3. Once through, head to the shuttle train and ride from Gates JKL to Gates GH.
 
-![The shuttle train stop](./images/17.webp)
+![The shuttle train stop](./images/15.webp)
 
 4. After the train, follow the baggage claim signs upstairs.
 
-![Following the baggage claim signs upstairs](./images/18.webp)
+![Following the baggage claim signs upstairs](./images/16.webp)
 
 5. Collect your checked baggage at the claim.
 
-![Baggage claim](./images/19.webp)
+![Baggage claim](./images/17.webp)
 
 **T2 meeting point:** the Starbucks on the right of the exit (for those who arranged their own flights).
 

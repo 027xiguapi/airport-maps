@@ -9,8 +9,6 @@ tags: Munich Airport, shuttle bus, MUC, airport transport, S-Bahn
 cover: images/0.webp
 ---
 
-![The Munich seminar's arrival shuttle arrangements](./images/0.webp)
-
 With the Munich seminar drawing near, colleagues who booked their own international flights should note: the company runs an airport shuttle bus on the arrival day. If you want a seat, read the meeting points and schedule below carefully and don't miss it.
 
 ## A word of warning
@@ -32,7 +30,7 @@ If you have not submitted your international flight details online before the co
 
 - Meeting times at T1 (Munich local time): **14:10 / 15:10 / 16:10 / 17:10 / 18:10**
 
-![The T1 exit B meeting point](./images/1.webp)
+![The T1 exit B meeting point](./images/0.webp)
 
 ### The Terminal 2 meeting point
 
@@ -40,15 +38,11 @@ If you have not submitted your international flight details online before the co
 
 - Shuttle departure times (Munich local time): **14:30 / 15:30 / 16:30 / 17:30 / 18:30**
 
-![The T2 international arrivals exit](./images/2.webp)
-
-### The pick-up sign
-
-![The pick-up sign](./images/3.webp)
+![The T2 international arrivals exit](./images/1.webp)
 
 ### Where to find the schedule
 
-![How to look up the arrival-day shuttle schedule](./images/4.webp)
+![How to look up the arrival-day shuttle schedule](./images/2.webp)
 
 ## Things to know about the shuttle
 
@@ -67,15 +61,15 @@ From the airport to the city-centre hotels is 35–40 km and 35–50 minutes; a 
 
 **T1:** the door with the taxi sign is right at the exit; the taxi rank is just outside.
 
-![The taxi sign at T1](./images/5.webp)
+![The taxi sign at T1](./images/3.webp)
 
-![The taxi rank at T1](./images/6.webp)
+![The taxi rank at T1](./images/4.webp)
 
 **T2:** from the exit, turn right following the signs; the taxi rank is just outside the door.
 
-![The T2 taxi rank (1)](./images/7.webp)
+![The T2 taxi rank (1)](./images/5.webp)
 
-![The T2 taxi rank (2)](./images/8.webp)
+![The T2 taxi rank (2)](./images/6.webp)
 
 > Before you get in, confirm the hotel and the payment method with the driver.
 
@@ -87,25 +81,25 @@ From the airport to the city-centre hotels is 35–40 km and 35–50 minutes; a 
 
 **T2:** turn left at the exit, where the Uber sign is; walk out the door and the Uber pick-up point is ahead.
 
-![The T2 Uber sign (1)](./images/9.webp)
+![The T2 Uber sign (1)](./images/7.webp)
 
-![The T2 Uber sign (2)](./images/10.webp)
+![The T2 Uber sign (2)](./images/8.webp)
 
-![The T2 Uber pick-up point](./images/11.webp)
+![The T2 Uber pick-up point](./images/9.webp)
 
 **How to use Uber:**
 
 1. **Open the app.** Make sure Uber has location permission and a credit card or another valid payment method linked, then open the app and tap the input box on the home screen.
 
-![Opening the Uber app](./images/12.webp)
+![Opening the Uber app](./images/10.webp)
 
 2. **Confirm the order.** Enter your destination, pick the vehicle type and confirm the pick-up point.
 
-![Entering the destination](./images/13.webp)
+![Entering the destination](./images/11.webp)
 
-![Choosing the vehicle type](./images/14.webp)
+![Choosing the vehicle type](./images/12.webp)
 
-![Confirming the pick-up point](./images/15.webp)
+![Confirming the pick-up point](./images/13.webp)
 
 3. **Go to the pick-up point** shown on your order and get in there.
 
@@ -133,13 +127,13 @@ From the airport to the city-centre hotels is 35–40 km and 35–50 minutes; a 
 
 **T1:** take the escalator down and follow the green S signs all the way to the S-Bahn station.
 
-![Following the green S signs (1)](./images/16.webp)
+![Following the green S signs (1)](./images/14.webp)
 
-![Following the green S signs (2)](./images/17.webp)
+![Following the green S signs (2)](./images/15.webp)
 
 **T2:** follow the green S signs across the square and take the escalator down to the station.
 
-![From T2 to the S-Bahn station](./images/18.webp)
+![From T2 to the S-Bahn station](./images/16.webp)
 
 ### Lufthansa Express Bus
 
@@ -152,13 +146,13 @@ Tickets are sold on the bus and international credit cards are accepted.
 
 **T1:** the taxi rank is right outside the door; cross the road to the second lane and the coach stop is there.
 
-![The T1 coach stop (1)](./images/19.webp)
+![The T1 coach stop (1)](./images/17.webp)
 
-![The T1 coach stop (2)](./images/20.webp)
+![The T1 coach stop (2)](./images/18.webp)
 
 **T2:** turn right at the exit towards the taxi rank and keep walking to reach the coach stop.
 
-![The T2 coach stop](./images/21.webp)
+![The T2 coach stop](./images/19.webp)
 
 > A note if you take this option to your hotel: the stop is a walk away from the Court Hotel, the Rosewood and the Charles Hotel, so you may need to walk on or take a cab. Also, under Munich rules a cyclist on the bike lane is not liable if they hit a pedestrian, so keep clear of bike lanes when getting on and off.
 
@@ -168,15 +162,15 @@ If you need a connection at the airport, the free network works like this:
 
 1. Select the network "Free Wifi – Munich Airport" and tap connect.
 
-![Selecting the airport's free Wi-Fi](./images/22.webp)
+![Selecting the airport's free Wi-Fi](./images/20.webp)
 
 2. Enter your email address, tick the consent box and tap "Continue".
 
-![Entering your email and agreeing to the terms](./images/23.webp)
+![Entering your email and agreeing to the terms](./images/21.webp)
 
 3. Tap "Go online" and you are connected.
 
-![Connected](./images/24.webp)
+![Connected](./images/22.webp)
 
 ## Related links
 
