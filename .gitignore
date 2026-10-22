@@ -57,7 +57,4 @@ next-env.d.ts
 
 seo
 
-
-
-# airports-worldwide.com index pages cached by scripts/fetch-airport-history.mjs
-scripts/airport-history.index-cache.json
+.backup

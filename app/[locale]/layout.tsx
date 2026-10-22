@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import '../globals.css';
 import BackToTop from '@/components/BackToTop';
+import AdsterraPopunder from '@/components/ads/AdsterraPopunder';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { getMessages, LOCALE_META, parseLocale, PUBLISHED_LOCALES } from '@/lib/i18n';
@@ -112,6 +113,7 @@ export default async function LocaleLayout({
         <main id="view">{children}</main>
         <Footer locale={locale} />
         <BackToTop label={t.common.backToTop} />
+        <AdsterraPopunder />
       </body>
     </html>
   );
