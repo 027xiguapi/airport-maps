@@ -182,9 +182,3 @@ cover: images/0.webp
 - **本站页面**：[东京羽田机场（HND）](/zh/airport/HND)、[日本（JP）](/zh/country/JP)
 - **维基百科**：[东京羽田机场](https://zh.wikipedia.org/wiki/%E7%BE%BD%E7%94%B0%E6%9C%BA%E5%9C%BA)
 - **百度百科**：[东京羽田机场](https://baike.baidu.com/item/%E7%BE%BD%E7%94%B0%E6%9C%BA%E5%9C%BA)
-
-## 相关链接
-
-- **本站页面**：[东京羽田机场（HND）](/zh/airport/HND)、[日本（JP）](/zh/country/JP)
-- **维基百科**：[东京羽田机场](https://zh.wikipedia.org/wiki/%E7%BE%BD%E7%94%B0%E6%9C%BA%E5%9C%BA)
-- **百度百科**：[东京羽田机场](https://baike.baidu.com/item/%E7%BE%BD%E7%94%B0%E6%9C%BA%E5%9C%BA)

@@ -1,8 +1,9 @@
 ---
 slug: vienna-airport-guide
 title: 'Vienna International Airport: A Complete Guide to Terminals, City Transport and Departures'
-summary: 'A practical guide to Vienna International Airport (VIE): how terminals 1, 1A and 3 and the B, C, D, F and G gate areas divide up, the City Airport Train, airport buses and long-distance coaches, the S7 S-Bahn and Railjet trains into the city, taxi and car-rental contacts, the check-in, bag drop, security and passport steps when you leave, plus enquiries, left luggage, the medical centre, customs allowances, currency exchange and ATMs.'
+summary: 'A practical guide to Vienna International Airport (VIE): terminals 1, 1A and 3 and their gate areas, the City Airport Train, buses, the S7 S-Bahn and Railjet into the city, the check-in, bag drop, security and passport steps, plus left luggage, customs allowances, currency exchange and ATMs.'
 date: 2026-10-08
+updated: 2026-10-22
 source: 维也纳机场 (Vienna Airport)
 tags: Vienna Airport, VIE, Austria travel, airport transport, departure
 cover: images/0.webp

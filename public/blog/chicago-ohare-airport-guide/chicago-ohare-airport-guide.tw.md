@@ -160,10 +160,3 @@ Pace 巴士在芝加哥郊區執行，其 Pulse Dempster 專線更可快速**將
 
 - **本站頁面**：[芝加哥 ORD](/tw/airport/ORD)、[美國（US）](/tw/country/US)
 - **維基百科**：[芝加哥 ORD](https://zh.wikipedia.org/wiki/%E5%A5%A5%E9%BB%91%E5%B0%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
-
-
-## 相關連結
-
-- **本站頁面**：[芝加哥 ORD](/tw/airport/ORD)、[美國（US）](/tw/country/US)
-- **維基百科**：[芝加哥 ORD](https://zh.wikipedia.org/wiki/%E5%A5%A5%E9%BB%91%E5%B0%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
-

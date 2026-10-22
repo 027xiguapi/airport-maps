@@ -209,11 +209,4 @@ PS：上述資訊供參考，請以實際情況為準。
 - **本站頁面**：[上海浦東國際機場（PVG）](/tw/airport/PVG)、[中國（CN）](/tw/country/CN)
 - **維基百科**：[上海浦東國際機場](https://zh.wikipedia.org/wiki/%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 
-
-## 相關連結
-
-- **本站頁面**：[上海浦東國際機場（PVG）](/tw/airport/PVG)、[中國（CN）](/tw/country/CN)
-- **維基百科**：[上海浦東國際機場](https://zh.wikipedia.org/wiki/%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
-
-
 部分來源：上海機場集團、浦東國際機場

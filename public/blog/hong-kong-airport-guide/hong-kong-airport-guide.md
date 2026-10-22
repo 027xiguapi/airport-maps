@@ -169,9 +169,3 @@ cover: images/0.webp
 - **本站页面**：[香港国际机场（HKG）](/zh/airport/HKG)
 - **维基百科**：[香港国际机场](https://zh.wikipedia.org/wiki/%E9%A6%99%E6%B8%AF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **百度百科**：[香港国际机场](https://baike.baidu.com/item/%E9%A6%99%E6%B8%AF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
-
-## 相关链接
-
-- **本站页面**：[香港国际机场（HKG）](/zh/airport/HKG)
-- **维基百科**：[香港国际机场](https://zh.wikipedia.org/wiki/%E9%A6%99%E6%B8%AF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
-- **百度百科**：[香港国际机场](https://baike.baidu.com/item/%E9%A6%99%E6%B8%AF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)

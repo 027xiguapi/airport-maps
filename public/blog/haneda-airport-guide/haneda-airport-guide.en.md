@@ -182,9 +182,3 @@ Some images are from the following sites:
 - **On this site**: [Tokyo Haneda Airport (HND)](/airport/HND), [Japan (JP)](/country/JP)
 - **Wikipedia**: [Tokyo Haneda Airport](https://en.wikipedia.org/wiki/Tokyo_Haneda_Airport)
 - **Baidu Baike**: [Tokyo Haneda Airport](https://baike.baidu.com/item/%E7%BE%BD%E7%94%B0%E6%9C%BA%E5%9C%BA)
-
-## Related links
-
-- **On this site**: [Tokyo Haneda Airport (HND)](/airport/HND), [Japan (JP)](/country/JP)
-- **Wikipedia**: [Tokyo Haneda Airport](https://en.wikipedia.org/wiki/Tokyo_Haneda_Airport)
-- **Baidu Baike**: [Tokyo Haneda Airport](https://baike.baidu.com/item/%E7%BE%BD%E7%94%B0%E6%9C%BA%E5%9C%BA)
