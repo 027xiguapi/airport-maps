@@ -35,6 +35,9 @@ export const tw: Messages = {
     label: '主導航',
     languageLabel: '語言',
     switchLanguage: '切換語言',
+    /** Slice heading for the registered-but-untranslated languages. */
+    languagePlanned: '籌備中',
+    languagePlannedHint: '該語言版本尚未釋出，正在準備中。',
     themeToggle: '切換深色模式',
     menu: '選單',
   },

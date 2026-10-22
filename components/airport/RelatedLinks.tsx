@@ -6,6 +6,7 @@ import {
 } from '@/lib/encyclopedia-links';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { showsBaike, wikipediaLocale } from '@/lib/i18n/display';
 import { Button } from '@/components/ui/button';
 
 /**
@@ -20,20 +21,26 @@ import { Button } from '@/components/ui/button';
 export default function RelatedLinks({
   locale,
   iata,
+  name,
   nameEn,
   nameZh,
   website,
 }: {
   locale: Locale;
   iata: string;
+  /** Localized airport name — the German Wikipedia article title. */
+  name: string;
   nameEn: string;
   nameZh: string;
   website: string | null;
 }) {
   const t = getMessages(locale);
   const titleZh = airportEncyclopediaTitle(iata, nameZh);
-  const wikiTitle = locale === 'en' ? nameEn : titleZh;
-  const wikiHref = wikiUrl(locale === 'en' ? 'en' : 'zh', wikiTitle);
+  const wikiLang = wikipediaLocale(locale);
+  // The German edition files the article under the German airport name
+  // ("Flughafen München"), the English one under the international name.
+  const wikiTitle = locale === 'en' ? nameEn : locale === 'de' ? name : titleZh;
+  const wikiHref = wikiUrl(wikiLang, wikiTitle);
 
   return (
     <section className="ap-extra" id="related-links">
@@ -60,8 +67,9 @@ export default function RelatedLinks({
             {t.airport.wikiLabel} ↗
           </a>
         </Button>
-        {/* Baidu Baike is simplified-Chinese only, so it is left off /tw pages. */}
-        {locale !== 'tw' && (
+        {/* Baidu Baike is simplified-Chinese only, so it is left off /tw and
+            German pages. */}
+        {showsBaike(locale) && (
           <Button asChild variant="outline">
             <a href={baikeUrl(titleZh)} target="_blank" rel="noopener noreferrer">
               {t.airport.baikeLabel} ↗

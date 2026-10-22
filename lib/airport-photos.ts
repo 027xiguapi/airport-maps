@@ -186,15 +186,47 @@ function twCaptionIndex(): Map<string, Map<string, string>> {
   return twCaptions;
 }
 
+/**
+ * German captions: IATA → file name → caption, `public/photos/captions.de.json`.
+ * Unlike `captions.tw.json` this file is authored (translated from the English
+ * captions), not derived, because German is a separate language rather than
+ * another script for the Chinese source.
+ */
+let deCaptions: Map<string, Map<string, string>> | null = null;
+
+function deCaptionIndex(): Map<string, Map<string, string>> {
+  if (deCaptions) return deCaptions;
+  deCaptions = new Map();
+  try {
+    const raw = JSON.parse(readFileSync(join(PHOTOS_DIR, 'captions.de.json'), 'utf8')) as Record<
+      string,
+      Record<string, string>
+    >;
+    for (const [iata, rows] of Object.entries(raw)) {
+      if (iata.startsWith('_')) continue;
+      deCaptions.set(iata, new Map(Object.entries(rows)));
+    }
+  } catch {
+    // No German file yet; the caption falls back to the English one below.
+  }
+  return deCaptions;
+}
+
 /** Requested locale first, then the authored source — the lib/content.ts chain. */
 function pickCaption(iata: string, file: string, locale: Locale): string | null {
   if (locale === 'tw') {
     const tw = twCaptionIndex().get(iata)?.get(file);
     if (tw) return tw;
   }
+  if (locale === 'de') {
+    const german = deCaptionIndex().get(iata)?.get(file);
+    if (german) return german;
+  }
   const authored = captionIndex().get(iata)?.get(file);
   if (!authored) return null;
-  return authored[locale] ?? authored[SOURCE_LOCALE] ?? null;
+  // German falls back to the English caption, never to the Chinese one.
+  const fallback = locale === 'de' ? 'en' : SOURCE_LOCALE;
+  return authored[locale] ?? authored[fallback] ?? authored[SOURCE_LOCALE] ?? null;
 }
 
 /**

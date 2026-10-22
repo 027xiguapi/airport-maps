@@ -49,8 +49,8 @@ const REQUIRED = ['slug', 'title', 'summary', 'date'];
 const IMAGE_FILE = /\.(png|jpe?g|gif|webp|avif|svg)$/i;
 /** Payload format -> canonical extension. */
 const EXT_FOR_FORMAT = { png: '.png', jpeg: '.jpg', webp: '.webp', gif: '.gif', avif: '.avif', svg: '.svg' };
-/** Per-locale article files: `<slug>.en.md`, `<slug>.tw.md`. */
-const VARIANT_SUFFIXES = ['.en.md', '.tw.md'];
+/** Per-locale article files: `<slug>.en.md`, `<slug>.de.md`, `<slug>.tw.md`. */
+const VARIANT_SUFFIXES = ['.en.md', '.de.md', '.tw.md'];
 const isVariant = (file) => VARIANT_SUFFIXES.some((suffix) => file.endsWith(suffix));
 
 const problems = [];

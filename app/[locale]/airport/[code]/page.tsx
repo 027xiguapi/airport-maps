@@ -7,7 +7,7 @@ import TocNav, { type TocItem } from '@/components/TocNav';
 import { formatDistance, formatNumber, formatPax } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
-import { localizedPath } from '@/lib/i18n/config';
+import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { getAirportGuide } from '@/lib/content';
 import { getAirportByCode, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
 import { getAirportFacts } from '@/lib/airport-facts';
@@ -106,6 +106,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${title} | ${t.site.name}`,
       description,
       url: localizedPath(locale, `/airport/${airport.iata}`),
+      locale: LOCALE_META[locale].ogLocale,
       publishedTime: published,
       modifiedTime: modified,
       authors: [absoluteUrl(localizedPath(locale, '/about'))],
@@ -251,6 +252,7 @@ export default async function AirportPage({ params }: Props) {
           <RelatedLinks
             locale={locale}
             iata={airport.iata}
+            name={airport.name}
             nameEn={airport.nameEn}
             // Encyclopedia entry title: the page's own wording on a Traditional
             // page, the source Chinese name otherwise (Baidu Baike is simplified).

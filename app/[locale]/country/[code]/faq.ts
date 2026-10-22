@@ -2,6 +2,7 @@ import type { FaqItem } from '@/components/Faq';
 import { formatNumber, formatPax } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { isCjkLocale, listSeparator } from '@/lib/i18n/display';
 import type { AirportSummary, Country } from '@/lib/types';
 
 /**
@@ -35,7 +36,8 @@ export function buildCountryFaq(
       ]
     : [];
   if (airports.length === 0) return items;
-  const listSeparator = locale === 'en' ? ', ' : '、';
+  const separator = listSeparator(locale);
+  const cjk = isCjkLocale(locale);
   const airportsCount = formatNumber(airports.length, locale);
   const terminals = airports.reduce((sum, a) => sum + a.terminalCount, 0);
   const gates = airports.reduce((sum, a) => sum + a.gateCount, 0);
@@ -43,23 +45,23 @@ export function buildCountryFaq(
 
   // "Tokyo Haneda (HND)" / "东京羽田（HND）" — the same shape the airport page uses.
   const airportList = airports
-    .map((a) =>
-      locale === 'en' ? `${a.name} (${a.iata})` : `${a.name}（${a.iata}）`
-    )
-    .join(listSeparator);
+    .map((a) => (cjk ? `${a.name}（${a.iata}）` : `${a.name} (${a.iata})`))
+    .join(separator);
 
   const terminalList = airports
     .map((a) =>
-      locale === 'en'
-        ? `${a.name} (${a.iata}, ${a.terminalCount} terminals, ${a.gateCount} gates)`
-        : `${a.name}（${a.iata}，${t.units.terminals(a.terminalCount)}、${t.units.gates(
+      cjk
+        ? `${a.name}（${a.iata}，${t.units.terminals(a.terminalCount)}、${t.units.gates(
             a.gateCount
           )}）`
+        : `${a.name} (${a.iata}, ${t.units.terminals(a.terminalCount)}, ${t.units.gates(
+            a.gateCount
+          )})`
     )
-    .join(listSeparator);
+    .join(separator);
 
   // Distinct cities, in the order the airports appear.
-  const cities = [...new Set(airports.map((a) => a.city))].join(listSeparator);
+  const cities = [...new Set(airports.map((a) => a.city))].join(separator);
 
   items.push(
     {

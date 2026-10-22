@@ -69,6 +69,8 @@ export default function Header({ locale }: { locale: Locale }) {
             current={locale}
             label={t.nav.languageLabel}
             switchLabel={t.nav.switchLanguage}
+            plannedLabel={t.nav.languagePlanned}
+            plannedHint={t.nav.languagePlannedHint}
           />
         </div>
       </header>

@@ -21,7 +21,7 @@ import {
   listBlogSlugs,
 } from '@/lib/blog';
 import { getMessages, parseLocale } from '@/lib/i18n';
-import { localizedPath } from '@/lib/i18n/config';
+import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { extractHeadings, createIdAllocator, splitBeforeHeading } from '@/lib/markdown-toc';
 import { absoluteUrl, SITE_NAME } from '@/lib/site';
 import { buildBlogPostGraph } from './schema';
@@ -64,6 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${title} | ${t.site.name}`,
       description: post.summary,
       url: localizedPath(locale, path),
+      locale: LOCALE_META[locale].ogLocale,
       publishedTime: post.date,
       ...(post.updated ? { modifiedTime: post.updated } : {}),
       ...(post.tags.length > 0 ? { tags: post.tags } : {}),

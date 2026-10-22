@@ -1,5 +1,15 @@
 import { query, queryOne } from './db';
 import { SOURCE_LOCALE, type Locale } from './i18n/config';
+import {
+  germanAirportName,
+  germanCity,
+  germanCountry,
+  germanGateRange,
+  germanLabel,
+  germanRegion,
+  germanSearchAlias,
+  germanTerminalName,
+} from './i18n/de-data';
 import type {
   AirportDetail,
   AirportListParams,
@@ -21,18 +31,29 @@ function likePattern(value: string): string {
 }
 
 /**
- * Picks the localized value, falling back to the Chinese source. `tw` is the
- * derived Traditional-Chinese layer (see scripts/_hant.mjs); it is null only on
- * a dataset seeded before that layer existed, hence the same fallback chain.
+ * Picks the localized value, falling back to English (German) or the Chinese
+ * source. `tw` is the derived Traditional-Chinese layer (see scripts/_hant.mjs).
+ *
+ * German has no `_de` columns: it localizes the English column and translates
+ * the closed vocabularies (see lib/i18n/de-data.ts), so a `de` translator is
+ * passed for fields where German and English differ (city, country, terminal
+ * name, …). Fields without one keep their English value.
  */
+type DeTranslator = (value: string) => string;
+
 function pick(
   locale: Locale,
   zh: string | null,
   tw: string | null,
-  en: string | null
+  en: string | null,
+  de?: DeTranslator
 ): string {
   if (locale === 'en') return en ?? zh ?? '';
   if (locale === 'tw') return tw ?? zh ?? en ?? '';
+  if (locale === 'de') {
+    const base = en ?? zh ?? '';
+    return de ? de(base) : base;
+  }
   return zh ?? en ?? '';
 }
 
@@ -41,10 +62,12 @@ function pickStrict(
   locale: Locale,
   zh: string | null,
   tw: string | null,
-  en: string | null
+  en: string | null,
+  de?: DeTranslator
 ): string | null {
   if (locale === 'en') return en;
   if (locale === 'tw') return tw;
+  if (locale === 'de') return en == null ? null : de ? de(en) : en;
   return zh;
 }
 
@@ -158,8 +181,11 @@ function sortSql(sort: AirportSort, locale: Locale): string {
     case 'updated':
       return 'a.updated_at DESC, a.iata ASC';
     case 'name':
-      // Chinese sorts by the collation's pinyin order; English by its own name.
-      return locale === 'en' ? 'a.name_en ASC, a.iata ASC' : 'a.name ASC, a.iata ASC';
+      // Chinese sorts by the collation's pinyin order; Latin-script locales by
+      // the English name column (German exonyms sort next to it).
+      return locale === 'en' || locale === 'de'
+        ? 'a.name_en ASC, a.iata ASC'
+        : 'a.name ASC, a.iata ASC';
     case 'pax':
     default:
       return 'a.annual_pax_m DESC NULLS LAST, a.iata ASC';
@@ -172,15 +198,21 @@ function toSummary(row: AirportRow, locale: Locale): AirportSummary {
   return {
     iata: row.iata,
     slug: row.slug,
-    name: pick(locale, row.name_zh, row.name_tw, row.name_en),
+    name: pick(locale, row.name_zh, row.name_tw, row.name_en, germanAirportName),
     nameZh: row.name_zh,
     nameEn: row.name_en,
-    city: pick(locale, row.city_zh, row.city_tw, row.city_en),
+    city: pick(locale, row.city_zh, row.city_tw, row.city_en, germanCity),
     cityEn: row.city_en,
     countryCode: row.country_code,
-    countryName: pick(locale, row.country_name_zh, row.country_name_tw, row.country_name_en),
+    countryName: pick(
+      locale,
+      row.country_name_zh,
+      row.country_name_tw,
+      row.country_name_en,
+      germanCountry
+    ),
     countryNameEn: row.country_name_en,
-    region: pick(locale, row.region_zh, row.region_tw, row.region_en),
+    region: pick(locale, row.region_zh, row.region_tw, row.region_en, germanRegion),
     flagUrl: row.flag_url,
     gateCount: row.gate_count,
     annualPaxM: row.annual_pax_m,
@@ -194,8 +226,10 @@ function toTerminal(row: TerminalJson, locale: Locale): Terminal {
   return {
     id: row.id,
     code: row.code,
-    name: pick(locale, row.name_zh, row.name_tw, row.name_en),
-    gateRange: pick(locale, row.gate_range_zh, row.gate_range_tw, row.gate_range_en) || null,
+    name: pick(locale, row.name_zh, row.name_tw, row.name_en, germanTerminalName),
+    gateRange:
+      pick(locale, row.gate_range_zh, row.gate_range_tw, row.gate_range_en, germanGateRange) ||
+      null,
     gateCount: row.gate_count,
     // Editorial airline lists are not machine-translatable, so a missing
     // translation yields null and the UI omits the line.
@@ -203,7 +237,7 @@ function toTerminal(row: TerminalJson, locale: Locale): Terminal {
     isSatellite: row.is_satellite,
     amenities: (row.amenities ?? []).map<Amenity>((a) => ({
       icon: a.icon,
-      label: pick(locale, a.label_zh, a.label_tw, a.label_en),
+      label: pick(locale, a.label_zh, a.label_tw, a.label_en, germanLabel),
     })),
   };
 }
@@ -279,15 +313,21 @@ export async function getBusiestCities(locale: Locale, limit = 5): Promise<CityH
   );
 
   return rows.map((row) => ({
-    city: pick(locale, row.city_zh, row.city_tw, row.city_en),
+    city: pick(locale, row.city_zh, row.city_tw, row.city_en, germanCity),
     cityEn: row.city_en,
     countryCode: row.country_code,
-    countryName: pick(locale, row.country_name_zh, row.country_name_tw, row.country_name_en),
+    countryName: pick(
+      locale,
+      row.country_name_zh,
+      row.country_name_tw,
+      row.country_name_en,
+      germanCountry
+    ),
     flagUrl: row.flag_url,
     airportCount: row.airport_count,
     totalPaxM: row.total_pax_m,
     leadIata: row.lead_iata,
-    leadName: pick(locale, row.lead_name_zh, row.lead_name_tw, row.lead_name_en),
+    leadName: pick(locale, row.lead_name_zh, row.lead_name_tw, row.lead_name_en, germanAirportName),
     leadSlug: row.lead_slug,
     iatas: row.iatas ?? [],
   }));
@@ -330,10 +370,10 @@ export async function getCountries(locale: Locale): Promise<CountryWithCount[]> 
 
   return rows.map((row) => ({
     code: row.code,
-    name: pick(locale, row.name_zh, row.name_tw, row.name_en),
+    name: pick(locale, row.name_zh, row.name_tw, row.name_en, germanCountry),
     nameZh: row.name_zh,
     nameEn: row.name_en,
-    region: pick(locale, row.region_zh, row.region_tw, row.region_en),
+    region: pick(locale, row.region_zh, row.region_tw, row.region_en, germanRegion),
     flagUrl: row.flag_url,
     sortOrder: row.sort_order,
     airportCount: row.airport_count,
@@ -361,10 +401,10 @@ export async function getCountry(locale: Locale, code: string): Promise<Country 
   if (!row) return null;
   return {
     code: row.code,
-    name: pick(locale, row.name_zh, row.name_tw, row.name_en),
+    name: pick(locale, row.name_zh, row.name_tw, row.name_en, germanCountry),
     nameZh: row.name_zh,
     nameEn: row.name_en,
-    region: pick(locale, row.region_zh, row.region_tw, row.region_en),
+    region: pick(locale, row.region_zh, row.region_tw, row.region_en, germanRegion),
     flagUrl: row.flag_url,
     sortOrder: row.sort_order,
   };
@@ -465,7 +505,10 @@ export async function getAirportByCode(
      ) g ON true
      WHERE a.iata = upper($1) OR a.slug = lower($1)
      LIMIT 1`,
-    [code.trim(), SOURCE_LOCALE, locale]
+    // Missing descriptions fall back to the authored source language — except
+    // for German, which falls back to English: a Chinese paragraph inside a
+    // German page would be less useful than the English one.
+    [code.trim(), locale === 'de' ? 'en' : SOURCE_LOCALE, locale]
   );
 
   if (!row) return null;
@@ -476,7 +519,7 @@ export async function getAirportByCode(
     terminals: (row.terminals ?? []).map((t) => toTerminal(t, locale)),
     facilities: (row.facilities ?? []).map<Amenity>((f) => ({
       icon: f.icon,
-      label: pick(locale, f.label_zh, f.label_tw, f.label_en),
+      label: pick(locale, f.label_zh, f.label_tw, f.label_en, germanLabel),
     })),
     transit: (row.transit ?? []).map<TransitOption>((t) => ({
       icon: t.icon,
@@ -541,6 +584,8 @@ export async function searchAirports(
     flag_url: string;
   }>(
     // search_blob carries every locale's names, so one query serves all locales.
+    // German additionally searches its own exonym's English counterpart
+    // ("Peking" -> "Beijing"), because the blob has no German names.
     `SELECT a.iata, a.slug,
             a.name AS name_zh, a.name_tw, a.name_en,
             a.city AS city_zh, a.city_tw, a.city_en,
@@ -551,6 +596,9 @@ export async function searchAirports(
       WHERE a.search_blob ILIKE $2 ESCAPE '\\'
          OR c.name        ILIKE $2 ESCAPE '\\'
          OR c.name_en     ILIKE $2 ESCAPE '\\'
+         OR ($3::text IS NOT NULL AND (
+              a.search_blob ILIKE $3 ESCAPE '\\' OR c.name_en ILIKE $3 ESCAPE '\\'
+            ))
       ORDER BY
         -- match quality first, so a city hit (LHR for "lon") beats a long
         -- airport-name hit (London Stansted) before volume breaks ties
@@ -567,18 +615,32 @@ export async function searchAirports(
         END,
         a.annual_pax_m DESC NULLS LAST,
         a.iata ASC
-      LIMIT $3`,
-    [value, likePattern(value), limit]
+      LIMIT $4`,
+    [
+      value,
+      likePattern(value),
+      locale === 'de' ? (() => {
+        const alias = germanSearchAlias(value);
+        return alias ? likePattern(alias) : null;
+      })() : null,
+      limit,
+    ]
   );
 
   return rows.map((row) => ({
     iata: row.iata,
     slug: row.slug,
-    name: pick(locale, row.name_zh, row.name_tw, row.name_en),
+    name: pick(locale, row.name_zh, row.name_tw, row.name_en, germanAirportName),
     nameEn: row.name_en,
-    city: pick(locale, row.city_zh, row.city_tw, row.city_en),
+    city: pick(locale, row.city_zh, row.city_tw, row.city_en, germanCity),
     countryCode: row.country_code,
-    countryName: pick(locale, row.country_name_zh, row.country_name_tw, row.country_name_en),
+    countryName: pick(
+      locale,
+      row.country_name_zh,
+      row.country_name_tw,
+      row.country_name_en,
+      germanCountry
+    ),
     flagUrl: row.flag_url,
   }));
 }
@@ -614,12 +676,19 @@ export async function listAirports(
     const termIndex = args.length;
     args.push(likePattern(term));
     const patternIndex = args.length;
-    where.push(
-      `(a.search_blob ILIKE $${patternIndex} ESCAPE '\\'
-        OR c.name      ILIKE $${patternIndex} ESCAPE '\\'
-        OR c.name_en   ILIKE $${patternIndex} ESCAPE '\\'
-        OR a.iata = upper($${termIndex}))`
-    );
+    const clauses = [
+      `a.search_blob ILIKE $${patternIndex} ESCAPE '\\'`,
+      `c.name      ILIKE $${patternIndex} ESCAPE '\\'`,
+      `c.name_en   ILIKE $${patternIndex} ESCAPE '\\'`,
+      `a.iata = upper($${termIndex})`,
+    ];
+    // German exonym typed instead of the English name ("Peking", "München").
+    const alias = locale === 'de' ? germanSearchAlias(term) : null;
+    if (alias) {
+      args.push(likePattern(alias));
+      clauses.push(`a.search_blob ILIKE $${args.length} ESCAPE '\\'`);
+    }
+    where.push(`(${clauses.join(' OR ')})`);
   }
   const whereSql = where.length ? `WHERE ${where.join(' AND ')}` : '';
 

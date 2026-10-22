@@ -2,6 +2,7 @@ import Markdown from '@/components/Markdown';
 import { formatDate, formatPax } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { listSeparator } from '@/lib/i18n/display';
 import type { MarkdownDoc } from '@/lib/content';
 import type { AirportSummary, Country } from '@/lib/types';
 
@@ -35,14 +36,16 @@ export default function CountryIntro({
 
   const summary = t.country.introBody({
     name: country.name,
-    // Suppressed when the two coincide (Japan / 日本), so the sentence reads
-    // "Japan lies in East Asia" rather than "Japan (Japan) lies in …".
-    nameEn: country.nameEn === country.name ? '' : country.nameEn,
+    // Suppressed when the two coincide (Japan / 日本) or when the page is in a
+    // language whose name for the country is the German one already — a German
+    // page should not read "Deutschland (Germany)".
+    nameEn:
+      locale === 'de' || country.nameEn === country.name ? '' : country.nameEn,
     region: country.region,
     airports: t.units.airports(airports.length),
     terminals: terminals > 0 ? t.units.terminals(terminals) : null,
     gates: gates > 0 ? t.units.gates(gates) : null,
-    cities: cities.join(locale === 'en' ? ', ' : '、'),
+    cities: cities.join(listSeparator(locale)),
     busiest: busiest?.name ?? null,
     busiestIata: busiest?.iata ?? '',
     busiestPax: busiest ? (formatPax(busiest.annualPaxM, locale) ?? '') : '',

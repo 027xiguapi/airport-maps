@@ -2,6 +2,7 @@ import type { FaqItem } from '@/components/Faq';
 import { formatNumber } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { isCjkLocale, listSeparator } from '@/lib/i18n/display';
 import { routeStats } from '@/lib/routes';
 import type { AirportRouteMap } from '@/lib/types';
 
@@ -18,18 +19,19 @@ export function buildRouteFaq(
 ): FaqItem[] {
   const t = getMessages(locale);
   const stats = routeStats(map);
-  const listSeparator = locale === 'en' ? ', ' : '、';
-  // Chinese writes the figure in full-width brackets, English in parentheses.
+  const separator = listSeparator(locale);
+  // Chinese writes the figure in full-width brackets, Latin-script locales in
+  // ordinary parentheses.
   const withCount = (name: string, count: number) =>
-    locale === 'en' ? `${name} (${count})` : `${name}（${count}）`;
+    isCjkLocale(locale) ? `${name}（${count}）` : `${name} (${count})`;
 
   const carrierList = stats.topCarriers
     .map((carrier) => withCount(carrier.name, carrier.destinations))
-    .join(listSeparator);
+    .join(separator);
   const busiestList = stats.busiest
     .slice(0, 5)
     .map((destination) => `${destination.city} (${destination.iata})`)
-    .join(listSeparator);
+    .join(separator);
   const farthest = stats.farthest;
 
   return [

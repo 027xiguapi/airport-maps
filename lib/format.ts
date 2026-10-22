@@ -1,17 +1,17 @@
 import { DEFAULT_LOCALE, type Locale } from './i18n/config';
 import { getMessages } from './i18n';
+import { intlLocale, isCjkLocale } from './i18n/display';
 
 /**
  * Display formatters. Passenger volume is stored in millions and rendered the
- * way each locale expresses it: 万 / 亿 for Chinese, "million" for English.
+ * way each locale expresses it: 万 / 亿 for Chinese, "million" for English and
+ * "Millionen" for German.
  */
 
-/**
- * Intl locale per UI locale; untranslated locales fall back to the default's
- * formatting until they get their own catalog entry here.
- */
+/** Intl locale per UI locale; Latin-script locales fall back to en-US. */
 const NUMBER_LOCALE: Partial<Record<Locale, string>> = {
   en: 'en-US',
+  de: 'de-DE',
   zh: 'zh-CN',
   tw: 'zh-TW',
 };
@@ -33,6 +33,12 @@ export function formatPax(
   locale: Locale = DEFAULT_LOCALE
 ): string | null {
   if (millions == null || !Number.isFinite(millions)) return null;
+  if (locale === 'de') {
+    // "ca. 67 Millionen" / "ca. 1 Million" — a German billion-scale figure is
+    // still written in millions, unlike Chinese 亿.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `ca. ${formatNumber(rounded, locale)} ${rounded === 1 ? 'Million' : 'Millionen'}`;
+  }
   if (locale === 'en') {
     return `about ${trimZeros(millions.toFixed(2))} million`;
   }
@@ -43,21 +49,25 @@ export function formatPax(
   return `${cjk.about} ${formatNumber(Math.round(millions * 100), locale)} ${cjk.wan}`;
 }
 
-export function formatDistance(km: number | null | undefined, _locale: Locale = DEFAULT_LOCALE): string | null {
+export function formatDistance(km: number | null | undefined, locale: Locale = DEFAULT_LOCALE): string | null {
   if (km == null || !Number.isFinite(km)) return null;
-  return `${trimZeros(km.toFixed(1))} km`;
+  const value = Number(trimZeros(km.toFixed(1)));
+  return `${formatNumber(value, locale)} km`;
 }
 
-/** ISO date -> locale-appropriate long form. */
+/** ISO date -> locale-appropriate long form ("22. Oktober 2026", "2026年10月22日"). */
 export function formatDate(iso: string | null | undefined, locale: Locale = DEFAULT_LOCALE): string {
   if (!iso) return '—';
   const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
   if (!match) return iso;
   const [, year, month, day] = match;
-  if (locale === 'en') {
-    return new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(
-      new Date(Date.UTC(Number(year), Number(month) - 1, Number(day)))
-    );
+  if (!isCjkLocale(locale)) {
+    return new Intl.DateTimeFormat(intlLocale(locale), {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeZone: 'UTC',
+    }).format(new Date(Date.UTC(Number(year), Number(month) - 1, Number(day))));
   }
   return `${year}年${Number(month)}月${Number(day)}日`;
 }

@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { Card } from '@/components/ui/card';
+import { intlLocale } from '@/lib/i18n/display';
+import type { Locale } from '@/lib/i18n/config';
 
 /**
  * Live dual clock for the airport page: current time in the airport's
@@ -10,8 +12,8 @@ import { Card } from '@/components/ui/card';
  */
 type Reading = { date: string; time: string; suffix: string };
 
-function read(now: Date, locale: string, timeZone?: string): Reading {
-  const lang = locale === 'en' ? 'en-GB' : locale === 'tw' ? 'zh-TW' : 'zh-CN';
+function read(now: Date, locale: Locale, timeZone?: string): Reading {
+  const lang = intlLocale(locale);
   const opts = { timeZone } as Intl.DateTimeFormatOptions;
   return {
     date: new Intl.DateTimeFormat(lang, {
@@ -27,7 +29,8 @@ function read(now: Date, locale: string, timeZone?: string): Reading {
       second: '2-digit',
       hour12: false,
     }).format(now),
-    // 12-hour form ("09:48:10 AM") shown as a secondary line, English only.
+    // 12-hour form ("09:48:10 AM") shown as a secondary line, English only —
+    // German and Chinese both read the 24-hour clock.
     suffix:
       locale === 'en'
         ? new Intl.DateTimeFormat(lang, {
@@ -47,7 +50,7 @@ export default function AirportClock({
   airportLabel,
   localLabel,
 }: {
-  locale: string;
+  locale: Locale;
   timeZone: string;
   airportLabel: string;
   localLabel: string;

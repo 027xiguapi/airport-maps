@@ -21,6 +21,11 @@ export function parseLocale(value: string | undefined): Locale | null {
 /**
  * `alternates.languages` for Next metadata: one entry per published locale
  * plus an `x-default` pointing at the bare default-locale path.
+ *
+ * Planned locales (PLANNED_LOCALES) are deliberately excluded: their URL
+ * prefixes are not routable yet, and hreflang must point at canonical,
+ * indexable URLs. The moment a catalog is registered in catalogs.ts, that
+ * locale appears here, in the sitemap and as an active switcher link.
  */
 export function languageAlternates(path: string): Record<string, string> {
   const alternates: Record<string, string> = {};

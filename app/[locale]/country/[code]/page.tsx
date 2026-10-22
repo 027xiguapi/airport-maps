@@ -15,7 +15,7 @@ import { getCountryIntro } from '@/lib/content';
 import { getCountryAirports } from '@/lib/country-airports';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
-import { localizedPath } from '@/lib/i18n/config';
+import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { getAirportsByCountry, getAllCountryCodes, getCountries, getCountry } from '@/lib/queries';
 import { SITE_NAME } from '@/lib/site';
 import { buildCountryFaq } from './faq';
@@ -63,6 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${title} | ${t.site.name}`,
       description,
       url: localizedPath(locale, `/country/${country.code}`),
+      locale: LOCALE_META[locale].ogLocale,
     },
   };
 }

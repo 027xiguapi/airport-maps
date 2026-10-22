@@ -41,6 +41,9 @@ export const en: Messages = {
     label: 'Main navigation',
     languageLabel: 'Language',
     switchLanguage: 'Switch language',
+    /** Slice heading for the registered-but-untranslated languages. */
+    languagePlanned: 'In preparation',
+    languagePlannedHint: 'This language version has not been published yet.',
     themeToggle: 'Toggle dark mode',
     menu: 'Menu',
   },

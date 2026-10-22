@@ -13,21 +13,25 @@
  *     want of a router context, and even `next/link` produces nothing), so this
  *     file uses plain <a> elements throughout.
  *
- * So the language cannot be known here, and the copy is deliberately bilingual
- * while every link is offered in both languages. Plain anchors also mean a
+ * So the language cannot be known here, and the copy is deliberately
+ * multilingual while every link is offered in every published language. Plain
+ * anchors also mean a
  * navigation away from a 404 is a normal full page load, which is fine here. The search form is a plain GET
  * form — no JavaScript, no client component — which posts to a real directory.
  */
 const HOME = [
   { href: '/en', label: 'English home' },
+  { href: '/de', label: 'Deutsche Startseite' },
   { href: '/zh', label: '中文首页' },
   { href: '/tw', label: '繁體中文首頁' },
 ];
 const DIRECTORIES = [
   { href: '/en/airports', label: 'All airports' },
+  { href: '/de/airports', label: 'Alle Flughäfen' },
   { href: '/zh/airports', label: '全部机场' },
   { href: '/tw/airports', label: '全部機場' },
   { href: '/en/countries', label: 'By country' },
+  { href: '/de/countries', label: 'Nach Land' },
   { href: '/zh/countries', label: '按国家浏览' },
   { href: '/tw/countries', label: '按國家瀏覽' },
 ];
@@ -43,10 +47,14 @@ export default function NotFoundContent() {
         </nav>
         <div className="country-hero">
           <div>
-            <h1>404 · Page not found · 页面不存在 · 頁面不存在</h1>
+            <h1>404 · Page not found · Seite nicht gefunden · 页面不存在 · 頁面不存在</h1>
             <div className="sub">
               The page you requested may have been moved or removed. Try searching for an airport, or
               continue from the links below.
+            </div>
+            <div className="sub">
+              Die angeforderte Seite wurde möglicherweise verschoben oder entfernt. Suchen Sie nach
+              einem Flughafen oder nutzen Sie die Links unten.
             </div>
             <div className="sub">
               您访问的页面可能已被移动或删除。试试搜索机场，或从下面的入口继续浏览。
@@ -57,13 +65,13 @@ export default function NotFoundContent() {
 
             <form action="/en/airports" method="get" role="search" style={{ marginTop: 22, maxWidth: 520 }}>
               <label className="sr-only" htmlFor="nf-q">
-                Search airports / 搜索机场 / 搜尋機場
+                Search airports / Flughäfen suchen / 搜索机场 / 搜尋機場
               </label>
               <input
                 id="nf-q"
                 type="search"
                 name="q"
-                placeholder="Search airports, cities or IATA codes / 搜索机场、城市或 IATA 代码 / 搜尋機場、城市或 IATA 代碼"
+                placeholder="Search airports, cities or IATA codes / Flughäfen, Städte oder IATA-Codes suchen / 搜索机场、城市或 IATA 代码 / 搜尋機場、城市或 IATA 代碼"
                 style={{
                   width: '100%',
                   height: 56,
@@ -81,7 +89,7 @@ export default function NotFoundContent() {
               <div className="filterbar" style={{ marginTop: 14, background: 'transparent', border: 'none', padding: 0 }}>
                 <div className="group">
                   <button type="submit" className="chip on">
-                    Search / 搜索
+                    Search / Suchen / 搜索
                   </button>
                 </div>
               </div>

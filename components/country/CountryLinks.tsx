@@ -8,6 +8,7 @@ import {
 import { airportWebsite } from '@/lib/airport-links';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
+import { showsBaike, wikipediaLocale } from '@/lib/i18n/display';
 import { Button } from '@/components/ui/button';
 import type { AirportSummary, Country } from '@/lib/types';
 
@@ -53,6 +54,7 @@ export default function CountryLinks({
           <div className="ext-links">
             <ReferenceLinks
               locale={locale}
+              name={country.name}
               nameEn={country.nameEn}
               titleZh={countryEncyclopediaTitle(
                 country.code,
@@ -76,6 +78,7 @@ export default function CountryLinks({
               <div className="ext-links">
                 <ReferenceLinks
                   locale={locale}
+                  name={airport.name}
                   nameEn={airport.nameEn}
                   titleZh={airportEncyclopediaTitle(
                     airport.iata,
@@ -95,18 +98,21 @@ export default function CountryLinks({
 /** The three external references for one subject (country or airport). */
 function ReferenceLinks({
   locale,
+  name,
   nameEn,
   titleZh,
   website,
 }: {
   locale: Locale;
+  /** Localized name — the German Wikipedia article title. */
+  name: string;
   nameEn: string;
   titleZh: string;
   website: string | null;
 }) {
   const t = getMessages(locale);
   // Wikipedia follows the page language; Baidu Baike is Chinese either way.
-  const wikiTitle = locale === 'en' ? nameEn : titleZh;
+  const wikiTitle = locale === 'en' ? nameEn : locale === 'de' ? name : titleZh;
 
   return (
     <>
@@ -119,15 +125,16 @@ function ReferenceLinks({
       )}
       <Button asChild variant="outline">
         <a
-          href={wikiUrl(locale === 'en' ? 'en' : 'zh', wikiTitle)}
+          href={wikiUrl(wikipediaLocale(locale), wikiTitle)}
           target="_blank"
           rel="noopener noreferrer"
         >
           {t.airport.wikiLabel} ↗
         </a>
       </Button>
-      {/* Baidu Baike is simplified-Chinese only, so it is left off /tw pages. */}
-      {locale !== 'tw' && (
+      {/* Baidu Baike is simplified-Chinese only, so it is left off /tw and
+          German pages. */}
+      {showsBaike(locale) && (
         <Button asChild variant="outline">
           <a href={baikeUrl(titleZh)} target="_blank" rel="noopener noreferrer">
             {t.airport.baikeLabel} ↗

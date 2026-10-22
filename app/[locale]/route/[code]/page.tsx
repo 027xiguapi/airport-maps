@@ -83,6 +83,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${title} | ${t.site.name}`,
       description,
       url: localizedPath(locale, `/route/${airport.iata}`),
+      locale: LOCALE_META[locale].ogLocale,
       modifiedTime: airport.updatedAt,
       authors: [absoluteUrl(localizedPath(locale, '/about'))],
     },

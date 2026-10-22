@@ -34,6 +34,9 @@ export const zh = {
     label: '主导航',
     languageLabel: '语言',
     switchLanguage: '切换语言',
+    /** Slice heading for the registered-but-untranslated languages. */
+    languagePlanned: '筹备中',
+    languagePlannedHint: '该语言版本尚未发布，正在准备中。',
     themeToggle: '切换深色模式',
     menu: '菜单',
   },

@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import { getAirportsByCodes } from './queries';
 import type { AirportRouteMap, RouteDestination } from './types';
 import { localizedPath, type Locale } from './i18n/config';
+import { germanAirportName, germanCity, germanCountry } from './i18n/de-data';
 
 /**
  * Route data for the airport page's route map.
@@ -163,9 +164,11 @@ export async function getAirportRouteMap(
     if (!place) continue;
     destinations.push({
       iata: entry.iata,
-      name: place.name,
-      city: place.city,
-      country: place.country,
+      // German applies its vocabulary to the bulk index too (Peking, Vereinigte
+      // Staaten); the airport name stays international.
+      name: locale === 'de' ? germanAirportName(place.name) : place.name,
+      city: locale === 'de' ? germanCity(place.city) : place.city,
+      country: locale === 'de' ? germanCountry(place.country) : place.country,
       countryCode: place.iso2,
       lat: place.lat,
       lng: place.lng,

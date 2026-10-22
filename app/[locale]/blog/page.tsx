@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { PostGrid } from '@/components/Blog';
 import { blogAlternates, blogLocalesWithContent, hasBlog, listBlogPosts } from '@/lib/blog';
 import { getMessages, parseLocale } from '@/lib/i18n';
-import { localizedPath } from '@/lib/i18n/config';
+import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { SITE_NAME } from '@/lib/site';
 
 export const revalidate = 3600;
@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${t.blog.title} | ${t.site.name}`,
       description,
       url: localizedPath(locale, '/blog'),
+      locale: LOCALE_META[locale].ogLocale,
     },
   };
 }

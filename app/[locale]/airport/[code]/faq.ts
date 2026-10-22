@@ -2,21 +2,24 @@ import type { FaqItem } from '@/components/Faq';
 import { formatNumber, transitLabel } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { isGateRangePhrase } from '@/lib/i18n/de-data';
+import { clauseSeparator, isCjkLocale, listSeparator } from '@/lib/i18n/display';
 import type { AirportDetail, Terminal } from '@/lib/types';
 
 /**
  * Complete gate phrase for one terminal, worded by the catalog so each locale
- * uses its own script (登机口 / 登機口). A gate range that names a concourse
- * ("Concourse A–E" / "A–E 廊") is already a phrase and stands on its own;
- * anything else is a code list and needs the word "gates" in front of it.
+ * uses its own script (登机口 / 登機口 / Gates). A gate range that names a
+ * concourse ("Concourse A–E", "A–E 廊", "Bereich A") is already a phrase and
+ * stands on its own; anything else is a code list and needs the word "Gates"
+ * in front of it.
  */
 function gatePhrase(locale: Locale, t: ReturnType<typeof getMessages>, terminal: Terminal): string {
   const { gateRange, gateCount } = terminal;
   if (!gateRange) return t.units.gates(gateCount);
-  if (locale === 'en') {
-    return /^concourse/i.test(gateRange) ? gateRange : t.units.gatesLabel(gateRange);
+  if (isCjkLocale(locale)) {
+    return gateRange.endsWith('廊') ? gateRange : t.units.gatesLabel(gateRange);
   }
-  return gateRange.endsWith('廊') ? gateRange : t.units.gatesLabel(gateRange);
+  return isGateRangePhrase(gateRange) ? gateRange : t.units.gatesLabel(gateRange);
 }
 
 /** FAQ assembled from database fields, in the requested locale. */
@@ -27,45 +30,44 @@ export function buildFaq(
   tz: string | null
 ): FaqItem[] {
   const t = getMessages(locale);
-  const listSeparator = locale === 'en' ? ', ' : '、';
-  const clauseSeparator = locale === 'en' ? '; ' : '；';
+  const separator = listSeparator(locale);
+  const clause = clauseSeparator(locale);
+  // Chinese writes bracketed asides full-width, every Latin-script locale in
+  // ordinary parentheses; German matches English here.
+  const cjk = isCjkLocale(locale);
+  const paren = (value: string) => (cjk ? `（${value}）` : ` (${value})`);
 
   const terminalList = airport.terminals
-    .map((terminal) =>
-      locale === 'en'
-        ? `${terminal.name} (${terminal.code}, ${gatePhrase(locale, t, terminal)})`
-        : `${terminal.name}（${terminal.code}，${gatePhrase(locale, t, terminal)}）`
+    .map(
+      (terminal) =>
+        `${terminal.name}${paren(`${terminal.code}, ${gatePhrase(locale, t, terminal)}`)}`
     )
-    .join(listSeparator);
+    .join(separator);
 
   const airlineList = airport.terminals
     .filter((terminal) => terminal.airlines)
     .map((terminal) =>
-      locale === 'en'
-        ? `${terminal.name}: ${terminal.airlines}`
-        : `${terminal.name}（${terminal.code}）：${terminal.airlines}`
+      cjk
+        ? `${terminal.name}（${terminal.code}）：${terminal.airlines}`
+        : `${terminal.name}: ${terminal.airlines}`
     )
-    .join(clauseSeparator);
+    .join(clause);
 
   /** The same terminals reduced to their gate information alone. */
   const gateList = airport.terminals
-    .map((terminal) =>
-      locale === 'en'
-        ? `${terminal.name} (${gatePhrase(locale, t, terminal)})`
-        : `${terminal.name}（${gatePhrase(locale, t, terminal)}）`
-    )
-    .join(listSeparator);
+    .map((terminal) => `${terminal.name}${paren(gatePhrase(locale, t, terminal))}`)
+    .join(separator);
 
   const transitSummary = airport.transit
     .map((option) => transitLabel(locale, option))
-    .join(listSeparator);
+    .join(separator);
 
   const accessList = airport.transit
     .map((option) => {
       const label = transitLabel(locale, option);
-      return option.description ? `${label}${locale === 'en' ? ': ' : '：'}${option.description}` : label;
+      return option.description ? `${label}${cjk ? '：' : ': '}${option.description}` : label;
     })
-    .join(clauseSeparator);
+    .join(clause);
 
   return [
     // Directory batch airports have no compiled terminal data, so the count
@@ -143,7 +145,7 @@ export function buildFaq(
             q: t.faq.facilities(airport.name),
             a: t.faq.facilitiesAnswer(
               airport.name,
-              airport.facilities.map((f) => f.label).join(listSeparator)
+              airport.facilities.map((f) => f.label).join(separator)
             ),
           },
         ]

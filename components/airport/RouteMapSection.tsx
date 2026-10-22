@@ -2,6 +2,7 @@ import RouteMap from '@/components/airport/RouteMap';
 import { formatNumber } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
+import { intlLocale, listSeparator } from '@/lib/i18n/display';
 import { routeTier } from '@/lib/route-tiers';
 import type { AirportRouteMap } from '@/lib/types';
 
@@ -29,8 +30,8 @@ export default function RouteMapSection({
 }) {
   const t = getMessages(locale);
   const { destinations } = map;
-  // Chinese joins airline names with 、, English with a comma.
-  const separator = locale === 'en' ? ', ' : '、';
+  // Chinese joins airline names with 、, Latin-script locales with a comma.
+  const separator = listSeparator(locale);
 
   return (
     <>
@@ -64,7 +65,7 @@ export default function RouteMapSection({
               tiers: t.airport.routeTiers,
               carriers: t.airport.routeCarriersTpl,
               openAirport: t.airport.routeOpenAirport,
-              numberLocale: locale === 'en' ? 'en-US' : locale === 'tw' ? 'zh-TW' : 'zh-CN',
+              numberLocale: intlLocale(locale),
             }}
           />
         </div>

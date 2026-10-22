@@ -58,9 +58,15 @@ function toDoc(row: DocumentRow): MarkdownDoc {
   };
 }
 
-/** Requested locale first, then the authored source — first match wins. */
+/**
+ * Requested locale first, then the authored source — first match wins. German
+ * falls back to English before the Chinese source: a German page should never
+ * show a Chinese paragraph, even when the German translation is missing.
+ */
 function localeChain(locale: Locale): Locale[] {
-  return locale === SOURCE_LOCALE ? [locale] : [locale, SOURCE_LOCALE];
+  if (locale === SOURCE_LOCALE) return [locale];
+  if (locale === 'de') return ['de', 'en'];
+  return [locale, SOURCE_LOCALE];
 }
 
 /** One document in the best available language, or null when none exists. */

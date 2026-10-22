@@ -46,7 +46,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = getMessages(locale);
   return {
     alternates: { canonical: localizedPath(locale, '/'), languages: languageAlternates('/') },
-    openGraph: { siteName: SITE_NAME, url: localizedPath(locale, '/') },
+    openGraph: {
+      siteName: SITE_NAME,
+      url: localizedPath(locale, '/'),
+      locale: LOCALE_META[locale].ogLocale,
+    },
     description: t.site.description,
   };
 }
