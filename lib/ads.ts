@@ -1,6 +1,6 @@
 /**
- * Adsterra ad units for worldairportmap.com — the six banner slots plus the
- * popunder; the account's other unit types (native banner, smartlink) are
+ * Adsterra ad units for worldairportmap.com — the six banner slots; the
+ * account's other unit types (popunder, native banner, smartlink) are
  * intentionally not integrated.
  *
  * The banner snippets work by assigning a global `atOptions` and then loading
@@ -61,15 +61,6 @@ export const ADSTERRA_RANGE: Record<AdsterraUnitId, { min: number; max?: number 
 
 /** Invocation host for the iframe-format units (Adsterra's /22/ path). */
 const BANNER_HOST = 'https://bauval.org';
-
-/**
- * The popunder unit: a single site-wide script with no visible slot. Unlike
- * the banners it needs no iframe — it hooks document-level clicks — so
- * components/ads/AdsterraPopunder.tsx injects it straight into the page, once,
- * behind the same DEV_HOST gate as the banners.
- */
-export const ADSTERRA_POPUNDER_SRC =
-  'https://abscloud.org/1/135616e54bb453e1345bce58137fdff1';
 
 /**
  * Hostnames that never serve ads: the dev server and anything only reachable

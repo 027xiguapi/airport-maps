@@ -32,21 +32,19 @@ function localeUrl(locale: string, path: string): string {
 }
 
 /**
- * One sitemap entry per locale-independent path *per published language*: each
- * `<loc>` is a real URL a visitor can open (`/airport/PEK`, `/de/airport/PEK`,
- * `/zh/airport/PEK`, …), and every entry carries the same `alternates` block
- * listing all translations plus `x-default` (the default-locale URL).
- *
- * Listing only the default URL and hiding the translations in `alternates`
- * left German (and Traditional Chinese) URLs out of the `<loc>` set entirely,
- * so a sitemap reader never saw `/de/...` as an indexable page. Repeating the
- * alternates block is deliberate: the hreflang annotations belong on every
- * language's entry.
+ * One sitemap entry per locale-independent path: `<loc>` is the canonical URL
+ * of the language the page is authored in, and `alternates` list every
+ * translated URL plus `x-default` (the same canonical URL). The localized URLs
+ * are deliberately *not* repeated as top-level `<loc>` entries — they are the
+ * same page, and repeating the identical alternates block once per language
+ * tripled the file and read as the same page listed three times. Crawlers still
+ * learn the /zh and /tw URLs from the hreflang annotations here, from the
+ * language switcher links on every page, and from each page's own `hreflang`
+ * tags.
  *
  * `locales` and `primary` narrow both lists for content that exists in a subset
  * of languages — a blog article that has not been translated, for instance,
- * keeps its Chinese URL as the canonical one and is listed only in the
- * languages that carry it.
+ * keeps its Chinese URL as the canonical one.
  */
 function localeEntries(
   path: string,
@@ -60,13 +58,15 @@ function localeEntries(
   }
   languages['x-default'] = localeUrl(primary, path);
 
-  return locales.map((locale) => ({
-    url: localeUrl(locale, path),
-    changeFrequency: options.changeFrequency,
-    priority: options.priority,
-    ...(options.lastModified ? { lastModified: options.lastModified } : {}),
-    alternates: { languages },
-  }));
+  return [
+    {
+      url: localeUrl(primary, path),
+      changeFrequency: options.changeFrequency,
+      priority: options.priority,
+      ...(options.lastModified ? { lastModified: options.lastModified } : {}),
+      alternates: { languages },
+    },
+  ];
 }
 
 /**
