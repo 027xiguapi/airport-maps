@@ -277,6 +277,18 @@ const germanDescriptions = (() => {
   }
 })();
 
+/**
+ * Korean airport descriptions translated from the English `description_md`
+ * (data/ko-descriptions.json, IATA -> text), same role as the German file.
+ */
+const koreanDescriptions = (() => {
+  try {
+    return JSON.parse(readFileSync(join(ROOT, 'data', 'ko-descriptions.json'), 'utf8'));
+  } catch {
+    return null;
+  }
+})();
+
 /** "a, b and c" */
 function joinList(items) {
   if (items.length <= 1) return items[0] ?? '';
@@ -444,7 +456,7 @@ try {
     // lib/i18n/de-data.ts and scripts/_de.mjs)
     await client.query(
       `INSERT INTO airport_translations (airport_iata, locale, description_md)
-       VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4), ($1, 'de', $5)`,
+       VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4), ($1, 'de', $5), ($1, 'ko', $6)`,
       [
         a.iata,
         a.desc,
@@ -463,6 +475,7 @@ try {
             distanceKm,
             deVocab.transportModes
           ),
+        koreanDescriptions?.[a.iata] ?? null,
       ]
     );
 
@@ -545,7 +558,7 @@ try {
     );
     await client.query(
       `INSERT INTO airport_translations (airport_iata, locale, description_md)
-       VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4), ($1, 'de', $5)`,
+       VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4), ($1, 'de', $5), ($1, 'ko', $6)`,
       [
         a.iata,
         descZh,
@@ -553,6 +566,7 @@ try {
         toHant(descZh),
         germanDescriptions?.[a.iata] ??
           directoryDescriptionDe(a, countries[a.country], airportFacts[a.iata]),
+        koreanDescriptions?.[a.iata] ?? null,
       ]
     );
   }

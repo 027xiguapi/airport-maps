@@ -187,29 +187,30 @@ function twCaptionIndex(): Map<string, Map<string, string>> {
 }
 
 /**
- * German captions: IATA → file name → caption, `public/photos/captions.de.json`.
- * Unlike `captions.tw.json` this file is authored (translated from the English
- * captions), not derived, because German is a separate language rather than
- * another script for the Chinese source.
+ * Translated captions for a non-Chinese language: IATA → file name → caption,
+ * `public/photos/captions.<locale>.json`. These files are authored (translated
+ * from the English captions), not derived, because German/Korean are separate
+ * languages rather than another script for the Chinese source.
  */
-let deCaptions: Map<string, Map<string, string>> | null = null;
+const translatedCaptions = new Map<Locale, Map<string, Map<string, string>>>();
 
-function deCaptionIndex(): Map<string, Map<string, string>> {
-  if (deCaptions) return deCaptions;
-  deCaptions = new Map();
+function translatedCaptionIndex(locale: 'de' | 'ko'): Map<string, Map<string, string>> {
+  const cached = translatedCaptions.get(locale);
+  if (cached) return cached;
+  const index = new Map<string, Map<string, string>>();
   try {
-    const raw = JSON.parse(readFileSync(join(PHOTOS_DIR, 'captions.de.json'), 'utf8')) as Record<
-      string,
-      Record<string, string>
-    >;
+    const raw = JSON.parse(
+      readFileSync(join(PHOTOS_DIR, `captions.${locale}.json`), 'utf8')
+    ) as Record<string, Record<string, string>>;
     for (const [iata, rows] of Object.entries(raw)) {
       if (iata.startsWith('_')) continue;
-      deCaptions.set(iata, new Map(Object.entries(rows)));
+      index.set(iata, new Map(Object.entries(rows)));
     }
   } catch {
-    // No German file yet; the caption falls back to the English one below.
+    // No translated file yet; the caption falls back to English below.
   }
-  return deCaptions;
+  translatedCaptions.set(locale, index);
+  return index;
 }
 
 /** Requested locale first, then the authored source — the lib/content.ts chain. */
@@ -218,14 +219,14 @@ function pickCaption(iata: string, file: string, locale: Locale): string | null 
     const tw = twCaptionIndex().get(iata)?.get(file);
     if (tw) return tw;
   }
-  if (locale === 'de') {
-    const german = deCaptionIndex().get(iata)?.get(file);
-    if (german) return german;
+  if (locale === 'de' || locale === 'ko') {
+    const translated = translatedCaptionIndex(locale).get(iata)?.get(file);
+    if (translated) return translated;
   }
   const authored = captionIndex().get(iata)?.get(file);
   if (!authored) return null;
-  // German falls back to the English caption, never to the Chinese one.
-  const fallback = locale === 'de' ? 'en' : SOURCE_LOCALE;
+  // German/Korean fall back to the English caption, never to the Chinese one.
+  const fallback = locale === 'de' || locale === 'ko' ? 'en' : SOURCE_LOCALE;
   return authored[locale] ?? authored[fallback] ?? authored[SOURCE_LOCALE] ?? null;
 }
 

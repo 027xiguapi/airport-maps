@@ -36,11 +36,13 @@ export default function CountryIntro({
 
   const summary = t.country.introBody({
     name: country.name,
-    // Suppressed when the two coincide (Japan / 日本) or when the page is in a
-    // language whose name for the country is the German one already — a German
-    // page should not read "Deutschland (Germany)".
+    // Suppressed when the two coincide (Japan / 日本) or when the page language
+    // already has its own form — a German/Korean page should not read
+    // "Deutschland (Germany)" or "독일 (Germany)".
     nameEn:
-      locale === 'de' || country.nameEn === country.name ? '' : country.nameEn,
+      locale === 'de' || locale === 'ko' || country.nameEn === country.name
+        ? ''
+        : country.nameEn,
     region: country.region,
     airports: t.units.airports(airports.length),
     terminals: terminals > 0 ? t.units.terminals(terminals) : null,

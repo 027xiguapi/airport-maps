@@ -4,14 +4,15 @@ import { intlLocale, isCjkLocale } from './i18n/display';
 
 /**
  * Display formatters. Passenger volume is stored in millions and rendered the
- * way each locale expresses it: 万 / 亿 for Chinese, "million" for English and
- * "Millionen" for German.
+ * way each locale expresses it: 万 / 亿 for Chinese, "million" for English,
+ * "Millionen" for German and 만 / 억 for Korean.
  */
 
-/** Intl locale per UI locale; Latin-script locales fall back to en-US. */
+/** Intl locale per UI locale; unknown locales fall back to en-US. */
 const NUMBER_LOCALE: Partial<Record<Locale, string>> = {
   en: 'en-US',
   de: 'de-DE',
+  ko: 'ko-KR',
   zh: 'zh-CN',
   tw: 'zh-TW',
 };
@@ -20,6 +21,7 @@ const NUMBER_LOCALE: Partial<Record<Locale, string>> = {
 const CJK_UNITS: Partial<Record<Locale, { wan: string; yi: string; about: string }>> = {
   zh: { wan: '万', yi: '亿', about: '约' },
   tw: { wan: '萬', yi: '億', about: '約' },
+  ko: { wan: '만', yi: '억', about: '약' },
 };
 
 export function formatNumber(value: number | string | null | undefined, locale: Locale = DEFAULT_LOCALE): string {
@@ -38,6 +40,18 @@ export function formatPax(
     // still written in millions, unlike Chinese 亿.
     const rounded = Number(trimZeros(millions.toFixed(2)));
     return `ca. ${formatNumber(rounded, locale)} ${rounded === 1 ? 'Million' : 'Millionen'}`;
+  }
+  if (locale === 'ko') {
+    // 약 6,700만 명 / 약 1억 800만 명 — Korean groups by 10,000 (만) and
+    // 100,000,000 (억); units attach without a space.
+    if (millions >= 100) {
+      const eok = Math.floor(millions / 100);
+      const man = Math.round((millions - eok * 100) * 100);
+      return man > 0
+        ? `${CJK_UNITS.ko!.about} ${eok}억 ${formatNumber(man, locale)}만 명`
+        : `${CJK_UNITS.ko!.about} ${eok}억 명`;
+    }
+    return `${CJK_UNITS.ko!.about} ${formatNumber(Math.round(millions * 100), locale)}만 명`;
   }
   if (locale === 'en') {
     return `about ${trimZeros(millions.toFixed(2))} million`;

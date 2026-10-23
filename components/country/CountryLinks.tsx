@@ -104,7 +104,7 @@ function ReferenceLinks({
   website,
 }: {
   locale: Locale;
-  /** Localized name — the German Wikipedia article title. */
+  /** Localized name — the German/Korean Wikipedia article title. */
   name: string;
   nameEn: string;
   titleZh: string;
@@ -112,7 +112,8 @@ function ReferenceLinks({
 }) {
   const t = getMessages(locale);
   // Wikipedia follows the page language; Baidu Baike is Chinese either way.
-  const wikiTitle = locale === 'en' ? nameEn : locale === 'de' ? name : titleZh;
+  const wikiTitle =
+    locale === 'en' ? nameEn : locale === 'de' || locale === 'ko' ? name : titleZh;
 
   return (
     <>

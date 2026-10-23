@@ -4,6 +4,7 @@ import { getAirportsByCodes } from './queries';
 import type { AirportRouteMap, RouteDestination } from './types';
 import { localizedPath, type Locale } from './i18n/config';
 import { germanAirportName, germanCity, germanCountry } from './i18n/de-data';
+import { koreanAirportName, koreanCity, koreanCountry } from './i18n/ko-data';
 
 /**
  * Route data for the airport page's route map.
@@ -164,11 +165,26 @@ export async function getAirportRouteMap(
     if (!place) continue;
     destinations.push({
       iata: entry.iata,
-      // German applies its vocabulary to the bulk index too (Peking, Vereinigte
-      // Staaten); the airport name stays international.
-      name: locale === 'de' ? germanAirportName(place.name) : place.name,
-      city: locale === 'de' ? germanCity(place.city) : place.city,
-      country: locale === 'de' ? germanCountry(place.country) : place.country,
+      // German/Korean apply their vocabulary to the bulk index too (Peking /
+      // 베이징, Vereinigte Staaten / 미국); the airport name stays international.
+      name:
+        locale === 'de'
+          ? germanAirportName(place.name)
+          : locale === 'ko'
+            ? koreanAirportName(place.name)
+            : place.name,
+      city:
+        locale === 'de'
+          ? germanCity(place.city)
+          : locale === 'ko'
+            ? koreanCity(place.city)
+            : place.city,
+      country:
+        locale === 'de'
+          ? germanCountry(place.country)
+          : locale === 'ko'
+            ? koreanCountry(place.country)
+            : place.country,
       countryCode: place.iso2,
       lat: place.lat,
       lng: place.lng,

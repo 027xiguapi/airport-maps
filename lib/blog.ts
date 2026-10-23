@@ -14,19 +14,21 @@ import { LOCALE_META, SOURCE_LOCALE, localizedPath, type Locale } from './i18n/c
  *   public/blog/<slug>/<slug>.md      article: flat frontmatter + Markdown body
  *   public/blog/<slug>/<slug>.en.md   English version
  *   public/blog/<slug>/<slug>.de.md   German version (translated from the English one)
+ *   public/blog/<slug>/<slug>.ko.md   Korean version (translated from the English one)
  *   public/blog/<slug>/<slug>.tw.md   derived Traditional Chinese, written by
  *                                     scripts/build-hant.mjs
  *   public/blog/<slug>/images/N.ext   referenced from the body as ./images/N.ext
  *
  * Language coverage: the articles are written in Chinese, translated into
- * English and German, and derived into Traditional Chinese. A locale shows the
- * blog only where files for it exist, and a missing translation means the
- * article is simply absent from that locale's list — never Chinese text on an
- * English or German page, the same rule the country introductions follow.
+ * English, German and Korean, and derived into Traditional Chinese. A locale
+ * shows the blog only where files for it exist, and a missing translation means
+ * the article is simply absent from that locale's list — never Chinese text on
+ * an English, German or Korean page, the same rule the country introductions
+ * follow.
  */
 
 /** Locales the blog can appear in, in switcher order. */
-export const BLOG_LOCALES: Locale[] = ['en', 'de', 'zh', 'tw'];
+export const BLOG_LOCALES: Locale[] = ['en', 'de', 'ko', 'zh', 'tw'];
 
 export type BlogPost = {
   /** Directory name and URL segment. */
@@ -73,13 +75,18 @@ function parseFrontmatter(raw: string): { meta: Record<string, string>; body: st
   return { meta, body: text.slice(match[0].length).trim() };
 }
 
-/** Reading time: CJK text counts characters, Latin text words. */
+/**
+ * Reading time: CJK and Hangul text counts characters, Latin text words.
+ * Hangul syllables are in U+AC00–D7AF (not the CJK ideograph range), so Korean
+ * would otherwise be counted as zero words and always read "1 min".
+ */
+const CJK_TEXT = /[\u3400-\u9fff\uf900-\ufaff\uac00-\ud7af]/g;
 function readingMinutes(body: string): number {
   const text = body
     .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
     .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1');
-  const cjk = (text.match(/[\u3400-\u9fff\uf900-\ufaff]/g) ?? []).length;
-  const words = (text.replace(/[\u3400-\u9fff\uf900-\ufaff]/g, ' ').match(/[\w'-]+/g) ?? []).length;
+  const cjk = (text.match(CJK_TEXT) ?? []).length;
+  const words = (text.replace(CJK_TEXT, ' ').match(/[\w'-]+/g) ?? []).length;
   return Math.max(1, Math.round(cjk / 400 + words / 220));
 }
 
@@ -119,6 +126,7 @@ function articleNames(slug: string, locale: Locale): string[] {
   if (locale === 'tw') return [`${slug}.tw.md`, `${slug}.md`];
   if (locale === 'en') return [`${slug}.en.md`];
   if (locale === 'de') return [`${slug}.de.md`];
+  if (locale === 'ko') return [`${slug}.ko.md`];
   return [`${slug}.md`];
 }
 

@@ -60,12 +60,13 @@ function toDoc(row: DocumentRow): MarkdownDoc {
 
 /**
  * Requested locale first, then the authored source — first match wins. German
- * falls back to English before the Chinese source: a German page should never
- * show a Chinese paragraph, even when the German translation is missing.
+ * and Korean fall back to English before the Chinese source: a German or Korean
+ * page should never show a Chinese paragraph, even when the translation is
+ * missing.
  */
 function localeChain(locale: Locale): Locale[] {
   if (locale === SOURCE_LOCALE) return [locale];
-  if (locale === 'de') return ['de', 'en'];
+  if (locale === 'de' || locale === 'ko') return [locale, 'en'];
   return [locale, SOURCE_LOCALE];
 }
 

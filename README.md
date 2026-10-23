@@ -218,9 +218,20 @@ URL 方案（与生产站点地图一致）：
 - **国家介绍与静态页**：`content/de/{countries,pages}`（37 + 5 篇，同样按当前英文版重译），与机场指南一起用 `node scripts/content-import.mjs --dir <目录> --only de` 导入。
 - **内容回退**：`lib/content.ts` 的 `localeChain()` 让 `de` 回退到 `en`（而不是 `SOURCE_LOCALE` 中文）；机场简介同理。照片说明另有一份 `public/photos/captions.de.json`（按 `IATA → 文件 → 德文说明` 翻译自英文说明），未收录的照片回退英文说明，`lib/airport-photos.ts` 的 `pickCaption()` 负责这条链。
 - **搜索**：`airports.search_blob` 只有中 / 英 / 繁名称，所以德语搜索会把德语地名反查成英文再查一遍（`germanSearchAlias()`：Peking → Beijing、Moskau → Moscow、München → Munich，并接受 `muenchen` 这类无变音符写法），否则德国用户搜不到自己语言的地名。
-- **博客也有德语**：`lib/blog.ts` 的 `BLOG_LOCALES` 现在是 `en / de / zh / tw`，德语译文放在 `public/blog/<slug>/<slug>.de.md`（与 `<slug>.en.md` 并列，71 篇全部翻译）。缺译的文章不会回退到英语或中文，只是不出现在 `/de/blog` 列表里；`/de/blog` 页头入口、文章页、`hreflang`、`lastmod` 与站点地图条目都由文件是否存在自动推导。
+- **博客也有德语**：`lib/blog.ts` 的 `BLOG_LOCALES` 现在是 `en / de / ko / zh / tw`，德语译文放在 `public/blog/<slug>/<slug>.de.md`（与 `<slug>.en.md` 并列，84 篇全部翻译）。缺译的文章不会回退到英语或中文，只是不出现在 `/de/blog` 列表里；`/de/blog` 页头入口、文章页、`hreflang`、`lastmod` 与站点地图条目都由文件是否存在自动推导。
 
 重新翻译的顺序：`content-export --locale en` 导出当前英文长文 → 翻译成 `de/` → `content-import --dir <目录> --only de`（405 篇：363 机场 + 37 国家 + 5 静态页）→ 德语简介写回 `data/de-descriptions.json` 并入库 → 需要重建结构化数据时再 `npm run db:seed`（会优先读取该 JSON，不会丢译文）。
+
+#### 韩语（`ko`）与德语同构
+
+韩语复用德语的整条链路，没有新增数据库列、没有新依赖：
+
+- **UI 文案**：`lib/i18n/messages/ko.ts`（类型派生自中文目录，571 个键），注册进 `catalogs.ts` 后 `/ko` 自动进入路由、语言切换器、`hreflang` 与站点地图。
+- **结构化数据**：`lib/i18n/ko-vocab.json`（233 国家 / 12 地区 / 284 城市 / 60 机场 / 44 航站楼 / 12 设施标签 / 6 交通方式 / 4 机场等级），`lib/i18n/ko-data.ts` 把它包成查找函数；`lib/queries.ts` 的 `pick()` / `pickStrict()` 在 `ko` 时用英文列 + 词表，缺条目回退英文。
+- **数字与日期**：`lib/format.ts` 用 `ko-KR`，客运量用 만/억（`약 6,700만 명`）；`display.ts` 的 `intlLocale('ko-KR')`、`wikipediaLocale('ko')`，韩语页不显示百度百科。
+- **搜索**：`koreanSearchAlias()`（도쿄 → Tokyo、인천 → Incheon），与德语别名同一套机制。
+- **长文**：`content_documents` 405 篇（363 机场 + 37 国家 + 5 静态页）与 `airport_translations` 363 条简介，均从英文版翻译，`updated: 2026-10-23`；简介另存 `data/ko-descriptions.json`，`db:seed` 会优先读取。
+- **博客与照片**：`BLOG_LOCALES` 含 `ko`，译文为 `public/blog/<slug>/<slug>.ko.md`；照片说明为 `public/photos/captions.ko.json`，缺译回退英文说明。
 
 #### 把德语发布到线上
 

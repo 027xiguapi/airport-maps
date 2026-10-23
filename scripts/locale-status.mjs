@@ -59,11 +59,13 @@ function blogCounts(locales) {
       ? '.en.md'
       : locale === 'de'
         ? '.de.md'
-        : locale === 'tw'
-          ? '.tw.md'
-          : locale === 'zh'
-            ? '.md'
-            : null;
+        : locale === 'ko'
+          ? '.ko.md'
+          : locale === 'tw'
+            ? '.tw.md'
+            : locale === 'zh'
+              ? '.md'
+              : null;
   const articles = readdirSync(dir, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name);
