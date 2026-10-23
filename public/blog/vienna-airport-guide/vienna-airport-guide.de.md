@@ -3,7 +3,7 @@ slug: vienna-airport-guide
 title: 'Flughafen Wien: Ein vollständiger Leitfaden zu Terminals, Stadtverkehr und Abflug'
 summary: 'Ein praktischer Leitfaden zum Flughafen Wien (VIE): die Terminals 1, 1A und 3 mit ihren Gate-Bereichen, der City Airport Train, Busse, die S-Bahn S7 und Railjet-Züge in die Stadt, die Schritte Check-in, Gepäckabgabe, Sicherheitskontrolle und Passkontrolle sowie Gepäckaufbewahrung, Zollfreimengen, Geldwechsel und Geldautomaten.'
 date: 2026-10-08
-updated: 2026-10-22
+updated: 2026-10-23
 source: 维也纳机场 (Vienna Airport)
 tags: Flughafen Wien, VIE, Reisen in Österreich, Flughafentransport, Abflug
 cover: images/0.webp
@@ -13,7 +13,9 @@ cover: images/0.webp
 
 Der Flughafen Wien (Flughafencode **VIE**) liegt etwa 18 km vom Stadtzentrum entfernt und ist Österreichs größtes internationales Drehkreuz — und einer der wichtigsten Umsteigepunkte zwischen Mittel- und Osteuropa. Der Flughafen ist nur 16–25 Minuten von der Stadt entfernt, aber Expresszug, S-Bahn, Busse und Taxis tauschen Geschwindigkeit gegen Preis, und die Check-in-Hallen und Sicherheitseingänge sind nach Terminal und Ziel getrennt. Zu wissen, welches Gebäude und welcher Eingang Ihre sind, spart echte Zeit.
 
-Dieser Leitfaden behandelt in vier Teilen **die Terminals und Gate-Bereiche**, **den Transport in die Stadt**, **den Abflugablauf** und **die Einrichtungen des Flughafens**.
+Dieser Leitfaden behandelt in fünf Teilen **die Terminals und Gate-Bereiche**, **den Transport in die Stadt**, **den Abflugablauf**, **die Einrichtungen des Flughafens** und **die Planung des Tages rund um den Flug**.
+
+Der Aufbau des Flughafens ist einfacher, als er aussieht: Die Terminals liegen unter einem Dach, die Abflugbereiche oben, die Ankunftsbereiche unten, und die Sicherheitseingänge sind nach Gate-Gruppe geordnet. Wirklich im Voraus entscheiden müssen Sie nur drei Dinge — welches Gebäude Ihr Flug nutzt, wie Sie aus der Stadt anreisen und wie viel Zeit Sie für Check-in und Sicherheitskontrolle einplanen. Sind diese drei Punkte geklärt, können Gepäckaufbewahrung, Zollfreimengen und Geldwechsel bis zur Ankunft am Flughafen warten.
 
 ## 1. Terminals und Gate-Bereiche
 
@@ -45,6 +47,16 @@ Wenn Wien nur ein Zwischenstopp ist, **erfordern internationale Transfers keine 
 ## 2. In die Stadt und zurück
 
 Es gibt fünf Wege vom Flughafen nach Wien: Der **City Airport Train** ist der schnellste, die **Flughafenbusse** bedienen das Stadtzentrum und den Westbahnhof, **S-Bahn S7 und Railjet** bieten das beste Preis-Leistungs-Verhältnis, **Taxis** eignen sich für späte Ankünfte und schweres Gepäck, und **Mietwagen** für eine Rundreise, die in Wien beginnt. Die folgenden Routen, Zeiten und Fahrpreise entsprechen den Veröffentlichungen des Flughafens und der Betreiber; prüfen Sie die Websites der Betreiber am Reisetag.
+
+Wenn Sie nur das Fazit wollen: Nehmen Sie den **CAT**, wenn die Zeit drängt und Sie keine Umsteigeverbindung austüfteln möchten; die **S7**, wenn zuerst das Budget zählt und zehn Minuten mehr in Ordnung sind; einen **Railjet**, wenn die nächste Etappe ein inländischer Fernzug ist; den **Bus**, wenn Sie in Richtung Westbahnhof oder Donauzentrum wohnen; ein **Taxi** nach einer späten Landung mit schwerem Gepäck. Die folgende Tabelle vergleicht die Optionen, die Abschnitte danach nehmen jede einzelne durch.
+
+| Verkehrsmittel | In die Stadt | Einzelfahrt | Geeignet für |
+| --- | --- | --- | --- |
+| CAT (City Airport Train) | 16 Min. nach Wien Mitte | 14,90 € | Zeitdruck, keine Umstiege |
+| S-Bahn S7 | ca. 25 Min. nach Wien Mitte | ca. 5 € | Budget zuerst, etwas langsamer ist in Ordnung |
+| Railjet | 15 Min. nach Wien Hauptbahnhof | ÖBB-Tagespreis | Anschluss an einen inländischen Fernzug |
+| Flughafenbus | 20–40 Min., je nach Haltestelle | ca. 8 € | Unterkunft in Richtung Westbahnhof oder Donauzentrum |
+| Taxi | ca. 20–30 Min. | nach Taxameter | Späte Ankünfte, Gruppen, schweres Gepäck |
 
 ### 1. City Airport Train (CAT) — am schnellsten
 
@@ -165,6 +177,8 @@ Die Mietwagenschalter liegen gemeinsam auf **Ebene 0 des Parkhauses P4**, wo Her
 
 Der übliche Ablauf ist **einchecken → Gepäck abgeben → Sicherheitskontrolle → (bei Nicht-Schengen-Flügen) Passkontrolle → boarden**. Seien Sie 2 Stunden vor einem Schengen-Abflug und 3 Stunden vor einem Nicht-Schengen- oder Langstreckenflug am Flughafen; in der Hochsaison und an Feiertagen rechnen Sie eine halbe Stunde mehr.
 
+Die zusätzliche Stunde für einen Langstreckenflug ist keine Vorsicht, sondern gerechtfertigt. Wien trennt die **Schengen- und die Nicht-Schengen-Abläufe** vollständig: Ein Schengen-Flug passiert die Sicherheitskontrolle und geht dann zum Gate, während ein Nicht-Schengen-Flug nach der Sicherheitskontrolle in einem anderen Teil des Gebäudes noch einmal zur Passkontrolle ansteht. Check-in, Gepäckabgabe, Sicherheitskontrolle, Passkontrolle und der Weg zum Gate summieren sich — und wenn Reisepass, Visum, Bordkarte und Gepäckabschnitt in derselben Tasche stecken, entfällt jedes Suchen an den Kontrollpunkten.
+
 ### 1. Check-in
 
 ![Check-in am Flughafen Wien: Ein Mitarbeiter hilft Passagieren an einem Check-in-Schalter](./images/7.webp)
@@ -203,7 +217,11 @@ Hinter der Sicherheitskontrolle gibt es Geschäfte und Restaurants im Abflugbere
 - Für **Schengen-Staaten** nutzen Sie die Gates **B, C und F**.
 - Für **Nicht-Schengen-Staaten** nutzen Sie die Gates **D und G**, und Sie müssen vor dem Weitergehen zum Gate die **Passkontrolle** passieren.
 
+Reisende mit einem Nicht-EU-Reisepass müssen vor der Passkontrolle in der Regel außerdem die **EES-Registrierung** (Fingerabdrücke und Gesichtsbild) an einem Selbstbedienungsterminal abschließen. Bei der ersten Einreise kostet das einige Minuten zusätzlich — planen Sie diese Zeit bei einer knappen Umsteigeverbindung ein.
+
 ## 4. Einrichtungen des Flughafens und praktische Informationen
+
+Die Einrichtungen folgen einer einfachen Regel: **Die Abflugebene ist für Check-in und Sicherheitskontrolle zuständig, die Ankunftsebene für Gepäck, Auskunft und Bodenverkehr**, und Restaurants, Geschäfte und Sitzgelegenheiten konzentrieren sich im Abflugbereich hinter der Sicherheitskontrolle. Gepäckaufbewahrung, der Zollstempel für die Rückerstattung und das Fundbüro liegen alle auf der Ankunftsebene 0 und rund um Terminal 1; sobald Sie die Sicherheitskontrolle passiert haben, sind nur noch die Dienste im Abflugbereich erreichbar. Die folgenden Abschnitte sind von der häufigsten zur seltensten Nutzung geordnet.
 
 ### Auskunft und Gepäckservices
 
@@ -278,6 +296,22 @@ Geldautomaten gibt es in der Ankunftshalle, an den Gates C/D/F/G, im Plaza, im P
 - **WLAN:** deckt das gesamte Terminal ab, sodass Sie während des Wartens Flüge prüfen und Nachrichten nach Hause schicken können.
 - **Strom und Arbeiten:** An den Gates F und G gibt es eigene Arbeitsplätze, an denen Sie ein Laptop anschließen und nutzen können.
 - **SIM-Karten und Reparaturen:** Mr. Mobile bietet Reparaturen für Telefone, Tablets und Laptops, Leihgeräte und Prepaid-SIM-Karten.
+
+## 5. Den Tag um den Flug herum planen
+
+Alles oben Genannte läuft auf drei Situationen hinaus. Jede hat ein eigenes Zeitbudget, aber alle teilen eine Regel: **Klären Sie zuerst Terminal und Gate, dann wählen Sie das Verkehrsmittel.**
+
+### Ankunft und direkt in die Stadt
+
+Bei einer Landung am Tag und leichtem Gepäck ist die **S7** der einfachste Weg hinein: Folgen Sie den S-Bahn-Schildern hinunter zum Bahnsteig, kaufen Sie eine Fahrkarte nach Wien Mitte, und etwa fünfundzwanzig Minuten später sitzen Sie in der U-Bahn. Nehmen Sie den **CAT**, wenn Sie knapp bei Zeit sind oder mit Kindern reisen; nach einer späten Landung stellen Sie sich lieber draußen vor der Ankunftshalle beim Taxi an, statt dem letzten Zug hinterherzujagen, um ein paar Euro zu sparen.
+
+### Vom Stadtzentrum zum Flug
+
+CAT und S7 fahren beide von Wien Mitte ab; der CAT ist etwa zehn Minuten schneller und kostet mehr als das Doppelte. Die Zeit, auf die es wirklich ankommt, ist die **am Flughafen**: Rechnen Sie vom Gate rückwärts über Sicherheitskontrolle, Gepäckabgabe und Check-in — 2 Stunden für einen Schengen-Flug, 3 für einen Nicht-Schengen-Flug. Eine halbe Stunde mehr in der Stadt bringt deutlich weniger als eine halbe Stunde mehr am Flughafen. Hochsaison, Feiertage und der Andrang am frühen Morgen verdienen jeweils noch eine halbe Stunde.
+
+### Umsteigen in Wien
+
+Ein Anschlussflug von international zu international erfordert keine Einreise nach Österreich: Folgen Sie den „Transfer“-Schildern durch die Transitzone. Ist der Weiterflug jedoch ein Schengen-Flug, reisen Sie ein und passieren die Sicherheitskontrolle erneut — kalkulieren Sie die Umsteigezeit dann wie eine Ankunft. Zwei Stunden zwischen den Flügen sind komfortabel; planen Sie drei ein, wenn Sie das Terminal wechseln oder ein Gepäckstück wieder abholen und neu aufgeben müssen.
 
 ## Weiterführende Links
 

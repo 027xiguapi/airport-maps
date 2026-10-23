@@ -213,14 +213,23 @@ URL 方案（与生产站点地图一致）：
 - **UI 文案**：`lib/i18n/messages/de.ts` 是完整翻译（类型派生自中文目录，键缺失即编译失败），在 `catalogs.ts` 注册后 `/de` 自动进入路由、切换器、`hreflang` 与站点地图。
 - **结构化数据**：`lib/i18n/de-vocab.json` 是唯一词表（国家、地区、城市、机场、航站楼名、设施标签、交通方式、机场等级），`lib/i18n/de-data.ts` 把它包成查找函数，`lib/queries.ts` 的 `pick()` / `pickStrict()` 在 `locale === 'de'` 时用英文列 + 对应词表（`germanCountry`、`germanCity`、`germanTerminalName`、`germanGateRange`…）。没有条目时**回退英文名**，绝不会回退中文。
 - **数字与日期**：`lib/format.ts` 用 `de-DE`（小数逗号、「ca. 67 Millionen」、「22. Oktober 2026」）；语言无关的标点 / 维基语言等判断集中在 `lib/i18n/display.ts`（`isCjkLocale`、`intlLocale`、`wikipediaLocale`、`showsBaike`），德语页链到 de.wikipedia、不显示百度百科。
-- **机场简介**：`scripts/seed.mjs` 为每座机场同时写入 `airport_translations.locale='de'`（`scripts/_de.mjs` 从结构化字段生成，和英文简介同一套数据来源）。重建数据库（`npm run db:seed`）不会丢。
-- **机场指南**：`node scripts/generate-de-guides.mjs`（`npm run de:guides`）为 363 座机场生成 `content_documents` 的 `locale='de'` 行，同样只从仓库数据出发（机场记录、编译事实、OpenFlights 航线快照与最近机场计算），没有编辑性内容就不写，而不是猜测。生成物带固定标记，`--refresh` 只重写这些行，**手写的德语译文可以逐条替换、不会被覆盖**。
-- **国家介绍与静态页**：`content/de/{countries,pages}`（37 + 5 篇，从英文版翻译），用 `node scripts/content-import.mjs --only de` 导入。
+- **机场简介**：`data/de-descriptions.json`（IATA → 德文，363 条）保存**从英文 `description_md` 翻译**的简介；`scripts/seed.mjs` 优先用它，文件不存在时才回退到 `scripts/_de.mjs` 的数据生成模板。因此 `npm run db:seed` 不会把译文覆盖成生成的德语。
+- **机场指南**：363 篇 `locale='de'` 的 `content_documents` 是**线上英文编辑稿的完整翻译**（不是数据生成稿）。工作流：`content-export --locale en --out <目录>` 导出英文 → 在 `<目录>/de/airports/` 写译文（前言 `updated` 用翻译日期）→ `content-import --dir <目录> --only de`。`npm run de:guides` 仍保留为数据驱动兜底：它只写缺失的德语指南、带生成标记，译文行不会被它覆盖。
+- **国家介绍与静态页**：`content/de/{countries,pages}`（37 + 5 篇，同样按当前英文版重译），与机场指南一起用 `node scripts/content-import.mjs --dir <目录> --only de` 导入。
 - **内容回退**：`lib/content.ts` 的 `localeChain()` 让 `de` 回退到 `en`（而不是 `SOURCE_LOCALE` 中文）；机场简介同理。照片说明另有一份 `public/photos/captions.de.json`（按 `IATA → 文件 → 德文说明` 翻译自英文说明），未收录的照片回退英文说明，`lib/airport-photos.ts` 的 `pickCaption()` 负责这条链。
 - **搜索**：`airports.search_blob` 只有中 / 英 / 繁名称，所以德语搜索会把德语地名反查成英文再查一遍（`germanSearchAlias()`：Peking → Beijing、Moskau → Moscow、München → Munich，并接受 `muenchen` 这类无变音符写法），否则德国用户搜不到自己语言的地名。
 - **博客也有德语**：`lib/blog.ts` 的 `BLOG_LOCALES` 现在是 `en / de / zh / tw`，德语译文放在 `public/blog/<slug>/<slug>.de.md`（与 `<slug>.en.md` 并列，71 篇全部翻译）。缺译的文章不会回退到英语或中文，只是不出现在 `/de/blog` 列表里；`/de/blog` 页头入口、文章页、`hreflang`、`lastmod` 与站点地图条目都由文件是否存在自动推导。
 
-重新生成的顺序：`npm run db:seed`（重建结构化数据与德语简介）→ `node scripts/content-import.mjs --only de`（国家介绍 / 静态页）→ `npm run de:guides`（机场指南）。
+重新翻译的顺序：`content-export --locale en` 导出当前英文长文 → 翻译成 `de/` → `content-import --dir <目录> --only de`（405 篇：363 机场 + 37 国家 + 5 静态页）→ 德语简介写回 `data/de-descriptions.json` 并入库 → 需要重建结构化数据时再 `npm run db:seed`（会优先读取该 JSON，不会丢译文）。
+
+#### 把德语发布到线上
+
+德语分两部分，**代码/静态文件随应用部署**（`lib/i18n/messages/de.ts`、`de-vocab.json`、`de-data.ts`、`public/blog/*.de.md`、`public/photos/captions.de.json`、`lib/blog.ts`、站点地图代码），**数据库行用脚本增量推送**：
+
+1. 演练（只读）：`REMOTE_DATABASE_URL=... npm run de:push`，确认「405 documents / 363 descriptions、目标现有 0、无孤儿简介」
+2. 写入：同上加 `--apply`（可加 `--backup <文件>` 先保存目标现有 de 行）；脚本在单事务里只 upsert `locale='de'` 的行，**不 TRUNCATE、不动 zh/en/tw 与结构化数据**
+3. 再部署/重建应用：`/de` 路由是构建期按 `catalogs.ts` 枚举的，构建时 `DATABASE_URL` 指向生产库，新语言页面才会被预渲染
+4. 验证：`/de`、`/de/blog`、`sitemap.xml` 里的 `hreflang="de"` 与 `/de/...` 条目；回滚只需删除目标库 `locale='de'` 的行
 
 ### 默认语言与内容源语言是两件事
 

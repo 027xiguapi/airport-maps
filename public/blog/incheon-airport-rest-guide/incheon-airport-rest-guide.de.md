@@ -4,7 +4,6 @@ title: 'Incheon Airport: Wo Sie 24 Stunden am Tag kostenlos ausruhen können'
 summary: Wo Sie am Incheon International Airport rund um die Uhr kostenlos schlafen und entspannen können – die Nap-, Cozy- und Relax-Zonen in T1 und T2 mit den genauen Gate-Angaben sowie die kostenpflichtigen Duschräume mit Preisen, Öffnungszeiten und Ausstattung.
 date: 2026-09-29
 updated: 2026-10-22
-source: 仁川国际机场小红书账号 (Incheon Airport on Xiaohongshu)
 tags: Umsteigen in Incheon, kostenlose Ruhebereiche, Nap Zone, Südkorea-Reisen
 cover: images/3.webp
 ---
@@ -103,5 +102,3 @@ _💡 Ein Tipp: Wenn Ihr Zwischenstopp lang ist, planen Sie Ihre Ruhe- und Dusch
 - **Auf dieser Website**: [Incheon International Airport (ICN)](/airport/ICN), [Südkorea (KR)](/country/KR)
 - **Wikipedia**: [Incheon International Airport](https://en.wikipedia.org/wiki/Incheon_International_Airport)
 - **Baidu Baike**: [Incheon International Airport](https://baike.baidu.com/item/%E4%BB%81%E5%B7%9D%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
-
-Quelle: Der offizielle Xiaohongshu-Account des Incheon Airport

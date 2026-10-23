@@ -3,7 +3,7 @@ slug: vienna-airport-guide
 title: 'Vienna International Airport: A Complete Guide to Terminals, City Transport and Departures'
 summary: 'A practical guide to Vienna International Airport (VIE): terminals 1, 1A and 3 and their gate areas, the City Airport Train, buses, the S7 S-Bahn and Railjet into the city, the check-in, bag drop, security and passport steps, plus left luggage, customs allowances, currency exchange and ATMs.'
 date: 2026-10-08
-updated: 2026-10-22
+updated: 2026-10-23
 source: 维也纳机场 (Vienna Airport)
 tags: Vienna Airport, VIE, Austria travel, airport transport, departure
 cover: images/0.webp
@@ -13,7 +13,9 @@ cover: images/0.webp
 
 Vienna International Airport (airport code **VIE**) sits about 18 km from the city centre and is Austria's largest international hub — and one of the most important transfer points between central and eastern Europe. The airport is only 16–25 minutes from town, but the express train, the S-Bahn, the buses and taxis all trade speed against price, and the check-in halls and security entrances are split by terminal and destination. Knowing which building and which entrance are yours saves real time.
 
-This guide covers **terminals and gate areas**, **transport into the city**, **the departure process** and **airport facilities** in four parts.
+This guide covers **terminals and gate areas**, **transport into the city**, **the departure process**, **airport facilities** and **planning the day around your flight** in five parts.
+
+The airport's layout is simpler than it looks: the terminals sit under one roof, departures are upstairs and arrivals downstairs, and the security entrances are grouped by gate. What actually needs deciding in advance is three things — which building your flight uses, how you get in from the city, and how much time to leave for check-in and security. Settle those and the left luggage, customs allowances and currency exchange can wait until you are there.
 
 ## 1. Terminals and gate areas
 
@@ -30,21 +32,31 @@ Gates are grouped into five piers, and the group decides which security entrance
 | Pier | Gates | Connection to the main building | Flights |
 | --- | --- | --- | --- |
 | B (Terminal 1 side) | B22–B43 | Bus | European Schengen flights |
-| C (west pier, Terminal 1 side) | C31–C42, of which C35–C41 are transfer gates | Airbridge | Mostly Schengen, some international |
+| C (west pier, Terminal 1 side) | C31–C42, of which C35–C41 are transfer gates | Jet bridge | Mostly Schengen, some international |
 | C (west pier, Terminal 1 side) | C71–C75 | Bus, reached via gate C31 | Schengen only |
-| D (east pier, formerly Hall A) | D21–D29 | Airbridge | International flights |
+| D (east pier, formerly Hall A) | D21–D29 | Jet bridge | International flights |
 | D (east pier, formerly Hall A) | D31–D37, D61–D70 | Bus | International flights |
-| F, G (Terminal 3) | F and G gates | Airbridge | Schengen (F) and non-Schengen (G) |
+| F, G (Terminal 3) | F and G gates | Jet bridge | Schengen (F) and non-Schengen (G) |
 
-Airbridge gates walk straight onto the aircraft; gates marked as bus gates mean a trip downstairs and a shuttle ride, which belongs in your boarding time. C71–C75 is a separate bus-gate group reached through gate C31, so allow extra walking and waiting time if you are departing from there.
+Gates with a jet bridge walk straight onto the aircraft; gates marked as bus gates mean a trip downstairs and a shuttle ride, which belongs in your boarding time. C71–C75 is a separate bus-gate group reached through gate C31, so allow extra walking and waiting time if you are departing from there.
 
 ### International transfers: change planes without entering Austria
 
-If Vienna is only a stopover, **international transfers do not require entering Austria**. Arriving at pier C on an international flight, follow the signs down to the **Transitzone** on the ground floor and take the shuttle bus to pier D for your onward international flight. Arriving at pier D and continuing on another international flight, you make the same transfer inside pier D using the Transitzone and the shuttle bus. At pier D the transit area and the passport control area sit at the entrances to the halls and at the airbridge and bus gates — follow the "Transfer" signs.
+If Vienna is only a stopover, **international transfers do not require entering Austria**. Arriving at pier C on an international flight, follow the signs down to the **Transitzone** on the ground floor and take the shuttle bus to pier D for your onward international flight. Arriving at pier D and continuing on another international flight, you make the same transfer inside pier D using the Transitzone and the shuttle bus. At pier D the transit area and the passport control area sit at the entrances to the halls and at the jet bridge and bus gates — follow the "Transfer" signs.
 
 ## 2. Getting into the city and back
 
 There are five ways into Vienna from the airport: the **City Airport Train** is quickest, the **airport buses** cover the city centre and the western station, the **S7 S-Bahn and Railjet trains** give the best value, **taxis** suit late arrivals and heavy bags, and **car hire** suits a road trip that starts in Vienna. The routes, times and fares below are as published by the airport and the operators; check the operators' sites on the day you travel.
+
+If you only want the conclusion: take the **CAT** when time matters and you would rather not work out a change; take the **S7** when budget comes first and ten extra minutes are fine; take a **Railjet** when the next leg is a domestic long-distance train; take the **bus** if you are staying towards Westbahnhof or Donauzentrum; take a **taxi** after a late landing with heavy bags. The table compares them; the sections below take each one in turn.
+
+| Option | To the centre | One-way fare | Best for |
+| --- | --- | --- | --- |
+| City Airport Train (CAT) | 16 min to Wien Mitte | €14.90 | Time pressure, no changes |
+| S7 S-Bahn | about 25 min to Wien Mitte | about €5 | Budget first, slower is fine |
+| Railjet | 15 min to Wien Hauptbahnhof | ÖBB fare of the day | Connecting to a domestic long-distance train |
+| Airport bus | 20–40 min depending on stop | about €8 | Staying towards Westbahnhof or Donauzentrum |
+| Taxi | about 20–30 min | metered | Late arrivals, groups, heavy bags |
 
 ### 1. City Airport Train (CAT) — fastest
 
@@ -165,6 +177,8 @@ The rental desks are together on **level 0 of multi-storey car park P4**, where 
 
 The standard sequence is **check in → drop your bags → security → (non-Schengen flights) passport control → board**. Arrive 2 hours before a Schengen departure and 3 hours before a non-Schengen or long-haul flight; add half an hour in peak season and around public holidays.
 
+The extra hour for a long-haul flight is not padding. Vienna separates the **Schengen and non-Schengen flows** completely: a Schengen flight clears security and walks to the gate, while a non-Schengen flight queues again for passport control in a different part of the building, after security. Check-in, bag drop, security, passport control and the walk to the gate add up, and keeping passport, visa, boarding pass and bag receipt in one pocket saves a search at every checkpoint.
+
 ### 1. Check-in
 
 ![Vienna Airport check-in: an agent helping passengers at a check-in counter](./images/7.webp)
@@ -203,7 +217,11 @@ Past security there are shops and restaurants in the departure area; friends and
 - For **Schengen countries**, use gates **B, C and F**.
 - For **non-Schengen countries**, use gates **D and G**, and you must pass through **passport control** before continuing to the gate.
 
+Travellers on non-EU passports will usually also need to complete **EES registration** (fingerprints and a facial image) at a self-service kiosk before passport control. On a first entry this takes a few extra minutes — build it into a tight connection.
+
 ## 4. Airport facilities and practical information
+
+Vienna's facilities follow a simple rule: **the departures level handles check-in and security, the arrivals level handles bags, information and ground transport**, and the restaurants, shops and seating are concentrated airside. Left luggage, the customs stamp and lost property are all on arrivals level 0 and around Terminal 1; once you are through security, only the airside services are within reach. The sections below run from most to least used.
 
 ### Enquiries and baggage services
 
@@ -278,6 +296,22 @@ ATMs are at the arrivals hall, gates C/D/F/G, the Plaza, car park 8, Terminals 1
 - **Wi-Fi:** covers the whole terminal, so you can check flights and message home while you wait.
 - **Power and work:** gates F and G have dedicated work spaces where you can plug in and use a laptop.
 - **SIM cards and repairs:** Mr. Mobile offers phone, tablet and laptop repairs, loan handsets and prepaid SIM cards.
+
+## 5. Planning the day around your flight
+
+All of the above comes down to three trips. Each has a different time budget, but they share one rule: **confirm the terminal and the gate first, then choose the transport.**
+
+### Arriving and going straight into the city
+
+For a daytime landing with light luggage, the S7 is the easiest way in: follow the S-Bahn signs down to the platform, buy a ticket to Wien Mitte, and you are on the metro about twenty-five minutes later. Take the CAT if you are short of time or travelling with children; after a late landing, queue for a taxi outside arrivals rather than chasing the last train to save a few euros.
+
+### Catching a flight from the city
+
+Both the CAT and the S7 leave from Wien Mitte; the CAT is about ten minutes faster and costs more than twice as much. The time that actually matters is **at the airport**: work backwards from the gate through security, bag drop and check-in — 2 hours for a Schengen flight, 3 for a non-Schengen one. Adding half an hour in the city is far less useful than adding it at the airport. Peak season, public holidays and the early-morning bank each deserve another half hour.
+
+### Connecting in Vienna
+
+An international-to-international connection does not require entering Austria: follow the Transfer signs through the transit zone. If the onward flight is Schengen, however, you do enter and re-clear security, so budget the connection as an arrival. Two hours between flights is comfortable; allow three if you change terminals or need to reclaim and re-check a bag.
 
 ## Related links
 

@@ -4,7 +4,6 @@ title: Incheon Airport: Where to Rest Free, 24 Hours a Day
 summary: Where to sleep and unwind free at Incheon International Airport around the clock — the Nap, Cozy and Relax Zones in T1 and T2 with their gate-by-gate locations, plus the paid Shower Rooms, prices, opening hours and what is provided.
 date: 2026-09-29
 updated: 2026-10-22
-source: 仁川国际机场小红书账号 (Incheon Airport on Xiaohongshu)
 tags: Incheon transit, free rest areas, Nap Zone, South Korea travel
 cover: images/3.webp
 ---
@@ -103,5 +102,3 @@ _💡 A tip: if your layover is long, plan your rest and shower times in advance
 - **On this site**: [Incheon International Airport (ICN)](/airport/ICN), [South Korea (KR)](/country/KR)
 - **Wikipedia**: [Incheon International Airport](https://en.wikipedia.org/wiki/Incheon_International_Airport)
 - **Baidu Baike**: [Incheon International Airport](https://baike.baidu.com/item/%E4%BB%81%E5%B7%9D%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
-
-Source: Incheon Airport's official Xiaohongshu account

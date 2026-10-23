@@ -263,6 +263,20 @@ const airportFacts = (() => {
   }
 })();
 
+/**
+ * German airport descriptions translated from the English `description_md`
+ * (data/de-descriptions.json, IATA -> text). When present it wins over the
+ * data-derived German template in scripts/_de.mjs, so a re-seed keeps the
+ * translated wording instead of falling back to generated German.
+ */
+const germanDescriptions = (() => {
+  try {
+    return JSON.parse(readFileSync(join(ROOT, 'data', 'de-descriptions.json'), 'utf8'));
+  } catch {
+    return null;
+  }
+})();
+
 /** "a, b and c" */
 function joinList(items) {
   if (items.length <= 1) return items[0] ?? '';
@@ -436,18 +450,19 @@ try {
         a.desc,
         englishDescription(a, paxM, distanceKm, enTerms.transportModes),
         toHant(a.desc),
-        curatedDescriptionDe(
-          {
-            ...a,
-            // Curated records store the Chinese city only; the English name
-            // lives in CITY_EN, the same table the en description uses.
-            cityEn: a.cityEn ?? CITY_EN[a.city],
-            countryNameEn: countries[a.country]?.nameEn,
-          },
-          paxM,
-          distanceKm,
-          deVocab.transportModes
-        ),
+        germanDescriptions?.[a.iata] ??
+          curatedDescriptionDe(
+            {
+              ...a,
+              // Curated records store the Chinese city only; the English name
+              // lives in CITY_EN, the same table the en description uses.
+              cityEn: a.cityEn ?? CITY_EN[a.city],
+              countryNameEn: countries[a.country]?.nameEn,
+            },
+            paxM,
+            distanceKm,
+            deVocab.transportModes
+          ),
       ]
     );
 
@@ -536,7 +551,8 @@ try {
         descZh,
         descEn,
         toHant(descZh),
-        directoryDescriptionDe(a, countries[a.country], airportFacts[a.iata]),
+        germanDescriptions?.[a.iata] ??
+          directoryDescriptionDe(a, countries[a.country], airportFacts[a.iata]),
       ]
     );
   }
