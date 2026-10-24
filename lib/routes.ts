@@ -4,6 +4,8 @@ import { getAirportsByCodes } from './queries';
 import type { AirportRouteMap, RouteDestination } from './types';
 import { localizedPath, type Locale } from './i18n/config';
 import { germanAirportName, germanCity, germanCountry } from './i18n/de-data';
+import { frenchAirportName, frenchCity, frenchCountry } from './i18n/fr-data';
+import { italianAirportName, italianCity, italianCountry } from './i18n/it-data';
 import { koreanAirportName, koreanCity, koreanCountry } from './i18n/ko-data';
 
 /**
@@ -157,6 +159,19 @@ export async function getAirportRouteMap(
   if (!raw || raw.destinations.length === 0) return null;
 
   const world = loadWorldAirports();
+  // German/French/Italian/Korean apply their vocabulary to the bulk index too
+  // (Peking / Pékin / Pechino, Vereinigte Staaten / États-Unis / Stati Uniti,
+  // 베이징 / 미국); the airport name stays international.
+  const vocab =
+    locale === 'de'
+      ? { airport: germanAirportName, city: germanCity, country: germanCountry }
+      : locale === 'fr'
+        ? { airport: frenchAirportName, city: frenchCity, country: frenchCountry }
+        : locale === 'it'
+          ? { airport: italianAirportName, city: italianCity, country: italianCountry }
+          : locale === 'ko'
+            ? { airport: koreanAirportName, city: koreanCity, country: koreanCountry }
+            : null;
   const destinations: RouteDestination[] = [];
   for (const entry of raw.destinations) {
     const place = world.get(entry.iata);
@@ -165,26 +180,9 @@ export async function getAirportRouteMap(
     if (!place) continue;
     destinations.push({
       iata: entry.iata,
-      // German/Korean apply their vocabulary to the bulk index too (Peking /
-      // 베이징, Vereinigte Staaten / 미국); the airport name stays international.
-      name:
-        locale === 'de'
-          ? germanAirportName(place.name)
-          : locale === 'ko'
-            ? koreanAirportName(place.name)
-            : place.name,
-      city:
-        locale === 'de'
-          ? germanCity(place.city)
-          : locale === 'ko'
-            ? koreanCity(place.city)
-            : place.city,
-      country:
-        locale === 'de'
-          ? germanCountry(place.country)
-          : locale === 'ko'
-            ? koreanCountry(place.country)
-            : place.country,
+      name: vocab ? vocab.airport(place.name) : place.name,
+      city: vocab ? vocab.city(place.city) : place.city,
+      country: vocab ? vocab.country(place.country) : place.country,
       countryCode: place.iso2,
       lat: place.lat,
       lng: place.lng,

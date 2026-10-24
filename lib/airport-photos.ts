@@ -189,12 +189,14 @@ function twCaptionIndex(): Map<string, Map<string, string>> {
 /**
  * Translated captions for a non-Chinese language: IATA → file name → caption,
  * `public/photos/captions.<locale>.json`. These files are authored (translated
- * from the English captions), not derived, because German/Korean are separate
- * languages rather than another script for the Chinese source.
+ * from the English captions), not derived, because German, French, Italian and
+ * Korean are separate languages rather than another script for the Chinese source.
  */
 const translatedCaptions = new Map<Locale, Map<string, Map<string, string>>>();
 
-function translatedCaptionIndex(locale: 'de' | 'ko'): Map<string, Map<string, string>> {
+function translatedCaptionIndex(
+  locale: 'de' | 'fr' | 'it' | 'ko'
+): Map<string, Map<string, string>> {
   const cached = translatedCaptions.get(locale);
   if (cached) return cached;
   const index = new Map<string, Map<string, string>>();
@@ -219,14 +221,18 @@ function pickCaption(iata: string, file: string, locale: Locale): string | null 
     const tw = twCaptionIndex().get(iata)?.get(file);
     if (tw) return tw;
   }
-  if (locale === 'de' || locale === 'ko') {
+  if (locale === 'de' || locale === 'fr' || locale === 'it' || locale === 'ko') {
     const translated = translatedCaptionIndex(locale).get(iata)?.get(file);
     if (translated) return translated;
   }
   const authored = captionIndex().get(iata)?.get(file);
   if (!authored) return null;
-  // German/Korean fall back to the English caption, never to the Chinese one.
-  const fallback = locale === 'de' || locale === 'ko' ? 'en' : SOURCE_LOCALE;
+  // German, French, Italian and Korean fall back to the English caption, never
+  // to the Chinese one.
+  const fallback =
+    locale === 'de' || locale === 'fr' || locale === 'it' || locale === 'ko'
+      ? 'en'
+      : SOURCE_LOCALE;
   return authored[locale] ?? authored[fallback] ?? authored[SOURCE_LOCALE] ?? null;
 }
 

@@ -3,9 +3,9 @@ import type { Locale } from './config';
 /**
  * Script and punctuation helpers for the UI. The site's tests of "is this a
  * Chinese page?" were written as `locale === 'en'` back when only English and
- * Chinese shipped; German and Korean are not, so the question is really about
- * the punctuation convention, not about English. These helpers keep that in one
- * place as more languages are added.
+ * Chinese shipped; German, French and Korean are not, so the question is really
+ * about the punctuation convention, not about English. These helpers keep that
+ * in one place as more languages are added.
  */
 
 /**
@@ -36,6 +36,10 @@ export function intlLocale(locale: Locale): string {
       return 'zh-TW';
     case 'de':
       return 'de-DE';
+    case 'fr':
+      return 'fr-FR';
+    case 'it':
+      return 'it-IT';
     case 'ko':
       return 'ko-KR';
     default:
@@ -45,12 +49,14 @@ export function intlLocale(locale: Locale): string {
 
 /**
  * Wikipedia language edition to link to. Traditional Chinese pages use the
- * Chinese edition with the article's Traditional title; German and Korean use
- * de./ko.wikipedia with the localized name.
+ * Chinese edition with the article's Traditional title; German, French, Italian
+ * and Korean use de./fr./it./ko.wikipedia with the localized name.
  */
-export function wikipediaLocale(locale: Locale): 'en' | 'zh' | 'de' | 'ko' {
+export function wikipediaLocale(locale: Locale): 'en' | 'zh' | 'de' | 'fr' | 'it' | 'ko' {
   if (locale === 'en') return 'en';
   if (locale === 'de') return 'de';
+  if (locale === 'fr') return 'fr';
+  if (locale === 'it') return 'it';
   if (locale === 'ko') return 'ko';
   return 'zh';
 }
@@ -60,5 +66,5 @@ export function wikipediaLocale(locale: Locale): 'en' | 'zh' | 'de' | 'ko' {
  * Korean audiences, so its link is offered only on the Chinese and English pages.
  */
 export function showsBaike(locale: Locale): boolean {
-  return locale !== 'tw' && locale !== 'de' && locale !== 'ko';
+  return locale !== 'tw' && locale !== 'de' && locale !== 'fr' && locale !== 'it' && locale !== 'ko';
 }

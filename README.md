@@ -1,6 +1,6 @@
 # 全球机场地图 · World Airport Maps
 
-全球机场导航站点（生产域名 **worldairportmap.com**）：按国家 / 地区浏览 **363 座机场、92 个国家 / 地区**，查看每座机场的**航站楼平面示意图**、登机口范围、主要航司、地面交通与设施；可交互的**直飞航线图**与目的地列表；三个地理计算工具；以及用 **Markdown** 维护的长文（366 篇机场指南：60 篇精编手写 + 303 篇数据驱动起步稿、37 篇国家介绍）。**默认语言为英语**，同时提供完整中文版、繁体中文版与**德语版（`/de`）**。
+全球机场导航站点（生产域名 **worldairportmap.com**）：按国家 / 地区浏览 **363 座机场、92 个国家 / 地区**，查看每座机场的**航站楼平面示意图**、登机口范围、主要航司、地面交通与设施；可交互的**直飞航线图**与目的地列表；三个地理计算工具；以及用 **Markdown** 维护的长文（366 篇机场指南：60 篇精编手写 + 303 篇数据驱动起步稿、37 篇国家介绍）。**默认语言为英语**，同时提供完整中文版、繁体中文版、**德语版（`/de`）**、**韩语版（`/ko`）**、**法语版（`/fr`）**与**意大利语版（`/it`）**。
 
 由原来的单文件静态页面（`legacy/index.html`，哈希路由 + 内嵌 JS 数据）重构为 **Next.js App Router + PostgreSQL**：
 
@@ -19,12 +19,15 @@
 | `/zh/...` | 同一批页面的中文版 |
 | `/tw/...` | 繁体中文版（`hreflang="zh-hant"`） |
 | `/de/...` | 德语版（`hreflang="de"`） |
+| `/ko/...` | 韩语版（`hreflang="ko"`） |
+| `/fr/...` | 法语版（`hreflang="fr"`） |
+| `/it/...` | 意大利语版（`hreflang="it"`） |
 | `/airports` | 机场目录：搜索 + 国家筛选 + 排序 + 分页（普通链接与 GET 表单，无 JS 也可用） |
 | `/countries`、`/country/CN` | 国家索引（按区域分组）与单个国家 / 地区页 |
 | `/route/PEK` | 航线图页：直飞目的地的航线地图 + 目的地表 + CSV/JSON 下载 |
 | `/tool`、`/tool/{coordinate-converter,dms-converter,distance-calculator}` | 坐标转换（WGS84 / GCJ02 / BD09）、度分秒转换、大圆距离计算 |
 | `/about`、`/contact`、`/privacy`、`/terms` | Markdown 静态页 |
-| `/blog`、`/blog/<slug>` | 旅行笔记（中 / 英 / 德，另有繁中派生版） |
+| `/blog`、`/blog/<slug>` | 旅行笔记（中 / 英 / 德 / 韩 / 法 / 意，另有繁中派生版） |
 | `/api/search`、`/api/routes/[code]` | 搜索联想接口；航线数据的 CSV / JSON 导出（`?locale=` 选语言、`?format=json`） |
 | `/sitemap.xml`、`/robots.txt` | 按语言列出的站点地图与抓取规则 |
 
@@ -140,7 +143,8 @@ npm run build && npm start
 countries             92 行   国家 / 地区（code、中文名、name_en、region、region_en、国旗）
 airports             363 行   机场（iata、slug、中英文名、城市、登机口数、年旅客量、
                               距市中心、更新时间、search_blob）
-airport_translations 1452 行  机场简介（按语言存放的 Markdown：zh / en / tw / de）
+airport_translations 1452 行  机场简介（按语言存放的 Markdown；已 seed 的语言各 363 行，
+                              当前库为 zh / en / tw / de）
 terminals            174 行   航站楼（代码、中英文名、登机口范围（含英文）、登机口数、
                               主要航司（含英文）、是否卫星厅）
 terminal_amenities   413 行   航站楼设施（label + label_en）
@@ -164,7 +168,7 @@ ground_transport     216 行   地面交通（name/description + 英文列，可
 
 ### 语言注册表与 URL 方案
 
-`lib/i18n/config.ts` 的 `LOCALES` 注册了 24 个语言代码（顺序即语言切换器顺序），但**只有 `lib/i18n/catalogs.ts` 里登记了消息目录的语言才真正发布**——当前是 `en` + `de`（德语，`htmlLang=de`，URL 前缀 `/de`）+ `zh` + `tw`（繁体中文，`htmlLang=zh-hant`，URL 前缀 `/tw`）。未发布的前缀会被剥掉并跳到访客的最佳可用语言，而不是 404，也不会出现「同一批英文页面挂在 /es 下」的重复收录。
+`lib/i18n/config.ts` 的 `LOCALES` 注册了 24 个语言代码（顺序即语言切换器顺序），但**只有 `lib/i18n/catalogs.ts` 里登记了消息目录的语言才真正发布**——当前是 `en` + `de`（德语，`htmlLang=de`，URL 前缀 `/de`）+ `fr`（法语，`htmlLang=fr`，URL 前缀 `/fr`）+ `it`（意大利语，`htmlLang=it`，URL 前缀 `/it`）+ `ko`（韩语，`htmlLang=ko`，URL 前缀 `/ko`）+ `zh` + `tw`（繁体中文，`htmlLang=zh-hant`，URL 前缀 `/tw`）。未发布的前缀会被剥掉并跳到访客的最佳可用语言，而不是 404，也不会出现「同一批英文页面挂在 /es 下」的重复收录。
 
 URL 方案（与生产站点地图一致）：
 
@@ -178,9 +182,9 @@ URL 方案（与生产站点地图一致）：
 | `/es/...` | 已注册但未发布（或任意两位语言前缀）：剥离前缀后跳到访客最佳可用语言 |
 | 深层裸路径（`/airport/PEK`） | 访问过某个语言后由 `preferred-locale` Cookie 记住选择；未设置时按 `Accept-Language` 判断 |
 
-每页都输出 `hreflang`（`en`、`de`、`zh-hans`、`zh-hant`、`x-default`）与按语言区分的 `canonical`；`sitemap.xml` 为每个地址的**每种已发布语言**各列一条 `<url>`（`/de/...` 也是独立条目，不只是 alternates）。`proxy.ts` 跳过 `/api`、`/_next` 与带扩展名的静态文件。
+每页都输出 `hreflang`（`en`、`de`、`fr`、`it`、`ko`、`zh-hans`、`zh-hant`、`x-default`）与按语言区分的 `canonical`；`sitemap.xml` 为每个地址的**每种已发布语言**各列一条 `<url>`（`/de/...`、`/fr/...`、`/it/...` 也是独立条目，不只是 alternates）。`proxy.ts` 跳过 `/api`、`/_next` 与带扩展名的静态文件。
 
-页头右上角的语言切换器用 `<details>` 实现（**无 JS 也能用**），列出**全部 24 种已注册语言**：已发布的 4 种是指向「当前页面等价路径」的真实链接（`components/LanguageSwitcher.tsx` 从 pathname 剥掉语言段再拼回去），其余 20 种作为「筹备中」条目**禁用显示**（无 href，只有 `lang` / `hreflang` 代码与 tooltip），既把后续语言排期摆在明面上，又不会把访客点进一个会被 `proxy.ts` 跳回原语言的前缀。每行右侧的小字是 `LOCALE_META[locale].htmlLang`，即该语言的 hreflang 代码（`de`、`zh-hans`、`zh-hant`…）；点击已发布语言时顺手写入 `preferred-locale` Cookie。
+页头右上角的语言切换器用 `<details>` 实现（**无 JS 也能用**），列出**全部 24 种已注册语言**：已发布的 7 种是指向「当前页面等价路径」的真实链接（`components/LanguageSwitcher.tsx` 从 pathname 剥掉语言段再拼回去），其余 17 种作为「筹备中」条目**禁用显示**（无 href，只有 `lang` / `hreflang` 代码与 tooltip），既把后续语言排期摆在明面上，又不会把访客点进一个会被 `proxy.ts` 跳回原语言的前缀。每行右侧的小字是 `LOCALE_META[locale].htmlLang`，即该语言的 hreflang 代码（`de`、`fr`、`it`、`zh-hans`、`zh-hant`…）；点击已发布语言时顺手写入 `preferred-locale` Cookie。
 
 **之所以禁用而不是给链接**：hreflang 与站点地图只输出已发布语言（未发布的 URL 会重定向，指过去等于浪费抓取预算），所以「预备」的是切换器的 24 项清单与注册表，而不是 24 份 hreflang。
 
@@ -218,7 +222,7 @@ URL 方案（与生产站点地图一致）：
 - **国家介绍与静态页**：`content/de/{countries,pages}`（37 + 5 篇，同样按当前英文版重译），与机场指南一起用 `node scripts/content-import.mjs --dir <目录> --only de` 导入。
 - **内容回退**：`lib/content.ts` 的 `localeChain()` 让 `de` 回退到 `en`（而不是 `SOURCE_LOCALE` 中文）；机场简介同理。照片说明另有一份 `public/photos/captions.de.json`（按 `IATA → 文件 → 德文说明` 翻译自英文说明），未收录的照片回退英文说明，`lib/airport-photos.ts` 的 `pickCaption()` 负责这条链。
 - **搜索**：`airports.search_blob` 只有中 / 英 / 繁名称，所以德语搜索会把德语地名反查成英文再查一遍（`germanSearchAlias()`：Peking → Beijing、Moskau → Moscow、München → Munich，并接受 `muenchen` 这类无变音符写法），否则德国用户搜不到自己语言的地名。
-- **博客也有德语**：`lib/blog.ts` 的 `BLOG_LOCALES` 现在是 `en / de / ko / zh / tw`，德语译文放在 `public/blog/<slug>/<slug>.de.md`（与 `<slug>.en.md` 并列，84 篇全部翻译）。缺译的文章不会回退到英语或中文，只是不出现在 `/de/blog` 列表里；`/de/blog` 页头入口、文章页、`hreflang`、`lastmod` 与站点地图条目都由文件是否存在自动推导。
+- **博客也有德语**：`lib/blog.ts` 的 `BLOG_LOCALES` 现在是 `en / de / fr / it / ko / zh / tw`，德语译文放在 `public/blog/<slug>/<slug>.de.md`（与 `<slug>.en.md` 并列，84 篇全部翻译）。缺译的文章不会回退到英语或中文，只是不出现在 `/de/blog` 列表里；`/de/blog` 页头入口、文章页、`hreflang`、`lastmod` 与站点地图条目都由文件是否存在自动推导。
 
 重新翻译的顺序：`content-export --locale en` 导出当前英文长文 → 翻译成 `de/` → `content-import --dir <目录> --only de`（405 篇：363 机场 + 37 国家 + 5 静态页）→ 德语简介写回 `data/de-descriptions.json` 并入库 → 需要重建结构化数据时再 `npm run db:seed`（会优先读取该 JSON，不会丢译文）。
 
@@ -232,6 +236,30 @@ URL 方案（与生产站点地图一致）：
 - **搜索**：`koreanSearchAlias()`（도쿄 → Tokyo、인천 → Incheon），与德语别名同一套机制。
 - **长文**：`content_documents` 405 篇（363 机场 + 37 国家 + 5 静态页）与 `airport_translations` 363 条简介，均从英文版翻译，`updated: 2026-10-23`；简介另存 `data/ko-descriptions.json`，`db:seed` 会优先读取。
 - **博客与照片**：`BLOG_LOCALES` 含 `ko`，译文为 `public/blog/<slug>/<slug>.ko.md`；照片说明为 `public/photos/captions.ko.json`，缺译回退英文说明。
+
+#### 法语（`fr`）与德语同构
+
+法语复用德语的整条链路，没有新增数据库列、没有新依赖：
+
+- **UI 文案**：`lib/i18n/messages/fr.ts`（类型派生自中文目录，键缺失即编译失败），注册进 `catalogs.ts` 后 `/fr` 自动进入路由、语言切换器、`hreflang` 与站点地图。
+- **结构化数据**：`lib/i18n/fr-vocab.json`（233 国家 / 12 地区 / 284 城市 / 60 机场 / 44 航站楼 / 12 设施标签 / 6 交通方式 / 4 机场等级），`lib/i18n/fr-data.ts` 把它包成查找函数；`lib/queries.ts` 的 `pick()` / `pickStrict()` 在 `fr` 时用英文列 + 词表，缺条目回退英文。
+- **数字与日期**：`lib/format.ts` 用 `fr-FR`（小数逗号、「environ 67 millions」、「22 octobre 2026」）；`display.ts` 的 `intlLocale('fr-FR')`、`wikipediaLocale('fr')`，法语页链到 fr.wikipedia、不显示百度百科。
+- **搜索**：`frenchSearchAlias()`（Pékin → Beijing、Londres → London、Le Caire → Cairo），并接受 `pekin` 这类无重音写法。
+- **机场简介**：`scripts/_fr.mjs` 的 `curatedDescriptionFr()` / `directoryDescriptionFr()` 按结构化字段生成法语简介（与德语同一套数据、同一套口径），`scripts/seed.mjs` 写入 `airport_translations.locale='fr'`；若之后有编辑译文，放进 `data/fr-descriptions.json` 即可优先于生成稿（读取顺序与 `ko-descriptions.json` 相同）。
+- **长文**：`content_documents` 尚无 `locale='fr'` 行，机场指南 / 国家介绍 / 静态页按 `localeChain()` 回退英文；翻译入库流程与德语相同（`content-export --locale en` → 翻译 → `content-import --only fr`）。
+- **博客与照片**：`BLOG_LOCALES` 含 `fr`，译文为 `public/blog/<slug>/<slug>.fr.md`（84 篇全部翻译；没有英文源的 `paris-cdg-vs-frankfurt-fra-transfer-test` 不出现在法语列表）；照片说明为 `public/photos/captions.fr.json`（366 座机场 / 424 条全部翻译），缺译回退英文说明。
+
+#### 意大利语（`it`）与德语同构
+
+意大利语复用同一条链路，没有新增数据库列、没有新依赖：
+
+- **UI 文案**：`lib/i18n/messages/it.ts`（类型派生自中文目录，键缺失即编译失败），注册进 `catalogs.ts` 后 `/it` 自动进入路由、语言切换器、`hreflang` 与站点地图。
+- **结构化数据**：`lib/i18n/it-vocab.json`（233 国家 / 12 地区 / 284 城市 / 60 机场 / 44 航站楼 / 12 设施标签 / 6 交通方式 / 4 机场等级），`lib/i18n/it-data.ts` 把它包成查找函数；`lib/queries.ts` 的 `pick()` / `pickStrict()` 在 `it` 时用英文列 + 词表，缺条目回退英文。
+- **数字与日期**：`lib/format.ts` 用 `it-IT`（小数逗号、千分点、「circa 67 milioni」、「21 settembre 2026」）；`display.ts` 的 `intlLocale('it-IT')`、`wikipediaLocale('it')`，意大利语页链到 it.wikipedia、不显示百度百科。
+- **搜索**：`italianSearchAlias()`（Pechino → Beijing、Londra → London、Il Cairo → Cairo），并接受去重音 / 去撇号的写法（`citta del messico`、`lavana`）。
+- **机场简介**：`scripts/_it.mjs` 的 `curatedDescriptionIt()` / `directoryDescriptionIt()` 按结构化字段生成意大利语简介，`scripts/seed.mjs` 写入 `airport_translations.locale='it'`；有编辑译文时放进 `data/it-descriptions.json` 即可优先于生成稿。
+- **长文**：`content_documents` 尚无 `locale='it'` 行，机场指南 / 国家介绍 / 静态页按 `localeChain()` 回退英文；入库流程与德语相同（`content-export --locale en` → 翻译 → `content-import --only it`）。
+- **博客与照片**：`BLOG_LOCALES` 含 `it`，译文为 `public/blog/<slug>/<slug>.it.md`（84 篇全部翻译）；照片说明为 `public/photos/captions.it.json`（366 座机场 / 424 条全部翻译），缺译回退英文说明。
 
 #### 把德语发布到线上
 
@@ -259,13 +287,17 @@ URL 方案（与生产站点地图一致）：
 | --- | --- | --- |
 | 机场名称、城市、国家、区域 | `airports.name_en` / `city_en`、`countries.name_en` / `region_en` | 数据自带，直接切换 |
 | 同上（德语） | 英文列 + `lib/i18n/de-vocab.json` | 渲染期套德语词表（Peking、München、Ostasien），无 `_de` 列 |
+| 同上（法语 / 韩语） | 英文列 + `lib/i18n/fr-vocab.json` / `ko-vocab.json` | 渲染期套法语 / 韩语词表（Pékin、Munich / 베이징、뮌헨），无 `_fr` / `_ko` 列 |
+| 同上（意大利语） | 英文列 + `lib/i18n/it-vocab.json` | 渲染期套意大利语词表（Pechino、Monaco di Baviera、Stati Uniti），无 `_it` 列 |
 | 同上（繁体） | `airports.name_tw` / `city_tw`、`countries.name_tw` / `region_tw` | 由中文源转换生成，见「派生语言」 |
 | 机场简介 | `airport_translations(airport_iata, locale, description_md)` | 按语言存放的 Markdown，当前 1452 条（zh/en/tw/de 各 363） |
 | 机场照片说明 | `public/photos/captions.de.json`（德语） | 由 `captions/<IATA>.json` 的英文说明翻译；缺条目回退英文，繁中走生成的 `captions.tw.json` |
-| 航站楼名称、登机口范围 | `terminals.name_en` / `gate_range_en` | 由 `db/terminology/en.json` 词典 + 规则翻译填入；德语再套 `de-vocab.json` 的 `terminals` 与规则 |
+| 机场照片说明（法 / 韩） | `public/photos/captions.fr.json` / `captions.ko.json` | 同德语，缺条目回退英文 |
+| 机场照片说明（意） | `public/photos/captions.it.json` | 同德语，缺条目回退英文 |
+| 航站楼名称、登机口范围 | `terminals.name_en` / `gate_range_en` | 由 `db/terminology/en.json` 词典 + 规则翻译填入；德语 / 法语 / 意大利语 / 韩语再套各自 `*-vocab.json` 的 `terminals` 与规则 |
 | 设施 / 航站楼设施标签 | `*.label_en` | 同上（封闭词表） |
 | 航司列表 | `terminals.airlines_en` | **可空**；为空时英文页面不显示该行 |
-| 地面交通 | `ground_transport.name_en` / `description_en` | **可空**；为空时页面显示交通方式标签（Rail / Bus / Taxi …，德语 Bahn / Bus / Taxi …） |
+| 地面交通 | `ground_transport.name_en` / `description_en` | **可空**；为空时页面显示交通方式标签（Rail / Bus / Taxi …，德语 Bahn / Bus / Taxi …，法语 Train / Bus / Taxi …，意大利语 Treno / Bus / Taxi …） |
 | 搜索 | `airports.search_blob` | 含全部语言的名称，因此**在英文站搜索「北京」也能命中** |
 
 两条刻意的取舍：

@@ -37,11 +37,16 @@ export default function RelatedLinks({
   const t = getMessages(locale);
   const titleZh = airportEncyclopediaTitle(iata, nameZh);
   const wikiLang = wikipediaLocale(locale);
-  // The German/Korean editions file the article under the localized airport
-  // name ("Flughafen München", "인천국제공항"), the English one under the
+  // The German/French/Italian/Korean editions file the article under the
+  // localized airport name ("Flughafen München", "Aéroport de Munich",
+  // "Aeroporto di Monaco di Baviera", "인천국제공항"), the English one under the
   // international name.
   const wikiTitle =
-    locale === 'en' ? nameEn : locale === 'de' || locale === 'ko' ? name : titleZh;
+    locale === 'en'
+      ? nameEn
+      : locale === 'de' || locale === 'fr' || locale === 'it' || locale === 'ko'
+        ? name
+        : titleZh;
   const wikiHref = wikiUrl(wikiLang, wikiTitle);
 
   return (

@@ -68,9 +68,12 @@ export function buildAirportGraph(input: {
   // already uses, so schema and visible links never disagree.
   const enWikiUrl = facts?.wikiEn ?? wikiUrl('en', airport.nameEn);
   const zhWikiUrl = wikiUrl('zh', airportEncyclopediaTitle(airport.iata, airport.nameZh));
-  // German/Korean editions, filed under the localized airport name
-  // ("Flughafen München", "인천국제공항").
+  // German/French/Italian/Korean editions, filed under the localized airport
+  // name ("Flughafen München", "Aéroport de Munich", "Aeroporto di Monaco di
+  // Baviera", "인천국제공항").
   const deWikiUrl = wikiUrl('de', airport.name);
+  const frWikiUrl = wikiUrl('fr', airport.name);
+  const itWikiUrl = wikiUrl('it', airport.name);
   const koWikiUrl = wikiUrl('ko', airport.name);
 
   const pax = formatPax(airport.annualPaxM, locale);
@@ -183,9 +186,13 @@ export function buildAirportGraph(input: {
                 ? enWikiUrl
                 : locale === 'de'
                   ? deWikiUrl
-                  : locale === 'ko'
-                    ? koWikiUrl
-                    : zhWikiUrl,
+                  : locale === 'fr'
+                    ? frWikiUrl
+                    : locale === 'it'
+                      ? itWikiUrl
+                      : locale === 'ko'
+                        ? koWikiUrl
+                        : zhWikiUrl,
           },
           { '@type': 'CreativeWork', name: t.airport.sourcesOurAirports, url: OURAIRPORTS_DATA_URL },
         ],
@@ -201,7 +208,7 @@ export function buildAirportGraph(input: {
         url: pageUrl,
         image: pageImages,
         inLanguage: LOCALE_META[locale].htmlLang,
-        sameAs: [enWikiUrl, zhWikiUrl, deWikiUrl, koWikiUrl],
+        sameAs: [enWikiUrl, zhWikiUrl, deWikiUrl, frWikiUrl, itWikiUrl, koWikiUrl],
         address: {
           '@type': 'PostalAddress',
           addressLocality: airport.city,

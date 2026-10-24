@@ -5,13 +5,16 @@ import { intlLocale, isCjkLocale } from './i18n/display';
 /**
  * Display formatters. Passenger volume is stored in millions and rendered the
  * way each locale expresses it: 万 / 亿 for Chinese, "million" for English,
- * "Millionen" for German and 만 / 억 for Korean.
+ * "Millionen" for German, "millions" for French, "milioni" for Italian and
+ * 만 / 억 for Korean.
  */
 
 /** Intl locale per UI locale; unknown locales fall back to en-US. */
 const NUMBER_LOCALE: Partial<Record<Locale, string>> = {
   en: 'en-US',
   de: 'de-DE',
+  fr: 'fr-FR',
+  it: 'it-IT',
   ko: 'ko-KR',
   zh: 'zh-CN',
   tw: 'zh-TW',
@@ -40,6 +43,18 @@ export function formatPax(
     // still written in millions, unlike Chinese 亿.
     const rounded = Number(trimZeros(millions.toFixed(2)));
     return `ca. ${formatNumber(rounded, locale)} ${rounded === 1 ? 'Million' : 'Millionen'}`;
+  }
+  if (locale === 'fr') {
+    // "environ 67 millions" / "environ 1 million" — French keeps the scale in
+    // millions and takes a plural "s" above one.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `environ ${formatNumber(rounded, locale)} million${rounded === 1 ? '' : 's'}`;
+  }
+  if (locale === 'it') {
+    // "circa 67 milioni" / "circa 1 milione" — Italian keeps the scale in
+    // millions and takes a plural "i" above one.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `circa ${formatNumber(rounded, locale)} milion${rounded === 1 ? 'e' : 'i'}`;
   }
   if (locale === 'ko') {
     // 약 6,700만 명 / 약 1억 800만 명 — Korean groups by 10,000 (만) and

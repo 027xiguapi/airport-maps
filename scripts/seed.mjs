@@ -47,6 +47,16 @@ import {
   deVocab,
   directoryDescriptionDe,
 } from './_de.mjs';
+import {
+  curatedDescriptionFr,
+  frVocab,
+  directoryDescriptionFr,
+} from './_fr.mjs';
+import {
+  curatedDescriptionIt,
+  itVocab,
+  directoryDescriptionIt,
+} from './_it.mjs';
 import { toHant, toHantName, SIMPLIFIED_ONLY } from './_hant.mjs';
 
 /** Modes: see the usage note above. */
@@ -289,6 +299,32 @@ const koreanDescriptions = (() => {
   }
 })();
 
+/**
+ * French airport descriptions, when an authored file exists
+ * (data/fr-descriptions.json, IATA -> text). French otherwise uses the
+ * data-derived templates in scripts/_fr.mjs, the same arrangement as German.
+ */
+const frenchDescriptions = (() => {
+  try {
+    return JSON.parse(readFileSync(join(ROOT, 'data', 'fr-descriptions.json'), 'utf8'));
+  } catch {
+    return null;
+  }
+})();
+
+/**
+ * Italian airport descriptions, when an authored file exists
+ * (data/it-descriptions.json, IATA -> text). Italian otherwise uses the
+ * data-derived templates in scripts/_it.mjs, the same arrangement as German.
+ */
+const italianDescriptions = (() => {
+  try {
+    return JSON.parse(readFileSync(join(ROOT, 'data', 'it-descriptions.json'), 'utf8'));
+  } catch {
+    return null;
+  }
+})();
+
 /** "a, b and c" */
 function joinList(items) {
   if (items.length <= 1) return items[0] ?? '';
@@ -452,11 +488,11 @@ try {
 
     // descriptions are Markdown; zh keeps the editorial copy, en is data-derived,
     // tw is the Chinese copy converted (it is prose, so OpenCC's own wording wins),
-    // de is data-derived from the English record (no `_de` columns: see
-    // lib/i18n/de-data.ts and scripts/_de.mjs)
+    // de/fr/it are data-derived from the English record (no `_de`/`_fr`/`_it`
+    // columns: see lib/i18n/*-data.ts and scripts/_{de,fr,it}.mjs)
     await client.query(
       `INSERT INTO airport_translations (airport_iata, locale, description_md)
-       VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4), ($1, 'de', $5), ($1, 'ko', $6)`,
+       VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4), ($1, 'de', $5), ($1, 'ko', $6), ($1, 'fr', $7), ($1, 'it', $8)`,
       [
         a.iata,
         a.desc,
@@ -476,6 +512,28 @@ try {
             deVocab.transportModes
           ),
         koreanDescriptions?.[a.iata] ?? null,
+        frenchDescriptions?.[a.iata] ??
+          curatedDescriptionFr(
+            {
+              ...a,
+              cityEn: a.cityEn ?? CITY_EN[a.city],
+              countryNameEn: countries[a.country]?.nameEn,
+            },
+            paxM,
+            distanceKm,
+            frVocab.transportModes
+          ),
+        italianDescriptions?.[a.iata] ??
+          curatedDescriptionIt(
+            {
+              ...a,
+              cityEn: a.cityEn ?? CITY_EN[a.city],
+              countryNameEn: countries[a.country]?.nameEn,
+            },
+            paxM,
+            distanceKm,
+            itVocab.transportModes
+          ),
       ]
     );
 
@@ -558,7 +616,7 @@ try {
     );
     await client.query(
       `INSERT INTO airport_translations (airport_iata, locale, description_md)
-       VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4), ($1, 'de', $5), ($1, 'ko', $6)`,
+       VALUES ($1, 'zh', $2), ($1, 'en', $3), ($1, 'tw', $4), ($1, 'de', $5), ($1, 'ko', $6), ($1, 'fr', $7), ($1, 'it', $8)`,
       [
         a.iata,
         descZh,
@@ -567,6 +625,10 @@ try {
         germanDescriptions?.[a.iata] ??
           directoryDescriptionDe(a, countries[a.country], airportFacts[a.iata]),
         koreanDescriptions?.[a.iata] ?? null,
+        frenchDescriptions?.[a.iata] ??
+          directoryDescriptionFr(a, countries[a.country], airportFacts[a.iata]),
+        italianDescriptions?.[a.iata] ??
+          directoryDescriptionIt(a, countries[a.country], airportFacts[a.iata]),
       ]
     );
   }

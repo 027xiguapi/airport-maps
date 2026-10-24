@@ -1,0 +1,1164 @@
+{
+  "_readme": [
+    "Italian photo captions, keyed by IATA then image file name.",
+    "Translated from the English captions in public/photos/captions/<IATA>.json.",
+    "lib/airport-photos.ts reads this file as captions.it.json; airports or files",
+    "missing here fall back to the English caption, never to the Chinese one."
+  ],
+  "AAA": {
+    "aaa-page-1.webp": "L'atollo di Anaa fotografato dalla Stazione Spaziale Internazionale (immagine NASA ISS007-E-14624, di pubblico dominio) — l'atollo stretto con il bordo bianco della barriera corallina e la laguna turchese; l'aeroporto si trova sull'isolotto principale."
+  },
+  "AAE": {
+    "aae-sat-1.webp": "Vista satellitare: le piste di Annaba si trovano tra la costa mediterranea e le colline, con il terminal e il piazzale accanto al campo."
+  },
+  "AAL": {
+    "aal-bing-2.webp": "Il fronte del terminal dell'aeroporto di Aalborg — una pensilina bassa sostenuta da una fila di colonne, con l'ingresso vetrato dietro.",
+    "aal-bing-3.webp": "Imbarco sul piazzale: i passeggeri salgono le scalette verso un aereo di Atlantic Airways mentre il personale di terra resta in attesa."
+  },
+  "AAN": {
+    "aan-bing-1.webp": "Il Terminal 2 dell'aeroporto internazionale di Al Ain di notte, con gli ingressi illuminati sotto l'insegna in arabo di Abu Dhabi Airports."
+  },
+  "AAO": {
+    "aao-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Anaco (AAO) si trova tra centro abitato, terreni agricoli e vegetazione."
+  },
+  "AAP": {
+    "aap-bing-1.webp": "Il terminal dell'aeroporto internazionale APT Pranoto di Samarinda: un'ampia facciata in vetro sostenuta da strutture inclinate in acciaio bianco, con la pensilina che si protende sopra la zona di sbarco."
+  },
+  "AAR": {
+    "aar-sat-1.webp": "Vista satellitare: le due piste di Aarhus si trovano tra i terreni agricoli della costa orientale dello Jutland, con il terminal e il piazzale accanto."
+  },
+  "AAT": {
+    "aat-sat-1.webp": "Vista satellitare: la pista di Altay si trova tra valli e terre innevate dei monti Altai, con il terminal e il piazzale accanto."
+  },
+  "AAX": {
+    "aax-bing-2.webp": "All'interno del terminal dell'aeroporto di Araxá: una coda al banco del check-in e file di sedili in metallo di fronte alle porte a vetri che danno sul piazzale.",
+    "aax-bing-3.webp": "Veduta aerea dell'aeroporto di Araxá: una singola pista in asfalto che attraversa un altopiano di terra rossa, con il piazzale e gli hangar accanto al punto centrale."
+  },
+  "AAY": {
+    "aay-sat-1.webp": "Vista satellitare: la pista di Al Ghaydah si trova tra la costa yemenita e colline aride, con il terminal e il piazzale accanto."
+  },
+  "ABA": {
+    "aba-sat-1.webp": "Vista satellitare: la pista corre lungo il margine di Abakan, con il piazzale e il terminal accanto al punto centrale."
+  },
+  "ABB": {
+    "abb-bing-1.webp": "Veduta aerea dell'aeroporto internazionale di Asaba: i tetti ad arco del terminal e la torre di controllo scura accanto alla pista, con la caserma dei vigili del fuoco rossa e bianca e un'autobotte in basso in primo piano.",
+    "abb-bing-2.webp": "Il fronte del terminal e il suo parcheggio — una facciata continua triangolare in vetro incastonata nella fronte ad arco, con la torre di controllo a sinistra.",
+    "abb-bing-3.webp": "Il terminal visto dal piazzale: coperture a volta bianche accanto alla torre di controllo isolata, sotto file di torri faro."
+  },
+  "ABC": {
+    "abc-sat-1.webp": "Vista satellitare: l'aeroporto di Albacete / base aerea di Los Llanos (ABC) è circondato da terreno arido e terra brulla."
+  },
+  "ABD": {
+    "abd-bing-1.webp": "L'insegna all'ingresso dell'aeroporto internazionale di Abadan — persiano e inglese affiancati, entrambi con la scritta «Ayatollah Jami International Airport».",
+    "abd-bing-3.webp": "L'ingresso del terminal: viaggiatori che trascinano i trolley verso la sala sotto l'insegna con lettere rosse, su una passerella pavimentata con piastrelle decorate."
+  },
+  "ABI": {
+    "abi-bing-1.webp": "Veduta aerea dell'aeroporto regionale di Abilene: pensiline bianche a forma di tenda sopra l'anello di sbarco, con un aereo di linea in imbarco sul piazzale.",
+    "abi-bing-2.webp": "La torre di controllo e le coperture a pensilina del terminal, con un C-130 da trasporto che passa sopra.",
+    "abi-bing-3.webp": "Lo sguardo corre lungo la pista verso la torre — segnaletica bianca che si stende sull'asfalto scuro fino alla torre rossa e bianca all'orizzonte."
+  },
+  "ABL": {
+    "abl-sat-1.webp": "Vista satellitare: la pista in ghiaia di Ambler si trova tra tundra e boschi accanto al fiume Kobuk, con il terminal e il piazzale accanto."
+  },
+  "ABQ": {
+    "abq-bing-1.webp": "Il Sunport nell'ora d'oro: il terminal si trova dietro file di parcheggi multipiano e stalli, con lo skyline di Albuquerque e la scarpata del deserto oltre.",
+    "abq-bing-2.webp": "Il fronte lato terra del terminal — «ALBUQUERQUE» illuminata sui blocchi in terracotta in stile Pueblo Revival, con navette e auto sulla strada sottostante.",
+    "abq-bing-3.webp": "Veduta aerea del terminal e del piazzale: satelliti rosa in stile Pueblo collegati al piazzale tramite passerelle d'imbarco, aerei parcheggiati ai gate, parcheggi multipiano e la città sullo sfondo."
+  },
+  "ABR": {
+    "abr-bing-1.webp": "Il grande murale sopra l'area d'attesa — la scena di una strada di una cittadina della prateria dipinta su tutta la parete, l'elemento più notevole del terminal.",
+    "abr-bing-2.webp": "La coda a serpentina davanti alla porta «DEPARTURES», con i totem self-service Delta e i banchi del check-in sulla destra.",
+    "abr-bing-3.webp": "L'area d'attesa ai gate — passeggeri in fila vicino alle finestre sotto il soffitto in legno che ospita il murale."
+  },
+  "ABS": {
+    "abs-bing-1.webp": "L'aeroporto visto dalla sua strada d'accesso: un terminal basso e una torre tra gli alberi, deserto da ogni lato.",
+    "abs-bing-3.webp": "L'insegna «ABU SIMBEL AIRPORT» sul tetto del terminal, sopra una parete dipinta con murales in stile egizio."
+  },
+  "ABT": {
+    "abt-sat-1.webp": "Vista satellitare: la pista di Al Baha si trova su un altopiano dei monti Asir, con il terminal e il piazzale accanto e il centro abitato e le creste tutt'intorno."
+  },
+  "ABU": {
+    "abu-sat-1.webp": "Vista satellitare: l'aeroporto AA Bere Tallo (Haliwen) (ABU) si trova tra terreno arido e terra brulla."
+  },
+  "ABX": {
+    "abx-sat-1.webp": "Vista satellitare: la pista di Albury si trova tra terreni agricoli e colline accanto al fiume Murray, con il terminal e il piazzale accanto."
+  },
+  "ACD": {
+    "acd-bing-1.webp": "Il campo di volo erboso di Acandí, circondato da foresta tropicale e colline basse — un piccolo Cessna sul piazzale in ghiaia, un altro aereo parcheggiato sull'erba."
+  },
+  "ACE": {
+    "ace-bing-2.webp": "L'aeroporto César Manrique-Lanzarote al crepuscolo — l'insegna dell'aeroporto sopra un giardino di cactus incassato, con le colline dell'isola sullo sfondo."
+  },
+  "ACF": {
+    "acf-sat-1.webp": "Vista satellitare: l'aeroporto di Aral Tarim (ACF) è circondato da terreno arido e terra brulla."
+  },
+  "ACI": {
+    "aci-sat-1.webp": "Vista satellitare: la pista corta di Alderney si trova sull'isola del Canale, con il terminal e il piazzale accanto e la costa e i prati tutto intorno."
+  },
+  "ACR": {
+    "acr-sat-1.webp": "Vista satellitare: l'aeroporto di Araracuara (ACR) è circondato da vegetazione verde e terreni agricoli."
+  },
+  "ACV": {
+    "acv-bing-1.webp": "La scritta «ARCATA – EUREKA AIRPORT» sulla parete esterna del terminal, che nomina entrambe le città servite dall'aeroporto.",
+    "acv-bing-3.webp": "Accanto al campo di volo: il traffico che passa davanti agli hangar mentre un piccolo aereo a elica sale sopra la pista."
+  },
+  "ACY": {
+    "acy-bing-1.webp": "Il fronte lato terra del terminal — pannelli argentati e ampie vetrate, con «ATLANTIC CITY INTERNATIONAL AIRPORT» scritto sulla destra.",
+    "acy-bing-2.webp": "Il monumento ad «A» all'ingresso dell'aeroporto: una lettera blu che taglia la sagoma di un piccolo aereo sul prato davanti al terminal.",
+    "acy-bing-3.webp": "Veduta aerea dell'aeroporto internazionale di Atlantic City: terminal e satellite al centro, parcheggi e vie di rullaggio tutto intorno, con lo skyline della città sospeso all'orizzonte."
+  },
+  "ADB": {
+    "adb-sat-1.webp": "Vista satellitare: le piste e le vie di rullaggio di Izmir si trovano nella pianura accanto all'Egeo, con il terminal e il piazzale a sud del campo."
+  },
+  "ADE": {
+    "ade-bing-3.webp": "Il terminal e la torre di controllo dell'aeroporto internazionale di Aden — il nome dell'aeroporto in arabo sulla parete, con due trattori pushback parcheggiati davanti."
+  },
+  "ADF": {
+    "adf-sat-1.webp": "Vista satellitare: la pista di Adıyaman si trova sull'altopiano della Turchia sud-orientale, con il terminal e il piazzale accanto e colline e terreni agricoli intorno."
+  },
+  "ADK": {
+    "adk-bing-1.webp": "Adak dalla fine della pista — nubi basse sulle colline vulcaniche, la pista illuminata che si allunga fino ai loro piedi.",
+    "adk-bing-3.webp": "Attraverso la tundra verso il campo di volo di Adak — pista e via di rullaggio che si stendono piatte sul terreno, gli edifici dell'aeroporto piccoli all'orizzonte."
+  },
+  "ADL": {
+    "adl-sat-1.webp": "Vista satellitare: la pista e il terminal di Adelaide si trovano a ovest del centro città, con il porto, le industrie e le abitazioni intorno."
+  },
+  "ADM": {
+    "adm-bing-1.webp": "Veduta in volo dell'Ardmore Municipal Airport — due piste che si incrociano su campi verdi, con il terminal e gli hangar raggruppati sul lato sud-ovest.",
+    "adm-bing-3.webp": "L'insegna all'ingresso dell'Ardmore Municipal Airport — il nome su una base in pietra accanto a un elenco delle attività dell'aeroporto."
+  },
+  "ADS": {
+    "ads-sat-1.webp": "Vista satellitare: l'aeroporto Addison (ADS) si trova tra centro abitato, terreni agricoli e vegetazione."
+  },
+  "ADU": {
+    "adu-sat-1.webp": "Vista satellitare: la pista di Ardabil si trova sull'altopiano iraniano, con il terminal e il piazzale accanto e montagne e terra arida intorno."
+  },
+  "ADW": {
+    "adw-sat-1.webp": "Vista satellitare: la Joint Base Andrews (ADW) si trova tra vegetazione verde e terreni agricoli."
+  },
+  "AEG": {
+    "aeg-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Aek Godang (AEG) si trova tra vegetazione verde e terreni agricoli."
+  },
+  "AEH": {
+    "aeh-sat-1.webp": "Vista satellitare: l'aeroporto di Abeche (AEH) è circondato da terreno arido e terra brulla."
+  },
+  "AEP": {
+    "aep-baidu-1.webp": "Totem self-service LATAM nella sala del check-in — una fila di macchine gialle con viaggiatori che effettuano il check-in.",
+    "aep-baidu-2.webp": "Un aereo di linea Austral che rulla con lo skyline di Buenos Aires che si alza dietro la coda.",
+    "aep-baidu-3.webp": "Un Boeing 737 di Aerolíneas Argentinas con i grattacieli della città e gli alberi sullo sfondo."
+  },
+  "AES": {
+    "aes-sat-1.webp": "Vista satellitare: la pista di Alesund si trova tra isole e fiordo, con il terminal e il piazzale accanto e mare e montagne intorno."
+  },
+  "AET": {
+    "aet-sat-1.webp": "Vista satellitare: l'aeroporto di Allakaket (AET) è circondato da vegetazione verde e terreni agricoli."
+  },
+  "AEU": {
+    "aeu-sat-1.webp": "Nell'immagine satellitare, l'aeroporto dell'isola di Abu Musa (AEU) si fonde con il centro abitato, i terreni agricoli e la vegetazione circostanti."
+  },
+  "AEX": {
+    "aex-sat-1.webp": "Vista satellitare: le piste di Alexandria si trovano tra fiumi e boschi in Louisiana, con il terminal e il piazzale accanto al campo."
+  },
+  "AEY": {
+    "aey-sat-1.webp": "Vista satellitare: la pista di Akureyri si trova tra fiordo e valle nel nord dell'Islanda, con il terminal e il piazzale accanto."
+  },
+  "AFL": {
+    "afl-sat-1.webp": "Vista satellitare: la pista di Alta Floresta si trova al margine della foresta amazzonica, con il terminal e il piazzale accanto."
+  },
+  "AFY": {
+    "afy-sat-1.webp": "Vista satellitare: la base aerea di Afyon (AFY) si trova tra centro abitato, terreni agricoli e vegetazione."
+  },
+  "AGB": {
+    "agb-sat-1.webp": "Vista satellitare: l'aeroporto di Augsburg (AGB) è circondato da vegetazione verde e terreni agricoli."
+  },
+  "AGC": {
+    "agc-sat-1.webp": "Nell'immagine satellitare, l'aeroporto della contea di Allegheny (AGC) si fonde con la vegetazione verde e i terreni agricoli circostanti."
+  },
+  "AGQ": {
+    "agq-sat-1.webp": "Nell'immagine satellitare, la pista del campo di volo di Dhokimion (AGQ) si trova tra centro abitato, terreni agricoli e vegetazione."
+  },
+  "AGR": {
+    "agr-sat-1.webp": "Vista satellitare: le piste di Agra si trovano tra la città e i terreni agricoli accanto al fiume Yamuna, con il terminal e il piazzale accanto al campo."
+  },
+  "AGS": {
+    "ags-sat-1.webp": "Vista satellitare: le piste di Augusta si trovano tra boschi e centro abitato accanto al fiume Savannah, con il terminal e il piazzale accanto al campo."
+  },
+  "AGX": {
+    "agx-sat-1.webp": "Vista satellitare: la pista di Agatti si trova su una stretta isola delle Lakshadweep, con il terminal e il piazzale accanto e laguna e barriera corallina intorno."
+  },
+  "AGZ": {
+    "agz-sat-1.webp": "Vista satellitare: l'aeroporto di Aggeneys (AGZ) è circondato da terreno arido e terra brulla."
+  },
+  "AHB": {
+    "ahb-baidu-2.webp": "Sul piazzale: un aereo di linea con livrea verde parcheggiato, con la torre di controllo e il terminal di Abha sulla destra."
+  },
+  "AHE": {
+    "ahe-sat-1.webp": "Vista satellitare: la pista di Ahe si trova su uno stretto motu dell'atollo, con il terminal e il piazzale accanto e laguna e barriera corallina intorno."
+  },
+  "AHN": {
+    "ahn-baidu-1.webp": "Fuori dal terminal: il Ben Epps Flight Center in mattoni, con una statua di elefante sul piazzale antistante."
+  },
+  "AHO": {
+    "aho-baidu-2.webp": "Un Boeing 737 di Ryanair sul piazzale di Alghero, con il terminal e le attrezzature di terra sullo sfondo."
+  },
+  "AHS": {
+    "ahs-sat-1.webp": "Vista satellitare: l'aeroporto di Ahuas (AHS) si trova tra centro abitato, terreni agricoli e vegetazione."
+  },
+  "AIA": {
+    "aia-sat-1.webp": "Vista satellitare: le piste di Alliance si trovano tra terreni agricoli e prateria sugli altipiani del Nebraska, con il terminal e il piazzale accanto al campo."
+  },
+  "AIP": {
+    "aip-sat-1.webp": "Vista satellitare: l'Aeroporto di Adampur (AIP) è circondato da vegetazione e terreni agricoli."
+  },
+  "AIR": {
+    "air-sat-1.webp": "Vista satellitare: l'Aeroporto di Aripuanã (AIR) si trova tra il centro abitato, i terreni agricoli e la vegetazione."
+  },
+  "AIT": {
+    "ait-sat-1.webp": "Vista satellitare: l'Aeroporto di Aitutaki (AIT) è circondato da acqua e costa."
+  },
+  "AIU": {
+    "aiu-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Enua (AIU) si confonde con l'acqua e la costa circostanti."
+  },
+  "AJF": {
+    "ajf-sat-1.webp": "Vista satellitare: la pista di Al-Jawf si trova nel deserto saudita settentrionale, con il terminal e il piazzale aeromobili a fianco e terra arida e qualche campo intorno."
+  },
+  "AJI": {
+    "aji-sat-1.webp": "Vista satellitare: la pista di Ağrı si trova sull'alto altopiano della Turchia orientale, con il terminal e il piazzale aeromobili a fianco e montagne e terra arida intorno."
+  },
+  "AJL": {
+    "ajl-sat-1.webp": "Vista satellitare: la pista di Lengpui si trova tra le colline verdi del Mizoram, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "AJR": {
+    "ajr-sat-1.webp": "Vista satellitare: la pista di Arvidsjaur si trova tra foreste e laghi della Svezia settentrionale, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "AKA": {
+    "aka-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto di Ankang Fuqiang (AKA) si trova tra il centro abitato, i terreni agricoli e la vegetazione."
+  },
+  "AKD": {
+    "akd-sat-1.webp": "Vista satellitare: l'Aeroporto di Akola (AKD) si trova tra il centro abitato, i terreni agricoli e la vegetazione."
+  },
+  "AKJ": {
+    "akj-sat-1.webp": "Vista satellitare: la pista di Asahikawa si trova tra terreni agricoli e colline nell'Hokkaido centrale, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "AKL": {
+    "akl-sat-1.webp": "Vista satellitare: i terminal, le piste e la città che circonda l'Aeroporto di Auckland (AKL)."
+  },
+  "AKP": {
+    "akp-sat-1.webp": "Vista satellitare: la pista in ghiaia di Anaktuvuk Pass si trova in una valle della Brooks Range, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "AKR": {
+    "akr-page-1.webp": "Il terminal dell'Aeroporto di Akure — pareti color crema sotto un tetto blu, pensiline curve sopra gli ingressi e un cordolo blu e bianco.",
+    "akr-page-3.webp": "Un ATR 72 della Overland Airways (matricola 5N-BPE) parcheggiato sul piazzale aeromobili di Akure."
+  },
+  "AKS": {
+    "aks-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Gwaunaru'u (AKS) si confonde con l'acqua e la costa circostanti."
+  },
+  "AKT": {
+    "akt-sat-1.webp": "Vista satellitare: RAF Akrotiri (AKT) si trova tra il centro abitato, i terreni agricoli e la vegetazione."
+  },
+  "AKU": {
+    "aku-sat-1.webp": "Vista satellitare: la pista di Aksu si trova tra oasi e terreni agricoli sul margine settentrionale del Taklamakan, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "AKV": {
+    "akv-sat-1.webp": "Vista satellitare: l'Aeroporto di Akulivik (AKV) è circondato dal centro abitato, dai terreni agricoli e dalla vegetazione."
+  },
+  "AKX": {
+    "akx-sat-1.webp": "Vista satellitare: la pista di Aktobe si trova nella steppa kazaka, con il terminal e il piazzale aeromobili a fianco e la città e il fiume intorno."
+  },
+  "ALA": {
+    "ala-baidu-1.webp": "Il terminal di Almaty di giorno — la linea fluida del tetto con la rampa che porta il traffico verso le partenze.",
+    "ala-baidu-2.webp": "Di notte il neon rosso 'АЭРОПОРТ АЛМАТЫ' brilla sopra la facciata vetrata.",
+    "ala-baidu-3.webp": "Una vista invernale davanti al terminal — taxi e minibus nella neve sotto il pinnacolo a diamante del tetto."
+  },
+  "ALB": {
+    "alb-sat-1.webp": "Vista satellitare: le piste di Albany corrono lungo il margine dei centri abitati della valle dell'Hudson, con il terminal e il piazzale aeromobili a est del campo."
+  },
+  "ALC": {
+    "alc-sat-1.webp": "Vista satellitare: la pista di Alicante corre parallela alla costa, con il terminal e il piazzale aeromobili a est e la città e le serre bianche intorno."
+  },
+  "ALF": {
+    "alf-sat-1.webp": "Vista satellitare: la pista di Alta si trova tra fiordo e altopiano, con il terminal e il piazzale aeromobili a fianco e acqua e basse colline intorno."
+  },
+  "ALH": {
+    "alh-sat-1.webp": "Vista satellitare: le piste di Albany si trovano tra foresta e terreni agricoli sulla costa meridionale dell'Australia Occidentale, con il terminal e il piazzale aeromobili a fianco del campo."
+  },
+  "ALI": {
+    "ali-sat-1.webp": "Vista satellitare: l'Aeroporto Internazionale di Alice (ALI) è circondato dal centro abitato, dai terreni agricoli e dalla vegetazione."
+  },
+  "ALJ": {
+    "alj-sat-1.webp": "Vista satellitare: le piste di Alexander Bay si trovano sulla costa arida vicino alla foce del fiume Orange, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "ALL": {
+    "all-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto Internazionale Riviera Villanova d'Albenga (ALL) si trova tra vegetazione e terreni agricoli."
+  },
+  "ALM": {
+    "alm-page-1.webp": "Un Lockheed P-2H Neptune (N14447) conservato all'Aeroporto Regionale di Alamogordo-White Sands, con gli hangar e l'asfalto del campo alle spalle (foto: silverhawkauthor.com)."
+  },
+  "ALP": {
+    "alp-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto Internazionale di Aleppo (ALP) si trova tra terreno arido e terra brulla."
+  },
+  "ALQ": {
+    "alq-sat-1.webp": "Vista satellitare: l'Aeroporto di Alegrete Novo (ALQ) è circondato dal centro abitato, dai terreni agricoli e dalla vegetazione."
+  },
+  "ALR": {
+    "alr-sat-1.webp": "Nell'immagine satellitare, l'Aerodromo di Alexandra (ALR) si confonde con il terreno arido e la terra brulla circostanti."
+  },
+  "ALU": {
+    "alu-sat-1.webp": "Vista satellitare: l'Aeroporto di Alula (ALU) è circondato dal centro abitato, dai terreni agricoli e dalla vegetazione."
+  },
+  "ALY": {
+    "aly-baidu-1.webp": "Il vecchio terminal di El Nouzha ad Alessandria — un edificio bianco a più piani con una folla di viaggiatori all'esterno e scritte in arabo sopra l'ingresso."
+  },
+  "AMB": {
+    "amb-sat-1.webp": "Vista satellitare: l'Aeroporto di Ambilobe (AMB) si trova tra il centro abitato, i terreni agricoli e la vegetazione."
+  },
+  "AMD": {
+    "amd-page-3.webp": "Il terminal di notte — una luce viola che illumina il tetto a sbalzo, colonne sopra il marciapiede e il nome dell'aeroporto in gujarati lungo la fascia.",
+    "amd-page-4.webp": "Il terminal dall'area di sosta — pensiline bianche tensostrutturate sopra la carreggiata, con una facciata continua in vetro e acciaio.",
+    "amd-page-5.webp": "Una parete d'arte all'interno del terminal — due figure in bronzo davanti a una veduta urbana disegnata a tratto, con uno schermo che mostra il nome completo dell'aeroporto."
+  },
+  "AMH": {
+    "amh-sat-1.webp": "Vista satellitare: la pista di Arba Minch si trova tra terreni agricoli e colline nella Rift Valley etiope, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "AMS": {
+    "ams-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'Aeroporto di Amsterdam Schiphol (AMS) si trovano all'interno della città e della rete stradale."
+  },
+  "AMV": {
+    "amv-sat-1.webp": "Vista satellitare: l'Aeroporto di Amderma (AMV) si trova tra il centro abitato, i terreni agricoli e la vegetazione."
+  },
+  "ANB": {
+    "anb-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto Regionale di Anniston (ANB) si trova tra vegetazione e terreni agricoli."
+  },
+  "AND": {
+    "and-sat-1.webp": "Vista satellitare: due piste si incrociano in una campagna verde, con il terminal e il piazzale aeromobili vicino all'incrocio."
+  },
+  "ANE": {
+    "ane-sat-1.webp": "Vista satellitare: l'Aeroporto di Angers Marcé (ANE) si trova tra vegetazione e terreni agricoli."
+  },
+  "ANI": {
+    "ani-sat-1.webp": "Vista satellitare: la pista di Aniak corre lungo il fiume Kuskokwim, con il terminal e il piazzale aeromobili a fianco e boschi e zone umide intorno."
+  },
+  "ANM": {
+    "anm-sat-1.webp": "Vista satellitare: l'Aeroporto di Antsirabe (ANM) si trova tra acqua e costa."
+  },
+  "ANN": {
+    "ann-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto di Annette Island (ANN) si trova tra vegetazione e terreni agricoli."
+  },
+  "ANR": {
+    "anr-baidu-1.webp": "Anversa dall'alto — hangar sparsi tra la pista circondata dall'erba e le vie di rullaggio, con strade e capannoni a destra.",
+    "anr-baidu-2.webp": "Il terminal bianco e basso con la torre di controllo scura che si erge al centro del piazzale aeromobili.",
+    "anr-baidu-3.webp": "Vista sul piazzale aeromobili dal tetto del terminal — si vedono la torre, le postazioni di imbarco e i mezzi di terra."
+  },
+  "ANS": {
+    "ans-sat-1.webp": "Vista satellitare: l'Aeroporto di Andahuaylas (ANS) è circondato da terreno arido e terra brulla."
+  },
+  "ANV": {
+    "anv-sat-1.webp": "Vista satellitare: la pista in ghiaia di Anvik si trova tra boschi e zone umide accanto al fiume Yukon, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "ANX": {
+    "anx-sat-1.webp": "Vista satellitare: la pista di Andenes si trova sull'isola di Andøya, con il terminal e il piazzale aeromobili a fianco e mare e montagne intorno."
+  },
+  "AOC": {
+    "aoc-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Lipsia-Altenburg (AOC) si confonde con la vegetazione e i terreni agricoli circostanti."
+  },
+  "AOE": {
+    "aoe-sat-1.webp": "Vista satellitare: la pista di Eskişehir si trova ai margini della città sull'altopiano anatolico, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "AOG": {
+    "aog-baidu-1.webp": "La facciata del terminal dell'Aeroporto di Anshan Teng'ao — caratteri rossi '鞍山' e la scritta 'An Shan' sul tetto, un piazzale antistante quasi vuoto sotto.",
+    "aog-baidu-2.webp": "Una vista più ravvicinata del terminal — gradini e lanterne davanti alla facciata vetrata, la torre di controllo rotonda a sinistra."
+  },
+  "AOJ": {
+    "aoj-baidu-1.webp": "All'interno del terminal: 'Welcome to AOMORI' composto da lettere di legno accanto a due tradizionali bambole kokeshi.",
+    "aoj-baidu-2.webp": "La sala bagagli — nastri trasportatori che si snodano intorno a colonne rivestite in legno sotto pannelli retroilluminati delle stagioni di Aomori.",
+    "aoj-baidu-3.webp": "Il food court 'AOMORI AIRPORT FOREST DINING' — un bancone in legno dai toni caldi davanti a una parete di vetro con piante, tavoli a destra."
+  },
+  "AOO": {
+    "aoo-sat-1.webp": "Vista satellitare: le piste di Altoona si trovano tra i boschi e i crinali degli Allegheny, con il terminal e il piazzale aeromobili a fianco del campo."
+  },
+  "AOT": {
+    "aot-sat-1.webp": "Vista satellitare: l'Aeroporto di Aosta Corrado Gex (AOT) si trova tra vegetazione e terreni agricoli."
+  },
+  "APK": {
+    "apk-sat-1.webp": "Vista satellitare: l'Aeroporto di Apataki (APK) si trova tra acqua e costa."
+  },
+  "APN": {
+    "apn-sat-1.webp": "Vista satellitare: le piste di Alpena si trovano tra boschi e terreni agricoli accanto al lago Huron, con il terminal e il piazzale aeromobili a fianco del campo."
+  },
+  "APO": {
+    "apo-sat-1.webp": "Vista satellitare: la pista di Apartadó si trova tra foresta pluviale e terreni agricoli nelle pianure caraibiche, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "AQA": {
+    "aqa-sat-1.webp": "Vista satellitare: la pista di Araraquara si trova tra terreni agricoli e centro abitato nell'entroterra dello stato di São Paulo, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "AQG": {
+    "aqg-sat-1.webp": "Vista satellitare: la pista di Anqing si trova tra la riva settentrionale dello Yangtze e basse colline, con il terminal e il piazzale aeromobili a fianco."
+  },
+  "AQJ": {
+    "aqj-sat-1.webp": "Vista satellitare: una pista e una via di rullaggio parallela attraversano il deserto, con il terminal e il piazzale aeromobili a metà percorso."
+  },
+  "ARA": {
+    "ara-sat-1.webp": "Vista satellitare: l'Aeroporto Regionale di Acadiana (ARA) si trova tra vegetazione e terreni agricoli."
+  },
+  "ARC": {
+    "arc-sat-1.webp": "Vista satellitare: una pista in ghiaia attraversa boschi e laghi vicino ad Arctic Village, con il villaggio all'estremità settentrionale."
+  },
+  "ARE": {
+    "are-sat-1.webp": "Vista satellitare: l'Aeroporto Antonio Nery Juarbe Pol (ARE) si trova tra vegetazione verde e terreni agricoli."
+  },
+  "ARK": {
+    "ark-baidu-1.webp": "L'ingresso del terminal — viaggiatori e persone venute a salutarli, radunati sotto la pensilina in tela.",
+    "ark-baidu-2.webp": "Piccoli aerei sul piazzale — una fila di Cessna sotto le nuvole, montagne all'orizzonte.",
+    "ark-baidu-3.webp": "Lo sportello 'ARUSHA AIRPORT INFORMATION' nella sua casetta in legno — le strutture dell'aeroporto ben in vista."
+  },
+  "ARM": {
+    "arm-sat-1.webp": "Vista satellitare: le piste di Armidale si trovano tra colline e terreni agricoli sull'altopiano del New England, con il terminal e il piazzale accanto al campo."
+  },
+  "ARN": {
+    "arn-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'Aeroporto di Stoccolma Arlanda (ARN) si inseriscono nella rete urbana e stradale."
+  },
+  "ARU": {
+    "aru-sat-1.webp": "Vista satellitare: la pista di Araçatuba si trova tra terreni agricoli e città nell'interno dello stato di São Paulo, con il terminal e il piazzale accanto."
+  },
+  "ARW": {
+    "arw-sat-1.webp": "Vista satellitare: la pista di Arad si trova nella pianura occidentale rumena, con il terminal e il piazzale accanto e la città e i terreni agricoli tutt'intorno."
+  },
+  "ARX": {
+    "arx-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto Regionale Aracati Dragão do Mar (ARX) si confonde con la vegetazione verde e i terreni agricoli circostanti."
+  },
+  "ASA": {
+    "asa-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto Internazionale di Assab (ASA) si trova tra terreno arido e terra brulla."
+  },
+  "ASB": {
+    "asb-baidu-2.webp": "Sul piazzale cargo: un aereo merci An-74 di Turkmenistan Airlines parcheggiato davanti al terminal YÜK (cargo).",
+    "asb-baidu-3.webp": "L'edificio del terminal cargo — pareti bianche sotto una fascia verde, una lunga fila di banchine di carico a livello del suolo."
+  },
+  "ASD": {
+    "asd-sat-1.webp": "Vista satellitare: l'Aeroporto di Andros Town (ASD) si trova tra città, terreni agricoli e vegetazione."
+  },
+  "ASE": {
+    "ase-sat-1.webp": "Vista satellitare: la pista di Aspen si trova in una valle delle Montagne Rocciose, con il terminal e il piazzale accanto e foreste e cime innevate tutt'intorno."
+  },
+  "ASF": {
+    "asf-sat-1.webp": "Vista satellitare: la pista di Astrakhan si trova nella bassa pianura del Volga, con il terminal e il piazzale accanto e corsi d'acqua e terre aride tutt'intorno."
+  },
+  "ASJ": {
+    "asj-baidu-1.webp": "Sul piazzale davanti al terminal — passeggeri con i bagagli diretti all'edificio contrassegnato 'AMAMI', con il personale di terra che li indirizza.",
+    "asj-baidu-2.webp": "Aerei Japan Air Commuter agli stand — due jet regionali in imbarco sotto i cartelli, il mare appena oltre la pista.",
+    "asj-baidu-3.webp": "Amami dall'alto — la pista distesa lungo la costa, l'acqua punteggiata di barriere coralline che si estende sotto."
+  },
+  "ASM": {
+    "asm-sat-1.webp": "Vista satellitare: la pista di Asmara si trova sull'altopiano, con il terminal e il piazzale accanto e la città e i crinali tutt'intorno."
+  },
+  "ASO": {
+    "aso-sat-1.webp": "Vista satellitare: la pista di Asosa si trova tra colline e boschi nell'Etiopia occidentale, con il terminal e il piazzale accanto."
+  },
+  "ASP": {
+    "asp-page-2.webp": "La vecchia torre di controllo di Alice Springs — un fusto in mattoni sotto la cabina vetrata, un Fokker F.27 in attesa sul piazzale (ca. 1970; foto Terry Martin, collezione CAHS, tramite l'Airways Museum).",
+    "asp-page-3.webp": "Alice Springs dall'alto — piste e vie di rullaggio stese attraverso il deserto rosso, la torre, il terminal e il piazzale allineati lungo il campo (collezione CAHS, tramite l'Airways Museum)."
+  },
+  "ASV": {
+    "asv-sat-1.webp": "Vista satellitare: la pista di Amboseli si trova nella savana ai piedi del Kilimanjaro, con il terminal e il piazzale accanto."
+  },
+  "ASW": {
+    "asw-sat-1.webp": "Vista satellitare: la pista di Assuan si trova tra la valle del Nilo e il deserto, con il terminal e il piazzale accanto."
+  },
+  "ATB": {
+    "atb-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Atbara (ATB) si confonde con il terreno arido e la terra brulla circostanti."
+  },
+  "ATC": {
+    "atc-sat-1.webp": "Vista satellitare: la pista di Arthur's Town si trova sulla costa delle Bahamas, con il terminal e il piazzale accanto e mare e vegetazione tutt'intorno."
+  },
+  "ATH": {
+    "ath-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'Aeroporto Internazionale di Atene (ATH) si inseriscono nella rete urbana e stradale."
+  },
+  "ATK": {
+    "atk-sat-1.webp": "Vista satellitare: la pista di Atqasuk si trova nella tundra del North Slope dell'Alaska, con il terminal e il piazzale accanto e zone umide e laghi tutt'intorno."
+  },
+  "ATL": {
+    "atl-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'Aeroporto Internazionale Hartsfield–Jackson di Atlanta (ATL) si inseriscono nella rete urbana e stradale."
+  },
+  "ATM": {
+    "atm-sat-1.webp": "Vista satellitare: la pista di Altamira si trova tra la foresta pluviale amazzonica e i fiumi, con il terminal e il piazzale accanto."
+  },
+  "ATR": {
+    "atr-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto Internazionale di Atar (ATR) si confonde con la città, i terreni agricoli e la vegetazione circostanti."
+  },
+  "ATW": {
+    "atw-sat-1.webp": "Vista satellitare: due piste si incrociano tra terreni agricoli e città, con il terminal e il piazzale al centro del campo."
+  },
+  "ATZ": {
+    "atz-sat-1.webp": "Vista satellitare: la pista di Asyut si trova dove la valle del Nilo incontra il deserto, con il terminal e il piazzale accanto."
+  },
+  "AUG": {
+    "aug-sat-1.webp": "Vista satellitare: una pista corta incastonata tra boschi e città, con il terminal e il piazzale accanto."
+  },
+  "AUH": {
+    "auh-baidu-1.webp": "Il tetto ondulato dell'Aeroporto Internazionale Zayed — un aereo di linea che passa sopra, con la strada di sosta e le pensiline frangisole in primo piano."
+  },
+  "AUK": {
+    "auk-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto di Alakanuk (AUK) si trova tra vegetazione verde e terreni agricoli."
+  },
+  "AUR": {
+    "aur-sat-1.webp": "Vista satellitare: la pista di Aurillac si trova tra colline e terreni agricoli sul Massiccio Centrale, con il terminal e il piazzale accanto."
+  },
+  "AUS": {
+    "aus-page-4.webp": "Il monumento d'ingresso e la fontana presso l'Austin-Bergstrom — il nome e il simbolo dell'aeroporto illuminati al crepuscolo.",
+    "aus-page-5.webp": "All'interno del Barbara Jordan Terminal — viaggiatori con i bagagli che passano davanti al cartello \"C Gates 1–25\" e ai monitor delle partenze."
+  },
+  "AUU": {
+    "auu-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Aurukun (AUU) si confonde con la città, i terreni agricoli e la vegetazione circostanti."
+  },
+  "AUX_": {
+    "aux-sat-1.webp": "Vista satellitare: l'Aeroporto di Araguaína (AUX) è circondato da città, terreni agricoli e vegetazione."
+  },
+  "AUY": {
+    "auy-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Aneityum (AUY) si confonde con l'acqua e la costa circostanti."
+  },
+  "AVA": {
+    "ava-baidu-1.webp": "Il terminal dell'Aeroporto di Anshun Huangguoshu, i caratteri rossi '黄果树' sul tetto dalle linee curve, un piazzale antistante quasi vuoto in basso.",
+    "ava-baidu-2.webp": "Il terminal e la torre al crepuscolo — un cartellone ai margini della strada con la scritta '21℃的城市' e la torre di controllo illuminata contro il cielo della sera.",
+    "ava-baidu-3.webp": "Passeggeri che escono verso l'imbarco — l'insegna dorata '黄果树' e la facciata vetrata alle loro spalle, la torre sopra."
+  },
+  "AVB": {
+    "avb-sat-1.webp": "Nell'immagine satellitare, la pista della Base Aerea di Aviano (AVB) si trova tra vegetazione verde e terreni agricoli."
+  },
+  "AVK": {
+    "avk-sat-1.webp": "Vista satellitare: l'Aeroporto di Arvaikheer (AVK) è circondato da città, terreni agricoli e vegetazione."
+  },
+  "AVL": {
+    "avl-page-3.webp": "L'insegna d'ingresso dell'Aeroporto Regionale di Asheville — scritte verdi accanto a un cartello SHUTTLE LOT, con colline boscose sullo sfondo."
+  },
+  "AVR": {
+    "avr-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto di Amravati (AVR) si trova tra vegetazione verde e terreni agricoli."
+  },
+  "AVV": {
+    "avv-baidu-1.webp": "La pensilina in tessuto tensionato all'esterno del terminal, che si distende sul piazzale antistante e sui camminamenti grazie alla sua struttura in acciaio.",
+    "avv-baidu-2.webp": "Le porte degli arrivi e delle partenze — 'Domestic Arrivals' accanto a 'International & Domestic Departures', con le indicazioni anche in cinese per i collegamenti di Avalon con la Cina."
+  },
+  "AWA": {
+    "awa-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto Internazionale di Hawassa (AWA) si trova tra città, terreni agricoli e vegetazione."
+  },
+  "AWD": {
+    "awd-sat-1.webp": "Vista satellitare: l'Aeroporto di Aniwa (AWD) si trova tra acqua e costa."
+  },
+  "AWZ": {
+    "awz-sat-1.webp": "Vista satellitare: la pista corre parallela alla griglia stradale di Ahvaz, con il terminal e il piazzale a metà del suo percorso."
+  },
+  "AXF": {
+    "axf-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Alxa Left Banner Bayanhot (AXF) si confonde con il terreno arido e la terra brulla circostanti."
+  },
+  "AXJ": {
+    "axj-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Amakusa (AXJ) si confonde con la vegetazione verde e i terreni agricoli circostanti."
+  },
+  "AXK": {
+    "axk-sat-1.webp": "Vista satellitare: l'Aeroporto di Ataq (AXK) si trova tra terreno arido e terra brulla."
+  },
+  "AXR": {
+    "axr-sat-1.webp": "Vista satellitare: la pista di Arutua si trova su un isolotto di un atollo delle Tuamotu, con il terminal e il piazzale accanto e la laguna tutt'intorno."
+  },
+  "AXT": {
+    "axt-baidu-1.webp": "Il terminal di Akita al crepuscolo — la scritta '秋田空港' sopra la facciata color mattone, la torre di controllo al centro e una luce calda dietro i vetri.",
+    "axt-baidu-2.webp": "La facciata del terminal di giorno — fasce di rivestimento rosso ruggine tra vetrate scure, con poco traffico sulla strada antistante.",
+    "axt-baidu-3.webp": "Accanto all'ingresso del terminal — colonne e fioriere sotto l'intradosso arancione, un camminamento che porta al parcheggio, più avanti."
+  },
+  "AXU": {
+    "axu-page-1.webp": "La targa del terminal dell'aeroporto di Axum — caratteri amarici accanto a 'AXUM YOHANNES IV AIRPORT', il marchio di Ethiopian Airlines sopra (fotografata dopo la riapertura del 2024)."
+  },
+  "AYJ": {
+    "ayj-sat-1.webp": "Vista satellitare: l'Aeroporto Internazionale Maharshi Valmiki (AYJ) si trova tra città, terreni agricoli e vegetazione."
+  },
+  "AYQ": {
+    "ayq-baidu-2.webp": "L'area di trasferimento all'esterno del terminal — pullman per le escursioni a Uluru allineati sotto il camminamento coperto, accanto ai cartelli del punto di ritrovo dell'aeroporto."
+  },
+  "AYT": {
+    "ayt-page-1.webp": "L'Aeroporto di Antalya dall'alto — aerei di linea parcheggiati a ventaglio attorno al satellite circolare, con le passerelle disposte a raggiera (la barra dei titoli di giornale della foto è stata ritagliata)."
+  },
+  "AZH": {
+    "azh-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Azamgarh (AZH) si confonde con la città, i terreni agricoli e la vegetazione circostanti."
+  },
+  "AZN": {
+    "azn-sat-1.webp": "Vista satellitare: la pista di Andijan si trova tra terreni agricoli e città nella valle di Fergana, con il terminal e il piazzale accanto."
+  },
+  "BBU": {
+    "bbu-page-3.webp": "Băneasa al crepuscolo — il terminal e la torre blu illuminati, autobus e un aereo di linea sul piazzale."
+  },
+  "BCN": {
+    "bcn-sat-1.webp": "Nell'immagine satellitare, i terminal, il piazzale e le piste dell'Aeroporto di Barcellona–El Prat (BCN) sono ben visibili."
+  },
+  "BIG": {
+    "big-sat-1.webp": "Vista satellitare: l'Allen Army Airfield (BIG) è circondato da città, terreni agricoli e vegetazione."
+  },
+  "BKK": {
+    "bkk-sat-1.webp": "Vista satellitare: i terminal e le piste dell'Aeroporto di Suvarnabhumi (BKK) e la città circostante."
+  },
+  "BPS": {
+    "bps-sat-1.webp": "Vista satellitare: la pista di Porto Seguro si trova tra foresta e spiaggia sulla costa atlantica del Brasile, con il terminal e il piazzale accanto."
+  },
+  "BYF": {
+    "byf-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto Albert Bray (BYF) si trova tra vegetazione verde e campi coltivati."
+  },
+  "BYH": {
+    "byh-sat-1.webp": "Vista satellitare: una lunga pista taglia in diagonale i campi coltivati, con il piazzale e gli hangar accanto al punto mediano."
+  },
+  "CAI": {
+    "cai-page-1.webp": "La reception della lounge EgyptAir / Star Alliance all'aeroporto internazionale del Cairo — rivestimento in legno e un tavolino in marmo, con posti a sedere tranquilli oltre le porte (Ministero dell'Aviazione Civile egiziano, gennaio 2025, tramite lo State Information Service).",
+    "cai-page-2.webp": "L'area check-in della business class di EgyptAir — banchi blu sotto i display dei voli mentre i passeggeri si registrano (Ministero dell'Aviazione Civile egiziano, agosto 2021, tramite lo State Information Service)."
+  },
+  "CAK": {
+    "cak-page-1.webp": "Un banco check-in di American Airlines — un addetto che gestisce una valigia mentre i passeggeri osservano, con il marchio blu e bianco della compagnia sullo sfondo.",
+    "cak-page-2.webp": "Il corridoio degli arrivi — viaggiatori con i bagagli diretti all'uscita sotto l'insegna «Arrivi»."
+  },
+  "CAN": {
+    "can-sat-1.webp": "Vista satellitare: l'aeroporto internazionale di Guangzhou Baiyun (CAN) è incorniciato da città, costa o territorio, con la pista che attraversa l'inquadratura."
+  },
+  "CDG": {
+    "cdg-baidu-1.webp": "All'interno del Terminal 1 di Charles de Gaulle — la fila «Bars, Restaurants» nell'atrio circolare sotto le pareti di vetro, con i viaggiatori che passano di continuo.",
+    "cdg-baidu-2.webp": "La scala mobile verso il Terminal 2 — il cartello sospeso con la scritta «Bagages / Baggage / 行李提取» e «Sortie / Exit» in tre lingue."
+  },
+  "CFE": {
+    "cfe-baidu-2.webp": "Il terminal dell'aviazione d'affari — la scritta «départs / departures» sulla facciata scura, con una porta girevole e una corsia di sosta davanti.",
+    "cfe-baidu-3.webp": "Un jet d'affari Dassault Falcon sul piazzale, con la torre di controllo e il terminal dietro."
+  },
+  "CGK": {
+    "cgk-baidu-1.webp": "All'interno del terminal di Soekarno-Hatta — archi rossi con motivi a filigrana sotto il soffitto geometrico della hall partenze.",
+    "cgk-baidu-2.webp": "Un corridoio d'imbarco — travi verdi e vetrate che danno su piante tropicali, un cartello giallo che indica il gate D6."
+  },
+  "CJS": {
+    "cjs-sat-1.webp": "Vista satellitare: le piste di Ciudad Juárez si trovano tra la città e la terra arida ai margini del deserto di Chihuahua, con il terminal e il piazzale accanto."
+  },
+  "CLO": {
+    "clo-sat-1.webp": "Vista satellitare: la pista di Cali si trova nella valle del Cauca, con il terminal e il piazzale a est e la città e i campi di canna da zucchero intorno."
+  },
+  "CMF": {
+    "cmf-sat-1.webp": "Vista satellitare: la pista si trova nella campagna verde fuori Chambéry, con il terminal e il piazzale accanto."
+  },
+  "COR": {
+    "cor-sat-1.webp": "Vista satellitare: le piste di Cordoba si trovano a nord della città, con il terminal e il piazzale a est del campo e con campi coltivati e abitazioni intorno."
+  },
+  "CPC": {
+    "cpc-sat-1.webp": "Vista satellitare: la pista di San Martín de los Andes si trova tra valli e laghi nelle Ande patagoniche, con il terminal e il piazzale accanto."
+  },
+  "CPH": {
+    "cph-sat-1.webp": "Nell'immagine satellitare sono chiaramente visibili i terminal, il piazzale e le piste dell'aeroporto di Copenaghen Kastrup (CPH)."
+  },
+  "CPT": {
+    "cpt-sat-1.webp": "Nell'immagine satellitare sono chiaramente visibili i terminal, il piazzale e le piste dell'aeroporto internazionale di Città del Capo (CPT)."
+  },
+  "CTD": {
+    "ctd-sat-1.webp": "Nell'immagine satellitare, l'aeroporto Alonso Valderrama (CTD) si confonde con la città, i campi coltivati e la vegetazione circostanti."
+  },
+  "CUM": {
+    "cum-sat-1.webp": "Vista satellitare: la pista di Cumaná si trova tra la città e le colline sulla costa caraibica venezuelana, con il terminal e il piazzale accanto."
+  },
+  "CUZ": {
+    "cuz-sat-1.webp": "Vista satellitare: la pista di Cusco si trova in una valle andina, con il terminal e il piazzale accanto e la città e i versanti collinari intorno."
+  },
+  "CWB": {
+    "cwb-baidu-1.webp": "Un Boeing 737 dell'Aeronautica militare brasiliana che sale in quota dalla pista di Curitiba.",
+    "cwb-baidu-2.webp": "Un Tu-154 che rulla in direzione frontale, con i tre motori in vista — uno di quei visitatori rari che attirano gli spotter a Curitiba."
+  },
+  "CYA": {
+    "cya-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto internazionale Antoine-Simon (CYA) si trova tra città, campi coltivati e vegetazione."
+  },
+  "DEL": {
+    "del-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'aeroporto internazionale Indira Gandhi (DEL) si trovano all'interno della città e della rete stradale."
+  },
+  "DHF": {
+    "dhf-sat-1.webp": "Vista satellitare: la base aerea di Al Dhafra (DHF) è circondata da terreno arido e terra nuda."
+  },
+  "DIE": {
+    "die-sat-1.webp": "Vista satellitare: la pista di Antsiranana si trova tra colline e città nel nord del Madagascar, con il terminal e il piazzale accanto."
+  },
+  "DOH": {
+    "doh-sat-1.webp": "Nell'immagine satellitare sono chiaramente visibili i terminal, il piazzale e le piste dell'aeroporto internazionale Hamad (DOH)."
+  },
+  "DUB": {
+    "dub-sat-1.webp": "Nell'immagine satellitare sono chiaramente visibili i terminal, il piazzale e le piste dell'aeroporto di Dublino (DUB)."
+  },
+  "DXB": {
+    "dxb-sat-1.webp": "Vista satellitare: l'aeroporto internazionale di Dubai (DXB) è incorniciato da città, costa o territorio, con la pista che attraversa l'inquadratura."
+  },
+  "EDC": {
+    "edc-baidu-3.webp": "La torre di controllo bianca dell'aeroporto — una cabina vetrata su un fusto quadrato, con veicoli e un elicottero alla base."
+  },
+  "EPS": {
+    "eps-sat-1.webp": "Vista satellitare: l'aeroporto Arroyo Barril (EPS) si trova tra vegetazione verde e campi coltivati."
+  },
+  "EWR": {
+    "ewr-sat-1.webp": "Vista satellitare: l'aeroporto internazionale Newark Liberty (EWR) è incorniciato da città, costa o territorio, con la pista che attraversa l'inquadratura."
+  },
+  "FCO": {
+    "fco-sat-1.webp": "Vista satellitare: i terminal, le piste e la città circostante dell'aeroporto di Roma Fiumicino (FCO)."
+  },
+  "FMM": {
+    "fmm-sat-1.webp": "Vista satellitare: la pista di Memmingen si trova tra le colline dell'Allgäu e i campi coltivati, con il terminal e il piazzale a nord del campo."
+  },
+  "FON": {
+    "fon-sat-1.webp": "Vista satellitare: l'aeroporto di La Fortuna è cerchiato in rosso, circondato dalla foresta pluviale e dai campi coltivati in Costa Rica."
+  },
+  "FRA": {
+    "fra-baidu-2.webp": "The Squaire, all'aeroporto di Francoforte — il lungo edificio bianco e curvo che scavalca i binari sui suoi sostegni inclinati, con l'autostrada che passa accanto.",
+    "fra-baidu-3.webp": "Francoforte dall'alto — aerei e mezzi da cantiere sparsi sul piazzale e sulle piste, con lo skyline della città oltre la fascia boschiva."
+  },
+  "GOY": {
+    "goy-sat-1.webp": "Vista satellitare: l'aeroporto di Ampara (GOY), con la sua pista 07/25 che taglia la vegetazione verde e i campi coltivati nello Sri Lanka orientale."
+  },
+  "GPA": {
+    "gpa-sat-1.webp": "Vista satellitare: la pista dell'aeroporto di Patrasso si trova tra la costa e le colline del Peloponneso nord-occidentale, con il terminal e il piazzale accanto."
+  },
+  "GRB": {
+    "grb-sat-1.webp": "Vista satellitare: le due piste di Green Bay si trovano nella pianura accanto al lago Michigan, con il terminal e il piazzale a lato del campo."
+  },
+  "GRU": {
+    "gru-sat-1.webp": "Vista satellitare: l'aeroporto internazionale di San Paolo/Guarulhos (GRU) è incorniciato da città, costa o territorio, con la pista che attraversa l'inquadratura."
+  },
+  "GUW": {
+    "guw-sat-1.webp": "Vista satellitare: la pista di Atyrau si trova nel bassopiano caspico arido, con il terminal e il piazzale accanto e con fiumi e zone umide intorno."
+  },
+  "GYL": {
+    "gyl-sat-1.webp": "Vista satellitare: l'aeroporto di Argyle (GYL) si trova tra terreno arido e terra nuda."
+  },
+  "GZP": {
+    "gzp-sat-1.webp": "Vista satellitare: la pista di Gazipaşa si trova nella pianura costiera tra i Monti Tauro e il Mediterraneo, con il terminal e il piazzale accanto."
+  },
+  "HKG": {
+    "hkg-baidu-1.webp": "Dal finestrino di una cabina: un aereo Cathay allo stand davanti al tetto a volta del terminal, con la marcatura di stand «S35» dipinta sul piazzale sottostante.",
+    "hkg-baidu-2.webp": "Il livello partenze del Terminal 1 — tapis roulant sotto il soffitto a onde, cartelli dei gate 40 e 41 sopra la testa, viaggiatori che spingono i bagagli.",
+    "hkg-baidu-3.webp": "Un Boeing 747 di Cathay Pacific Cargo che si stacca dalla pista lato mare, con un traghetto che passa sotto l'aereo."
+  },
+  "HND": {
+    "hnd-sat-1.webp": "Vista satellitare: l'aeroporto di Tokyo Haneda (HND) è incorniciato da città, costa o territorio, con la pista che attraversa l'inquadratura."
+  },
+  "HOF": {
+    "hof-sat-1.webp": "Vista satellitare: la pista di Al-Ahsa si trova tra oasi e deserto, con il terminal e il piazzale accanto e con palmeti e città intorno."
+  },
+  "HPN": {
+    "hpn-sat-1.webp": "Vista satellitare: l'aeroporto della contea di Westchester (HPN) è incorniciato da città, costa o territorio, con la pista che attraversa l'inquadratura."
+  },
+  "HQQ": {
+    "hqq-sat-1.webp": "Vista satellitare: l'aeroporto di Anyang Hongqiqu (HQQ) è circondato da città, campi coltivati e vegetazione."
+  },
+  "HRH": {
+    "hrh-sat-1.webp": "Vista satellitare: l'aeroporto di Aligarh (HRH) è circondato da città, campi coltivati e vegetazione."
+  },
+  "HUU": {
+    "huu-page-1.webp": "La manica a vento arancione accanto alla pista di Huánuco — la città collinare che si alza oltre la recinzione blu (foto dalla scheda tecnica ufficiale dell'aeroporto di CORPAC, settembre 2023).",
+    "huu-page-2.webp": "La sala d'imbarco — vetrate a tutta altezza sul campo di volo, passeggeri in attesa in fila (foto dalla scheda tecnica ufficiale dell'aeroporto di CORPAC)."
+  },
+  "HVA": {
+    "hva-sat-1.webp": "Nell'immagine satellitare, l'aeroporto di Analalava (HVA) si confonde con la città, i campi coltivati e la vegetazione circostanti."
+  },
+  "IAD": {
+    "iad-sat-1.webp": "Vista satellitare: l'aeroporto internazionale Washington Dulles (IAD) è incorniciato da città, costa o territorio, con la pista che attraversa l'inquadratura."
+  },
+  "ICN": {
+    "icn-sat-1.webp": "Vista satellitare: l'aeroporto internazionale di Incheon (ICN) è incorniciato da città, costa o territorio, con la pista che attraversa l'inquadratura."
+  },
+  "IEO": {
+    "ieo-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Aioun el Atrouss (IEO) si trova tra terreno arido e terra nuda."
+  },
+  "IQA": {
+    "iqa-sat-1.webp": "Nell'immagine satellitare, la base aerea di Al Asad (IQA) si confonde con il terreno arido e la terra nuda circostanti."
+  },
+  "ISL": {
+    "isl-sat-1.webp": "Vista satellitare: l'aeroporto İstanbul Atatürk (ISL) si trova tra città, campi coltivati e vegetazione."
+  },
+  "IST": {
+    "ist-sat-1.webp": "Vista satellitare: i terminal, le piste e la città circostante dell'aeroporto di Istanbul (IST)."
+  },
+  "IVA": {
+    "iva-sat-1.webp": "Vista satellitare: l'aeroporto di Ampampamena (IVA) si trova tra vegetazione verde e campi coltivati."
+  },
+  "IXA": {
+    "ixa-baidu-1.webp": "Un biturbina a elica rivolto verso l'obiettivo sul piazzale di Agartala, con le basse colline del Tripura oltre il campo di volo."
+  },
+  "IXD": {
+    "ixd-sat-1.webp": "Vista satellitare: le piste di Prayagraj si trovano tra città e campi coltivati nella pianura del Gange, con il terminal e il piazzale accanto al campo."
+  },
+  "IXU": {
+    "ixu-page-1.webp": "Il piazzale antistante il terminal — una copertura bianca a volta sulla corsia di sosta e sull'ingresso delle partenze.",
+    "ixu-page-2.webp": "Il terminal visto dal prato — il tetto curvo che corre lungo la facciata, con la torre di controllo in lontananza a destra.",
+    "ixu-page-3.webp": "L'ingresso delle partenze — la pensilina con la scritta «WELCOME TO CHHATRAPATI SAMBHAJINAGAR AIRPORT» e «प्रस्थान DEPARTURE»."
+  },
+  "JEG": {
+    "jeg-sat-1.webp": "Vista satellitare: la corta pista di Aasiaat si trova su un'isola della Groenlandia, con il terminal e il piazzale accanto e con mare e roccia nuda intorno."
+  },
+  "JFK": {
+    "jfk-sat-1.webp": "Nell'immagine satellitare sono chiaramente visibili i terminal, il piazzale e le piste dell'aeroporto internazionale John F. Kennedy (JFK)."
+  },
+  "JIB": {
+    "jib-sat-1.webp": "Vista satellitare: la pista di Gibuti si trova sulla riva sud del golfo di Tagiura, con il terminal e il piazzale a nord del campo e il porto e la città intorno."
+  },
+  "JOG": {
+    "jog-sat-1.webp": "Veduta satellitare: la pista e la via di rullaggio di Yogyakarta si trovano sul margine orientale della città, con il terminal e il piazzale a nord del campo."
+  },
+  "JSI": {
+    "jsi-sat-1.webp": "Veduta satellitare: l'aeroporto nazionale dell'isola di Skiathos (JSI) è circondato dall'acqua e dalla costa."
+  },
+  "JTY": {
+    "jty-sat-1.webp": "Nell'immagine satellitare, l'aeroporto di Astypalaia (JTY) si confonde con l'acqua e la costa circostanti."
+  },
+  "JVA": {
+    "jva-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Ankavandra (JVA) si trova tra terreno arido e terra brulla."
+  },
+  "KIX": {
+    "kix-sat-1.webp": "Veduta satellitare: i terminal, le piste e la città circostante l'aeroporto internazionale del Kansai (KIX)."
+  },
+  "KQA": {
+    "kqa-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Akutan (KQA) si trova tra terreno arido e terra brulla."
+  },
+  "KSO": {
+    "kso-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto nazionale di Kastoria Aristotle (KSO) si trova tra il centro abitato, le campagne e la vegetazione."
+  },
+  "KUL": {
+    "kul-sat-1.webp": "Veduta satellitare: i terminal, le piste e la città circostante l'aeroporto internazionale di Kuala Lumpur (KUL)."
+  },
+  "LAK": {
+    "lak-sat-1.webp": "Veduta satellitare: l'aeroporto di Aklavik/Freddie Carmichael (LAK) si trova tra il centro abitato, le campagne e la vegetazione."
+  },
+  "LAX": {
+    "lax-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'aeroporto internazionale di Los Angeles (LAX) si trovano all'interno della città e della rete stradale."
+  },
+  "LBE": {
+    "lbe-sat-1.webp": "Veduta satellitare: la pista di Latrobe si trova tra le colline e i boschi della Pennsylvania, con il terminal e il piazzale accanto."
+  },
+  "LCG": {
+    "lcg-sat-1.webp": "Veduta satellitare: la pista di A Coruña si trova tra le colline costiere della Galizia, con il terminal e il piazzale accanto."
+  },
+  "LEI": {
+    "lei-sat-1.webp": "Veduta satellitare: la pista segue la costa di Almería, con il terminal e il piazzale all'estremità occidentale e il Mediterraneo al di sotto."
+  },
+  "LET": {
+    "let-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto internazionale Alfredo Vásquez Cobo (LET) si trova tra vegetazione rigogliosa e campagne."
+  },
+  "LFK": {
+    "lfk-baidu-1.webp": "Un Cessna in avvicinamento finale — la pista in erba e una torre dell'acqua rosso ruggine sotto l'ala, il carattere rurale del campo di volo in un solo scatto."
+  },
+  "LGA": {
+    "lga-sat-1.webp": "Veduta satellitare: i terminal, le piste e la città circostante l'aeroporto LaGuardia (LGA)."
+  },
+  "LGW": {
+    "lgw-sat-1.webp": "Veduta satellitare: l'aeroporto di Gatwick (LGW) è incorniciato da città, costa o territorio, con la pista che attraversa la scena."
+  },
+  "LHE": {
+    "lhe-sat-1.webp": "Veduta satellitare: le piste e le vie di rullaggio parallele di Lahore tagliano il margine sud-orientale della città, con il terminal e il piazzale a nord del campo."
+  },
+  "LHR": {
+    "lhr-baidu-1.webp": "Heathrow dall'alto — moli e piazzole gremiti di aerei di linea, piste e vie di rullaggio che si allungano in lontananza.",
+    "lhr-baidu-2.webp": "Da una finestra del terminal: un aereo Japan Airlines al gate, con la torre di controllo di Heathrow sullo sfondo.",
+    "lhr-baidu-3.webp": "Heathrow al crepuscolo — i terminal illuminati, un aereo Etihad parcheggiato sul piazzale."
+  },
+  "LIS": {
+    "lis-sat-1.webp": "Veduta satellitare: i terminal, le piste e la città circostante l'aeroporto Humberto Delgado (LIS)."
+  },
+  "LIT": {
+    "lit-sat-1.webp": "Veduta satellitare: le piste di Little Rock corrono lungo la riva meridionale del fiume Arkansas, con il terminal e il piazzale a nord del campo."
+  },
+  "LLU": {
+    "llu-sat-1.webp": "Nell'immagine satellitare, la pista dell'eliporto di Alluitsup Paa (LLU) si trova tra il centro abitato, le campagne e la vegetazione."
+  },
+  "LME": {
+    "lme-sat-1.webp": "Veduta satellitare: l'aeroporto di Le Mans-Arnage (LME) è circondato da vegetazione rigogliosa e campagne."
+  },
+  "LTI": {
+    "lti-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Altai (LTI) si trova tra il centro abitato, le campagne e la vegetazione."
+  },
+  "LTS": {
+    "lts-sat-1.webp": "Nell'immagine satellitare, la base aerea di Altus (LTS) si confonde con il centro abitato, le campagne e la vegetazione circostanti."
+  },
+  "LYM": {
+    "lym-sat-1.webp": "Veduta satellitare: l'aeroporto di Ashford (LYM) è circondato da vegetazione rigogliosa e campagne."
+  },
+  "MAD": {
+    "mad-sat-1.webp": "Veduta satellitare: l'aeroporto di Madrid-Barajas (MAD) è incorniciato da città, costa o territorio, con la pista che attraversa la scena."
+  },
+  "MDQ": {
+    "mdq-sat-1.webp": "Veduta satellitare: la pista di Mar del Plata si trova tra la costa atlantica e la pampa, con il terminal e il piazzale accanto."
+  },
+  "MEL": {
+    "mel-sat-1.webp": "Veduta satellitare: l'aeroporto di Melbourne (MEL), con le sue piste, il complesso dei terminal e la zona industriale di Tullamarine."
+  },
+  "MEX": {
+    "mex-sat-1.webp": "Veduta satellitare: l'aeroporto internazionale di Città del Messico (MEX) è incorniciato da città, costa o territorio, con la pista che attraversa la scena."
+  },
+  "MGQ": {
+    "mgq-sat-1.webp": "Veduta satellitare: la pista di Mogadiscio si trova accanto alla costa dell'Oceano Indiano, con il terminal e il piazzale di fianco e città e spiaggia tutt'intorno."
+  },
+  "MIA": {
+    "mia-sat-1.webp": "Nell'immagine satellitare, i terminal, il piazzale e le piste dell'aeroporto internazionale di Miami (MIA) sono chiaramente visibili."
+  },
+  "MLG": {
+    "mlg-sat-1.webp": "Veduta satellitare: le piste di Malang si trovano tra i centri abitati e le campagne degli altopiani di Giava, con il terminal e il piazzale accanto al campo e i vulcani sullo sfondo."
+  },
+  "MNL": {
+    "mnl-sat-1.webp": "Nell'immagine satellitare, i terminal, il piazzale e le piste dell'aeroporto internazionale Ninoy Aquino (MNL) sono chiaramente visibili."
+  },
+  "MOL": {
+    "mol-baidu-2.webp": "Un 737 di Norwegian al gate visto attraverso le vetrate del terminal, con il personale di terra al lavoro attorno all'aereo.",
+    "mol-baidu-3.webp": "L'aeroporto tra il fiordo e le montagne — la pista sullo stretto ripiano tra acqua e pendio, con le nuvole che si trascinano sulle cime."
+  },
+  "MRD": {
+    "mrd-sat-1.webp": "Nell'immagine satellitare, l'aeroporto Alberto Carnevalli (MRD) si confonde con la vegetazione rigogliosa e le campagne circostanti."
+  },
+  "MUC": {
+    "muc-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'aeroporto di Monaco di Baviera (MUC) si trovano all'interno della città e della rete stradale."
+  },
+  "MXP": {
+    "mxp-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'aeroporto di Milano Malpensa (MXP) si trovano all'interno della città e della rete stradale."
+  },
+  "MZI": {
+    "mzi-sat-1.webp": "Veduta satellitare: l'aeroporto di Mopti (MZI) si trova tra terreno arido e terra brulla."
+  },
+  "NRT": {
+    "nrt-baidu-1.webp": "La sala delle partenze nazionali del Terminal 1, con l'insegna «Partenze nazionali» in giapponese, cinese, coreano e inglese.",
+    "nrt-baidu-3.webp": "Il piazzale visto dal terminal — un 787 di ANA e due A320 di Vanilla Air parcheggiati più in là."
+  },
+  "NSK": {
+    "nsk-sat-1.webp": "Veduta satellitare: la pista di Norilsk si trova sulla tundra all'interno del circolo polare artico, con il terminal e il piazzale accanto e laghi e industrie tutt'intorno."
+  },
+  "OAJ": {
+    "oaj-sat-1.webp": "Veduta satellitare: la pista di Jacksonville si trova tra boschi e campagne nella pianura costiera della Carolina del Nord, con il terminal e il piazzale accanto."
+  },
+  "OBS": {
+    "obs-sat-1.webp": "Veduta satellitare: l'aeroporto di Aubenas-Ardèche meridionale (OBS) si trova tra vegetazione rigogliosa e campagne."
+  },
+  "OCV": {
+    "ocv-sat-1.webp": "Veduta satellitare: l'aeroporto di Aguas Claras (OCV) si trova tra il centro abitato, le campagne e la vegetazione."
+  },
+  "OES": {
+    "oes-sat-1.webp": "Nell'immagine satellitare, l'aeroporto Antoine de Saint Exupéry (OES) si confonde con il terreno arido e la terra brulla circostanti."
+  },
+  "OKC": {
+    "okc-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'aeroporto Will Rogers World (OKC) si trovano all'interno della città e della rete stradale."
+  },
+  "ORD": {
+    "ord-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'aeroporto internazionale O'Hare (ORD) si trovano all'interno della città e della rete stradale."
+  },
+  "ORY": {
+    "ory-sat-1.webp": "Veduta satellitare: l'aeroporto di Parigi Orly (ORY) è incorniciato da città, costa o territorio, con la pista che attraversa la scena."
+  },
+  "OUD": {
+    "oud-sat-1.webp": "Veduta satellitare: le due piste di Oujda si trovano nella pianura arida del Marocco orientale, con il terminal e il piazzale tra di esse."
+  },
+  "OVD": {
+    "ovd-sat-1.webp": "Veduta satellitare: la pista si trova su un altopiano tra la costa e le colline, con il terminal e il piazzale a metà pista."
+  },
+  "PEK": {
+    "pek-sat-1.webp": "Veduta satellitare: i terminal, le piste e la città circostante l'aeroporto internazionale di Pechino-Capitale (PEK)."
+  },
+  "PKH": {
+    "pkh-sat-1.webp": "Nell'immagine satellitare, l'aeroporto Alexion (PKH) si confonde con l'acqua e la costa circostanti."
+  },
+  "PNR": {
+    "pnr-sat-1.webp": "Veduta satellitare: la pista di Pointe-Noire si trova accanto alla costa atlantica, con il terminal e il piazzale a est della pista e la città e i boschi tutt'intorno."
+  },
+  "PSO": {
+    "pso-sat-1.webp": "Veduta satellitare: la pista di Pasto si trova in una valle andina, con il terminal e il piazzale accanto e montagne e campagne tutt'intorno."
+  },
+  "PVG": {
+    "pvg-baidu-1.webp": "Il terminal di Pudong visto dal finestrino dell'aereo — «上海 SHANGHAI» sulla linea del tetto, aerei China Eastern ai gate."
+  },
+  "PVK": {
+    "pvk-sat-1.webp": "Veduta satellitare: la pista di Preveza si trova tra le lagune e il mare sulla costa occidentale della Grecia, con il terminal e il piazzale accanto."
+  },
+  "PXA": {
+    "pxa-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Atung Bungsu (PXA) si trova tra vegetazione rigogliosa e campagne."
+  },
+  "PYR": {
+    "pyr-sat-1.webp": "Nell'immagine satellitare, la base aerea di Andravida (PYR) si confonde con il centro abitato, le campagne e la vegetazione circostanti."
+  },
+  "QNJ": {
+    "qnj-sat-1.webp": "Nell'immagine satellitare, la pista del campo di volo di Annemasse (QNJ) si trova tra vegetazione rigogliosa e campagne."
+  },
+  "QSF": {
+    "qsf-sat-1.webp": "Veduta satellitare: la pista di Setif si trova sull'altopiano dell'Atlante, con il terminal e il piazzale accanto e terra arida e centro abitato tutt'intorno."
+  },
+  "QXB": {
+    "qxb-sat-1.webp": "Nell'immagine satellitare, l'aeroporto di Aix Les Milles (QXB) si confonde con il centro abitato, le campagne e la vegetazione circostanti."
+  },
+  "RAE": {
+    "rae-sat-1.webp": "Veduta satellitare: una pista taglia la pianura arida alle porte di Arar, con il piazzale e il terminal che la costeggiano."
+  },
+  "RAF": {
+    "raf-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Rafaela (RAF) si trova tra terreno secco e terra brulla."
+  },
+  "RCH": {
+    "rch-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto Almirante Padilla (RCH) si trova tra centro abitato, terreni agricoli e vegetazione."
+  },
+  "REL": {
+    "rel-sat-1.webp": "Veduta satellitare: la pista di Rawson sorge sull'altopiano della Patagonia, con il terminal e il piazzale a lato e, intorno, arbusti secchi e centro abitato."
+  },
+  "RUA": {
+    "rua-page-1.webp": "Il mezzo antincendio dell'aerodromo di Arua presso il suo garage, all'interno della recinzione perimetrale (foto dal rapporto ESIA di luglio 2025 dell'Uganda CAA sull'ampliamento dell'aerodromo di Arua)."
+  },
+  "RUH": {
+    "ruh-sat-1.webp": "Nell'immagine satellitare, i terminal, il piazzale e le piste dell'aeroporto internazionale King Khalid (RUH) sono ben visibili."
+  },
+  "SAY": {
+    "say-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Siena-Ampugnano (SAY) si trova tra vegetazione verde e terreni agricoli."
+  },
+  "SBK": {
+    "sbk-sat-1.webp": "Veduta satellitare: l'aeroporto di Saint-Brieuc-Armor (SBK) si trova tra vegetazione verde e terreni agricoli."
+  },
+  "SCL": {
+    "scl-baidu-1.webp": "Il terminal visto dall'esterno — una copertura ad arco che si estende sulla facciata in acciaio e vetro, una passerella che collega la strada ai parcheggi."
+  },
+  "SCO": {
+    "sco-baidu-1.webp": "Imbarco di notte — passeggeri che salgono le scale verso un aereo FlyArystan, la livrea rossa nitida sotto le luci del piazzale."
+  },
+  "SCU": {
+    "scu-sat-1.webp": "Veduta satellitare: la pista si trova accanto alla costa di Santiago de Cuba, con il terminal e il piazzale a lato e, più in basso, i Caraibi."
+  },
+  "SDN": {
+    "sdn-page-1.webp": "Aeroporto di Sandane — un Dash 8 di Widerøe sul piazzale con la scaletta abbassata, il fiordo e le montagne che si aprono dietro l'aereo (foto: Bjoern Huke / PlanePictures.net)."
+  },
+  "SEA": {
+    "sea-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'aeroporto internazionale di Seattle-Tacoma (SEA) si trovano all'interno della città e della rete stradale."
+  },
+  "SFO": {
+    "sfo-sat-1.webp": "Veduta satellitare dell'aeroporto internazionale di San Francisco (SFO), con i terminal, le piste e la città circostante."
+  },
+  "SGN": {
+    "sgn-sat-1.webp": "Veduta satellitare dell'aeroporto internazionale di Tan Son Nhat (SGN), con i terminal, le piste e la città circostante."
+  },
+  "SID": {
+    "sid-sat-1.webp": "Veduta satellitare: la pista di Sal si trova sulla costa arida dell'isola di Capo Verde, con il terminal e il piazzale a est del campo di volo."
+  },
+  "SIN": {
+    "sin-sat-1.webp": "Veduta satellitare: l'aeroporto di Singapore Changi (SIN) è incorniciato da città, costa o terreno, con la pista che attraversa la scena."
+  },
+  "SLK": {
+    "slk-sat-1.webp": "Veduta satellitare: l'aeroporto regionale Adirondack (SLK) è circondato da vegetazione verde e terreni agricoli."
+  },
+  "SNU": {
+    "snu-sat-1.webp": "Veduta satellitare: la pista di Santa Clara si trova tra città e terreni agricoli nel centro di Cuba, con il terminal e il piazzale che la costeggiano."
+  },
+  "SOC": {
+    "soc-baidu-1.webp": "La facciata del terminal — la scritta «ADI SOEMARMO AIRPORT» sotto un tetto in tegole rosse, pennoni e recinzioni in file ordinate."
+  },
+  "SPG": {
+    "spg-sat-1.webp": "Veduta satellitare: l'aeroporto Albert Whitted (SPG) è circondato da centro abitato, terreni agricoli e vegetazione."
+  },
+  "SPI": {
+    "spi-page-6.webp": "Il monumento all'ingresso dell'aeroporto Abraham Lincoln Capital — il nome completo e «AT SPRINGFIELD» incisi nella pietra.",
+    "spi-page-7.webp": "Un C-47 da trasporto sul piazzale di Springfield, con le eliche e le insegne militari ben visibili."
+  },
+  "SRG": {
+    "srg-sat-1.webp": "Veduta satellitare: la pista di Semarang si trova vicino alla costa settentrionale di Giava, con il terminal e il piazzale a sud del campo di volo e, intorno, città e terreni agricoli."
+  },
+  "STN": {
+    "stn-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'aeroporto di Londra Stansted (STN) si trovano all'interno della città e della rete stradale."
+  },
+  "SVD": {
+    "svd-baidu-2.webp": "Argyle International dopo la pioggia — un aereo LIAT davanti al terminal dalla volta blu, il piazzale bagnato che riflette il cielo, colline stratificate sotto le nuvole."
+  },
+  "SVO": {
+    "svo-sat-1.webp": "Veduta satellitare dell'aeroporto internazionale Sheremetyevo (SVO), con i terminal, le piste e la città circostante."
+  },
+  "SYD": {
+    "syd-sat-1.webp": "Veduta satellitare dell'aeroporto di Sydney Kingsford Smith (SYD), con i terminal, le piste e la città circostante."
+  },
+  "SZX": {
+    "szx-sat-1.webp": "Veduta satellitare: l'aeroporto internazionale di Shenzhen Bao'an (SZX), con le piste e il terminal sulla sponda orientale dell'estuario del Fiume delle Perle."
+  },
+  "TAB": {
+    "tab-sat-1.webp": "Veduta satellitare: la pista di Scarborough si trova accanto alla costa di Tobago, con il terminal e il piazzale a lato e, intorno, spiaggia e colline verdi."
+  },
+  "TAS": {
+    "tas-sat-1.webp": "Veduta satellitare dell'aeroporto internazionale Islam Karimov di Tashkent (TAS), con i terminal, le piste e la città circostante."
+  },
+  "TGZ": {
+    "tgz-sat-1.webp": "Veduta satellitare: la pista di Tuxtla Gutiérrez si trova in una valle del Chiapas, con il terminal e il piazzale a lato e, intorno, montagne e terreni agricoli."
+  },
+  "TND": {
+    "tnd-sat-1.webp": "Veduta satellitare: l'aeroporto Alberto Delgado (TND) è circondato da vegetazione verde e terreni agricoli."
+  },
+  "TPE": {
+    "tpe-sat-1.webp": "Veduta satellitare: l'aeroporto internazionale di Taoyuan (TPE), con le piste parallele, i terminal e i centri abitati circostanti."
+  },
+  "TQD": {
+    "tqd-sat-1.webp": "Nell'immagine satellitare, la pista della base aerea di Al Taqaddum (TQD) si trova tra terreno secco e terra brulla."
+  },
+  "TTQ": {
+    "ttq-page-1.webp": "La pista di Tortuguero — un Cessna Caravan di Nature Air (TI-BDY) sull'asfalto, la piccola sala d'attesa con il tetto verde e la foresta pluviale subito dietro l'ala (foto: Sebastian Arndt / Flugzeugbilder.de)."
+  },
+  "UAM": {
+    "uam-sat-1.webp": "Nell'immagine satellitare, la base aerea di Andersen (UAM) si confonde con l'acqua e la costa circostanti."
+  },
+  "VBA": {
+    "vba-sat-1.webp": "Veduta satellitare: una pista attraversa colline verdi nel centro del Myanmar, con un piccolo piazzale e un terminal a lato."
+  },
+  "VIE": {
+    "vie-sat-1.webp": "Veduta satellitare dell'aeroporto internazionale di Vienna (VIE), con i terminal, le piste e la città circostante."
+  },
+  "VLN": {
+    "vln-sat-1.webp": "Veduta satellitare: la pista di Valencia si trova in una valle venezuelana, con il terminal e il piazzale a lato e, intorno, città, terreni agricoli e lago."
+  },
+  "VLY": {
+    "vly-sat-1.webp": "Nell'immagine satellitare, l'aeroporto di Anglesey (VLY) si confonde con la vegetazione verde e i terreni agricoli circostanti."
+  },
+  "VUP": {
+    "vup-sat-1.webp": "Nell'immagine satellitare, l'aeroporto Alfonso López Pumarejo (VUP) si confonde con il centro abitato, i terreni agricoli e la vegetazione circostanti."
+  },
+  "WAI": {
+    "wai-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Ambalabe (WAI) si trova tra terreno secco e terra brulla."
+  },
+  "WAM": {
+    "wam-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Ambatondrazaka (WAM) si trova tra terreno secco e terra brulla."
+  },
+  "WAQ": {
+    "waq-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Antsalova (WAQ) si trova tra centro abitato, terreni agricoli e vegetazione."
+  },
+  "WKK": {
+    "wkk-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Aleknagik / New (WKK) si trova tra vegetazione verde e terreni agricoli."
+  },
+  "WMR": {
+    "wmr-sat-1.webp": "Veduta satellitare: l'aeroporto di Mananara Nord (WMR) è circondato da acqua e costa."
+  },
+  "XJD": {
+    "xjd-sat-1.webp": "Veduta satellitare: le piste parallele e il grande piazzale della base aerea di Al Udeid, con gli edifici della base a est del campo di volo."
+  },
+  "YAA": {
+    "yaa-sat-1.webp": "Nell'immagine satellitare, l'aeroporto di Anahim Lake (YAA) si confonde con la vegetazione verde e i terreni agricoli circostanti."
+  },
+  "YAT": {
+    "yat-sat-1.webp": "Veduta satellitare: l'aeroporto di Attawapiskat (YAT) è circondato da vegetazione verde e terreni agricoli."
+  },
+  "YEK": {
+    "yek-sat-1.webp": "Nell'immagine satellitare, la pista dell'aeroporto di Arviat (YEK) si trova tra centro abitato, terreni agricoli e vegetazione."
+  },
+  "YIB": {
+    "yib-sat-1.webp": "Veduta satellitare: l'aeroporto municipale di Atikokan (YIB) si trova tra vegetazione verde e terreni agricoli."
+  },
+  "YIE": {
+    "yie-sat-1.webp": "Nell'immagine satellitare, l'aeroporto di Arxan Yi'ershi (YIE) si confonde con la vegetazione verde e i terreni agricoli circostanti."
+  },
+  "YLT": {
+    "ylt-sat-1.webp": "Veduta satellitare: una pista in ghiaia sulla tundra costiera di Alert, circondata da ghiaccio marino e terreno brullo."
+  },
+  "YPJ": {
+    "ypj-sat-1.webp": "Nell'immagine satellitare, l'aeroporto di Aupaluk (YPJ) si confonde con il centro abitato, i terreni agricoli e la vegetazione circostanti."
+  },
+  "YVR": {
+    "yvr-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'aeroporto internazionale di Vancouver (YVR) si trovano all'interno della città e della rete stradale."
+  },
+  "YXX": {
+    "yxx-sat-1.webp": "Veduta satellitare: le piste di Abbotsford si trovano tra terreni agricoli e montagne nella valle del Fraser, con il terminal e il piazzale ai margini del campo di volo."
+  },
+  "YYW": {
+    "yyw-sat-1.webp": "Veduta satellitare: una pista taglia la foresta nel nord dell'Ontario, con il piazzale e un piccolo terminal a metà del percorso."
+  },
+  "YYZ": {
+    "yyz-sat-1.webp": "Veduta satellitare dell'aeroporto internazionale di Toronto Pearson (YYZ), con i terminal, le piste e la città circostante."
+  },
+  "ZCA": {
+    "zca-sat-1.webp": "Veduta satellitare: l'aeroporto di Arnsberg Menden (ZCA) è circondato da vegetazione verde e terreni agricoli."
+  },
+  "ZRH": {
+    "zrh-sat-1.webp": "Veduta satellitare dell'aeroporto di Zurigo (ZRH), con i terminal, le piste e la città circostante."
+  },
+  "ZWA": {
+    "zwa-sat-1.webp": "Veduta satellitare: l'aeroporto di Andapa (ZWA) è circondato da vegetazione verde e terreni agricoli."
+  }
+}

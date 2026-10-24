@@ -3,6 +3,8 @@ import { formatNumber, transitLabel } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
 import { isGateRangePhrase } from '@/lib/i18n/de-data';
+import { isFrenchGateRangePhrase } from '@/lib/i18n/fr-data';
+import { isItalianGateRangePhrase } from '@/lib/i18n/it-data';
 import { isKoreanGateRangePhrase } from '@/lib/i18n/ko-data';
 import { clauseSeparator, isCjkLocale, listSeparator } from '@/lib/i18n/display';
 import type { AirportDetail, Terminal } from '@/lib/types';
@@ -10,9 +12,9 @@ import type { AirportDetail, Terminal } from '@/lib/types';
 /**
  * Complete gate phrase for one terminal, worded by the catalog so each locale
  * uses its own script (登机口 / 登機口 / Gates / 게이트). A gate range that names a
- * concourse ("Concourse A–E", "A–E 廊", "Bereich A", "A 콘코스") is already a
- * phrase and stands on its own; anything else is a code list and needs the word
- * "Gates" in front of it.
+ * concourse ("Concourse A–E", "A–E 廊", "Bereich A", "Hall A", "Satellite A",
+ * "A 콘코스") is already a phrase and stands on its own; anything else is a code
+ * list and needs the word "Gates" in front of it.
  */
 function gatePhrase(locale: Locale, t: ReturnType<typeof getMessages>, terminal: Terminal): string {
   const { gateRange, gateCount } = terminal;
@@ -21,7 +23,10 @@ function gatePhrase(locale: Locale, t: ReturnType<typeof getMessages>, terminal:
     return gateRange.endsWith('廊') ? gateRange : t.units.gatesLabel(gateRange);
   }
   const isPhrase =
-    isGateRangePhrase(gateRange) || (locale === 'ko' && isKoreanGateRangePhrase(gateRange));
+    isGateRangePhrase(gateRange) ||
+    (locale === 'fr' && isFrenchGateRangePhrase(gateRange)) ||
+    (locale === 'it' && isItalianGateRangePhrase(gateRange)) ||
+    (locale === 'ko' && isKoreanGateRangePhrase(gateRange));
   return isPhrase ? gateRange : t.units.gatesLabel(gateRange);
 }
 

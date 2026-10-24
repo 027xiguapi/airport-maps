@@ -257,7 +257,7 @@ export const contentDocuments = pgTable(
     kind: text('kind').notNull(),
     /** IATA / country code / page slug, always upper case for codes. */
     subject: text('subject').notNull(),
-    /** 'zh' (the authored source) | 'en' | 'tw' (derived) | 'de' | any future locale. */
+    /** 'zh' (the authored source) | 'en' | 'tw' (derived) | 'de' | 'fr' | 'it' | any future locale. */
     locale: text('locale').notNull(),
     /** Frontmatter `title` — page heading and metadata title. */
     title: text('title'),
