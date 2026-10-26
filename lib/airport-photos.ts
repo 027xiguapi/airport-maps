@@ -178,7 +178,10 @@ function twCaptionIndex(): Map<string, Map<string, string>> {
     >;
     for (const [iata, rows] of Object.entries(raw)) {
       if (iata.startsWith('_')) continue;
-      twCaptions.set(iata, new Map(Object.entries(rows)));
+      // The authored caption files use the on-disk stem for airports whose code
+      // collides with a Windows device name (`AUX_` for AUX); URLs and pages use
+      // the plain IATA code, so normalize the lookup key.
+      twCaptions.set(iata.replace(/_$/, ''), new Map(Object.entries(rows)));
     }
   } catch {
     // The derived file is missing; tw falls back to the authored zh caption.
@@ -206,7 +209,8 @@ function translatedCaptionIndex(
     ) as Record<string, Record<string, string>>;
     for (const [iata, rows] of Object.entries(raw)) {
       if (iata.startsWith('_')) continue;
-      index.set(iata, new Map(Object.entries(rows)));
+      // Same normalization as the Traditional-Chinese index: `AUX_` -> `AUX`.
+      index.set(iata.replace(/_$/, ''), new Map(Object.entries(rows)));
     }
   } catch {
     // No translated file yet; the caption falls back to English below.
