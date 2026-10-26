@@ -8,6 +8,10 @@ const AIRPORT_KIND = {
   heliport: 'heliport',
 } as const;
 
+/** "1 flight number" / "2 flight numbers" for already-formatted counts. */
+const plural = (value: string, one: string, many: string) =>
+  `${value} ${value === '1' ? one : many}`;
+
 /**
  * English catalog. Typed against the Chinese source of truth, so any missing or
  * renamed key fails the build.
@@ -576,6 +580,46 @@ export const en: Messages = {
     relatedTitle: (country: string) => `Other airports in ${country}`,
     relatedEn: (country: string) => `More in ${country}`,
     relatedAll: (country: string) => `All airports in ${country}`,
+    /**
+     * Flight board: every flight number in aviability.com's index that departs
+     * from or arrives at this airport. No times — the source sitemaps carry none.
+     */
+    flights: {
+      kicker: 'Flights',
+      title: (name: string) => `${name} flights — departures & arrivals`,
+      en: 'Flight Board',
+      sub: (flights: string, airlines: string, destinations: string) =>
+        `${plural(flights, 'flight number', 'flight numbers')} across ${plural(
+          airlines,
+          'airline',
+          'airlines'
+        )} and ${plural(destinations, 'destination', 'destinations')}, split by direction. Codeshare numbers are included.`,
+      statDepartures: 'Departure flight numbers',
+      statArrivals: 'Arrival flight numbers',
+      statAirlines: 'Airlines',
+      statDestinations: 'Destinations',
+      note: (date: string) =>
+        `Flight numbers and routes from the aviability.com flight index (snapshot ${date}); codeshare numbers are included and no departure times are shown. Source: `,
+      source: 'aviability.com',
+      tabDepartures: 'Departures',
+      tabArrivals: 'Arrivals',
+      search: 'Search flight number, airline or city',
+      clearSearch: 'Clear the search',
+      flight: 'Flight',
+      airline: 'Airline',
+      destination: 'Destination',
+      origin: 'Origin',
+      country: 'Country/region',
+      empty: 'No flights match this search.',
+      loading: 'Loading flights…',
+      error: 'Could not load more flights.',
+      retry: 'Try again',
+      previous: 'Previous',
+      next: 'Next',
+      pagination: 'Pagination',
+      showing: 'Showing {from}–{to} of {total} flight numbers',
+      pageOf: 'Page {page} of {pages}',
+    },
     notFound: 'Airport not found',
   },
 
@@ -589,6 +633,8 @@ export const en: Messages = {
     headingSub: (iata: string, count: string) =>
       `${iata} has ${count} direct destinations, coloured by how many airlines serve each.`,
     backToAirport: (iata: string) => `Back to the ${iata} airport page`,
+    /** Link from the route page to the airport page's flight board. */
+    flightNumbers: (iata: string) => `${iata} flight numbers`,
     /** Button on the airport page's teaser card. */
     openFull: 'View route map',
     /** Same card, for the airports whose network the repo has rendered: the picture is the link. */
@@ -640,6 +686,91 @@ export const en: Messages = {
       `Routes on this page come from the ${source} open dataset (${license}), a ${date} snapshot rather than a live schedule — check the airline or airport for tickets and timings.`,
   },
 
+  /** Standalone flight-number page (/flight/<number>). */
+  flight: {
+    metaTitle: (number: string, airline: string, from: string, to: string) =>
+      `${number} ${airline} flight — ${from} to ${to}`,
+    metaDescription: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Flight ${number} is a flight number used by ${airline} from ${from} to ${to}${distance ? `, about ${distance}` : ''}. Route map, departure and arrival airports, distance and other flights on the route.`,
+    heading: (number: string) => `Flight ${number}`,
+    subtitle: (airline: string, from: string, to: string) => `${airline} · ${from} → ${to}`,
+    lead: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Flight ${number} is a flight number used by ${airline} between ${from} and ${to}${distance ? `, a great-circle distance of about ${distance}` : ''}.`,
+    factFlight: 'Flight number',
+    factFrom: 'From',
+    factTo: 'To',
+    factDistance: 'Distance',
+    overviewKicker: 'Overview',
+    overviewTitle: (number: string) => `About flight ${number}`,
+    overviewBody: (
+      number: string,
+      airline: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string,
+      distance: string
+    ) =>
+      `${number} is a flight number used by ${airline} between ${originName} (${originIata}) and ${destName} (${destIata})${distance ? `, about ${distance} apart` : ''}. This page collects the flight number, airline, route and the two airports for quick lookup.`,
+    overviewNote:
+      'The flight index does not include departure or arrival times, aircraft or operating dates; confirm schedules, check-in and boarding times with the airline or airport.',
+    routeKicker: 'Route',
+    routeTitle: (from: string, to: string) => `${from} → ${to} route`,
+    routeDiagramAria: (number: string) => `Route diagram for flight ${number}`,
+    routeMapAria: (number: string) => `Route map for flight ${number}`,
+    airportsKicker: 'Airports',
+    airportsTitle: 'Departure and arrival airports',
+    airportsSub:
+      'The airports this flight connects. Airports the directory covers open their own page.',
+    originAirport: 'Departure airport',
+    destinationAirport: 'Arrival airport',
+    airportPage: 'Open the airport page',
+    detailsKicker: 'Details',
+    detailsTitle: 'Flight details',
+    detailsFlight: 'Flight number',
+    detailsAirline: 'Airline',
+    detailsOrigin: 'Departure airport',
+    detailsDestination: 'Arrival airport',
+    detailsDistance: 'Great-circle distance',
+    detailsRoutes: 'Routes listed',
+    detailsSnapshot: 'Data snapshot',
+    routesKicker: 'Routes',
+    routesTitle: 'Routes under this flight number',
+    routesSub: (count: string) =>
+      `This number appears on ${count} routes; one number can be reused by codeshare partners.`,
+    routesRoute: 'Route',
+    routesAirline: 'Airline',
+    routesDistance: 'Distance',
+    relatedKicker: 'Related',
+    relatedTitle: 'Other flights on this route',
+    relatedSub: 'Other flight numbers between the same departure and arrival airports.',
+    relatedEn: 'More Flights',
+    faqKicker: 'FAQ',
+    faqTitle: 'Frequently asked questions',
+    faqEn: 'Questions',
+    faqWhat: (number: string) => `What is flight ${number}?`,
+    faqWhatAnswer: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Flight ${number} is a flight number used by ${airline} on the ${from} → ${to} route${distance ? `, about ${distance} apart` : ''}.`,
+    faqRoute: (number: string) => `Where does flight ${number} fly?`,
+    faqRouteAnswer: (
+      number: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string
+    ) =>
+      `Flight ${number} flies from ${originName} (${originIata}) to ${destName} (${destIata}).`,
+    faqTimes: (number: string) => `Where are the departure and arrival times for ${number}?`,
+    faqTimesAnswer: (number: string) =>
+      `This page covers the flight number, airline, route and airports for ${number}. The aviability.com flight index does not include departure or arrival times — check the airline or airport for the current schedule.`,
+    note: (date: string) =>
+      `Flight number, airline and route from the aviability.com flight index (snapshot ${date}); departure and arrival times are not included. Source: `,
+    source: 'aviability.com',
+    sourceFlight: 'View on aviability.com',
+    viewAirport: (iata: string) => `Open the ${iata} airport page`,
+    notFound: 'Flight not found',
+  },
+
   faq: {
     terminalCount: (name: string) => `How many terminals does ${name} have?`,
     terminalCountAnswer: (name: string, iata: string, terminals: string, gates: string, list: string) =>
@@ -671,6 +802,25 @@ export const en: Messages = {
     timezone: (name: string) => `What time zone is ${name} in?`,
     timezoneAnswer: (name: string, iata: string, tz: string) =>
       `${name} (${iata}) is in the ${tz} time zone. Compare it with your local time using the airport clock above.`,
+    flightsCount: (name: string) => `How many flight numbers are listed at ${name}?`,
+    flightsCountAnswer: (
+      name: string,
+      iata: string,
+      departures: string,
+      arrivals: string,
+      airlines: string,
+      destinations: string,
+      date: string
+    ) =>
+      `The aviability.com flight index lists ${plural(
+        departures,
+        'departure flight number',
+        'departure flight numbers'
+      )} and ${plural(arrivals, 'arrival flight number', 'arrival flight numbers')} for ${name} (${iata}), covering ${plural(
+        airlines,
+        'airline',
+        'airlines'
+      )} and ${plural(destinations, 'destination', 'destinations')} (snapshot ${date}). Codeshare numbers are included, and schedules can change — confirm with the airline before travelling.`,
   },
 
   /** Author byline & E-E-A-T trust signals shown under the airport page title. */
@@ -690,11 +840,18 @@ export const en: Messages = {
     links: 'Related links',
     location: 'Location map',
     routes: 'Route map',
+    flights: 'Flights',
     guide: 'Airport guide',
     terminals: 'Terminal guide',
     transport: 'Ground transport',
     facilities: 'Facilities',
     faq: 'FAQ',
+    flightOverview: 'Flight overview',
+    flightRoute: 'Route',
+    flightAirports: 'Airports',
+    flightDetails: 'Flight details',
+    flightRoutes: 'All routes',
+    flightRelated: 'Related flights',
     intro: 'Airport overview',
     distribution: 'Airport distribution',
     airports: 'Airport list',

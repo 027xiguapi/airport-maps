@@ -554,6 +554,39 @@ export const tw: Messages = {
     relatedTitle: (country: string) => `${country}其他機場`,
     relatedEn: (country: string) => `More in ${country}`,
     relatedAll: (country: string) => `${country}全部機場`,
+    /** 航班板塊：按航班號列出從本場出發與到達的航班（aviability.com 航班索引）。 */
+    flights: {
+      kicker: 'Flights',
+      title: (name: string) => `${name}航班 — 出發與到達`,
+      en: 'Flight Board',
+      sub: (flights: string, airlines: string, destinations: string) =>
+        `共 ${flights} 個航班號（含代碼共享），覆蓋 ${airlines} 家航空公司、${destinations} 個目的地，按出發 / 到達分列。`,
+      statDepartures: '出發航班號',
+      statArrivals: '到達航班號',
+      statAirlines: '航空公司',
+      statDestinations: '目的地',
+      note: (date: string) =>
+        `航班號與航線來自 aviability.com 航班索引（快照：${date}），含代碼共享航班，不含起降時刻。資料來源：`,
+      source: 'aviability.com',
+      tabDepartures: '出發',
+      tabArrivals: '到達',
+      search: '搜尋航班號、航空公司或城市',
+      clearSearch: '清除搜尋',
+      flight: '航班',
+      airline: '航空公司',
+      destination: '目的地',
+      origin: '出發地',
+      country: '國家/地區',
+      empty: '沒有符合條件的航班。',
+      loading: '正在載入…',
+      error: '無法載入更多航班。',
+      retry: '重試',
+      previous: '上一頁',
+      next: '下一頁',
+      pagination: '分頁',
+      showing: '顯示第 {from}–{to} 條，共 {total} 條航班號',
+      pageOf: '第 {page} / {pages} 頁',
+    },
     notFound: '未找到該機場',
   },
 
@@ -566,6 +599,8 @@ export const tw: Messages = {
     heading: (name: string) => `${name}航線圖`,
     headingSub: (iata: string, count: string) => `${iata} 共 ${count} 個直飛目的地，按執飛航司數量著色。`,
     backToAirport: (iata: string) => `返回 ${iata} 機場頁`,
+    /** 航線頁跳轉到機場頁航班板的入口。 */
+    flightNumbers: (iata: string) => `${iata} 航班號`,
     /** 機場頁預覽卡片上的按鈕。 */
     openFull: '檢視航線圖',
     /** 同上，但站點存有該機場的靜態航線渲染圖時，圖片本身就是入口。 */
@@ -617,6 +652,89 @@ export const tw: Messages = {
       `本頁航線來自 ${source} 開放資料集（${license} 授權），為 ${date} 的資料快照，不是即時航班計劃；機票與班次請以航空公司或機場官方渠道為準。`,
   },
 
+  /** 單一航班號頁面（/flight/<number>）。 */
+  flight: {
+    metaTitle: (number: string, airline: string, from: string, to: string) =>
+      `${number} ${airline} 航班 — ${from} → ${to}`,
+    metaDescription: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `${number} 是 ${airline} 的航班號，航線為 ${from} → ${to}${distance ? `，大圓距離約 ${distance}` : ''}。查看航線圖、起降機場、距離與同航線其他航班。`,
+    heading: (number: string) => `${number} 航班`,
+    subtitle: (airline: string, from: string, to: string) => `${airline} · ${from} → ${to}`,
+    lead: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `${number} 是 ${airline} 的航班號，航線為 ${from} → ${to}${distance ? `，大圓距離約 ${distance}` : ''}。`,
+    factFlight: '航班號',
+    factFrom: '出發',
+    factTo: '到達',
+    factDistance: '距離',
+    overviewKicker: 'Overview',
+    overviewTitle: (number: string) => `${number} 航班概覽`,
+    overviewBody: (
+      number: string,
+      airline: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string,
+      distance: string
+    ) =>
+      `${number} 是 ${airline} 的航班號，往返於 ${originName}（${originIata}）與 ${destName}（${destIata}）之間${distance ? `，兩場大圓距離約 ${distance}` : ''}。本頁整理航班號、航空公司、航線與起降機場，方便按航班號查詢。`,
+    overviewNote:
+      '航班索引不包含起降時刻、機型與執飛日期；具體班次、報到與登機時間請以航空公司或機場官方渠道為準。',
+    routeKicker: 'Route',
+    routeTitle: (from: string, to: string) => `${from} → ${to} 航線`,
+    routeDiagramAria: (number: string) => `${number} 航班航線示意圖`,
+    routeMapAria: (number: string) => `${number} 航班航線地圖`,
+    airportsKicker: 'Airports',
+    airportsTitle: '起降機場',
+    airportsSub: '航班的出發與到達機場；目錄收錄的機場可直接開啟機場頁。',
+    originAirport: '出發機場',
+    destinationAirport: '到達機場',
+    airportPage: '查看機場頁',
+    detailsKicker: 'Details',
+    detailsTitle: '航班資訊',
+    detailsFlight: '航班號',
+    detailsAirline: '航空公司',
+    detailsOrigin: '出發機場',
+    detailsDestination: '到達機場',
+    detailsDistance: '直線距離',
+    detailsRoutes: '航線數量',
+    detailsSnapshot: '資料快照',
+    routesKicker: 'Routes',
+    routesTitle: '同一航班號的航線',
+    routesSub: (count: string) =>
+      `本航班號共出現在 ${count} 條航線上；同一號碼可能被代碼共享重複使用。`,
+    routesRoute: '航線',
+    routesAirline: '航空公司',
+    routesDistance: '距離',
+    relatedKicker: 'Related',
+    relatedTitle: '同航線其他航班',
+    relatedSub: '從同一出發機場飛往同一目的地的其他航班號。',
+    relatedEn: 'More Flights',
+    faqKicker: 'FAQ',
+    faqTitle: '常見問題',
+    faqEn: 'Questions',
+    faqWhat: (number: string) => `${number} 是什麼航班？`,
+    faqWhatAnswer: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `${number} 是 ${airline} 的航班號，航線為 ${from} → ${to}${distance ? `，兩場大圓距離約 ${distance}` : ''}。`,
+    faqRoute: (number: string) => `${number} 從哪裡飛到哪裡？`,
+    faqRouteAnswer: (
+      number: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string
+    ) => `${number} 從 ${originName}（${originIata}）飛往 ${destName}（${destIata}）。`,
+    faqTimes: (number: string) => `${number} 的起降時刻在哪裡看？`,
+    faqTimesAnswer: (number: string) =>
+      `本站航班頁只整理 ${number} 的航班號、航空公司、航線與機場；aviability.com 的航班索引不提供起降時刻，請以航空公司或機場官方渠道為準。`,
+    note: (date: string) =>
+      `航班號、航空公司與航線來自 aviability.com 航班索引（快照：${date}），不含起降時刻。資料來源：`,
+    source: 'aviability.com',
+    sourceFlight: '查看 aviability 航班頁',
+    viewAirport: (iata: string) => `查看 ${iata} 機場頁`,
+    notFound: '未找到該航班',
+  },
+
   faq: {
     terminalCount: (name: string) => `${name}有幾座航廈？`,
     terminalCountAnswer: (name: string, iata: string, terminals: string, gates: string, list: string) =>
@@ -648,6 +766,17 @@ export const tw: Messages = {
     timezone: (name: string) => `${name}使用什麼時區？`,
     timezoneAnswer: (name: string, iata: string, tz: string) =>
       `${name}（${iata}）使用 ${tz} 時區，可與頁面上方的機場時鐘對照當前時間。`,
+    flightsCount: (name: string) => `${name}有多少個航班號？`,
+    flightsCountAnswer: (
+      name: string,
+      iata: string,
+      departures: string,
+      arrivals: string,
+      airlines: string,
+      destinations: string,
+      date: string
+    ) =>
+      `${name}（${iata}）在 aviability.com 航班索引中共有 ${departures} 個出發航班號、${arrivals} 個到達航班號（含代碼共享），覆蓋 ${airlines} 家航空公司與 ${destinations} 個目的地（快照：${date}）。`,
   },
 
   /** 作者署名與 E-E-A-T 信任訊號，展示在機場頁標題下方。 */
@@ -667,11 +796,18 @@ export const tw: Messages = {
     links: '相關連結',
     location: '位置地圖',
     routes: '航線圖',
+    flights: '航班',
     guide: '機場指南',
     terminals: '航廈資訊',
     transport: '地面交通',
     facilities: '設施服務',
     faq: '常見問題',
+    flightOverview: '航班概覽',
+    flightRoute: '航線',
+    flightAirports: '起降機場',
+    flightDetails: '航班資訊',
+    flightRoutes: '全部航線',
+    flightRelated: '相關航班',
     intro: '機場介紹',
     distribution: '機場分佈',
     airports: '收錄機場',

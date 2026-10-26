@@ -1,5 +1,5 @@
 import type { FaqItem } from '@/components/Faq';
-import { formatNumber, transitLabel } from '@/lib/format';
+import { formatDate, formatNumber, transitLabel } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
 import { isGateRangePhrase } from '@/lib/i18n/de-data';
@@ -7,7 +7,7 @@ import { isFrenchGateRangePhrase } from '@/lib/i18n/fr-data';
 import { isItalianGateRangePhrase } from '@/lib/i18n/it-data';
 import { isKoreanGateRangePhrase } from '@/lib/i18n/ko-data';
 import { clauseSeparator, isCjkLocale, listSeparator } from '@/lib/i18n/display';
-import type { AirportDetail, Terminal } from '@/lib/types';
+import type { AirportDetail, AirportFlightBoard, Terminal } from '@/lib/types';
 
 /**
  * Complete gate phrase for one terminal, worded by the catalog so each locale
@@ -177,5 +177,34 @@ export function buildFaq(
           },
         ]
       : []),
+  ];
+}
+
+/**
+ * The flight-board question, computed from the same data the section renders.
+ * Kept out of buildFaq because the flight file is optional: the section and this
+ * answer disappear together for airports without one.
+ */
+export function buildFlightFaq(
+  locale: Locale,
+  airport: { name: string; iata: string },
+  board: AirportFlightBoard
+): FaqItem[] {
+  const t = getMessages(locale);
+  const { counts } = board;
+
+  return [
+    {
+      q: t.faq.flightsCount(airport.name),
+      a: t.faq.flightsCountAnswer(
+        airport.name,
+        airport.iata,
+        formatNumber(counts.departures, locale),
+        formatNumber(counts.arrivals, locale),
+        formatNumber(counts.airlines, locale),
+        formatNumber(counts.destinations, locale),
+        formatDate(board.dataDate, locale)
+      ),
+    },
   ];
 }

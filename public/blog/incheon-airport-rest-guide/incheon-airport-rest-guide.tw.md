@@ -4,7 +4,6 @@ title: 仁川機場24H免費休憩指南
 summary: 仁川國際機場 24 小時免費休息指南：T1、T2 的 Nap Zone、Cozy Zone、Relax Zone 具體位置與設施，附付費 Shower Room 價格、開放時間與備品。
 date: 2026-09-29
 updated: 2026-10-22
-source: 仁川國際機場小紅書賬號
 tags: 仁川機場轉機, 免費休息區, Nap Zone, 韓國旅行
 cover: images/3.webp
 ---
@@ -101,5 +100,3 @@ _💡溫馨提示：轉機時間較長的話，建議提前規劃好休息和洗
 
 - **本站頁面**：[首爾仁川國際機場（ICN）](/tw/airport/ICN)、[韓國（KR）](/tw/country/KR)
 - **維基百科**：[首爾仁川國際機場](https://zh.wikipedia.org/wiki/%E4%BB%81%E5%B7%9D%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
-
-圖片來源：仁川機場小紅書官方賬號

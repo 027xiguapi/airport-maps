@@ -143,3 +143,40 @@ export type AirportRouteMap = {
   dataDate: string;
   source: { name: string; url: string; license: string };
 };
+
+// ----------------------------------------------------------------- flights
+
+/** Which way the flight board reads an airport's flight-file entries. */
+export type FlightDirection = 'departures' | 'arrivals';
+
+/**
+ * One flight number on the airport page's board. The counterpart airport is the
+ * destination for a departure and the origin for an arrival.
+ */
+export type AirportFlight = {
+  /** Marketing flight number, e.g. "NH693"; the board links it to /flight/<number>. */
+  number: string;
+  airline: string;
+  /** Counterpart airport IATA code. */
+  iata: string;
+  name: string;
+  city: string;
+  country: string;
+  countryCode: string;
+  /** Site-relative counterpart airport page when the directory covers it. */
+  airportHref?: string;
+};
+
+/** One page of the flight board plus the figures describing the whole board. */
+export type AirportFlightBoard = {
+  iata: string;
+  dataDate: string;
+  direction: FlightDirection;
+  page: number;
+  perPage: number;
+  total: number;
+  pageCount: number;
+  rows: AirportFlight[];
+  counts: { departures: number; arrivals: number; airlines: number; destinations: number };
+};
+

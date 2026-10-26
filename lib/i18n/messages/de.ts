@@ -11,6 +11,10 @@ import { deTransportModes } from '../de-data';
  * international form ("Flughafen Frankfurt (FRA)").
  */
 
+/** "1 Flugnummer" / "2 Flugnummern" for already-formatted counts. */
+const plural = (value: string, one: string, many: string) =>
+  `${value} ${value === '1' ? one : many}`;
+
 /** Airport class wording for the lead sentence (schema.org's airport type). */
 const AIRPORT_KIND = {
   large: 'Großflughafen',
@@ -562,6 +566,43 @@ export const de: Messages = {
     relatedTitle: (country: string) => `Weitere Flughäfen in ${country}`,
     relatedEn: (country: string) => `Mehr in ${country}`,
     relatedAll: (country: string) => `Alle Flughäfen in ${country}`,
+    /** Flugtafel: Flugnummern ab und an diesem Flughafen (aviability.com). */
+    flights: {
+      kicker: 'Flüge',
+      title: (name: string) => `${name}: Flüge – Abflüge und Ankünfte`,
+      en: 'Flight Board',
+      sub: (flights: string, airlines: string, destinations: string) =>
+        `${plural(flights, 'Flugnummer', 'Flugnummern')} von ${plural(
+          airlines,
+          'Fluggesellschaft',
+          'Fluggesellschaften'
+        )} zu ${plural(destinations, 'Ziel', 'Zielen')}, getrennt nach Abflug und Ankunft. Codeshare-Nummern sind enthalten.`,
+      statDepartures: 'Abflug-Flugnummern',
+      statArrivals: 'Ankunfts-Flugnummern',
+      statAirlines: 'Fluggesellschaften',
+      statDestinations: 'Ziele',
+      note: (date: string) =>
+        `Flugnummern und Strecken aus dem aviability.com-Fluginventar (Stand ${date}); Codeshare-Nummern sind enthalten, Abflugzeiten fehlen. Quelle: `,
+      source: 'aviability.com',
+      tabDepartures: 'Abflüge',
+      tabArrivals: 'Ankünfte',
+      search: 'Flugnummer, Airline oder Stadt suchen',
+      clearSearch: 'Suche löschen',
+      flight: 'Flug',
+      airline: 'Airline',
+      destination: 'Ziel',
+      origin: 'Abflugort',
+      country: 'Land/Region',
+      empty: 'Keine Flüge zu dieser Suche.',
+      loading: 'Flüge werden geladen…',
+      error: 'Weitere Flüge konnten nicht geladen werden.',
+      retry: 'Erneut versuchen',
+      previous: 'Zurück',
+      next: 'Weiter',
+      pagination: 'Seitennavigation',
+      showing: '{from}–{to} von {total} Flugnummern',
+      pageOf: 'Seite {page} von {pages}',
+    },
     notFound: 'Flughafen nicht gefunden',
   },
 
@@ -574,6 +615,8 @@ export const de: Messages = {
     headingSub: (iata: string, count: string) =>
       `${iata} hat ${count} Nonstop-Ziele, eingefärbt nach der Zahl der Fluggesellschaften.`,
     backToAirport: (iata: string) => `Zurück zur Flughafenseite ${iata}`,
+    /** Link von der Streckenkarte zur Flugtafel der Flughafenseite. */
+    flightNumbers: (iata: string) => `Flugnummern für ${iata}`,
     openFull: 'Streckenkarte ansehen',
     previewCta: (iata: string) => `Die vollständige Streckenkarte ${iata} ansehen`,
     teaserSub: (count: string) =>
@@ -620,6 +663,91 @@ export const de: Messages = {
     faqSourceQ: () => 'Wie oft werden die Streckendaten aktualisiert?',
     faqSourceA: (date: string, source: string, license: string) =>
       `Die Strecken auf dieser Seite stammen aus dem offenen Datensatz von ${source} (${license}), einem Stand von ${date} und keinem Live-Flugplan – prüfen Sie Tickets und Zeiten bei der Fluggesellschaft oder am Flughafen.`,
+  },
+
+  /** Einzelne Flugnummernseite (/flight/<number>). */
+  flight: {
+    metaTitle: (number: string, airline: string, from: string, to: string) =>
+      `${number} ${airline} Flug — ${from} nach ${to}`,
+    metaDescription: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Flug ${number} ist eine Flugnummer von ${airline} von ${from} nach ${to}${distance ? `, etwa ${distance}` : ''}. Streckenkarte, Start- und Zielflughafen, Entfernung und weitere Flüge auf der Strecke.`,
+    heading: (number: string) => `Flug ${number}`,
+    subtitle: (airline: string, from: string, to: string) => `${airline} · ${from} → ${to}`,
+    lead: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Flug ${number} ist eine Flugnummer von ${airline} zwischen ${from} und ${to}${distance ? `, Luftlinie etwa ${distance}` : ''}.`,
+    factFlight: 'Flugnummer',
+    factFrom: 'Von',
+    factTo: 'Nach',
+    factDistance: 'Entfernung',
+    overviewKicker: 'Überblick',
+    overviewTitle: (number: string) => `Über Flug ${number}`,
+    overviewBody: (
+      number: string,
+      airline: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string,
+      distance: string
+    ) =>
+      `${number} ist eine Flugnummer von ${airline} zwischen ${originName} (${originIata}) und ${destName} (${destIata})${distance ? `, Luftlinie etwa ${distance}` : ''}. Diese Seite bündelt Flugnummer, Fluggesellschaft, Strecke und die beiden Flughäfen für die schnelle Suche.`,
+    overviewNote:
+      'Der Flugindex enthält keine Abflug- oder Ankunftszeiten, Flugzeugtypen oder Betriebstage; bestätigen Sie Flugplan, Check-in und Boarding bei der Fluggesellschaft oder am Flughafen.',
+    routeKicker: 'Strecke',
+    routeTitle: (from: string, to: string) => `Strecke ${from} → ${to}`,
+    routeDiagramAria: (number: string) => `Streckendiagramm für Flug ${number}`,
+    routeMapAria: (number: string) => `Streckenkarte für Flug ${number}`,
+    airportsKicker: 'Flughäfen',
+    airportsTitle: 'Start- und Zielflughafen',
+    airportsSub:
+      'Die beiden Flughäfen dieser Strecke. Flughäfen im Verzeichnis öffnen ihre eigene Seite.',
+    originAirport: 'Startflughafen',
+    destinationAirport: 'Zielflughafen',
+    airportPage: 'Flughafenseite öffnen',
+    detailsKicker: 'Details',
+    detailsTitle: 'Flugdetails',
+    detailsFlight: 'Flugnummer',
+    detailsAirline: 'Fluggesellschaft',
+    detailsOrigin: 'Startflughafen',
+    detailsDestination: 'Zielflughafen',
+    detailsDistance: 'Luftlinie',
+    detailsRoutes: 'Gelistete Strecken',
+    detailsSnapshot: 'Datenstand',
+    routesKicker: 'Strecken',
+    routesTitle: 'Strecken unter dieser Flugnummer',
+    routesSub: (count: string) =>
+      `Diese Nummer erscheint auf ${count} Strecken; Codeshare-Partner können dieselbe Nummer nutzen.`,
+    routesRoute: 'Strecke',
+    routesAirline: 'Fluggesellschaft',
+    routesDistance: 'Entfernung',
+    relatedKicker: 'Verwandt',
+    relatedTitle: 'Weitere Flüge auf dieser Strecke',
+    relatedSub: 'Andere Flugnummern zwischen demselben Start- und Zielflughafen.',
+    relatedEn: 'Weitere Flüge',
+    faqKicker: 'FAQ',
+    faqTitle: 'Häufig gestellte Fragen',
+    faqEn: 'Fragen',
+    faqWhat: (number: string) => `Was ist Flug ${number}?`,
+    faqWhatAnswer: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Flug ${number} ist eine Flugnummer von ${airline} auf der Strecke ${from} → ${to}${distance ? `, Luftlinie etwa ${distance}` : ''}.`,
+    faqRoute: (number: string) => `Wohin fliegt ${number}?`,
+    faqRouteAnswer: (
+      number: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string
+    ) =>
+      `Flug ${number} fliegt von ${originName} (${originIata}) nach ${destName} (${destIata}).`,
+    faqTimes: (number: string) => `Wo finde ich die Abflug- und Ankunftszeiten von ${number}?`,
+    faqTimesAnswer: (number: string) =>
+      `Diese Seite zeigt Flugnummer, Fluggesellschaft, Strecke und Flughäfen von ${number}. Der aviability.com-Flugindex enthält keine Abflug- oder Ankunftszeiten – prüfen Sie den aktuellen Flugplan bei der Fluggesellschaft oder am Flughafen.`,
+    note: (date: string) =>
+      `Flugnummer, Fluggesellschaft und Strecke aus dem aviability.com-Flugindex (Stand ${date}); Abflug- und Ankunftszeiten sind nicht enthalten. Quelle: `,
+    source: 'aviability.com',
+    sourceFlight: 'Auf aviability.com ansehen',
+    viewAirport: (iata: string) => `Flughafenseite ${iata} öffnen`,
+    notFound: 'Flug nicht gefunden',
   },
 
   faq: {
@@ -676,6 +804,25 @@ export const de: Messages = {
     timezone: (name: string) => `In welcher Zeitzone liegt ${name}?`,
     timezoneAnswer: (name: string, iata: string, tz: string) =>
       `${name} (${iata}) liegt in der Zeitzone ${tz}. Vergleichen Sie die Uhrzeit oben an der Flughafenuhr mit Ihrer Ortszeit.`,
+    flightsCount: (name: string) => `Wie viele Flugnummern sind am ${name} gelistet?`,
+    flightsCountAnswer: (
+      name: string,
+      iata: string,
+      departures: string,
+      arrivals: string,
+      airlines: string,
+      destinations: string,
+      date: string
+    ) =>
+      `Das Fluginventar von aviability.com listet für ${name} (${iata}) ${plural(
+        departures,
+        'Abflug-Flugnummer',
+        'Abflug-Flugnummern'
+      )} und ${plural(arrivals, 'Ankunfts-Flugnummer', 'Ankunfts-Flugnummern')} von ${plural(
+        airlines,
+        'Fluggesellschaft',
+        'Fluggesellschaften'
+      )} zu ${plural(destinations, 'Ziel', 'Zielen')} (Stand ${date}). Codeshare-Nummern sind enthalten; Flugnummern und Flugpläne können sich ändern – bestätigen Sie Details vor der Reise bei der Airline.`,
   },
 
   editorial: {
@@ -693,11 +840,18 @@ export const de: Messages = {
     links: 'Weiterführende Links',
     location: 'Lageplan',
     routes: 'Streckenkarte',
+    flights: 'Flüge',
     guide: 'Flughafenführer',
     terminals: 'Terminalführer',
     transport: 'Bodentransport',
     facilities: 'Einrichtungen',
     faq: 'FAQ',
+    flightOverview: 'Flugüberblick',
+    flightRoute: 'Strecke',
+    flightAirports: 'Flughäfen',
+    flightDetails: 'Flugdetails',
+    flightRoutes: 'Alle Strecken',
+    flightRelated: 'Weitere Flüge',
     intro: 'Flughafenüberblick',
     distribution: 'Flughafenverteilung',
     airports: 'Flughafenliste',

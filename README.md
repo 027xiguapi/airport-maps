@@ -28,7 +28,8 @@
 | `/tool`、`/tool/{coordinate-converter,dms-converter,distance-calculator}` | 坐标转换（WGS84 / GCJ02 / BD09）、度分秒转换、大圆距离计算 |
 | `/about`、`/contact`、`/privacy`、`/terms` | Markdown 静态页 |
 | `/blog`、`/blog/<slug>` | 旅行笔记（中 / 英 / 德 / 韩 / 法 / 意，另有繁中派生版） |
-| `/api/search`、`/api/routes/[code]` | 搜索联想接口；航线数据的 CSV / JSON 导出（`?locale=` 选语言、`?format=json`） |
+| `/api/search`、`/api/routes/[code]`、`/api/flights/[code]` | 搜索联想接口；航线数据的 CSV / JSON 导出（`?locale=` 选语言、`?format=json`）；机场航班板的分页 / 搜索（`?locale=`、`dir=departures|arrivals`、`page`、`q`） |
+| `/flight/aa100`、`/zh/flight/aa100` | 单个航班号页：航司、航线、起降机场、航线图、距离、同航线其他航班与 FAQ；大小写不敏感，规范 URL 为小写 |
 | `/sitemap.xml`、`/robots.txt` | 按语言列出的站点地图与抓取规则 |
 
 ## 技术栈
@@ -94,6 +95,8 @@ npm run build && npm start
 | `node data/build-directory-data.mjs` | 把 `data/new-airports-a.{zh,en}.json` 合并成 `scripts/directory-data.json`（目录批次的灌库输入，见「数据模型」；改完数据后接 seed 生效） |
 | `node scripts/generate-airport-maps.mjs` | 用 OpenStreetMap 几何生成机场地图，写入 `public/source-maps/{CODE}.png`（2000px 宽）+ `public/maps/{CODE}.png`（400px 封面）：`--codes PEK,PVG` 指定机场、`--missing` 补所有还没有封面的机场（可配 `--kind large`）、`--dry-run` 预演、`--force` 重渲染、`--compact` 每座机场只发一个 Overpass 请求（小/中型机场用，请求数从 3 降到 1）、`--reindex` 只按磁盘上的图重写记录、`--limit N` 限量、`--delay MS` 调 Overpass 请求间隔。原始响应缓存在 `data/osm/`（已 gitignore，删掉某机场的文件即重新拉取），图上带 `© OpenStreetMap contributors` 归属行；来源 / sha256 / 许可写进 `scripts/maps-manifest.json`（两个图片目录里只有图片）。坐标来源依次是 `public/data/world-airports.json` → `data/world-airports.csv` → `scripts/airport-coords.json`（数据集都没覆盖的机场，人工从 Wikidata / 维基百科核定，条目里写明出处）→ Overpass 按 `iata` 标签反查；只有机场轮廓和跑道、没有航站楼的小机场会退化成「机场 + 跑道」的图，两者都没有才跳过 |
 | `node scripts/generate-route-images.mjs` | 按首页航线条目的排序，把每个机场的航线图渲染成 PNG 到 `public/route`（世界地图轮廓 + 大圆航线，经 sharp 栅格化；含反子午线处理）。默认只渲染前 12 座，且**已有文件一律跳过**（渲染慢，已提交的图是好的）；`--codes ICN,AMS` 指定机场、`--top N` 改数量、`--force` 重跑 |
+| `node scripts/fetch-flights.mjs`（= `npm run flights:fetch`） | 从 aviability.com 的航班 sitemap 生成**单个文件** `data/flights.json.gz`：只保留目录机场的进出港航班号，每条航线只存一次；文件内含航司显示名、各机场进出港计数、快照日期与全量 `flights` 数组。每次运行都抓「最近更新 + 全量索引」并整体重写（约 30 秒） |
+| `node scripts/check-flights.mjs`（= `npm run flights:check`） | 校验 `data/flights.json.gz`：JSON 结构与日期、航司 slug / 机场代码 / 航班号合法、每条航线至少连接一座目录机场、无重复航线、数组按约定顺序排列、各机场计数与全局 totals 一致；有错误时退出码 1，适合刷新数据后、构建前跑一遍 |
 | `node scripts/fetch-terminal-maps.mjs` | 按机场代码批量下载航站楼地图 PNG + PDF（默认源 eoob.com；`--codes HKG,PEK` 指定、`--dry-run` 预演、`--png-only` / `--pdf-only`、`--force`）。文件落到 `public/terminal-maps/{CODE}/`，溯源信息在 `terminal-maps-manifest.json`（当前 63 座机场） |
 | `node scripts/compress-terminal-maps.mjs` | 原地压缩上一步的 PNG：量化为 8 位调色板（默认 `--quality 80`），尺寸不变，实测 52.8MB → 12.4MB 且登机口号、路名清晰可读；已压缩的自动跳过，`--force` 重压、`--max-width 1600` 可同时缩尺寸 |
 | `node scripts/fetch-airport-images.mjs` | 批量下载机场封面图（`public/maps`）并记录每张图的来源、sha256 与许可说明；机场代码只能来自你自备的列表 / HTML / 库导出，脚本不爬站发现代码，默认遵守 robots.txt |
@@ -394,6 +397,16 @@ scripts/                    提取、建库、灌数、抓取与自检脚本
 - 航线图的交互（`components/airport/RouteMap.tsx`）：主题化的 ± 缩放按钮（到边界自动禁用）、⌘/Ctrl + 滚轮与触控板捏合缩放（普通滚轮留给页面滚动，地图不抢），**目录收录的目的地圆点本身就是指向该机场页面的真实链接**（可中键 / 右键新开标签），未收录的目的地只有悬停提示。颜色分级见 `lib/route-tiers.ts`（按执飞航司数量）。
 - 首页的航线条目用**静态渲染图**（`public/route/*.png`，由 `node scripts/generate-route-images.mjs` 生成）：世界地图轮廓 + 大圆航线，处理了反子午线，缺图时回退为纯文字卡片。取景是**固定的世界全图**（经度 −180~180 横跨整幅、赤道居中），因此每张图的海岸线都落在同一位置、航线朝哪个方向飞一目了然；新增渲染图时不要改成按航线范围缩放。机场页的「航线图」区块用的是同一批图：该机场有渲染图时，图片本身就是通往 `/route/<IATA>` 的链接（`components/airport/RouteMapTeaser.tsx`，与航线页的航站楼地图卡片同一套样式），没有则回退为按钮——**站点目前只有 13 座机场有图**（首页那 12 座 + ICN），所以这条区块的样子本来就因机场而异。
 
+## 航班数据与航班板
+
+- 航班号来自 **aviability.com 的航班 sitemap**：`https://aviability.com/sm/updated-flights-en.xml.gz`（最近更新的航班，带 `lastmod`）与 `_flight-en-00..18.xml.gz`（全量索引，经 `_sitemap-index-en.xml.gz` 发现）。`node scripts/fetch-flights.mjs` 下载、解压并解析出 `航班号 / 航司 / 出发地-目的地`，**只保留目录机场的进出港航班**，写成 **`data/flights.json.gz` 一个文件**（当前 408 座机场、316,278 个航班号、527,236 条航线，约 2.4MB）。文件里的 `airlines` 是航司 slug → 显示名，`airports` 是各机场的进出港计数，`totals` 与 `dataDate` 是覆盖率与数据快照日期。
+- 数据只存一份：`flights` 是 `[航班号, 航司 slug, 出发地 IATA, 到达地 IATA]` 的单一数组，按「航班号（数字序）→ 出发地 → 到达地 → 航司」排序。机场板过滤出本场为出发地或到达地的记录，`/flight/<number>` 过滤出同一航班号的记录，两者都不需要各自的副本；以前每座机场一个文件加 578 个号码分片，同一条航线要写三遍（出发板、到达板、号码分片），合并后文件从约 5.9MB 降到约 2.4MB。
+- `lib/flight-store.ts` 在服务端把整个文件读取、gunzip 并只解析一次，然后**按需建两份内存索引**（机场板用 `byAirport`，航班页用 `byNumber`），索引里放的是同一批记录数组的引用而不是副本。`lib/flights.ts` 负责机场板与对端机场名称（`public/data/world-airports.json` + 目录译名 + 德/法/意/韩词表），`lib/flight-page.ts` 负责 `/flight/<number>` 的航线、距离与相关航班。机场页只**服务端渲染第一页**（20 条，保证无 JS 与爬虫可见）；搜索、翻页、切换出发/到达走 `/api/flights/<IATA>?locale=&dir=&page=&q=`，避免把一座枢纽几万条航班号塞进 HTML。
+- **sitemap 不含起降时刻**，所以页面只展示航班号、航司与航线，并明确标注不含时刻；索引里同时有**代码共享航班号**（同一航线可能出现多家航司的号），页面按「航班号」统计而不是按实际执行班次，脚注里写明这一点。
+- 覆盖范围随目录变化：当前 501 座机场里 408 座有航班数据；没有数据的机场，航班区块、目录项与相关 FAQ 一起自动省略。
+- 每个航班号还有一个独立页面 **`/flight/<number>`**（如 `/flight/aa100`、`/zh/flight/aa100`，大小写不敏感、规范为小写）：按 `app/[locale]/flight/[number]/page.tsx` 的机场页式结构展示头部、概览、**Leaflet + OpenStreetMap 航线地图**（大圆航线、起降点与 `Leaflet | © OpenStreetMap contributors` 归属；任一场缺坐标时退化为航线示意图）、起降机场卡、航班信息、同号全部航线（代码共享号可能有几十条）、同航线其他航班、FAQ 与 schema.org `Flight`/`FAQPage`。数据与机场板共用同一份内存索引，页面是 **ISR 动态路由**（`revalidate = 3600`），不参与 `generateStaticParams`，所以 31 万个号码不会拖慢构建；这些页面也不写入 sitemap（单文件放不下，且多数是长尾航班号），靠机场航班板和同航线相关航班的内链发现。机场航班板上的航班号现在都指向这些页面，页面再外链到 aviability 的原始航班页。
+- 刷新数据后重新构建即可；脚本会整体重写 `data/flights.json.gz`，并清掉旧的 `data/flights/` 目录，生成结果与代码一起提交。
+
 ## 地图与静态图片资产
 
 三处 Leaflet 地图，都基于 OSM 瓦片：
@@ -489,7 +502,7 @@ URL 约定：
 
 ## 数据来源说明
 
-航站楼平面示意图是按航站楼数量、登机口规模与地面交通节点自动绘制的**示意图**，用于快速理解机场整体布局与航站楼之间的关系，不是精确到米的实测平面图。航站楼数量、登机口数量、主要航司、年旅客量与地面交通信息整理自公开资料，可能随机场改扩建发生变化。航线数据为 OpenFlights 2014-06 快照（ODbL），仅统计直飞，页面顶部会标注快照日期。第三方图片（航站楼地图、封面图）的来源与许可记录在各自的 manifest 里。
+航站楼平面示意图是按航站楼数量、登机口规模与地面交通节点自动绘制的**示意图**，用于快速理解机场整体布局与航站楼之间的关系，不是精确到米的实测平面图。航站楼数量、登机口数量、主要航司、年旅客量与地面交通信息整理自公开资料，可能随机场改扩建发生变化。航线数据为 OpenFlights 2014-06 快照（ODbL），仅统计直飞，页面顶部会标注快照日期。航班号与航线来自 aviability.com 的航班索引（sitemap 快照，含代码共享），页面会标注快照日期且不提供起降时刻。第三方图片（航站楼地图、封面图）的来源与许可记录在各自的 manifest 里。
 
 ## 从原静态版本迁移
 

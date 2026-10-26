@@ -586,6 +586,39 @@ export const ko: Messages = {
     relatedTitle: (country: string) => `${country}의 다른 공항`,
     relatedEn: (country: string) => `${country}의 다른 공항`,
     relatedAll: (country: string) => `${country} 전체 공항`,
+    /** 항공편 게시판: 이 공항에서 출발·도착하는 항공편 번호 (aviability.com). */
+    flights: {
+      kicker: '항공편',
+      title: (name: string) => `${name} 항공편 — 출발 및 도착`,
+      en: 'Flight Board',
+      sub: (flights: string, airlines: string, destinations: string) =>
+        `항공사 ${airlines}곳과 목적지 ${destinations}곳을 잇는 항공편 번호 ${flights}개를 출발·도착으로 나눠 정리했습니다. 코드셰어 편명도 포함됩니다.`,
+      statDepartures: '출발 항공편 번호',
+      statArrivals: '도착 항공편 번호',
+      statAirlines: '항공사',
+      statDestinations: '목적지',
+      note: (date: string) =>
+        `항공편 번호와 노선은 aviability.com 항공편 색인 기준입니다(기준일 ${date}). 코드셰어 편명이 포함되며 출발 시각은 제공하지 않습니다. 출처: `,
+      source: 'aviability.com',
+      tabDepartures: '출발',
+      tabArrivals: '도착',
+      search: '항공편 번호, 항공사 또는 도시 검색',
+      clearSearch: '검색 지우기',
+      flight: '항공편',
+      airline: '항공사',
+      destination: '목적지',
+      origin: '출발지',
+      country: '국가/지역',
+      empty: '검색 조건에 맞는 항공편이 없습니다.',
+      loading: '항공편을 불러오는 중…',
+      error: '항공편을 더 불러오지 못했습니다.',
+      retry: '다시 시도',
+      previous: '이전',
+      next: '다음',
+      pagination: '페이지 이동',
+      showing: '{total}개 항공편 번호 중 {from}–{to} 표시',
+      pageOf: '{page} / {pages} 페이지',
+    },
     notFound: '공항을 찾을 수 없습니다',
   },
 
@@ -599,6 +632,8 @@ export const ko: Messages = {
     headingSub: (iata: string, count: string) =>
       `${iata}의 직항 목적지는 ${count}개이며, 운항 항공사 수에 따라 색상이 다릅니다.`,
     backToAirport: (iata: string) => `${iata} 공항 페이지로 돌아가기`,
+    /** 노선도에서 공항 항공편 게시판으로 가는 링크. */
+    flightNumbers: (iata: string) => `${iata} 항공편 번호`,
     /** Button on the airport page's teaser card. */
     openFull: '노선도 보기',
     /** Same card, for the airports whose network the repo has rendered. */
@@ -651,6 +686,90 @@ export const ko: Messages = {
       `이 페이지의 노선은 ${source} 오픈 데이터셋(${license} 라이선스)을 바탕으로 한 ${date} 기준 스냅샷이며, 실시간 운항 일정이 아닙니다. 항공권과 운항 시간은 항공사나 공항 공식 채널에서 확인하세요.`,
   },
 
+  /** 개별 항공편 번호 페이지 (/flight/<number>). */
+  flight: {
+    metaTitle: (number: string, airline: string, from: string, to: string) =>
+      `${number} ${airline} 항공편 — ${from} → ${to}`,
+    metaDescription: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `${number} 항공편은 ${airline}의 항공편 번호로 ${from}에서 ${to} 노선에 사용됩니다${distance ? `, 직선거리 약 ${distance}` : ''}. 노선 지도, 출발·도착 공항, 거리와 같은 노선의 다른 항공편을 확인하세요.`,
+    heading: (number: string) => `${number} 항공편`,
+    subtitle: (airline: string, from: string, to: string) => `${airline} · ${from} → ${to}`,
+    lead: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `${number} 항공편은 ${airline}의 항공편 번호이며 ${from}과 ${to} 노선에 사용됩니다${distance ? `, 직선거리 약 ${distance}` : ''}.`,
+    factFlight: '항공편 번호',
+    factFrom: '출발',
+    factTo: '도착',
+    factDistance: '거리',
+    overviewKicker: '개요',
+    overviewTitle: (number: string) => `${number} 항공편 개요`,
+    overviewBody: (
+      number: string,
+      airline: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string,
+      distance: string
+    ) =>
+      `${number} 항공편은 ${airline}의 항공편 번호로 ${originName}(${originIata})과 ${destName}(${destIata}) 노선에 사용됩니다${distance ? `, 직선거리 약 ${distance}` : ''}. 이 페이지에는 항공편 번호, 항공사, 노선과 두 공항 정보를 정리했습니다.`,
+    overviewNote:
+      '항공편 색인에는 출발·도착 시각, 기종, 운항 날짜가 포함되지 않습니다. 운항 일정과 체크인·탑승 시간은 항공사나 공항 공식 채널에서 확인하세요.',
+    routeKicker: '노선',
+    routeTitle: (from: string, to: string) => `${from} → ${to} 노선`,
+    routeDiagramAria: (number: string) => `${number} 항공편 노선 약도`,
+    routeMapAria: (number: string) => `${number} 항공편 노선 지도`,
+    airportsKicker: '공항',
+    airportsTitle: '출발·도착 공항',
+    airportsSub: '이 항공편이 연결하는 두 공항입니다. 목록에 있는 공항은 공항 페이지로 이동할 수 있습니다.',
+    originAirport: '출발 공항',
+    destinationAirport: '도착 공항',
+    airportPage: '공항 페이지 열기',
+    detailsKicker: '상세',
+    detailsTitle: '항공편 정보',
+    detailsFlight: '항공편 번호',
+    detailsAirline: '항공사',
+    detailsOrigin: '출발 공항',
+    detailsDestination: '도착 공항',
+    detailsDistance: '직선거리',
+    detailsRoutes: '등록된 노선',
+    detailsSnapshot: '데이터 스냅샷',
+    routesKicker: '노선',
+    routesTitle: '이 항공편 번호의 노선',
+    routesSub: (count: string) =>
+      `이 번호는 ${count}개 노선에 사용됩니다. 같은 번호를 코드셰어 항공사가 함께 사용할 수 있습니다.`,
+    routesRoute: '노선',
+    routesAirline: '항공사',
+    routesDistance: '거리',
+    relatedKicker: '관련',
+    relatedTitle: '같은 노선의 다른 항공편',
+    relatedSub: '같은 출발·도착 공항을 잇는 다른 항공편 번호입니다.',
+    relatedEn: '다른 항공편',
+    faqKicker: 'FAQ',
+    faqTitle: '자주 묻는 질문',
+    faqEn: '질문',
+    faqWhat: (number: string) => `${number} 항공편은 무엇인가요?`,
+    faqWhatAnswer: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `${number} 항공편은 ${airline}의 항공편 번호이며 ${from} → ${to} 노선에 사용됩니다${distance ? `, 직선거리 약 ${distance}` : ''}.`,
+    faqRoute: (number: string) => `${number} 항공편은 어디에서 어디로 가나요?`,
+    faqRouteAnswer: (
+      number: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string
+    ) =>
+      `${number} 항공편은 ${originName}(${originIata})에서 ${destName}(${destIata})로 가는 노선에 사용됩니다.`,
+    faqTimes: (number: string) => `${number} 항공편의 출발·도착 시각은 어디서 보나요?`,
+    faqTimesAnswer: (number: string) =>
+      `이 페이지는 ${number} 항공편의 번호, 항공사, 노선과 공항을 정리합니다. aviability.com 항공편 색인에는 출발·도착 시각이 없으므로 최신 운항 일정은 항공사나 공항에서 확인하세요.`,
+    note: (date: string) =>
+      `항공편 번호, 항공사와 노선은 aviability.com 항공편 색인 기준입니다(기준일 ${date}). 출발·도착 시각은 포함되지 않습니다. 출처: `,
+    source: 'aviability.com',
+    sourceFlight: 'aviability.com에서 보기',
+    viewAirport: (iata: string) => `${iata} 공항 페이지 열기`,
+    notFound: '항공편을 찾을 수 없습니다',
+  },
+
   faq: {
     terminalCount: (name: string) => `${name}에는 터미널이 몇 개 있나요?`,
     terminalCountAnswer: (name: string, iata: string, terminals: string, gates: string, list: string) =>
@@ -682,6 +801,17 @@ export const ko: Messages = {
     timezone: (name: string) => `${name}은 어떤 시간대를 사용하나요?`,
     timezoneAnswer: (name: string, iata: string, tz: string) =>
       `${name}(${iata})은 ${tz} 시간대를 사용합니다. 페이지 위의 공항 시계에서 현지 시간과 비교해 보세요.`,
+    flightsCount: (name: string) => `${name}에는 항공편 번호가 몇 개 있나요?`,
+    flightsCountAnswer: (
+      name: string,
+      iata: string,
+      departures: string,
+      arrivals: string,
+      airlines: string,
+      destinations: string,
+      date: string
+    ) =>
+      `aviability.com 항공편 색인에는 ${name}(${iata}) 출발 항공편 번호 ${departures}개, 도착 항공편 번호 ${arrivals}개가 등록되어 있으며, 항공사 ${airlines}곳과 목적지 ${destinations}곳을 잇습니다(기준일 ${date}). 코드셰어 편명이 포함되며 운항 일정은 변경될 수 있으므로 여행 전 항공사에서 확인하세요.`,
   },
 
   /** Author byline & E-E-A-T trust signals shown under the airport page title. */
@@ -701,11 +831,18 @@ export const ko: Messages = {
     links: '관련 링크',
     location: '위치 지도',
     routes: '노선도',
+    flights: '항공편',
     guide: '공항 안내',
     terminals: '터미널 안내',
     transport: '지상 교통',
     facilities: '시설 및 서비스',
     faq: '자주 묻는 질문',
+    flightOverview: '항공편 개요',
+    flightRoute: '노선',
+    flightAirports: '공항',
+    flightDetails: '항공편 정보',
+    flightRoutes: '전체 노선',
+    flightRelated: '관련 항공편',
     intro: '공항 소개',
     distribution: '공항 분포',
     airports: '수록 공항',

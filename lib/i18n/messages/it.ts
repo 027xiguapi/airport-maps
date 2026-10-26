@@ -1,5 +1,9 @@
 import type { Messages } from './zh';
 
+/** "1 numero di volo" / "2 numeri di volo" for already-formatted counts. */
+const plural = (value: string, one: string, many: string) =>
+  `${value} ${value === '1' ? one : many}`;
+
 /** Airport class wording for the lead sentence (schema.org's airport type). */
 const AIRPORT_KIND = {
   large: 'grande aeroporto',
@@ -620,6 +624,43 @@ export const it: Messages = {
     relatedTitle: (country: string) => `Altri aeroporti — ${country}`,
     relatedEn: (country: string) => `Altri aeroporti — ${country}`,
     relatedAll: (country: string) => `Tutti gli aeroporti — ${country}`,
+    /** Tabellone voli: numeri in partenza e in arrivo (aviability.com). */
+    flights: {
+      kicker: 'Voli',
+      title: (name: string) => `${name}: voli in partenza e in arrivo`,
+      en: 'Flight Board',
+      sub: (flights: string, airlines: string, destinations: string) =>
+        `${plural(flights, 'numero di volo', 'numeri di volo')} di ${plural(
+          airlines,
+          'compagnia',
+          'compagnie'
+        )} verso ${plural(destinations, 'destinazione', 'destinazioni')}, divisi per direzione. I numeri in codeshare sono inclusi.`,
+      statDepartures: 'Numeri in partenza',
+      statArrivals: 'Numeri in arrivo',
+      statAirlines: 'Compagnie',
+      statDestinations: 'Destinazioni',
+      note: (date: string) =>
+        `Numeri di volo e rotte dall’indice voli aviability.com (istantanea del ${date}); i numeri in codeshare sono inclusi e gli orari di partenza non sono disponibili. Fonte: `,
+      source: 'aviability.com',
+      tabDepartures: 'Partenze',
+      tabArrivals: 'Arrivi',
+      search: 'Cerca numero di volo, compagnia o città',
+      clearSearch: 'Cancella la ricerca',
+      flight: 'Volo',
+      airline: 'Compagnia',
+      destination: 'Destinazione',
+      origin: 'Provenienza',
+      country: 'Paese/regione',
+      empty: 'Nessun volo corrisponde alla ricerca.',
+      loading: 'Caricamento dei voli…',
+      error: 'Impossibile caricare altri voli.',
+      retry: 'Riprova',
+      previous: 'Precedente',
+      next: 'Successiva',
+      pagination: 'Paginazione',
+      showing: '{from}–{to} di {total} numeri di volo',
+      pageOf: 'Pagina {page} di {pages}',
+    },
     notFound: 'Aeroporto non trovato',
   },
 
@@ -633,6 +674,8 @@ export const it: Messages = {
     headingSub: (iata: string, count: string) =>
       `${iata} ha ${count} destinazioni dirette, colorate in base al numero di compagnie che le servono.`,
     backToAirport: (iata: string) => `Torna alla pagina dell’aeroporto ${iata}`,
+    /** Link dalla mappa delle rotte al tabellone voli dell’aeroporto. */
+    flightNumbers: (iata: string) => `Numeri di volo per ${iata}`,
     /** Button on the airport page's teaser card. */
     openFull: 'Vedi la mappa delle rotte',
     /** Same card, for the airports whose network the repo has rendered: the picture is the link. */
@@ -684,6 +727,91 @@ export const it: Messages = {
       `Le rotte di questa pagina provengono dal dataset aperto ${source} (${license}), un’istantanea di ${date} e non un orario in tempo reale — verifica biglietti e orari con la compagnia o l’aeroporto.`,
   },
 
+  /** Pagina di un singolo numero di volo (/flight/<number>). */
+  flight: {
+    metaTitle: (number: string, airline: string, from: string, to: string) =>
+      `${number} ${airline} — volo ${from} → ${to}`,
+    metaDescription: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Il volo ${number} è un numero di volo di ${airline} da ${from} a ${to}${distance ? `, a circa ${distance} in linea d’aria` : ''}. Mappa della rotta, aeroporti di partenza e arrivo, distanza e altri voli sulla rotta.`,
+    heading: (number: string) => `Volo ${number}`,
+    subtitle: (airline: string, from: string, to: string) => `${airline} · ${from} → ${to}`,
+    lead: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Il volo ${number} è un numero di volo di ${airline} tra ${from} e ${to}${distance ? `, a circa ${distance} in linea d’aria` : ''}.`,
+    factFlight: 'Numero di volo',
+    factFrom: 'Partenza',
+    factTo: 'Arrivo',
+    factDistance: 'Distanza',
+    overviewKicker: 'Panoramica',
+    overviewTitle: (number: string) => `Informazioni sul volo ${number}`,
+    overviewBody: (
+      number: string,
+      airline: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string,
+      distance: string
+    ) =>
+      `Il volo ${number} è un numero di volo di ${airline} tra ${originName} (${originIata}) e ${destName} (${destIata})${distance ? `, a circa ${distance}` : ''}. Questa pagina raccoglie numero di volo, compagnia, rotta e i due aeroporti per una ricerca rapida.`,
+    overviewNote:
+      'L’indice dei voli non contiene orari di partenza o arrivo, aeromobili o giorni di operatività; verifica orari, check-in e imbarco con la compagnia o l’aeroporto.',
+    routeKicker: 'Rotta',
+    routeTitle: (from: string, to: string) => `Rotta ${from} → ${to}`,
+    routeDiagramAria: (number: string) => `Schema della rotta del volo ${number}`,
+    routeMapAria: (number: string) => `Mappa della rotta del volo ${number}`,
+    airportsKicker: 'Aeroporti',
+    airportsTitle: 'Aeroporti di partenza e arrivo',
+    airportsSub:
+      'I due aeroporti della rotta. Quelli coperti dal catalogo aprono la propria pagina.',
+    originAirport: 'Aeroporto di partenza',
+    destinationAirport: 'Aeroporto di arrivo',
+    airportPage: 'Apri la pagina dell’aeroporto',
+    detailsKicker: 'Dettagli',
+    detailsTitle: 'Dettagli del volo',
+    detailsFlight: 'Numero di volo',
+    detailsAirline: 'Compagnia',
+    detailsOrigin: 'Aeroporto di partenza',
+    detailsDestination: 'Aeroporto di arrivo',
+    detailsDistance: 'Distanza in linea d’aria',
+    detailsRoutes: 'Rotte elencate',
+    detailsSnapshot: 'Istantanea dei dati',
+    routesKicker: 'Rotte',
+    routesTitle: 'Rotte con questo numero di volo',
+    routesSub: (count: string) =>
+      `Questo numero compare su ${count} rotte; lo stesso numero può essere condiviso da compagnie in codeshare.`,
+    routesRoute: 'Rotta',
+    routesAirline: 'Compagnia',
+    routesDistance: 'Distanza',
+    relatedKicker: 'Correlati',
+    relatedTitle: 'Altri voli sulla stessa rotta',
+    relatedSub: 'Altri numeri di volo tra gli stessi aeroporti di partenza e arrivo.',
+    relatedEn: 'Altri voli',
+    faqKicker: 'FAQ',
+    faqTitle: 'Domande frequenti',
+    faqEn: 'Domande',
+    faqWhat: (number: string) => `Che cos’è il volo ${number}?`,
+    faqWhatAnswer: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Il volo ${number} è un numero di volo di ${airline} sulla rotta ${from} → ${to}${distance ? `, a circa ${distance}` : ''}.`,
+    faqRoute: (number: string) => `Dove vola il volo ${number}?`,
+    faqRouteAnswer: (
+      number: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string
+    ) =>
+      `Il volo ${number} collega ${originName} (${originIata}) a ${destName} (${destIata}).`,
+    faqTimes: (number: string) => `Dove trovo gli orari di partenza e arrivo del volo ${number}?`,
+    faqTimesAnswer: (number: string) =>
+      `Questa pagina riporta numero di volo, compagnia, rotta e aeroporti del volo ${number}. L’indice aviability.com non include orari di partenza o arrivo — controlla la compagnia o l’aeroporto per l’orario aggiornato.`,
+    note: (date: string) =>
+      `Numero di volo, compagnia e rotta dall’indice voli aviability.com (istantanea del ${date}); gli orari di partenza e arrivo non sono inclusi. Fonte: `,
+    source: 'aviability.com',
+    sourceFlight: 'Vedi su aviability.com',
+    viewAirport: (iata: string) => `Apri la pagina dell’aeroporto ${iata}`,
+    notFound: 'Volo non trovato',
+  },
+
   faq: {
     terminalCount: (name: string) => `Quanti terminal ha ${air(name)}?`,
     terminalCountAnswer: (name: string, iata: string, terminals: string, gates: string, list: string) =>
@@ -715,6 +843,25 @@ export const it: Messages = {
     timezone: (name: string) => `In quale fuso orario si trova ${air(name)}?`,
     timezoneAnswer: (name: string, iata: string, tz: string) =>
       `${airStart(name)} (${iata}) si trova nel fuso orario ${tz}. Confrontalo con la tua ora locale usando l’orologio dell’aeroporto qui sopra.`,
+    flightsCount: (name: string) => `Quanti numeri di volo sono elencati ${airA(name)}?`,
+    flightsCountAnswer: (
+      name: string,
+      iata: string,
+      departures: string,
+      arrivals: string,
+      airlines: string,
+      destinations: string,
+      date: string
+    ) =>
+      `L’indice voli di aviability.com elenca ${plural(
+        departures,
+        'numero di volo in partenza',
+        'numeri di volo in partenza'
+      )} e ${plural(arrivals, 'numero di volo in arrivo', 'numeri di volo in arrivo')} ${airDi(name)} (${iata}), operati da ${plural(
+        airlines,
+        'compagnia',
+        'compagnie'
+      )} verso ${plural(destinations, 'destinazione', 'destinazioni')} (istantanea del ${date}). I numeri in codeshare sono inclusi; orari e numeri di volo possono cambiare, verifica con la compagnia prima di partire.`,
   },
 
   /** Author byline & E-E-A-T trust signals shown under the airport page title. */
@@ -734,11 +881,18 @@ export const it: Messages = {
     links: 'Link utili',
     location: 'Mappa della posizione',
     routes: 'Mappa delle rotte',
+    flights: 'Voli',
     guide: 'Guida dell’aeroporto',
     terminals: 'Guida ai terminal',
     transport: 'Trasporti terrestri',
     facilities: 'Servizi',
     faq: 'FAQ',
+    flightOverview: 'Panoramica del volo',
+    flightRoute: 'Rotta',
+    flightAirports: 'Aeroporti',
+    flightDetails: 'Dettagli del volo',
+    flightRoutes: 'Tutte le rotte',
+    flightRelated: 'Voli correlati',
     intro: 'Panoramica dell’aeroporto',
     distribution: 'Distribuzione degli aeroporti',
     airports: 'Elenco degli aeroporti',

@@ -18,6 +18,7 @@ import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { mapImageUrl } from '@/lib/map-images';
 import { getAirportByCode, getAirportRoutes } from '@/lib/queries';
+import { hasAirportFlights } from '@/lib/flights';
 import { getAirportRouteMap, routeAirportCodes, routeStats } from '@/lib/routes';
 import { routeSchemaImage } from '@/lib/schema-images';
 import { absoluteUrl, SITE_NAME, WEBSITE_NODE_ID, imageRights, webPageRights } from '@/lib/site';
@@ -109,6 +110,9 @@ export default async function AirportRoutePage({ params }: Props) {
 
   const stats = routeStats(map);
   const count = formatNumber(stats.destinationCount, locale);
+  // Only airports with a flight file get the cross-link to the airport page's
+  // flight board (the board section is absent elsewhere).
+  const flightBoard = hasAirportFlights(airport.iata);
   const faqItems = buildRouteFaq(locale, airport.name, airport.iata, map);
   // Terminal-map picture for this code, when the repo has one (roughly a third
   // of route pages do) — the section and its contents-rail entry drop out
@@ -284,6 +288,13 @@ export default async function AirportRoutePage({ params }: Props) {
                 {t.route.backToAirport(airport.iata)}
               </Link>
             </Button>
+            {flightBoard && (
+              <Button asChild variant="outline">
+                <Link href={`${localizedPath(locale, `/airport/${airport.iata}`)}#flights`}>
+                  {t.route.flightNumbers(airport.iata)}
+                </Link>
+              </Button>
+            )}
           </div>
         </div>
       </div>

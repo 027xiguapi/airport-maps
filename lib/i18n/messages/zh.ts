@@ -553,6 +553,39 @@ export const zh = {
     relatedTitle: (country: string) => `${country}其他机场`,
     relatedEn: (country: string) => `More in ${country}`,
     relatedAll: (country: string) => `${country}全部机场`,
+    /** 航班板块：按航班号列出从本场出发与到达的航班（aviability.com 航班索引）。 */
+    flights: {
+      kicker: 'Flights',
+      title: (name: string) => `${name}航班 — 出发与到达`,
+      en: 'Flight Board',
+      sub: (flights: string, airlines: string, destinations: string) =>
+        `共 ${flights} 个航班号（含代码共享），覆盖 ${airlines} 家航空公司、${destinations} 个目的地，按出发 / 到达分列。`,
+      statDepartures: '出发航班号',
+      statArrivals: '到达航班号',
+      statAirlines: '航空公司',
+      statDestinations: '目的地',
+      note: (date: string) =>
+        `航班号与航线来自 aviability.com 航班索引（快照：${date}），含代码共享航班，不含起降时刻。数据来源：`,
+      source: 'aviability.com',
+      tabDepartures: '出发',
+      tabArrivals: '到达',
+      search: '搜索航班号、航空公司或城市',
+      clearSearch: '清除搜索',
+      flight: '航班',
+      airline: '航空公司',
+      destination: '目的地',
+      origin: '出发地',
+      country: '国家/地区',
+      empty: '没有符合条件的航班。',
+      loading: '正在加载…',
+      error: '无法加载更多航班。',
+      retry: '重试',
+      previous: '上一页',
+      next: '下一页',
+      pagination: '分页',
+      showing: '显示第 {from}–{to} 条，共 {total} 条航班号',
+      pageOf: '第 {page} / {pages} 页',
+    },
     notFound: '未找到该机场',
   },
 
@@ -565,6 +598,8 @@ export const zh = {
     heading: (name: string) => `${name}航线图`,
     headingSub: (iata: string, count: string) => `${iata} 共 ${count} 个直飞目的地，按执飞航司数量着色。`,
     backToAirport: (iata: string) => `返回 ${iata} 机场页`,
+    /** 航线页跳转到机场页航班板的入口。 */
+    flightNumbers: (iata: string) => `${iata} 航班号`,
     /** 机场页预览卡片上的按钮。 */
     openFull: '查看航线图',
     /** 同上，但站点存有该机场的静态航线渲染图时，图片本身就是入口。 */
@@ -616,6 +651,89 @@ export const zh = {
       `本页航线来自 ${source} 开放数据集（${license} 授权），为 ${date} 的数据快照，不是实时航班计划；机票与班次请以航空公司或机场官方渠道为准。`,
   },
 
+  /** 单个航班号页面（/flight/<number>）。 */
+  flight: {
+    metaTitle: (number: string, airline: string, from: string, to: string) =>
+      `${number} ${airline} 航班 — ${from} → ${to}`,
+    metaDescription: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `${number} 是 ${airline} 的航班号，航线为 ${from} → ${to}${distance ? `，大圆距离约 ${distance}` : ''}。查看航线图、起降机场、距离与同航线其他航班。`,
+    heading: (number: string) => `${number} 航班`,
+    subtitle: (airline: string, from: string, to: string) => `${airline} · ${from} → ${to}`,
+    lead: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `${number} 是 ${airline} 的航班号，航线为 ${from} → ${to}${distance ? `，大圆距离约 ${distance}` : ''}。`,
+    factFlight: '航班号',
+    factFrom: '出发',
+    factTo: '到达',
+    factDistance: '距离',
+    overviewKicker: 'Overview',
+    overviewTitle: (number: string) => `${number} 航班概览`,
+    overviewBody: (
+      number: string,
+      airline: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string,
+      distance: string
+    ) =>
+      `${number} 是 ${airline} 的航班号，往返于 ${originName}（${originIata}）与 ${destName}（${destIata}）之间${distance ? `，两场大圆距离约 ${distance}` : ''}。本页整理航班号、航空公司、航线与起降机场，方便按航班号查询。`,
+    overviewNote:
+      '航班索引不包含起降时刻、机型和执飞日期；具体班次、值机与登机时间请以航空公司或机场官方渠道为准。',
+    routeKicker: 'Route',
+    routeTitle: (from: string, to: string) => `${from} → ${to} 航线`,
+    routeDiagramAria: (number: string) => `${number} 航班航线示意图`,
+    routeMapAria: (number: string) => `${number} 航班航线地图`,
+    airportsKicker: 'Airports',
+    airportsTitle: '起降机场',
+    airportsSub: '航班的出发与到达机场；目录收录的机场可直接打开机场页。',
+    originAirport: '出发机场',
+    destinationAirport: '到达机场',
+    airportPage: '查看机场页',
+    detailsKicker: 'Details',
+    detailsTitle: '航班信息',
+    detailsFlight: '航班号',
+    detailsAirline: '航空公司',
+    detailsOrigin: '出发机场',
+    detailsDestination: '到达机场',
+    detailsDistance: '直线距离',
+    detailsRoutes: '航线数量',
+    detailsSnapshot: '数据快照',
+    routesKicker: 'Routes',
+    routesTitle: '同一航班号的航线',
+    routesSub: (count: string) =>
+      `本航班号共出现在 ${count} 条航线上；同一号码可能被代码共享复用。`,
+    routesRoute: '航线',
+    routesAirline: '航空公司',
+    routesDistance: '距离',
+    relatedKicker: 'Related',
+    relatedTitle: '同航线其他航班',
+    relatedSub: '从同一出发机场飞往同一目的地的其他航班号。',
+    relatedEn: 'More Flights',
+    faqKicker: 'FAQ',
+    faqTitle: '常见问题',
+    faqEn: 'Questions',
+    faqWhat: (number: string) => `${number} 是什么航班？`,
+    faqWhatAnswer: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `${number} 是 ${airline} 的航班号，航线为 ${from} → ${to}${distance ? `，两场大圆距离约 ${distance}` : ''}。`,
+    faqRoute: (number: string) => `${number} 从哪里飞到哪里？`,
+    faqRouteAnswer: (
+      number: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string
+    ) => `${number} 从 ${originName}（${originIata}）飞往 ${destName}（${destIata}）。`,
+    faqTimes: (number: string) => `${number} 的起降时刻在哪里看？`,
+    faqTimesAnswer: (number: string) =>
+      `本站航班页只整理 ${number} 的航班号、航空公司、航线与机场；aviability.com 的航班索引不提供起降时刻，请以航空公司或机场官方渠道为准。`,
+    note: (date: string) =>
+      `航班号、航空公司与航线来自 aviability.com 航班索引（快照：${date}），不含起降时刻。数据来源：`,
+    source: 'aviability.com',
+    sourceFlight: '查看 aviability 航班页',
+    viewAirport: (iata: string) => `查看 ${iata} 机场页`,
+    notFound: '未找到该航班',
+  },
+
   faq: {
     terminalCount: (name: string) => `${name}有几座航站楼？`,
     terminalCountAnswer: (name: string, iata: string, terminals: string, gates: string, list: string) =>
@@ -647,6 +765,17 @@ export const zh = {
     timezone: (name: string) => `${name}使用什么时区？`,
     timezoneAnswer: (name: string, iata: string, tz: string) =>
       `${name}（${iata}）使用 ${tz} 时区，可与页面上方的机场时钟对照当前时间。`,
+    flightsCount: (name: string) => `${name}有多少个航班号？`,
+    flightsCountAnswer: (
+      name: string,
+      iata: string,
+      departures: string,
+      arrivals: string,
+      airlines: string,
+      destinations: string,
+      date: string
+    ) =>
+      `${name}（${iata}）在 aviability.com 航班索引中共有 ${departures} 个出发航班号、${arrivals} 个到达航班号（含代码共享），覆盖 ${airlines} 家航空公司与 ${destinations} 个目的地（快照：${date}）。`,
   },
 
   /** 作者署名与 E-E-A-T 信任信号，展示在机场页标题下方。 */
@@ -666,11 +795,18 @@ export const zh = {
     links: '相关链接',
     location: '位置地图',
     routes: '航线图',
+    flights: '航班',
     guide: '机场指南',
     terminals: '航站楼信息',
     transport: '地面交通',
     facilities: '设施服务',
     faq: '常见问题',
+    flightOverview: '航班概览',
+    flightRoute: '航线',
+    flightAirports: '起降机场',
+    flightDetails: '航班信息',
+    flightRoutes: '全部航线',
+    flightRelated: '相关航班',
     intro: '机场介绍',
     distribution: '机场分布',
     airports: '收录机场',

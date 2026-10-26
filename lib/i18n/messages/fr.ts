@@ -1,6 +1,12 @@
 import type { Messages } from './zh';
 
-/** Airport class wording for the lead sentence (schema.org's airport type). */
+/** "1 numéro de vol" / "2 numéros de vol" for already-formatted counts. */
+const plural = (value: string, one: string, many: string) =>
+  `${value} ${value === '1' ? one : many}`;
+
+/**
+ * Airport class wording for the lead sentence (schema.org's airport type).
+ */
 const AIRPORT_KIND = {
   large: 'grand aéroport',
   medium: 'aéroport de taille moyenne',
@@ -620,6 +626,43 @@ export const fr: Messages = {
     relatedTitle: (country: string) => `Autres aéroports — ${country}`,
     relatedEn: (country: string) => `Plus d’aéroports — ${country}`,
     relatedAll: (country: string) => `Tous les aéroports — ${country}`,
+    /** Tableau des vols : numéros au départ et à l’arrivée (aviability.com). */
+    flights: {
+      kicker: 'Vols',
+      title: (name: string) => `${name} : vols — départs et arrivées`,
+      en: 'Flight Board',
+      sub: (flights: string, airlines: string, destinations: string) =>
+        `${plural(flights, 'numéro de vol', 'numéros de vol')} de ${plural(
+          airlines,
+          'compagnie',
+          'compagnies'
+        )} vers ${plural(destinations, 'destination', 'destinations')}, séparés par sens. Les numéros en partage de code sont inclus.`,
+      statDepartures: 'Numéros au départ',
+      statArrivals: 'Numéros à l’arrivée',
+      statAirlines: 'Compagnies',
+      statDestinations: 'Destinations',
+      note: (date: string) =>
+        `Numéros de vol et liaisons issus de l’index de vols aviability.com (instantané du ${date}) ; les numéros en partage de code sont inclus et aucun horaire de départ n’est affiché. Source : `,
+      source: 'aviability.com',
+      tabDepartures: 'Départs',
+      tabArrivals: 'Arrivées',
+      search: 'Rechercher un numéro de vol, une compagnie ou une ville',
+      clearSearch: 'Effacer la recherche',
+      flight: 'Vol',
+      airline: 'Compagnie',
+      destination: 'Destination',
+      origin: 'Provenance',
+      country: 'Pays/région',
+      empty: 'Aucun vol ne correspond à cette recherche.',
+      loading: 'Chargement des vols…',
+      error: 'Impossible de charger la suite des vols.',
+      retry: 'Réessayer',
+      previous: 'Précédent',
+      next: 'Suivant',
+      pagination: 'Pagination',
+      showing: '{from}–{to} sur {total} numéros de vol',
+      pageOf: 'Page {page} sur {pages}',
+    },
     notFound: 'Aéroport introuvable',
   },
 
@@ -633,6 +676,8 @@ export const fr: Messages = {
     headingSub: (iata: string, count: string) =>
       `${iata} compte ${count} destinations directes, colorées selon le nombre de compagnies qui les desservent.`,
     backToAirport: (iata: string) => `Retour à la page de l’aéroport ${iata}`,
+    /** Lien de la carte des liaisons vers le tableau des vols de l’aéroport. */
+    flightNumbers: (iata: string) => `Numéros de vol pour ${iata}`,
     /** Button on the airport page's teaser card. */
     openFull: 'Voir la carte des liaisons',
     /** Same card, for the airports whose network the repo has rendered: the picture is the link. */
@@ -684,6 +729,91 @@ export const fr: Messages = {
       `Les liaisons présentées ici proviennent du jeu de données ouvert ${source} (${license}), un instantané de ${date} et non un horaire en temps réel — vérifiez billets et horaires auprès de la compagnie ou de l’aéroport.`,
   },
 
+  /** Page d’un numéro de vol (/flight/<number>). */
+  flight: {
+    metaTitle: (number: string, airline: string, from: string, to: string) =>
+      `${number} ${airline} — vol ${from} → ${to}`,
+    metaDescription: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Le vol ${number} est un numéro de vol de la compagnie ${airline} reliant ${from} à ${to}${distance ? `, à environ ${distance} à vol d’oiseau` : ''}. Carte de la liaison, aéroports de départ et d’arrivée, distance et autres vols sur la liaison.`,
+    heading: (number: string) => `Vol ${number}`,
+    subtitle: (airline: string, from: string, to: string) => `${airline} · ${from} → ${to}`,
+    lead: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Le vol ${number} est un numéro de vol de la compagnie ${airline} entre ${from} et ${to}${distance ? `, à environ ${distance} à vol d’oiseau` : ''}.`,
+    factFlight: 'Numéro de vol',
+    factFrom: 'Départ',
+    factTo: 'Arrivée',
+    factDistance: 'Distance',
+    overviewKicker: 'Aperçu',
+    overviewTitle: (number: string) => `À propos du vol ${number}`,
+    overviewBody: (
+      number: string,
+      airline: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string,
+      distance: string
+    ) =>
+      `Le vol ${number} est un numéro de vol de la compagnie ${airline} entre ${originName} (${originIata}) et ${destName} (${destIata})${distance ? `, à environ ${distance}` : ''}. Cette page rassemble le numéro, la compagnie, la liaison et les deux aéroports pour une recherche rapide.`,
+    overviewNote:
+      'L’index des vols ne contient ni horaires de départ ou d’arrivée, ni appareil, ni jours d’exploitation ; vérifiez les horaires, l’enregistrement et l’embarquement auprès de la compagnie ou de l’aéroport.',
+    routeKicker: 'Liaison',
+    routeTitle: (from: string, to: string) => `Liaison ${from} → ${to}`,
+    routeDiagramAria: (number: string) => `Schéma de la liaison du vol ${number}`,
+    routeMapAria: (number: string) => `Carte de la liaison du vol ${number}`,
+    airportsKicker: 'Aéroports',
+    airportsTitle: 'Aéroports de départ et d’arrivée',
+    airportsSub:
+      'Les deux aéroports de cette liaison. Ceux couverts par le répertoire ouvrent leur propre page.',
+    originAirport: 'Aéroport de départ',
+    destinationAirport: 'Aéroport d’arrivée',
+    airportPage: 'Ouvrir la page de l’aéroport',
+    detailsKicker: 'Détails',
+    detailsTitle: 'Détails du vol',
+    detailsFlight: 'Numéro de vol',
+    detailsAirline: 'Compagnie',
+    detailsOrigin: 'Aéroport de départ',
+    detailsDestination: 'Aéroport d’arrivée',
+    detailsDistance: 'Distance à vol d’oiseau',
+    detailsRoutes: 'Liaisons répertoriées',
+    detailsSnapshot: 'Instantané des données',
+    routesKicker: 'Liaisons',
+    routesTitle: 'Liaisons sous ce numéro de vol',
+    routesSub: (count: string) =>
+      `Ce numéro apparaît sur ${count} liaisons ; un même numéro peut être partagé par des compagnies en partage de code.`,
+    routesRoute: 'Liaison',
+    routesAirline: 'Compagnie',
+    routesDistance: 'Distance',
+    relatedKicker: 'Associés',
+    relatedTitle: 'Autres vols sur cette liaison',
+    relatedSub: 'D’autres numéros de vol entre les mêmes aéroports de départ et d’arrivée.',
+    relatedEn: 'Plus de vols',
+    faqKicker: 'FAQ',
+    faqTitle: 'Questions fréquentes',
+    faqEn: 'Questions',
+    faqWhat: (number: string) => `Qu’est-ce que le vol ${number} ?`,
+    faqWhatAnswer: (number: string, airline: string, from: string, to: string, distance: string) =>
+      `Le vol ${number} est un numéro de vol de la compagnie ${airline} sur la liaison ${from} → ${to}${distance ? `, à environ ${distance}` : ''}.`,
+    faqRoute: (number: string) => `Où va le vol ${number} ?`,
+    faqRouteAnswer: (
+      number: string,
+      originName: string,
+      originIata: string,
+      destName: string,
+      destIata: string
+    ) =>
+      `Le vol ${number} relie ${originName} (${originIata}) à ${destName} (${destIata}).`,
+    faqTimes: (number: string) => `Où trouver les horaires du vol ${number} ?`,
+    faqTimesAnswer: (number: string) =>
+      `Cette page présente le numéro, la compagnie, la liaison et les aéroports du vol ${number}. L’index aviability.com ne fournit pas les horaires de départ ou d’arrivée — consultez la compagnie ou l’aéroport pour l’horaire en vigueur.`,
+    note: (date: string) =>
+      `Numéro de vol, compagnie et liaison issus de l’index de vols aviability.com (instantané du ${date}) ; les horaires de départ et d’arrivée ne sont pas inclus. Source : `,
+    source: 'aviability.com',
+    sourceFlight: 'Voir sur aviability.com',
+    viewAirport: (iata: string) => `Ouvrir la page de l’aéroport ${iata}`,
+    notFound: 'Vol introuvable',
+  },
+
   faq: {
     terminalCount: (name: string) => `Combien de terminaux compte ${air(name)} ?`,
     terminalCountAnswer: (name: string, iata: string, terminals: string, gates: string, list: string) =>
@@ -717,6 +847,25 @@ export const fr: Messages = {
     timezone: (name: string) => `Dans quel fuseau horaire se trouve ${air(name)} ?`,
     timezoneAnswer: (name: string, iata: string, tz: string) =>
       `${airStart(name)} (${iata}) se trouve dans le fuseau horaire ${tz}. Comparez avec votre heure locale grâce à l’horloge de l’aéroport ci-dessus.`,
+    flightsCount: (name: string) => `Combien de numéros de vol sont répertoriés ${airA(name)} ?`,
+    flightsCountAnswer: (
+      name: string,
+      iata: string,
+      departures: string,
+      arrivals: string,
+      airlines: string,
+      destinations: string,
+      date: string
+    ) =>
+      `L’index de vols aviability.com répertorie ${plural(
+        departures,
+        'numéro de vol au départ',
+        'numéros de vol au départ'
+      )} et ${plural(arrivals, 'numéro de vol à l’arrivée', 'numéros de vol à l’arrivée')} ${airDe(name)} (${iata}), opérés par ${plural(
+        airlines,
+        'compagnie',
+        'compagnies'
+      )} vers ${plural(destinations, 'destination', 'destinations')} (instantané du ${date}). Les numéros en partage de code sont inclus ; les horaires peuvent changer, vérifiez auprès de la compagnie avant de voyager.`,
   },
 
   /** Author byline & E-E-A-T trust signals shown under the airport page title. */
@@ -736,11 +885,18 @@ export const fr: Messages = {
     links: 'Liens utiles',
     location: 'Carte de localisation',
     routes: 'Carte des liaisons',
+    flights: 'Vols',
     guide: 'Guide de l’aéroport',
     terminals: 'Guide des terminaux',
     transport: 'Transports terrestres',
     facilities: 'Services',
     faq: 'FAQ',
+    flightOverview: 'Aperçu du vol',
+    flightRoute: 'Liaison',
+    flightAirports: 'Aéroports',
+    flightDetails: 'Détails du vol',
+    flightRoutes: 'Toutes les liaisons',
+    flightRelated: 'Vols associés',
     intro: 'Aperçu de l’aéroport',
     distribution: 'Répartition des aéroports',
     airports: 'Liste des aéroports',

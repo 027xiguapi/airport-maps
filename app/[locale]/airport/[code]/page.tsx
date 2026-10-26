@@ -14,13 +14,14 @@ import { getAirportFacts } from '@/lib/airport-facts';
 import { getAirportGeo } from '@/lib/airport-geo';
 import { getAirportPhotos } from '@/lib/airport-photos';
 import { getAirportRouteMap } from '@/lib/routes';
+import { getAirportFlights } from '@/lib/flights';
 import { routeImageUrl } from '@/lib/route-images';
 import { airportWebsite } from '@/lib/airport-links';
 import { mapImageUrl, terminalMapDownloads } from '@/lib/map-images';
 import { absoluteUrl, SITE_NAME } from '@/lib/site';
 import { terminalMapSvg } from '@/lib/terminal-map';
 import { buildAirportGraph, publicationDates } from './schema';
-import { buildFaq } from './faq';
+import { buildFaq, buildFlightFaq } from './faq';
 import AirportHead from '@/components/airport/AirportHead';
 import TerminalMapPanel from '@/components/airport/TerminalMapPanel';
 import AirportTimeSection from '@/components/airport/AirportTimeSection';
@@ -28,6 +29,7 @@ import AirportDetailsSection from '@/components/airport/AirportDetailsSection';
 import RelatedLinks from '@/components/airport/RelatedLinks';
 import LocationMapSection from '@/components/airport/LocationMapSection';
 import RouteMapTeaser from '@/components/airport/RouteMapTeaser';
+import FlightsSection from '@/components/airport/FlightsSection';
 import GuideSection from '@/components/airport/GuideSection';
 import PhotosSection from '@/components/airport/PhotosSection';
 import TerminalsSection from '@/components/airport/TerminalsSection';
@@ -139,10 +141,13 @@ export default async function AirportPage({ params }: Props) {
     permanentRedirect(localizedPath(locale, `/airport/${airport.iata}`));
   }
 
-  const [related, guide, routeMap] = await Promise.all([
+  const [related, guide, routeMap, flights] = await Promise.all([
     getRelatedAirports(locale, airport.countryCode, airport.iata, 6),
     getAirportGuide(locale, airport.iata),
     getAirportRouteMap(locale, airport.iata),
+    // aviability.com flight numbers for this airport (departures and arrivals).
+    // Null for airports the flight index does not cover — the section is skipped.
+    getAirportFlights(locale, airport.iata),
   ]);
 
   const geo = getAirportGeo(airport.iata);
@@ -158,7 +163,10 @@ export default async function AirportPage({ params }: Props) {
     : facts?.lat != null && facts.lng != null
       ? { lat: facts.lat, lng: facts.lng }
       : null;
-  const faqItems = buildFaq(locale, airport, formatDistance(airport.distanceKm, locale), geo?.tz ?? null);
+  const faqItems = [
+    ...buildFaq(locale, airport, formatDistance(airport.distanceKm, locale), geo?.tz ?? null),
+    ...(flights ? buildFlightFaq(locale, airport, flights) : []),
+  ];
   const { published, modified } = publicationDates(airport, guide?.updated);
   const mapImg = mapImageUrl(airport.iata);
   const terminalMap = terminalMapDownloads(airport.iata);
@@ -177,6 +185,7 @@ export default async function AirportPage({ params }: Props) {
     ...(photos.length > 0 ? [{ id: 'photos', label: t.toc.photos }] : []),
     ...(geo ? [{ id: 'airport-time', label: t.toc.time }] : []),
     ...(routeMap ? [{ id: 'airport-routes', label: t.toc.routes }] : []),
+    ...(flights ? [{ id: 'flights', label: t.toc.flights }] : []),
     { id: 'airport-details', label: t.toc.details },
     { id: 'related-links', label: t.toc.links },
     ...(coords ? [{ id: 'location-map', label: t.toc.location }] : []),
@@ -239,6 +248,15 @@ export default async function AirportPage({ params }: Props) {
               airportName={airport.name}
               destinationCount={routeMap.destinations.length}
               image={routeImageUrl(airport.iata)}
+            />
+          )}
+
+          {flights && (
+            <FlightsSection
+              locale={locale}
+              airportName={airport.name}
+              iata={airport.iata}
+              board={flights}
             />
           )}
 
