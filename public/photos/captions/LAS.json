@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu aerial photo published; the Air Force One news picture is skipped because it does not show the airport.",
+  "las-sat-1.webp": {
+    "zh": "从卫星图看，拉斯维加斯哈里·里德国际机场（LAS）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Harry Reid International Airport (LAS) and its surroundings are clearly visible."
+  },
+  "las-baidu-1.webp": {
+    "zh": "从空中俯瞰拉斯维加斯哈里·里德国际机场（LAS），航站楼指廊、停机位与跑道布局清晰可见。",
+    "en": "Aerial view of Harry Reid International Airport (LAS), showing the terminal concourses, aircraft stands and runways."
+  },
+  "_skip": [
+    "las-baidu-2.webp"
+  ]
+}

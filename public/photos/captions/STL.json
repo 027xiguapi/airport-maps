@@ -1,0 +1,14 @@
+{
+  "_note": "One Baidu photo of the control tower above the terminal roof joins the Esri World Imagery satellite view.",
+  "_skip": [
+    "stl-baidu-2.webp"
+  ],
+  "stl-sat-1.webp": {
+    "zh": "从卫星图看，圣路易斯兰伯特国际机场（STL）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of St. Louis Lambert International Airport (STL) and its surroundings are clearly visible."
+  },
+  "stl-baidu-1.webp": {
+    "zh": "雾气中，圣路易斯兰伯特机场的塔台立在弧形玻璃屋顶的航站楼后方。",
+    "en": "St. Louis Lambert's control tower rising behind the curved, glass-roofed terminal in fog."
+  }
+}

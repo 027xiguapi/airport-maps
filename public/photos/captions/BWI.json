@@ -1,0 +1,12 @@
+{
+  "_note": "One Baidu photo from the apron, alongside an Esri World Imagery satellite view.",
+  "_skip": ["bwi-baidu-2.webp"],
+  "bwi-sat-1.webp": {
+    "zh": "从卫星图看，巴尔的摩-华盛顿国际机场（BWI）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Baltimore/Washington International Thurgood Marshall Airport (BWI) and its surroundings are clearly visible."
+  },
+  "bwi-baidu-1.webp": {
+    "zh": "从机舱舷窗望出去，西南航空的客机停在登机口前，地勤车辆和行李拖车散布在阳光下的停机坪上。",
+    "en": "Seen from the cabin window, Southwest jets stand at their gates with ground vehicles and baggage carts spread across the sunlit apron."
+  }
+}

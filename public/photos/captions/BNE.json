@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu-sourced photo of the terminal exterior alongside an Esri World Imagery satellite view.",
+  "bne-sat-1.webp": {
+    "zh": "从卫星图看，布里斯班国际机场（BNE）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Brisbane International Airport (BNE) and its surroundings are clearly visible."
+  },
+  "bne-baidu-1.webp": {
+    "zh": "布里斯班国际机场航站楼外立面，屋檐上可见“Brisbane International”标识。",
+    "en": "Exterior of the Brisbane International terminal, with the 'Brisbane International' sign along the roofline."
+  },
+  "_skip": [
+    "bne-baidu-2.webp"
+  ]
+}

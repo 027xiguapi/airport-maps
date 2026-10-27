@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu photo of the CHENGDU terminal façade plus an Esri World Imagery satellite view; an unidentifiable curbside shot was skipped.",
+  "_skip": [
+    "ctu-baidu-1.webp"
+  ],
+  "ctu-baidu-2.webp": {
+    "zh": "航站楼玻璃幕墙上方立着红色的“CHENGDU”字样与“蜀”“都”两字，右侧可见一座小塔台。",
+    "en": "Red CHENGDU lettering and the characters for Shu and Du stand above the terminal's curved glass façade, with a small tower to the right."
+  },
+  "ctu-sat-1.webp": {
+    "zh": "从卫星图看，成都双流国际机场（CTU）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Chengdu Shuangliu International Airport (CTU) and its surroundings are clearly visible."
+  }
+}

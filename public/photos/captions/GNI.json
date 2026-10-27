@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu photo of the terminal and control tower alongside the Esri World Imagery satellite view.",
+  "_skip": [
+    "gni-baidu-2.webp"
+  ],
+  "gni-baidu-1.webp": {
+    "zh": "绿岛机场的航站楼与白色塔台，楼前是环形车道。",
+    "en": "Lyudao Airport's terminal and its white control tower, with a curved driveway in front."
+  },
+  "gni-sat-1.webp": {
+    "zh": "从卫星图看，绿岛机场（GNI）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Lyudao Airport (GNI) and its surroundings are clearly visible."
+  }
+}

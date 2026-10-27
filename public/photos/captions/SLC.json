@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu-sourced aerial photo of the airport alongside an Esri World Imagery satellite view.",
+  "slc-sat-1.webp": {
+    "zh": "从卫星图看，盐湖城国际机场（SLC）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Salt Lake City International Airport (SLC) and its surroundings are clearly visible."
+  },
+  "slc-baidu-1.webp": {
+    "zh": "从空中俯瞰盐湖城机场的航站楼、停机坪与跑道，远处可见山脉和湖泊。",
+    "en": "An aerial view of Salt Lake City airport's terminals, aprons and runways, with mountains and a lake on the horizon."
+  },
+  "_skip": [
+    "slc-baidu-2.webp"
+  ]
+}

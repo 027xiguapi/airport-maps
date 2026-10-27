@@ -95,7 +95,7 @@ const hardFacts = (() => {
 })();
 
 /** The guide's revision date, stamped on every generated document. */
-const UPDATED = '2026-10-16';
+const UPDATED = '2026-10-27';
 
 /** Published gallery photos for a code (public/photos/captions/<IATA>.json). */
 function photosFor(code, locale) {

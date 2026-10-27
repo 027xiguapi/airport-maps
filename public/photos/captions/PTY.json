@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "pty-baidu-1.webp",
+    "pty-baidu-2.webp"
+  ],
+  "pty-sat-1.webp": {
+    "zh": "从卫星图看，巴拿马城托库门国际机场（PTY）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Tocumen International Airport (PTY) and its surroundings are clearly visible."
+  }
+}

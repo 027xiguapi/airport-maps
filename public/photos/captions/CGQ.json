@@ -1,0 +1,12 @@
+{
+  "_note": "A Baidu photo of the terminal with an aircraft at the gate, plus the Esri World Imagery satellite view; a text-heavy welcome-sign photo was skipped.",
+  "_skip": ["cgq-baidu-2.webp"],
+  "cgq-baidu-1.webp": {
+    "zh": "长春龙嘉国际机场航站楼前，一架长龙航空客机停靠在登机口，玻璃幕墙映出阴云密布的天空。",
+    "en": "A Loong Air aircraft parked at a gate in front of Changchun Longjia International Airport's terminal, its glass facade reflecting a cloudy sky."
+  },
+  "cgq-sat-1.webp": {
+    "zh": "从卫星图看，长春龙嘉国际机场（CGQ）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Changchun Longjia International Airport (CGQ) and its surroundings are clearly visible."
+  }
+}

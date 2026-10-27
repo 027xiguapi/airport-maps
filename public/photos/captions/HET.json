@@ -1,0 +1,12 @@
+{
+  "_note": "A Baidu photo of the terminal frontage, plus the Esri World Imagery satellite view; an AI-generated image was skipped.",
+  "_skip": ["het-baidu-2.webp"],
+  "het-baidu-1.webp": {
+    "zh": "呼和浩特白塔国际机场航站楼外景：弧形玻璃幕墙上方立着红色「呼和浩特」大字，站前广场停满车辆。",
+    "en": "The terminal at Hohhot Baita International Airport — the red 'Hohhot' characters above its curved glass facade, with cars filling the forecourt."
+  },
+  "het-sat-1.webp": {
+    "zh": "从卫星图看，呼和浩特白塔国际机场（HET）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Hohhot Baita International Airport (HET) and its surroundings are clearly visible."
+  }
+}

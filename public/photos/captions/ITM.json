@@ -1,0 +1,14 @@
+{
+  "_note": "A Baidu aerial of the twin runways is published; the other download was a low-resolution video frame with large burned-in text. The Esri World Imagery view is retained.",
+  "_skip": [
+    "itm-baidu-2.webp"
+  ],
+  "itm-baidu-1.webp": {
+    "zh": "空中俯瞰大阪伊丹机场：平行的 14L/14R 跑道铺在平坦场地上，航站楼与机坪在其左侧，四周被密集的城市街区包围。",
+    "en": "Aerial view of Osaka Itami — the parallel 14L/14R runways across a flat field, the terminal and apron to the left, with dense city blocks all around."
+  },
+  "itm-sat-1.webp": {
+    "zh": "从卫星图看，大阪伊丹国际机场（ITM）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Osaka Itami International Airport (ITM) and its surroundings are clearly visible."
+  }
+}

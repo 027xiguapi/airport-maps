@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "hrb-baidu-1.webp",
+    "hrb-baidu-2.webp"
+  ],
+  "hrb-sat-1.webp": {
+    "zh": "从卫星图看，哈尔滨太平国际机场（HRB）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Harbin Taiping International Airport (HRB) and its surroundings are clearly visible."
+  }
+}

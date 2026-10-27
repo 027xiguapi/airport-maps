@@ -1,0 +1,12 @@
+{
+  "_note": "A Baidu photo of the terminal seen from the forecourt, plus the Esri World Imagery satellite view; a pop-up-store event shot inside the terminal was skipped.",
+  "_skip": ["cts-baidu-1.webp"],
+  "cts-baidu-2.webp": {
+    "zh": "新千岁机场航站楼外景：白色航站楼前停着一辆巴士，晴空下的屋顶塔楼清晰可见。",
+    "en": "New Chitose Airport's terminal seen from the forecourt — a bus parked in front and the rooftop structure standing against a clear blue sky."
+  },
+  "cts-sat-1.webp": {
+    "zh": "从卫星图看，札幌新千岁机场（CTS）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of New Chitose Airport (CTS) and its surroundings are clearly visible."
+  }
+}

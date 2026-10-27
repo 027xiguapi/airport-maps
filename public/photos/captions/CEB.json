@@ -1,0 +1,14 @@
+{
+  "_note": "2026-10-27: a Baidu photo of a Cebu Pacific jet at the gate joins the Esri World Imagery satellite view; an engine close-up was skipped.",
+  "_skip": [
+    "ceb-baidu-2.webp"
+  ],
+  "ceb-sat-1.webp": {
+    "zh": "从卫星图看，麦克坦-宿务国际机场（CEB）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Mactan Cebu International Airport (CEB) and its surroundings are clearly visible."
+  },
+  "ceb-baidu-1.webp": {
+    "zh": "暮色中的麦克坦-宿务机场：宿务太平洋航空客机停在廊桥旁，地勤人员与行李车在机下作业。",
+    "en": "At Mactan-Cebu after sunset — a Cebu Pacific jet at the jet bridge, with ground crew and baggage carts working below."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu photo of the terminal at dusk plus an Esri World Imagery satellite view; a Google Earth screenshot was skipped.",
+  "_skip": [
+    "ind-baidu-2.webp"
+  ],
+  "ind-baidu-1.webp": {
+    "zh": "黄昏时分的印第安纳波利斯国际机场：航站楼舒展的钢构屋顶在暮色中亮起灯光，前方是空旷的车道。",
+    "en": "Indianapolis at dusk, the terminal's sweeping steel canopy glowing against a deep blue sky above the empty departure roadway."
+  },
+  "ind-sat-1.webp": {
+    "zh": "从卫星图看，印第安纳波利斯国际机场（IND）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Indianapolis International Airport (IND) and its surroundings are clearly visible."
+  }
+}

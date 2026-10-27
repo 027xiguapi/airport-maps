@@ -1,0 +1,14 @@
+{
+  "_note": "2026-10-27: a Baidu ground photo and the labelled Esri World Imagery satellite view are published.",
+  "_skip": [
+    "pkx-baidu-2.webp"
+  ],
+  "pkx-sat-1.webp": {
+    "zh": "从卫星图看，北京大兴国际机场（PKX）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Beijing Daxing International Airport (PKX) and its surroundings are clearly visible."
+  },
+  "pkx-baidu-1.webp": {
+    "zh": "从正上方俯瞰大兴机场：五条指廊呈星形展开，飞机沿着每条指廊靠桥停泊。",
+    "en": "A top-down view of Daxing's star-shaped terminal, with aircraft parked along each of its five piers."
+  }
+}

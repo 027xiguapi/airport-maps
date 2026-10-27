@@ -1,0 +1,10 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "cnf-baidu-1.webp"
+  ],
+  "cnf-sat-1.webp": {
+    "zh": "从卫星图看，贝洛奥里藏特坦克雷多·内维斯国际机场（CNF）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Tancredo Neves International Airport (CNF) and its surroundings are clearly visible."
+  }
+}

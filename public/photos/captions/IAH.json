@@ -1,0 +1,12 @@
+{
+  "_note": "A Baidu photo of the terminal complex at dusk, plus the Esri World Imagery satellite view; a window view of suburban Houston was skipped.",
+  "_skip": ["iah-baidu-2.webp"],
+  "iah-baidu-1.webp": {
+    "zh": "黄昏时分的休斯敦乔治·布什洲际机场：多座航站楼与机坪灯火通明，联合航空客机整齐停在登机口。",
+    "en": "George Bush Intercontinental Airport at dusk — the terminals and apron lit up, with United aircraft lined up at the gates."
+  },
+  "iah-sat-1.webp": {
+    "zh": "从卫星图看，休斯敦乔治·布什洲际机场（IAH）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of George Bush Intercontinental Airport (IAH) and its surroundings are clearly visible."
+  }
+}

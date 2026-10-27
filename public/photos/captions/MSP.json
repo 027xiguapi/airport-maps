@@ -1,0 +1,14 @@
+{
+  "_note": "2026-10-27: a Baidu photo of Delta jets at the gates joins the Esri World Imagery satellite view; a watermarked Northwest-era shot was skipped.",
+  "_skip": [
+    "msp-baidu-2.webp"
+  ],
+  "msp-sat-1.webp": {
+    "zh": "从卫星图看，明尼阿波利斯-圣保罗国际机场（MSP）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Minneapolis–Saint Paul International Airport / Wold–Chamberlain Field (MSP) and its surroundings are clearly visible."
+  },
+  "msp-baidu-1.webp": {
+    "zh": "明尼阿波利斯-圣保罗机场的登机口：多架达美航空客机依次停靠，远处是城市建筑。",
+    "en": "The gates at Minneapolis–Saint Paul — Delta jets lined up at the terminal, with city buildings on the horizon."
+  }
+}

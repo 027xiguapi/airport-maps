@@ -1,0 +1,12 @@
+{
+  "_note": "A Baidu aerial of the circular terminal complex, plus the Esri World Imagery satellite view; a photo of the Nairobi National Museum was skipped.",
+  "_skip": ["nbo-baidu-2.webp"],
+  "nbo-baidu-1.webp": {
+    "zh": "鸟瞰内罗毕乔莫·肯雅塔国际机场：环形航站楼围绕中央停车场展开，滑行道上停着飞机，远处立着塔台。",
+    "en": "Aerial view of Jomo Kenyatta International Airport — the circular terminal wrapped around a central car park, aircraft on the apron and the control tower beyond."
+  },
+  "nbo-sat-1.webp": {
+    "zh": "从卫星图看，内罗毕乔莫·肯雅塔国际机场（NBO）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Jomo Kenyatta International Airport (NBO) and its surroundings are clearly visible."
+  }
+}

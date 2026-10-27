@@ -1,0 +1,12 @@
+{
+  "_note": "A Baidu photo of the terminal frontage with a Brussels Airlines aircraft at the gate, plus the Esri World Imagery satellite view; an indoor wayfinding-sign shot was skipped.",
+  "_skip": ["bru-baidu-1.webp"],
+  "bru-baidu-2.webp": {
+    "zh": "布鲁塞尔机场的玻璃幕墙航站楼：巨大的红色「b」标志旁是登机廊桥，廊桥边停着一架布鲁塞尔航空客机。",
+    "en": "Brussels Airport's glass-fronted terminal — the large red 'b' logo beside a jet bridge, with a Brussels Airlines aircraft at the gate."
+  },
+  "bru-sat-1.webp": {
+    "zh": "从卫星图看，布鲁塞尔机场（BRU）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Brussels Airport (BRU) and its surroundings are clearly visible."
+  }
+}

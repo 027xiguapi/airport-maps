@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "cyi-baidu-1.webp",
+    "cyi-baidu-2.webp"
+  ],
+  "cyi-sat-1.webp": {
+    "zh": "从卫星图看，嘉义机场（CYI）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Chiayi Airport (CYI) and its surroundings are clearly visible."
+  }
+}

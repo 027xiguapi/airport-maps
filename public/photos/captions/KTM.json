@@ -1,0 +1,14 @@
+{
+  "_note": "2026-10-27: a Baidu ground photo and the labelled Esri World Imagery satellite view are published.",
+  "_skip": [
+    "ktm-baidu-2.webp"
+  ],
+  "ktm-sat-1.webp": {
+    "zh": "从卫星图看，加德满都特里布万国际机场（KTM）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Tribhuvan International Airport (KTM) and its surroundings are clearly visible."
+  },
+  "ktm-baidu-1.webp": {
+    "zh": "橙红色的特里布万国际机场航站楼，控制塔从楼顶升起，门前是接送旅客的车辆。",
+    "en": "The orange Tribhuvan International Airport terminal, its control tower rising from the roof, with cars and buses outside."
+  }
+}

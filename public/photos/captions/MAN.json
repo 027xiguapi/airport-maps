@@ -1,0 +1,8 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": ["man-baidu-1.webp", "man-baidu-2.webp"],
+  "man-sat-1.webp": {
+    "zh": "从卫星图看，曼彻斯特机场（MAN）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Manchester Airport (MAN) and its surroundings are clearly visible."
+  }
+}

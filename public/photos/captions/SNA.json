@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "sna-baidu-1.webp",
+    "sna-baidu-2.webp"
+  ],
+  "sna-sat-1.webp": {
+    "zh": "从卫星图看，圣安娜约翰·韦恩机场（SNA）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of John Wayne Orange County International Airport (SNA) and its surroundings are clearly visible."
+  }
+}

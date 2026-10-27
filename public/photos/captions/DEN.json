@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view published; the two Baidu results were watermarked satellite maps and are skipped.",
+  "den-sat-1.webp": {
+    "zh": "从卫星图看，丹佛国际机场（DEN）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Denver International Airport (DEN) and its surroundings are clearly visible."
+  },
+  "_skip": [
+    "den-baidu-1.webp",
+    "den-baidu-2.webp"
+  ]
+}

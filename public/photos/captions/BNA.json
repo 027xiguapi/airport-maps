@@ -1,0 +1,8 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": ["bna-baidu-1.webp", "bna-baidu-2.webp"],
+  "bna-sat-1.webp": {
+    "zh": "从卫星图看，纳什维尔国际机场（BNA）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Nashville International Airport (BNA) and its surroundings are clearly visible."
+  }
+}

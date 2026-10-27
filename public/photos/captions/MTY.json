@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "mty-baidu-1.webp",
+    "mty-baidu-2.webp"
+  ],
+  "mty-sat-1.webp": {
+    "zh": "从卫星图看，蒙特雷马里亚诺·埃斯科韦多国际机场（MTY）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Monterrey International Airport (MTY) and its surroundings are clearly visible."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu photo of a GOL aircraft at the gate plus an Esri World Imagery satellite view; a captioned satellite image was skipped.",
+  "_skip": [
+    "gig-baidu-1.webp"
+  ],
+  "gig-baidu-2.webp": {
+    "zh": "登机口外的机坪：一架戈尔航空客机停在廊桥旁，前起落架旁可见地勤车辆，后方是加利昂机场航站楼与其塔状结构。",
+    "en": "At the gate, a GOL airliner parked by the jet bridge with a ground vehicle alongside, and the terminal's tower-like structures rising behind."
+  },
+  "gig-sat-1.webp": {
+    "zh": "从卫星图看，里约热内卢加利昂国际机场（GIG）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Rio de Janeiro Galeão – Tom Jobim International Airport (GIG) and its surroundings are clearly visible."
+  }
+}

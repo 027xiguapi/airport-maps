@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "foc-baidu-1.webp",
+    "foc-baidu-2.webp"
+  ],
+  "foc-sat-1.webp": {
+    "zh": "从卫星图看，福州长乐国际机场（FOC）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Fuzhou Changle International Airport (FOC) and its surroundings are clearly visible."
+  }
+}

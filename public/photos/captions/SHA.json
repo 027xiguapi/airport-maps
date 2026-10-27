@@ -1,0 +1,14 @@
+{
+  "_note": "One Baidu photo of the terminal approach joins the Esri World Imagery satellite view.",
+  "_skip": [
+    "sha-baidu-2.webp"
+  ],
+  "sha-sat-1.webp": {
+    "zh": "从卫星图看，上海虹桥国际机场（SHA）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Shanghai Hongqiao International Airport (SHA) and its surroundings are clearly visible."
+  },
+  "sha-baidu-1.webp": {
+    "zh": "从进场高架望向上海虹桥机场航站楼，楼顶红色的「虹橋機場」字样与一大片积云同框。",
+    "en": "Shanghai Hongqiao's terminal seen from the approach road, its red '虹橋機場' rooftop letters backed by towering clouds."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_note": "A Baidu photo of the terminal frontage, plus the Esri World Imagery satellite view; a duplicate copy of the same photo was skipped.",
+  "_skip": ["otp-baidu-2.webp"],
+  "otp-baidu-1.webp": {
+    "zh": "布加勒斯特亨利·科安德国际机场航站楼外景：蓝色屋檐上写着「INTERNATIONAL HENRI COANDĂ BUCUREȘTI」，门前停着汽车。",
+    "en": "The terminal at Bucharest Henri Coandă International Airport — 'International Henri Coandă Bucharest' along the blue roofline, with cars parked in front."
+  },
+  "otp-sat-1.webp": {
+    "zh": "从卫星图看，布加勒斯特亨利·科安德国际机场（OTP）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Bucharest Henri Coandă International Airport (OTP) and its surroundings are clearly visible."
+  }
+}

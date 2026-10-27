@@ -1,0 +1,12 @@
+{
+  "_note": "A Baidu photo of the modern departure hall, plus the Esri World Imagery satellite view; a dark corridor snapshot was skipped.",
+  "_skip": ["gdl-baidu-1.webp"],
+  "gdl-baidu-2.webp": {
+    "zh": "瓜达拉哈拉机场的现代化候机大厅：白色网格状屋顶与橙色木质天花板下，旅客在落地窗前的座椅上休息，窗外是机坪。",
+    "en": "Guadalajara's modern departure hall — a white lattice roof and orange timber ceiling above seating, with the apron visible through the glass wall."
+  },
+  "gdl-sat-1.webp": {
+    "zh": "从卫星图看，瓜达拉哈拉国际机场（GDL）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Guadalajara International Airport (GDL) and its surroundings are clearly visible."
+  }
+}

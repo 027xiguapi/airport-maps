@@ -1,0 +1,14 @@
+{
+  "_note": "2026-10-27: a Baidu ground photo and the labelled Esri World Imagery satellite view are published.",
+  "_skip": [
+    "xiy-baidu-2.webp"
+  ],
+  "xiy-sat-1.webp": {
+    "zh": "从卫星图看，西安咸阳国际机场（XIY）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Xi'an Xianyang International Airport (XIY) and its surroundings are clearly visible."
+  },
+  "xiy-baidu-1.webp": {
+    "zh": "西安咸阳机场的塔台与航站楼，红色的“西安”两个大字悬在屋面上方，两架长安航空737停靠在廊桥旁。",
+    "en": "Xi'an Xianyang's control tower and terminal, with large red characters reading “Xi'an” above the roof and two Air Changan 737s at the gates."
+  }
+}

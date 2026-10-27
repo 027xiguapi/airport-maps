@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu photo of the terminal alongside the Esri World Imagery satellite view.",
+  "_skip": [
+    "khh-baidu-2.webp"
+  ],
+  "khh-baidu-1.webp": {
+    "zh": "高雄国际机场航站楼正面，三角形屋顶下是玻璃帷幕外墙。",
+    "en": "The front of Kaohsiung International Airport's terminal, with glass curtain walls beneath its triangular roof."
+  },
+  "khh-sat-1.webp": {
+    "zh": "从卫星图看，高雄国际机场（KHH）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Kaohsiung International Airport (KHH) and its surroundings are clearly visible."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu photo of the terminal alongside the Esri World Imagery satellite view.",
+  "_skip": [
+    "cmj-baidu-2.webp"
+  ],
+  "cmj-baidu-1.webp": {
+    "zh": "七美机场小巧的航站楼，外墙绘有波浪图案，楼前停着机车。",
+    "en": "Qimei Airport's small terminal, with a wavy painted facade and scooters parked in front."
+  },
+  "cmj-sat-1.webp": {
+    "zh": "从卫星图看，七美机场（CMJ）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Qimei Airport (CMJ) and its surroundings are clearly visible."
+  }
+}

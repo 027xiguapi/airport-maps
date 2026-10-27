@@ -53,6 +53,8 @@
  *   --min-width 420       discard images narrower than this
  *   --max-width 1600      re-encode cap
  *   --force               re-fetch codes that already have photos
+ *   --append              keep existing entries and add this source's photos
+ *                         (for adding e.g. Baidu pictures to a satellite-only airport)
  *   --dry-run             list what would be fetched, touch nothing
  *   --robots respect|ignore  default respect (Bing blocks it; see above)
  *
@@ -107,6 +109,7 @@ function parseArgs(argv) {
     maxWidth: 1600,
     quality: 80,
     force: false,
+    append: false,
     dryRun: false,
     debug: false,
     robots: 'respect',
@@ -138,6 +141,7 @@ function parseArgs(argv) {
       case 'quality': opts.quality = Number(value); break;
       case 'robots': opts.robots = String(value); break;
       case 'force': opts.force = true; break;
+      case 'append': opts.append = true; break;
       case 'dry-run': opts.dryRun = true; break;
       case 'debug': opts.debug = true; break;
       default: throw new Error(`unknown flag --${key}`);
@@ -697,7 +701,7 @@ async function main() {
   if (opts.limit) codes = codes.slice(0, opts.limit);
 
   const done = new Set(Object.entries(manifest.airports).filter(([, v]) => v?.length).map(([k]) => k));
-  const pending = codes.filter((code) => opts.force || !done.has(code));
+  const pending = codes.filter((code) => opts.force || opts.append || !done.has(code));
   console.log(
     `${codes.length} code(s) in scope, ${pending.length} to fetch` +
       (done.size ? `, ${codes.length - pending.length} already have photos` : '')
@@ -730,7 +734,11 @@ async function main() {
                 ? [`${info.city} airport`]
                 : []),
             ];
-    if (opts.force) delete manifest.airports[code];
+    if (opts.force && !opts.append) delete manifest.airports[code];
+    const existing = opts.append ? (manifest.airports[code] ?? []) : [];
+    // Number new files after the ones this source already contributed, so an
+    // append never overwrites an earlier `<code>-baidu-1.webp`.
+    const sourceCount = existing.filter((entry) => entry.source === opts.source).length;
     const entries = [];
     const queryErrors = [];
     const searchFn = opts.source === 'baidu' ? baiduSearch : opts.source === '360' ? so360Search : search;
@@ -763,7 +771,7 @@ async function main() {
         }
         for (const candidate of candidates) {
           if (entries.length >= opts.perAirport) break;
-          const result = await grab(candidate, code, entries.length + 1, opts);
+          const result = await grab(candidate, code, sourceCount + entries.length + 1, opts);
           if (result.entry) {
             entries.push(result.entry);
           } else if (result.skipped) {
@@ -777,7 +785,7 @@ async function main() {
     }
 
     if (entries.length > 0) {
-      manifest.airports[code] = entries;
+      manifest.airports[code] = [...existing, ...entries];
       fetched += entries.length;
       console.log(
         `[${i + 1}/${pending.length}] ${code} ${label(info)}: ${entries.length} photo(s) ` +
@@ -791,7 +799,7 @@ async function main() {
     }
     // Persist per airport — an interrupted run keeps what it fetched, and a
     // --force run that found nothing drops the stale entry it replaced.
-    if (!opts.dryRun && (entries.length > 0 || opts.force)) {
+    if (!opts.dryRun && (entries.length > 0 || (opts.force && !opts.append))) {
       await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
     }
   }

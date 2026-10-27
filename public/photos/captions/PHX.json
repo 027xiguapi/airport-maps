@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu-sourced photo of the terminal interior alongside an Esri World Imagery satellite view.",
+  "phx-sat-1.webp": {
+    "zh": "从卫星图看，凤凰城天港国际机场（PHX）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Phoenix Sky Harbor International Airport (PHX) and its surroundings are clearly visible."
+  },
+  "phx-baidu-2.webp": {
+    "zh": "凤凰城天港机场航站楼内，旅客在安检通道前排队。",
+    "en": "Travelers queue at a security checkpoint inside Phoenix Sky Harbor's terminal."
+  },
+  "_skip": [
+    "phx-baidu-1.webp"
+  ]
+}

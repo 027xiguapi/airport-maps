@@ -1,0 +1,8 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": ["sub-baidu-1.webp", "sub-baidu-2.webp"],
+  "sub-sat-1.webp": {
+    "zh": "从卫星图看，泗水朱安达国际机场（SUB）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Juanda International Airport (SUB) and its surroundings are clearly visible."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_note": "2026-10-27: a Baidu photo of the terminal frontage and its stone sign joins the Esri World Imagery satellite view; a terminal diagram was skipped.",
+  "_skip": [
+    "kmg-baidu-2.webp"
+  ],
+  "kmg-sat-1.webp": {
+    "zh": "从卫星图看，昆明长水国际机场（KMG）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Kunming Changshui International Airport (KMG) and its surroundings are clearly visible."
+  },
+  "kmg-baidu-1.webp": {
+    "zh": "昆明长水国际机场航站楼外：玻璃幕墙映出云影，前方石牌上刻着「昆明国际机场」。",
+    "en": "Outside Kunming Changshui's terminal — a glass facade reflecting clouds, with a stone slab reading \"Kunming International Airport\" in front."
+  }
+}

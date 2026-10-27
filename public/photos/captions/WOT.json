@@ -1,0 +1,14 @@
+{
+  "_note": "2026-10-27: a Baidu ground photo and the labelled Esri World Imagery satellite view are published.",
+  "wot-sat-1.webp": {
+    "zh": "从卫星图看，望安机场（WOT）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Wang'an Airport (WOT) and its surroundings are clearly visible."
+  },
+  "wot-baidu-1.webp": {
+    "zh": "望安机场的小型航站楼与顶部塔台，墙面上写着“望安机场 WANG'AN AIRPORT”。",
+    "en": "Wang'an Airport's compact terminal and rooftop control tower, with the 'Wang'an Airport' sign on its wall."
+  },
+  "_skip": [
+    "wot-baidu-2.webp"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "_note": "One Baidu photo of the terminal and apron, alongside an Esri World Imagery satellite view.",
+  "_skip": ["nkg-baidu-2.webp"],
+  "nkg-sat-1.webp": {
+    "zh": "从卫星图看，南京禄口国际机场（NKG）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Nanjing Lukou International Airport (NKG) and its surroundings are clearly visible."
+  },
+  "nkg-baidu-1.webp": {
+    "zh": "南京禄口机场航站楼，屋顶的红字『南京』下方停着一架吉祥航空客机，登机桥已经接到舱门。",
+    "en": "Nanjing Lukou's terminal, where a Juneyao Air jet waits beneath the red 'Nanjing' characters on the roof, a jet bridge at its door."
+  }
+}

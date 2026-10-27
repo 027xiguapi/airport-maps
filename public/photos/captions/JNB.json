@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "jnb-sat-1.webp": {
+    "zh": "从卫星图看，约翰内斯堡奥利弗·坦博国际机场（JNB）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of O.R. Tambo International Airport (JNB) and its surroundings are clearly visible."
+  },
+  "_skip": [
+    "jnb-baidu-1.webp",
+    "jnb-baidu-2.webp"
+  ]
+}

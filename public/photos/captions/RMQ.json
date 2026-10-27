@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "rmq-sat-1.webp": {
+    "zh": "从卫星图看，台中清泉岗机场（RMQ）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Taichung International Airport (RMQ) and its surroundings are clearly visible."
+  },
+  "_skip": [
+    "rmq-baidu-1.webp",
+    "rmq-baidu-2.webp"
+  ]
+}

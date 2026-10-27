@@ -1,0 +1,14 @@
+{
+  "_note": "One Baidu photo of the terminal exterior, with its glass-bottle sculpture, joins the Esri World Imagery satellite view.",
+  "_skip": [
+    "pmi-baidu-2.webp"
+  ],
+  "pmi-sat-1.webp": {
+    "zh": "从卫星图看，马略卡岛帕尔马机场（PMI）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Palma de Mallorca Airport (PMI) and its surroundings are clearly visible."
+  },
+  "pmi-baidu-1.webp": {
+    "zh": "马略卡岛帕尔马机场航站楼外景，草坪上立着巨大的玻璃瓶状雕塑，航站楼墙面上写着「Palma de Mallorca」。",
+    "en": "Palma de Mallorca Airport's terminal from outside, the giant glass-bottle sculpture on the lawn and the airport's name across the facade."
+  }
+}

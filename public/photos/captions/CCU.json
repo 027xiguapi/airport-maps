@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "ccu-sat-1.webp": {
+    "zh": "从卫星图看，加尔各答内塔吉·苏巴斯·钱德拉·玻色国际机场（CCU）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Netaji Subhash Chandra Bose International Airport (CCU) and its surroundings are clearly visible."
+  },
+  "_skip": [
+    "ccu-baidu-1.webp",
+    "ccu-baidu-2.webp"
+  ]
+}

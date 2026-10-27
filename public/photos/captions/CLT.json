@@ -1,0 +1,12 @@
+{
+  "_note": "A Baidu aerial photo, alongside an Esri World Imagery satellite view.",
+  "_skip": ["clt-baidu-2.webp"],
+  "clt-sat-1.webp": {
+    "zh": "从卫星图看，夏洛特道格拉斯国际机场（CLT）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Charlotte Douglas International Airport (CLT) and its surroundings are clearly visible."
+  },
+  "clt-baidu-1.webp": {
+    "zh": "从空中俯瞰机场：白色的航站楼与多条指廊铺展在宽阔的停机坪上，客机密密地停在登机口。",
+    "en": "An aerial view of the airport, its white terminal and concourse piers spread across a wide apron thick with jets at the gates."
+  }
+}

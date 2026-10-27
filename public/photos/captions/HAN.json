@@ -1,0 +1,14 @@
+{
+  "_note": "2026-10-27: a Baidu ground photo and the labelled Esri World Imagery satellite view are published.",
+  "_skip": [
+    "han-baidu-2.webp"
+  ],
+  "han-sat-1.webp": {
+    "zh": "从卫星图看，河内内排国际机场（HAN）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Noi Bai International Airport (HAN) and its surroundings are clearly visible."
+  },
+  "han-baidu-1.webp": {
+    "zh": "从机场前道路望向内排国际机场航站楼，“NỘI BÀI INTERNATIONAL TERMINAL”字样横贯玻璃幕墙。",
+    "en": "Noi Bai's terminal seen from the airport road, with “NỘI BÀI INTERNATIONAL TERMINAL” lettered across its glass frontage."
+  }
+}

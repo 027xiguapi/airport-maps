@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu-sourced photo of the terminal interior alongside an Esri World Imagery satellite view.",
+  "cmh-sat-1.webp": {
+    "zh": "从卫星图看，哥伦布约翰·格伦国际机场（CMH）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of John Glenn Columbus International Airport (CMH) and its surroundings are clearly visible."
+  },
+  "cmh-baidu-1.webp": {
+    "zh": "哥伦布国际机场的航站楼中庭，巨大的“COLUMBUS”马赛克墙位于扶梯上方。",
+    "en": "The terminal atrium at John Glenn Columbus International Airport, centered on a large 'COLUMBUS' mosaic wall above the escalators."
+  },
+  "_skip": [
+    "cmh-baidu-2.webp"
+  ]
+}

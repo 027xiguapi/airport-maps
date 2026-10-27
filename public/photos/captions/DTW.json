@@ -1,0 +1,14 @@
+{
+  "_note": "A Baidu aerial of the McNamara Terminal is published; the second download was a dusk view from a cabin window with no airport visible. The Esri World Imagery view is retained.",
+  "_skip": [
+    "dtw-baidu-1.webp"
+  ],
+  "dtw-baidu-2.webp": {
+    "zh": "从空中俯瞰底特律都会机场：长长的 McNamara 航站楼与两条平行登机廊道沿机坪展开，后方是密集的滑行道与跑道。",
+    "en": "An aerial view of Detroit Metro — the long McNamara Terminal and its two parallel concourses along the apron, with taxiways and runways beyond."
+  },
+  "dtw-sat-1.webp": {
+    "zh": "从卫星图看，底特律都会韦恩县机场（DTW）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Detroit Metropolitan Wayne County Airport (DTW) and its surroundings are clearly visible."
+  }
+}

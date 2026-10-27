@@ -1,0 +1,14 @@
+{
+  "_note": "Baidu photo of the terminal's curbside canopy plus an Esri World Imagery satellite view; a second view of the same canopy was skipped.",
+  "_skip": [
+    "mci-baidu-2.webp"
+  ],
+  "mci-baidu-1.webp": {
+    "zh": "堪萨斯城国际机场的航站楼外：白色 Y 形支柱撑起整片木色吊顶的雨棚，旅客与车辆在檐下往来。",
+    "en": "Outside Kansas City's terminal, white Y-shaped columns carry a broad wood-lined canopy over travellers and vehicles."
+  },
+  "mci-sat-1.webp": {
+    "zh": "从卫星图看，堪萨斯城国际机场（MCI）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Kansas City International Airport (MCI) and its surroundings are clearly visible."
+  }
+}

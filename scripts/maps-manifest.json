@@ -1,6 +1,6 @@
 {
   "note": "Provenance for the covers this script generated. Images downloaded by scripts/fetch-airport-images.mjs are recorded by that script instead.",
-  "updatedAt": "2026-10-17T07:37:56.634Z",
+  "updatedAt": "2026-10-27T12:58:31.722Z",
   "entries": {
     "PVG": {
       "generatedAt": "2026-09-28T03:02:17.313Z",
@@ -2960,6 +2960,806 @@
       "sha256": {
         "source": "a14e47352716d06bf24aadac9421baf94fe3b3bb7c04cd6c32bd7ce25049a6e4",
         "cover": "7e7dfc734a19abe97bed429e50baf4a32f343b39f43567d6fdcfb78161dcaee2"
+      }
+    },
+    "ITM": {
+      "generatedAt": "2026-10-27T11:45:30.365Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "f3db14b3220a74c480cfbfcaa9cda0ac77b3cb33a49ca6ce3234af8b5f4180bf",
+        "cover": "afdc947518871145b51fc71568d934e248b8a073457924226604cacffbeb9d92"
+      }
+    },
+    "TFU": {
+      "generatedAt": "2026-10-27T11:47:38.078Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "8c8e56db5a2d3f758b4a791fc5e1af7bd1ca72959bb405999723d5024d79679a",
+        "cover": "0088ff78d8981bac653dc5ff22771bc68e58b13d9216f1f3dbac6a57c1d949a9"
+      }
+    },
+    "SZX": {
+      "generatedAt": "2026-10-27T12:41:28.471Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "aa397c93fff052a591a365a3e6cce66089baaa30b4a53463705fb8575d31ec2f",
+        "cover": "f8c9e3de995b4ea6775ef22a64680b2ea7aea9a9d296dceb9b7ffa059bccdb08"
+      }
+    },
+    "PKX": {
+      "generatedAt": "2026-10-27T11:48:52.854Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "13028f8d46493b346ed6862055200066837cc157228f9122bdc51373e7ac2dc9",
+        "cover": "a185f7da2d73892555eb8521fee93836342747f7f91c1eb9a5cff0111e49619b"
+      }
+    },
+    "KMG": {
+      "generatedAt": "2026-10-27T11:47:34.741Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "c30e5caf790708f7dccd196f566866a5da51bbaefbcbe8d87e49a498057d235b",
+        "cover": "1356a3ba201d99c448585ad29a5d36408123e78097d07db12decd0698ec23522"
+      }
+    },
+    "CKG": {
+      "generatedAt": "2026-10-27T11:51:18.285Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "69f056b1e03ec41949e1abd04b76f463cdbcdb0e86e04c34c5cef84fa36884ad",
+        "cover": "42c7c8b0fb42094acad2327ea66ed79ddaca52ed07752ca94a27cffdf8708c8e"
+      }
+    },
+    "XIY": {
+      "generatedAt": "2026-10-27T11:49:04.116Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "17db888c8ff3184f606fa305a1c650606271df9b96c59a6d01c295661f163111",
+        "cover": "ca1707c1ced4d765f0d33987d65fec84f6661cbc965151eeb7d709b11458adaa"
+      }
+    },
+    "HGH": {
+      "generatedAt": "2026-10-27T11:52:55.411Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "1f9b21954f94526d6851cc4b9365dd0c01958fcf7e32c15882adf0d34d6e7497",
+        "cover": "d66c9eb6b8a65660d6f4118b12574053401d6248c379c928986c0addf13f1f41"
+      }
+    },
+    "SHA": {
+      "generatedAt": "2026-10-27T11:50:33.727Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "1aebd627df1e1a6ab860e29e6d53b610e386e32722223add0810f15ee40aa6cb",
+        "cover": "7c775b819f27326a10b30cff8ab3d348b1d616b788cf3ec842ac2a1e265dfcd1"
+      }
+    },
+    "TSA": {
+      "generatedAt": "2026-10-27T11:54:13.096Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "9f50d4e0bd80f4dedc4f0eca4199e1d1071de64b9a0eb1eba6e1a8b9cfca00a7",
+        "cover": "3e12f05245b724f21d1cf9415cbc0ddbdc1bfdf5ce201f376935470bb6d31b25"
+      }
+    },
+    "KHH": {
+      "generatedAt": "2026-10-27T11:51:57.509Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "9dca3545a2ea7327457a9a5d1c7152519faabce06c8e5c1a01936d153bf1e585",
+        "cover": "76a31c7ac87fed4b2a14caae1bac4e304da317ce058e068b9d3b1024a03b3c0a"
+      }
+    },
+    "RMQ": {
+      "generatedAt": "2026-10-27T11:55:33.945Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "6e238c8db39619e077f83a374de04a57036f0d7c742b9a092e5441d04a387385",
+        "cover": "21024ff9540454a11057a248ee248e95ecb2a51e5776dccb773eef454bd68e03"
+      }
+    },
+    "TNN": {
+      "generatedAt": "2026-10-27T11:53:24.981Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "4cb7b749b18464837c7bd10ae6c3f5d2bc17dae0223fc185351d19c749b47b53",
+        "cover": "4677ae8074d90ed60380b9d5a63c91d05ccfe47c15db839c94e756610e1a42d7"
+      }
+    },
+    "HUN": {
+      "generatedAt": "2026-10-27T11:57:40.008Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "c455cc99d5bca7c3ca7b7721c0bc9b2f21b5cb90867ef5a855b16c98e918112a",
+        "cover": "054fb5d292d3db970b48dd33d2e3de4d2a25370b3e888eec101c84b7e7b02312"
+      }
+    },
+    "MZG": {
+      "generatedAt": "2026-10-27T11:54:35.253Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "a110264e149c471c1db22455dfeb8f9f6e38fa2d65f242a0e6bf2267d302db07",
+        "cover": "be4d4b0cce416926f8b729364ea1720f3150027bc974ffad6c7fbc54cbb54c9d"
+      }
+    },
+    "NKG": {
+      "generatedAt": "2026-10-27T11:59:41.848Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "095f26e3d0c2c374707a58cf51745a9b4824dc32f7125e04b90876b00e03834a",
+        "cover": "144db2f8779cd38232ac8f237fb1d466c43e26a86e7d4fd01c503bf694604b21"
+      }
+    },
+    "CTU": {
+      "generatedAt": "2026-10-27T12:55:05.581Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "bd0896591252196232422cc6a746f5ba5df17c880be9c3651dcf440f560099bf",
+        "cover": "c52fca5c7f66fa27d5f4a4cfd231f8f9903d8f30b4364d72a3671d32c52a63b0"
+      }
+    },
+    "HAN": {
+      "generatedAt": "2026-10-27T12:00:53.091Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "ebdf84b7e770aa4d7a5b6c0797878d3c25cac8ae72474132618e8b1763582321",
+        "cover": "23b56b3b393517277475af1429308caed6ef4cbb075b565622be595253f74f74"
+      }
+    },
+    "WUH": {
+      "generatedAt": "2026-10-27T11:56:44.384Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "9bfa68ab8c944ab0de7ae1cb06b58aa15350b83c342c3769295cdd340402a15e",
+        "cover": "f4e1c375c6a270bf1f93b6194966782e874c01d96bc463b299e742025127b04c"
+      }
+    },
+    "XMN": {
+      "generatedAt": "2026-10-27T12:02:25.492Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "43c40e26803784166461690d8a603af9eb4f775966dbf8273a0387182c90939d",
+        "cover": "0a8adf11f71ecb1ecf389cf12c62c1679ecffdae9b90de19ef0209b2d994a775"
+      }
+    },
+    "JNB": {
+      "generatedAt": "2026-10-27T12:41:54.780Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "c06a860381ae94051bd96a508b49a359fe466854566b7663c3ea1be9d3e48e0e",
+        "cover": "0aa8e3fc432027bda6fd16f5e5566c4e3294145aa96ba599ff883db59fc9e609"
+      }
+    },
+    "CSX": {
+      "generatedAt": "2026-10-27T12:03:50.610Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "a85bbb9b418856b23ce76efc7e081f66418a4bf982d9f2f56a7b33b7b0176e0b",
+        "cover": "d1b7da740b62a0938a96fd86bbe851cc5d9f8f47588dcd3a0309bcfafd13db2f"
+      }
+    },
+    "HAK": {
+      "generatedAt": "2026-10-27T12:42:52.573Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "ace19aaff3ef1d1a581eec051e560df5b303d2b79216787965e2030af61bfa49",
+        "cover": "cd9ca57be5cad3e175f333f6aa9a2f5ac2c21b63c9d1b6009d326093e2fcf8b5"
+      }
+    },
+    "CGO": {
+      "generatedAt": "2026-10-27T12:44:58.485Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "92b74a899909c6207837ad81081adafc6dbde30de022a3de6d52db4e6f69d129",
+        "cover": "ee8b11c861763e574440a19f9cae3e23c815c9ccca40927e8f25b1c1f54d3feb"
+      }
+    },
+    "URC": {
+      "generatedAt": "2026-10-27T11:59:20.476Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "9fd1de208e38f9f76e4d03cdb5cc5c09dcac567dca3fecf74227b1339551e769",
+        "cover": "9caabf9c301d574855f30d000443ffe6b73e9a9c7e504fe4053570a92f7a2ba2"
+      }
+    },
+    "FUK": {
+      "generatedAt": "2026-10-27T12:05:54.460Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "a6be631b964e2df38ff27a7f162ba241cf0a5bb52cd21195e686e20219418e92",
+        "cover": "060b1f0816edb4855d30d41209a02ea963290b2e1ac2ad35f20b480c9ce23405"
+      }
+    },
+    "LIM": {
+      "generatedAt": "2026-10-27T12:01:27.305Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "10fb6500906f276383b63355c976baa7584467d682462941f4adef5dbebe0df8",
+        "cover": "6ecc81c4d66de60f83dcbf5569bb49867f5195b12760bcdde0de1ebb9a3fcdc6"
+      }
+    },
+    "CGH": {
+      "generatedAt": "2026-10-27T12:07:32.481Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "e0376e1882c1a84ac6faa477ec5fc6e26a1b6314d53b79a4063829f644b5e379",
+        "cover": "8b06bbea8d145d440d8248d9bdb3a4ddb8acb592094c79dedab5c5896a1a6db9"
+      }
+    },
+    "TAO": {
+      "generatedAt": "2026-10-27T12:02:52.693Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "165432c4caf97ccd607e3d2fafb0dd035dab3d70b612d27124a0596e9c6ac3a8",
+        "cover": "ec2c057ccf41f19605a87275133f925a000fb88aa60f93a765ddbeabf1c610cb"
+      }
+    },
+    "HRB": {
+      "generatedAt": "2026-10-27T12:08:42.659Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "a5d6475bd410ad5c74675de8ee2d498138930a2f779e40b819a8073ef40dee76",
+        "cover": "cf010fb7b22ad4bf917700bbe00a28eb028fe0d8b543e69910f4543d169a1d5b"
+      }
+    },
+    "SHE": {
+      "generatedAt": "2026-10-27T12:04:24.503Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "921b8df57706bc40f95ffcc0bb983e7893ffc923c8fef9e07e6bae2f13309578",
+        "cover": "cfa9bc706d12f1ddc36eef50b5e02f2f34ac819cfe680640832fcba2fd6a4a0f"
+      }
+    },
+    "CTS": {
+      "generatedAt": "2026-10-27T12:10:05.505Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "80e618e2a1c9ec2248b11be8f5442808907d247140c3450044f505611a549c48",
+        "cover": "e09af7404db42ecbe17624c775f5cfbde01ec5c4153f2b1acac6579839cad693"
+      }
+    },
+    "KWE": {
+      "generatedAt": "2026-10-27T12:05:46.436Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "b47eb8ce5a9533fd3c8fd71120c5ae99bb64f739f27bac833c30cc0c09e0db50",
+        "cover": "7667f77db3dfedb7098f56ffc6a646ecb9b88b8ac3107f0f18af750e4e7b710b"
+      }
+    },
+    "DPS": {
+      "generatedAt": "2026-10-27T12:48:34.952Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "67b8bb700ccacff04182290bebd02d24aa48b5d454b732222d1cb08a617bc4d9",
+        "cover": "0e71d48a65492c4b92a9ce3009c09220087af6f5dd611cd4e67b333d77248926"
+      }
+    },
+    "CJU": {
+      "generatedAt": "2026-10-27T12:07:15.743Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "c59ee4357b31e012efdaa1f4d7e276ca7559bb4480843f4c358064cf022cd19f",
+        "cover": "942da466c7c04efc06935a004cedb65c88b4306cc13dd038c02f99b38bcb1fc1"
+      }
+    },
+    "SYX": {
+      "generatedAt": "2026-10-27T12:12:23.955Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "f60b9f14ea1e64a4bb204f0d9811c732284efc54a181afd5a2fd4c0a75819824",
+        "cover": "672864385800d18d05105f5f80597f70dd18bd72b99b134500f4ec4cb0c9e1d8"
+      }
+    },
+    "OKA": {
+      "generatedAt": "2026-10-27T12:09:46.936Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "1f13cf6e59ea6c3652e71dbcf3756312dd521396f3921efb88883b9b94756717",
+        "cover": "23b938923806a741543efa857b03703d9c565ee3bc41637d22c5901ab53c0998"
+      }
+    },
+    "CCU": {
+      "generatedAt": "2026-10-27T12:13:40.970Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "bd2749d613f59b343b51e0b5138404230b03b2f3171855f2fc77752e516280f3",
+        "cover": "5fb560745626da1cfb5a43b75ca3ffcd8c33a975ab8fe987fcefa69483ea415f"
+      }
+    },
+    "MAA": {
+      "generatedAt": "2026-10-27T12:11:26.381Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "31f4611a69c19ee205f1932faf3094f65a4b3e0bbae0387dd177491da447a0cb",
+        "cover": "72608daa25623970b546b45835e1f612121f95921a778b34a9ece57522b5a2fe"
+      }
+    },
+    "TNA": {
+      "generatedAt": "2026-10-27T12:14:52.396Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "9024e139aa184ebdd6f29cb8a25fb6bb9ee2281d3b0bbde58f909a0355d61072",
+        "cover": "1d192226b9bc020a57fea7251aee0782e026fa34f01e59d13acf210bfd79530b"
+      }
+    },
+    "TSN": {
+      "generatedAt": "2026-10-27T12:50:11.210Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "de4051c5102e5fab54774dc154c1005b81adafc5d06a382ea52f976c9c681106",
+        "cover": "9aa2512da469f0f1f7f3f682013328e88f74c5284300de66f07e911c0bfb9151"
+      }
+    },
+    "DLC": {
+      "generatedAt": "2026-10-27T12:16:04.455Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "4e23d2bd92155678d3daffea59ead1642a13ec1f3e89c01c2603efe1b3b04583",
+        "cover": "4fa51299c3bef5d8a734ee97f1ba9d79bbfc235b63fcd51f491f8a1d79a62cb7"
+      }
+    },
+    "GDL": {
+      "generatedAt": "2026-10-27T12:49:23.773Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "c3b1d6eace11a841863fab646579d08429994beb710c9e41b203a5ec21d5a098",
+        "cover": "9d918c839964838d94bfafdba1ee751a99a094069a2afc1d7fb914e124d0d3d9"
+      }
+    },
+    "CGQ": {
+      "generatedAt": "2026-10-27T12:17:27.168Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "eda4491ee3aa8abbbd73b85b21ee5c14b9473708e7661a182eb57460f40230af",
+        "cover": "662eab289e7703e26c2240ed07e99432b68c35b7b19f5a935808a07b6f83ae35"
+      }
+    },
+    "LHW": {
+      "generatedAt": "2026-10-27T12:14:32.225Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "2f2d293b977c354b2c052de649fa058258ef4b9675a8777663269d0f95482d58",
+        "cover": "1d56f9dcacd712cbd0eeb8c3c0da075d220758211aeb39a4bcc137f8d8370dba"
+      }
+    },
+    "HKT": {
+      "generatedAt": "2026-10-27T12:18:41.086Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "484e273a862c52eda33248ef23dfe054194226f4edb35074eea0ecc557be38cf",
+        "cover": "10d801234bda1639b7b4bba6c11589788a91e6a411862eaa51d1193b325366b0"
+      }
+    },
+    "GMP": {
+      "generatedAt": "2026-10-27T12:53:46.631Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "944339f8ba551ef3b89b204713c45bb1fc637796359aa950209b3a69d61d3e96",
+        "cover": "a213ac93eea8f276aabb16da4d2239e4fc1612752cd8c583ac1991313e4b0bb9"
+      }
+    },
+    "TTT": {
+      "generatedAt": "2026-10-27T12:19:40.973Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "c34dad06839cf978bb461c77a09d1c687d42728b6950febd39c8c021af4dc0fe",
+        "cover": "8d035074d078d252c3f2ee88310470f91e0403d88d22b84a520f981429fdfca3"
+      }
+    },
+    "KNH": {
+      "generatedAt": "2026-10-27T12:16:37.808Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "8f9850a71f27aa859375fcbae7e5da62bf525304b7811335ba971a48e7a3c7dc",
+        "cover": "fde2a3cf97b0522200daf82efa1a4520c118326ea6650de2c4c27841ee2e3d8e"
+      }
+    },
+    "CYI": {
+      "generatedAt": "2026-10-27T12:20:51.392Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "75f785e2bc6404dea128ed9b77a5406fe1335b1553e6997087261842dc22defb",
+        "cover": "4deab4e95c7c001b71d75903354b7ea84fd124d01fc04fca7f1ac12059f24019"
+      }
+    },
+    "MFK": {
+      "generatedAt": "2026-10-27T12:17:57.053Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "b023a1860694b83969ee8d29f0865dfff27cb7840c426328d39a576c5b448e2e",
+        "cover": "e2e4d49ea05e6fa24c8a3d903a6fa7386ede8faa1aef2d0072e99022ee738145"
+      }
+    },
+    "LZN": {
+      "generatedAt": "2026-10-27T12:22:50.239Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "57bcb96455abfdb74efd369576794ce8e08b2bf2ddd77aa7ed2e76723680b16a",
+        "cover": "a136772be1b592cd07d3a5a78d0a1cc5da22f2576ea9f3bbf96eda286dfeb746"
+      }
+    },
+    "KYD": {
+      "generatedAt": "2026-10-27T12:19:13.108Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "2b26fde3bf50494f3a9d323e2a372aebe76bff1304eccd74877b00373db2b91f",
+        "cover": "4eee78dcb8d13ac0808784a5d05ff73017d2e47f2fdf8e719b56ca49163945ce"
+      }
+    },
+    "UPG": {
+      "generatedAt": "2026-10-27T12:48:00.852Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "4b90bb516d9ab862f5884ffa83bbfb171f44c52ada9d9f9c2d50cd29dbf6bfc3",
+        "cover": "44037c5bef918868b0a1010053f9a33e98e975ae87b47b4ff8193b6ed3f83322"
+      }
+    },
+    "GIG": {
+      "generatedAt": "2026-10-27T12:20:36.415Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "47dfb593570f84219288e7b828c1511db363cce08bafdb503726360b174aaae7",
+        "cover": "bf364e7189fcec5c2d78ffbdbb6e483b719c63a68e18d09fda6e47c6e4e76549"
+      }
+    },
+    "KTM": {
+      "generatedAt": "2026-10-27T12:24:43.525Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "17bafaf4ba26f7d2cb4a7ef530562efd868faa2249ce39fc23ef5c887e6d143a",
+        "cover": "1d6bc817ccc198689e37f49920020ac35744b076c7f3dd9b98e8d09b2d42d037"
+      }
+    },
+    "BSB": {
+      "generatedAt": "2026-10-27T12:22:15.369Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "066c3356f591a18d347bb621ee45e1cf98405324b44c7130fb2469823a6c5d30",
+        "cover": "3c7206f0a9175ca568c5be48ce5698e51649488f9d225d63ab552d7a75cb7465"
+      }
+    },
+    "NGB": {
+      "generatedAt": "2026-10-27T12:25:54.209Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "0e24a495675c7c836b025ea730ee6b236e539a5ab0e35bd16544d1cda151065d",
+        "cover": "bbd2505dab9065e81c103d717cb0dc0e3c4054123a54b4851eac4f77d4f60c61"
+      }
+    },
+    "SJO": {
+      "generatedAt": "2026-10-27T12:50:56.470Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "96053b2646b0f0d3cd0ecf0d0b2f96bc7ce350ad096b35d34b63b5247bc4c0c2",
+        "cover": "01faf4b3f30632badb776bea3930cbc16d0eaa42e8d0e92200f0af311bc041ef"
+      }
+    },
+    "CEB": {
+      "generatedAt": "2026-10-27T12:27:03.095Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "bc0db0f1ab66f4ef1ec48cae1dd9172632f4fb5c7db0129d9e0b895967ced620",
+        "cover": "45e2c6c990d652a87a12f7c571b2ff0b664b98cf467496cb2f354363e1587468"
+      }
+    },
+    "SUB": {
+      "generatedAt": "2026-10-27T12:43:06.070Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "43c1c9dd7ed82b6f1496b9b4a0978864e562c63c89234cb0b210dccb27b936e9",
+        "cover": "c6c6010b9ff3d31837891b3be00826f251411948ccb0b78c1a13a38d186f038f"
+      }
+    },
+    "FOC": {
+      "generatedAt": "2026-10-27T12:47:36.566Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "8320ea6fdb50020675b855bddde7c6c604962b691f0f2f586374be3985e6fdae",
+        "cover": "696e8eb622a190c5c9f3bf2d7e7c54fdf71d923359cb80b3686ba1b0153c85f3"
+      }
+    },
+    "CNF": {
+      "generatedAt": "2026-10-27T12:44:24.400Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "fd2bd454c894868bd1ab5c249b00cc1f1ffce1dd731ee540fdb567eeddb29838",
+        "cover": "a04bdf794b9c36217918293cdbfe23e27ec7e5dda50fef975bc5d70c0f60f571"
+      }
+    },
+    "PUS": {
+      "generatedAt": "2026-10-27T12:28:48.004Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "5a18748e0a40a29b0a08b5e2b6b17fbf6318bdf4154211093c2aedca40c6e52e",
+        "cover": "a2573306e140a538bfd3e6975e539963d136853e736bbf67f92cb3f069624fa8"
+      }
+    },
+    "VCP": {
+      "generatedAt": "2026-10-27T12:24:37.977Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "b211dc416bfa40a5dafe691349e3655983aa34fe4adcb204cce6bc213c234539",
+        "cover": "de167bf9eca224360140af32bedad835f2f8d46066ddf0110871244daff058ef"
+      }
+    },
+    "MDE": {
+      "generatedAt": "2026-10-27T12:30:19.725Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "46158571b886a6635d1bd49b22c839f8c4b8b59209022dbd99857165b011af54",
+        "cover": "60b0d9960c4dcdd931f5e8caeb26870cd651791eb47599a81a3d5d4b35bdc5b5"
+      }
+    },
+    "MTY": {
+      "generatedAt": "2026-10-27T12:25:56.820Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "bb302dc735d7b1a681f25e172adcd77a8720ba4481b71e052533bc1bf408aac6",
+        "cover": "7883d0b022281aab491146b7682c5e32b5abbd809e4c7ef6846303e333774f60"
+      }
+    },
+    "DAC": {
+      "generatedAt": "2026-10-27T12:31:43.213Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "dab3c98cb0ccfbc94a9ed1c7f8780dc4a2e2e19582a992ed667d9e0ee0f725fb",
+        "cover": "dcef60f2ad373e04e763f1df53098965e5dba30a9e13c6e82a4ab8b73a8ddca7"
+      }
+    },
+    "TYN": {
+      "generatedAt": "2026-10-27T12:27:15.387Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "1ea5b2b30c1534859dbd97193bc41df9abb605a0832e5ea47df62548c47e90fb",
+        "cover": "8ce7fe91737d12a908e0d6cd5cbc3d446bd84e7d79134191d133669d3a878475"
+      }
+    },
+    "HFE": {
+      "generatedAt": "2026-10-27T12:52:49.165Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "0c1259437d77f6bc270b090653eae1a18177a2cb3f774f990b264b7f2f92893c",
+        "cover": "1405358638f255fec1d16953b394cbdc24c86d26ed726d01d0a70919aaeababc"
+      }
+    },
+    "NBO": {
+      "generatedAt": "2026-10-27T12:29:43.411Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "51978324a14e17b08f1f7c58a0454d5f9ccb5a71e0af3c77cc67be3e9a33799b",
+        "cover": "bc924fd79c93276d1bf7ee7ecb22bd07f1e11843a0b06a5d0b462812a3481480"
+      }
+    },
+    "NNG": {
+      "generatedAt": "2026-10-27T12:49:29.805Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "79f41a68a745d0ce14e486fb4daecd9484570016a8cbb4d811310fdb8015fa29",
+        "cover": "b4ca4fe71589d6e6527e39a96a10b634d092eadde734ec8367d17461b4310e9b"
+      }
+    },
+    "DAD": {
+      "generatedAt": "2026-10-27T12:31:23.585Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "624a72216ea8aaaa9c0eae2c0cd03d984a09b34726d6a586f388b8c55d90d4a0",
+        "cover": "a8ce2ef02ab0312d3a18902a0adfdfac95efae81cd86962ca92965e284211d6e"
+      }
+    },
+    "LOS": {
+      "generatedAt": "2026-10-27T12:35:56.438Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "ef39a35c5e5e51fa5f0847598369553b4038e2f9d5f533061649cbb9ad68619a",
+        "cover": "7222e3b41525c43e124666a3858656e91b4ed18d21757f97af6dc1cef120346b"
+      }
+    },
+    "HET": {
+      "generatedAt": "2026-10-27T12:52:14.450Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "77d32f33dad4800c9265ccd19b06f670a6f3698b51759c5f4abcf9a78de7a4cd",
+        "cover": "edca0b6ee596a329a758f4f9ef79d2972145b23e08fed6a2b0ae3e22644fdecf"
+      }
+    },
+    "GNI": {
+      "generatedAt": "2026-10-27T12:48:31.898Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "a046d93d182df305bf839aa8ce5c07fd9c481821de066821e5a8aec687fb43cc",
+        "cover": "b0a381709f9cb4b0b81e36d713bb17039436fde3f2f9af83453aae66940bed35"
+      }
+    },
+    "CMJ": {
+      "generatedAt": "2026-10-27T12:45:57.327Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "464443381e487cb36bb63b15b405aec466a5cc840f30c8d9c74590b3b40a2f48",
+        "cover": "54d3b6e0d7111abaf86901c2796e3ebe61d69e4899fc0eb2128e210fb5ca0261"
+      }
+    },
+    "WOT": {
+      "generatedAt": "2026-10-27T12:38:09.426Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "8d7d89a94836932dd131341080163b9aadf5f6052d10c445553964cef4e7c65a",
+        "cover": "297e32cd1a69f3dfbb6207f1ff26c6c1c593e757b8d6168f487e92351aa3155a"
+      }
+    },
+    "BET": {
+      "generatedAt": "2026-10-27T12:32:50.660Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "39e7fefb969919987b24a6e9bac241b7f86afa50fa35940e86d9cc50cb0eb4ad",
+        "cover": "b10b343ae955bfffa9b4d6d881bfa53d698c3aeaf82aed568efd5a1fb3ea0d50"
+      }
+    },
+    "LLU": {
+      "generatedAt": "2026-10-27T12:58:19.789Z",
+      "generator": "generate-airport-maps.mjs",
+      "dataSource": "OpenStreetMap via Overpass API",
+      "dataLicence": "ODbL 1.0 — © OpenStreetMap contributors (attribution rendered into the image)",
+      "sha256": {
+        "source": "916e57f8e1f397e07abe13b85a955580f45f607ba987e3a772cf56ff1b31e5e3",
+        "cover": "bcb575e3ac9306eee10c029f46fe325f6c3a25aebaaabeea6aa482ea9992dc8c"
       }
     }
   }

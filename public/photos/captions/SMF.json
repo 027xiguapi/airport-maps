@@ -1,0 +1,14 @@
+{
+  "_note": "2026-10-27: a Baidu terminal-interior photo joins the Esri World Imagery satellite view; a flight-simulator view was skipped.",
+  "_skip": [
+    "smf-baidu-2.webp"
+  ],
+  "smf-sat-1.webp": {
+    "zh": "从卫星图看，萨克拉门托国际机场（SMF）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Sacramento International Airport (SMF) and its surroundings are clearly visible."
+  },
+  "smf-baidu-1.webp": {
+    "zh": "萨克拉门托国际机场航站楼内：旅客拖着行李经过餐饮区与「Gates B4–B11」指示牌。",
+    "en": "Inside Sacramento International's terminal — travellers with bags passing the food court and a \"Gates B4–B11\" sign."
+  }
+}

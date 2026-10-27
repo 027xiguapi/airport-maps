@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "upg-baidu-1.webp",
+    "upg-baidu-2.webp"
+  ],
+  "upg-sat-1.webp": {
+    "zh": "从卫星图看，望加锡苏丹哈桑丁国际机场（UPG）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Sultan Hasanuddin International Airport (UPG) and its surroundings are clearly visible."
+  }
+}

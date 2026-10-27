@@ -34,6 +34,9 @@
  *                   small/medium fields where the search box is small
  *   --reindex       write manifest entries for the given --codes from the files
  *                   already on disk, without rendering anything
+ *   --no-probe      skip the mirror probe, keeping the listed mirror order
+ *   --no-manifest   do not write scripts/maps-manifest.json (use in parallel
+ *                   workers, then --reindex once at the end)
  *   --limit N       stop after N airports
  *   --delay MS      pause between Overpass requests (default 1200)
  *
@@ -60,6 +63,13 @@ const FORCE = has('--force');
 const COMPACT = has('--compact');
 /** Debug: write the SVG beside the PNG and stop, to inspect what sharp is given. */
 const SVG_ONLY = has('--svg-only');
+/**
+ * Batch workers skip the per-process mirror probe: they share the mirror list
+ * and let overpass() rotate. Also skips the manifest so two workers cannot
+ * clobber each other's entries — run `--reindex` once when the batch is done.
+ */
+const NO_PROBE = has('--no-probe');
+const NO_MANIFEST = has('--no-manifest');
 const LIMIT = Number(value('--limit', '0')) || 0;
 const DELAY = Number(value('--delay', '1200'));
 const KIND = value('--kind');
@@ -187,6 +197,11 @@ function coords(code) {
 // — see the empty-result retry in cached().
 const MIRRORS = [
   'https://overpass-api.de/api/interpreter',
+  // The main instance also answers on its z/lz4 frontends. They share a
+  // database with overpass-api.de but not its load-balancer queue, so when the
+  // main host is rejecting with "at capacity" these often still reply.
+  'https://z.overpass-api.de/api/interpreter',
+  'https://lz4.overpass-api.de/api/interpreter',
   'https://overpass.openstreetmap.fr/api/interpreter',
   'https://overpass.kumi.systems/api/interpreter',
   'https://overpass.private.coffee/api/interpreter',
@@ -195,7 +210,7 @@ const MIRRORS = [
 /** A mirror that is overloaded can hold a request open for minutes; without a
     deadline one hung socket stalls the whole run. Query-shaped work over a busy
     instance regularly takes a minute, so the deadline is generous. */
-const REQUEST_TIMEOUT_MS = 90_000;
+const REQUEST_TIMEOUT_MS = 240_000;
 const ATTEMPTS = 3;
 let lastRequest = 0;
 /** Mirror list in the order this run found them healthy (see probeMirrors). */
@@ -216,7 +231,7 @@ async function probeMirrors() {
         method: 'POST',
         body: 'data=' + encodeURIComponent(probe),
         headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'airport-maps/1.0 (site data pipeline)' },
-        signal: AbortSignal.timeout(20_000),
+        signal: AbortSignal.timeout(60_000),
       });
       const text = await res.text();
       const count = res.ok && text.trim().startsWith('{') ? (JSON.parse(text).elements?.length ?? 0) : 0;
@@ -280,52 +295,46 @@ async function coordsFromOsm(code) {
 const HALF_BOX = { large: 0.045, medium: 0.035, small: 0.022, heliport: 0.018 };
 
 /** Terminal buildings and aprons: these decide the frame. */
+/** Terminal buildings, aprons and helipads: these can decide the frame. */
 function queryCore(bbox) {
   return `[out:json][timeout:120];
 (
-  way["aeroway"~"^(terminal|apron|parking)$"](${bbox});
+  way["aeroway"~"^(terminal|apron|parking|helipad)$"](${bbox});
 );
 out geom;`;
 }
 
 /**
- * Everything drawn inside the frame that is not a building: car parks plus the
- * POIs behind the other six legend entries. Both live in the frame-sized box,
- * never the wide search box — in a city like Santiago the latter holds hundreds
- * of car parks and the query times out.
+ * Roads, taxiways and every POI behind the legend in one request. The two
+ * staged queries this replaces asked the same frame-sized box twice. Car parks
+ * and POIs are never taken from the wide search box: in a city like Santiago
+ * that holds hundreds of car parks and the query times out.
  */
-function queryPois(bbox) {
-  return `[out:json][timeout:90];
+function queryDetailAndPois(bbox) {
+  return `[out:json][timeout:120];
 (
+  way["aeroway"="taxiway"](${bbox});
+  way["highway"~"^(motorway|trunk|primary|secondary|tertiary|service)$"](${bbox});
   nwr["amenity"="parking"](${bbox});
   nwr["amenity"~"^(bus_station|car_rental|restaurant|fast_food|cafe)$"](${bbox});
   nwr["tourism"="hotel"](${bbox});
   nwr["highway"="bus_stop"](${bbox});
 );
-out center;`;
-}
-
-function queryDetail(bbox) {
-  return `[out:json][timeout:120];
-(
-  way["aeroway"="taxiway"](${bbox});
-  way["highway"~"^(motorway|trunk|primary|secondary|tertiary|service)$"](${bbox});
-);
 out geom;`;
 }
 
 /**
- * Everything in one request. The three staged queries exist because a wide box
- * over a big city is too much for a single Overpass query; for the small and
- * medium fields the search box is a couple of kilometres across, and asking for
- * it in one go cuts the request count (and the load on the public instances) by
- * two thirds. Roads and car parks therefore come from the search box rather than
- * from the frame, which only affects what is drawn outside the visible frame.
+ * Everything in one request. The staged queries exist because a wide box over a
+ * big city is too much for a single Overpass query; for the small and medium
+ * fields the search box is a couple of kilometres across, and asking for it in
+ * one go halves the request count (and the load on the public instances).
+ * Roads and car parks therefore come from the search box rather than from the
+ * frame, which only affects what is drawn outside the visible frame.
  */
 function queryAll(bbox) {
   return `[out:json][timeout:120];
 (
-  way["aeroway"~"^(terminal|apron|parking|taxiway|runway|aerodrome)$"](${bbox});
+  way["aeroway"~"^(terminal|apron|parking|taxiway|runway|aerodrome|helipad)$"](${bbox});
   nwr["amenity"="parking"](${bbox});
   way["highway"~"^(motorway|trunk|primary|secondary|tertiary|service)$"](${bbox});
   nwr["amenity"~"^(bus_station|car_rental|restaurant|fast_food|cafe)$"](${bbox});
@@ -383,6 +392,8 @@ const isPark = (e) => e.tags.aeroway === 'parking' || e.tags.amenity === 'parkin
     nothing else — no terminal polygon to frame on. */
 const isAerodrome = (e) => e.tags.aeroway === 'aerodrome';
 const isRunway = (e) => e.tags.aeroway === 'runway';
+/** Heliports are mapped as a small `aeroway=helipad` way, never as a terminal. */
+const isHelipad = (e) => e.tags.aeroway === 'helipad';
 
 const ICON = 62;
 const font = 'Arial, Helvetica, sans-serif';
@@ -467,6 +478,7 @@ function renderSvg({ iata, name, bounds, areas, detail, pois }) {
     if (isPark(e)) g.push(`<path d="${path(e, true)}" fill="${COLORS.parking}" stroke="${COLORS.parkingEdge}" stroke-width="2.5" stroke-linejoin="round"/>`);
     else if (isApron(e) || isAerodrome(e)) g.push(`<path d="${path(e, true)}" fill="${COLORS.apron}" stroke="${COLORS.apronEdge}" stroke-width="2.5" stroke-linejoin="round"/>`);
     else if (isTerm(e)) g.push(`<path d="${path(e, true)}" fill="${COLORS.terminal}" stroke="${COLORS.terminalEdge}" stroke-width="4" stroke-linejoin="round"/>`);
+    else if (isHelipad(e)) g.push(`<path d="${path(e, true)}" fill="${COLORS.terminal}" stroke="${COLORS.terminalEdge}" stroke-width="3" stroke-linejoin="round"/>`);
     // A runway is a line, not a shape: same treatment as a road, wider and paler.
     else if (isRunway(e)) {
       g.push(`<path d="${path(e)}" fill="none" stroke="${COLORS.apronEdge}" stroke-width="20" stroke-linecap="round"/>`);
@@ -525,6 +537,7 @@ const realPath = (path) => (process.platform === 'win32' ? `\\\\?\\${path}` : pa
  * end, so interrupting a long run does not lose the record of what it produced.
  */
 function recordProvenance(codes) {
+  if (NO_MANIFEST) return 0;
   const previous = existsSync(MANIFEST) ? JSON.parse(readFileSync(MANIFEST, 'utf8')) : { entries: {} };
   const entries = { ...previous.entries };
   for (const code of codes) {
@@ -614,7 +627,7 @@ async function build(code) {
     detail = null; // filled in below, once the frame is known
   }
   const buildings = areaEls.filter((e) => isTerm(e) || isApron(e));
-  const fields = areaEls.filter((e) => isAerodrome(e) || isRunway(e));
+  const fields = areaEls.filter((e) => isAerodrome(e) || isRunway(e) || isHelipad(e));
   if (!buildings.length && !fields.length) throw new Error('no airport geometry in OSM for this field');
   const terminals = areaEls.filter(isTerm);
   const aprons = areaEls.filter(isApron);
@@ -642,8 +655,9 @@ async function build(code) {
   // keeps timing out costs its own layer — stage A's geometry is what the map is
   // actually made of.
   if (!COMPACT) {
-    detail = (await safe('no roads', () => cached(code, 'b', queryDetail, tight, { retryEmpty: true }))).filter((e) => e.geometry);
-    poiEls = await safe('no POIs', () => cached(code, 'c2', queryPois, tight, { retryEmpty: true }));
+    const combined = await safe('no roads/POIs', () => cached(code, 'bc', queryDetailAndPois, tight, { retryEmpty: true }));
+    detail = combined.filter((e) => e.geometry && (e.tags.aeroway === 'taxiway' || e.tags.highway));
+    poiEls = combined;
   }
 
   /** Inside the frame, with room for shapes that overhang its edge. */
@@ -690,8 +704,12 @@ async function main() {
     return;
   }
   for (const dir of [SOURCE_DIR, MAPS_DIR, CACHE_DIR]) mkdirSync(dir, { recursive: true });
-  console.log('probing Overpass mirrors:');
-  mirrorOrder = await probeMirrors();
+  if (NO_PROBE) {
+    console.log('using the listed Overpass mirror order (--no-probe)');
+  } else {
+    console.log('probing Overpass mirrors:');
+    mirrorOrder = await probeMirrors();
+  }
 
   const done = [];
   const skipped = [];

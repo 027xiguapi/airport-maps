@@ -1,0 +1,12 @@
+{
+  "_note": "A Baidu photo of the terminal frontage, plus the Esri World Imagery satellite view; a generic security-queue shot was skipped.",
+  "_skip": ["tyn-baidu-2.webp"],
+  "tyn-baidu-1.webp": {
+    "zh": "太原武宿国际机场航站楼外景：屋顶立着红色「太原」大字和「TAIYUAN INTERNATIONAL AIRPORT」标识，出发层前停满车辆。",
+    "en": "Taiyuan Wusu International Airport's terminal — red 'Taiyuan' characters and 'Taiyuan International Airport' lettering on the roof, cars parked below the departures level."
+  },
+  "tyn-sat-1.webp": {
+    "zh": "从卫星图看，太原武宿国际机场（TYN）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Taiyuan Wusu International Airport (TYN) and its surroundings are clearly visible."
+  }
+}

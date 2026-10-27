@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "hyd-baidu-1.webp",
+    "hyd-baidu-2.webp"
+  ],
+  "hyd-sat-1.webp": {
+    "zh": "从卫星图看，海得拉巴拉吉夫·甘地国际机场（HYD）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Rajiv Gandhi International Airport (HYD) and its surroundings are clearly visible."
+  }
+}

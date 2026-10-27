@@ -1,0 +1,14 @@
+{
+  "_note": "One Baidu photo of the Domestic Terminal joins the Esri World Imagery satellite view.",
+  "_skip": [
+    "fuk-baidu-1.webp"
+  ],
+  "fuk-sat-1.webp": {
+    "zh": "从卫星图看，福冈机场（FUK）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Fukuoka Airport (FUK) and its surroundings are clearly visible."
+  },
+  "fuk-baidu-2.webp": {
+    "zh": "福冈机场国内线航站楼外观，红色「福岡空港 国内線」标牌旁是醒目的「2」号航站楼编号，前方是落客车道。",
+    "en": "The Domestic Terminal at Fukuoka Airport, with the red '福岡空港 国内線 DOMESTIC' sign beside a large '2', above the drop-off lane."
+  }
+}

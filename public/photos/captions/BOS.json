@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "bos-baidu-1.webp",
+    "bos-baidu-2.webp"
+  ],
+  "bos-sat-1.webp": {
+    "zh": "从卫星图看，波士顿洛根国际机场（BOS）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Boston Logan International Airport (BOS) and its surroundings are clearly visible."
+  }
+}

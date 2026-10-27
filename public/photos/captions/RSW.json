@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "rsw-sat-1.webp": {
+    "zh": "从卫星图看，西南佛罗里达国际机场（RSW）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Southwest Florida International Airport (RSW) and its surroundings are clearly visible."
+  },
+  "_skip": [
+    "rsw-baidu-1.webp",
+    "rsw-baidu-2.webp"
+  ]
+}

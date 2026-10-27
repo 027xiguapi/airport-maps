@@ -1,0 +1,11 @@
+{
+  "_note": "Esri World Imagery satellite view; no verified ground photo has been published yet.",
+  "_skip": [
+    "msy-baidu-1.webp",
+    "msy-baidu-2.webp"
+  ],
+  "msy-sat-1.webp": {
+    "zh": "从卫星图看，新奥尔良路易斯·阿姆斯特朗国际机场（MSY）的机场布局与周边环境清晰可辨。",
+    "en": "In the satellite image, the layout of Louis Armstrong New Orleans International Airport (MSY) and its surroundings are clearly visible."
+  }
+}
