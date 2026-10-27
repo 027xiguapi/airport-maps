@@ -1,7 +1,7 @@
 ---
 slug: new-york-washington-amtrak-guide
 title: 紐約到華盛頓 Amtrak 指南：Acela 與東北區域號怎麼坐
-summary: 從紐約賓州車站坐 Amtrak 去華盛頓聯合車站的實用指南：Acela 與東北區域號的用時和席別、官網與 Omio 購票和電子票、發車前十幾分鍾才公佈站臺的乘車流程、行李與靜音車廂的規矩，以及聯合車站換地鐵的走法。
+summary: 從紐約賓州車站坐 Amtrak 去華盛頓聯合車站的實用指南：Acela 與東北區域號的用時和席別、官網與 Omio 購票和電子票、發車前十幾分鐘才公佈站臺的乘車流程、行李與靜音車廂的規矩，以及聯合車站換地鐵的走法。
 date: 2026-10-22
 updated: 2026-10-22
 source: 微信旅行攻略

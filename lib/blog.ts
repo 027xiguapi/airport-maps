@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { LOCALE_META, SOURCE_LOCALE, localizedPath, type Locale } from './i18n/config';
 
@@ -245,4 +245,118 @@ export function blogAlternates(path: string = blogIndexPath()): Record<string, s
 /** Alternates for one article, listing only the locales that carry it. */
 export function blogPostAlternates(slug: string): Record<string, string> {
   return blogLanguages(blogPostPath(slug), blogPostLocales(slug));
+}
+
+/* ------------------------------------------------- airport ↔ article index */
+
+/**
+ * Three-letter tokens that collide with an IATA code but mean something else in
+ * these articles: ATM machines, Vienna's CAT train, the Paris RER, Chicago's
+ * CTA, the US TSA, Priority Pass, Airports Council International, Singapore's
+ * GST, Batumi's "BUS" signage and so on. Skipped while indexing so an article
+ * can never attach itself to an unrelated airport page.
+ */
+const NON_AIRPORT_CODES = new Set([
+  'ATM', 'BUS', 'CAT', 'RER', 'ACI', 'GST', 'CTA', 'TSA', 'PPS',
+  'CNY', 'CNN', 'THE', 'MAS', 'FOR', 'PRM', 'SAT', 'INN', 'LED', 'TER', 'CHS',
+]);
+
+/** One article's claim on an airport code. */
+type ArticleRef = {
+  slug: string;
+  /** True when the article links the airport page itself (curated, strongest). */
+  linked: boolean;
+  /** Publication date, `YYYY-MM-DD`, from the Chinese source. */
+  date: string;
+};
+
+let airportIndexCache: { signature: string; index: Map<string, ArticleRef[]> } | null = null;
+
+/** Fingerprint of the article tree, so an edit or a new folder rebuilds the index. */
+function articleSignature(): string {
+  const dir = join(process.cwd(), 'public', 'blog');
+  if (!existsSync(dir)) return '';
+  return readdirSync(dir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && /^[a-z0-9-]+$/.test(entry.name))
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((entry) => {
+      try {
+        return `${entry.name}:${statSync(join(dir, entry.name, `${entry.name}.md`)).mtimeMs}`;
+      } catch {
+        return `${entry.name}:0`;
+      }
+    })
+    .join('|');
+}
+
+/**
+ * Airport code -> the articles that cover it. Built from the Chinese source of
+ * every article (all of them have one) and cached for the process: the airport
+ * pages ask for it once each, and re-reading 88 files per page would be silly.
+ *
+ * A code counts when the article links `/airport/<CODE>` or names it as an
+ * airport — `（LHR）` in a table, `机场代码 **WUH**` in a fact box. Prose that
+ * merely happens to contain three capitals is ignored by design.
+ */
+function articleAirportIndex(): Map<string, ArticleRef[]> {
+  const signature = articleSignature();
+  if (airportIndexCache?.signature === signature) return airportIndexCache.index;
+
+  const index = new Map<string, ArticleRef[]>();
+  for (const slug of articleDirs()) {
+    const path = join(process.cwd(), 'public', 'blog', slug, `${slug}.md`);
+    if (!existsSync(path)) continue;
+    const text = readFileSync(path, 'utf8');
+
+    const linked = new Set([...text.matchAll(/\/airport\/([A-Z]{3})\b/g)].map((m) => m[1]));
+    const named = new Set([
+      ...[...text.matchAll(/[（(]([A-Z]{3})[）)]/g)].map((m) => m[1]),
+      ...[...text.matchAll(/机场代码\s*\*{0,2}([A-Z]{3})/g)].map((m) => m[1]),
+    ]);
+    const date = /^date:\s*(\d{4}-\d{2}-\d{2})\s*$/m.exec(text)?.[1] ?? '';
+
+    for (const code of new Set([...linked, ...named])) {
+      if (NON_AIRPORT_CODES.has(code)) continue;
+      if (!index.has(code)) index.set(code, []);
+      index.get(code)!.push({ slug, linked: linked.has(code), date });
+    }
+  }
+
+  airportIndexCache = { signature, index };
+  return index;
+}
+
+/**
+ * Articles that cover one airport, newest first, with the ones that link the
+ * airport page ranked above list-style pieces that merely mention it. Returns
+ * only posts that exist in `locale`, so an untranslated article never surfaces
+ * as Chinese text on another language's page.
+ */
+export function listBlogPostsForAirport(locale: Locale, iata: string, limit = 4): BlogPost[] {
+  const refs = articleAirportIndex().get(iata.toUpperCase()) ?? [];
+  return refs
+    .map((ref) => ({ ref, post: readPost(ref.slug, locale) }))
+    .filter((entry): entry is { ref: ArticleRef; post: BlogPost } => entry.post !== null)
+    .sort(
+      (a, b) =>
+        Number(b.ref.linked) - Number(a.ref.linked) ||
+        b.post.date.localeCompare(a.post.date) ||
+        a.post.slug.localeCompare(b.post.slug)
+    )
+    .slice(0, limit)
+    .map((entry) => entry.post);
+}
+
+/**
+ * Airport code -> its newest article date. The homepage's "recently updated"
+ * list and the sitemap use it so a fresh guide counts as fresh content for the
+ * airport it covers, even when the airport record itself has not changed.
+ */
+export function blogAirportDates(): Map<string, string> {
+  const dates = new Map<string, string>();
+  for (const [code, refs] of articleAirportIndex()) {
+    const newest = refs.reduce((latest, ref) => (ref.date > latest ? ref.date : latest), '');
+    if (newest) dates.set(code, newest);
+  }
+  return dates;
 }

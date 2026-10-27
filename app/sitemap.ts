@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import {
+  blogAirportDates,
   blogLocalesWithContent,
   blogPostLocales,
   listBlogPosts,
@@ -81,10 +82,15 @@ function localeEntries(
 function airportLastModified(
   iata: string,
   recordUpdatedAt: string,
-  guideUpdated: Map<string, string>
+  guideUpdated: Map<string, string>,
+  blogUpdated?: string
 ): Date {
   const guide = guideUpdated.get(iata);
-  return new Date(guide && guide > recordUpdatedAt ? guide : recordUpdatedAt);
+  // An article about this airport is the freshest signal the page carries, so it
+  // participates in <lastmod> exactly as it does in the page's dateModified.
+  return new Date(
+    [recordUpdatedAt, guide, blogUpdated].filter(Boolean).sort().pop() as string
+  );
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -102,6 +108,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // an English URL that 404s.
   const posts = new Map(listBlogPosts(SOURCE_LOCALE).map((post) => [post.slug, post]));
   const blogLocales = blogLocalesWithContent();
+  // Airport code -> newest article date, so an airport's <lastmod> reflects a
+  // fresh guide as well as its own record date.
+  const blogUpdated = blogAirportDates();
 
   return [
     ...localeEntries('', { changeFrequency: 'daily', priority: 1 }),
@@ -146,7 +155,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       localeEntries(`/airport/${airport.iata}`, {
         changeFrequency: 'weekly',
         priority: 0.8,
-        lastModified: airportLastModified(airport.iata, airport.updated_at, guideUpdated),
+        lastModified: airportLastModified(
+          airport.iata,
+          airport.updated_at,
+          guideUpdated,
+          blogUpdated.get(airport.iata)
+        ),
       })
     ),
     ...airports

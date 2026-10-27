@@ -234,7 +234,8 @@ export const it: Messages = {
       kicker: 'Novità',
       title: 'Aggiornati di recente',
       en: 'Aggiornamenti recenti',
-      sub: 'Mappe aeroportuali nuove e appena riviste.',
+      sub: 'Aeroporti, paesi e guide di viaggio nuovi o appena rivisti.',
+      countriesTitle: 'Paesi aggiornati di recente',
     },
     /** Homepage route-map strip: the widest direct networks, linking to /route/<IATA>. */
     routes: {
@@ -361,7 +362,7 @@ export const it: Messages = {
         : `${name} — mappe degli aeroporti`,
     description: (name: string, nameEn: string, region: string, count: number, total?: number) =>
       total
-        ? `${name}${nameEn !== name ? ` (${nameEn})` : ''}: ${total} aeroporti con voli di linea, di cui ${count} con la mappa dei terminal. Mappa di distribuzione, elenco completo, gate e trasporti terrestri. Regione: ${region}.`
+        ? `${name}${nameEn !== name ? ` (${nameEn})` : ''}: ${total} aeroporti con voli di linea, di cui ${count} trattati su questo sito. Mappa di distribuzione, elenco nazionale completo e rotte dirette. Regione: ${region}.`
         : `${name} (${nameEn}): mappe dei terminal per ${count} aeroport${count === 1 ? 'o' : 'i'}, dai grandi hub internazionali agli aeroporti regionali. Gate, disposizione dei terminal e trasporti terrestri. Regione: ${region}.`,
     chip: (nameEn: string) => `AEROPORTI — ${nameEn.toUpperCase()}`,
     kicker: 'Mappe degli aeroporti',
@@ -406,7 +407,7 @@ export const it: Messages = {
         : '') +
       ` Gli aeroporti servono città come ${o.cities}. ${o.mapsNote}`,
     introMapsNote:
-      'Ogni aeroporto dispone di uno schema dei terminal, delle fasce di gate e delle informazioni sui trasporti terrestri.',
+      'Ogni pagina aeroporto raccoglie la mappa della posizione e i codici, oltre alle informazioni su terminal, gate e trasporti terrestri disponibili.',
 
     /** "Airport distribution": the national airport list and its map. */
     distribution: {
@@ -414,7 +415,7 @@ export const it: Messages = {
       title: (name: string) => `${name} — mappa di distribuzione degli aeroporti`,
       en: 'Distribuzione degli aeroporti',
       sub: (covered: string, total: string) =>
-        `${total} aeroporti con voli di linea in tutto il paese (grandi, medi e piccoli); per ${covered} di essi è disponibile la mappa dei terminal. Segue l’elenco completo.`,
+        `${total} aeroporti con voli di linea in tutto il paese (grandi, medi e piccoli); ${covered} di essi hanno una pagina dedicata su questo sito. Segue l’elenco completo.`,
       mapAlt: (name: string, total: string) =>
         `Mappa di distribuzione degli aeroporti — ${name}: ${total} aeroporti con voli di linea`,
       siteTag: 'Coperti qui',
@@ -457,7 +458,7 @@ export const it: Messages = {
         `${name} — gli aeroporti coperti servono città come ${cities}. Puoi filtrarli per città o codice IATA nell’atlante.`,
       maps: () => 'Gli aeroporti di questo paese hanno mappe dei terminal?',
       mapsAnswer: (name: string, count: string) =>
-        `Sì. Ognuno dei ${count} aeroporti coperti dispone di uno schema dei terminal che indica gli edifici, le fasce di gate, le compagnie principali e i trasporti terrestri. ${name} — apri un aeroporto per consultarla.`,
+        `In parte. Le pagine degli aeroporti riportano mappa della posizione, codici e rotte dirette; dove i dati sui terminal sono disponibili mostrano anche lo schema dei terminal, le fasce di gate e i trasporti terrestri. ${name}: apri un aeroporto per vedere cosa contiene — sono ${count} quelli coperti.`,
     },
   },
 
@@ -621,6 +622,12 @@ export const it: Messages = {
     guideKicker: 'Guida',
     guideTitle: 'Guida dell’aeroporto',
     guideEn: 'Guida dell’aeroporto',
+    blogKicker: 'Articoli',
+    blogTitle: (iata: string) => `Guide aeroportuali — ${iata}`,
+    blogEn: 'Dal blog',
+    blogSub: (iata: string, count: number) =>
+      `${count} articoli del sito parlano di ${iata}: arrivo, trasporti, bagagli e coincidenze.`,
+    blogAll: 'Tutti gli articoli',
     relatedTitle: (country: string) => `Altri aeroporti — ${country}`,
     relatedEn: (country: string) => `Altri aeroporti — ${country}`,
     relatedAll: (country: string) => `Tutti gli aeroporti — ${country}`,
@@ -883,6 +890,7 @@ export const it: Messages = {
     routes: 'Mappa delle rotte',
     flights: 'Voli',
     guide: 'Guida dell’aeroporto',
+    blog: 'Guide correlate',
     terminals: 'Guida ai terminal',
     transport: 'Trasporti terrestri',
     facilities: 'Servizi',

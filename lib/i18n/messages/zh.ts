@@ -176,7 +176,8 @@ export const zh = {
       kicker: 'Freshly Published',
       title: '最近更新',
       en: 'Recently Updated',
-      sub: '新增和新更新的机场地图。',
+      sub: '新增和新更新的机场、国家 / 地区页面与出行攻略。',
+      countriesTitle: '最近更新的国家 / 地区',
     },
     /** 首页「航线图」导航条：直飞目的地最多的机场，链到各自的 /route 页面。 */
     routes: {
@@ -300,7 +301,7 @@ export const zh = {
       count ? `${name}机场地图：全 ${count} 座机场分布图` : `${name}机场地图`,
     description: (name: string, nameEn: string, region: string, count: number, total?: number) =>
       total
-        ? `${name}（${nameEn}）共有 ${total} 座定期航班机场，本站收录其中 ${count} 座的航站楼地图。查看${region}机场分布图、完整机场清单与登机口分布。`
+        ? `${name}（${nameEn}）共有 ${total} 座定期航班机场，本站已为其中 ${count} 座建立详解页。查看${region}机场分布图、完整机场清单与直飞航线。`
         : `${name}（${nameEn}）共收录 ${count} 座机场的航站楼地图，覆盖${region}主要国际枢纽与区域机场，可查看登机口、航站楼布局与地面交通。`,
     chip: (nameEn: string) => `${nameEn.toUpperCase()} AIRPORTS`,
     kicker: 'Airport Maps',
@@ -340,7 +341,7 @@ export const zh = {
       }${o.gates ? `、${o.gates}` : ''}。` +
       (o.busiest ? `其中${o.busiest}（${o.busiestIata}）规模最大，年旅客量${o.busiestPax}。` : '') +
       `机场分布在${o.cities}等城市，${o.mapsNote}`,
-    introMapsNote: '每座机场都有航站楼平面示意图、登机口分布与地面交通说明。',
+    introMapsNote: '每座机场的页面都整理了位置地图与机场代码，已收录的航站楼、登机口与地面交通信息会一并显示。',
 
     /** 「机场分布」板块：全国定期航班机场的分布图与完整清单。 */
     distribution: {
@@ -348,7 +349,7 @@ export const zh = {
       title: (name: string) => `${name}机场分布图`,
       en: 'Airport Distribution',
       sub: (covered: string, total: string) =>
-        `全国共有 ${total} 座定期航班机场（含大型、中型与小型），本站已为其中 ${covered} 座绘制航站楼地图；下方为完整清单。`,
+        `全国共有 ${total} 座定期航班机场（含大型、中型与小型），本站已为其中 ${covered} 座建立详解页；下方为完整清单。`,
       mapAlt: (name: string, total: string) => `${name}机场分布图：共 ${total} 座定期航班机场`,
       siteTag: '本站详解',
       colAirport: '机场',
@@ -390,7 +391,7 @@ export const zh = {
         `本站收录的${name}机场位于${cities}等城市，可按城市或 IATA 代码在机场目录中筛选。`,
       maps: (name: string) => `${name}的机场有航站楼地图吗？`,
       mapsAnswer: (name: string, count: string) =>
-        `有。本站为${name}收录的 ${count}都绘制了航站楼平面示意图，标注航站楼位置、登机口范围、主要航司与地面交通方式，点击任意机场即可查看。`,
+        `部分机场有。机场页面提供位置地图、机场代码与直飞航线；本站为${name}收录的 ${count} 座中，已整理航站楼资料的会一并显示航站楼平面示意图、登机口范围与地面交通。点击任意机场即可查看。`,
     },
   },
 
@@ -550,6 +551,13 @@ export const zh = {
     guideKicker: 'Guide',
     guideTitle: '机场指南',
     guideEn: 'Airport Guide',
+    /** 博客文章板块：/blog 中覆盖本机场的文章（lib/blog.ts 建立索引）。 */
+    blogKicker: 'Articles',
+    blogTitle: (iata: string) => `${iata} 机场攻略`,
+    blogEn: 'From the Blog',
+    blogSub: (iata: string, count: number) =>
+      `本站博客中与 ${iata} 相关的 ${count} 篇文章：落地动线、交通接驳、行李寄存与转机经验。`,
+    blogAll: '全部文章',
     relatedTitle: (country: string) => `${country}其他机场`,
     relatedEn: (country: string) => `More in ${country}`,
     relatedAll: (country: string) => `${country}全部机场`,
@@ -797,6 +805,7 @@ export const zh = {
     routes: '航线图',
     flights: '航班',
     guide: '机场指南',
+    blog: '相关攻略',
     terminals: '航站楼信息',
     transport: '地面交通',
     facilities: '设施服务',

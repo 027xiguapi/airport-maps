@@ -49,12 +49,23 @@ export function buildAirportGraph(input: {
   faqItems: FaqItem[];
   /** Gallery photos, when the repo holds any for this code (lib/airport-photos.ts). */
   photos?: AirportPhoto[];
+  /**
+   * Articles from /blog that cover this airport, newest first. They are cited as
+   * `subjectOf` on the Airport node so the first-hand walkthroughs the blog
+   * holds are machine-readable from the airport page itself.
+   */
+  articles?: { title: string; url: string; date: string }[];
+  /**
+   * Newest date among the airport record, its guide and those articles; when
+   * given it drives dateModified instead of the guide date alone.
+   */
+  contentUpdated?: string;
 }): Record<string, unknown> {
-  const { locale, airport, guide, faqItems, photos } = input;
+  const { locale, airport, guide, faqItems, photos, articles = [], contentUpdated } = input;
   const t = getMessages(locale);
   const geo = getAirportGeo(airport.iata);
   const facts = getAirportFacts(airport.iata);
-  const { published, modified } = publicationDates(airport, guide?.updated);
+  const { published, modified } = publicationDates(airport, contentUpdated ?? guide?.updated);
   // Hand-checked coordinates win; the compiled facts cover the other ~300
   // airports so every Airport node carries geo.
   const coords = geo
@@ -215,6 +226,15 @@ export function buildAirportGraph(input: {
           addressCountry: airport.countryCode,
         },
         containedInPlace: { '@type': 'Country', name: airport.countryName },
+        ...(articles.length > 0 && {
+          subjectOf: articles.map((article) => ({
+            '@type': 'BlogPosting',
+            headline: article.title,
+            url: absoluteUrl(article.url),
+            datePublished: article.date,
+            inLanguage: LOCALE_META[locale].htmlLang,
+          })),
+        }),
         ...(coords && {
           geo: {
             '@type': 'GeoCoordinates',

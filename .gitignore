@@ -27,6 +27,9 @@
 # downloaded map images (scripts/fetch-airport-images.mjs default output)
 /maps-import/
 
+# raw article archives waiting to be imported as public/blog/<slug>/ folders
+/imports/
+
 # content-export default output — documents live in the database now, so an
 # exported tree dropped in the repo is a backup, never a commit candidate
 /content/

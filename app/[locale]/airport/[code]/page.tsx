@@ -9,6 +9,7 @@ import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { getAirportGuide } from '@/lib/content';
+import { blogAirportDates, blogPostPath, listBlogPostsForAirport } from '@/lib/blog';
 import { getAirportByCode, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
 import { getAirportFacts } from '@/lib/airport-facts';
 import { getAirportGeo } from '@/lib/airport-geo';
@@ -31,12 +32,11 @@ import LocationMapSection from '@/components/airport/LocationMapSection';
 import RouteMapTeaser from '@/components/airport/RouteMapTeaser';
 import FlightsSection from '@/components/airport/FlightsSection';
 import GuideSection from '@/components/airport/GuideSection';
+import BlogPostsSection from '@/components/airport/BlogPostsSection';
 import PhotosSection from '@/components/airport/PhotosSection';
 import TerminalsSection from '@/components/airport/TerminalsSection';
 import TransitFacilities from '@/components/airport/TransitFacilities';
 import RelatedAirports from '@/components/airport/RelatedAirports';
-import AdsterraBanner from '@/components/ads/AdsterraBanner';
-import AdsterraStrip from '@/components/ads/AdsterraStrip';
 
 export const revalidate = 3600;
 
@@ -67,7 +67,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // for this code; airports without a photo batch keep whatever the layout sets.
   const photos = getAirportPhotos(locale, airport.iata);
   const leadPhoto = photos[0];
-  const { published, modified } = publicationDates(airport, guide?.updated);
+  // A freshly published article about this airport counts as fresh content for
+  // the page, even when the airport record itself has not been touched.
+  const { published, modified } = publicationDates(
+    airport,
+    [guide?.updated, blogAirportDates().get(airport.iata)].filter(Boolean).sort().pop()
+  );
   // Title is rendered at build/ISR time, so the year rolls over with revalidate.
   const title = t.common.latestAirportTitle(
     new Date().getFullYear(),
@@ -152,6 +157,11 @@ export default async function AirportPage({ params }: Props) {
 
   const geo = getAirportGeo(airport.iata);
   const facts = getAirportFacts(airport.iata);
+  // Articles from /blog that cover this airport, newest first. Rendered as a
+  // section of its own and cited in the JSON-LD, so the walkthrough content the
+  // blog holds is discoverable from the airport page rather than only through
+  // the blog index.
+  const blogPosts = listBlogPostsForAirport(locale, airport.iata, 4);
   // Real photos of this airport, when a batch has been downloaded for the code
   // (public/photos + manifest). Empty for most airports today.
   const photos = getAirportPhotos(locale, airport.iata);
@@ -167,7 +177,13 @@ export default async function AirportPage({ params }: Props) {
     ...buildFaq(locale, airport, formatDistance(airport.distanceKm, locale), geo?.tz ?? null),
     ...(flights ? buildFlightFaq(locale, airport, flights) : []),
   ];
-  const { published, modified } = publicationDates(airport, guide?.updated);
+  // Newest of the record, the guide and the articles about this airport, which
+  // both dateModified and the JSON-LD cite.
+  const contentUpdated = [guide?.updated, blogAirportDates().get(airport.iata)]
+    .filter(Boolean)
+    .sort()
+    .pop();
+  const { published, modified } = publicationDates(airport, contentUpdated);
   const mapImg = mapImageUrl(airport.iata);
   const terminalMap = terminalMapDownloads(airport.iata);
   const mapSvg = terminalMapSvg({
@@ -190,6 +206,7 @@ export default async function AirportPage({ params }: Props) {
     { id: 'related-links', label: t.toc.links },
     ...(coords ? [{ id: 'location-map', label: t.toc.location }] : []),
     ...(guide ? [{ id: 'guide', label: t.toc.guide }] : []),
+    ...(blogPosts.length > 0 ? [{ id: 'blog', label: t.toc.blog }] : []),
     ...(airport.terminals.length > 0 ? [{ id: 'terminals', label: t.toc.terminals }] : []),
     ...(airport.transit.length > 0 ? [{ id: 'transport', label: t.toc.transport }] : []),
     ...(airport.facilities.length > 0 ? [{ id: 'facilities', label: t.toc.facilities }] : []),
@@ -198,7 +215,21 @@ export default async function AirportPage({ params }: Props) {
 
   return (
     <>
-      <JsonLd data={buildAirportGraph({ locale, airport, guide, faqItems, photos })} />
+      <JsonLd
+        data={buildAirportGraph({
+          locale,
+          airport,
+          guide,
+          faqItems,
+          photos,
+          articles: blogPosts.map((post) => ({
+            title: post.title,
+            url: localizedPath(locale, blogPostPath(post.slug)),
+            date: post.updated ?? post.date,
+          })),
+          contentUpdated,
+        })}
+      />
 
       <AirportHead
         locale={locale}
@@ -214,9 +245,6 @@ export default async function AirportPage({ params }: Props) {
       <div className="ap-with-toc">
         <aside className="ap-toc">
           <TocNav items={tocItems} label={t.toc.label} />
-          {/* 160×300 below the contents list; the wrapper hides itself below
-              the desktop breakpoint (globals.css). */}
-          <AdsterraBanner unit="half-page" title={t.common.advertisement} className="mt-6" />
         </aside>
 
         <div className="ap-body">
@@ -232,8 +260,6 @@ export default async function AirportPage({ params }: Props) {
             terminalMapUrl={terminalMap.png}
             terminalPdfUrl={terminalMap.pdf}
           />
-
-          <AdsterraStrip title={t.common.advertisement} className="my-12" />
 
           {photos.length > 0 && (
             <PhotosSection locale={locale} iata={airport.iata} name={airport.name} photos={photos} />
@@ -282,6 +308,8 @@ export default async function AirportPage({ params }: Props) {
 
           {guide && <GuideSection locale={locale} guide={guide} />}
 
+          <BlogPostsSection locale={locale} iata={airport.iata} posts={blogPosts} />
+
           <TerminalsSection
             locale={locale}
             airportName={airport.name}
@@ -289,8 +317,6 @@ export default async function AirportPage({ params }: Props) {
           />
 
           <TransitFacilities locale={locale} transit={airport.transit} facilities={airport.facilities} />
-
-          <AdsterraBanner unit="medium-rectangle" title={t.common.advertisement} className="my-12" />
 
           <div className="section-head" id="faq" style={{ marginTop: 46, marginBottom: 18 }}>
             <div>

@@ -116,6 +116,18 @@ const CSV_TYPE = {
   small_airport: 'small',
   heliport: 'heliport',
 };
+
+/**
+ * Airports whose OurAirports `scheduled_service` flag is stale. Green Island
+ * (GNI), Qimei (CMJ) and Wang'an (WOT) are on Daily Air's DHC-6 island network
+ * — Taitung–Green Island, Taitung–Orchid Island, Kaohsiung/Magong–Qimei and
+ * Magong–Wang'an — but the 2018 dump files them as unscheduled. The flag feeds
+ * the "no scheduled passenger service" clause in descriptions and guides, so a
+ * wrong `false` is worse than the override. (Magong Airport Authority publishes
+ * the Qimei/Wang'an domestic timetable.) Remove an entry once the dump is
+ * refreshed.
+ */
+const SCHEDULED_OVERRIDE = new Set(['GNI', 'CMJ', 'WOT']);
 const round4 = (v) => Math.round(v * 10000) / 10000;
 const dirIndex = new Map(directory.airports.map((a) => [a.iata, a]));
 
@@ -144,7 +156,7 @@ for (const iata of codes.sort()) {
     lng: lat != null && lng != null ? round4(lng) : undefined,
     // undefined when no source says either way, so copy never claims scheduled
     // service for an airfield that has none.
-    scheduled: csv?.scheduled,
+    scheduled: SCHEDULED_OVERRIDE.has(iata) ? true : csv?.scheduled,
   };
   for (const k of Object.keys(facts)) {
     if (facts[k] === undefined) delete facts[k];

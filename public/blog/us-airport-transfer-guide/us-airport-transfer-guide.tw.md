@@ -100,7 +100,7 @@ AirTrain 分兩條線：**紅線**停靠各航廈、航廈停車樓與 BART 車�
 
 ![亞特蘭大機場航廈與廊廳示意圖：T、A、B、C、D、E 各廊廳的閘口編號區間，以及國內航廈內的值機區、行李提取、安檢口與 MARTA 車站](./images/6.webp)
 
-廊廳之間靠**地下的 Plane Train 自動列車**連接，班次很密，從 T 到最遠的 F 也就十幾分鍾——原資料把這條機場內部的列車稱作「地鐵」，容易和**進城的 MARTA 城市地鐵**混在一起：MARTA 車站設在**國內航廈**一側，是去亞特蘭大市區的城市軌道，轉機並不需要它。入境檢查出來之後，認準 Plane Train 的標識就是下一段航班的方向。
+廊廳之間靠**地下的 Plane Train 自動列車**連接，班次很密，從 T 到最遠的 F 也就十幾分鐘——原資料把這條機場內部的列車稱作「地鐵」，容易和**進城的 MARTA 城市地鐵**混在一起：MARTA 車站設在**國內航廈**一側，是去亞特蘭大市區的城市軌道，轉機並不需要它。入境檢查出來之後，認準 Plane Train 的標識就是下一段航班的方向。
 
 原資料給出的幾點提醒：
 
@@ -183,4 +183,3 @@ AirTrain 分兩條線：**紅線**停靠各航廈、航廈停車樓與 BART 車�
 
 - **本站頁面**：[洛杉磯 LAX](/tw/airport/LAX)、[舊金山 SFO](/tw/airport/SFO)、[亞特蘭大 ATL](/tw/airport/ATL)、[芝加哥 ORD](/tw/airport/ORD)、[紐瓦克 EWR](/tw/airport/EWR)、[西雅圖 SEA](/tw/airport/SEA)、[美國（US）](/tw/country/US)
 - **維基百科**：[洛杉磯 LAX](https://zh.wikipedia.org/wiki/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)、[舊金山 SFO](https://zh.wikipedia.org/wiki/%E6%97%A7%E9%87%91%E5%B1%B1%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)、[亞特蘭大 ATL](https://zh.wikipedia.org/wiki/%E5%93%88%E8%8C%A8%E8%8F%B2%E5%B0%94%E5%BE%B7-%E6%9D%B0%E5%85%8B%E9%80%8A%E4%BA%9A%E7%89%B9%E5%85%B0%E5%A4%A7%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)、[芝加哥 ORD](https://zh.wikipedia.org/wiki/%E5%A5%A5%E9%BB%91%E5%B0%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)、[紐瓦克 EWR](https://zh.wikipedia.org/wiki/%E7%BA%BD%E7%93%A6%E5%85%8B%E8%87%AA%E7%94%B1%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)、[西雅圖 SEA](https://zh.wikipedia.org/wiki/%E8%A5%BF%E9%9B%85%E5%9B%BE-%E5%A1%94%E7%A7%91%E9%A9%AC%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)、[底特律 DTW](https://zh.wikipedia.org/wiki/%E5%BA%95%E7%89%B9%E5%BE%8B%E9%83%BD%E4%BC%9A%E9%9F%A6%E6%81%A9%E5%8E%BF%E6%9C%BA%E5%9C%BA)
-

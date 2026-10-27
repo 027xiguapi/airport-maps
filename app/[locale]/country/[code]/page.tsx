@@ -9,10 +9,8 @@ import TocNav, { type TocItem } from '@/components/TocNav';
 import CountryIntro from '@/components/country/CountryIntro';
 import CountryDistribution from '@/components/country/CountryDistribution';
 import CountryLinks from '@/components/country/CountryLinks';
-import AdsterraBanner from '@/components/ads/AdsterraBanner';
-import AdsterraStrip from '@/components/ads/AdsterraStrip';
 import { getCountryIntro } from '@/lib/content';
-import { getCountryAirports } from '@/lib/country-airports';
+import { getCountryAirports, orderCountryAirports } from '@/lib/country-airports';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
@@ -77,13 +75,16 @@ export default async function CountryPage({ params }: Props) {
   const country = await getCountry(locale, code);
   if (!country) notFound();
 
-  const [airports, allCountries] = await Promise.all([
+  const [fetchedAirports, allCountries] = await Promise.all([
     getAirportsByCountry(locale, country.code),
     getCountries(locale),
   ]);
 
-  const intro = await getCountryIntro(locale, country.code);
   const national = getCountryAirports(country.code);
+  // Passenger order first, then the national size class — see the helper for why
+  // the grid cannot simply trust the query's `annual_pax_m DESC, iata ASC`.
+  const airports = orderCountryAirports(fetchedAirports, national);
+  const intro = await getCountryIntro(locale, country.code);
   const faqItems = buildCountryFaq(locale, country, airports, national);
   const terminalTotal = airports.reduce((sum, a) => sum + a.terminalCount, 0);
   const gateTotal = airports.reduce((sum, a) => sum + a.gateCount, 0);
@@ -146,9 +147,6 @@ export default async function CountryPage({ params }: Props) {
         {tocItems.length >= 3 && (
           <aside className="ap-toc">
             <TocNav items={tocItems} label={t.toc.label} />
-            {/* 160×300 below the contents list; the wrapper hides itself
-                below the desktop breakpoint (globals.css). */}
-            <AdsterraBanner unit="half-page" title={t.common.advertisement} className="mt-6" />
           </aside>
         )}
 
@@ -164,10 +162,6 @@ export default async function CountryPage({ params }: Props) {
               national={national}
               covered={covered}
             />
-          )}
-
-          {airports.length > 0 && (
-            <AdsterraStrip title={t.common.advertisement} className="my-12" />
           )}
 
           <section className="ap-extra" id="airport-list">
@@ -200,8 +194,6 @@ export default async function CountryPage({ params }: Props) {
           {airports.length > 0 && (
             <CountryLinks locale={locale} country={country} airports={airports} />
           )}
-
-          <AdsterraBanner unit="medium-rectangle" title={t.common.advertisement} className="my-12" />
 
           {faqItems.length > 0 && (
             <section className="ap-extra" id="faq">

@@ -3,7 +3,7 @@ import { formatNumber } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { countryMapUrl } from '@/lib/map-images';
-import type { CountryAirportList } from '@/lib/country-airports';
+import { orderNationalAirports, type CountryAirportList } from '@/lib/country-airports';
 import type { Country } from '@/lib/types';
 
 /**
@@ -33,6 +33,8 @@ export default function CountryDistribution({
     national.airports.filter((a) => covered.has(a.iata)).length,
     locale
   );
+  // Same order as the card grid above: size class, then network, then IATA.
+  const rows = orderNationalAirports(national.airports);
 
   return (
     <section className="ap-extra" id="airport-distribution">
@@ -68,7 +70,7 @@ export default function CountryDistribution({
             </tr>
           </thead>
           <tbody>
-            {national.airports.map((airport) => {
+            {rows.map((airport) => {
               const hasPage = covered.has(airport.iata);
               return (
                 <tr key={airport.iata} className={hasPage ? 'is-site' : undefined}>

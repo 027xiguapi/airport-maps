@@ -190,7 +190,8 @@ export const en: Messages = {
       kicker: 'Freshly Published',
       title: 'Recently updated',
       en: 'Recently Updated',
-      sub: 'New and newly revised airport maps.',
+      sub: 'New and newly revised airports, countries and travel guides.',
+      countriesTitle: 'Recently updated countries',
     },
     /** Homepage route-map strip: the widest direct networks, linking to /route/<IATA>. */
     routes: {
@@ -315,7 +316,7 @@ export const en: Messages = {
       count ? `${name} Airport Map — All ${count} Airports` : `${name} airport maps`,
     description: (name: string, nameEn: string, region: string, count: number, total?: number) =>
       total
-        ? `${name}${nameEn !== name ? ` (${nameEn})` : ''} has ${total} scheduled airports; terminal maps are compiled for ${count} of them. See the airport distribution map, full airport list, gates and ground transport.`
+        ? `${name}${nameEn !== name ? ` (${nameEn})` : ''} has ${total} scheduled airports; ${count} of them have a guide page here, with the airport distribution map, the full national list and direct routes.`
         : `Terminal maps for ${count} airport${count === 1 ? '' : 's'} in ${name} (${nameEn}), covering the main international hubs and regional airports of ${region}. See gates, terminal layouts and ground transport.`,
     chip: (nameEn: string) => `${nameEn.toUpperCase()} AIRPORTS`,
     kicker: 'Airport Maps',
@@ -358,7 +359,7 @@ export const en: Messages = {
         : '') +
       ` The airports serve cities including ${o.cities}. ${o.mapsNote}`,
     introMapsNote:
-      'Every airport has a terminal layout diagram, gate ranges and ground transport notes.',
+      'Every airport page carries its location map and airport codes, plus whatever terminal, gate and ground-transport details are compiled for it.',
 
     /** "Airport distribution": the national airport list and its map. */
     distribution: {
@@ -366,7 +367,7 @@ export const en: Messages = {
       title: (name: string) => `${name} airport distribution map`,
       en: 'Airport Distribution',
       sub: (covered: string, total: string) =>
-        `${total} scheduled airports nationwide (large, medium and small); terminal maps are compiled for ${covered} of them. The full list follows.`,
+        `${total} scheduled airports nationwide (large, medium and small); ${covered} of them have a guide page on this site. The full list follows.`,
       mapAlt: (name: string, total: string) =>
         `${name} airport distribution map: ${total} scheduled airports`,
       siteTag: 'Covered here',
@@ -409,7 +410,7 @@ export const en: Messages = {
         `The ${name} airports covered here serve cities including ${cities}. You can filter them by city or IATA code in the airport directory.`,
       maps: (name: string) => `Do the airports in ${name} have terminal maps?`,
       mapsAnswer: (name: string, count: string) =>
-        `Yes. Every one of the ${count} covered in ${name} has a terminal layout diagram marking terminal buildings, gate ranges, main airlines and ground transport. Open any airport to see it.`,
+        `Some of them. Airport pages carry a location map, airport codes and direct routes, and the ${count} covered in ${name} show a terminal layout diagram, gate ranges and ground transport wherever those details are compiled. Open any airport to see what it has.`,
     },
   },
 
@@ -577,6 +578,13 @@ export const en: Messages = {
     guideKicker: 'Guide',
     guideTitle: 'Airport guide',
     guideEn: 'Airport Guide',
+    /** Blog section: the /blog articles that cover this airport (lib/blog.ts). */
+    blogKicker: 'Articles',
+    blogTitle: (iata: string) => `${iata} airport guides`,
+    blogEn: 'From the Blog',
+    blogSub: (iata: string, count: number) =>
+      `${count} articles on this site cover ${iata}: arrivals, ground transport, baggage and connections.`,
+    blogAll: 'All articles',
     relatedTitle: (country: string) => `Other airports in ${country}`,
     relatedEn: (country: string) => `More in ${country}`,
     relatedAll: (country: string) => `All airports in ${country}`,
@@ -842,6 +850,7 @@ export const en: Messages = {
     routes: 'Route map',
     flights: 'Flights',
     guide: 'Airport guide',
+    blog: 'Related guides',
     terminals: 'Terminal guide',
     transport: 'Ground transport',
     facilities: 'Facilities',

@@ -2,19 +2,17 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import AirportMap from '@/components/AirportMap';
-import AdsterraBanner from '@/components/ads/AdsterraBanner';
-import AdsterraStrip from '@/components/ads/AdsterraStrip';
 import { CountryGrid } from '@/components/AirportCard';
 import { BlogShowcase } from '@/components/Blog';
 import CategoryGrid, { type CategoryCard } from '@/components/CategoryGrid';
 import HeroRoutes from '@/components/HeroRoutes';
 import HomeFacts from '@/components/HomeFacts';
 import HomeIntro from '@/components/HomeIntro';
-import { PopularCities, RouteNav, UpdateList } from '@/components/HomeSections';
+import { PopularCities, RouteNav, CountryUpdates, UpdateList } from '@/components/HomeSections';
 import JsonLd from '@/components/JsonLd';
 import SearchBox from '@/components/SearchBox';
-import { getLatestBlogPosts } from '@/lib/blog';
-import { listGuidedAirports } from '@/lib/content';
+import { blogAirportDates, getLatestBlogPosts } from '@/lib/blog';
+import { airportGuideUpdatedMap, listGuidedAirports } from '@/lib/content';
 import { formatNumber } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
@@ -26,7 +24,6 @@ import {
   getAirportsByCodes,
   getCityCount,
   getCountries,
-  getRecentlyUpdated,
   getRegionCount,
   getStats,
 } from '@/lib/queries';
@@ -75,19 +72,73 @@ export default async function HomePage({ params }: Props) {
   const t = getMessages(locale);
   const guidedCodes = await listGuidedAirports(locale);
 
-  const [stats, popularPool, recent, countries, airports, cityCount, regionCount, guided] =
+  const [stats, popularPool, countries, airports, cityCount, regionCount, guided, guideDates] =
     await Promise.all([
       getStats(),
       // Random 10 airports that have a /maps cover — reshuffles on every
       // (re)validation of the page.
       getAirportsByCodes(locale, mapImageCodes()),
-      getRecentlyUpdated(locale, 5),
       getCountries(locale),
       getAirportSummaries(locale),
       getCityCount(),
       getRegionCount(),
       getAirportsByCodes(locale, guidedCodes),
+      airportGuideUpdatedMap([locale]),
     ]);
+
+  /**
+   * "Recently updated" is the newest date any part of an airport's content
+   * carries: its directory record, its long-form guide, or the articles about it
+   * (lib/blog.ts). That way publishing a walkthrough promotes the airport it
+   * covers instead of leaving it buried under a data import.
+   *
+   * Three tie-breaks keep the five slots readable: a page with a published
+   * article beats one with only a guide on the same day, editorial content beats
+   * record-only churn, the busier airport wins after that, and no country takes
+   * more than two slots — one batch import can otherwise fill the whole list
+   * with a single country's regional fields.
+   */
+  const blogDates = blogAirportDates();
+  const contentDate = (airport: (typeof airports)[number]) =>
+    [airport.updatedAt, guideDates.get(airport.iata), blogDates.get(airport.iata)]
+      .filter(Boolean)
+      .sort()
+      .pop() as string;
+  const hasEditorial = (airport: (typeof airports)[number]) =>
+    Boolean(guideDates.get(airport.iata) ?? blogDates.get(airport.iata));
+
+  const ranked = [...airports].sort(
+    (a, b) =>
+      contentDate(b).localeCompare(contentDate(a)) ||
+      Number(Boolean(blogDates.get(b.iata))) - Number(Boolean(blogDates.get(a.iata))) ||
+      Number(hasEditorial(b)) - Number(hasEditorial(a)) ||
+      (b.annualPaxM ?? 0) - (a.annualPaxM ?? 0) ||
+      a.iata.localeCompare(b.iata)
+  );
+  const recent: { airport: (typeof airports)[number]; date: string }[] = [];
+  const perCountry = new Map<string, number>();
+  for (const airport of ranked) {
+    const used = perCountry.get(airport.countryCode) ?? 0;
+    if (used >= 2) continue;
+    perCountry.set(airport.countryCode, used + 1);
+    recent.push({ airport, date: contentDate(airport) });
+    if (recent.length === 5) break;
+  }
+
+  const countryDates = new Map<string, string>();
+  for (const airport of airports) {
+    const date = contentDate(airport);
+    if (!countryDates.has(airport.countryCode) || date > countryDates.get(airport.countryCode)!) {
+      countryDates.set(airport.countryCode, date);
+    }
+  }
+  const recentCountries = countries
+    .flatMap((country) => {
+      const date = countryDates.get(country.code);
+      return date ? [{ code: country.code, name: country.name, flagUrl: country.flagUrl, date }] : [];
+    })
+    .sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name))
+    .slice(0, 6);
 
   const popular = shuffled(popularPool).slice(0, 10);
   // Guide tiles show the same 400px /maps covers; a few guided airports have
@@ -361,8 +412,6 @@ export default async function HomePage({ params }: Props) {
         </section>
       )}
 
-      <AdsterraStrip title={t.common.advertisement} className="my-12" />
-
       {/* ------------------------------------------------------------ blog */}
       {/* The one homepage section whose frame is inline utilities rather than
           the shared `.section` family — same declarations, one-to-one. */}
@@ -463,8 +512,6 @@ export default async function HomePage({ params }: Props) {
         </div>
         <PopularCities locale={locale} airports={popular} />
       </section>
-
-      <AdsterraBanner unit="medium-rectangle" title={t.common.advertisement} className="my-12" />
 
       {/* ----------------------------------------------------------- route maps */}
       {routeNav.length > 0 && (
@@ -570,7 +617,24 @@ export default async function HomePage({ params }: Props) {
             <ArrowIcon />
           </Link>
         </div>
-        <UpdateList locale={locale} airports={recent} />
+        <UpdateList locale={locale} rows={recent} />
+
+        {/* Country pages have no timestamp of their own, so the same merge is
+            grouped by country: the newest date among its airports. */}
+        {recentCountries.length > 0 && (
+          <div className="mt-9">
+            <div className="mb-3 flex items-end justify-between gap-4">
+              <h3 className="text-[18px] font-bold tracking-[0.01em] text-ink-heading">
+                {t.home.recent.countriesTitle}
+              </h3>
+              <Link className="section-more" href={localizedPath(locale, '/countries')}>
+                {t.home.countries.more}
+                <ArrowIcon />
+              </Link>
+            </div>
+            <CountryUpdates locale={locale} rows={recentCountries} />
+          </div>
+        )}
       </section>
 
       {/* ------------------------------------------------------------ countries */}

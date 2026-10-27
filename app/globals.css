@@ -902,19 +902,6 @@ html[data-theme="dark"] {
     }
   }
 
-  /* Ad slots (components/ads/). The wrapper is rendered with the page and the
-     component mounts the ad iframe only while the viewport is inside the
-     unit's ADSTERRA_RANGE window (lib/ads.ts) — so an empty wrapper means
-     "this slot holds no ad at this viewport", which is also the normal state
-     of the stacked alternatives in a strip slot — and collapses to nothing.
-     A mounted ad is never hidden. */
-  [data-ad-slot] {
-    @apply flex justify-center;
-  }
-  [data-ad-slot]:empty {
-    display: none;
-  }
-
   .ap-desc {
     @apply mb-1.5 max-w-[860px] text-[15px] leading-[1.85] text-ink;
   }

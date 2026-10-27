@@ -193,7 +193,8 @@ export const ko: Messages = {
       kicker: '최근 게시',
       title: '최근 업데이트',
       en: '최근 업데이트',
-      sub: '새로 추가되었거나 새로 수정된 공항 지도입니다.',
+      sub: '새로 추가되거나 새로 수정된 공항, 국가, 여행 가이드입니다.',
+      countriesTitle: '최근 업데이트된 국가',
     },
     /** Homepage route-map strip: the widest direct networks, linking to /route/<IATA>. */
     routes: {
@@ -323,7 +324,7 @@ export const ko: Messages = {
       count ? `${name} 공항 지도: 전체 ${count}개 공항 분포도` : `${name} 공항 지도`,
     description: (name: string, nameEn: string, region: string, count: number, total?: number) =>
       total
-        ? `${name}(${nameEn})에는 정기편이 취항하는 공항이 ${total}개 있으며, 이 중 ${count}개의 터미널 지도를 수록했습니다. ${region}의 공항 분포도와 전체 공항 목록, 게이트 분포를 확인하세요.`
+        ? `${name}(${nameEn})에는 정기편이 취항하는 공항이 ${total}개 있으며, 이 중 ${count}개를 이 사이트에서 소개합니다. ${region}의 공항 분포도와 전체 공항 목록, 직항 노선을 확인하세요.`
         : `${name}(${nameEn})의 공항 ${count}개에 대한 터미널 지도를 수록했습니다. ${region}의 주요 국제 허브와 지역 공항을 아우르며, 게이트, 터미널 배치, 지상 교통을 확인할 수 있습니다.`,
     chip: (nameEn: string) => `${nameEn.toUpperCase()} AIRPORTS`,
     kicker: '공항 지도',
@@ -366,7 +367,7 @@ export const ko: Messages = {
         ? ` 이 중 ${o.busiest}(${o.busiestIata})가 연간 여객 ${o.busiestPax}으로 가장 규모가 큽니다.`
         : '') +
       ` 공항은 ${o.cities} 등 여러 도시에 분포하며, ${o.mapsNote}`,
-    introMapsNote: '모든 공항에 터미널 평면도, 게이트 분포, 지상 교통 안내가 있습니다.',
+    introMapsNote: '모든 공항 페이지에는 위치 지도와 공항 코드가 있으며, 수록된 터미널·게이트·지상 교통 정보가 함께 표시됩니다.',
 
     /** "Airport distribution": the national airport list and its map. */
     distribution: {
@@ -374,7 +375,7 @@ export const ko: Messages = {
       title: (name: string) => `${name} 공항 분포도`,
       en: '공항 분포',
       sub: (covered: string, total: string) =>
-        `전국에 정기편 공항이 ${total}개(대형·중형·소형 포함) 있으며, 이 중 ${covered}개의 터미널 지도를 제작했습니다. 아래에 전체 목록이 있습니다.`,
+        `전국에 정기편 공항이 ${total}개(대형·중형·소형 포함) 있으며, 이 중 ${covered}개는 이 사이트에 전용 페이지가 있습니다. 아래에 전체 목록이 있습니다.`,
       mapAlt: (name: string, total: string) =>
         `${name} 공항 분포도: 정기편 공항 ${total}개`,
       siteTag: '사이트 수록',
@@ -418,7 +419,7 @@ export const ko: Messages = {
         `이 사이트에 수록된 ${name}의 공항은 ${cities} 등 여러 도시에 있으며, 공항 목록에서 도시나 IATA 코드로 필터링할 수 있습니다.`,
       maps: (name: string) => `${name}의 공항에는 터미널 지도가 있나요?`,
       mapsAnswer: (name: string, count: string) =>
-        `네. 이 사이트에 수록된 ${name}의 공항 ${count}개 모두 터미널 평면도를 제공하며, 터미널 위치, 게이트 범위, 주요 항공사, 지상 교통을 표시합니다. 공항을 클릭하면 확인할 수 있습니다.`,
+        `일부 공항만 제공합니다. 공항 페이지에는 위치 지도, 공항 코드, 직항 노선이 담겨 있고, 터미널 자료가 수록된 공항은 터미널 평면도와 게이트 범위, 지상 교통 안내도 함께 표시됩니다. ${name}의 공항 ${count}개 중 해당 자료가 있는 곳에서 확인할 수 있습니다.`,
     },
   },
 
@@ -583,6 +584,12 @@ export const ko: Messages = {
     guideKicker: '안내',
     guideTitle: '공항 안내',
     guideEn: '공항 안내',
+    blogKicker: '아티클',
+    blogTitle: (iata: string) => `${iata} 공항 가이드`,
+    blogEn: '블로그에서',
+    blogSub: (iata: string, count: number) =>
+      `이 사이트의 아티클 ${count}편이 ${iata}를 다룹니다. 입국, 교통, 수하물, 환승 정보입니다.`,
+    blogAll: '전체 아티클',
     relatedTitle: (country: string) => `${country}의 다른 공항`,
     relatedEn: (country: string) => `${country}의 다른 공항`,
     relatedAll: (country: string) => `${country} 전체 공항`,
@@ -833,6 +840,7 @@ export const ko: Messages = {
     routes: '노선도',
     flights: '항공편',
     guide: '공항 안내',
+    blog: '관련 가이드',
     terminals: '터미널 안내',
     transport: '지상 교통',
     facilities: '시설 및 서비스',

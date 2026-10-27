@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
-import { formatNumber } from '@/lib/format';
+import { formatDate, formatNumber } from '@/lib/format';
 import { PlaneIcon } from '@/lib/icons';
 import { coverUrl } from '@/lib/map-images';
 import { routeImageUrl } from '@/lib/route-images';
@@ -27,18 +27,25 @@ const TILE =
   'transition-[transform,box-shadow] duration-[180ms] [scroll-snap-align:start] ' +
   '[box-shadow:var(--shadow-sm)] hover:-translate-y-1 hover:[box-shadow:var(--shadow-lg)]';
 
-/** "Recently updated" panel on the homepage. */
+/** One airport on the "recently updated" panel, with the date that put it there. */
+export type UpdateRow = { airport: AirportSummary; date: string };
+
+/**
+ * "Recently updated" panel on the homepage. The date shown is the newest of the
+ * airport record and any article about it (see blogAirportDates), so a fresh
+ * guide promotes the airport it covers instead of leaving it further down the
+ * list. Dates are the ISO strings the directory already stores.
+ */
 export function UpdateList({
   locale,
-  airports,
+  rows,
 }: {
   locale: Locale;
-  airports: AirportSummary[];
+  rows: UpdateRow[];
 }) {
-  const t = getMessages(locale);
   return (
     <Card className="overflow-hidden [box-shadow:var(--shadow-sm)]">
-      {airports.map((airport, i) => (
+      {rows.map(({ airport, date }, i) => (
         <Link
           className="flex cursor-pointer items-center gap-4 border-b border-b-line px-[22px] py-[15px] transition-[background-color] duration-[130ms] last:border-b-0 hover:bg-sky-100 max-[640px]:gap-3 max-[640px]:px-4 max-[640px]:py-[13px]"
           href={localizedPath(locale, `/airport/${airport.iata}`)}
@@ -65,11 +72,47 @@ export function UpdateList({
             loading="lazy"
           />
           <Badge variant="secondary" className="text-[11.5px] font-semibold tracking-[0.05em]">
-            {t.common.lastUpdated}
+            <time dateTime={date}>{formatDate(date, locale)}</time>
           </Badge>
         </Link>
       ))}
     </Card>
+  );
+}
+
+/** One country on the "recently updated" strip. */
+export type CountryUpdateRow = { code: string; name: string; flagUrl: string; date: string };
+
+/**
+ * Countries whose airports (or the articles about them) changed most recently,
+ * under the airport list. A country page has no timestamp of its own, so the
+ * date is the newest one among its airports — the same signal the list above
+ * uses, grouped by country.
+ */
+export function CountryUpdates({ locale, rows }: { locale: Locale; rows: CountryUpdateRow[] }) {
+  return (
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(min(230px,100%),1fr))] gap-2.5">
+      {rows.map((row) => (
+        <Link
+          className="flex items-center gap-3 rounded-[9px] border border-line bg-card px-3.5 py-2.5 transition-[border-color,box-shadow] duration-150 hover:border-sky-500 hover:[box-shadow:var(--shadow-sm)]"
+          href={localizedPath(locale, `/country/${row.code}`)}
+          key={row.code}
+        >
+          <img
+            className="h-[18px] w-[26px] flex-none rounded-[3px] object-cover [box-shadow:var(--flag-ring)]"
+            src={row.flagUrl}
+            alt=""
+            loading="lazy"
+          />
+          <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-ink-heading">
+            {row.name}
+          </span>
+          <time className="flex-none text-[12px] text-ink-faint" dateTime={row.date}>
+            {formatDate(row.date, locale)}
+          </time>
+        </Link>
+      ))}
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 ---
 slug: frankfurt-airport-t2-main-station-guide
 title: 法蘭克福機場 T2 到主火車站：SkyLine 轉 S8／S9 的全程室內路線
-summary: 從法蘭克福機場 T2 去法蘭克福主火車站的實測路線：不進室外、不坐公交，先搭免費 SkyLine 到 T1，再跟著 Bahnhof 指示牌下到區域火車站，坐 S8 或 S9 十幾分鍾抵達；含站臺辨認、買票方式、班次與五個最容易走錯的地方。
+summary: 從法蘭克福機場 T2 去法蘭克福主火車站的實測路線：不進室外、不坐公交，先搭免費 SkyLine 到 T1，再跟著 Bahnhof 指示牌下到區域火車站，坐 S8 或 S9 十幾分鐘抵達；含站臺辨認、買票方式、班次與五個最容易走錯的地方。
 date: 2026-10-23
 tags: 法蘭克福機場, FRA, T2航廈, SkyLine, S-Bahn
 cover: images/0.webp
@@ -39,7 +39,7 @@ cover: images/0.webp
 
 ![T2 到達廳的指示牌近景：上方是 Ausgang／Exit，下方是「Terminal 1 A,B,C,Z」與「D,E」，牆面上貼著檢疫告示](./images/2.webp)
 
-萬一已經跟著 Exit 走到了室外，也不用緊張：回到航廈裡，按天花板上那列小車的圖示重新上樓即可，只是要多花十幾分鍾。法蘭克福機場在這一點上還算友好——SkyLine 的標誌在到達層抬頭就能看見，不需要一路問人。
+萬一已經跟著 Exit 走到了室外，也不用緊張：回到航廈裡，按天花板上那列小車的圖示重新上樓即可，只是要多花十幾分鐘。法蘭克福機場在這一點上還算友好——SkyLine 的標誌在到達層抬頭就能看見，不需要一路問人。
 
 扶梯上去就是 SkyLine 的站臺。SkyLine 是法蘭克福機場內部的旅客捷運，無人駕駛，沿一條高架軌道往返於 T1 與 T2 之間。它**免費**，不需要買票，也沒有閘機；站臺螢幕顯示下一班車，通常**每 2–3 分鐘一班**。
 
@@ -57,7 +57,7 @@ cover: images/0.webp
 
 ![T1 裡標著 Bahnhöfe／Train stations 的藍色吊牌，同一排還有 Abflug／Departures 與 Ausgang／Exit 的方向](./images/5.webp)
 
-去主火車站要走的是 Regionalbahnhof。它就在 T1 正下方，跟著牌子下一層到兩層，經過一條有商店的通道就到；而 Fernbahnhof 要先走一段很長的連廊，是另一個方向。兩者在指示牌上只差一個詞，走錯了要多花十幾分鍾。
+去主火車站要走的是 Regionalbahnhof。它就在 T1 正下方，跟著牌子下一層到兩層，經過一條有商店的通道就到；而 Fernbahnhof 要先走一段很長的連廊，是另一個方向。兩者在指示牌上只差一個詞，走錯了要多花十幾分鐘。
 
 判斷自己有沒有走對，可以看兩件事：一是站臺號，1–3 是區域站，4–7 是長途站；二是同行的人——拉著大箱子、仰頭找 ICE 車次的，多半是往 Fernbahnhof 去的。Regionalbahnhof 的入口就在 T1 中段，下去是一條短通道，不會經過 The Squaire 那棟樓。
 
@@ -67,9 +67,9 @@ cover: images/0.webp
 
 ![T1 車站層的通道：指示牌並排寫著 Bahnhöfe／Train stations 與 AiRail Terminal，右側是 Bus 與 Taxi 的出口方向](./images/7.webp)
 
-如果發現自己已經走到了 Fernbahnhof，也不用慌：從那裡坐 ICE 到主火車站只要十幾分鍾，但 S-Bahn 的票不能用，需要另買長途車票，部分車次還要訂座。對第一次來的人，最省事的做法仍是原路走回 Regionalbahnhof。
+如果發現自己已經走到了 Fernbahnhof，也不用慌：從那裡坐 ICE 到主火車站只要十幾分鐘，但 S-Bahn 的票不能用，需要另買長途車票，部分車次還要訂座。對第一次來的人，最省事的做法仍是原路走回 Regionalbahnhof。
 
-## 四、S8／S9 十幾分鍾到主火車站
+## 四、S8／S9 十幾分鐘到主火車站
 
 Regionalbahnhof 的 1–3 站臺並排在地下，站廳裡的藍色牌子會寫 **Gleis 1 / Track 1**，後面跟著 Frankfurt City 和 S-Bahn 的標誌，箭頭斜向下——那是往市區方向最常用的一側。
 
@@ -79,7 +79,7 @@ Regionalbahnhof 的 1–3 站臺並排在地下，站廳裡的藍色牌子會寫
 
 ![下行到 S-Bahn 站臺的自動扶梯，頭頂指示牌標著 Gleis 1／Track 1 與 Frankfurt](./images/9.webp)
 
-上車後經過 Gateway Gardens 與 Frankfurt-Niederrad，十幾分鍾就到了 **Frankfurt (Main) Hauptbahnhof**。報站先念站名，再念可以換乘的線路。主火車站的 S-Bahn 站臺在地下一層，出站後跟著 Hauptbahnhof 或 Ausgang 的牌子上到地面，就是那個帶圓形鍾廳的大廳和二十多條地面站臺。
+上車後經過 Gateway Gardens 與 Frankfurt-Niederrad，十幾分鐘就到了 **Frankfurt (Main) Hauptbahnhof**。報站先念站名，再念可以換乘的線路。主火車站的 S-Bahn 站臺在地下一層，出站後跟著 Hauptbahnhof 或 Ausgang 的牌子上到地面，就是那個帶圓形鍾廳的大廳和二十多條地面站臺。
 
 ![區域火車站的站臺：藍色站名牌寫著 Frankfurt am Main Flughafen Regionalbahnhof，一位旅客拖著行李箱站在玻璃門前](./images/10.webp)
 

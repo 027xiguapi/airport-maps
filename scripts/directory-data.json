@@ -5,6 +5,11 @@
       "nameEn": "Argentina",
       "region": "南美洲"
     },
+    "BD": {
+      "name": "孟加拉国",
+      "nameEn": "Bangladesh",
+      "region": "南亚"
+    },
     "BE": {
       "name": "比利时",
       "nameEn": "Belgium",
@@ -55,6 +60,11 @@
       "nameEn": "Cyprus",
       "region": "欧洲"
     },
+    "CZ": {
+      "name": "捷克",
+      "nameEn": "Czechia",
+      "region": "欧洲"
+    },
     "DJ": {
       "name": "吉布提",
       "nameEn": "Djibouti",
@@ -79,6 +89,11 @@
       "name": "埃塞俄比亚",
       "nameEn": "Ethiopia",
       "region": "非洲"
+    },
+    "FI": {
+      "name": "芬兰",
+      "nameEn": "Finland",
+      "region": "欧洲"
     },
     "GG": {
       "name": "根西岛",
@@ -105,6 +120,16 @@
       "nameEn": "Haiti",
       "region": "北美洲"
     },
+    "HU": {
+      "name": "匈牙利",
+      "nameEn": "Hungary",
+      "region": "欧洲"
+    },
+    "IL": {
+      "name": "以色列",
+      "nameEn": "Israel",
+      "region": "中东"
+    },
     "IQ": {
       "name": "伊拉克",
       "nameEn": "Iraq",
@@ -129,6 +154,11 @@
       "name": "肯尼亚",
       "nameEn": "Kenya",
       "region": "非洲"
+    },
+    "KW": {
+      "name": "科威特",
+      "nameEn": "Kuwait",
+      "region": "中东"
     },
     "KZ": {
       "name": "哈萨克斯坦",
@@ -175,6 +205,11 @@
       "nameEn": "Nigeria",
       "region": "非洲"
     },
+    "NP": {
+      "name": "尼泊尔",
+      "nameEn": "Nepal",
+      "region": "南亚"
+    },
     "NO": {
       "name": "挪威",
       "nameEn": "Norway",
@@ -199,6 +234,11 @@
       "name": "巴基斯坦",
       "nameEn": "Pakistan",
       "region": "南亚"
+    },
+    "PL": {
+      "name": "波兰",
+      "nameEn": "Poland",
+      "region": "欧洲"
     },
     "PR": {
       "name": "波多黎各",
@@ -244,6 +284,11 @@
       "name": "特立尼达和多巴哥",
       "nameEn": "Trinidad and Tobago",
       "region": "北美洲"
+    },
+    "TW": {
+      "name": "台湾",
+      "nameEn": "Taiwan",
+      "region": "东亚"
     },
     "TZ": {
       "name": "坦桑尼亚",
@@ -3605,7 +3650,157 @@
       "name": "台湾桃园国际机场",
       "city": "台北",
       "nameEn": "Taiwan Taoyuan International Airport",
-      "cityEn": "Taoyuan"
+      "cityEn": "Taipei"
+    },
+    {
+      "iata": "TSA",
+      "icao": "RCSS",
+      "country": "TW",
+      "kind": "large",
+      "name": "台北松山机场",
+      "city": "台北",
+      "nameEn": "Taipei Songshan Airport",
+      "cityEn": "Taipei"
+    },
+    {
+      "iata": "KHH",
+      "icao": "RCKH",
+      "country": "TW",
+      "kind": "large",
+      "name": "高雄国际机场",
+      "city": "高雄",
+      "nameEn": "Kaohsiung International Airport",
+      "cityEn": "Kaohsiung"
+    },
+    {
+      "iata": "RMQ",
+      "icao": "RCMQ",
+      "country": "TW",
+      "kind": "large",
+      "name": "台中清泉岗机场",
+      "city": "台中",
+      "nameEn": "Taichung International Airport",
+      "cityEn": "Taichung"
+    },
+    {
+      "iata": "TNN",
+      "icao": "RCNN",
+      "country": "TW",
+      "kind": "large",
+      "name": "台南机场",
+      "city": "台南",
+      "nameEn": "Tainan Airport",
+      "cityEn": "Tainan"
+    },
+    {
+      "iata": "HUN",
+      "icao": "RCYU",
+      "country": "TW",
+      "kind": "large",
+      "name": "花莲机场",
+      "city": "花莲",
+      "nameEn": "Hualien Airport",
+      "cityEn": "Hualien"
+    },
+    {
+      "iata": "MZG",
+      "icao": "RCQC",
+      "country": "TW",
+      "kind": "large",
+      "name": "澎湖马公机场",
+      "city": "马公",
+      "nameEn": "Magong Airport",
+      "cityEn": "Magong"
+    },
+    {
+      "iata": "TTT",
+      "icao": "RCFN",
+      "country": "TW",
+      "kind": "medium",
+      "name": "台东丰年机场",
+      "city": "台东",
+      "nameEn": "Taitung Airport",
+      "cityEn": "Taitung"
+    },
+    {
+      "iata": "KNH",
+      "icao": "RCBS",
+      "country": "TW",
+      "kind": "medium",
+      "name": "金门尚义机场",
+      "city": "金门",
+      "nameEn": "Kinmen Airport",
+      "cityEn": "Kinmen"
+    },
+    {
+      "iata": "CYI",
+      "icao": "RCKU",
+      "country": "TW",
+      "kind": "medium",
+      "name": "嘉义机场",
+      "city": "嘉义",
+      "nameEn": "Chiayi Airport",
+      "cityEn": "Chiayi"
+    },
+    {
+      "iata": "MFK",
+      "icao": "RCMT",
+      "country": "TW",
+      "kind": "medium",
+      "name": "马祖北竿机场",
+      "city": "马祖",
+      "nameEn": "Matsu Beigan Airport",
+      "cityEn": "Matsu"
+    },
+    {
+      "iata": "LZN",
+      "icao": "RCFG",
+      "country": "TW",
+      "kind": "medium",
+      "name": "马祖南竿机场",
+      "city": "马祖",
+      "nameEn": "Matsu Nangan Airport",
+      "cityEn": "Matsu"
+    },
+    {
+      "iata": "KYD",
+      "icao": "RCLY",
+      "country": "TW",
+      "kind": "medium",
+      "name": "兰屿机场",
+      "city": "兰屿",
+      "nameEn": "Lanyu Airport",
+      "cityEn": "Lanyu"
+    },
+    {
+      "iata": "GNI",
+      "icao": "RCGI",
+      "country": "TW",
+      "kind": "small",
+      "name": "绿岛机场",
+      "city": "绿岛",
+      "nameEn": "Lyudao Airport",
+      "cityEn": "Lyudao"
+    },
+    {
+      "iata": "CMJ",
+      "icao": "RCCM",
+      "country": "TW",
+      "kind": "small",
+      "name": "七美机场",
+      "city": "七美",
+      "nameEn": "Qimei Airport",
+      "cityEn": "Qimei"
+    },
+    {
+      "iata": "WOT",
+      "icao": "RCWA",
+      "country": "TW",
+      "kind": "small",
+      "name": "望安机场",
+      "city": "望安",
+      "nameEn": "Wang'an Airport",
+      "cityEn": "Wang'an"
     },
     {
       "iata": "SAN",

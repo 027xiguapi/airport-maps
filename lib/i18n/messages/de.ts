@@ -195,7 +195,8 @@ export const de: Messages = {
       kicker: 'Neu veröffentlicht',
       title: 'Zuletzt aktualisiert',
       en: 'Zuletzt aktualisiert',
-      sub: 'Neue und überarbeitete Flughafenpläne.',
+      sub: 'Neue und überarbeitete Flughäfen, Länder und Reiseführer.',
+      countriesTitle: 'Zuletzt aktualisierte Länder',
     },
     routes: {
       kicker: 'Strecken',
@@ -323,7 +324,7 @@ export const de: Messages = {
       total?: number
     ) =>
       total
-        ? `${name}${nameEn !== name ? ` (${nameEn})` : ''} hat ${total} planmäßig bediente Flughäfen; für ${count} davon sind Terminalpläne erstellt. Sehen Sie die Verteilungskarte, die vollständige Flughafenliste, Gates und Bodentransport.`
+        ? `${name}${nameEn !== name ? ` (${nameEn})` : ''} hat ${total} planmäßig bediente Flughäfen; für ${count} davon gibt es hier eine eigene Seite. Sehen Sie die Verteilungskarte, die vollständige nationale Liste und die Nonstop-Ziele.`
         : `Terminalpläne für ${count} ${
             count === 1 ? 'Flughafen' : 'Flughäfen'
           } in ${name} (${nameEn}) – die wichtigsten internationalen Drehkreuze und Regionalflughäfen in ${region}. Mit Gates, Terminalaufbau und Bodentransport.`,
@@ -365,14 +366,14 @@ export const de: Messages = {
         : '') +
       ` Die Flughäfen bedienen unter anderem ${o.cities}. ${o.mapsNote}`,
     introMapsNote:
-      'Jeder Flughafen hat einen Terminalplan, Gate-Bereiche und Hinweise zum Bodentransport.',
+      'Jede Flughafenseite enthält Lageplan und Flughafencodes sowie die für sie erfassten Angaben zu Terminals, Gates und Bodentransport.',
 
     distribution: {
       kicker: 'Verteilung',
       title: (name: string) => `${name}: Karte der Flughafenverteilung`,
       en: 'Flughafenverteilung',
       sub: (covered: string, total: string) =>
-        `${total} planmäßig bediente Flughäfen im ganzen Land (große, mittlere und kleine); für ${covered} davon sind Terminalpläne erstellt. Die vollständige Liste folgt.`,
+        `${total} planmäßig bediente Flughäfen im ganzen Land (große, mittlere und kleine); für ${covered} davon gibt es hier eine eigene Seite. Die vollständige Liste folgt.`,
       mapAlt: (name: string, total: string) =>
         `${name}: Karte der Flughafenverteilung mit ${total} planmäßig bedienten Flughäfen`,
       siteTag: 'Hier erfasst',
@@ -415,7 +416,7 @@ export const de: Messages = {
         `Die hier erfassten Flughäfen in ${name} bedienen unter anderem ${cities}. Im Flughafenverzeichnis können Sie sie nach Stadt oder IATA-Code filtern.`,
       maps: (name: string) => `Gibt es für die Flughäfen in ${name} Terminalpläne?`,
       mapsAnswer: (name: string, count: string) =>
-        `Ja. Für jeden der ${count} erfassten Flughäfen in ${name} gibt es einen Terminalplan mit Terminalgebäuden, Gate-Bereichen, wichtigsten Fluggesellschaften und Bodentransport. Öffnen Sie einen Flughafen, um ihn zu sehen.`,
+        `Teilweise. Die Flughafenseiten enthalten Lageplan, Flughafencodes und Nonstop-Ziele; wo Terminaldaten vorliegen, kommen Terminalplan, Gate-Bereiche und Bodentransport hinzu. Von den ${count} in ${name} erfassten Flughäfen zeigt das jeder, für den diese Angaben erfasst sind. Öffnen Sie einen Flughafen, um zu sehen, was er bietet.`,
     },
   },
 
@@ -563,6 +564,12 @@ export const de: Messages = {
     guideKicker: 'Führer',
     guideTitle: 'Flughafenführer',
     guideEn: 'Flughafenführer',
+    blogKicker: 'Artikel',
+    blogTitle: (iata: string) => `${iata}: Flughafen-Ratgeber`,
+    blogEn: 'Aus dem Blog',
+    blogSub: (iata: string, count: number) =>
+      `${count} Artikel dieser Website behandeln ${iata}: Ankunft, Verkehr, Gepäck und Umsteigen.`,
+    blogAll: 'Alle Artikel',
     relatedTitle: (country: string) => `Weitere Flughäfen in ${country}`,
     relatedEn: (country: string) => `Mehr in ${country}`,
     relatedAll: (country: string) => `Alle Flughäfen in ${country}`,
@@ -842,6 +849,7 @@ export const de: Messages = {
     routes: 'Streckenkarte',
     flights: 'Flüge',
     guide: 'Flughafenführer',
+    blog: 'Ratgeber',
     terminals: 'Terminalführer',
     transport: 'Bodentransport',
     facilities: 'Einrichtungen',
