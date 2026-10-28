@@ -184,7 +184,7 @@ export const en: Messages = {
       kicker: 'Terminal Maps',
       title: 'Popular airport maps',
       en: 'Airport Maps',
-      sub: 'A rotating pick of terminal-map covers from airports worldwide — open an airport page for the full map.',
+      sub: 'A selection of terminal-map covers from major airports worldwide — open an airport page for the full map.',
     },
     recent: {
       kicker: 'Freshly Published',
@@ -193,12 +193,17 @@ export const en: Messages = {
       sub: 'New and newly revised airports, countries and travel guides.',
       countriesTitle: 'Recently updated countries',
     },
-    /** Homepage route-map strip: the widest direct networks, linking to /route/<IATA>. */
+    /** Homepage route-map showcase: the widest direct networks, map left, city tabs right. */
     routes: {
       kicker: 'Routes',
       title: 'Busiest airport route maps',
       en: 'Route Maps',
       sub: 'Airports ranked by how many places they fly to non-stop — open one for its route map, airlines and destination list.',
+      collection: 'The route collection',
+      tabsLabel: 'Route maps by city',
+      explore: (city: string) => `Explore ${city}`,
+      play: 'Start the slideshow',
+      pause: 'Pause the slideshow',
     },
     countries: {
       kicker: 'By Country',
@@ -221,24 +226,26 @@ export const en: Messages = {
      * and cite the figures directly.
      */
     facts: {
-      kicker: 'Lists & Tables',
+      kicker: 'Directory Data',
       title: 'Airport data at a glance',
       en: 'Lists & Tables',
-      sub: 'The directory figures laid out as lists and tables: coverage at a glance, the busiest airports by annual passengers, and the regional split.',
-      coverageTitle: 'Coverage at a glance',
+      sub: 'The directory figures laid out as lists and tables: coverage, the busiest airports among those with published passenger figures, and the regional split.',
+      note: (pax: string, detailed: string, total: string) =>
+        `Passenger figures cover ${pax} of ${total} airports; terminal and gate figures cover ${detailed} of ${total}. Terminal counts follow this directory's own grouping and may include concourses.`,
+      coverageTitle: 'Coverage figures',
       coverage: {
         airports: 'Airports',
         countries: 'Countries & regions',
-        regions: 'World regions',
-        cities: 'Cities',
+        regions: 'Directory regions',
+        cities: 'Unique city names',
         terminals: 'Terminals',
         gates: 'Gates',
-        routes: 'Route maps',
+        routes: 'Airports with route maps',
       },
       busiest: {
         title: 'Busiest airports by annual passengers',
-        sub: 'The 12 airports with the highest annual passenger traffic, ranked.',
-        caption: 'Airports ranked by annual passenger traffic',
+        sub: 'The 12 busiest airports among those with published annual passenger figures.',
+        caption: 'Airports with published annual passenger figures, ranked',
         rank: 'Rank',
         iata: 'IATA',
         airport: 'Airport',
@@ -249,11 +256,12 @@ export const en: Messages = {
         pax: 'Annual passengers (m)',
       },
       regions: {
-        title: 'Airports by region',
-        sub: 'Airport, terminal and gate counts grouped by world region.',
-        caption: 'Airport counts grouped by world region',
+        title: 'Airports by directory region',
+        sub: "Airport, terminal and gate counts grouped by the directory's own region labels; some countries and territories span two regions.",
+        caption: 'Airport counts grouped by directory region',
         region: 'Region',
         airports: 'Airports',
+        detailed: 'With detailed data',
         terminals: 'Terminals',
         gates: 'Gates',
       },
@@ -648,8 +656,6 @@ export const en: Messages = {
     /** Same card, for the airports whose network the repo has rendered: the picture is the link. */
     previewCta: (iata: string) => `View the full ${iata} route map`,
     teaserSub: (count: string) => `${count} direct destinations: map, operating airlines and distances.`,
-    /** Figure on a tile of the homepage's route strip. */
-    cardMeta: (count: string) => `${count} direct destinations`,
     /** Section headings, each naming the airport (`en` line takes the IATA code). */
     mapSectionTitle: (name: string) => `${name} direct route map`,
     tableKicker: (iata: string) => `${iata} · Destinations`,

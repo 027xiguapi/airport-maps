@@ -7,7 +7,13 @@ import type { AirportSummary, DirectoryStats } from '@/lib/types';
 /** The busiest-airports table is a summary of the directory, not a full ranking. */
 const BUSIEST_ROWS = 12;
 
-type RegionRow = { region: string; airports: number; terminals: number; gates: number };
+type RegionRow = {
+  region: string;
+  airports: number;
+  detailed: number;
+  terminals: number;
+  gates: number;
+};
 
 /** One cell grid shared by both tables, so their paddings line up. */
 const TH =
@@ -53,15 +59,29 @@ export default function HomeFacts({
   const grouped = new Map<string, RegionRow>();
   for (const airport of airports) {
     const row =
-      grouped.get(airport.region) ?? { region: airport.region, airports: 0, terminals: 0, gates: 0 };
+      grouped.get(airport.region) ?? {
+        region: airport.region,
+        airports: 0,
+        detailed: 0,
+        terminals: 0,
+        gates: 0,
+      };
     row.airports += 1;
     row.terminals += airport.terminalCount;
     row.gates += airport.gateCount;
+    // "Detailed" is the same subset the passenger and terminal/gate figures
+    // cover: airports with terminal rows. Every one of them has passenger data
+    // today; deriving it from terminals keeps the two tables honest if that
+    // ever diverges.
+    if (airport.terminalCount > 0) row.detailed += 1;
     grouped.set(airport.region, row);
   }
   const regions = [...grouped.values()].sort(
     (a, b) => b.airports - a.airports || a.region.localeCompare(b.region)
   );
+
+  const paxCovered = airports.filter((airport) => airport.annualPaxM != null).length;
+  const detailedCovered = airports.filter((airport) => airport.terminalCount > 0).length;
 
   const coverage = [
     { label: f.coverage.airports, value: formatNumber(stats?.airportCount ?? airports.length, locale) },
@@ -83,17 +103,25 @@ export default function HomeFacts({
             <span className="en">{f.en}</span>
           </h2>
           <p className="sec-sub">{f.sub}</p>
+          <p className="mt-2 max-w-[820px] text-[12.5px] leading-relaxed text-ink-faint">
+            {f.note(
+              formatNumber(paxCovered, locale),
+              formatNumber(detailedCovered, locale),
+              formatNumber(airports.length, locale)
+            )}
+          </p>
         </div>
       </div>
 
       <h3 className="text-[19px] font-black tracking-[0.01em] text-ink-heading">
         {f.coverageTitle}
       </h3>
-      {/* 150px min so the seven figures land on one row at the section's full
-          1240px measure; narrower viewports wrap them in pairs. */}
-      <dl className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(min(150px,100%),1fr))] gap-3">
+      {/* 160px min so the seven figures stay on one row at the section's full
+          1240px measure while the longer labels wrap cleanly; narrower
+          viewports wrap them in pairs. */}
+      <dl className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(min(160px,100%),1fr))] gap-3">
         {coverage.map((item) => (
-          <div className="rounded-[12px] border border-line bg-card px-[18px] py-4" key={item.label}>
+          <div className="border border-line bg-card px-[18px] py-4" key={item.label}>
             <dt className="text-[12px] tracking-[0.03em] text-ink-soft">{item.label}</dt>
             <dd className="mt-1.5 font-display text-[26px] font-semibold leading-none text-ink-heading [font-variant-numeric:tabular-nums]">
               {item.value}
@@ -107,7 +135,7 @@ export default function HomeFacts({
           {f.busiest.title}
         </h3>
         <p className="mt-1.5 text-[14px] text-ink-soft">{f.busiest.sub}</p>
-        <div className="mt-4 overflow-x-auto rounded-[12px] border border-line bg-card">
+        <div className="mt-4 overflow-x-auto border border-line bg-card">
           <table className="w-full min-w-[760px] border-collapse text-left text-[13.5px]">
             <caption className="sr-only">{f.busiest.caption}</caption>
             <thead>
@@ -177,10 +205,10 @@ export default function HomeFacts({
           {f.regions.title}
         </h3>
         <p className="mt-1.5 text-[14px] text-ink-soft">{f.regions.sub}</p>
-        {/* Narrower than the busiest table on purpose: four columns read better
+        {/* Narrower than the busiest table on purpose: five columns read better
             as a panel than stretched across the full measure. */}
-        <div className="mt-4 max-w-[560px] overflow-x-auto rounded-[12px] border border-line bg-card">
-          <table className="w-full min-w-[380px] border-collapse text-left text-[13.5px]">
+        <div className="mt-4 max-w-[680px] overflow-x-auto border border-line bg-card">
+          <table className="w-full min-w-[500px] border-collapse text-left text-[13.5px]">
             <caption className="sr-only">{f.regions.caption}</caption>
             <thead>
               <tr className="border-b border-b-line">
@@ -189,6 +217,9 @@ export default function HomeFacts({
                 </th>
                 <th className={TH_NUM} scope="col">
                   {f.regions.airports}
+                </th>
+                <th className={TH_NUM} scope="col">
+                  {f.regions.detailed}
                 </th>
                 <th className={TH_NUM} scope="col">
                   {f.regions.terminals}
@@ -208,6 +239,7 @@ export default function HomeFacts({
                     {row.region}
                   </th>
                   <td className={TD_NUM}>{formatNumber(row.airports, locale)}</td>
+                  <td className={TD_NUM}>{formatNumber(row.detailed, locale)}</td>
                   <td className={TD_NUM}>{formatNumber(row.terminals, locale)}</td>
                   <td className={TD_NUM}>{formatNumber(row.gates, locale)}</td>
                 </tr>

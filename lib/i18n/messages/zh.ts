@@ -170,7 +170,7 @@ export const zh = {
       kicker: 'Terminal Maps',
       title: '热门机场地图',
       en: 'Airport Maps',
-      sub: '随机展示全球机场的航站楼地图封面，点击进入机场页面查看完整大图。',
+      sub: '精选全球主要机场的航站楼地图封面，点击进入机场页面查看完整大图。',
     },
     recent: {
       kicker: 'Freshly Published',
@@ -179,12 +179,20 @@ export const zh = {
       sub: '新增和新更新的机场、国家 / 地区页面与出行攻略。',
       countriesTitle: '最近更新的国家 / 地区',
     },
-    /** 首页「航线图」导航条：直飞目的地最多的机场，链到各自的 /route 页面。 */
+    /** 首页「航线图」轮播：直飞目的地最多的机场，左侧航线渲染图、右侧城市标签。 */
     routes: {
       kicker: 'Routes',
       title: '热门机场航线图',
       en: 'Route Maps',
       sub: '按直飞目的地数量排序的机场，点击查看全球航线网络、执飞航司与目的地列表。',
+      /** 左侧深色面板的眉标。 */
+      collection: '航线图集',
+      /** 城市标签列表的无障碍名称。 */
+      tabsLabel: '按城市选择航线图',
+      /** 右侧按钮：跳到当前城市的航线页。 */
+      explore: (city: string) => `查看${city}航线图`,
+      play: '开始自动轮播',
+      pause: '暂停自动轮播',
     },
     countries: {
       kicker: 'By Country',
@@ -206,24 +214,26 @@ export const zh = {
      * 文案），搜索引擎与 AI 引擎可以直接抽取、引用这些结构化区块。
      */
     facts: {
-      kicker: 'Lists & Tables',
+      kicker: '目录数据',
       title: '机场数据一览',
       en: 'Lists & Tables',
-      sub: '把本站收录的机场数据整理成列表与表格：收录概览、年旅客量最大的机场，以及按大区统计的分布。',
-      coverageTitle: '收录概览',
+      sub: '把本站收录的机场数据整理成列表与表格：收录概览、有旅客量数据的机场排名，以及按目录大区统计的分布。',
+      note: (pax: string, detailed: string, total: string) =>
+        `旅客量数据覆盖 ${total} 座机场中的 ${pax} 座；航站楼与登机口数据覆盖其中 ${detailed} 座。航站楼数量按本站收录口径统计，部分机场包含廊道。`,
+      coverageTitle: '收录数字',
       coverage: {
         airports: '机场',
         countries: '国家和地区',
-        regions: '大区',
-        cities: '城市',
+        regions: '目录大区',
+        cities: '不同城市名',
         terminals: '航站楼',
         gates: '登机口',
-        routes: '航线图',
+        routes: '有航线图的机场',
       },
       busiest: {
         title: '年旅客量最大的机场',
-        sub: '按年旅客吞吐量（百万）排序的前 12 座机场。',
-        caption: '按年旅客吞吐量排序的机场',
+        sub: '按已收录的年旅客量排序，取前 12 座机场。',
+        caption: '按已收录年旅客量排序的机场',
         rank: '排名',
         iata: 'IATA',
         airport: '机场',
@@ -234,11 +244,12 @@ export const zh = {
         pax: '年旅客量（百万）',
       },
       regions: {
-        title: '机场的大区分布',
-        sub: '按所在大区汇总的机场、航站楼与登机口数量。',
-        caption: '按大区汇总的机场数量',
+        title: '机场的目录大区分布',
+        sub: '按本站目录大区标签汇总的机场、航站楼与登机口数量；部分国家 / 地区跨两个大区。',
+        caption: '按目录大区汇总的机场数量',
         region: '大区',
         airports: '机场',
+        detailed: '有详细数据',
         terminals: '航站楼',
         gates: '登机口',
       },
@@ -613,8 +624,6 @@ export const zh = {
     /** 同上，但站点存有该机场的静态航线渲染图时，图片本身就是入口。 */
     previewCta: (iata: string) => `查看 ${iata} 完整航线图`,
     teaserSub: (count: string) => `共 ${count} 个直飞目的地：航线示意、执飞航司与飞行距离。`,
-    /** 首页导航条上一格的字数说明。 */
-    cardMeta: (count: string) => `${count} 个直飞目的地`,
     /** 各区块标题都带上机场名（`en` 行的参数是机场的英文名 / IATA 代码）。 */
     mapSectionTitle: (name: string) => `${name}直飞航线图`,
     tableKicker: (iata: string) => `${iata} · Destinations`,

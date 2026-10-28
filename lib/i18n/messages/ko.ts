@@ -187,7 +187,7 @@ export const ko: Messages = {
       kicker: '터미널 지도',
       title: '인기 공항 지도',
       en: '공항 지도',
-      sub: '전 세계 공항의 터미널 지도 표지를 무작위로 보여 줍니다. 클릭하면 공항 페이지에서 전체 지도를 볼 수 있습니다.',
+      sub: '전 세계 주요 공항의 터미널 지도 표지를 엄선해 보여 줍니다. 공항 페이지에서 전체 지도를 확인하세요.',
     },
     recent: {
       kicker: '최근 게시',
@@ -196,12 +196,17 @@ export const ko: Messages = {
       sub: '새로 추가되거나 새로 수정된 공항, 국가, 여행 가이드입니다.',
       countriesTitle: '최근 업데이트된 국가',
     },
-    /** Homepage route-map strip: the widest direct networks, linking to /route/<IATA>. */
+    /** Homepage route-map showcase: the widest direct networks, map left, city tabs right. */
     routes: {
       kicker: '노선',
       title: '인기 공항 노선도',
       en: '노선도',
       sub: '직항 목적지 수가 많은 순서로 정렬한 공항입니다. 클릭하면 전 세계 노선망, 운항 항공사, 목적지 목록을 볼 수 있습니다.',
+      collection: '노선 컬렉션',
+      tabsLabel: '도시별 노선도',
+      explore: (city: string) => `${city} 노선도 보기`,
+      play: '자동 넘김 시작',
+      pause: '자동 넘김 일시정지',
     },
     countries: {
       kicker: '국가별',
@@ -223,24 +228,26 @@ export const ko: Messages = {
      * and tables so search and AI engines can lift and cite the figures.
      */
     facts: {
-      kicker: '목록과 표',
+      kicker: '데이터 개요',
       title: '공항 데이터 한눈에 보기',
       en: '목록과 표',
-      sub: '사이트에 수록된 공항 데이터를 목록과 표로 정리했습니다. 수록 현황, 연간 여객 수가 가장 많은 공항, 지역별 분포를 확인하세요.',
-      coverageTitle: '수록 현황',
+      sub: '사이트에 수록된 공항 데이터를 목록과 표로 정리했습니다. 수록 현황, 연간 여객 수가 공개된 공항의 순위, 지역별 분포를 확인하세요.',
+      note: (pax: string, detailed: string, total: string) =>
+        `여객 수 데이터는 전체 ${total}개 공항 중 ${pax}곳, 터미널·게이트 데이터는 ${detailed}곳을 포함합니다. 터미널 수는 이 사이트의 집계 기준을 따르며 일부 공항은 콘코스를 포함합니다.`,
+      coverageTitle: '수록 수치',
       coverage: {
         airports: '공항',
         countries: '국가 및 지역',
-        regions: '대륙',
-        cities: '도시',
+        regions: '지역 구분',
+        cities: '고유 도시명',
         terminals: '터미널',
         gates: '게이트',
-        routes: '노선도',
+        routes: '노선도 보유 공항',
       },
       busiest: {
         title: '연간 여객 수가 가장 많은 공항',
-        sub: '연간 여객 수(백만 명) 기준 상위 12개 공항입니다.',
-        caption: '연간 여객 수 기준 공항 순위',
+        sub: '연간 여객 수가 공개된 공항 중 가장 붐비는 12곳입니다.',
+        caption: '연간 여객 수가 공개된 공항 순위',
         rank: '순위',
         iata: 'IATA',
         airport: '공항',
@@ -251,11 +258,12 @@ export const ko: Messages = {
         pax: '연간 여객 수(백만 명)',
       },
       regions: {
-        title: '지역별 공항 분포',
-        sub: '대륙별로 집계한 공항, 터미널, 게이트 수입니다.',
-        caption: '대륙별 공항 수',
+        title: '지역 구분별 공항 분포',
+        sub: '사이트의 지역 구분에 따른 공항, 터미널, 게이트 수입니다. 일부 국가·지역은 두 지역에 걸쳐 있습니다.',
+        caption: '지역 구분별 공항 수',
         region: '대륙',
         airports: '공항',
+        detailed: '상세 데이터 보유',
         terminals: '터미널',
         gates: '게이트',
       },
@@ -647,8 +655,6 @@ export const ko: Messages = {
     previewCta: (iata: string) => `${iata} 전체 노선도 보기`,
     teaserSub: (count: string) =>
       `직항 목적지 ${count}개: 노선도, 운항 항공사, 비행 거리.`,
-    /** Figure on a tile of the homepage's route strip. */
-    cardMeta: (count: string) => `직항 목적지 ${count}개`,
     /** Section headings, each naming the airport (`en` line takes the IATA code). */
     mapSectionTitle: (name: string) => `${name} 직항 노선도`,
     tableKicker: (iata: string) => `${iata} · 목적지`,

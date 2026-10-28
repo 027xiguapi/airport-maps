@@ -171,7 +171,7 @@ export const tw: Messages = {
       kicker: 'Terminal Maps',
       title: '熱門機場地圖',
       en: 'Airport Maps',
-      sub: '隨機展示全球機場的航廈地圖封面，點選進入機場頁面檢視完整大圖。',
+      sub: '精選全球主要機場的航廈地圖封面，點擊進入機場頁面查看完整大圖。',
     },
     recent: {
       kicker: 'Freshly Published',
@@ -180,12 +180,17 @@ export const tw: Messages = {
       sub: '新增和新更新的機場、國家 / 地區頁面與出行攻略。',
       countriesTitle: '最近更新的國家 / 地區',
     },
-    /** 首頁「航線圖」導航條：直飛目的地最多的機場，鏈到各自的 /route 頁面。 */
+    /** 首頁「航線圖」輪播：直飛目的地最多的機場，左側航線渲染圖、右側城市標籤。 */
     routes: {
       kicker: 'Routes',
       title: '熱門機場航線圖',
       en: 'Route Maps',
       sub: '按直飛目的地數量排序的機場，點選檢視全球航線網路、執飛航司與目的地列表。',
+      collection: '航線圖集',
+      tabsLabel: '按城市選擇航線圖',
+      explore: (city: string) => `檢視${city}航線圖`,
+      play: '開始自動輪播',
+      pause: '暫停自動輪播',
     },
     countries: {
       kicker: 'By Country',
@@ -207,24 +212,26 @@ export const tw: Messages = {
      * 文案），搜尋引擎與 AI 引擎可以直接抽取、引用這些結構化區塊。
      */
     facts: {
-      kicker: 'Lists & Tables',
+      kicker: '目錄資料',
       title: '機場資料一覽',
       en: 'Lists & Tables',
-      sub: '把本站收錄的機場資料整理成列表與表格：收錄概覽、年旅客量最大的機場，以及按大區統計的分佈。',
-      coverageTitle: '收錄概覽',
+      sub: '把本站收錄的機場資料整理成列表與表格：收錄概覽、有旅客量資料的機場排名，以及按目錄大區統計的分佈。',
+      note: (pax: string, detailed: string, total: string) =>
+        `旅客量資料涵蓋 ${total} 座機場中的 ${pax} 座；航廈與閘口資料涵蓋其中 ${detailed} 座。航廈數量按本站收錄口徑統計，部分機場包含廊道。`,
+      coverageTitle: '收錄數字',
       coverage: {
         airports: '機場',
         countries: '國家和地區',
-        regions: '大區',
-        cities: '城市',
+        regions: '目錄大區',
+        cities: '不同城市名',
         terminals: '航廈',
         gates: '閘口',
-        routes: '航線圖',
+        routes: '有航線圖的機場',
       },
       busiest: {
         title: '年旅客量最大的機場',
-        sub: '按年旅客吞吐量（百萬）排序的前 12 座機場。',
-        caption: '按年旅客吞吐量排序的機場',
+        sub: '按已收錄的年旅客量排序，取前 12 座機場。',
+        caption: '按已收錄年旅客量排序的機場',
         rank: '排名',
         iata: 'IATA',
         airport: '機場',
@@ -235,11 +242,12 @@ export const tw: Messages = {
         pax: '年旅客量（百萬）',
       },
       regions: {
-        title: '機場的大區分佈',
-        sub: '按所在大區彙總的機場、航廈與閘口數量。',
-        caption: '按大區彙總的機場數量',
+        title: '機場的目錄大區分佈',
+        sub: '按本站目錄大區標籤彙總的機場、航廈與閘口數量；部分國家 / 地區跨兩個大區。',
+        caption: '按目錄大區彙總的機場數量',
         region: '大區',
         airports: '機場',
+        detailed: '有詳細資料',
         terminals: '航廈',
         gates: '閘口',
       },
@@ -614,8 +622,6 @@ export const tw: Messages = {
     /** 同上，但站點存有該機場的靜態航線渲染圖時，圖片本身就是入口。 */
     previewCta: (iata: string) => `檢視 ${iata} 完整航線圖`,
     teaserSub: (count: string) => `共 ${count} 個直飛目的地：航線示意、執飛航司與飛行距離。`,
-    /** 首頁導航條上一格的字數說明。 */
-    cardMeta: (count: string) => `${count} 個直飛目的地`,
     /** 各區塊標題都帶上機場名（`en` 行的引數是機場的英文名 / IATA 代碼）。 */
     mapSectionTitle: (name: string) => `${name}直飛航線圖`,
     tableKicker: (iata: string) => `${iata} · Destinations`,

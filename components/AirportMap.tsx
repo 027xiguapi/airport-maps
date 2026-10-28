@@ -133,7 +133,7 @@ const getLeaflet = () => (leafletPromise ??= import('leaflet'));
  * Leaflet, not by this component.
  */
 const MAP_BUTTON =
-  'cursor-pointer rounded-[14px] border px-3 py-[5px] text-[12px] backdrop-blur-[4px] transition-[background-color,border-color] duration-150 [font:inherit]';
+  'cursor-pointer border px-3 py-[5px] text-[12px] backdrop-blur-[4px] transition-[background-color,border-color] duration-150 [font:inherit]';
 const MAP_BUTTON_IDLE =
   'border-white/25 text-white/82 [background:rgba(10,42,67,0.78)] hover:border-white/50 hover:text-white';
 const MAP_BUTTON_ON = 'border-amber bg-amber font-semibold text-[#0A2A43]';
@@ -348,7 +348,7 @@ export default function AirportMap({
   }
 
   return (
-    <div className="relative overflow-hidden rounded-[14px] border border-line bg-[#0d1b2a] [box-shadow:var(--shadow-md)]">
+    <div className="relative overflow-hidden border border-line bg-[#0d1b2a] [box-shadow:var(--shadow-md)]">
       {/* `am-map` stays as the hook the tile-pane filter in globals.css hangs on. */}
       <div className="am-map z-[1] h-[480px] max-[640px]:h-[380px]" ref={hostRef} />
       <button
@@ -378,7 +378,7 @@ export default function AirportMap({
           </button>
         ))}
       </div>
-      <div className="pointer-events-none absolute bottom-3.5 left-3.5 z-[600] flex flex-col gap-1 rounded-lg border border-white/18 px-3 py-2 text-[11.5px] text-white/78 backdrop-blur-[4px] [background:rgba(10,42,67,0.78)] max-[640px]:hidden">
+      <div className="pointer-events-none absolute bottom-3.5 left-3.5 z-[600] flex flex-col gap-1 border border-white/18 px-3 py-2 text-[11.5px] text-white/78 backdrop-blur-[4px] [background:rgba(10,42,67,0.78)] max-[640px]:hidden">
         <span className="flex flex-col gap-1">
           <span className="inline-flex items-center gap-1.5">
             <svg

@@ -144,6 +144,19 @@
       opacity: 0.85;
     }
   }
+
+  /* 首页航线图轮播(components/RouteShowcase.tsx):换城市时图片淡入。图片以 URL
+     为 key 重新挂载,所以这条动画只在切换时播放;组件同时给它加了
+     motion-reduce:animate-none,减少动效的访客看到的是直接换图。 */
+  --animate-route-fade: route-fade 420ms ease-out;
+  @keyframes route-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 /* The ported design wrote bare `transition: <props> <time>` shorthands, whose
@@ -333,10 +346,9 @@ html[data-theme="dark"] {
   /* One horizontal scroll row of terminal-map cover tiles (/public/maps). */
   /* The covers are white-background PNGs at mixed aspect ratios, so they sit
      object-contain inside a fixed white frame to keep the row even. */
-  /* ============ 航线图导航 ============ */
-  /* Same scroll-snap strip as the popular row; each tile shows the airport's
-     static route-map render (public/route) above its summary and links to the
-     route page. Tiles without a render yet stay text-only on the navy card. */
+  /* ============ 航线图轮播 ============ */
+  /* The homepage showcase (components/RouteShowcase.tsx) is all utilities; the
+     only stylesheet rule it needs is the fade-in token in @theme above. */
   /* ============ 最近更新 ============ */
   /* The container is a shadcn Card (components/HomeSections.tsx). */
   /* The "recently updated" chip is a shadcn Badge (variant=secondary). */
@@ -1616,4 +1628,16 @@ html[data-theme="dark"] {
 /* Leaflet 给所有可交互图层都加了 pointer 光标，但只有目录收录的目的地才点得进去。 */
 .rt-map .rt-dot-wrap:not(.linked) {
   cursor: default;
+}
+
+/* ============ 首页世界机场地图：直角（同样必须未分层） ============
+   leaflet.css 给缩放条和弹窗自带了圆角（4px / 12px，触屏断点下首尾按钮
+   还有 2px），分层规则盖不住；首页整体改为直角卡片后，这两处也要跟着改，
+   否则会在方角地图里留一个圆角的控件。首尾按钮那两条选择器比 Leaflet 的
+   `.leaflet-touch .leaflet-bar a:first-child` 更高一级，才能压过它。 */
+.am-map .leaflet-bar,
+.am-map .leaflet-popup-content-wrapper,
+.am-map.leaflet-container.leaflet-touch .leaflet-bar a:first-child,
+.am-map.leaflet-container.leaflet-touch .leaflet-bar a:last-child {
+  border-radius: 0;
 }

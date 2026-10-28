@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Static route-map renders for public/route, used by the homepage route strip
- * and by the airport page's route section: the world outline plus the
+ * Static route-map renders for public/route, used by the homepage route
+ * showcase and by the airport page's route section: the world outline plus the
  * great-circle routes out of one airport, rasterised with sharp.
  *
  * The frame is the same for every render — the whole world in longitude across
@@ -17,10 +17,10 @@
  * page it previews.
  *
  * Default targets are the airports the site covers, ranked by how many
- * destinations the dump gives them — the top 12 the homepage strip shows, so the
- * two cannot drift apart. Existing files are skipped, because renders are
- * expensive and the committed ones are already good; pass --force to redo them,
- * or --codes for airports outside the default set.
+ * destinations the dump gives them — the top 12 the homepage showcase slides
+ * through, so the two cannot drift apart. Existing files are skipped, because
+ * renders are expensive and the committed ones are already good; pass --force to
+ * redo them, or --codes for airports outside the default set.
  *
  *   node scripts/generate-route-images.mjs                  # top 12, skip existing
  *   node scripts/generate-route-images.mjs --codes ICN,AMS  # specific airports

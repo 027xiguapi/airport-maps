@@ -1,6 +1,6 @@
 # 全球机场地图 · World Airport Maps
 
-全球机场导航站点（生产域名 **worldairportmap.com**）：按国家 / 地区浏览 **363 座机场、92 个国家 / 地区**，查看每座机场的**航站楼平面示意图**、登机口范围、主要航司、地面交通与设施；可交互的**直飞航线图**与目的地列表；三个地理计算工具；以及用 **Markdown** 维护的长文（366 篇机场指南：60 篇精编手写 + 303 篇数据驱动起步稿、37 篇国家介绍）。**默认语言为英语**，同时提供完整中文版、繁体中文版、**德语版（`/de`）**、**韩语版（`/ko`）**、**法语版（`/fr`）**与**意大利语版（`/it`）**。
+全球机场导航站点（生产域名 **worldairportmap.com**）：按国家 / 地区浏览 **516 座机场、101 个国家 / 地区**，查看每座机场的**航站楼平面示意图**、登机口范围、主要航司、地面交通与设施；可交互的**直飞航线图**与目的地列表；三个地理计算工具；以及用 **Markdown** 维护的长文（516 篇机场指南：60 篇精编手写 + 456 篇数据驱动起步稿、46 篇国家介绍）。**默认语言为英语**，同时提供完整中文版、繁体中文版、**德语版（`/de`）**、**韩语版（`/ko`）**、**法语版（`/fr`）**与**意大利语版（`/it`）**。
 
 由原来的单文件静态页面（`legacy/index.html`，哈希路由 + 内嵌 JS 数据）重构为 **Next.js App Router + PostgreSQL**：
 
@@ -53,7 +53,7 @@
 ```bash
 npm install
 cp .env.example .env.local     # 按需修改 DATABASE_URL
-npm run db:seed                # 数据库初始化 + 灌数据：建库 → 扩展 → 建表 → 触发器/视图 → 363 座机场
+npm run db:seed                # 数据库初始化 + 灌数据：建库 → 扩展 → 建表 → 触发器/视图 → 516 座机场
 npm run dev                    # http://localhost:3003
 ```
 
@@ -65,7 +65,7 @@ npm run dev                    # http://localhost:3003
 npm run build && npm start
 ```
 
-构建会预渲染每个语言的约 690 个页面（363 机场 + 92 国家 + 224 航线页 + 11 个固定页），因此 **`npm run build` 需要可用的 `DATABASE_URL`**。
+构建会预渲染每个语言的约 995 个页面（516 机场 + 101 国家 + 367 航线页 + 11 个固定页），因此 **`npm run build` 需要可用的 `DATABASE_URL`**。
 
 ## 环境变量
 
@@ -145,11 +145,10 @@ npm run build && npm start
 7 张表，当前库内数据量：
 
 ```
-countries             92 行   国家 / 地区（code、中文名、name_en、region、region_en、国旗）
-airports             363 行   机场（iata、slug、中英文名、城市、登机口数、年旅客量、
+countries             101 行   国家 / 地区（code、中文名、name_en、region、region_en、国旗）
+airports              516 行   机场（iata、slug、中英文名、城市、登机口数、年旅客量、
                               距市中心、更新时间、search_blob）
-airport_translations 1452 行  机场简介（按语言存放的 Markdown；已 seed 的语言各 363 行，
-                              当前库为 zh / en / tw / de）
+airport_translations 3612 行  机场简介（按语言存放的 Markdown；7 种已发布语言各 516 行）
 terminals            174 行   航站楼（代码、中英文名、登机口范围（含英文）、登机口数、
                               主要航司（含英文）、是否卫星厅）
 terminal_amenities   413 行   航站楼设施（label + label_en）
@@ -160,7 +159,7 @@ ground_transport     216 行   地面交通（name/description + 英文列，可
 机场分两批灌入（都在 `db:seed` 里完成）：
 
 - **编辑批次（60 座）**：来自 `scripts/legacy-data.json`，带完整航站楼、设施、交通与旅客量数据——174 座航站楼全部属于这一批；
-- **目录批次（303 座）**：由 `node data/build-directory-data.mjs` 从 `data/new-airports-a.{zh,en}.json` 合并生成 `scripts/directory-data.json`（zh 提供中文名 / 城市，en 提供英文名、IATA / ICAO、国家与规模，55 个新国家在生成器里维护）。这批只有名称 / 城市 / 国家 / 规模，简介由字段推导，无航站楼与旅客量（详情页自动少渲染对应区块，下载按钮走封面 / 搜索回退）；与编辑批次重叠的代码自动跳过，`updated_at` 排在编辑批次之后以保证「最近更新」栏位的顺序。
+- **目录批次（456 座）**：由 `node data/build-directory-data.mjs` 从 `data/new-airports-a.{zh,en}.json` 合并生成 `scripts/directory-data.json`（zh 提供中文名 / 城市，en 提供英文名、IATA / ICAO、国家与规模，55 个新国家在生成器里维护）。这批只有名称 / 城市 / 国家 / 规模，简介由字段推导，无航站楼与旅客量（详情页自动少渲染对应区块，下载按钮走封面 / 搜索回退）；与编辑批次重叠的代码自动跳过，`updated_at` 排在编辑批次之后以保证「最近更新」栏位的顺序。
 
 设计取舍：
 
@@ -210,7 +209,7 @@ URL 方案（与生产站点地图一致）：
 
 `tw` 与中文同属一个书写系统，文案是**派生**而不是另写一份，因此它的第 2、4、5 步不同：
 
-- 消息目录 `lib/i18n/messages/tw.ts` 与 `content_documents` 里全部 `locale='tw'` 的行（366 篇机场指南 + 37 篇国家介绍 + 5 个静态页）由 `scripts/build-hant.mjs` 生成（`node scripts/build-hant.mjs`，加 `--check` 只校验不改写）：OpenCC `cn → twp` 转换，先过 `db/terminology/tw-phrases.json` 的 `phrases`（台湾用法例外：希斯洛、杜拜、雪梨、巴塞隆納…），再过 `corrections`（纠正 OpenCC 的过度替换：连接→連線、只→隻、绑定→繫結）。转换规则集中在 `scripts/_hant.mjs`（`toHant` 用于正文、`toHantName` 用于地名——台湾写法用「里」而不是 OpenCC 的「裡」）；转换前后会核对 `${}` 插值数量（防止词表替换破坏模板字符串）。简体残留用 `_hant.mjs` 里按 OpenCC 反推的字符集扫描，有残留时 seed 会直接报出来。
+- 消息目录 `lib/i18n/messages/tw.ts` 与 `content_documents` 里全部 `locale='tw'` 的行（516 篇机场指南 + 46 篇国家介绍 + 5 个静态页）由 `scripts/build-hant.mjs` 生成（`node scripts/build-hant.mjs`，加 `--check` 只校验不改写）：OpenCC `cn → twp` 转换，先过 `db/terminology/tw-phrases.json` 的 `phrases`（台湾用法例外：希斯洛、杜拜、雪梨、巴塞隆納…），再过 `corrections`（纠正 OpenCC 的过度替换：连接→連線、只→隻、绑定→繫結）。转换规则集中在 `scripts/_hant.mjs`（`toHant` 用于正文、`toHantName` 用于地名——台湾写法用「里」而不是 OpenCC 的「裡」）；转换前后会核对 `${}` 插值数量（防止词表替换破坏模板字符串）。简体残留用 `_hant.mjs` 里按 OpenCC 反推的字符集扫描，有残留时 seed 会直接报出来。
 - 重新生成会**覆盖** `locale='tw'` 的行，所以要改文案就改词表（或改写生成器），不要直接改生成物。
 - 数据库侧没有 `terminology/tw.json`：`scripts/seed.mjs` 的 `DERIVED_LOCALES` 把 `tw` 标记为派生语言，各表 `_tw` 列由 `toHant()` / `toHantName()` 从中文源直接转换（`name_tw`、`city_tw`、`region_tw`、`gate_range_tw`、`airlines_tw`、`label_tw`、`description_tw`，简介写入 `airport_translations.locale='tw'`）。种子脚本最后打印 `derived (tw)` 的条数与简体残留数。
 - 名称类字段用 `toHantName()`：OpenCC 在音译里会把「里」读成「裡」（紐伯裡、庫裡蒂巴），名称里一律还原为「里」。
@@ -222,24 +221,24 @@ URL 方案（与生产站点地图一致）：
 - **UI 文案**：`lib/i18n/messages/de.ts` 是完整翻译（类型派生自中文目录，键缺失即编译失败），在 `catalogs.ts` 注册后 `/de` 自动进入路由、切换器、`hreflang` 与站点地图。
 - **结构化数据**：`lib/i18n/de-vocab.json` 是唯一词表（国家、地区、城市、机场、航站楼名、设施标签、交通方式、机场等级），`lib/i18n/de-data.ts` 把它包成查找函数，`lib/queries.ts` 的 `pick()` / `pickStrict()` 在 `locale === 'de'` 时用英文列 + 对应词表（`germanCountry`、`germanCity`、`germanTerminalName`、`germanGateRange`…）。没有条目时**回退英文名**，绝不会回退中文。
 - **数字与日期**：`lib/format.ts` 用 `de-DE`（小数逗号、「ca. 67 Millionen」、「22. Oktober 2026」）；语言无关的标点 / 维基语言等判断集中在 `lib/i18n/display.ts`（`isCjkLocale`、`intlLocale`、`wikipediaLocale`、`showsBaike`），德语页链到 de.wikipedia、不显示百度百科。
-- **机场简介**：`data/de-descriptions.json`（IATA → 德文，363 条）保存**从英文 `description_md` 翻译**的简介；`scripts/seed.mjs` 优先用它，文件不存在时才回退到 `scripts/_de.mjs` 的数据生成模板。因此 `npm run db:seed` 不会把译文覆盖成生成的德语。
-- **机场指南**：363 篇 `locale='de'` 的 `content_documents` 是**线上英文编辑稿的完整翻译**（不是数据生成稿）。工作流：`content-export --locale en --out <目录>` 导出英文 → 在 `<目录>/de/airports/` 写译文（前言 `updated` 用翻译日期）→ `content-import --dir <目录> --only de`。`npm run de:guides` 仍保留为数据驱动兜底：它只写缺失的德语指南、带生成标记，译文行不会被它覆盖。
-- **国家介绍与静态页**：`content/de/{countries,pages}`（37 + 5 篇，同样按当前英文版重译），与机场指南一起用 `node scripts/content-import.mjs --dir <目录> --only de` 导入。
+- **机场简介**：`data/de-descriptions.json`（IATA → 德文，501 条）保存**从英文 `description_md` 翻译**的简介；`scripts/seed.mjs` 优先用它，文件不存在时才回退到 `scripts/_de.mjs` 的数据生成模板。因此 `npm run db:seed` 不会把译文覆盖成生成的德语。
+- **机场指南**：501 篇 `locale='de'` 的 `content_documents` 是**线上英文编辑稿的完整翻译**（不是数据生成稿）。工作流：`content-export --locale en --out <目录>` 导出英文 → 在 `<目录>/de/airports/` 写译文（前言 `updated` 用翻译日期）→ `content-import --dir <目录> --only de`。`npm run de:guides` 仍保留为数据驱动兜底：它只写缺失的德语指南、带生成标记，译文行不会被它覆盖。
+- **国家介绍与静态页**：`content/de/{countries,pages}`（46 + 5 篇，同样按当前英文版重译），与机场指南一起用 `node scripts/content-import.mjs --dir <目录> --only de` 导入。
 - **内容回退**：`lib/content.ts` 的 `localeChain()` 让 `de` 回退到 `en`（而不是 `SOURCE_LOCALE` 中文）；机场简介同理。照片说明另有一份 `public/photos/captions.de.json`（按 `IATA → 文件 → 德文说明` 翻译自英文说明），未收录的照片回退英文说明，`lib/airport-photos.ts` 的 `pickCaption()` 负责这条链。
 - **搜索**：`airports.search_blob` 只有中 / 英 / 繁名称，所以德语搜索会把德语地名反查成英文再查一遍（`germanSearchAlias()`：Peking → Beijing、Moskau → Moscow、München → Munich，并接受 `muenchen` 这类无变音符写法），否则德国用户搜不到自己语言的地名。
 - **博客也有德语**：`lib/blog.ts` 的 `BLOG_LOCALES` 现在是 `en / de / fr / it / ko / zh / tw`，德语译文放在 `public/blog/<slug>/<slug>.de.md`（与 `<slug>.en.md` 并列，84 篇全部翻译）。缺译的文章不会回退到英语或中文，只是不出现在 `/de/blog` 列表里；`/de/blog` 页头入口、文章页、`hreflang`、`lastmod` 与站点地图条目都由文件是否存在自动推导。
 
-重新翻译的顺序：`content-export --locale en` 导出当前英文长文 → 翻译成 `de/` → `content-import --dir <目录> --only de`（405 篇：363 机场 + 37 国家 + 5 静态页）→ 德语简介写回 `data/de-descriptions.json` 并入库 → 需要重建结构化数据时再 `npm run db:seed`（会优先读取该 JSON，不会丢译文）。
+重新翻译的顺序：`content-export --locale en` 导出当前英文长文 → 翻译成 `de/` → `content-import --dir <目录> --only de`（552 篇：501 机场 + 46 国家 + 5 静态页）→ 德语简介写回 `data/de-descriptions.json` 并入库 → 需要重建结构化数据时再 `npm run db:seed`（会优先读取该 JSON，不会丢译文）。
 
 #### 韩语（`ko`）与德语同构
 
 韩语复用德语的整条链路，没有新增数据库列、没有新依赖：
 
-- **UI 文案**：`lib/i18n/messages/ko.ts`（类型派生自中文目录，571 个键），注册进 `catalogs.ts` 后 `/ko` 自动进入路由、语言切换器、`hreflang` 与站点地图。
+- **UI 文案**：`lib/i18n/messages/ko.ts`（类型派生自中文目录，键与中文目录一致），注册进 `catalogs.ts` 后 `/ko` 自动进入路由、语言切换器、`hreflang` 与站点地图。
 - **结构化数据**：`lib/i18n/ko-vocab.json`（233 国家 / 12 地区 / 284 城市 / 60 机场 / 44 航站楼 / 12 设施标签 / 6 交通方式 / 4 机场等级），`lib/i18n/ko-data.ts` 把它包成查找函数；`lib/queries.ts` 的 `pick()` / `pickStrict()` 在 `ko` 时用英文列 + 词表，缺条目回退英文。
 - **数字与日期**：`lib/format.ts` 用 `ko-KR`，客运量用 만/억（`약 6,700만 명`）；`display.ts` 的 `intlLocale('ko-KR')`、`wikipediaLocale('ko')`，韩语页不显示百度百科。
 - **搜索**：`koreanSearchAlias()`（도쿄 → Tokyo、인천 → Incheon），与德语别名同一套机制。
-- **长文**：`content_documents` 405 篇（363 机场 + 37 国家 + 5 静态页）与 `airport_translations` 363 条简介，均从英文版翻译，`updated: 2026-10-23`；简介另存 `data/ko-descriptions.json`，`db:seed` 会优先读取。
+- **长文**：`content_documents` 552 篇（501 机场 + 46 国家 + 5 静态页）与 `airport_translations` 516 条简介，均从英文版翻译，`updated: 2026-10-23`；简介另存 `data/ko-descriptions.json`，`db:seed` 会优先读取。
 - **博客与照片**：`BLOG_LOCALES` 含 `ko`，译文为 `public/blog/<slug>/<slug>.ko.md`；照片说明为 `public/photos/captions.ko.json`，缺译回退英文说明。
 
 #### 法语（`fr`）与德语同构
@@ -251,8 +250,8 @@ URL 方案（与生产站点地图一致）：
 - **数字与日期**：`lib/format.ts` 用 `fr-FR`（小数逗号、「environ 67 millions」、「22 octobre 2026」）；`display.ts` 的 `intlLocale('fr-FR')`、`wikipediaLocale('fr')`，法语页链到 fr.wikipedia、不显示百度百科。
 - **搜索**：`frenchSearchAlias()`（Pékin → Beijing、Londres → London、Le Caire → Cairo），并接受 `pekin` 这类无重音写法。
 - **机场简介**：`scripts/_fr.mjs` 的 `curatedDescriptionFr()` / `directoryDescriptionFr()` 按结构化字段生成法语简介（与德语同一套数据、同一套口径），`scripts/seed.mjs` 写入 `airport_translations.locale='fr'`；若之后有编辑译文，放进 `data/fr-descriptions.json` 即可优先于生成稿（读取顺序与 `ko-descriptions.json` 相同）。
-- **长文**：`content_documents` 尚无 `locale='fr'` 行，机场指南 / 国家介绍 / 静态页按 `localeChain()` 回退英文；翻译入库流程与德语相同（`content-export --locale en` → 翻译 → `content-import --only fr`）。
-- **博客与照片**：`BLOG_LOCALES` 含 `fr`，译文为 `public/blog/<slug>/<slug>.fr.md`（84 篇全部翻译；没有英文源的 `paris-cdg-vs-frankfurt-fra-transfer-test` 不出现在法语列表）；照片说明为 `public/photos/captions.fr.json`（366 座机场 / 424 条全部翻译），缺译回退英文说明。
+- **长文**：`content_documents` 已有 `locale='fr'` 行（501 机场 + 46 国家 + 5 静态页）；缺失的条目按 `localeChain()` 回退英文。翻译入库流程与德语相同（`content-export --locale en` → 翻译 → `content-import --only fr`）。
+- **博客与照片**：`BLOG_LOCALES` 含 `fr`，译文为 `public/blog/<slug>/<slug>.fr.md`（84 篇全部翻译；没有英文源的 `paris-cdg-vs-frankfurt-fra-transfer-test` 不出现在法语列表）；照片说明为 `public/photos/captions.fr.json`（367 座机场 / 428 条全部翻译），缺译回退英文说明。
 
 #### 意大利语（`it`）与德语同构
 
@@ -263,14 +262,14 @@ URL 方案（与生产站点地图一致）：
 - **数字与日期**：`lib/format.ts` 用 `it-IT`（小数逗号、千分点、「circa 67 milioni」、「21 settembre 2026」）；`display.ts` 的 `intlLocale('it-IT')`、`wikipediaLocale('it')`，意大利语页链到 it.wikipedia、不显示百度百科。
 - **搜索**：`italianSearchAlias()`（Pechino → Beijing、Londra → London、Il Cairo → Cairo），并接受去重音 / 去撇号的写法（`citta del messico`、`lavana`）。
 - **机场简介**：`scripts/_it.mjs` 的 `curatedDescriptionIt()` / `directoryDescriptionIt()` 按结构化字段生成意大利语简介，`scripts/seed.mjs` 写入 `airport_translations.locale='it'`；有编辑译文时放进 `data/it-descriptions.json` 即可优先于生成稿。
-- **长文**：`content_documents` 尚无 `locale='it'` 行，机场指南 / 国家介绍 / 静态页按 `localeChain()` 回退英文；入库流程与德语相同（`content-export --locale en` → 翻译 → `content-import --only it`）。
-- **博客与照片**：`BLOG_LOCALES` 含 `it`，译文为 `public/blog/<slug>/<slug>.it.md`（84 篇全部翻译）；照片说明为 `public/photos/captions.it.json`（366 座机场 / 424 条全部翻译），缺译回退英文说明。
+- **长文**：`content_documents` 已有 `locale='it'` 行（501 机场 + 46 国家 + 5 静态页）；缺失的条目按 `localeChain()` 回退英文。入库流程与德语相同（`content-export --locale en` → 翻译 → `content-import --only it`）。
+- **博客与照片**：`BLOG_LOCALES` 含 `it`，译文为 `public/blog/<slug>/<slug>.it.md`（84 篇全部翻译）；照片说明为 `public/photos/captions.it.json`（367 座机场 / 428 条全部翻译），缺译回退英文说明。
 
 #### 把德语发布到线上
 
 德语分两部分，**代码/静态文件随应用部署**（`lib/i18n/messages/de.ts`、`de-vocab.json`、`de-data.ts`、`public/blog/*.de.md`、`public/photos/captions.de.json`、`lib/blog.ts`、站点地图代码），**数据库行用脚本增量推送**：
 
-1. 演练（只读）：`REMOTE_DATABASE_URL=... npm run de:push`，确认「405 documents / 363 descriptions、目标现有 0、无孤儿简介」
+1. 演练（只读）：`REMOTE_DATABASE_URL=... npm run de:push`，确认「552 documents / 516 descriptions、目标现有 0、无孤儿简介」
 2. 写入：同上加 `--apply`（可加 `--backup <文件>` 先保存目标现有 de 行）；脚本在单事务里只 upsert `locale='de'` 的行，**不 TRUNCATE、不动 zh/en/tw 与结构化数据**
 3. 再部署/重建应用：`/de` 路由是构建期按 `catalogs.ts` 枚举的，构建时 `DATABASE_URL` 指向生产库，新语言页面才会被预渲染
 4. 验证：`/de`、`/de/blog`、`sitemap.xml` 里的 `hreflang="de"` 与 `/de/...` 条目；回滚只需删除目标库 `locale='de'` 的行
@@ -295,7 +294,7 @@ URL 方案（与生产站点地图一致）：
 | 同上（法语 / 韩语） | 英文列 + `lib/i18n/fr-vocab.json` / `ko-vocab.json` | 渲染期套法语 / 韩语词表（Pékin、Munich / 베이징、뮌헨），无 `_fr` / `_ko` 列 |
 | 同上（意大利语） | 英文列 + `lib/i18n/it-vocab.json` | 渲染期套意大利语词表（Pechino、Monaco di Baviera、Stati Uniti），无 `_it` 列 |
 | 同上（繁体） | `airports.name_tw` / `city_tw`、`countries.name_tw` / `region_tw` | 由中文源转换生成，见「派生语言」 |
-| 机场简介 | `airport_translations(airport_iata, locale, description_md)` | 按语言存放的 Markdown，当前 1452 条（zh/en/tw/de 各 363） |
+| 机场简介 | `airport_translations(airport_iata, locale, description_md)` | 按语言存放的 Markdown，当前 3612 条（7 种已发布语言各 516） |
 | 机场照片说明 | `public/photos/captions.de.json`（德语） | 由 `captions/<IATA>.json` 的英文说明翻译；缺条目回退英文，繁中走生成的 `captions.tw.json` |
 | 机场照片说明（法 / 韩） | `public/photos/captions.fr.json` / `captions.ko.json` | 同德语，缺条目回退英文 |
 | 机场照片说明（意） | `public/photos/captions.it.json` | 同德语，缺条目回退英文 |
@@ -317,8 +316,8 @@ URL 方案（与生产站点地图一致）：
 机场指南、国家介绍与静态页的长文都存放在 PostgreSQL 的 `content_documents` 表，一行一份文档，键是 `(kind, subject, locale)`：
 
 ```
-kind='airport'  subject=IATA       机场指南（zh/en/tw 各 366 行；de 363 行，由生成器产出）
-kind='country'  subject=ISO 代码   国家 / 地区机场介绍（37 行 / 语言）
+kind='airport'  subject=IATA       机场指南（zh/en/tw 各 516 行；de/fr/it/ko 各 501 行）
+kind='country'  subject=ISO 代码   国家 / 地区机场介绍（46 行 / 语言）
 kind='page'     subject=页面 slug  静态页 about / contact / sources / privacy / terms（5 行 / 语言）
 ```
 
@@ -343,8 +342,8 @@ Field 语义：`title` / `summary` / `updated` 对应迁移前的 frontmatter（
 
 ### 指南与介绍都是可选的
 
-- **机场指南**：`kind='airport'` 的行存在时，机场页多出一个「机场指南 / Airport guide」区块；不存在则整块不渲染。当前 363 座机场各有 zh/en/tw 三行指南（另有 MEL、SZX、TPE 三份指南留在库里但目录中没有对应机场，不渲染）。**新增一篇指南＝插入（或导入）一行**，无需改代码；数据驱动的起步稿由 `scripts/generate-airport-guides.mjs` 直接写库。
-- **国家机场介绍**：国家页的「机场介绍」区块**始终渲染**——开头段落由数据库字段拼出（机场数、航站楼数、登机口数、最繁忙机场、分布城市），因此 92 个国家 / 地区没有任何文档也有介绍；`kind='country'` 的行存在时，长文追加在同一段正文里（当前 37 个）。各语言**成对维护**——`getCountryIntro` 在该语言缺行时会回退到中文，只写中文会让英文页出现中文长文。
+- **机场指南**：`kind='airport'` 的行存在时，机场页多出一个「机场指南 / Airport guide」区块；不存在则整块不渲染。当前 516 座机场各有 zh/en/tw 三行指南；de/fr/it/ko 各 501 行。**新增一篇指南＝插入（或导入）一行**，无需改代码；数据驱动的起步稿由 `scripts/generate-airport-guides.mjs` 直接写库。
+- **国家机场介绍**：国家页的「机场介绍」区块**始终渲染**——开头段落由数据库字段拼出（机场数、航站楼数、登机口数、最繁忙机场、分布城市），因此 101 个国家 / 地区没有任何文档也有介绍；`kind='country'` 的行存在时，长文追加在同一段正文里（当前 46 个）。各语言**成对维护**——`getCountryIntro` 在该语言缺行时会回退到中文，只写中文会让英文页出现中文长文。
 
 两类内容都只写本站数据（航站楼构成、登机口字母规律、旅客量、距离、交通方式），不含臆测细节。
 
@@ -405,10 +404,10 @@ scripts/                    提取、建库、灌数、抓取与自检脚本
 ## 航线数据与航线页
 
 - 原始数据是 **OpenFlights 的 2014-06 快照**（ODbL，67663 条原始航线 → 62793 条直飞航线，覆盖 2643 座机场、499 家航司），由 `scripts/fetch-routes.mjs`（**脚本不在仓库里**，`data/airport-routes.json` 已提交）生成 `data/airport-routes.json`（约 1.7MB，**只在服务端从磁盘读取，不进浏览器包**）。页面会打印数据快照日期，因为这份数据不新。
-- 目的地的坐标与英文地名来自 `public/data/world-airports.json`（同一份首页地图索引）；本站目录收录的目的地则换成本站自己的译名。站点 363 座机场里有 **224 座有航线数据**，只有这些才生成 `/route/<IATA>` 页面（其余不在 `generateStaticParams` 里，直接 404）。
+- 目的地的坐标与英文地名来自 `public/data/world-airports.json`（同一份首页地图索引）；本站目录收录的目的地则换成本站自己的译名。站点 516 座机场里有 **367 座有航线数据**，只有这些才生成 `/route/<IATA>` 页面（其余不在 `generateStaticParams` 里，直接 404）。
 - 航线页（`components/airport/RouteMapSection.tsx`）由三块组成：**Leaflet 航线图**、**目的地表**（城市、国家、距离、执飞航司）、**数据下载**（`/api/routes/<IATA>` 的 CSV / JSON，普通 `<a download>`，无 JS 也可用；CSV 带 BOM 以便 Excel 正确识别中文）。
 - 航线图的交互（`components/airport/RouteMap.tsx`）：主题化的 ± 缩放按钮（到边界自动禁用）、⌘/Ctrl + 滚轮与触控板捏合缩放（普通滚轮留给页面滚动，地图不抢），**目录收录的目的地圆点本身就是指向该机场页面的真实链接**（可中键 / 右键新开标签），未收录的目的地只有悬停提示。颜色分级见 `lib/route-tiers.ts`（按执飞航司数量）。
-- 首页的航线条目用**静态渲染图**（`public/route/*.png`，由 `node scripts/generate-route-images.mjs` 生成）：世界地图轮廓 + 大圆航线，处理了反子午线，缺图时回退为纯文字卡片。取景是**固定的世界全图**（经度 −180~180 横跨整幅、赤道居中），因此每张图的海岸线都落在同一位置、航线朝哪个方向飞一目了然；新增渲染图时不要改成按航线范围缩放。机场页的「航线图」区块用的是同一批图：该机场有渲染图时，图片本身就是通往 `/route/<IATA>` 的链接（`components/airport/RouteMapTeaser.tsx`，与航线页的航站楼地图卡片同一套样式），没有则回退为按钮——**站点目前只有 13 座机场有图**（首页那 12 座 + ICN），所以这条区块的样子本来就因机场而异。
+- 首页的航线条目用**静态渲染图**（`public/route/*.png`，由 `node scripts/generate-route-images.mjs` 生成）：世界地图轮廓 + 大圆航线，处理了反子午线，缺图时回退为纯文字卡片。取景是**固定的世界全图**（经度 −180~180 横跨整幅、赤道居中），因此每张图的海岸线都落在同一位置、航线朝哪个方向飞一目了然；新增渲染图时不要改成按航线范围缩放。机场页的「航线图」区块用的是同一批图：该机场有渲染图时，图片本身就是通往 `/route/<IATA>` 的链接（`components/airport/RouteMapTeaser.tsx`，与航线页的航站楼地图卡片同一套样式），没有则回退为按钮——**站点目前有 16 座机场有图**（首页航线区 12 座 + ICN、DEN、DFW、IAH），所以这条区块的样子本来就因机场而异。
 
 ## 航班数据与航班板
 
@@ -416,7 +415,7 @@ scripts/                    提取、建库、灌数、抓取与自检脚本
 - 数据只存一份：`flights` 是 `[航班号, 航司 slug, 出发地 IATA, 到达地 IATA]` 的单一数组，按「航班号（数字序）→ 出发地 → 到达地 → 航司」排序。机场板过滤出本场为出发地或到达地的记录，`/flight/<number>` 过滤出同一航班号的记录，两者都不需要各自的副本；以前每座机场一个文件加 578 个号码分片，同一条航线要写三遍（出发板、到达板、号码分片），合并后文件从约 5.9MB 降到约 2.4MB。
 - `lib/flight-store.ts` 在服务端把整个文件读取、gunzip 并只解析一次，然后**按需建两份内存索引**（机场板用 `byAirport`，航班页用 `byNumber`），索引里放的是同一批记录数组的引用而不是副本。`lib/flights.ts` 负责机场板与对端机场名称（`public/data/world-airports.json` + 目录译名 + 德/法/意/韩词表），`lib/flight-page.ts` 负责 `/flight/<number>` 的航线、距离与相关航班。机场页只**服务端渲染第一页**（20 条，保证无 JS 与爬虫可见）；搜索、翻页、切换出发/到达走 `/api/flights/<IATA>?locale=&dir=&page=&q=`，避免把一座枢纽几万条航班号塞进 HTML。
 - **sitemap 不含起降时刻**，所以页面只展示航班号、航司与航线，并明确标注不含时刻；索引里同时有**代码共享航班号**（同一航线可能出现多家航司的号），页面按「航班号」统计而不是按实际执行班次，脚注里写明这一点。
-- 覆盖范围随目录变化：当前 501 座机场里 408 座有航班数据；没有数据的机场，航班区块、目录项与相关 FAQ 一起自动省略。
+- 覆盖范围随目录变化：当前 516 座机场里 408 座有航班数据；没有数据的机场，航班区块、目录项与相关 FAQ 一起自动省略。
 - 每个航班号还有一个独立页面 **`/flight/<number>`**（如 `/flight/aa100`、`/zh/flight/aa100`，大小写不敏感、规范为小写）：按 `app/[locale]/flight/[number]/page.tsx` 的机场页式结构展示头部、概览、**Leaflet + OpenStreetMap 航线地图**（大圆航线、起降点与 `Leaflet | © OpenStreetMap contributors` 归属；任一场缺坐标时退化为航线示意图）、起降机场卡、航班信息、同号全部航线（代码共享号可能有几十条）、同航线其他航班、FAQ 与 schema.org `Flight`/`FAQPage`。数据与机场板共用同一份内存索引，页面是 **ISR 动态路由**（`revalidate = 3600`），不参与 `generateStaticParams`，所以 31 万个号码不会拖慢构建；这些页面也不写入 sitemap（单文件放不下，且多数是长尾航班号），靠机场航班板和同航线相关航班的内链发现。机场航班板上的航班号现在都指向这些页面，页面再外链到 aviability 的原始航班页。
 - 刷新数据后重新构建即可；脚本会整体重写 `data/flights.json.gz`，并清掉旧的 `data/flights/` 目录，生成结果与代码一起提交。
 
@@ -434,22 +433,22 @@ scripts/                    提取、建库、灌数、抓取与自检脚本
 
 | 目录 | 内容 |
 | --- | --- |
-| `maps/`（558 张） | 机场封面图，`lib/map-images.ts` 按 IATA 索引；机场页下载按钮与首页图片位使用。其中 296 张由 `node scripts/generate-airport-maps.mjs` 用 OpenStreetMap 几何生成（ODbL，图上带 `© OpenStreetMap contributors`，溯源在 `scripts/maps-manifest.json`），其余是第三方下载图。目录里只有图片 |
-| `source-maps/`（558 张） | 上者的原始大图（宽 2000px），供需要原尺寸的场景。363 座机场里 **362 座有封面**，只有格陵兰的直升机场 LLU 在 OSM 里没有任何几何（见 `node scripts/check-maps.mjs`） |
+| `maps/`（638 张） | 机场封面图，`lib/map-images.ts` 按 IATA 索引；机场页下载按钮与首页图片位使用。其中 376 张由 `node scripts/generate-airport-maps.mjs` 用 OpenStreetMap 几何生成（ODbL，图上带 `© OpenStreetMap contributors`，溯源在 `scripts/maps-manifest.json`），其余是第三方下载图。目录里只有图片 |
+| `source-maps/`（638 张） | 上者的原始大图（宽 2000px），供需要原尺寸的场景。516 座目录机场全部有封面（`AUX` 使用 `AUX_.png` 别名文件；见 `node scripts/check-maps.mjs`） |
 | `terminal-maps/{CODE}/`（63 座） | 航站楼平面图 PNG + PDF，带 `terminal-maps-manifest.json` 溯源（来源、sha256、许可说明）；缺文件时图片回退到封面或 SVG 示意图、PDF 回退到搜索 |
-| `route/`（13 张） | 航线图的静态渲染图：首页航线条目那 12 座，加上机场页航线区单独渲染的 ICN（`scripts/generate-route-images.mjs --codes ICN`） |
+| `route/`（16 张） | 航线图的静态渲染图：首页航线区 12 座，加上机场页航线区单独渲染的 ICN、DEN、DFW、IAH（`scripts/generate-route-images.mjs`） |
 | `terminal-maps.png` | 首页「网站介绍」区块的照片（`components/HomeIntro.tsx`，1023×600） |
-| `flags/`（92 张） | 国家 / 地区旗帜（与 `countries` 数量一致） |
+| `flags/`（101 张） | 国家 / 地区旗帜（与 `countries` 数量一致） |
 | `data/world-airports.json`、`world-airport-map.jpg` | 首页地图索引与英雄区世界地图底图（`components/HeroRoutes.tsx` 在它上面用服务端 SVG 画大圆航线动画，`prefers-reduced-motion` 时静止） |
 
 另有 `lib/airport-geo.ts`（60 座机场的坐标与 IANA 时区，用于时间 / 详情 / 定位图区块）、`lib/airport-links.ts`（75 条机场官网）、`lib/encyclopedia-links.ts`（维基百科 / 百度百科外链）三张静态表——机场表里没有这些字段，缺失时对应按钮不渲染（错链接比没链接更糟）。
 
 ## 站点地图与 SEO
 
-- 每个已发布语言 × 每座机场 / 国家 / 有航线的机场都是预渲染页面（`generateStaticParams`），`revalidate = 3600` 每小时增量再生成；每个语言约 690 个页面（363 机场 + 92 国家 + 224 航线页 + 11 个固定页）
+- 每个已发布语言 × 每座机场 / 国家 / 有航线的机场都是预渲染页面（`generateStaticParams`），`revalidate = 3600` 每小时增量再生成；每个语言约 995 个页面（516 机场 + 101 国家 + 367 航线页 + 11 个固定页）
 - `<title>` / `description` 按语言与机场数据生成；机场页标题用 `latestAirportTitle` 带当前年份（随 ISR 滚动）
 - 结构化数据：`WebSite` + `SearchAction`（首页）、`Airport` + `BreadcrumbList` + `FAQPage`（机场页）、`Country` + `ItemList` + `BreadcrumbList` + `FAQPage`（国家页），均带 `inLanguage`；品牌名统一为 `World Airport Maps`（`lib/site.ts` 的 `SITE_NAME`），可见文案可本地化，机器可读字段只有一种拼法
-- **结构化数据里的图片**（`lib/schema-images.ts`）：每页给的是它自己显示的那张图——机场页用 `public/maps` 的封面，航线页用 `public/route` 的航线渲染图，站点身份节点（`Organization` / `WebSite`）与没有专属图的页面（国家页、没有封面的机场、没有渲染图的航线页）用 `public/world-airport-map.jpg`。写在 `WebPage.image` + `primaryImageOfPage` 与被描述实体（`Airport`）的 `image` 上，国家页的机场 `ItemList` 也逐条带封面。两个要点：URL 一律用绝对地址（`absoluteUrl`），且**只输出真实存在的文件**——封面与渲染图都走 `lib/map-images.ts` / `lib/route-images.ts` 的目录索引，没有就退回站点大图，不产出 404 的图片地址（363 座机场里 LLU、AUX 没有封面，给的就是大图）
+- **结构化数据里的图片**（`lib/schema-images.ts`）：每页给的是它自己显示的那张图——机场页用 `public/maps` 的封面，航线页用 `public/route` 的航线渲染图，站点身份节点（`Organization` / `WebSite`）与没有专属图的页面（国家页、没有封面的机场、没有渲染图的航线页）用 `public/world-airport-map.jpg`。写在 `WebPage.image` + `primaryImageOfPage` 与被描述实体（`Airport`）的 `image` 上，国家页的机场 `ItemList` 也逐条带封面。两个要点：URL 一律用绝对地址（`absoluteUrl`），且**只输出真实存在的文件**——封面与渲染图都走 `lib/map-images.ts` / `lib/route-images.ts` 的目录索引，没有就退回站点大图，不产出 404 的图片地址（当前 516 座目录机场均有封面；`AUX` 使用 `AUX_.png` 别名）
 - 机场页 FAQ 由数据库字段按语言生成（航站楼构成、距市中心距离、如何进市区、设施、所属城市国家），同时用于页面展示与 `FAQPage` 富结果；国家页 FAQ 同理
 - 首页的 `#facts` 区块把同一批数据再写成 **`<dl>` 与 `<table>`**（`components/HomeFacts.tsx`）：AI 引擎与摘要式搜索更容易从列表 / 表格里抽事实，纯段落文案则难。带 `caption` 与 `scope`，机场名是通往详情页的真实链接
 - `sitemap.xml` 为**每个已发布语言的每个地址**各输出一条 `<url>`（`/airport/PEK`、`/de/airport/PEK`、`/zh/airport/PEK`、`/tw/airport/PEK` 都是独立的 `<loc>`），每条都带完整的 `xhtml:link` alternates 与 `x-default`；博客只列出真正有译文的那几种语言。`robots.txt` 屏蔽 `/api/`
@@ -471,13 +470,13 @@ URL 约定：
 2. **网站介绍**（`#intro`）：`public/terminal-maps.png` 机场照片 + 三组小标题与正文（`components/HomeIntro.tsx`，文案在 `home.intro`）。照片排在正文之前，所以这一段没有 kicker / 区块标题，语义名称走 `aria-label`；正文栏宽 880px，比 `.section` 的 1240px 窄，便于阅读。样式全部是组件里的 Tailwind 原子类（不新增 `globals.css` 规则，与顶栏、分类卡片同一做法），只有外层沿用各区块共用的 `.section`。照片是**固定高度横幅**：桌面 420px / 手机 200px，宽度 100%，`object-cover` 只裁不压（原图 1023×600 为 1.7:1，裁切偏上 `object-[50%_40%]`，保证机头机尾都在画面里）；手机另给一个高度，否则 390px 宽的屏幕上 420px 高几乎成方形，飞机会被裁掉。
 3. **世界地图**（`#map`）：3244 座机场的点阵，按区域浏览。
 4. **地理工具**（`#tools`）：三个工具卡片。
-5. **功能分区**（`#browse`）：六张指向真实目的地的卡片（全部机场、按国家浏览、按区域浏览、热门机场城市、最近更新、机场指南），角标数字来自数据库与内容目录，不写死。
-6. **热门机场**（`#popular`）：随机 10 张机场封面图。
+5. **功能分区**（`#browse`）：七张指向真实目的地的卡片（全部机场、按国家浏览、按区域浏览、热门机场城市、最近更新、机场指南、航线图），角标数字来自数据库与内容目录，不写死。
+6. **热门机场**（`#popular`）：固定展示 Atlanta / London / Dubai / Los Angeles / Singapore 五座机场的封面图（`app/[locale]/page.tsx` 的 `POPULAR_CODES`）。
 7. **热门机场航线图**（`#routes`）：直飞目的地最多的机场，每格一张静态航线图并链接到航线页。
 8. **机场指南**（`#guides`）：有 Markdown 指南的机场，展示客流最大的 12 座，无指南时整段不渲染。
 9. **最近更新**（`#recent`，按 `updated_at` 倒序）。
 10. **按国家分类**（`#countries`）：国家 / 地区网格。
-11. **列表与表格**（`#facts`，`components/HomeFacts.tsx`）：把同一批数据写成真正的 `<dl>` 与 `<table>`——「收录概览」七项（机场 / 国家地区 / 大区 / 城市 / 航站楼 / 登机口 / 航线图），「年旅客量最大的机场」12 行（排名、IATA、机场、城市、国家、航站楼、登机口、年旅客量，机场名链到详情页），以及「机场的大区分布」（按 `airports.region` 汇总机场 / 航站楼 / 登机口）。数据全部来自首页已经加载的 `airports` 与 `stats`，不额外查库；航线数用「目录内且有航线数据的机场数」（224），不是航线文件里全世界的 2643。两张表都有（视觉隐藏的）`caption` 与 `scope`，窄屏在 `overflow-x-auto` 容器里横向滚动。
+11. **列表与表格**（`#facts`，`components/HomeFacts.tsx`）：把同一批数据写成真正的 `<dl>` 与 `<table>`——「收录数字」七项（机场 / 国家地区 / 目录大区 / 不同城市名 / 航站楼 / 登机口 / 有航线图的机场），「有旅客量数据的机场」12 行（排名、IATA、机场、城市、国家、航站楼、登机口、年旅客量，机场名链到详情页），以及「机场的目录大区分布」（按 `airports.region` 汇总机场 / 有详细数据 / 航站楼 / 登机口）。区块顶部注明旅客量、航站楼与登机口数据只覆盖有详细记录的机场。数据全部来自首页已经加载的 `airports` 与 `stats`，不额外查库；航线数用「目录内且有航线数据的机场数」（367），不是航线文件里全世界的 2643。两张表都有（视觉隐藏的）`caption` 与 `scope`，窄屏在 `overflow-x-auto` 容器里横向滚动。
 
 `/countries` 按区域分组并带一条区域跳转条；每个区域块标注该区域的国家数与机场数。
 

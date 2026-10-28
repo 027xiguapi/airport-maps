@@ -128,6 +128,26 @@ export function UpIcon(props: IconProps) {
   );
 }
 
+/** Playback controls for the homepage route slideshow. Filled, unlike the
+    stroke icons above, because a 1.8px triangle reads as an outline box at the
+    control's 13px size. */
+export function PlayIcon(props: IconProps) {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M8 4.9c0-.8.9-1.3 1.6-.9l9.2 6.2c.6.4.6 1.3 0 1.7l-9.2 6.2c-.7.4-1.6-.1-1.6-.9z" />
+    </svg>
+  );
+}
+
+export function PauseIcon(props: IconProps) {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <rect x="6" y="4" width="4.2" height="16" rx="1.1" />
+      <rect x="13.8" y="4" width="4.2" height="16" rx="1.1" />
+    </svg>
+  );
+}
+
 /** Theme-toggle glyphs. Same 24×24 stroke language as the sprite set. */
 export function SunIcon(props: IconProps) {
   return (

@@ -58,9 +58,9 @@ const CHROME = {
   hero: {
     root: 'relative mx-auto mt-[34px] max-w-[760px]',
     input:
-      'h-[60px] w-full rounded-[30px] border-0 bg-white py-0 pl-[26px] pr-[148px] text-[16.5px] text-ink outline-none [font-family:inherit] [box-shadow:var(--shadow-lg)] placeholder:text-ink-faint max-[820px]:pr-[120px] max-[820px]:text-[15px] max-[480px]:pl-[22px] max-[480px]:pr-[22px]',
+      'h-[60px] w-full border-0 bg-white py-0 pl-[26px] pr-[148px] text-[16.5px] text-ink outline-none [font-family:inherit] [box-shadow:var(--shadow-lg)] placeholder:text-ink-faint max-[820px]:pr-[120px] max-[820px]:text-[15px] max-[480px]:pl-[22px] max-[480px]:pr-[22px]',
     button:
-      'absolute bottom-1.5 right-1.5 top-1.5 rounded-[24px] bg-amber px-[26px] py-0 text-[15.5px] font-bold tracking-[0.04em] text-navy-900 transition-[filter] duration-150 hover:brightness-[1.06] max-[820px]:px-[18px] max-[820px]:py-0 max-[820px]:text-[14px] max-[480px]:hidden',
+      'absolute bottom-1.5 right-1.5 top-1.5 bg-amber px-[26px] py-0 text-[15.5px] font-bold tracking-[0.04em] text-navy-900 transition-[filter] duration-150 hover:brightness-[1.06] max-[820px]:px-[18px] max-[820px]:py-0 max-[820px]:text-[14px] max-[480px]:hidden',
     /** The dropdown clears the taller field instead of the 46px one. */
     suggest: 'top-[68px]',
   },
@@ -189,9 +189,9 @@ export default function SearchBox({ variant = 'top', labels, locale = 'zh', auto
 
   const dropdown = open && (
     <div
-      className={`absolute left-0 right-0 z-[120] max-h-[380px] overflow-y-auto rounded-xl bg-card text-ink [box-shadow:var(--shadow-lg)] dark:border dark:border-line ${
-        isHero ? CHROME.hero.suggest : 'top-[46px]'
-      }`}
+      className={`absolute left-0 right-0 z-[120] max-h-[380px] overflow-y-auto bg-card text-ink [box-shadow:var(--shadow-lg)] dark:border dark:border-line ${
+        isHero ? '' : 'rounded-xl'
+      } ${isHero ? CHROME.hero.suggest : 'top-[46px]'}`}
       id={listId}
       role="listbox"
     >
@@ -222,7 +222,9 @@ export default function SearchBox({ variant = 'top', labels, locale = 'zh', auto
               </span>
             </div>
             <img
-              className="h-[17px] w-[26px] flex-none rounded-[3px] object-cover [box-shadow:var(--flag-ring)]"
+              className={`h-[17px] w-[26px] flex-none object-cover [box-shadow:var(--flag-ring)] ${
+                isHero ? '' : 'rounded-[3px]'
+              }`}
               src={hit.flagUrl}
               alt=""
               width={26}

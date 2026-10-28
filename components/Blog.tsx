@@ -87,19 +87,19 @@ function PostRow({
 
   return (
     <Link
-      className="group flex items-center gap-4 rounded-[12px] border border-line bg-card p-3.5 transition-[border-color,box-shadow,transform] duration-150 hover:-translate-y-0.5 hover:border-sky-500 hover:[box-shadow:var(--shadow-md)] sm:gap-6 sm:px-5 sm:py-4"
+      className="group flex items-center gap-4 bg-card p-3.5 transition-[box-shadow,transform] duration-150 hover:-translate-y-0.5 hover:[box-shadow:var(--shadow-md)] sm:gap-6 sm:px-5 sm:py-4"
       href={localizedPath(locale, blogPostPath(post.slug))}
     >
       <span className="flex min-w-0 flex-1 flex-col">
-        <h3 className="line-clamp-2 text-[15.5px] font-bold leading-snug text-ink-heading transition-colors duration-150 group-hover:text-sky-600 sm:text-[18px]">
+        <h3 className="line-clamp-2 text-[20px] font-bold leading-snug text-ink-heading transition-colors duration-150 group-hover:text-sky-600 sm:text-[18px] lg:text-[20px]">
           {post.title}
         </h3>
         {post.summary && (
-          <span className="mt-1.5 line-clamp-2 text-[12.5px] leading-relaxed text-ink-soft max-sm:hidden">
+          <span className="mt-1.5 line-clamp-2 text-[12.5px] leading-relaxed text-ink-soft max-sm:hidden lg:text-[13.5px]">
             {post.summary}
           </span>
         )}
-        <span className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] text-ink-faint">
+        <span className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] text-ink-faint lg:text-[13px]">
           {post.source && (
             <>
               <span className="max-sm:hidden">{post.source}</span>
@@ -117,7 +117,7 @@ function PostRow({
           <CommentCount count={commentCount} labels={t.comments} className="text-ink-faint" />
         </span>
       </span>
-      <span className="h-[78px] w-[104px] flex-none overflow-hidden rounded-[9px] bg-navy-950 sm:h-[118px] sm:w-[184px]">
+      <span className="h-[92px] w-[120px] flex-none overflow-hidden bg-navy-950 sm:h-[152px] sm:w-[224px] lg:h-[168px] lg:w-[248px]">
         {cover ? (
           <img
             className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.04]"

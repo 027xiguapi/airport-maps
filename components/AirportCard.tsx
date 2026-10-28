@@ -88,9 +88,12 @@ export default function AirportCard({
 export function CountryGrid({
   locale,
   countries,
+  square = false,
 }: {
   locale: Locale;
   countries: { code: string; name: string; region: string; flagUrl: string; airportCount: number }[];
+  /** Square corners (homepage); other pages keep the shared Card radius. */
+  square?: boolean;
 }) {
   const t = getMessages(locale);
   return (
@@ -103,11 +106,15 @@ export function CountryGrid({
         <Card
           asChild
           key={country.code}
-          className="min-w-0 cursor-pointer flex-row items-center gap-3.5 p-[18px] transition-[transform,box-shadow,border-color] duration-[160ms] hover:-translate-y-[3px] hover:border-sky-400 hover:[box-shadow:var(--shadow-md)]"
+          className={`min-w-0 cursor-pointer flex-row items-center gap-3.5 p-[18px] transition-[transform,box-shadow,border-color] duration-[160ms] hover:-translate-y-[3px] hover:border-sky-400 hover:[box-shadow:var(--shadow-md)] ${
+            square ? 'rounded-none' : ''
+          }`}
         >
           <Link href={localizedPath(locale, `/country/${country.code}`)}>
             <img
-              className="h-[34px] w-[52px] flex-none rounded-[6px] object-cover shadow-[0_0_0_1px_rgba(10,42,67,0.10),var(--shadow-sm)]"
+              className={`h-[34px] w-[52px] flex-none object-cover shadow-[0_0_0_1px_rgba(10,42,67,0.10),var(--shadow-sm)] ${
+                square ? '' : 'rounded-[6px]'
+              }`}
               src={country.flagUrl}
               alt={country.name}
               loading="lazy"
@@ -122,7 +129,9 @@ export function CountryGrid({
                 shrink and truncate rather than set the row's min-content width. */}
             <Badge
               variant="secondary"
-              className="min-w-0 flex-[0_1_auto] truncate rounded-2xl font-display text-[15px] font-semibold"
+              className={`min-w-0 flex-[0_1_auto] truncate font-display text-[15px] font-semibold ${
+                square ? 'rounded-none' : 'rounded-2xl'
+              }`}
             >
               {t.units.airportsChip(country.airportCount)}
             </Badge>

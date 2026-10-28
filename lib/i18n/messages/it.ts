@@ -228,7 +228,7 @@ export const it: Messages = {
       kicker: 'Mappe dei terminal',
       title: 'Mappe degli aeroporti più popolari',
       en: 'Mappe degli aeroporti',
-      sub: 'Una selezione a rotazione delle copertine delle mappe dei terminal di tutto il mondo — apri la pagina di un aeroporto per la mappa completa.',
+      sub: 'Una selezione di copertine delle mappe dei terminal dei principali aeroporti del mondo — apri la pagina di un aeroporto per la mappa completa.',
     },
     recent: {
       kicker: 'Novità',
@@ -237,12 +237,17 @@ export const it: Messages = {
       sub: 'Aeroporti, paesi e guide di viaggio nuovi o appena rivisti.',
       countriesTitle: 'Paesi aggiornati di recente',
     },
-    /** Homepage route-map strip: the widest direct networks, linking to /route/<IATA>. */
+    /** Homepage route-map showcase: the widest direct networks, map left, city tabs right. */
     routes: {
       kicker: 'Rotte',
       title: 'Mappe delle rotte più trafficate',
       en: 'Mappe delle rotte',
       sub: 'Aeroporti ordinati per numero di destinazioni servite senza scalo — aprine uno per la mappa delle rotte, le compagnie e l’elenco delle destinazioni.',
+      collection: 'La collezione di rotte',
+      tabsLabel: 'Mappe delle rotte per città',
+      explore: (city: string) => `Esplora ${city}`,
+      play: 'Avvia la presentazione',
+      pause: 'Metti in pausa la presentazione',
     },
     countries: {
       kicker: 'Per paese',
@@ -265,24 +270,26 @@ export const it: Messages = {
      * and cite the figures directly.
      */
     facts: {
-      kicker: 'Elenchi e tabelle',
+      kicker: 'Dati dell’atlante',
       title: 'I dati aeroportuali in breve',
       en: 'Elenchi e tabelle',
-      sub: 'Le cifre dell’atlante presentate come elenchi e tabelle: copertura, aeroporti più trafficati per passeggeri annui e ripartizione per regione.',
-      coverageTitle: 'Copertura in breve',
+      sub: 'Le cifre dell’atlante presentate come elenchi e tabelle: copertura, aeroporti più trafficati tra quelli con passeggeri annui pubblicati e ripartizione per regione.',
+      note: (pax: string, detailed: string, total: string) =>
+        `I dati sui passeggeri coprono ${pax} aeroporti su ${total}; quelli su terminal e gate, ${detailed} su ${total}. Il conteggio dei terminal segue la classificazione dell’atlante e può includere le concourse.`,
+      coverageTitle: 'Copertura in cifre',
       coverage: {
         airports: 'Aeroporti',
         countries: 'Paesi e regioni',
-        regions: 'Regioni del mondo',
-        cities: 'Città',
+        regions: 'Regioni dell’atlante',
+        cities: 'Nomi di città unici',
         terminals: 'Terminal',
         gates: 'Gate',
-        routes: 'Mappe delle rotte',
+        routes: 'Aeroporti con mappe delle rotte',
       },
       busiest: {
         title: 'Aeroporti più trafficati per passeggeri annui',
-        sub: 'I 12 aeroporti con il maggior traffico passeggeri annuo, in classifica.',
-        caption: 'Aeroporti ordinati per traffico passeggeri annuo',
+        sub: 'I 12 aeroporti più trafficati tra quelli con passeggeri annui pubblicati.',
+        caption: 'Aeroporti con passeggeri annui pubblicati, in classifica',
         rank: 'Posizione',
         iata: 'IATA',
         airport: 'Aeroporto',
@@ -293,11 +300,12 @@ export const it: Messages = {
         pax: 'Passeggeri annui (M)',
       },
       regions: {
-        title: 'Aeroporti per regione',
-        sub: 'Numero di aeroporti, terminal e gate raggruppati per regione del mondo.',
-        caption: 'Aeroporti raggruppati per regione del mondo',
+        title: 'Aeroporti per regione dell’atlante',
+        sub: 'Numero di aeroporti, terminal e gate secondo le regioni dell’atlante; alcuni Paesi e territori appartengono a due regioni.',
+        caption: 'Aeroporti raggruppati per regione dell’atlante',
         region: 'Regione',
         airports: 'Aeroporti',
+        detailed: 'Con dati dettagliati',
         terminals: 'Terminal',
         gates: 'Gate',
       },
@@ -688,8 +696,6 @@ export const it: Messages = {
     /** Same card, for the airports whose network the repo has rendered: the picture is the link. */
     previewCta: (iata: string) => `Vedi la mappa completa delle rotte ${iata}`,
     teaserSub: (count: string) => `${count} destinazioni dirette: mappa, compagnie e distanze.`,
-    /** Figure on a tile of the homepage's route strip. */
-    cardMeta: (count: string) => `${count} destinazioni dirette`,
     /** Section headings, each naming the airport (`en` line takes the IATA code). */
     mapSectionTitle: (name: string) => `${name} — mappa delle rotte dirette`,
     tableKicker: (iata: string) => `${iata} · Destinazioni`,

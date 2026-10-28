@@ -9,9 +9,11 @@ import CommentCount from '@/components/CommentCount';
 import HeroRoutes from '@/components/HeroRoutes';
 import HomeFacts from '@/components/HomeFacts';
 import HomeIntro from '@/components/HomeIntro';
-import { PopularMaps, RouteNav, CountryUpdates, UpdateList } from '@/components/HomeSections';
+import { PopularMaps, CountryUpdates, UpdateList } from '@/components/HomeSections';
 import JsonLd from '@/components/JsonLd';
+import RouteShowcase, { type RouteShowcaseSlide } from '@/components/RouteShowcase';
 import SearchBox from '@/components/SearchBox';
+import { airportLeadPhoto } from '@/lib/airport-photos';
 import { blogAirportDates, getLatestBlogPosts } from '@/lib/blog';
 import { commentThreadKey } from '@/lib/comment-labels';
 import { getCommentCounts } from '@/lib/comments';
@@ -32,6 +34,7 @@ import {
 } from '@/lib/queries';
 import { coverUrl, mapImageCodes } from '@/lib/map-images';
 import { routeDestinationCounts } from '@/lib/routes';
+import { routeImageUrl } from '@/lib/route-images';
 import { absoluteUrl, ORG_NODE_ID, SITE_IMAGE, SITE_NAME, SITE_URL, WEBSITE_NODE_ID, webPageRights } from '@/lib/site';
 import { getAirportGeo } from '@/lib/airport-geo';
 import worldAirportsMeta from '@/lib/world-airports-meta.json';
@@ -58,15 +61,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /** Airports offered as one-tap shortcuts under the search box. */
 const SHORTCUTS = ['LHR', 'JFK', 'DXB', 'HND', 'SIN', 'PEK'];
 
-/** Fisher–Yates over a copy, so callers can keep the original order. */
-function shuffled<T>(list: readonly T[]): T[] {
-  const out = [...list];
-  for (let i = out.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [out[i], out[j]] = [out[j], out[i]];
-  }
-  return out;
-}
+/** Curated "Popular airport maps" strip, in display order. */
+const POPULAR_CODES = ['ATL', 'LHR', 'DXB', 'LAX', 'SIN'];
 
 export default async function HomePage({ params }: Props) {
   const locale = parseLocale((await params).locale);
@@ -75,12 +71,12 @@ export default async function HomePage({ params }: Props) {
   const t = getMessages(locale);
   const guidedCodes = await listGuidedAirports(locale);
 
-  const [stats, popularPool, countries, airports, cityCount, regionCount, guided, guideDates] =
+  const [stats, popularAirports, countries, airports, cityCount, regionCount, guided, guideDates] =
     await Promise.all([
       getStats(),
-      // Random airports that have a /maps cover — reshuffles on every
-      // (re)validation of the page; the section picks five of them.
-      getAirportsByCodes(locale, mapImageCodes()),
+      // Curated covers for the "Popular airport maps" strip; reordered below
+      // because getAirportsByCodes sorts its result by annual passengers.
+      getAirportsByCodes(locale, POPULAR_CODES),
       getCountries(locale),
       getAirportSummaries(locale),
       getCityCount(),
@@ -143,7 +139,13 @@ export default async function HomePage({ params }: Props) {
     .sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name))
     .slice(0, 6);
 
-  const popular = shuffled(popularPool).slice(0, 5);
+  // Keep the curated order even though getAirportsByCodes returns the set by
+  // passenger volume.
+  const popularByCode = new Map(popularAirports.map((airport) => [airport.iata, airport]));
+  const popular = POPULAR_CODES.flatMap((code) => {
+    const airport = popularByCode.get(code);
+    return airport ? [airport] : [];
+  });
   // Guide tiles show the same 400px /maps covers; a few guided airports have
   // no cover yet and render an IATA wordmark placeholder instead.
   const coverCodes = new Set(mapImageCodes());
@@ -181,6 +183,39 @@ export default async function HomePage({ params }: Props) {
     )
     .slice(0, 12)
     .map((airport) => ({ ...airport, destinationCount: routeCounts.get(airport.iata)! }));
+
+  /**
+   * The showcase's slides. The static route render is the panel's whole picture,
+   * so an airport without one cannot be a slide; the rest of the ranking stays.
+   * Each slide carries its airport's lead photo (when a captioned one exists)
+   * and every string the client component prints, because a function prop
+   * cannot cross the server/client boundary.
+   */
+  const routeSlides: RouteShowcaseSlide[] = routeNav.flatMap((airport) => {
+    const mapImage = routeImageUrl(airport.iata);
+    if (!mapImage) return [];
+    const photo = airportLeadPhoto(locale, airport.iata);
+    return [{
+      iata: airport.iata,
+      name: airport.name,
+      city: airport.city,
+      region: airport.region,
+      countryName: airport.countryName,
+      mapImage,
+      mapAlt: t.route.heading(airport.name),
+      teaser: t.route.teaserSub(formatNumber(airport.destinationCount, locale)),
+      cta: t.home.routes.explore(airport.city),
+      href: localizedPath(locale, `/route/${airport.iata}`),
+      photo: photo
+        ? {
+            src: photo.src,
+            alt: photo.caption ?? t.route.heading(airport.name),
+            credit: photo.credit.host ? t.airport.photosCredit(photo.credit.host) : null,
+            creditUrl: photo.credit.url,
+          }
+        : null,
+    }];
+  });
 
   // Leaflet world map: the table summaries joined with static coordinates.
   const mapAirports = airports.flatMap((a) => {
@@ -342,7 +377,7 @@ export default async function HomePage({ params }: Props) {
             <div className="mt-4 flex flex-wrap justify-center gap-2 max-[520px]:gap-1.5">
               {shortcuts.map((airport) => (
                 <Link
-                  className="inline-flex items-center gap-[7px] rounded-[20px] border border-white/24 bg-white/10 px-[13px] py-1.5 text-[13px] text-white/90 transition-[background-color,border-color] duration-150 hover:border-amber hover:bg-white/20 max-[520px]:px-[11px] max-[520px]:py-[5px] max-[520px]:text-[12.5px]"
+                  className="inline-flex items-center gap-[7px] border border-white/24 bg-white/10 px-[13px] py-1.5 text-[13px] text-white/90 transition-[background-color,border-color] duration-150 hover:border-amber hover:bg-white/20 max-[520px]:px-[11px] max-[520px]:py-[5px] max-[520px]:text-[12.5px]"
                   href={localizedPath(locale, `/airport/${airport.iata}`)}
                   key={airport.iata}
                 >
@@ -355,7 +390,7 @@ export default async function HomePage({ params }: Props) {
             </div>
           )}
 
-          <div className="mx-auto mt-11 flex max-w-[560px] flex-wrap gap-0 overflow-hidden rounded-[14px] border border-white/16 bg-white/6 backdrop-blur-[4px]">
+          <div className="mx-auto mt-11 flex max-w-[560px] flex-wrap gap-0 overflow-hidden border border-white/16 bg-white/6 backdrop-blur-[4px]">
             <div className="min-w-[130px] flex-1 border-r border-r-white/14 px-[22px] py-[18px] last:border-r-0">
               <div className="font-display text-[32px] font-semibold leading-[1.1] text-white">
                 {formatNumber(stats?.countryCount ?? 0, locale)}
@@ -476,9 +511,9 @@ export default async function HomePage({ params }: Props) {
             const Icon =
                 slug === 'coordinate-converter' ? SwapIcon : slug === 'dms-converter' ? GlobeIcon : RulerIcon;
             return (
-                <Card asChild className={TOOL_CARD_CLASSES} key={slug}>
+                <Card asChild className={`${TOOL_CARD_CLASSES} rounded-none`} key={slug}>
                 <Link href={localizedPath(locale, `/tool/${slug}`)}>
-                <span className="cat-icon transition-[background-color,color] duration-[160ms] group-hover:bg-navy-800 group-hover:text-white">
+                <span className="cat-icon rounded-none transition-[background-color,color] duration-[160ms] group-hover:bg-navy-800 group-hover:text-white">
                   <Icon width={20} height={20} />
                 </span>
                   <span className="cat-body">
@@ -526,7 +561,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* ----------------------------------------------------------- route maps */}
-      {routeNav.length > 0 && (
+      {routeSlides.length > 0 && (
         <section className="section" id="routes">
           <div className="section-head">
             <div>
@@ -538,7 +573,15 @@ export default async function HomePage({ params }: Props) {
               <p className="sec-sub">{t.home.routes.sub}</p>
             </div>
           </div>
-          <RouteNav locale={locale} airports={routeNav} />
+          <RouteShowcase
+            slides={routeSlides}
+            labels={{
+              collection: t.home.routes.collection,
+              tabsLabel: t.home.routes.tabsLabel,
+              play: t.home.routes.play,
+              pause: t.home.routes.pause,
+            }}
+          />
         </section>
       )}
 
@@ -583,7 +626,7 @@ export default async function HomePage({ params }: Props) {
                     </span>
                     <span className="flex min-w-0 items-center gap-[7px] truncate text-[12px] text-white/60">
                       <img
-                        className="h-4 w-6 flex-none rounded-[3px] object-cover"
+                        className="h-4 w-6 flex-none object-cover"
                         src={airport.flagUrl}
                         alt=""
                         loading="lazy"
@@ -595,16 +638,16 @@ export default async function HomePage({ params }: Props) {
                     {airport.name}
                   </h3>
                   <span className="mt-2.5 flex flex-wrap gap-1.5">
-                    <span className="rounded-[20px] bg-white/10 px-2.5 py-[3px] text-[11.5px] text-white/80">
+                    <span className="bg-white/10 px-2.5 py-[3px] text-[11.5px] text-white/80">
                       {t.units.terminals(airport.terminalCount)}
                     </span>
-                    <span className="rounded-[20px] bg-white/10 px-2.5 py-[3px] text-[11.5px] text-white/80">
+                    <span className="bg-white/10 px-2.5 py-[3px] text-[11.5px] text-white/80">
                       {t.units.gates(airport.gateCount)}
                     </span>
                     <CommentCount
                       count={commentCounts[commentThreadKey('airport', airport.iata)] ?? 0}
                       labels={t.comments}
-                      className="rounded-[20px] bg-white/10 px-2.5 py-[3px] text-[11.5px] text-white/80"
+                      className="bg-white/10 px-2.5 py-[3px] text-[11.5px] text-white/80"
                     />
                   </span>
                   <span className="mt-auto inline-flex items-center gap-1.5 pt-3 pl-3 text-[12.5px] font-semibold text-amber [&>svg]:transition-transform [&>svg]:duration-150 group-hover:[&>svg]:translate-x-[3px]">
@@ -670,7 +713,7 @@ export default async function HomePage({ params }: Props) {
             <ArrowIcon />
           </Link>
         </div>
-        <CountryGrid locale={locale} countries={countries} />
+        <CountryGrid locale={locale} countries={countries} square />
       </section>
 
       {/* ------------------------------------------------- lists and tables */}

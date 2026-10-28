@@ -3,26 +3,19 @@ import CommentCount from '@/components/CommentCount';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { commentThreadKey } from '@/lib/comment-labels';
-import { formatDate, formatNumber } from '@/lib/format';
-import { PlaneIcon } from '@/lib/icons';
+import { formatDate } from '@/lib/format';
 import { coverUrl } from '@/lib/map-images';
-import { routeImageUrl } from '@/lib/route-images';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import type { AirportSummary } from '@/lib/types';
 
 /**
- * The homepage's list blocks, written as utilities rather than the `.update-*`,
- * `.popular-*` and `.route-*` rules that used to live in globals.css. The
- * breakpoints are the ones those rules used (640px, then 480px for the old
- * popular strip), so the layouts collapse where they did.
+ * The homepage's list blocks, written as utilities rather than the `.update-*`
+ * and `.popular-*` rules that used to live in globals.css. The breakpoints are
+ * the ones those rules used (640px, then 480px for the old popular strip), so
+ * the layouts collapse where they did. The route showcase lives in
+ * components/RouteShowcase.tsx.
  */
-
-/**
- * The route strip is a scroller: a row that snaps and scrolls sideways instead
- * of wrapping, so the page stays one column wide at every size.
- */
-const STRIP = 'flex overflow-x-auto pb-2 [scroll-snap-type:x_proximity]';
 
 const TILE =
   'flex flex-none flex-col overflow-hidden bg-navy-900 text-white ' +
@@ -46,7 +39,7 @@ export function UpdateList({
   rows: UpdateRow[];
 }) {
   return (
-    <Card className="overflow-hidden [box-shadow:var(--shadow-sm)]">
+    <Card className="overflow-hidden rounded-none [box-shadow:var(--shadow-sm)]">
       {rows.map(({ airport, date }, i) => (
         <Link
           className="flex cursor-pointer items-center gap-4 border-b border-b-line px-[22px] py-[15px] transition-[background-color] duration-[130ms] last:border-b-0 hover:bg-sky-100 max-[640px]:gap-3 max-[640px]:px-4 max-[640px]:py-[13px]"
@@ -68,12 +61,12 @@ export function UpdateList({
           {/* The flag is the first thing to go on a phone: the row is already
               carrying an IATA code and the city · country line. */}
           <img
-            className="h-[22px] w-[34px] flex-none rounded-[4px] object-cover [box-shadow:var(--flag-ring)] max-[640px]:hidden"
+            className="h-[22px] w-[34px] flex-none object-cover [box-shadow:var(--flag-ring)] max-[640px]:hidden"
             src={airport.flagUrl}
             alt={airport.countryName}
             loading="lazy"
           />
-          <Badge variant="secondary" className="text-[11.5px] font-semibold tracking-[0.05em]">
+          <Badge variant="secondary" className="rounded-none text-[11.5px] font-semibold tracking-[0.05em]">
             <time dateTime={date}>{formatDate(date, locale)}</time>
           </Badge>
         </Link>
@@ -96,12 +89,12 @@ export function CountryUpdates({ locale, rows }: { locale: Locale; rows: Country
     <div className="grid grid-cols-[repeat(auto-fill,minmax(min(230px,100%),1fr))] gap-2.5">
       {rows.map((row) => (
         <Link
-          className="flex items-center gap-3 rounded-[9px] border border-line bg-card px-3.5 py-2.5 transition-[border-color,box-shadow] duration-150 hover:border-sky-500 hover:[box-shadow:var(--shadow-sm)]"
+          className="flex items-center gap-3 border border-line bg-card px-3.5 py-2.5 transition-[border-color,box-shadow] duration-150 hover:border-sky-500 hover:[box-shadow:var(--shadow-sm)]"
           href={localizedPath(locale, `/country/${row.code}`)}
           key={row.code}
         >
           <img
-            className="h-[18px] w-[26px] flex-none rounded-[3px] object-cover [box-shadow:var(--flag-ring)]"
+            className="h-[18px] w-[26px] flex-none object-cover [box-shadow:var(--flag-ring)]"
             src={row.flagUrl}
             alt=""
             loading="lazy"
@@ -155,7 +148,7 @@ function MapTile({
           alt={airport.name}
           loading="lazy"
         />
-        <span className="absolute right-2 top-2 inline-flex items-center rounded-full bg-navy-950/75 px-2 py-[3px] text-[11px] font-semibold text-white backdrop-blur-[2px]">
+        <span className="absolute right-2 top-2 inline-flex items-center bg-navy-950/75 px-2 py-[3px] text-[11px] font-semibold text-white backdrop-blur-[2px]">
           <CommentCount count={commentCount} labels={t.comments} />
         </span>
       </span>
@@ -222,64 +215,6 @@ export function PopularMaps({
           />
         ))}
       </div>
-    </div>
-  );
-}
-
-/** One airport on the homepage route strip: the summary plus its destination count. */
-export type RouteNavItem = AirportSummary & { destinationCount: number };
-
-/**
- * Homepage route-map strip: the airports with the widest direct networks, each
- * tile showing its static route-map render (public/route, see
- * scripts/generate-route-images.mjs) above the summary and linking to the
- * standalone route page (/route/<IATA>). The ranking (by destination count,
- * then IATA for a stable order) happens in the page, which already holds every
- * airport summary. Airports without a render yet fall back to the text-only
- * tile.
- */
-export function RouteNav({ locale, airports }: { locale: Locale; airports: RouteNavItem[] }) {
-  const t = getMessages(locale);
-
-  return (
-    <div className={`${STRIP} gap-3.5`}>
-      {airports.map((airport) => {
-        const img = routeImageUrl(airport.iata);
-        return (
-          <Link
-            className={`${TILE} w-[212px]`}
-            href={localizedPath(locale, `/route/${airport.iata}`)}
-            key={airport.iata}
-          >
-            {img && (
-              <span className="block flex-none bg-navy-950">
-                <img
-                  className="block h-auto w-full"
-                  src={img}
-                  alt={airport.name}
-                  loading="lazy"
-                  width={690}
-                  height={450}
-                />
-              </span>
-            )}
-            <span className="flex min-w-0 flex-1 flex-col px-[18px] pb-4 pt-3.5">
-              {/* Icon sizing rides on the parent: the icons in lib/icons.tsx take
-                  no props, so a className on the glyph itself would be dropped. */}
-              <span className="flex items-center gap-2 font-display text-[19px] font-semibold tracking-[0.05em] text-white/92 [&>svg]:h-4 [&>svg]:w-4 [&>svg]:flex-none [&>svg]:text-amber">
-                <PlaneIcon aria-hidden="true" />
-                {airport.iata}
-              </span>
-              <span className="mt-1 truncate text-[13.5px] font-semibold text-white/80">
-                {airport.city}
-              </span>
-              <span className="mt-auto truncate pt-2 text-[12px] text-white/55">
-                {t.route.cardMeta(formatNumber(airport.destinationCount, locale))}
-              </span>
-            </span>
-          </Link>
-        );
-      })}
     </div>
   );
 }

@@ -35,7 +35,7 @@ export default function CategoryGrid({
         const body = (
           <>
             {/* The icon swaps to a navy well on hover (was `.cat-card:hover .cat-icon`). */}
-            <span className="cat-icon transition-[background-color,color] duration-[160ms] group-hover:bg-navy-800 group-hover:text-white">
+            <span className="cat-icon rounded-none transition-[background-color,color] duration-[160ms] group-hover:bg-navy-800 group-hover:text-white">
               <Icon name={card.icon} />
             </span>
             <span className="cat-body">
@@ -46,7 +46,7 @@ export default function CategoryGrid({
           </>
         );
         const cardClasses =
-          'group relative min-h-[126px] cursor-pointer flex-row items-start gap-3.5 px-[22px] py-5 transition-[transform,box-shadow,border-color] duration-[160ms] hover:-translate-y-[3px] hover:border-sky-400 hover:[box-shadow:var(--shadow-md)] max-[620px]:min-h-0 max-[620px]:px-[18px] max-[620px]:py-4';
+          'group relative min-h-[126px] cursor-pointer flex-row items-start gap-3.5 px-[22px] py-5 transition-[transform,box-shadow,border-color] duration-[160ms] hover:-translate-y-[3px] hover:border-sky-400 hover:[box-shadow:var(--shadow-md)] max-[620px]:min-h-0 max-[620px]:px-[18px] max-[620px]:py-4 rounded-none';
 
         // On-page anchors keep the default (non-prefixed) behaviour; page links go
         // through the locale prefix so the reader stays in their language.
