@@ -4,7 +4,6 @@ title: "Aéroport international Zayed, Abou Dabi : arrivées, consigne à bagage
 summary: "Un guide pas à pas pour atterrir à l'aéroport international Zayed d'Abou Dabi (AUH), terminal A : le parcours jaune Arrivals jusqu'au contrôle des passeports, les sas automatisés face aux guichets manuels, les tapis à bagages et les bagages hors gabarit, ce qui se trouve de chaque côté du hall des arrivées, les tarifs de la consigne à bagages, la carte Hafilat, le bus A10 vers la grande mosquée Cheikh Zayed, les tarifs des taxis et des VTC, et l'autocar vers Dubaï."
 date: 2026-10-26
 updated: 2026-10-26
-source: Xiaohongshu @曜光纪JACK
 tags: Aéroport d'Abou Dabi, AUH, aéroport international Zayed, voyage aux Émirats arabes unis, arrivées à l'aéroport, consigne à bagages, carte Hafilat
 cover: images/0.webp
 ---
@@ -158,6 +157,5 @@ Les tarifs, horaires d'ouverture et emplacements des comptoirs proviennent des p
 - **Baidu Baike** : [Abu Dhabi International Airport](https://baike.baidu.com/item/%E9%98%BF%E5%B8%83%E6%89%8E%E6%AF%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **Site de l'aéroport** : [Zayed International Airport](https://www.zayedinternationalairport.ae/)
 - **Bus et cartes de transport** : [Abu Dhabi Integrated Transport Centre (ITC)](https://www.itc.gov.ae/)
-- **Article d'origine** : [Xiaohongshu @曜光纪JACK](https://www.xiaohongshu.com/explore/6ab8a2e1000000001400081f)
 
 Source des images : les photographies de l'auteur. Les tarifs, prix de la consigne et fréquences sont ceux affichés aux comptoirs au moment des prises de vue et peuvent changer.

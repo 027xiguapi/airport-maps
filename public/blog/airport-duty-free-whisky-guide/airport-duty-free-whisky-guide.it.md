@@ -4,7 +4,6 @@ title: "Comprare whisky al duty-free dell'aeroporto: una guida agli scaffali del
 summary: "Da Taoyuan e Changi a Heathrow e Sydney, il duty-free aeroportuale è dove vivono le esclusive travel retail del whisky: single cask, cask strength e nessuna accisa locale. Un'indagine regione per regione su ciò che c'era sugli scaffali intorno al Capodanno cinese 2020, più come scegliere per età, botte, formato della bottiglia e regole sui liquidi in coincidenza."
 date: 2026-10-19
 updated: 2026-10-19
-source: Whisky Magazine
 tags: duty-free aeroportuale, whisky, travel retail, Heathrow, Changi, franchigia duty-free
 cover: images/0.webp
 ---

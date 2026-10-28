@@ -4,7 +4,6 @@ title: 阿布扎比扎耶德国际机场全攻略：入境、行李寄存、交�
 summary: 阿布扎比扎耶德国际机场（AUH）A 航站楼落地全流程：跟随黄色 Arrivals 指示到边检，自助闸机与人工柜台的取舍，行李转盘与超大件行李，出口左右两侧的功能分区，行李寄存按时段计价，Hafilat 交通卡的银卡与绿卡，A10 巴士去谢赫扎耶德大清真寺，出租车与网约车价格，以及机场直达迪拜的大巴。
 date: 2026-10-26
 updated: 2026-10-26
-source: 小红书 曜光纪JACK
 tags: 阿布扎比机场, AUH, 扎耶德国际机场, 阿联酋旅行, 机场入境, 行李寄存, Hafilat交通卡
 cover: images/0.webp
 ---
@@ -158,6 +157,5 @@ A10 的实用信息：
 - **百度百科**：[阿布扎比国际机场](https://baike.baidu.com/item/%E9%98%BF%E5%B8%83%E6%89%8E%E6%AF%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **机场官网**：[Zayed International Airport](https://www.zayedinternationalairport.ae/)
 - **公交与交通卡**：[Abu Dhabi Integrated Transport Centre (ITC)](https://www.itc.gov.ae/)
-- **原文参考**：[小红书 @曜光纪JACK](https://www.xiaohongshu.com/explore/6ab8a2e1000000001400081f)
 
 图片来源：作者实地拍摄。票价、寄存价格与班次为拍摄时柜台公示的信息，可能随政策调整。

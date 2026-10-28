@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/Breadcrumb';
+import Comments from '@/components/Comments';
 import { PostGrid } from '@/components/Blog';
 import JsonLd from '@/components/JsonLd';
 import Markdown from '@/components/Markdown';
@@ -174,6 +175,14 @@ export default async function BlogPostPage({ params }: Props) {
               {post.body}
             </Markdown>
           </div>
+
+          <Comments
+            pageKind="blog"
+            pageKey={post.slug}
+            locale={locale}
+            lang={LOCALE_META[locale].htmlLang}
+            labels={t.comments}
+          />
 
           {related.length > 0 && (
             <div className="mt-12">

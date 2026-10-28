@@ -4,7 +4,6 @@ title: 阿布達比往返杜拜巴士全攻略：35 迪拉姆機場直達，回�
 summary: 阿布達比扎耶德機場到杜拜的機場快線巴士：7 號門買票、35 迪拉姆、每小時一班、直達 Ibn Battuta；回程坐杜拜 RTA 的 E101，只能刷 Nol 卡、25 迪拉姆、約 20 分鐘一班到阿布達比主巴士站；外加 Hafilat 免費公交卡的辦理方法與兩城往返的時間預算。
 date: 2026-10-25
 updated: 2026-10-25
-source: 小紅書 Li
 tags: 阿布達比交通, 杜拜交通, 機場巴士, E101, Ibn Battuta, 阿聯酋跨城
 cover: images/0.webp
 ---
@@ -95,6 +94,5 @@ E101 大約 20 分鐘一班，全程約 1 小時 50 分鐘，終點站是阿布�
 - **機場官網**：[Zayed International Airport](https://www.zayedinternationalairport.ae/)
 - **杜拜公交**：[Dubai RTA](https://www.rta.ae/)
 - **阿布達比公交**：[Abu Dhabi ITC](https://www.itc.gov.ae/)
-- **原文參考**：[小紅書 @Li](https://www.xiaohongshu.com/explore/699ff81e000000001a03377a)
 
 圖片來源：作者實地拍攝。票價與班次為拍攝時櫃檯公示的資訊，可能隨政策調整。

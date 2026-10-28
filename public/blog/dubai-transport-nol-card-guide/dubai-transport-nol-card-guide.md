@@ -4,7 +4,6 @@ title: 迪拜公共交通全攻略：地铁、公交与 Nol 卡一篇讲清楚
 summary: 在迪拜怎么坐地铁和公交：Nol 卡的卡种与价格，红线绿线的走向与换乘站，为什么方向坐反是最常见的坑，公交车为什么必须刷卡，Careem 与 Bolt 的实测差别，以及从机场出来第一件事为什么是办卡。
 date: 2026-10-25
 updated: 2026-10-25
-source: 小红书 巴拉克
 tags: 迪拜交通, 迪拜地铁, Nol卡, 迪拜公交, 迪拜自由行, 阿联酋
 cover: images/0.webp
 ---
@@ -95,6 +94,5 @@ cover: images/0.webp
 - **维基百科**：[迪拜地铁](https://zh.wikipedia.org/wiki/%E6%9D%9C%E6%8B%9C%E5%9C%B0%E9%90%B5)
 - **百度百科**：[迪拜地铁](https://baike.baidu.com/item/%E8%BF%AA%E6%8B%9C%E5%9C%B0%E9%93%81)
 - **运营方**：[Dubai RTA（道路与交通管理局）](https://www.rta.ae/)
-- **原文参考**：[小红书 @巴拉克](https://www.xiaohongshu.com/explore/69509fcb0000000021031c8a)
 
 图片来源：作者实地拍摄。票价、卡种与线路信息以 RTA 公布为准。

@@ -4,7 +4,6 @@ title: 'Zayed International Airport, Abu Dhabi: Arrivals, Baggage Storage and Ge
 summary: 'A step-by-step guide to landing at Abu Dhabi Zayed International Airport (AUH), Terminal A: the yellow Arrivals route to passport control, e-gates versus the manual counters, baggage belts and oversized luggage, what sits on each side of the arrivals hall, baggage storage prices, the Hafilat card, the A10 bus to the Sheikh Zayed Grand Mosque, taxi and ride-hailing fares, and the coach to Dubai.'
 date: 2026-10-26
 updated: 2026-10-26
-source: Xiaohongshu @曜光纪JACK
 tags: Abu Dhabi Airport, AUH, Zayed International Airport, UAE travel, airport arrivals, baggage storage, Hafilat card
 cover: images/0.webp
 ---
@@ -158,6 +157,5 @@ Fares, opening hours and counter locations come from airport and operator public
 - **Baidu Baike**: [Abu Dhabi International Airport](https://baike.baidu.com/item/%E9%98%BF%E5%B8%83%E6%89%8E%E6%AF%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **Airport website**: [Zayed International Airport](https://www.zayedinternationalairport.ae/)
 - **Buses and transport cards**: [Abu Dhabi Integrated Transport Centre (ITC)](https://www.itc.gov.ae/)
-- **Original post**: [Xiaohongshu @曜光纪JACK](https://www.xiaohongshu.com/explore/6ab8a2e1000000001400081f)
 
 Image source: the author's own photographs. Fares, storage prices and frequencies are as posted at the desks when the photos were taken and may change.

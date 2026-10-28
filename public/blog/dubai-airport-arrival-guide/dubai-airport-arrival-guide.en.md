@@ -4,7 +4,6 @@ title: 'Getting Out of Dubai Airport: T1 and T3 Arrivals, Currency, SIM Cards an
 summary: "A first-timer's guide to Dubai International Airport (DXB): which airline uses T1, T2 or T3, the Arrivals and Passport Control route, how long visa-free entry lasts for a Chinese passport, where to change money and buy a SIM card, and how the Red Line metro, metered taxis and Careem or Bolt compare on time and price.'
 date: 2026-10-26
 updated: 2026-10-26
-source: Xiaohongshu @秦人在迪拜
 tags: Dubai Airport, DXB, Dubai arrivals, Dubai Metro, Dubai transport, Middle East travel
 cover: images/0.webp
 ---
@@ -103,6 +102,5 @@ For card types, top-ups, metro interchanges and bus routes in more detail, see t
 - **Baidu Baike**: [Dubai International Airport](https://baike.baidu.com/item/%E8%BF%AA%E6%8B%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **Airport website**: [Dubai Airports](https://www.dubaiairports.ae/)
 - **Metro and buses**: [Dubai RTA](https://www.rta.ae/)
-- **Original post**: [Xiaohongshu @秦人在迪拜](https://www.xiaohongshu.com/explore/684ab258000000002102eeb8)
 
 Image source: the author's photographs and this site's airport diagram. Fares, hours and transport policies may change; check official announcements before travelling.

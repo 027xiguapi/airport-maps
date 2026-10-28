@@ -74,6 +74,7 @@ npm run build && npm start
 | `DATABASE_URL` | 是 | PostgreSQL 连接串 |
 | `NEXT_PUBLIC_SITE_URL` | 建议 | 站点对外地址，用于 `canonical`、`hreflang`、Open Graph、`sitemap.xml`、`robots.txt` 与 JSON-LD。默认 `http://localhost:3000` |
 | `PGPOOL_MAX` | 否 | 连接池上限：运行时默认 `10`，**构建期默认 `4`**（`next build` 会开 11 个 worker）。CI / 低配库上建议两边都调小（见「查询层与连接池」） |
+| `COMMENTS_IP_SALT` | 生产建议 | 评论区按 IP 限流时用的哈希盐。换掉只会重置计数，不影响已有评论 |
 
 ## npm 脚本
 
@@ -88,6 +89,7 @@ npm run build && npm start
 | `npm run db:generate` | `drizzle-kit generate`：按 `db/schema.ts` 的改动生成迁移文件到 `drizzle/` |
 | `npm run db:migrate` | `drizzle-kit migrate`：应用 `drizzle/` 下的迁移 |
 | `npm run db:studio` | `drizzle-kit studio`：在浏览器里浏览 / 编辑数据 |
+| `npm run comments` | 评论审核：`list [--all] [--limit N]` 查看、`hide <id>` 隐藏、`show <id>` 恢复、`delete <id>` 删除（见「读者评论」） |
 | `npm run db:create` | 只建库（`--reset` 为 `DROP DATABASE ... WITH (FORCE)` 后重建） |
 | `node scripts/db-apply-sql.mjs <file.sql>` | 只跑一个 SQL 文件：`db/extensions.sql`（`pg_trgm`，建表前）或 `db/custom.sql`（`search_blob` 触发器、`directory_stats` 视图，建表后） |
 | `node scripts/verify.mjs` | 跑一遍站点依赖的关键查询 |
@@ -345,6 +347,17 @@ Field 语义：`title` / `summary` / `updated` 对应迁移前的 frontmatter（
 - **国家机场介绍**：国家页的「机场介绍」区块**始终渲染**——开头段落由数据库字段拼出（机场数、航站楼数、登机口数、最繁忙机场、分布城市），因此 92 个国家 / 地区没有任何文档也有介绍；`kind='country'` 的行存在时，长文追加在同一段正文里（当前 37 个）。各语言**成对维护**——`getCountryIntro` 在该语言缺行时会回退到中文，只写中文会让英文页出现中文长文。
 
 两类内容都只写本站数据（航站楼构成、登机口字母规律、旅客量、距离、交通方式），不含臆测细节。
+
+## 读者评论
+
+内容页（机场、国家、博客、about / contact / sources / privacy / terms）底部都有评论区；首页、目录页、航线页、航班页与工具页没有。
+
+- **存储**：`comments` 表（`db/schema.ts`），一行一条。线程键是 `(page_kind, page_key, locale)`——同一座机场的英文页和德文页是两个独立线程，读者各自用页面语言交流。`status` 为 `visible` / `hidden`，公开 API 只返回 visible。
+- **接口**：`GET /api/comments?kind=airport&key=JFK&locale=en` 取线程；`POST /api/comments` 提交 `{ kind, key, locale, author, body, website }`，其中 `website` 是蜜罐字段、必须为空。提交即显示，不做先审后发。
+- **防滥用**：蜜罐、每 IP 10 分钟 5 条（`COMMENTS_IP_SALT` 加盐后只存哈希，不存明文 IP）、正文最多 2 个链接、作者 2–40 字 / 正文 5–2000 字；2 分钟内同人同文的重复提交直接返回上一条，双击不会写两条。
+- **审核**：`node scripts/comments.mjs list --all` 看最近评论，`hide <id>` 隐藏（`show <id>` 恢复），`delete <id>` 永久删除。
+- **渲染**：评论区是客户端组件（`components/Comments.tsx`），页面本身仍是静态 / ISR，留言在挂载后拉取，因此新评论不需要重新构建；日期用页面 `htmlLang` 格式化。评论按纯文本渲染（React 转义，不支持 Markdown / HTML），不会引入脚本。
+- **首页入口**：Journal、Terminal Maps、Airport guides 三个区块的卡片显示该页面评论数（`components/CommentCount.tsx`），一次批量查询取数；数字随首页的 1 小时 ISR 刷新，卡片上的评论内容仍以详情页为准。
 
 ## 目录结构
 

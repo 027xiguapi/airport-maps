@@ -4,7 +4,6 @@ title: "두바이 시내 이동: 지하철, 버스, Nol 카드 완전 안내"
 summary: "두바이 대중교통을 실제 이용 순서대로 정리했습니다. Nol 카드의 종류와 가격, 레드·그린 라인과 환승역, 방향을 잘못 잡는 일이 왜 대표적인 실수인지, 현금을 받지 않는 두바이 버스, Careem과 Bolt를 실제로 비교한 결과, 그리고 공항에서 카드를 먼저 사야 하는 이유까지 다룹니다."
 date: 2026-10-25
 updated: 2026-10-25
-source: Xiaohongshu @巴拉克
 tags: 두바이 교통, 두바이 지하철, Nol 카드, 두바이 버스, 두바이 여행, 아랍에미리트
 cover: images/0.webp
 ---
@@ -95,6 +94,5 @@ cover: images/0.webp
 - **위키백과**: [두바이 지하철](https://en.wikipedia.org/wiki/Dubai_Metro)
 - **바이두 백과**: [두바이 지하철](https://baike.baidu.com/item/%E8%BF%AA%E6%8B%9C%E5%9C%B0%E9%93%81)
 - **운영 기관**: [두바이 RTA](https://www.rta.ae/)
-- **원문**: [샤오홍슈 @巴拉克](https://www.xiaohongshu.com/explore/69509fcb0000000021031c8a)
 
 이미지 출처: 필자가 직접 촬영한 사진입니다. 운임과 카드 종류, 노선은 RTA가 발표한 내용을 따릅니다.

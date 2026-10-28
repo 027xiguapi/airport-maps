@@ -4,7 +4,6 @@ title: "D'Abou Dabi à Dubaï en bus : l'express aéroport à 35 AED et le retou
 summary: "Comment se déplacer entre Abou Dabi et Dubaï en transports publics : l'express de l'aéroport international Zayed depuis la porte 7 à 35 AED, toutes les heures et sans arrêt jusqu'à Ibn Battuta ; le retour en E101 de la RTA, carte Nol obligatoire, à 25 AED, toutes les 20 minutes jusqu'à la gare routière principale d'Abou Dabi ; la carte Hafilat gratuite pour les bus urbains d'Abou Dabi ; et ce que l'aller-retour coûte vraiment en temps et en argent."
 date: 2026-10-25
 updated: 2026-10-25
-source: Xiaohongshu @Li
 tags: Transports à Abou Dabi, transports à Dubaï, autocar d'aéroport, E101, Ibn Battuta, liaisons interurbaines aux Émirats arabes unis
 cover: images/0.webp
 ---
@@ -96,6 +95,5 @@ Les tarifs, les fréquences et l'emplacement des comptoirs proviennent des publi
 - **Site de l'aéroport** : [Zayed International Airport](https://www.zayedinternationalairport.ae/)
 - **Bus de Dubaï** : [RTA de Dubaï](https://www.rta.ae/)
 - **Bus d'Abou Dabi** : [ITC d'Abou Dabi](https://www.itc.gov.ae/)
-- **Article d'origine** : [Xiaohongshu @Li](https://www.xiaohongshu.com/explore/699ff81e000000001a03377a)
 
 Source des images : les photographies de l'auteur. Les tarifs et les fréquences sont ceux affichés aux comptoirs au moment des prises de vue et peuvent changer.

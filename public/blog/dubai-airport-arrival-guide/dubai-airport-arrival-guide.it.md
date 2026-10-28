@@ -4,7 +4,6 @@ title: "Uscire dall'aeroporto di Dubai: arrivi ai terminal 1 e 3, valuta, schede
 summary: "Una guida per chi arriva a Dubai per la prima volta all'aeroporto internazionale (DXB): quale compagnia usa il terminal 1, 2 o 3, il percorso Arrivals e Passport Control, quanto si può restare senza visto con un passaporto cinese, dove cambiare denaro e comprare una scheda SIM, e il confronto tra la linea rossa della metro, i taxi a tassametro e Careem o Bolt su tempi e prezzi."
 date: 2026-10-26
 updated: 2026-10-26
-source: Xiaohongshu @秦人在迪拜
 tags: aeroporto di Dubai, DXB, arrivi a Dubai, metro di Dubai, trasporti a Dubai, viaggio in Medio Oriente
 cover: images/0.webp
 ---
@@ -103,6 +102,5 @@ Per tipi di carta, ricariche, interscambi della metro e linee di autobus in dett
 - **Baidu Baike**: [Dubai International Airport](https://baike.baidu.com/item/%E8%BF%AA%E6%8B%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **Sito dell'aeroporto**: [Dubai Airports](https://www.dubaiairports.ae/)
 - **Metro e autobus**: [Dubai RTA](https://www.rta.ae/)
-- **Post originale**: [Xiaohongshu @秦人在迪拜](https://www.xiaohongshu.com/explore/684ab258000000002102eeb8)
 
 Fonte delle immagini: le fotografie dell'autore e la planimetria aeroportuale di questo sito. Tariffe, orari e politiche di trasporto possono cambiare; controllate gli annunci ufficiali prima di viaggiare.

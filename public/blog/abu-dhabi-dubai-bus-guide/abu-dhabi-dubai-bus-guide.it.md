@@ -4,7 +4,6 @@ title: "Da Abu Dhabi a Dubai in autobus: l'express aeroportuale da 35 AED e il r
 summary: "Come spostarsi tra Abu Dhabi e Dubai con i mezzi pubblici: l'express dell'aeroporto internazionale Zayed dal Gate 7 a 35 AED, ogni ora e senza fermate fino a Ibn Battuta; il ritorno con l'E101 della RTA, solo carta Nol, a 25 AED, ogni 20 minuti fino all'Abu Dhabi Main Bus Terminal; la tessera Hafilat gratuita per gli autobus urbani di Abu Dhabi; e quanto costa davvero l'andata e ritorno in tempo e denaro."
 date: 2026-10-25
 updated: 2026-10-25
-source: Xiaohongshu @Li
 tags: trasporti ad Abu Dhabi, trasporti a Dubai, autobus aeroportuali, E101, Ibn Battuta, collegamenti interurbani negli Emirati Arabi Uniti
 cover: images/0.webp
 ---
@@ -96,6 +95,5 @@ Tariffe, frequenze e posizione dei banchi provengono dalle pubblicazioni degli o
 - **Sito dell'aeroporto**: [Zayed International Airport](https://www.zayedinternationalairport.ae/)
 - **Autobus di Dubai**: [RTA di Dubai](https://www.rta.ae/)
 - **Autobus di Abu Dhabi**: [ITC di Abu Dhabi](https://www.itc.gov.ae/)
-- **Post originale**: [Xiaohongshu @Li](https://www.xiaohongshu.com/explore/699ff81e000000001a03377a)
 
 Fonte delle immagini: le fotografie dell'autore. Tariffe e frequenze sono quelle esposte ai banchi al momento degli scatti e possono cambiare.

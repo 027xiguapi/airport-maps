@@ -4,7 +4,6 @@ title: "두바이 공항에서 빠져나오기: T1·T3 도착, 환전, SIM 카�
 summary: "두바이 국제공항(DXB)을 처음 찾는 분을 위한 안내입니다. 어느 항공사가 T1, T2, T3를 쓰는지, 도착 홀과 여권 심사 동선, 중국 여권으로 무비자 체류가 얼마나 되는지, 어디서 환전하고 SIM 카드를 사는지, 그리고 레드라인 지하철과 미터제 택시, Careem과 Bolt를 시간과 가격으로 비교합니다."
 date: 2026-10-26
 updated: 2026-10-26
-source: Xiaohongshu @秦人在迪拜
 tags: 두바이 공항, DXB, 두바이 입국, 두바이 지하철, 두바이 교통, 중동 여행
 cover: images/0.webp
 ---
@@ -103,6 +102,5 @@ Nol 카드는 발권기나 직원이 있는 창구에서 삽니다. 보통은 AE
 - **바이두 백과**: [두바이 국제공항](https://baike.baidu.com/item/%E8%BF%AA%E6%8B%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **공항 홈페이지**: [두바이 공항(Dubai Airports)](https://www.dubaiairports.ae/)
 - **지하철과 버스**: [두바이 도로교통청(RTA)](https://www.rta.ae/)
-- **원문**: [샤오홍슈 @秦人在迪拜](https://www.xiaohongshu.com/explore/684ab258000000002102eeb8)
 
 이미지 출처: 필자의 사진과 이 사이트의 공항 도면입니다. 운임과 운영 시간, 교통 정책은 바뀔 수 있으므로 여행 전에 공식 발표를 확인하십시오.

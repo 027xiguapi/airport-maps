@@ -11,6 +11,7 @@
     "content:export": "node scripts/content-export.mjs",
     "content:push": "node scripts/sync-content-to-remote.mjs",
     "content:push:apply": "node scripts/sync-content-to-remote.mjs --apply",
+    "comments": "node scripts/comments.mjs",
     "flights:fetch": "node scripts/fetch-flights.mjs",
     "flights:check": "node scripts/check-flights.mjs",
     "de:guides": "node scripts/generate-de-guides.mjs",

@@ -4,7 +4,6 @@ title: 杜拜公共交通全攻略：地鐵、公交與 Nol 卡一篇講清楚
 summary: 在杜拜怎麼坐地鐵和公交：Nol 卡的卡種與價格，紅線綠線的走向與換乘站，為什麼方向坐反是最常見的坑，公交車為什麼必須刷卡，Careem 與 Bolt 的實測差別，以及從機場出來第一件事為什麼是辦卡。
 date: 2026-10-25
 updated: 2026-10-25
-source: 小紅書 巴拉克
 tags: 杜拜交通, 杜拜地鐵, Nol卡, 杜拜公交, 杜拜自由行, 阿聯酋
 cover: images/0.webp
 ---
@@ -94,6 +93,5 @@ cover: images/0.webp
 - **本站頁面**：[杜拜國際機場（DXB）](/tw/airport/DXB)、[阿聯酋（AE）](/tw/country/AE)、[杜拜機場出關攻略](/tw/blog/dubai-airport-arrival-guide)
 - **維基百科**：[杜拜地鐵](https://zh.wikipedia.org/wiki/%E6%9D%9C%E6%8B%9C%E5%9C%B0%E9%90%B5)
 - **運營方**：[Dubai RTA（道路與交通管理局）](https://www.rta.ae/)
-- **原文參考**：[小紅書 @巴拉克](https://www.xiaohongshu.com/explore/69509fcb0000000021031c8a)
 
 圖片來源：作者實地拍攝。票價、卡種與線路資訊以 RTA 公佈為準。

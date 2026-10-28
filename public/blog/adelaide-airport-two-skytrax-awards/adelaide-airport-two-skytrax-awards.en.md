@@ -4,7 +4,6 @@ title: "Adelaide Airport Wins Two Skytrax Awards for Staff and Regional Service"
 summary: "Adelaide Airport has been named Best Airport Staff in Australia/Pacific for the first time and Best Regional Airport in Australia/Pacific for the fourth time in five years at the Skytrax World Airport Awards in London. Passenger numbers passed nine million in 2025, international traffic grew more than 20%, and a A$600 million expansion called Project Flight is under way."
 date: 2026-10-19
 updated: 2026-10-19
-source: AUFUN
 tags: Adelaide Airport, ADL, Skytrax, best airport staff, best regional airport, South Australia
 cover: images/0.webp
 ---

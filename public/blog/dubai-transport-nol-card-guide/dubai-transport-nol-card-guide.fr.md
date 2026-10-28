@@ -4,7 +4,6 @@ title: "Circuler à Dubaï : le métro, les bus et la carte Nol expliqués"
 summary: "Comment fonctionnent les transports publics à Dubaï : les types de cartes Nol et leurs prix, les lignes Red et Green et leurs correspondances, pourquoi prendre la mauvaise direction est l'erreur classique, pourquoi les bus de Dubaï n'acceptent pas les espèces, ce que valent Careem et Bolt en pratique, et pourquoi acheter une carte à l'aéroport est la première chose à faire."
 date: 2026-10-25
 updated: 2026-10-25
-source: Xiaohongshu @巴拉克
 tags: Transports à Dubaï, métro de Dubaï, carte Nol, bus de Dubaï, voyage à Dubaï, Émirats arabes unis
 cover: images/0.webp
 ---
@@ -95,6 +94,5 @@ Les tarifs, les lignes et les horaires proviennent des publications de la RTA et
 - **Wikipédia** : [Dubai Metro](https://en.wikipedia.org/wiki/Dubai_Metro)
 - **Baidu Baike** : [Dubai Metro](https://baike.baidu.com/item/%E8%BF%AA%E6%8B%9C%E5%9C%B0%E9%93%81)
 - **Exploitant** : [Dubai RTA](https://www.rta.ae/)
-- **Article d'origine** : [Xiaohongshu @巴拉克](https://www.xiaohongshu.com/explore/69509fcb0000000021031c8a)
 
 Source des images : les photographies de l'auteur. Les tarifs, types de cartes et lignes sont ceux publiés par la RTA.

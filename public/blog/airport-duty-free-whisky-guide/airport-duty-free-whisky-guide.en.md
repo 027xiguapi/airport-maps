@@ -4,7 +4,6 @@ title: "Buying Whisky at Airport Duty-Free: A Global Shelf Guide by Flight Time"
 summary: "From Taoyuan and Changi to Heathrow and Sydney, airport duty-free is where whisky's travel-retail exclusives live: single casks, cask strength and no local duty. A region-by-region survey of what stood on the shelves around Chinese New Year 2020, plus how to choose by age, cask, bottle size and the liquid rules on connections."
 date: 2026-10-19
 updated: 2026-10-19
-source: Whisky Magazine
 tags: airport duty-free, whisky, travel retail, Heathrow, Changi, duty-free allowance
 cover: images/0.webp
 ---

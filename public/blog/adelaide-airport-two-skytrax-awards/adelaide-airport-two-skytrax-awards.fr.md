@@ -4,7 +4,6 @@ title: "L'aéroport d'Adélaïde remporte deux prix Skytrax pour son personnel e
 summary: "L'aéroport d'Adélaïde a été élu meilleur personnel aéroportuaire d'Australie-Pacifique pour la première fois et meilleur aéroport régional d'Australie-Pacifique pour la quatrième fois en cinq ans, à l'occasion des Skytrax World Airport Awards à Londres. Le trafic a dépassé neuf millions de passagers en 2025, le trafic international a progressé de plus de 20 % et une extension de 600 millions de dollars australiens, appelée Project Flight, est en cours."
 date: 2026-10-19
 updated: 2026-10-19
-source: AUFUN
 tags: Aéroport d'Adélaïde, ADL, Skytrax, meilleur personnel aéroportuaire, meilleur aéroport régional, Australie-Méridionale
 cover: images/0.webp
 ---

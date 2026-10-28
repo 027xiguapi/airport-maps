@@ -4,7 +4,6 @@ title: 'Abu Dhabi to Dubai by Bus: The AED 35 Airport Express and the E101 Back'
 summary: 'How to travel between Abu Dhabi and Dubai on public transport: the Zayed International Airport Express from Gate 7 at AED 35, hourly and non-stop to Ibn Battuta; the RTA E101 back, Nol card only at AED 25, every 20 minutes to Abu Dhabi Main Bus Terminal; the free Hafilat card for Abu Dhabi city buses; and what the round trip really costs in time and money.'
 date: 2026-10-25
 updated: 2026-10-25
-source: Xiaohongshu @Li
 tags: Abu Dhabi transport, Dubai transport, airport coach, E101, Ibn Battuta, UAE intercity
 cover: images/0.webp
 ---
@@ -96,6 +95,5 @@ Fares, frequencies and desk locations come from operator publications and the au
 - **Airport website**: [Zayed International Airport](https://www.zayedinternationalairport.ae/)
 - **Dubai buses**: [Dubai RTA](https://www.rta.ae/)
 - **Abu Dhabi buses**: [Abu Dhabi ITC](https://www.itc.gov.ae/)
-- **Original post**: [Xiaohongshu @Li](https://www.xiaohongshu.com/explore/699ff81e000000001a03377a)
 
 Image source: the author's photographs. Fares and frequencies are as posted at the desks when the photos were taken and may change.

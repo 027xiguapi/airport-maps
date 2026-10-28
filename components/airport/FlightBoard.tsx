@@ -138,16 +138,23 @@ export default function FlightBoard({
   const last = Math.min(page * initial.perPage, total);
 
   return (
-    <div className="fl-board" aria-busy={loading}>
-      <div className="fl-toolbar">
-        <div className="fl-tabs" role="tablist">
+    <div className="mt-5" aria-busy={loading}>
+      <div className="flex flex-wrap items-center justify-between gap-3 max-[760px]:flex-col max-[760px]:items-stretch">
+        <div
+          className="inline-flex overflow-hidden rounded-full border border-line bg-card [box-shadow:var(--shadow-sm)]"
+          role="tablist"
+        >
           {(['departures', 'arrivals'] as const).map((value) => (
             <button
               key={value}
               type="button"
               role="tab"
               aria-selected={direction === value}
-              className={direction === value ? 'fl-tab on' : 'fl-tab'}
+              className={
+                direction === value
+                  ? 'cursor-pointer border-0 bg-navy-800 px-4 py-2 font-display text-[13px] font-semibold text-white transition-colors duration-150'
+                  : 'cursor-pointer border-0 bg-transparent px-4 py-2 font-display text-[13px] font-semibold text-ink-soft transition-colors duration-150 hover:text-ink'
+              }
               onClick={() => switchDirection(value)}
             >
               {value === 'departures' ? labels.departures : labels.arrivals}
@@ -155,8 +162,9 @@ export default function FlightBoard({
           ))}
         </div>
 
-        <div className="fl-search">
+        <div className="relative min-w-[240px] flex-1 min-[760px]:max-w-[380px]">
           <input
+            className="h-[38px] w-full rounded-full border border-line bg-paper px-4 pr-9 text-[14px] text-ink outline-none focus:border-sky-500 [&::-webkit-search-cancel-button]:hidden"
             type="search"
             value={input}
             onChange={(event) => scheduleSearch(event.target.value)}
@@ -168,7 +176,7 @@ export default function FlightBoard({
           {input && (
             <button
               type="button"
-              className="fl-clear"
+              className="absolute top-1/2 right-1 flex h-7 w-7 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-0 bg-transparent text-[18px] leading-none text-ink-faint hover:bg-paper hover:text-ink"
               onClick={clearSearch}
               aria-label={labels.clearSearch}
             >
@@ -178,14 +186,16 @@ export default function FlightBoard({
         </div>
       </div>
 
-      <div className="fl-table-wrap">
-        <table className="rt-table fl-table">
+      <div className="mt-4 overflow-hidden rounded-[14px] border border-line bg-card [box-shadow:var(--shadow-sm)]">
+        <table className="rt-table max-[760px]:[&_th]:px-2.5 max-[760px]:[&_td]:px-2.5">
           <thead>
             <tr>
               <th>{labels.flight}</th>
-              <th>{labels.airline}</th>
+              {/* The shared .rt-table mobile rule hides every table's second
+                  header cell; this table keeps Airline and drops Country. */}
+              <th className="max-[760px]:table-cell">{labels.airline}</th>
               <th>{direction === 'departures' ? labels.destination : labels.origin}</th>
-              <th className="fl-ctry">{labels.country}</th>
+              <th className="text-[12.5px] text-ink-soft max-[760px]:hidden">{labels.country}</th>
             </tr>
           </thead>
           <tbody>
@@ -195,20 +205,25 @@ export default function FlightBoard({
                 <tr key={`${row.number}-${row.iata}-${direction}`}>
                   <td>
                     <Link
-                      className="fl-number"
+                      className="font-display font-semibold whitespace-nowrap text-sky-600 tabular-nums no-underline hover:underline"
                       href={localizedPath(locale, `/flight/${row.number.toLowerCase()}`)}
                     >
                       {row.number}
                     </Link>
                   </td>
                   <td>
-                    <span className="fl-airline">{row.airline}</span>
+                    <span className="text-ink">{row.airline}</span>
                   </td>
                   <td>
                     <div className="dest">
                       <b>
                         {row.airportHref ? (
-                          <Link href={row.airportHref}>{counterpart}</Link>
+                          <Link
+                            className="text-inherit no-underline hover:text-sky-600"
+                            href={row.airportHref}
+                          >
+                            {counterpart}
+                          </Link>
                         ) : (
                           counterpart
                         )}
@@ -216,20 +231,25 @@ export default function FlightBoard({
                     </div>
                     {row.name && row.name !== row.iata && <span className="nm">{row.name}</span>}
                   </td>
-                  <td className="fl-ctry">{row.country}</td>
+                  <td className="text-[12.5px] text-ink-soft max-[760px]:hidden">{row.country}</td>
                 </tr>
               );
             })}
           </tbody>
         </table>
-        {rows.length === 0 && <p className="fl-empty">{loading ? labels.loading : labels.empty}</p>}
+        {rows.length === 0 && (
+          <p className="m-0 px-5 py-8 text-center text-[13.5px] text-ink-soft">
+            {loading ? labels.loading : labels.empty}
+          </p>
+        )}
       </div>
 
       {error && (
-        <p className="fl-error">
+        <p className="mt-3 rounded-[10px] border border-line bg-paper px-4 py-2.5 text-[13px] text-ink-soft">
           {labels.error}{' '}
           <button
             type="button"
+            className="cursor-pointer font-semibold text-sky-600 underline underline-offset-2"
             onClick={() => void load({ direction, page, query: appliedRef.current })}
           >
             {labels.retry}
@@ -237,8 +257,8 @@ export default function FlightBoard({
         </p>
       )}
 
-      <div className="fl-footer">
-        <span className="fl-showing" role="status" aria-live="polite">
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-3 text-[12.5px] text-ink-soft">
+        <span role="status" aria-live="polite">
           {total === 0
             ? ''
             : fill(labels.showing, {
@@ -246,16 +266,26 @@ export default function FlightBoard({
                 to: format(last),
                 total: format(total),
               })}
-          {loading && <span className="fl-loading"> · {labels.loading}</span>}
+          {loading && <span className="text-ink-faint"> · {labels.loading}</span>}
         </span>
-        <nav className="fl-pager" aria-label={labels.pagination}>
-          <button type="button" onClick={() => go(page - 1)} disabled={page <= 1 || loading}>
+        <nav className="inline-flex items-center gap-2" aria-label={labels.pagination}>
+          <button
+            type="button"
+            className="cursor-pointer rounded-full border border-line bg-card px-3 py-1.5 font-display text-[12.5px] text-ink-soft transition-colors duration-150 enabled:hover:text-ink disabled:cursor-not-allowed disabled:opacity-45"
+            onClick={() => go(page - 1)}
+            disabled={page <= 1 || loading}
+          >
             ‹ {labels.previous}
           </button>
           <span aria-current="page">
             {fill(labels.pageOf, { page: format(page), pages: format(pageCount) })}
           </span>
-          <button type="button" onClick={() => go(page + 1)} disabled={page >= pageCount || loading}>
+          <button
+            type="button"
+            className="cursor-pointer rounded-full border border-line bg-card px-3 py-1.5 font-display text-[12.5px] text-ink-soft transition-colors duration-150 enabled:hover:text-ink disabled:cursor-not-allowed disabled:opacity-45"
+            onClick={() => go(page + 1)}
+            disabled={page >= pageCount || loading}
+          >
             {labels.next} ›
           </button>
         </nav>

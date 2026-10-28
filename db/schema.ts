@@ -282,6 +282,51 @@ export const contentDocuments = pgTable(
   ]
 );
 
+// ----------------------------------------------------------------- comments
+/**
+ * Reader comments, one row per posted message.
+ *
+ * A thread is identified by the page it belongs to (`page_kind` + `page_key`)
+ * *and* the locale the reader was viewing, so the Chinese and German pages of
+ * the same airport keep separate conversations instead of mixing scripts.
+ *
+ * `status` is the moderation switch: only 'visible' rows are ever served, and
+ * it is flipped to 'hidden' by hand (scripts/comments.mjs) rather than exposed
+ * through the public API. `ip_hash` is a salted SHA-256 used solely for rate
+ * limiting — the raw address is never stored.
+ */
+export const comments = pgTable(
+  'comments',
+  {
+    id: serial('id').primaryKey(),
+    /** 'airport' | 'country' | 'blog' | 'page' — pinned by the check below. */
+    pageKind: text('page_kind').notNull(),
+    /** IATA / ISO 3166-1 alpha-2 / blog slug / static page slug. */
+    pageKey: text('page_key').notNull(),
+    /** Locale of the page the comment was written on. */
+    locale: text('locale').notNull(),
+    author: text('author').notNull(),
+    body: text('body').notNull(),
+    /** 'visible' | 'hidden' */
+    status: text('status').notNull().default('visible'),
+    ipHash: text('ip_hash'),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (t) => [
+    /** Serves a thread in reading order (oldest first). */
+    index('comments_thread_idx').on(t.pageKind, t.pageKey, t.locale, t.status, t.createdAt),
+    /** Serves the per-IP "posted in the last N minutes" rate-limit count. */
+    index('comments_ip_idx').on(t.ipHash, t.createdAt.desc()),
+    index('comments_created_idx').on(t.createdAt.desc()),
+    check('comments_page_kind_chk', sql`${t.pageKind} in ('airport', 'country', 'blog', 'page')`),
+    check('comments_status_chk', sql`${t.status} in ('visible', 'hidden')`),
+    check('comments_author_len_chk', sql`char_length(${t.author}) between 1 and 40`),
+    check('comments_body_len_chk', sql`char_length(${t.body}) between 1 and 2000`),
+  ]
+);
+
 // ------------------------------------------------------------------ reports
 /**
  * Server-side rollup behind the homepage "statistics" strip. Created by

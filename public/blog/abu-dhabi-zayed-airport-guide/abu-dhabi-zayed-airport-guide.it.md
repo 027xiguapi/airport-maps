@@ -4,7 +4,6 @@ title: "Aeroporto internazionale Zayed, Abu Dhabi: arrivi, deposito bagagli e co
 summary: "Una guida passo passo all'atterraggio all'aeroporto internazionale Zayed di Abu Dhabi (AUH), Terminal A: il percorso giallo degli arrivi fino al controllo passaporti, gli e-gate contro i banchi manuali, i nastri bagagli e i bagagli fuori misura, cosa si trova su ciascun lato della hall arrivi, i prezzi del deposito bagagli, la tessera Hafilat, l'autobus A10 per la Grande Moschea Sheikh Zayed, le tariffe di taxi e ride-hailing e il pullman per Dubai."
 date: 2026-10-26
 updated: 2026-10-26
-source: Xiaohongshu @曜光纪JACK
 tags: Aeroporto di Abu Dhabi, AUH, Aeroporto internazionale Zayed, viaggio negli Emirati Arabi Uniti, arrivi in aeroporto, deposito bagagli, tessera Hafilat
 cover: images/0.webp
 ---
@@ -158,6 +157,5 @@ Tariffe, orari di apertura e posizione dei banchi provengono dalle pubblicazioni
 - **Baidu Baike**: [Aeroporto internazionale di Abu Dhabi](https://baike.baidu.com/item/%E9%98%BF%E5%B8%83%E6%89%8E%E6%AF%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **Sito dell'aeroporto**: [Zayed International Airport](https://www.zayedinternationalairport.ae/)
 - **Autobus e tessere**: [Abu Dhabi Integrated Transport Centre (ITC)](https://www.itc.gov.ae/)
-- **Post originale**: [Xiaohongshu @曜光纪JACK](https://www.xiaohongshu.com/explore/6ab8a2e1000000001400081f)
 
 Fonte delle immagini: le fotografie dell'autore. Tariffe, prezzi del deposito e frequenze sono quelli affissi ai banchi al momento degli scatti e possono cambiare.

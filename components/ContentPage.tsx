@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/Breadcrumb';
+import Comments from '@/components/Comments';
 import Markdown from '@/components/Markdown';
 import { formatDate } from '@/lib/format';
 import { getMessages, languageAlternates } from '@/lib/i18n';
-import { localizedPath, type Locale } from '@/lib/i18n/config';
+import { LOCALE_META, localizedPath, type Locale } from '@/lib/i18n/config';
 import { getPage } from '@/lib/content';
 
 /** Slugs available to the about / contact / sources / privacy / terms routes. */
@@ -69,6 +70,14 @@ export default async function ContentPage({ locale, slug }: { locale: Locale; sl
         <div className="md-wrap">
           <Markdown>{doc.body}</Markdown>
         </div>
+
+        <Comments
+          pageKind="page"
+          pageKey={slug}
+          locale={locale}
+          lang={LOCALE_META[locale].htmlLang}
+          labels={t.comments}
+        />
       </section>
     </>
   );

@@ -4,7 +4,6 @@ title: 'Raus aus dem Flughafen Dubai: Ankunft in T1 und T3, Geld, SIM-Karten und
 summary: 'Ein Leitfaden für Erstbesucher zum Flughafen Dubai International (DXB): welche Airline Terminal 1, 2 oder 3 nutzt, der Weg über Arrivals und Passport Control, wie lange die visumfreie Einreise mit chinesischem Reisepass gilt, wo Sie Geld wechseln und eine SIM-Karte kaufen, und wie die Metro der Red Line, Taxis mit Taxameter und Careem oder Bolt bei Zeit und Preis abschneiden.'
 date: 2026-10-26
 updated: 2026-10-26
-source: Xiaohongshu @秦人在迪拜
 tags: Flughafen Dubai, DXB, Ankunft in Dubai, Dubai Metro, Nahverkehr in Dubai, Reisen im Nahen Osten
 cover: images/0.webp
 ---
@@ -103,6 +102,5 @@ Zu Kartentypen, Aufladungen, Umsteigepunkten der Metro und Buslinien finden Sie 
 - **Baidu Baike**: [Flughafen Dubai International](https://baike.baidu.com/item/%E8%BF%AA%E6%8B%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **Flughafen-Website**: [Dubai Airports](https://www.dubaiairports.ae/)
 - **Metro und Busse**: [Dubai RTA](https://www.rta.ae/)
-- **Originalbeitrag**: [Xiaohongshu @秦人在迪拜](https://www.xiaohongshu.com/explore/684ab258000000002102eeb8)
 
 Bildquelle: die Fotos des Autors und die Flughafenübersicht dieser Website. Fahrpreise, Betriebszeiten und Verkehrsbestimmungen können sich ändern; prüfen Sie vor der Reise die offiziellen Mitteilungen.

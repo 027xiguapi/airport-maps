@@ -69,9 +69,10 @@ export default function FlightRouteMap({
         zoom: 4,
         minZoom: 2,
         maxZoom: 10,
-        // An inline map in a long article must not capture page scrolling;
-        // the themed ± buttons provide the zoom instead.
-        scrollWheelZoom: false,
+        // Wheel to zoom about the cursor (a trackpad pinch arrives as the same
+        // event with ctrlKey set), like the airport and location maps; the
+        // themed ± buttons stay for keyboard and no-wheel use.
+        scrollWheelZoom: true,
         dragging: true,
         zoomControl: false,
         worldCopyJump: true,
@@ -177,19 +178,23 @@ export default function FlightRouteMap({
   }
 
   return (
-    <div className="rt-shell fl-route-map">
-      <div className="rt-map" ref={hostRef} aria-label={labels.aria} />
+    <div className="rt-shell mt-4 overflow-hidden rounded-[14px] border border-line bg-paper [box-shadow:var(--shadow-sm)]">
+      <div
+        className="rt-map h-[440px] max-[760px]:h-[340px]"
+        ref={hostRef}
+        aria-label={labels.aria}
+      />
 
       {/* Controls sit in a bar under the map rather than on top of it: a
           permanent airport label can be in any corner, so an overlay would
           occasionally hide an endpoint (or be hidden by its tooltip). */}
-      <div className="fl-map-toolbar">
+      <div className="flex items-center justify-between gap-2 border-t border-line bg-card px-3 py-2">
         <button type="button" className="rt-reset" onClick={() => fitRef.current?.()}>
           <RotateCcwIcon aria-hidden="true" />
           {labels.reset}
         </button>
 
-        <div className="rt-zoom">
+        <div className="rt-zoom flex-row">
           <button
             type="button"
             onClick={() => mapRef.current?.zoomIn()}
@@ -200,6 +205,7 @@ export default function FlightRouteMap({
           </button>
           <button
             type="button"
+            className="border-t-0 border-l border-l-line"
             onClick={() => mapRef.current?.zoomOut()}
             disabled={zoomEdges.atMin}
             aria-label={labels.zoomOut}

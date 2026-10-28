@@ -4,7 +4,6 @@ title: 'Zayed International Airport Abu Dhabi: Ankunft, Gepäckaufbewahrung und 
 summary: 'Eine Schritt-für-Schritt-Anleitung für die Landung am Zayed International Airport (AUH) in Abu Dhabi, Terminal A: der gelbe Weg über die Arrivals-Schilder zur Passkontrolle, E-Gates oder Schalter mit Personal, Gepäckbänder und Sondergepäck, die beiden Seiten der Ankunftshalle, die Preise für die Gepäckaufbewahrung, die Hafilat-Karte, der A10-Bus zur Scheich-Zayid-Moschee, die Preise für Taxi und Ride-Hailing sowie der Bus nach Dubai.'
 date: 2026-10-26
 updated: 2026-10-26
-source: Xiaohongshu @曜光纪JACK
 tags: Flughafen Abu Dhabi, AUH, Zayed International Airport, Reisen in die VAE, Flughafenankunft, Gepäckaufbewahrung, Hafilat-Karte
 cover: images/0.webp
 ---
@@ -158,6 +157,5 @@ Fahrpreise, Öffnungszeiten und Schalterstandorte stammen aus Veröffentlichunge
 - **Baidu Baike**: [Internationaler Flughafen Abu Dhabi](https://baike.baidu.com/item/%E9%98%BF%E5%B8%83%E6%89%8E%E6%AF%94%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **Flughafen-Website**: [Zayed International Airport](https://www.zayedinternationalairport.ae/)
 - **Busse und Verkehrskarten**: [Integrated Transport Centre (ITC) Abu Dhabi](https://www.itc.gov.ae/)
-- **Originalbeitrag**: [Xiaohongshu @曜光纪JACK](https://www.xiaohongshu.com/explore/6ab8a2e1000000001400081f)
 
 Bildquelle: eigene Fotografien des Autors. Fahrpreise, Preise für die Gepäckaufbewahrung und Taktungen entsprechen den Aushängen an den Schaltern zum Zeitpunkt der Aufnahmen und können sich ändern.

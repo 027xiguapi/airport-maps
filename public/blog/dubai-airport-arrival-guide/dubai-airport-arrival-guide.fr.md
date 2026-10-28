@@ -4,7 +4,6 @@ title: "Sortir de l'aéroport de Dubaï : arrivées aux terminaux 1 et 3, change
 summary: "Un guide pour une première arrivée à l'aéroport international de Dubaï (DXB) : quelle compagnie utilise le terminal 1, 2 ou 3, le parcours Arrivals et Passport Control, la durée du séjour sans visa pour un passeport chinois, où changer de l'argent et acheter une carte SIM, et le comparatif de temps et de prix entre la ligne rouge du métro, les taxis au compteur et Careem ou Bolt."
 date: 2026-10-26
 updated: 2026-10-26
-source: Xiaohongshu @秦人在迪拜
 tags: Aéroport de Dubaï, DXB, arrivée à Dubaï, métro de Dubaï, transports à Dubaï, voyage au Moyen-Orient
 cover: images/0.webp
 ---
@@ -103,6 +102,5 @@ Pour plus de détails sur les types de cartes, les recharges, les correspondance
 - **Baidu Baike** : [Dubai International Airport](https://baike.baidu.com/item/%E8%BF%AA%E6%8B%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **Site de l'aéroport** : [Dubai Airports](https://www.dubaiairports.ae/)
 - **Métro et bus** : [Dubai RTA](https://www.rta.ae/)
-- **Article d'origine** : [Xiaohongshu @秦人在迪拜](https://www.xiaohongshu.com/explore/684ab258000000002102eeb8)
 
 Source des images : les photographies de l'auteur et le plan aéroportuaire de ce site. Les tarifs, horaires et politiques de transport peuvent changer ; vérifiez les annonces officielles avant de voyager.

@@ -3,15 +3,18 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import AirportMap from '@/components/AirportMap';
 import { CountryGrid } from '@/components/AirportCard';
-import { BlogShowcase } from '@/components/Blog';
+import { LatestPosts } from '@/components/Blog';
 import CategoryGrid, { type CategoryCard } from '@/components/CategoryGrid';
+import CommentCount from '@/components/CommentCount';
 import HeroRoutes from '@/components/HeroRoutes';
 import HomeFacts from '@/components/HomeFacts';
 import HomeIntro from '@/components/HomeIntro';
-import { PopularCities, RouteNav, CountryUpdates, UpdateList } from '@/components/HomeSections';
+import { PopularMaps, RouteNav, CountryUpdates, UpdateList } from '@/components/HomeSections';
 import JsonLd from '@/components/JsonLd';
 import SearchBox from '@/components/SearchBox';
 import { blogAirportDates, getLatestBlogPosts } from '@/lib/blog';
+import { commentThreadKey } from '@/lib/comment-labels';
+import { getCommentCounts } from '@/lib/comments';
 import { airportGuideUpdatedMap, listGuidedAirports } from '@/lib/content';
 import { formatNumber } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
@@ -75,8 +78,8 @@ export default async function HomePage({ params }: Props) {
   const [stats, popularPool, countries, airports, cityCount, regionCount, guided, guideDates] =
     await Promise.all([
       getStats(),
-      // Random 10 airports that have a /maps cover — reshuffles on every
-      // (re)validation of the page.
+      // Random airports that have a /maps cover — reshuffles on every
+      // (re)validation of the page; the section picks five of them.
       getAirportsByCodes(locale, mapImageCodes()),
       getCountries(locale),
       getAirportSummaries(locale),
@@ -140,7 +143,7 @@ export default async function HomePage({ params }: Props) {
     .sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name))
     .slice(0, 6);
 
-  const popular = shuffled(popularPool).slice(0, 10);
+  const popular = shuffled(popularPool).slice(0, 5);
   // Guide tiles show the same 400px /maps covers; a few guided airports have
   // no cover yet and render an IATA wordmark placeholder instead.
   const coverCodes = new Set(mapImageCodes());
@@ -151,9 +154,18 @@ export default async function HomePage({ params }: Props) {
 
   const shortcuts = await getAirportsByCodes(locale, SHORTCUTS);
 
-  // Blog articles are Chinese, so only the locales that publish them show the
-  // section at all.
-  const blogPosts = getLatestBlogPosts(locale, 5);
+  // The newest articles, one row each; a locale without translations gets an
+  // empty list and the section hides itself.
+  const blogPosts = getLatestBlogPosts(locale, 6);
+
+  // Comment counts for the three card sections below. One batched query for
+  // every visible card; it rides the page's hourly ISR, so a new comment shows
+  // up here at the next revalidation while its own page is always live.
+  const commentCounts = await getCommentCounts(locale, [
+    ...blogPosts.map((post) => ({ kind: 'blog' as const, key: post.slug })),
+    ...popular.map((airport) => ({ kind: 'airport' as const, key: airport.iata })),
+    ...guidedTiles.map((airport) => ({ kind: 'airport' as const, key: airport.iata })),
+  ]);
 
   // Route-map strip: rank the summaries already loaded above by how many
   // destinations the route dump gives them, keeping the order stable (count,
@@ -438,7 +450,7 @@ export default async function HomePage({ params }: Props) {
                 <ArrowIcon />
               </Link>
             </div>
-            <BlogShowcase locale={locale} posts={blogPosts} />
+            <LatestPosts locale={locale} posts={blogPosts} commentCounts={commentCounts} />
           </section>
       )}
 
@@ -510,7 +522,7 @@ export default async function HomePage({ params }: Props) {
             <p className="sec-sub">{t.home.popular.sub}</p>
           </div>
         </div>
-        <PopularCities locale={locale} airports={popular} />
+        <PopularMaps locale={locale} airports={popular} commentCounts={commentCounts} />
       </section>
 
       {/* ----------------------------------------------------------- route maps */}
@@ -589,6 +601,11 @@ export default async function HomePage({ params }: Props) {
                     <span className="rounded-[20px] bg-white/10 px-2.5 py-[3px] text-[11.5px] text-white/80">
                       {t.units.gates(airport.gateCount)}
                     </span>
+                    <CommentCount
+                      count={commentCounts[commentThreadKey('airport', airport.iata)] ?? 0}
+                      labels={t.comments}
+                      className="rounded-[20px] bg-white/10 px-2.5 py-[3px] text-[11.5px] text-white/80"
+                    />
                   </span>
                   <span className="mt-auto inline-flex items-center gap-1.5 pt-3 pl-3 text-[12.5px] font-semibold text-amber [&>svg]:transition-transform [&>svg]:duration-150 group-hover:[&>svg]:translate-x-[3px]">
                     {t.guides.more}

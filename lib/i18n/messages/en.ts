@@ -973,6 +973,38 @@ export const en: Messages = {
     tags: 'Tags',
   },
 
+  /**
+   * Reader comments at the foot of every content page
+   * (components/Comments.tsx). Strings only: functions cannot cross the
+   * server/client boundary, and `{n}` in countMany is substituted in the
+   * browser.
+   */
+  comments: {
+    kicker: 'Comments',
+    title: 'Reader comments',
+    en: 'Discussion',
+    sub: 'Questions, trip reports and corrections are all welcome. Comments are public.',
+    formTitle: 'Leave a comment',
+    countOne: '1 comment',
+    countMany: '{n} comments',
+    empty: 'No comments yet — be the first to write one.',
+    loading: 'Loading comments…',
+    loadError: 'Comments are unavailable right now.',
+    retry: 'Try again',
+    nameLabel: 'Name',
+    namePlaceholder: 'How should we address you?',
+    bodyLabel: 'Comment',
+    bodyPlaceholder: 'Share your experience, ask a question or add context…',
+    submit: 'Post comment',
+    submitting: 'Posting…',
+    success: 'Posted — thanks for sharing.',
+    error: 'Could not post your comment. Please try again later.',
+    rateLimited: 'That was too quick. Please wait a few minutes and try again.',
+    nameError: 'Please enter a name (2–40 characters).',
+    bodyError: 'Please write a comment (5–2000 characters).',
+    note: 'Comments are public and reflect their authors’ own views. Please stay civil and do not post ads or personal information.',
+  },
+
   terminalMap: {
     ariaLabel: (name: string) => `Terminal layout diagram for ${name}`,
     gates: 'Gates',

@@ -4,7 +4,6 @@ title: 杜拜機場出關全攻略：T1／T3 入境、換錢電話卡與進城�
 summary: 第一次落地杜拜國際機場（DXB）怎麼走：T1、T2、T3 的航廈分工，跟隨 Arrivals 與 Passport Control 的通關動線，中國護照的免籤停留天數，落地後的換匯與電話卡選擇，地鐵紅線、計程車與 Careem／Bolt 的價格和時間，以及著裝、時差、插頭這些第一次來中東容易忽略的細節。
 date: 2026-10-26
 updated: 2026-10-26
-source: 小紅書 秦人在杜拜
 tags: 杜拜機場, DXB, 杜拜入境, 杜拜地鐵, 杜拜交通, 中東旅行
 cover: images/0.webp
 ---
@@ -102,6 +101,5 @@ Nol 卡在車站的自助機或人工櫃檯都能辦，最常用的銀卡（Silv
 - **維基百科**：[杜拜國際機場](https://zh.wikipedia.org/wiki/%E8%BF%AA%E6%8B%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA)
 - **機場官網**：[Dubai Airports](https://www.dubaiairports.ae/)
 - **地鐵與公交**：[Dubai RTA](https://www.rta.ae/)
-- **原文參考**：[小紅書 @秦人在杜拜](https://www.xiaohongshu.com/explore/684ab258000000002102eeb8)
 
 圖片來源：作者實地拍攝與本站機場示意圖。票價、營業時間與交通政策可能調整，出行前請以官方公告為準。

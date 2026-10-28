@@ -930,6 +930,38 @@ export const zh = {
     tags: '标签',
   },
 
+  /**
+   * 内容页底部的读者评论区（components/Comments.tsx）。
+   *
+   * 全部是字符串：组件是客户端组件，函数无法跨服务端/客户端边界传递。
+   * `countMany` 用 `{n}` 占位，由组件替换。
+   */
+  comments: {
+    kicker: '评论',
+    title: '读者评论',
+    en: 'Comments',
+    sub: '欢迎留下你的问题、经验或指正，评论会公开显示。',
+    formTitle: '写下你的评论',
+    countOne: '1 条评论',
+    countMany: '{n} 条评论',
+    empty: '还没有评论，来说第一句吧。',
+    loading: '正在加载评论…',
+    loadError: '评论暂时无法加载。',
+    retry: '重试',
+    nameLabel: '昵称',
+    namePlaceholder: '怎么称呼你？',
+    bodyLabel: '评论内容',
+    bodyPlaceholder: '分享你的经验、提问或补充信息…',
+    submit: '发表评论',
+    submitting: '正在发表…',
+    success: '评论已发表，感谢分享。',
+    error: '发表失败，请稍后再试。',
+    rateLimited: '发表太频繁了，请过几分钟再试。',
+    nameError: '请填写昵称（2–40 个字符）。',
+    bodyError: '请填写评论内容（5–2000 个字符）。',
+    note: '评论会公开显示，仅代表读者个人观点。请保持友善，勿发布广告或个人信息。',
+  },
+
   terminalMap: {
     ariaLabel: (name: string) => `${name}航站楼平面示意图`,
     gates: '登机口',

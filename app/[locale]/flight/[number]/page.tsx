@@ -225,7 +225,7 @@ export default async function FlightPage({ params }: Props) {
                 <p className="sec-sub">{t.flight.airportsSub}</p>
               </div>
             </div>
-            <div className="fl-airports">
+            <div className="mt-4 grid gap-3.5 md:grid-cols-2">
               <FlightAirportCard
                 label={t.flight.originAirport}
                 place={primary.origin}
@@ -249,7 +249,7 @@ export default async function FlightPage({ params }: Props) {
                 </h2>
               </div>
             </div>
-            <div className="detail-list fl-summary">
+            <div className="detail-list grid-cols-2 min-[760px]:grid-cols-4">
               <div className="detail-item">
                 <div className="k">{t.flight.detailsFlight}</div>
                 <div className="v">{flight.number}</div>
@@ -307,11 +307,13 @@ export default async function FlightPage({ params }: Props) {
                 </div>
               </div>
               <div className="rt-table-wrap">
-                <table className="rt-table fl-routes-table">
+                <table className="rt-table max-[760px]:[&_th]:px-2.5 max-[760px]:[&_td]:px-2.5">
                   <thead>
                     <tr>
                       <th>{t.flight.routesRoute}</th>
-                      <th>{t.flight.routesAirline}</th>
+                      {/* The shared .rt-table mobile rule hides every table's
+                          second header cell; this table keeps Airline. */}
+                      <th className="max-[760px]:table-cell">{t.flight.routesAirline}</th>
                       <th className="num">{t.flight.routesDistance}</th>
                     </tr>
                   </thead>
@@ -350,13 +352,19 @@ export default async function FlightPage({ params }: Props) {
                   <p className="sec-sub">{t.flight.relatedSub}</p>
                 </div>
               </div>
-              <ul className="fl-related">
+              <ul className="mt-4 mb-0 grid list-none gap-2.5 p-0 sm:grid-cols-2">
                 {flight.related.map((item) => (
-                  <li key={item.number}>
-                    <Link className="num" href={item.href}>
+                  <li
+                    className="flex items-center justify-between gap-3 rounded-[10px] border border-line bg-card px-4 py-2.5"
+                    key={item.number}
+                  >
+                    <Link
+                      className="font-display text-[14px] font-semibold text-sky-600 tabular-nums no-underline hover:underline"
+                      href={item.href}
+                    >
                       {item.number}
                     </Link>
-                    <span>{item.airline}</span>
+                    <span className="text-right text-[12.5px] text-ink-soft">{item.airline}</span>
                   </li>
                 ))}
               </ul>

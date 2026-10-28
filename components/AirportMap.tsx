@@ -173,6 +173,9 @@ export default function AirportMap({
         zoom: 2,
         minZoom: 2,
         maxZoom: 8,
+        // Wheel to zoom about the cursor; a trackpad pinch arrives as the same
+        // event with ctrlKey set. Same policy as the airport and flight maps.
+        scrollWheelZoom: true,
         worldCopyJump: true,
         zoomControl: false,
         maxBounds: L.latLngBounds([-85, -185], [85, 195]),

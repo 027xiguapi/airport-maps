@@ -4,7 +4,6 @@ title: "Muoversi a Dubai: metropolitana, autobus e carta Nol spiegati"
 summary: "Come funzionano i trasporti pubblici a Dubai: i tipi di carta Nol e i prezzi, le linee Rossa e Verde e i loro interscambi, perché viaggiare nella direzione sbagliata è l'errore classico, perché gli autobus di Dubai non accettano contanti, come si confrontano davvero Careem e Bolt e perché comprare una carta in aeroporto è la prima cosa da fare."
 date: 2026-10-25
 updated: 2026-10-25
-source: Xiaohongshu @巴拉克
 tags: trasporti a Dubai, metropolitana di Dubai, carta Nol, autobus di Dubai, viaggio a Dubai, Emirati Arabi Uniti
 cover: images/0.webp
 ---
@@ -95,6 +94,5 @@ Tariffe, percorsi e orari provengono dalle pubblicazioni della RTA e dagli appun
 - **Wikipedia**: [Dubai Metro](https://en.wikipedia.org/wiki/Dubai_Metro)
 - **Baidu Baike**: [Dubai Metro](https://baike.baidu.com/item/%E8%BF%AA%E6%8B%9C%E5%9C%B0%E9%93%81)
 - **Gestore**: [Dubai RTA](https://www.rta.ae/)
-- **Post originale**: [Xiaohongshu @巴拉克](https://www.xiaohongshu.com/explore/69509fcb0000000021031c8a)
 
 Fonte delle immagini: le fotografie dell'autore. Tariffe, tipi di carta e linee sono quelli pubblicati dalla RTA.

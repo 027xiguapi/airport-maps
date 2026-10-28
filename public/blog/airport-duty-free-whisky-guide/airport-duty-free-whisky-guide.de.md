@@ -4,7 +4,6 @@ title: "Whisky im Duty-Free am Flughafen: Ein weltweiter Regal-Guide nach Flugze
 summary: "Von Taoyuan und Changi bis Heathrow und Sydney: Im Duty-Free am Flughafen leben die Reisehandels-Exklusivabfüllungen des Whiskys — Single Casks, Fassstärke und keine lokale Steuer. Ein Überblick Region für Region, was um das chinesische Neujahr 2020 in den Regalen stand, dazu, wie Sie nach Alter, Fass, Flaschengröße und den Flüssigkeitsregeln beim Umsteigen auswählen."
 date: 2026-10-19
 updated: 2026-10-19
-source: Whisky Magazine
 tags: Duty-Free am Flughafen, Whisky, Reisehandel, Heathrow, Changi, Freimenge
 cover: images/0.webp
 ---

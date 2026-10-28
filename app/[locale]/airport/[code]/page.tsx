@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound, permanentRedirect } from 'next/navigation';
+import Comments from '@/components/Comments';
 import Faq from '@/components/Faq';
 import JsonLd from '@/components/JsonLd';
 import Markdown from '@/components/Markdown';
@@ -211,6 +212,7 @@ export default async function AirportPage({ params }: Props) {
     ...(airport.transit.length > 0 ? [{ id: 'transport', label: t.toc.transport }] : []),
     ...(airport.facilities.length > 0 ? [{ id: 'facilities', label: t.toc.facilities }] : []),
     { id: 'faq', label: t.toc.faq },
+    { id: 'comments', label: t.comments.title },
   ];
 
   return (
@@ -328,6 +330,14 @@ export default async function AirportPage({ params }: Props) {
             </div>
           </div>
           <Faq items={faqItems} />
+
+          <Comments
+            pageKind="airport"
+            pageKey={airport.iata}
+            locale={locale}
+            lang={LOCALE_META[locale].htmlLang}
+            labels={t.comments}
+          />
         </div>
       </div>
 

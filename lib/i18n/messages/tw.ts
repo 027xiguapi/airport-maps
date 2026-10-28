@@ -931,6 +931,38 @@ export const tw: Messages = {
     tags: '標籤',
   },
 
+  /**
+   * 內容頁底部的讀者評論區（components/Comments.tsx）。
+   *
+   * 全部是字串：元件是客戶端元件，函式無法跨服務端/客戶端邊界傳遞。
+   * `countMany` 用 `{n}` 佔位，由元件替換。
+   */
+  comments: {
+    kicker: '評論',
+    title: '讀者評論',
+    en: 'Comments',
+    sub: '歡迎留下你的問題、經驗或指正，評論會公開顯示。',
+    formTitle: '寫下你的評論',
+    countOne: '1 條評論',
+    countMany: '{n} 條評論',
+    empty: '還沒有評論，來說第一句吧。',
+    loading: '正在載入評論…',
+    loadError: '評論暫時無法載入。',
+    retry: '重試',
+    nameLabel: '暱稱',
+    namePlaceholder: '怎麼稱呼你？',
+    bodyLabel: '評論內容',
+    bodyPlaceholder: '分享你的經驗、提問或補充資訊…',
+    submit: '發表評論',
+    submitting: '正在發表…',
+    success: '評論已發表，感謝分享。',
+    error: '發表失敗，請稍後再試。',
+    rateLimited: '發表太頻繁了，請過幾分鐘再試。',
+    nameError: '請填寫暱稱（2–40 個字元）。',
+    bodyError: '請填寫評論內容（5–2000 個字元）。',
+    note: '評論會公開顯示，僅代表讀者個人觀點。請保持友善，勿張貼廣告或個人資訊。',
+  },
+
   terminalMap: {
     ariaLabel: (name: string) => `${name}航廈平面示意圖`,
     gates: '閘口',

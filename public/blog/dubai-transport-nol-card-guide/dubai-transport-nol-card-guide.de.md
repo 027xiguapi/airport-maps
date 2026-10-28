@@ -4,7 +4,6 @@ title: 'In Dubai unterwegs: Metro, Busse und die Nol-Karte erklärt'
 summary: 'Wie der öffentliche Nahverkehr in Dubai funktioniert: die Typen und Preise der Nol-Karte, die Red und die Green Line samt ihren Umsteigestationen, warum die falsche Richtung der klassische Fehler ist, warum Dubais Busse kein Bargeld annehmen, wie Careem und Bolt in der Praxis abschneiden und warum der Kartenkauf am Flughafen das Erste sein sollte, das Sie tun.'
 date: 2026-10-25
 updated: 2026-10-25
-source: Xiaohongshu @巴拉克
 tags: Dubai Nahverkehr, Dubai Metro, Nol-Karte, Busse in Dubai, Dubai Reisen, VAE
 cover: images/0.webp
 ---
@@ -95,6 +94,5 @@ Fahrpreise, Linien und Betriebszeiten stammen aus Veröffentlichungen der RTA un
 - **Wikipedia**: [Dubai Metro](https://en.wikipedia.org/wiki/Dubai_Metro)
 - **Baidu Baike**: [Dubai Metro](https://baike.baidu.com/item/%E8%BF%AA%E6%8B%9C%E5%9C%B0%E9%93%81)
 - **Betreiber**: [Dubai RTA](https://www.rta.ae/)
-- **Originalbeitrag**: [Xiaohongshu @巴拉克](https://www.xiaohongshu.com/explore/69509fcb0000000021031c8a)
 
 Bildquelle: die eigenen Fotografien des Autors. Fahrpreise, Kartentypen und Linien entsprechen den Veröffentlichungen der RTA.

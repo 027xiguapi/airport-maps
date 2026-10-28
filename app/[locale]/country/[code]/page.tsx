@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import AirportCard, { CountryChips } from '@/components/AirportCard';
 import Breadcrumb from '@/components/Breadcrumb';
+import Comments from '@/components/Comments';
 import Faq from '@/components/Faq';
 import JsonLd from '@/components/JsonLd';
 import TocNav, { type TocItem } from '@/components/TocNav';
@@ -107,6 +108,7 @@ export default async function CountryPage({ params }: Props) {
         ]
       : []),
     ...(faqItems.length > 0 ? [{ id: 'faq', label: t.toc.faq }] : []),
+    { id: 'comments', label: t.comments.title },
   ];
 
   return (
@@ -209,6 +211,14 @@ export default async function CountryPage({ params }: Props) {
               <Faq items={faqItems} />
             </section>
           )}
+
+          <Comments
+            pageKind="country"
+            pageKey={country.code}
+            locale={locale}
+            lang={LOCALE_META[locale].htmlLang}
+            labels={t.comments}
+          />
         </div>
       </div>
 

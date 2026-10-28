@@ -30,11 +30,14 @@ export default function FlightHead({
   const primary = flight.primary;
 
   return (
-    <div className="ap-head fl-head">
+    <div className="ap-head">
       <div className="ap-head-inner">
         <Breadcrumb locale={locale} items={trail} />
         <div className="ap-title-row">
-          <div className="fl-head-badge" aria-hidden="true">
+          <div
+            className="flex h-[64px] w-[64px] flex-none items-center justify-center rounded-[14px] border border-white/15 bg-white/7 text-amber [box-shadow:0_4px_24px_rgba(242,163,60,0.18)]"
+            aria-hidden="true"
+          >
             <PlaneIcon width={40} height={40} />
           </div>
           <div className="ap-title">

@@ -4,7 +4,6 @@ title: 阿布扎比往返迪拜巴士全攻略：35 迪拉姆机场直达，回�
 summary: 阿布扎比扎耶德机场到迪拜的机场快线巴士：7 号门买票、35 迪拉姆、每小时一班、直达 Ibn Battuta；回程坐迪拜 RTA 的 E101，只能刷 Nol 卡、25 迪拉姆、约 20 分钟一班到阿布扎比主巴士站；外加 Hafilat 免费公交卡的办理方法与两城往返的时间预算。
 date: 2026-10-25
 updated: 2026-10-25
-source: 小红书 Li
 tags: 阿布扎比交通, 迪拜交通, 机场巴士, E101, Ibn Battuta, 阿联酋跨城
 cover: images/0.webp
 ---
@@ -96,6 +95,5 @@ E101 大约 20 分钟一班，全程约 1 小时 50 分钟，终点站是阿布�
 - **机场官网**：[Zayed International Airport](https://www.zayedinternationalairport.ae/)
 - **迪拜公交**：[Dubai RTA](https://www.rta.ae/)
 - **阿布扎比公交**：[Abu Dhabi ITC](https://www.itc.gov.ae/)
-- **原文参考**：[小红书 @Li](https://www.xiaohongshu.com/explore/699ff81e000000001a03377a)
 
 图片来源：作者实地拍摄。票价与班次为拍摄时柜台公示的信息，可能随政策调整。

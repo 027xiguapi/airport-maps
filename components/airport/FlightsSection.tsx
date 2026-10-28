@@ -66,7 +66,7 @@ export default function FlightsSection({
         </div>
       </div>
 
-      <div className="detail-list fl-summary">
+      <div className="detail-list grid-cols-2 min-[760px]:grid-cols-4">
         <div className="detail-item">
           <div className="k">{flights.statDepartures}</div>
           <div className="v">{formatNumber(counts.departures, locale)}</div>

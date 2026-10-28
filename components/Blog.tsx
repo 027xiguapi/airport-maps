@@ -1,15 +1,19 @@
 import Link from 'next/link';
+import CommentCount from '@/components/CommentCount';
+import { commentThreadKey } from '@/lib/comment-labels';
 import { formatDate } from '@/lib/format';
 import { blogCoverUrl, blogPostPath, type BlogPost } from '@/lib/blog';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 
 /**
- * Blog tiles. Same anatomy as the homepage guide tiles (navy body, white image
- * frame, amber link) so the article section reads as one more editorial block
- * on a page full of them. Covers arrive at wildly different shapes — scanned
- * terminal diagrams, phone screenshots, posters — so they sit object-contain in
- * a fixed white frame and are never cropped.
+ * Blog cards. The /blog index uses the tile grid — navy body, white image
+ * frame, amber link, the same anatomy as the homepage guide tiles — while the
+ * homepage uses the row list further down (headline left, thumbnail right).
+ * Covers arrive at wildly different shapes — scanned terminal diagrams, phone
+ * screenshots, posters — which is why the grid shows them object-contain in a
+ * fixed white frame; only the homepage thumbnail crops, and it crops from the
+ * top so the baked-in poster headline survives.
  */
 const CARD =
   'group flex flex-col overflow-hidden bg-navy-900 text-white ' +
@@ -50,7 +54,7 @@ export function PostCard({ locale, post }: { locale: Locale; post: BlogPost }) {
   );
 }
 
-/** A row of article tiles, used by the homepage section and the /blog index. */
+/** The tile grid of every article, used by the /blog index. */
 export function PostGrid({ locale, posts }: { locale: Locale; posts: BlogPost[] }) {
   return (
     <div className="grid grid-cols-[repeat(auto-fill,minmax(min(260px,100%),1fr))] gap-3.5">
@@ -62,103 +66,101 @@ export function PostGrid({ locale, posts }: { locale: Locale; posts: BlogPost[] 
 }
 
 /**
- * One slide-like tile of the homepage showcase: the cover fills the card edge
- * to edge, a navy scrim keeps the overlaid text readable, and the whole card is
- * the link. Covers arrive at wildly different shapes (scanned diagrams, phone
- * screenshots, posters), so they are cropped here — object-cover is the point
- * of the style — which is also why alt="" : the title is on the image.
+ * One row of the homepage list: headline and meta on the left, a fixed-size
+ * thumbnail on the right — the compact "text then picture" shape a news feed
+ * uses, the opposite trade-off from the /blog grid (which gives the cover a
+ * full-width frame). The thumbnail is the only place a cover is cropped, and
+ * the row is still readable if it is not: the title sits beside it, so the
+ * image is decorative here and carries alt="".
  */
-function OverlayCard({
+function PostRow({
   locale,
   post,
-  large = false,
-  className = '',
+  commentCount,
 }: {
   locale: Locale;
   post: BlogPost;
-  large?: boolean;
-  className?: string;
+  commentCount: number;
 }) {
   const t = getMessages(locale);
   const cover = blogCoverUrl(post);
 
   return (
     <Link
-      className={
-        'group relative block overflow-hidden rounded-[14px] bg-navy-950 ' +
-        '[box-shadow:var(--shadow-sm)] transition-[transform,box-shadow] duration-[180ms] ' +
-        'hover:-translate-y-0.5 hover:[box-shadow:var(--shadow-lg)] ' +
-        className
-      }
+      className="group flex items-center gap-4 rounded-[12px] border border-line bg-card p-3.5 transition-[border-color,box-shadow,transform] duration-150 hover:-translate-y-0.5 hover:border-sky-500 hover:[box-shadow:var(--shadow-md)] sm:gap-6 sm:px-5 sm:py-4"
       href={localizedPath(locale, blogPostPath(post.slug))}
     >
-      {cover ? (
-        <img
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-          src={cover}
-          alt=""
-          loading="lazy"
-        />
-      ) : (
-        <span className="absolute inset-0 flex items-center justify-center bg-[linear-gradient(135deg,var(--navy-700),var(--navy-900))]">
-          <span className="font-display text-[52px] font-semibold tracking-[0.06em] text-white/10">
-            {post.title.slice(0, 1)}
-          </span>
-        </span>
-      )}
-      {/* Scrim: strongest behind the text, fading out towards the top. */}
-      <span className="absolute inset-0 bg-gradient-to-t from-navy-950/92 via-navy-950/35 to-transparent" />
-      <span className="absolute inset-x-0 bottom-0 flex flex-col gap-1.5 p-4 lg:p-5">
-        <h3
-          className={
-            large
-              ? 'line-clamp-2 text-[19px] font-bold leading-snug text-white lg:text-[22px]'
-              : 'line-clamp-2 text-[14px] font-bold leading-snug text-white'
-          }
-        >
+      <span className="flex min-w-0 flex-1 flex-col">
+        <h3 className="line-clamp-2 text-[15.5px] font-bold leading-snug text-ink-heading transition-colors duration-150 group-hover:text-sky-600 sm:text-[18px]">
           {post.title}
         </h3>
-        {large && post.summary && (
-          <span className="line-clamp-2 text-[12.5px] leading-relaxed text-white/70 max-lg:hidden">
+        {post.summary && (
+          <span className="mt-1.5 line-clamp-2 text-[12.5px] leading-relaxed text-ink-soft max-sm:hidden">
             {post.summary}
           </span>
         )}
-        <span className="flex flex-wrap items-center gap-x-2 text-[12px] text-white/62">
+        <span className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] text-ink-faint">
+          {post.source && (
+            <>
+              <span className="max-sm:hidden">{post.source}</span>
+              <span aria-hidden="true" className="max-sm:hidden">
+                ·
+              </span>
+            </>
+          )}
           <time dateTime={post.date}>{formatDate(post.date, locale)}</time>
+          <span aria-hidden="true" className="max-[480px]:hidden">
+            ·
+          </span>
+          <span className="max-[480px]:hidden">{t.blog.readingMinutes(post.minutes)}</span>
           <span aria-hidden="true">·</span>
-          <span>{t.blog.readingMinutes(post.minutes)}</span>
+          <CommentCount count={commentCount} labels={t.comments} className="text-ink-faint" />
         </span>
+      </span>
+      <span className="h-[78px] w-[104px] flex-none overflow-hidden rounded-[9px] bg-navy-950 sm:h-[118px] sm:w-[184px]">
+        {cover ? (
+          <img
+            className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.04]"
+            src={cover}
+            alt=""
+            loading="lazy"
+          />
+        ) : (
+          <span className="flex h-full w-full items-center justify-center bg-[linear-gradient(135deg,var(--navy-700),var(--navy-900))] font-display text-[30px] font-semibold text-white/15">
+            {post.title.slice(0, 1)}
+          </span>
+        )}
       </span>
     </Link>
   );
 }
 
 /**
- * Homepage blog showcase: slide-style cards with the text on the image. On
- * desktop the newest article takes a large tile on the left and the next four
- * fill a two-by-two grid on the right; on narrow screens everything stacks,
- * with the small tiles keeping two columns.
+ * Homepage article list: the newest handful of articles, one per row. The row
+ * shape keeps the headline at full reading width, so six titles fit on the page
+ * without turning the section into a second grid.
  */
-export function BlogShowcase({ locale, posts }: { locale: Locale; posts: BlogPost[] }) {
-  const [lead, ...rest] = posts;
-  if (!lead) return null;
-  const small = rest.slice(0, 4);
-
+export function LatestPosts({
+  locale,
+  posts,
+  commentCounts,
+}: {
+  locale: Locale;
+  posts: BlogPost[];
+  /** Keyed by commentThreadKey('blog', slug); see lib/comments.ts. */
+  commentCounts?: Record<string, number>;
+}) {
   return (
-    <div className="grid gap-4 lg:grid-cols-[1.15fr_1fr] lg:grid-rows-1 lg:h-[440px]">
-      <OverlayCard locale={locale} post={lead} large className="h-[230px] lg:h-full" />
-      {small.length > 0 && (
-        <div className="grid grid-cols-2 gap-4 lg:h-full">
-          {small.map((post) => (
-            <OverlayCard
-              key={post.slug}
-              locale={locale}
-              post={post}
-              className="h-[150px] lg:h-full"
-            />
-          ))}
-        </div>
-      )}
-    </div>
+    <ul className="m-0 flex list-none flex-col gap-3 p-0">
+      {posts.map((post) => (
+        <li key={post.slug}>
+          <PostRow
+            locale={locale}
+            post={post}
+            commentCount={commentCounts?.[commentThreadKey('blog', post.slug)] ?? 0}
+          />
+        </li>
+      ))}
+    </ul>
   );
 }

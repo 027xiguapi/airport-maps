@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import CommentCount from '@/components/CommentCount';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
+import { commentThreadKey } from '@/lib/comment-labels';
 import { formatDate, formatNumber } from '@/lib/format';
 import { PlaneIcon } from '@/lib/icons';
 import { coverUrl } from '@/lib/map-images';
@@ -10,15 +12,15 @@ import { Card } from '@/components/ui/card';
 import type { AirportSummary } from '@/lib/types';
 
 /**
- * The homepage's three list blocks, written as utilities rather than the
- * `.update-*`, `.popular-*` and `.route-*` rules that used to live in
- * globals.css. The breakpoints are the ones those rules used (640px, then 480px
- * for the popular strip), so the layouts collapse exactly where they did.
+ * The homepage's list blocks, written as utilities rather than the `.update-*`,
+ * `.popular-*` and `.route-*` rules that used to live in globals.css. The
+ * breakpoints are the ones those rules used (640px, then 480px for the old
+ * popular strip), so the layouts collapse where they did.
  */
 
 /**
- * Both strips are the same scroller: a row that snaps and scrolls sideways
- * instead of wrapping, so the page stays one column wide at every size.
+ * The route strip is a scroller: a row that snaps and scrolls sideways instead
+ * of wrapping, so the page stays one column wide at every size.
  */
 const STRIP = 'flex overflow-x-auto pb-2 [scroll-snap-type:x_proximity]';
 
@@ -117,42 +119,109 @@ export function CountryUpdates({ locale, rows }: { locale: Locale; rows: Country
 }
 
 /**
- * Homepage popular strip: one horizontally scrollable row of terminal-map
- * cover tiles (the 400px covers in /public/maps) with the airport name under
- * each. The random pick happens in the page — this list is already shuffled.
- * Tiles are square: the cover is a map sheet, and the straight edges let the
- * white frame meet the navy body without a seam of corner rounding.
+ * One terminal-map tile: the 400px cover in /public/maps sits on its white
+ * sheet inside the navy card, name and city in the caption strip under it.
+ * The cover is never cropped — it is a map, not a photo — so the white frame
+ * keeps whatever aspect ratio the sheet has and the card shows the whole
+ * diagram at every size.
  */
-export function PopularCities({ locale, airports }: { locale: Locale; airports: AirportSummary[] }) {
+function MapTile({
+  locale,
+  airport,
+  large = false,
+  commentCount,
+}: {
+  locale: Locale;
+  airport: AirportSummary;
+  large?: boolean;
+  /** Visible comments on this airport's page; 0 when the thread is empty. */
+  commentCount: number;
+}) {
+  const t = getMessages(locale);
+
   return (
-    <div className={`${STRIP} gap-4`}>
-      {airports.map((airport) => (
-        <Link
-          className={`${TILE} w-[230px] max-[480px]:w-[188px]`}
-          href={localizedPath(locale, `/airport/${airport.iata}`)}
-          key={airport.iata}
+    <Link
+      className={`${TILE} ${large ? 'h-[300px] lg:h-full' : 'h-[168px] lg:h-full'}`}
+      href={localizedPath(locale, `/airport/${airport.iata}`)}
+    >
+      <span
+        className={`relative flex min-h-0 flex-1 items-center justify-center bg-white ${
+          large ? 'p-3 lg:p-4' : 'p-2'
+        }`}
+      >
+        <img
+          className="h-full w-full object-contain"
+          src={coverUrl(airport.iata)}
+          alt={airport.name}
+          loading="lazy"
+        />
+        <span className="absolute right-2 top-2 inline-flex items-center rounded-full bg-navy-950/75 px-2 py-[3px] text-[11px] font-semibold text-white backdrop-blur-[2px]">
+          <CommentCount count={commentCount} labels={t.comments} />
+        </span>
+      </span>
+      <span
+        className={`flex min-w-0 flex-none flex-col ${
+          large ? 'px-4 pb-4 pt-3 lg:px-5 lg:pb-5 lg:pt-4' : 'px-3.5 pb-3 pt-2.5'
+        }`}
+      >
+        <span className="font-display text-[12px] font-semibold tracking-[0.18em] text-amber">
+          {airport.iata}
+        </span>
+        <span
+          className={`mt-1 line-clamp-2 font-bold leading-snug text-white ${
+            large ? 'text-[16px] lg:text-[19px]' : 'text-[13.5px]'
+          }`}
         >
-          <span className="flex h-[150px] flex-none items-center justify-center bg-white p-2 max-[480px]:h-[124px]">
-            <img
-              className="h-full w-full object-contain"
-              src={coverUrl(airport.iata)}
-              alt={airport.name}
-              loading="lazy"
-            />
-          </span>
-          <span className="flex min-w-0 flex-1 flex-col p-3.5">
-            <span className="font-display text-[12.5px] font-semibold tracking-[0.18em] text-amber">
-              {airport.iata}
-            </span>
-            <span className="mt-1 line-clamp-2 text-[15px] font-bold leading-snug">
-              {airport.name}
-            </span>
-            <span className="mt-auto truncate pt-1.5 text-[12px] text-white/60">
-              {airport.city} · {airport.countryName}
-            </span>
-          </span>
-        </Link>
-      ))}
+          {airport.name}
+        </span>
+        <span
+          className={`mt-1 truncate text-white/60 ${
+            large ? 'text-[12.5px]' : 'text-[11.5px] max-sm:hidden'
+          }`}
+        >
+          {airport.city} · {airport.countryName}
+        </span>
+      </span>
+    </Link>
+  );
+}
+
+/**
+ * Homepage popular block: one large terminal-map cover on the left and the
+ * next four as a 2×2 of small tiles on the right. The random pick happens in
+ * the page — this list is already shuffled and five long.
+ */
+export function PopularMaps({
+  locale,
+  airports,
+  commentCounts,
+}: {
+  locale: Locale;
+  airports: AirportSummary[];
+  /** Keyed by commentThreadKey('airport', iata); see lib/comments.ts. */
+  commentCounts?: Record<string, number>;
+}) {
+  const [lead, ...rest] = airports;
+  if (!lead) return null;
+
+  return (
+    <div className="grid gap-4 lg:h-[440px] lg:grid-cols-[1.15fr_1fr] lg:grid-rows-1">
+      <MapTile
+        locale={locale}
+        airport={lead}
+        large
+        commentCount={commentCounts?.[commentThreadKey('airport', lead.iata)] ?? 0}
+      />
+      <div className="grid grid-cols-2 gap-3 lg:grid-rows-2 lg:gap-4">
+        {rest.slice(0, 4).map((airport) => (
+          <MapTile
+            key={airport.iata}
+            locale={locale}
+            airport={airport}
+            commentCount={commentCounts?.[commentThreadKey('airport', airport.iata)] ?? 0}
+          />
+        ))}
+      </div>
     </div>
   );
 }

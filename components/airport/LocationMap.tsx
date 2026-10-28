@@ -63,8 +63,9 @@ export default function LocationMap({
       const map = L.map(hostRef.current, {
         center: [lat, lng],
         zoom,
-        // An inline map in a long page must not hijack vertical scrolling.
-        scrollWheelZoom: false,
+        // Wheel to zoom about the cursor; a trackpad pinch arrives as the same
+        // event with ctrlKey set. Matches the route and flight maps.
+        scrollWheelZoom: true,
         zoomControl: true,
       });
 

@@ -193,6 +193,13 @@ export function RulerIcon(props: IconProps) {
   );
 }
 
+/** Speech bubble for comment counts (homepage cards, comment section head). */
+export function CommentIcon(props: IconProps) {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 9 9 0 0 1-3.6-.8L3 21l1.8-5.7A8.4 8.4 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg>
+  );
+}
+
 export const ICONS = {
   terminal: TerminalIcon,
   shop: ShopIcon,
@@ -222,6 +229,7 @@ export const ICONS = {
   star: StarIcon,
   swap: SwapIcon,
   ruler: RulerIcon,
+  comment: CommentIcon,
 } as const;
 
 export type IconName = keyof typeof ICONS;
