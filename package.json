@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3003",
-    "build": "next build",
-    "start": "next start -p 3003",
+    "dev": "vite dev --port 3003",
+    "build": "node scripts/build.mjs",
+    "build:raw": "vite build",
+    "start": "vinext start -p 3003",
+    "dev:next": "next dev -p 3003",
+    "build:next": "next build",
+    "start:next": "next start -p 3003",
     "typecheck": "tsc --noEmit",
     "content:import": "node scripts/content-import.mjs",
     "content:export": "node scripts/content-export.mjs",
@@ -38,12 +42,14 @@
     "next": "16.3.5",
     "next-auth": "5.0.0-beta.32",
     "pg": "^8.16.3",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "react-markdown": "^10.1.0",
+    "react-server-dom-webpack": "^19.3.1",
     "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.7.0",
     "tailwindcss": "^4.3.3",
+    "vinext": "^1.4.0",
     "yet-another-react-lightbox": "^3.32.2"
   },
   "pnpm": {
@@ -56,11 +62,15 @@
     "@types/pg": "^8.15.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.1.2",
+    "@vitejs/plugin-rsc": "^0.5.38",
     "drizzle-kit": "^0.31.10",
     "opencc-js": "^1.4.2",
     "sharp": "^0.35.4",
     "topojson-client": "^3.1.0",
     "typescript": "^5",
+    "vite": "^8.3.5",
     "world-atlas": "^2.0.2"
-  }
+  },
+  "type": "module"
 }

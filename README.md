@@ -2,7 +2,7 @@
 
 全球机场导航站点（生产域名 **worldairportmap.com**）：按国家 / 地区浏览 **516 座机场、101 个国家 / 地区**，查看每座机场的**航站楼平面示意图**、登机口范围、主要航司、地面交通与设施；可交互的**直飞航线图**与目的地列表；三个地理计算工具；以及用 **Markdown** 维护的长文（516 篇机场指南：60 篇精编手写 + 456 篇数据驱动起步稿、46 篇国家介绍）。**默认语言为英语**，同时提供完整中文版、繁体中文版、**德语版（`/de`）**、**韩语版（`/ko`）**、**法语版（`/fr`）**与**意大利语版（`/it`）**。
 
-由原来的单文件静态页面（`legacy/index.html`，哈希路由 + 内嵌 JS 数据）重构为 **Next.js App Router + PostgreSQL**：
+由原来的单文件静态页面（`legacy/index.html`，哈希路由 + 内嵌 JS 数据）重构为 **Vinext（基于 Vite 的 Next.js 兼容框架，App Router）+ PostgreSQL**：
 
 - 机场数据存放在 PostgreSQL，页面通过 SQL 查询渲染（不再是内嵌的 JS 数组）
 - 哈希路由（`#/airport/PEK`）改为真实 URL（`/airport/PEK`、`/zh/airport/PEK`），可被抓取、可分享、可被搜索引擎收录
@@ -36,7 +36,7 @@
 
 | 层 | 选型 |
 | --- | --- |
-| 框架 | Next.js 16（App Router、Server Components、ISR `revalidate = 3600`）、React 19、TypeScript |
+| 框架 | Vinext 1.4（`vinext()` Vite 插件，跑 Next.js App Router 约定：Server Components、路由处理程序、`proxy.ts`、ISR `revalidate = 3600`）、Vite 8、React 19、TypeScript |
 | 数据库 | PostgreSQL 13+（drizzle-orm + drizzle-kit 管理表结构，`pg` 连接池；检索、分页、详情等复杂查询仍是手写 SQL） |
 | 国际化 | 自建轻量方案：类型安全的消息目录 + `[locale]` 路由段 + `proxy.ts` |
 | Markdown | `react-markdown` + `remark-gfm`（渲染为 React 元素，不注入 HTML） |
@@ -59,13 +59,66 @@ npm run dev                    # http://localhost:3003
 
 `npm run db:seed` 就是完整的初始化入口（`node scripts/seed.mjs`）：数据库不存在就建、`pg_trgm` 没装就装、表没建就用 `drizzle-kit push` 按 `db/schema.ts` 建、`search_blob` 触发器与 `directory_stats` 视图缺了就补，最后灌数据。前四步用「`airports` 表是否存在」判断，已经初始化过就直接跳过，所以对线上库重复跑它只影响数据。参数：`--add-airports` 只补缺的机场（不动已有数据）、`--data-only` 完全跳过初始化只灌数据、`--migrate` 改用 `drizzle/*.sql` 建表（默认走 push）、`--reset` 先 DROP 再重建（**会丢库**）。
 
-`npm run dev` 与 `npm start` 都监听 **3003**（`-p 3003`）。生产构建：
+`npm run dev` 与 `npm start` 都监听 **3003**（`vite dev --port 3003` / `vinext start -p 3003`）。生产构建：
 
 ```bash
 npm run build && npm start
 ```
 
-构建会预渲染每个语言的约 995 个页面（516 机场 + 101 国家 + 367 航线页 + 11 个固定页），因此 **`npm run build` 需要可用的 `DATABASE_URL`**。
+`npm run build` 只打包（`vite build`，输出到 `dist/`），**默认不在构建期预渲染页面，也不再需要 `DATABASE_URL`**。页面按 `export const revalidate = 3600` 在首次请求时生成并进入 ISR 缓存，之后命中缓存；需要构建期全量预渲染时，在 `vite.config.ts` 里给插件加 `vinext({ prerender: true })`（会变慢，且需要可用的数据库）。
+
+## Vinext 迁移说明
+
+项目原本是 `next dev` / `next build` / `next start`，现在默认走 Vinext：
+
+- 依赖：`vinext`、`vite`、`@vitejs/plugin-react`、`@vitejs/plugin-rsc`、`react-server-dom-webpack`（见 Quick start 的 `vinext init`）。
+- 配置：`vite.config.ts` 里 `plugins: [vinext()]`；`next.config.ts` 仍会被读取，现在只剩 `allowedDevOrigins`（反向代理下开发时的跨域放行）。原来 Next 专用的 `experimental.cpus`（预渲染 worker 数量）和 `turbopack.ignoreIssue` 已删除——Vite 构建是单进程、不走 Turbopack。
+- 脚本：`npm run dev` = `vite dev --port 3003`，`npm run build` = `vite build`，`npm start` = `vinext start -p 3003`。Next 保留为回退：`npm run dev:next` / `build:next` / `start:next`。
+- next-auth：Vinext 的 `vinext check` 会把它标为「依赖 Next.js 内部实现」，但实测 `/api/auth/*`（CSRF、providers、Google OAuth + PKCE、JWT 会话）在 Vinext 下正常工作，因此没有改成 better-auth；`next` 包仍保留在依赖里，因为 next-auth 直接引用它。
+- 路由与约定：`app/`、`pages/`、`public/`、`proxy.ts`（Next 16 的 middleware）、`generateStaticParams`、`permanentRedirect`、`notFound`、Metadata、Route Handler、ISR 都按原样工作，未改写业务代码。
+- 已移除的 Next 专属类型：`tsconfig.json` 不再包含 `.next/types/**`（Vinext 不生成 typed routes），并排除 `.next`、`dist` 目录。副作用：`npm run dev:next` 启动时 Next 会自动把 `.next/types/**` 写回 `tsconfig.json`，切回 Vinext 前请再删掉（否则 `typecheck` 可能读到过期的生成类型）。
+
+## 低配服务器（2C2G）打包
+
+`vite build` 一次要跑四个环境（client references、server references、RSC server、client、SSR），V8 默认会把堆涨到机器允许的上限：**未限制时实测峰值 RSS 约 950 MB**，而 2C2G 机器上还有 PostgreSQL、应用进程和 nginx，很容易触发内核 OOM killer。
+
+现在 `npm run build` 走 [scripts/build.mjs](scripts/build.mjs)，默认给 V8 加 `--max-old-space-size=768`：**实测峰值约 670 MB、耗时约 13 s**，构建产物不变。需要放宽时用环境变量覆盖：
+
+```bash
+BUILD_HEAP_MB=1024 npm run build    # 机器内存更宽裕
+npm run build:raw                   # 完全不限制（等价于裸 vite build）
+```
+
+如果已经自己设了 `NODE_OPTIONS=--max-old-space-size=…`，包装脚本会尊重它、不再覆盖。
+
+服务器上建议同时做这几件事：
+
+1. **加 swap**（2 GB 就够，构建时兜底，避免被 OOM killer 直接杀掉）：
+
+   ```bash
+   sudo fallocate -l 2G /swapfile && sudo chmod 600 /swapfile
+   sudo mkswap /swapfile && sudo swapon /swapfile
+   echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+   sudo sysctl vm.swappiness=10
+   ```
+
+2. **构建前先停应用，构建完再起**。`vite build` 会先清空 `dist/`，构建期间线上会短暂 404；停掉应用也能把内存让给构建（参考：`vinext start` 预热十几个页面后 RSS 约 320 MB）：
+
+   ```bash
+   sudo systemctl stop airport-maps   # 换成实际的服务名 / pm2 stop airport-maps
+   npm run build
+   sudo systemctl start airport-maps
+   ```
+
+3. **留够磁盘**：`dist/` 约 460 MB，其中 `public/` 的 456 MB 图片会在每次构建时整份复制过去。根分区至少要留 2 GB 余量，否则 `ENOSPC` 看起来也像「构建崩了」（`df -h` 先看一眼）。
+
+4. **更稳的做法是异地构建**：在 CI 或开发机上 `npm run build`，再把产物同步上去，服务器只跑 `vinext start`：
+
+   ```bash
+   rsync -az --delete dist/ user@server:/srv/airport-maps/dist/
+   ```
+
+5. 和非构建任务抢 CPU 时可以加 `nice -n 19 ionice -c3 npm run build`，避免把 2 核占满导致健康检查超时。
 
 ## 环境变量
 
@@ -73,7 +126,7 @@ npm run build && npm start
 | --- | --- | --- |
 | `DATABASE_URL` | 是 | PostgreSQL 连接串 |
 | `NEXT_PUBLIC_SITE_URL` | 建议 | 站点对外地址，用于 `canonical`、`hreflang`、Open Graph、`sitemap.xml`、`robots.txt` 与 JSON-LD。默认 `http://localhost:3000` |
-| `PGPOOL_MAX` | 否 | 连接池上限：运行时默认 `10`，**构建期默认 `4`**（`next build` 会开 11 个 worker）。CI / 低配库上建议两边都调小（见「查询层与连接池」） |
+| `PGPOOL_MAX` | 否 | 连接池上限：运行时默认 `10`，构建期默认 `4`（`vite build` 不预渲染，构建期基本用不到连接池）。CI / 低配库上建议两边都调小（见「查询层与连接池」） |
 | `COMMENTS_IP_SALT` | 生产建议 | 评论区按 IP 限流时用的哈希盐。换掉只会重置计数，不影响已有评论 |
 | `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` | Google 登录必填 | OAuth 2.0 Web 客户端凭据（Google Cloud Console → Credentials）。不填时站点照常运行，登录页提示未配置 |
 | `AUTH_SECRET` | 登录必填 | NextAuth 用于签名/加密会话 JWT 的密钥。生成：`node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"` |
@@ -87,7 +140,9 @@ npm run build && npm start
 
 | 脚本 | 作用 |
 | --- | --- |
-| `npm run dev` / `build` / `start` | 开发（3003）/ 构建 / 启动（3003） |
+| `npm run dev` / `build` / `start` | Vinext：开发（`vite dev`，3003）/ 构建（`node scripts/build.mjs`，带 768 MB 堆上限 → `dist/`）/ 启动（`vinext start`，3003） |
+| `npm run build:raw` | 不带堆上限的 `vite build`（机器内存充足或需要 `--max-old-space-size` 自己控制时用） |
+| `npm run dev:next` / `build:next` / `start:next` | 同上的 Next.js 回退命令（仅在需要对比 / 排查 Vinext 兼容问题时使用） |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run db:seed` | **数据库初始化的唯一入口**（`node scripts/seed.mjs`）：建库（不存在时）→ `db/extensions.sql` → 建表（默认 `drizzle-kit push --force`，`--migrate` 改用 `drizzle/*.sql`）→ `db/custom.sql` → 灌数据。前四步以「`airports` 表是否存在」判断，已初始化就跳过，可安全重复执行；数据部分是全量重建（先 TRUNCATE）。改过 `scripts/legacy-data.json` / `scripts/directory-data.json` 后跑它生效 |
 | `node scripts/seed.mjs --add-airports` | **增量新增机场**：只插入库里还没有的机场（及其国家、翻译、航站楼等子表），已有行一律不动；新行的 `updated_at` 记成「几分钟前」，所以在首页排在最前面。新增一座机场的顺序是：写进 `scripts/legacy-data.json`（精编，带航站楼与正文）或 `scripts/directory-data.json`（目录批次，只有基础字段）→ 跑这个命令。只做插入，不更新已有行——要改已有数据用 `npm run db:seed` |
