@@ -51,7 +51,8 @@ export default async function NewDealPage({ params, searchParams }: Props) {
   const returnPath = `${localizedPath(locale, '/deals/new')}${
     airport ? `?airport=${airport}` : ''
   }`;
-  const startHref = `/api/auth/google?locale=${locale}&next=${encodeURIComponent(returnPath)}`;
+  // NextAuth's sign-in button lives on /login; keep the return path there.
+  const startHref = `${localizedPath(locale, '/login')}?next=${encodeURIComponent(returnPath)}`;
 
   return (
     <section className="mx-auto max-w-[860px] px-6 pb-20 pt-12">

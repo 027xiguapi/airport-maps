@@ -1,46 +1,25 @@
-import { createHash, randomBytes } from 'node:crypto';
-import { cookies } from 'next/headers';
+import NextAuth from 'next-auth';
+import type { Provider } from 'next-auth/providers';
+import Google from 'next-auth/providers/google';
 import { cache } from 'react';
-import { query, queryOne } from '@/lib/db';
-import { isSecureRequest, requestOrigin } from '@/lib/http';
+import { isAdminEmail } from '@/lib/admin-emails';
+import { queryOne, withTransaction } from '@/lib/db';
 
 /**
- * Google sign-in and server-side sessions (db/schema.ts → `users`, `sessions`).
+ * Authentication: NextAuth (Auth.js v5) with the Google provider and JWT
+ * sessions.
  *
- * Deliberately dependency-free: Google's OAuth 2.0 authorization-code flow with
- * PKCE is a handful of fetches, and rolling it here keeps the site's Node/Next
- * dependency list unchanged. The flow is:
+ * Why JWT sessions rather than the Drizzle adapter: this database keeps
+ * integer user ids (deals/comments reference `users.id` with an integer FK),
+ * while the Auth.js Drizzle adapter requires string ids. The adapter would
+ * force a destructive id migration across three tables for no functional
+ * gain. NextAuth still owns the OAuth flow, CSRF, cookies and provider
+ * plumbing; `auth_accounts` (db/schema.ts) is the durable provider→user map,
+ * so adding another provider later only touches this file.
  *
- *   1. GET /api/auth/google     — mint state + PKCE, redirect to Google.
- *   2. GET /api/auth/google/callback — verify state, swap the code for tokens,
- *      read the OpenID profile, upsert the user, mint a session.
- *
- * The session cookie carries a 32-byte random token; the database stores only
- * its SHA-256. Nothing in the cookie is signed or decryptable, so a leaked
- * cookie is the only thing an attacker can replay — and rotating it (a new
- * login) invalidates the old row.
- *
- * Server-only: the browser talks to the /api/auth/* routes instead.
+ * The callback URL is NextAuth's own `/api/auth/callback/google` — exactly the
+ * path the Google Cloud Console is already configured with.
  */
-
-/** httpOnly cookie carrying the raw session token. */
-export const SESSION_COOKIE = 'am_session';
-/** OAuth handshake cookies; scoped to the auth routes and short-lived. */
-export const OAUTH_STATE_COOKIE = 'am_oauth_state';
-export const OAUTH_VERIFIER_COOKIE = 'am_oauth_verifier';
-export const OAUTH_NEXT_COOKIE = 'am_oauth_next';
-export const OAUTH_LOCALE_COOKIE = 'am_oauth_locale';
-/** Shared path of the four handshake cookies. */
-export const OAUTH_COOKIE_PATH = '/api/auth/google';
-
-/** How long a login lasts without re-authenticating. */
-export const SESSION_DAYS = 30;
-/** Handshake cookies expire with the OAuth round-trip, not the login. */
-export const OAUTH_TTL_SECONDS = 600;
-
-const GOOGLE_AUTH_ENDPOINT = 'https://accounts.google.com/o/oauth2/v2/auth';
-const GOOGLE_TOKEN_ENDPOINT = 'https://oauth2.googleapis.com/token';
-const GOOGLE_USERINFO_ENDPOINT = 'https://openidconnect.googleapis.com/v1/userinfo';
 
 export type AuthUser = {
   id: number;
@@ -49,147 +28,42 @@ export type AuthUser = {
   picture: string | null;
 };
 
-export type GoogleProfile = {
-  sub: string;
-  email: string | null;
-  emailVerified: boolean;
-  name: string;
-  picture: string | null;
-};
-
-/** True when both OAuth client credentials are present. */
+/** True when both Google credentials and the NextAuth secret are present. */
 export function isGoogleAuthConfigured(): boolean {
-  return Boolean(process.env.GOOGLE_CLIENT_ID?.trim() && process.env.GOOGLE_CLIENT_SECRET?.trim());
-}
-
-/**
- * The redirect URI registered in the Google console. An explicit
- * GOOGLE_REDIRECT_URI wins (needed when the public origin differs from the
- * forwarded host); otherwise it is derived from the request, so localhost and
- * the production domain both work without a rebuild.
- */
-export function googleRedirectUri(request: Request): string {
-  return (
-    process.env.GOOGLE_REDIRECT_URI?.trim() ||
-    `${requestOrigin(request)}/api/auth/google/callback`
+  return Boolean(
+    process.env.GOOGLE_CLIENT_ID?.trim() &&
+      process.env.GOOGLE_CLIENT_SECRET?.trim() &&
+      process.env.AUTH_SECRET?.trim()
   );
 }
 
-/** Random URL-safe token. 32 bytes → 43 characters. */
-export function randomToken(bytes = 32): string {
-  return randomBytes(bytes).toString('base64url');
-}
+const googleId = process.env.GOOGLE_CLIENT_ID?.trim();
+const googleSecret = process.env.GOOGLE_CLIENT_SECRET?.trim();
 
-/** PKCE S256 challenge for a verifier. */
-export function pkceChallenge(verifier: string): string {
-  return createHash('sha256').update(verifier).digest('base64url');
-}
+const providers: Provider[] = [];
+if (googleId && googleSecret) {
+  const google = Google({
+    clientId: googleId,
+    clientSecret: googleSecret,
+  });
 
-/** What the sessions table stores: never the raw cookie token. */
-export function hashSessionToken(token: string): string {
-  return createHash('sha256').update(token).digest('hex');
-}
-
-/** Salted IP hash for abuse review, mirroring the comments table. */
-export function authIpHash(ip: string): string {
-  const salt = process.env.AUTH_IP_SALT ?? process.env.COMMENTS_IP_SALT ?? 'airport-maps-auth';
-  return createHash('sha256').update(`${salt}:${ip}`).digest('hex').slice(0, 32);
-}
-
-/** Google's consent screen URL for the given state/PKCE pair. */
-export function googleAuthorizationUrl(options: {
-  clientId: string;
-  redirectUri: string;
-  state: string;
-  codeChallenge: string;
-  /** Hint which account to use; `select_account` also lets people switch. */
-  loginHint?: string;
-}): string {
-  const url = new URL(GOOGLE_AUTH_ENDPOINT);
-  url.searchParams.set('client_id', options.clientId);
-  url.searchParams.set('redirect_uri', options.redirectUri);
-  url.searchParams.set('response_type', 'code');
-  url.searchParams.set('scope', 'openid email profile');
-  url.searchParams.set('state', options.state);
-  url.searchParams.set('code_challenge', options.codeChallenge);
-  url.searchParams.set('code_challenge_method', 'S256');
-  url.searchParams.set('prompt', 'select_account');
-  if (options.loginHint) url.searchParams.set('login_hint', options.loginHint);
-  return url.toString();
-}
-
-/**
- * Exchanges the authorization code for an access token and reads the OpenID
- * profile. Returns null instead of throwing for any upstream failure, so the
- * callback can redirect to a friendly error state rather than a 500 page.
- */
-export async function exchangeGoogleCode(options: {
-  code: string;
-  codeVerifier: string;
-  clientId: string;
-  clientSecret: string;
-  redirectUri: string;
-}): Promise<GoogleProfile | null> {
-  try {
-    const tokenResponse = await fetch(GOOGLE_TOKEN_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        Accept: 'application/json',
-      },
-      body: new URLSearchParams({
-        code: options.code,
-        client_id: options.clientId,
-        client_secret: options.clientSecret,
-        redirect_uri: options.redirectUri,
-        grant_type: 'authorization_code',
-        code_verifier: options.codeVerifier,
-      }),
-      cache: 'no-store',
-    });
-    if (!tokenResponse.ok) {
-      console.error('[auth] token exchange failed', tokenResponse.status);
-      return null;
-    }
-    const tokens = (await tokenResponse.json()) as { access_token?: unknown };
-    if (typeof tokens.access_token !== 'string' || !tokens.access_token) return null;
-
-    const profileResponse = await fetch(GOOGLE_USERINFO_ENDPOINT, {
-      headers: { Authorization: `Bearer ${tokens.access_token}`, Accept: 'application/json' },
-      cache: 'no-store',
-    });
-    if (!profileResponse.ok) {
-      console.error('[auth] userinfo failed', profileResponse.status);
-      return null;
-    }
-    const profile = (await profileResponse.json()) as Record<string, unknown>;
-    if (typeof profile.sub !== 'string' || !profile.sub) return null;
-    if (profile.aud !== undefined && profile.aud !== options.clientId) {
-      // The access token was issued to a different client; refuse it.
-      console.error('[auth] userinfo audience mismatch');
-      return null;
-    }
-
-    const email =
-      typeof profile.email === 'string' && profile.email.includes('@')
-        ? profile.email.trim().slice(0, 200)
-        : null;
-    const name =
-      cleanName(profile.name) ||
-      cleanName(email?.split('@')[0]) ||
-      'Traveler';
-
-    return {
-      sub: profile.sub.slice(0, 200),
-      email,
-      emailVerified: profile.email_verified === true,
-      name,
-      picture: safePicture(profile.picture),
-    };
-  } catch (error) {
-    console.error('[auth] Google sign-in failed', error);
-    return null;
-  }
+  // The built-in Google provider is OIDC and otherwise discovers its endpoints
+  // from accounts.google.com on every sign-in. Pinning the three documented
+  // endpoints avoids that extra round-trip (and a failure mode where the
+  // server cannot reach the discovery document but can reach the token API).
+  // `type: "oauth"` uses the userinfo endpoint for the profile instead of
+  // validating an ID token against a discovered JWKS.
+  providers.push({
+    ...google,
+    type: 'oauth',
+    authorization: {
+      url: 'https://accounts.google.com/o/oauth2/v2/auth',
+      params: { scope: 'openid email profile', response_type: 'code' },
+    },
+    token: 'https://oauth2.googleapis.com/token',
+    userinfo: 'https://openidconnect.googleapis.com/v1/userinfo',
+    checks: ['pkce', 'state'],
+  });
 }
 
 function cleanName(value: unknown): string {
@@ -200,142 +74,198 @@ function cleanName(value: unknown): string {
     .slice(0, 80);
 }
 
-/** Only https avatars from Google's image host are stored. */
 function safePicture(value: unknown): string | null {
   if (typeof value !== 'string' || value.length > 500) return null;
   try {
     const url = new URL(value);
     const host = url.hostname.toLowerCase();
-    const googleHost = host === 'googleusercontent.com' || host.endsWith('.googleusercontent.com');
-    return url.protocol === 'https:' && googleHost ? url.toString() : null;
+    const allowed = host === 'googleusercontent.com' || host.endsWith('.googleusercontent.com');
+    return url.protocol === 'https:' && allowed ? url.toString() : null;
   } catch {
     return null;
   }
 }
 
-/** Inserts or updates the Google account, returning our user row. */
-export async function upsertGoogleUser(profile: GoogleProfile): Promise<AuthUser> {
-  const row = await queryOne<{
-    id: number;
-    name: string;
-    email: string | null;
-    picture: string | null;
-  }>(
-    `insert into users (google_sub, email, email_verified, name, picture)
-     values ($1, $2, $3, $4, $5)
-     on conflict (google_sub) do update
-        set email = excluded.email,
-            email_verified = excluded.email_verified,
-            name = excluded.name,
-            picture = excluded.picture,
-            last_login_at = now()
-     returning id, name, email, picture`,
-    [profile.sub, profile.email, profile.emailVerified, profile.name, profile.picture]
-  );
-  if (!row) throw new Error('upsert into users returned no row');
-  return row;
-}
-
 /**
- * Creates a login session and returns the raw token for the cookie. Expired
- * rows are reaped on the same round-trip, which is the only maintenance this
- * table needs.
+ * Resolves an OAuth account to a local user id, creating/linking rows as
+ * needed. Runs inside a transaction so a concurrent first login cannot leave
+ * an account without its user.
  */
-export async function createSession(
-  userId: number,
-  meta: { ipHash: string | null; userAgent: string | null }
-): Promise<{ token: string; expiresAt: Date }> {
-  const token = randomToken(32);
-  const expiresAt = new Date(Date.now() + SESSION_DAYS * 86_400_000);
+async function upsertAuthUser(
+  provider: string,
+  providerAccountId: string,
+  profile: Record<string, unknown> | undefined
+): Promise<number | null> {
+  if (!provider || !providerAccountId) return null;
 
-  await query('delete from sessions where expires_at < now()', []);
-  await query(
-    `insert into sessions (id, user_id, ip_hash, user_agent, expires_at)
-     values ($1, $2, $3, $4, $5)`,
-    [hashSessionToken(token), userId, meta.ipHash, meta.userAgent, expiresAt]
-  );
+  const rawEmail = typeof profile?.email === 'string' ? profile.email.trim().toLowerCase() : null;
+  const email = rawEmail && rawEmail.includes('@') ? rawEmail.slice(0, 200) : null;
+  const emailVerified = profile?.email_verified === true;
+  const name = cleanName(profile?.name) || cleanName(email?.split('@')[0]) || 'Traveler';
+  const picture = safePicture(profile?.picture);
+  const googleSub =
+    provider === 'google' && typeof profile?.sub === 'string' ? profile.sub.slice(0, 200) : null;
 
-  return { token, expiresAt };
-}
-
-/** Deletes the session row behind a raw token (logout). */
-export async function deleteSession(token: string): Promise<void> {
-  await query('delete from sessions where id = $1', [hashSessionToken(token)]);
-}
-
-/**
- * The signed-in user for the current request, or null.
- *
- * Wrapped in React's `cache` so the layout, page and metadata of one render
- * share a single query. Only used from dynamic routes (the login and
- * submission pages) and route handlers — never from a statically rendered
- * page, which would make cookies() force the whole route dynamic.
- */
-export const getCurrentUser = cache(async (): Promise<AuthUser | null> => {
-  try {
-    const store = await cookies();
-    const token = store.get(SESSION_COOKIE)?.value;
-    if (!token || token.length < 20) return null;
-
-    const row = await queryOne<{
-      id: number;
-      name: string;
-      email: string | null;
-      picture: string | null;
-    }>(
-      `select u.id, u.name, u.email, u.picture
-         from sessions s
-         join users u on u.id = s.user_id
-        where s.id = $1 and s.expires_at > now()`,
-      [hashSessionToken(token)]
+  return withTransaction(async (client) => {
+    const linked = await client.query<{ user_id: number }>(
+      `select user_id from auth_accounts
+        where provider = $1 and provider_account_id = $2`,
+      [provider, providerAccountId]
     );
-    return row ?? null;
-  } catch (error) {
-    // A missing table or a database blip must degrade to "signed out" instead
-    // of taking the page down.
-    console.error('[auth] session lookup failed', error);
-    return null;
-  }
+    if (linked.rows[0]) {
+      const userId = linked.rows[0].user_id;
+      await client.query(
+        `update users
+            set name = coalesce(nullif($2, ''), name),
+                email = coalesce($3, email),
+                picture = coalesce($4, picture),
+                last_login_at = now()
+          where id = $1`,
+        [userId, name, email, picture]
+      );
+      return userId;
+    }
+
+    let userId: number | null = null;
+
+    if (googleSub) {
+      const bySub = await client.query<{ id: number }>(
+        'select id from users where google_sub = $1 limit 1',
+        [googleSub]
+      );
+      if (bySub.rows[0]) userId = bySub.rows[0].id;
+    }
+
+    // Link an existing local account only when the provider verified the
+    // email; otherwise an unverified address could take over another account.
+    if (!userId && email && emailVerified) {
+      const byEmail = await client.query<{ id: number }>(
+        `select id from users
+          where lower(email) = lower($1)
+          order by id
+          limit 1`,
+        [email]
+      );
+      if (byEmail.rows[0]) userId = byEmail.rows[0].id;
+    }
+
+    if (!userId) {
+      const inserted = await client.query<{ id: number }>(
+        `insert into users (google_sub, email, email_verified, name, picture)
+         values ($1, $2, $3, $4, $5)
+         returning id`,
+        [googleSub, email, emailVerified, name, picture]
+      );
+      userId = inserted.rows[0]?.id ?? null;
+    } else {
+      await client.query(
+        `update users
+            set google_sub = coalesce(google_sub, $2),
+                email = coalesce($3, email),
+                email_verified = email_verified or $4,
+                name = coalesce(nullif($5, ''), name),
+                picture = coalesce($6, picture),
+                last_login_at = now()
+          where id = $1`,
+        [userId, googleSub, email, emailVerified, name, picture]
+      );
+    }
+
+    if (!userId) return null;
+
+    await client.query(
+      `insert into auth_accounts (provider, provider_account_id, user_id, email)
+       values ($1, $2, $3, $4)
+       on conflict (provider, provider_account_id) do nothing`,
+      [provider, providerAccountId, userId, email]
+    );
+
+    return userId;
+  });
+}
+
+export const { handlers, signIn, signOut, auth } = NextAuth({
+  secret: process.env.AUTH_SECRET,
+  // The app runs behind a reverse proxy (worldairportmap.com). NextAuth needs
+  // this to trust the forwarded host/protocol instead of rejecting it.
+  trustHost: true,
+  session: {
+    strategy: 'jwt',
+    // Matches the old custom session lifetime.
+    maxAge: 30 * 24 * 60 * 60,
+  },
+  providers,
+  pages: {
+    signIn: '/login',
+    error: '/login',
+  },
+  callbacks: {
+    async jwt({ token, user, account, profile }) {
+      if (account?.provider && account.providerAccountId) {
+        // With `type: "oauth"` the profile comes from the userinfo endpoint;
+        // merge the provider user object as a fallback so a sparse profile
+        // still produces a usable local account.
+        const merged: Record<string, unknown> = {
+          ...(profile as Record<string, unknown> | undefined),
+        };
+        if (!merged.name && user?.name) merged.name = user.name;
+        if (!merged.email && user?.email) merged.email = user.email;
+        if (!merged.picture && user?.image) merged.picture = user.image;
+        if (!merged.sub) merged.sub = account.providerAccountId;
+
+        const userId = await upsertAuthUser(
+          account.provider,
+          account.providerAccountId,
+          merged
+        );
+        if (userId) token.uid = userId;
+      }
+      return token;
+    },
+
+    async session({ session, token }) {
+      const userId = Number(token.uid);
+      if (!userId || !session.user) return session;
+
+      // Read the current name/email/avatar so a Google profile change is
+      // reflected without waiting for a new login.
+      const row = await queryOne<{
+        id: number;
+        name: string | null;
+        email: string | null;
+        picture: string | null;
+      }>('select id, name, email, picture from users where id = $1', [userId]);
+      if (!row) return session;
+
+      session.user.id = String(row.id);
+      session.user.name = row.name || 'Traveler';
+      session.user.email = row.email ?? '';
+      session.user.image = row.picture;
+      session.user.picture = row.picture;
+      session.user.admin = isAdminEmail(row.email);
+      return session;
+    },
+
+    /**
+     * Only same-site destinations after login. Auth.js already validates the
+     * callback URL, but keeping the check here makes the relative `?next=`
+     * paths used by the login page work and documents the intent.
+     */
+    async redirect({ url, baseUrl }) {
+      if (url.startsWith('/')) return `${baseUrl}${url}`;
+      try {
+        if (new URL(url).origin === baseUrl) return url;
+      } catch {
+        // fall through
+      }
+      return baseUrl;
+    },
+  },
 });
 
-/** Options for the session cookie, matching the response's security context. */
-export function sessionCookieOptions(secure: boolean): {
-  httpOnly: true;
-  sameSite: 'lax';
-  secure: boolean;
-  path: string;
-  maxAge: number;
-} {
-  return {
-    httpOnly: true,
-    sameSite: 'lax',
-    secure,
-    path: '/',
-    maxAge: SESSION_DAYS * 86_400,
-  };
-}
-
-/** Cookie options for a handshake cookie. */
-export function oauthCookieOptions(secure: boolean): {
-  httpOnly: true;
-  sameSite: 'lax';
-  secure: boolean;
-  path: string;
-  maxAge: number;
-} {
-  return {
-    httpOnly: true,
-    sameSite: 'lax',
-    secure,
-    path: OAUTH_COOKIE_PATH,
-    maxAge: OAUTH_TTL_SECONDS,
-  };
-}
-
 /**
- * Only same-site absolute paths may be used as post-login destinations. This
- * is the open-redirect guard: `//evil.example` and `https://evil.example` are
- * both rejected, as is anything pointing back into the API.
+ * Again only same-site absolute paths may be used as post-login destinations.
+ * Kept for the login page and the submissions form.
  */
 export function safeRedirectPath(value: unknown): string | null {
   if (typeof value !== 'string') return null;
@@ -346,7 +276,27 @@ export function safeRedirectPath(value: unknown): string | null {
   return path;
 }
 
-/** Secure-cookie decision for the current request. */
-export function secureCookies(request: Request): boolean {
-  return isSecureRequest(request) || process.env.NODE_ENV === 'production';
-}
+/**
+ * The signed-in user for the current request, or null.
+ *
+ * Wrapped in React's `cache` so one render shares the lookup. Only used from
+ * dynamic routes and route handlers — never from a statically rendered page.
+ */
+export const getCurrentUser = cache(async (): Promise<AuthUser | null> => {
+  try {
+    const session = await auth();
+    const user = session?.user;
+    const id = Number(user?.id);
+    if (!user || !Number.isSafeInteger(id) || id <= 0) return null;
+    return {
+      id,
+      name: user.name || 'Traveler',
+      email: user.email ?? null,
+      picture: user.picture ?? user.image ?? null,
+    };
+  } catch (error) {
+    // A missing AUTH_SECRET or a database blip must degrade to "signed out".
+    console.error('[auth] session lookup failed', error);
+    return null;
+  }
+});

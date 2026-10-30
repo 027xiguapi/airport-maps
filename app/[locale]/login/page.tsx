@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import GoogleSignInButton from '@/components/auth/GoogleSignInButton';
 import LogoutButton from '@/components/auth/LogoutButton';
 import { getCurrentUser, isGoogleAuthConfigured, safeRedirectPath } from '@/lib/auth';
 import { formatDealLabel } from '@/lib/deal-format';
@@ -11,10 +12,10 @@ import { getAuthMessages } from '@/lib/i18n/deals';
 /**
  * Google sign-in page.
  *
- * Reached from the header chip, the deals CTA and the OAuth error redirects
- * (`?error=not_configured|oauth_failed|access_denied|state_error`). Dynamic
- * because it reads the session cookie; that is deliberate and limited to this
- * one route (the header chip uses /api/auth/session so the rest stays static).
+ * Reached from the header chip, the deals CTA and NextAuth's error redirects
+ * (`?error=AccessDenied|Configuration|OAuthCallback|…`). Dynamic because it
+ * reads the session cookie; deliberate and limited to this one route (the
+ * header chip uses /api/auth/session so the rest stays static).
  */
 export const dynamic = 'force-dynamic';
 
@@ -48,16 +49,16 @@ export default async function LoginPage({ params, searchParams }: Props) {
   const configured = isGoogleAuthConfigured();
 
   const continueTo = next ?? localizedPath(locale, '/deals');
-  const startHref = `/api/auth/google?locale=${locale}${
-    next ? `&next=${encodeURIComponent(next)}` : ''
-  }`;
 
+  // NextAuth passes its own error codes. `AccessDenied` is the user refusing
+  // consent; `Configuration` means the server is missing something (usually
+  // AUTH_SECRET); everything else is an OAuth round-trip failure.
   const errorMessage =
-    error === 'access_denied'
+    error === 'AccessDenied' || error === 'access_denied'
       ? a.accessDenied
       : error === 'state_error'
         ? a.stateError
-        : error === 'oauth_failed'
+        : error
           ? a.oauthError
           : null;
 
@@ -123,13 +124,7 @@ export default async function LoginPage({ params, searchParams }: Props) {
             )}
 
             {configured ? (
-              <a
-                className="inline-flex h-[46px] w-full items-center justify-center gap-2.5 border border-[#d8e4ee] bg-white px-5 text-[14.5px] font-semibold text-[#1f3b52] transition-[border-color,box-shadow] duration-150 hover:border-[#2e7db3] hover:[box-shadow:0_2px_10px_rgba(10,42,67,0.12)]"
-                href={startHref}
-              >
-                <GoogleMark />
-                {a.signInWithGoogle}
-              </a>
+              <GoogleSignInButton label={a.signInWithGoogle} redirectTo={continueTo} />
             ) : (
               <div className="border border-dashed border-line bg-paper px-4 py-4">
                 <b className="block text-[13.5px] text-ink-heading">{a.notConfiguredTitle}</b>
@@ -154,29 +149,5 @@ export default async function LoginPage({ params, searchParams }: Props) {
         </Link>
       </div>
     </section>
-  );
-}
-
-/** Google's four-colour "G", inlined so the page makes no extra request. */
-function GoogleMark() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true" className="flex-none">
-      <path
-        fill="#EA4335"
-        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
-      />
-      <path
-        fill="#4285F4"
-        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"
-      />
-      <path
-        fill="#FBBC05"
-        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"
-      />
-      <path
-        fill="#34A853"
-        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
-      />
-    </svg>
   );
 }

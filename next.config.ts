@@ -32,6 +32,27 @@ const nextConfig: NextConfig = {
   experimental: {
     cpus: Math.max(1, Number(process.env.NEXT_BUILD_CPUS ?? 2)),
   },
+
+  turbopack: {
+    /**
+     * `lib/blog.ts` deliberately reads `public/blog/<slug>/<slug>.<locale>.md`
+     * at build time — the article folder is the content store, not a module
+     * import. Turbopack's file-tracing heuristic cannot narrow a path that is
+     * assembled from a route slug, so it reports the whole project (10k+ files,
+     * mostly article images) as a possible match for every request. The read is
+     * bounded to `.md` files by `articleNames()`, so the warning is noise here
+     * rather than an over-bundling bug.
+     *
+     * Suppressed by exact description + source path so unrelated diagnostics
+     * from the same file are still reported.
+     */
+    ignoreIssue: [
+      {
+        path: '**/lib/blog.ts',
+        description: /Overly broad patterns can lead to build performance issues/,
+      },
+    ],
+  },
 };
 
 export default nextConfig;

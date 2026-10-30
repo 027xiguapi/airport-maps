@@ -1,5 +1,6 @@
 'use client';
 
+import { signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -27,10 +28,7 @@ export default function LogoutButton({
     if (pending) return;
     setPending(true);
     try {
-      await fetch('/api/auth/logout', {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-      });
+      await signOut({ redirect: false });
       router.push(localizedPath(locale as Locale, redirectTo));
       router.refresh();
     } catch {

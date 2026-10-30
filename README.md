@@ -76,9 +76,9 @@ npm run build && npm start
 | `PGPOOL_MAX` | 否 | 连接池上限：运行时默认 `10`，**构建期默认 `4`**（`next build` 会开 11 个 worker）。CI / 低配库上建议两边都调小（见「查询层与连接池」） |
 | `COMMENTS_IP_SALT` | 生产建议 | 评论区按 IP 限流时用的哈希盐。换掉只会重置计数，不影响已有评论 |
 | `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` | Google 登录必填 | OAuth 2.0 Web 客户端凭据（Google Cloud Console → Credentials）。不填时站点照常运行，登录页提示未配置 |
-| `GOOGLE_REDIRECT_URI` | 否 | 回调地址，默认 `<对外 origin>/api/auth/google/callback`；反向代理改写了 Host 时显式指定 |
+| `AUTH_SECRET` | 登录必填 | NextAuth 用于签名/加密会话 JWT 的密钥。生成：`node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"` |
+| `AUTH_URL` | 生产建议 | 对外规范地址，如 `https://worldairportmap.com`；反向代理隐藏真实 Host 时设置 |
 | `DEALS_IP_SALT` | 生产建议 | 特惠机票按 IP 限流的哈希盐（缺省回退到 `COMMENTS_IP_SALT`） |
-| `AUTH_IP_SALT` | 否 | 登录会话记录 IP 哈希用的盐（缺省回退到 `COMMENTS_IP_SALT`） |
 | `ADMIN_EMAILS` | 管理后台必填 | 允许进入 `/admin/deals` 的 Google 邮箱，逗号分隔、不区分大小写。留空则任何人都不是管理员 |
 
 ## npm 脚本
@@ -370,11 +370,12 @@ Field 语义：`title` / `summary` / `updated` 对应迁移前的 frontmatter（
 
 ### 数据模型
 
-- `users`：Google 账号，`google_sub` 唯一，只用于标识提交者；没有密码、没有邮箱验证流程。
-- `sessions`：登录会话。主键是 cookie 里随机 token 的 SHA-256——数据库导出不会直接给出可用会话；30 天有效，过期行在下次登录时顺带清理。
+- `users`：站内账号，只用于标识提交者/评论作者；没有密码。`google_sub` 是历史 Google 标识（可空、唯一），新账号的 provider 身份统一记录在 `auth_accounts`。
+- `auth_accounts`：`(provider, provider_account_id) → user_id` 的持久映射，NextAuth 登录成功时写入。以后接 GitHub/Apple/微信只需要加 provider，不改 `users`/`deals`/`comments` 的外键。
+- `sessions`：旧自定义会话表，NextAuth 改用加密 JWT 后不再读写；保留仅为兼容旧数据，可在确认无需回滚后删除。
 - `deals`：一行一个报价。`airport_iata` 外键指向 `airports`，`status` 为 `visible` / `hidden`；`expires_at` 是列表截止时间（填了 `travel_to` 取当天 23:59，否则提交后 30 天）。`submitter_name` 是提交时的快照，删账号也不会让报价变成匿名。`is_official` 标记管理后台发布的官方票价（卡片显示「官方票价」），`tax_included=false` 显示「不含税」；`batch_id` 把一次粘贴导入的行归为一组，可整批删除；`booking_url` 对官方票价可为空。`destination_en` / `airline_en` / `notes_en` 是英文主文案：非中文页面显示英文主行 + 中文小字（航司/备注为「English (中文)」），中文页面只显示中文。
 
-三张表都是新增，不动现有数据。建表：
+这些表都由 `db/schema.ts` 管理，不动现有静态内容。建表：
 
 ```bash
 npm run db:push       # 开发：直接推 db/schema.ts
@@ -386,25 +387,39 @@ npm run db:push       # 开发：直接推 db/schema.ts
 1. Google Cloud Console → **APIs & Services → OAuth consent screen**：填应用名与支持邮箱。测试阶段把要登录的 Google 账号加进 **Test users**；对外开放前点 **Publish app**。
 2. **Credentials → Create credentials → OAuth client ID → Web application**。
 3. **Authorized redirect URIs** 加两条：
-   - `http://localhost:3003/api/auth/google/callback`
-   - `https://你的域名/api/auth/google/callback`
+   - `http://localhost:3003/api/auth/callback/google`
+   - `https://你的域名/api/auth/callback/google`
 4. 写入 `.env.local`：
 
 ```bash
 GOOGLE_CLIENT_ID=....apps.googleusercontent.com
 GOOGLE_CLIENT_SECRET=...
-# 一般不用填；当反向代理把 Host 改成内网地址时再指定
-# GOOGLE_REDIRECT_URI=https://你的域名/api/auth/google/callback
+# NextAuth 签名/加密会话 JWT 用；必填
+AUTH_SECRET=...
+# 生产环境如果反向代理隐藏了真实 Host/协议，再指定规范地址
+# AUTH_URL=https://你的域名
 ```
 
 改完环境变量要重启 `npm run dev` / `npm start`。未配置时站点完全可用：登录页显示「Google 登录尚未配置」，提交页先引导登录。
 
-### 登录流程
+> **`redirect_uri_mismatch`（Google 400）**：登录请求里的回调地址与 Google Cloud Console 的 **Authorized redirect URIs** 不完全一致。Google 不做通配符或前缀匹配，协议、主机、端口、路径、大小写都必须一模一样，且不能带结尾斜杠。
+>
+> 本项目使用 NextAuth 的标准回调路径：`<origin>/api/auth/callback/google`。常见需要登记的值：
+>
+> - `http://localhost:3003/api/auth/callback/google`
+> - `http://127.0.0.1:3003/api/auth/callback/google`
+> - `https://worldairportmap.com/api/auth/callback/google`
+> - `https://www.worldairportmap.com/api/auth/callback/google`
+>
+> 用 `localhost` 打开的页面不会匹配只登记了 `127.0.0.1` 的条目（反之亦然）；端口 3000 与 3003 也是两个不同地址。生产环境如果代理隐藏了真实 Host，设置 `AUTH_URL=https://你的域名`，NextAuth 会用它拼回调地址。Console 保存后可能需要几分钟才生效。
 
-- **开始**：`GET /api/auth/google?next=/deals/new&locale=zh` → 生成 state + PKCE（S256）写入 10 分钟有效的 httpOnly cookie → 跳 Google 授权页。
-- **回调**：`GET /api/auth/google/callback` 校验 state、用 verifier 换 token、读 OpenID 资料、按 `google_sub` upsert 用户、写会话 cookie（httpOnly / SameSite=Lax / 生产 Secure）→ 回跳到 `next`（只接受站内绝对路径，防开放重定向）。
-- **读取**：`GET /api/auth/session` 返回 `{ user, configured, admin }`（`admin` 表示邮箱在 `ADMIN_EMAILS` 中）。顶栏头像在挂载后调用它，所以 500+ 机场页仍是静态 / ISR，不会因为 `cookies()` 变成动态渲染。
-- **退出**：`POST /api/auth/logout`（校验 Origin，失败也会清 cookie）。
+### 登录流程（NextAuth / Auth.js）
+
+- **开始**：登录页的 Google 按钮调用 `signIn('google', { redirectTo })` → `/api/auth/signin/google` 生成 state/PKCE 并跳 Google。
+- **回调**：`GET /api/auth/callback/google` 由 NextAuth 处理；`lib/auth.ts` 的 `jwt` callback 把 `(provider, providerAccountId)` 写入 `auth_accounts`，并按 Google `sub` / 已验证邮箱关联或创建 `users` 行。会话是加密 JWT，不再使用自定义 `sessions` 表。
+- **读取**：`GET /api/auth/session` 返回 NextAuth 会话，`session.user` 上额外带 `id`、`admin`（邮箱在 `ADMIN_EMAILS` 中）和 `picture`。顶栏头像在挂载后调用它，所以 500+ 机场页仍是静态 / ISR。
+- **退出**：客户端 `signOut()` → `POST /api/auth/signout`（NextAuth 自带 CSRF 校验）。
+- **扩展 provider**：在 `lib/auth.ts` 的 `providers` 数组里加一个 provider 即可；身份映射统一落到 `auth_accounts`，不需要改 `users`/`deals`/`comments` 的外键。
 
 ### 提交与展示
 
@@ -479,7 +494,7 @@ app/
   api/routes/[code]/route.ts  单个机场的航线数据导出（CSV / JSON）
   api/deals/route.ts        特惠机票列表 / 提交（POST 需登录）
   api/admin/deals/route.ts  管理后台 CRUD / 批量导入 / 批量删除（ADMIN_EMAILS 白名单）
-  api/auth/{google,session,logout}/…  Google OAuth、会话查询、退出
+  api/auth/[...nextauth]/route.ts  NextAuth：Google 回调、会话、退出
   sitemap.ts robots.ts      多语言站点地图与抓取规则
   globals.css               唯一样式表（Tailwind v4 CSS-first）：设计令牌 + 全部组件样式
 components/                 UI 组件（服务端为主；搜索框、语言 / 主题切换、返回顶部、地图、lightbox 为客户端）

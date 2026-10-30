@@ -5,6 +5,7 @@ import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import { formatDealLabel } from '@/lib/deal-format';
 import { commentCountLabel } from '@/lib/comment-labels';
+import { localizedPath, type Locale } from '@/lib/i18n/config';
 import type { AuthMessages } from '@/lib/i18n/deals';
 import type { Messages } from '@/lib/i18n/messages/zh';
 import type { CommentKind, PublicComment } from '@/lib/comments';
@@ -67,7 +68,6 @@ export default function Comments({
   const [reloadToken, setReloadToken] = useState(0);
 
   const [viewer, setViewer] = useState<Viewer | null | undefined>(undefined);
-  const [configured, setConfigured] = useState(true);
 
   const [body, setBody] = useState('');
   const [website, setWebsite] = useState('');
@@ -87,11 +87,24 @@ export default function Comments({
       .then(async (response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = (await response.json()) as {
-          user?: Viewer | null;
-          configured?: boolean;
-        };
-        setViewer(data.user ?? null);
-        setConfigured(data.configured !== false);
+          user?: {
+            id?: string | number;
+            name?: string | null;
+            email?: string | null;
+            image?: string | null;
+            picture?: string | null;
+          } | null;
+        } | null;
+        if (!data?.user) {
+          setViewer(null);
+          return;
+        }
+        setViewer({
+          id: Number(data.user.id),
+          name: data.user.name || 'Traveler',
+          email: data.user.email ?? null,
+          picture: data.user.picture ?? data.user.image ?? null,
+        });
       })
       .catch((error: unknown) => {
         if ((error as Error).name !== 'AbortError') setViewer(null);
@@ -203,7 +216,7 @@ export default function Comments({
   // Newest first: the form sits above the list, so a just-posted comment lands
   // directly under it instead of at the bottom of a long thread.
   const ordered = comments ? [...comments].reverse() : null;
-  const signInHref = `/api/auth/google?locale=${encodeURIComponent(locale)}&next=${encodeURIComponent(
+  const signInHref = `${localizedPath(locale as Locale, '/login')}?next=${encodeURIComponent(
     pathname
   )}`;
 
@@ -336,21 +349,12 @@ export default function Comments({
           <p className="mt-1.5 max-w-[640px] text-[13px] leading-[1.75] text-ink-soft">
             {authLabels.commentSignInBody}
           </p>
-          {configured ? (
-            <a
-              className="mt-4 inline-flex items-center gap-2 border border-amber bg-amber px-4 py-2.5 text-[13.5px] font-bold text-navy-900 transition-[filter] duration-150 hover:brightness-[1.06]"
-              href={signInHref}
-            >
-              {authLabels.signInWithGoogle}
-            </a>
-          ) : (
-            <div className="mt-4 border border-dashed border-line bg-paper px-4 py-3">
-              <b className="block text-[13px] text-ink-heading">{authLabels.notConfiguredTitle}</b>
-              <p className="mt-1 text-[12.5px] leading-[1.7] text-ink-soft">
-                {authLabels.notConfiguredBody}
-              </p>
-            </div>
-          )}
+          <a
+            className="mt-4 inline-flex items-center gap-2 border border-amber bg-amber px-4 py-2.5 text-[13.5px] font-bold text-navy-900 transition-[filter] duration-150 hover:brightness-[1.06]"
+            href={signInHref}
+          >
+            {authLabels.signInWithGoogle}
+          </a>
           <p className="mt-4 text-[11.5px] leading-[1.7] text-ink-faint">{authLabels.privacyNote}</p>
         </div>
       )}

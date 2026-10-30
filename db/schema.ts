@@ -297,8 +297,12 @@ export const users = pgTable(
   'users',
   {
     id: serial('id').primaryKey(),
-    /** Google's `sub` claim — stable for the life of the Google account. */
-    googleSub: text('google_sub').notNull().unique('users_google_sub_key'),
+    /**
+     * Google's `sub` claim — stable for the life of the Google account.
+     * Nullable because a future non-Google provider creates a user row without
+     * one; the per-provider identity lives in `auth_accounts`.
+     */
+    googleSub: text('google_sub').unique('users_google_sub_key'),
     email: text('email'),
     emailVerified: boolean('email_verified').notNull().default(false),
     /** Display name shown next to a submitted deal or comment. */
@@ -313,6 +317,36 @@ export const users = pgTable(
       .defaultNow(),
   },
   (t) => [index('users_email_idx').on(t.email)]
+);
+
+// ------------------------------------------------------------- auth accounts
+/**
+ * One row per external identity linked to a `users` row.
+ *
+ * NextAuth itself only keeps the session (JWT) and the Google profile; this
+ * table is the durable provider→user mapping, so adding GitHub/Apple/WeChat
+ * later means one more provider in lib/auth.ts and no schema change. The
+ * primary key is (provider, provider account id), which is exactly what an
+ * OAuth callback returns.
+ */
+export const authAccounts = pgTable(
+  'auth_accounts',
+  {
+    provider: text('provider').notNull(),
+    providerAccountId: text('provider_account_id').notNull(),
+    userId: integer('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    /** Email reported by the provider at link time, for support/debugging. */
+    email: text('email'),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.provider, t.providerAccountId] }),
+    index('auth_accounts_user_idx').on(t.userId),
+  ]
 );
 
 // ----------------------------------------------------------------- comments

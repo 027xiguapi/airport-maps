@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { signOut as nextAuthSignOut } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { formatDealLabel } from '@/lib/deal-format';
@@ -11,6 +12,7 @@ type SessionUser = {
   name: string;
   email: string | null;
   picture: string | null;
+  admin: boolean;
 };
 
 type Props = {
@@ -39,7 +41,6 @@ export default function AccountMenu({ locale, labels }: Props) {
   const router = useRouter();
   const language = locale as Locale;
   const [user, setUser] = useState<SessionUser | null>(null);
-  const [isAdmin, setIsAdmin] = useState(false);
   const [ready, setReady] = useState(false);
   const [signingOut, setSigningOut] = useState(false);
 
@@ -53,11 +54,26 @@ export default function AccountMenu({ locale, labels }: Props) {
       .then(async (response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = (await response.json()) as {
-          user?: SessionUser | null;
-          admin?: boolean;
-        };
-        setUser(data.user ?? null);
-        setIsAdmin(data.admin === true);
+          user?: {
+            id?: string | number;
+            name?: string | null;
+            email?: string | null;
+            image?: string | null;
+            picture?: string | null;
+            admin?: boolean;
+          } | null;
+        } | null;
+        if (!data?.user) {
+          setUser(null);
+          return;
+        }
+        setUser({
+          id: Number(data.user.id),
+          name: data.user.name || 'Traveler',
+          email: data.user.email ?? null,
+          picture: data.user.picture ?? data.user.image ?? null,
+          admin: data.user.admin === true,
+        });
       })
       .catch((error: unknown) => {
         if ((error as Error).name !== 'AbortError') setUser(null);
@@ -70,12 +86,9 @@ export default function AccountMenu({ locale, labels }: Props) {
     if (signingOut) return;
     setSigningOut(true);
     try {
-      await fetch('/api/auth/logout', {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-      });
+      // NextAuth clears its JWT cookie through /api/auth/signout (CSRF-safe).
+      await nextAuthSignOut({ redirect: false });
       setUser(null);
-      setIsAdmin(false);
       router.refresh();
     } catch {
       // The cookie may already be gone; the UI below treats it as signed out.
@@ -163,7 +176,7 @@ export default function AccountMenu({ locale, labels }: Props) {
             {user.email ?? signedInAs}
           </span>
         </div>
-        {isAdmin && (
+        {user.admin && (
           <Link
             className="block border-b border-[#e4edf4] bg-[#f4f8fb] px-4 py-2.5 text-[13.5px] font-semibold text-[#2e6a93] transition-colors hover:bg-[#dcecf7]"
             href="/admin/deals"
