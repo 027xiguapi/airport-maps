@@ -81,6 +81,8 @@ npm run build && npm start
 | `DEALS_IP_SALT` | 生产建议 | 特惠机票按 IP 限流的哈希盐（缺省回退到 `COMMENTS_IP_SALT`） |
 | `ADMIN_EMAILS` | 管理后台必填 | 允许进入 `/admin/deals` 的 Google 邮箱，逗号分隔、不区分大小写。留空则任何人都不是管理员 |
 
+> **供应链策略**：`jose` 在 `package.json` 的 `pnpm.overrides` 中固定为 `6.2.13`。若服务器启用了 pnpm `minimumReleaseAge`，刚发布的 `6.2.14` 会被策略拒绝；升级 `jose` 前先确认新版本已过等待窗口。
+
 ## npm 脚本
 
 | 脚本 | 作用 |
