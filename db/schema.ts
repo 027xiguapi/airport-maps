@@ -13,12 +13,14 @@
  */
 import { sql } from 'drizzle-orm';
 import {
+  bigserial,
   boolean,
   char,
   check,
   date,
   index,
   integer,
+  jsonb,
   numeric,
   pgTable,
   pgView,
@@ -27,6 +29,7 @@ import {
   text,
   timestamp,
   unique,
+  uuid,
 } from 'drizzle-orm/pg-core';
 
 // ---------------------------------------------------------------- countries
@@ -560,6 +563,255 @@ export const deals = pgTable(
       sql`${t.travelTo} is null or ${t.travelFrom} is null or ${t.travelTo} >= ${t.travelFrom}`
     ),
   ]
+);
+
+// -------------------------------------------------------------- fare offers
+/**
+ * Machine-collected fares: the *current* state of one offerable itinerary.
+ *
+ * One row per (provider, fingerprint) — the fingerprint is a hash of the
+ * route, dates, cabin, trip type, carrier and stop count, so the same itinerary
+ * keeps its identity across refreshes and is updated in place instead of
+ * accumulating a row per poll. The time series lives in `fare_price_history`.
+ *
+ * Deliberately separate from `deals`, whose rows are human publications
+ * (reader submissions and official fare cards) in their original currency:
+ *
+ *   deals        one-off, attributed, moderated, never overwritten
+ *   fare_offers  refreshed, unattributed, USD-normalised, expires
+ *
+ * Mixing them would destroy submission timestamps, make moderation ambiguous
+ * and put a CNY round-trip card next to a USD one-way fare in the same
+ * "under $300" list. The UI therefore renders two blocks, not one union.
+ */
+export const fareOffers = pgTable(
+  'fare_offers',
+  {
+    id: serial('id').primaryKey(),
+    /** travelpayouts | kiwi | amadeus | duffel | seed */
+    provider: text('provider').notNull(),
+    /** sha1(origin|destination|depart|return|cabin|trip|carrier|stops) */
+    fingerprint: text('fingerprint').notNull(),
+
+    /** Departure airport, always in the directory (it is what pages group by). */
+    originIata: char('origin_iata', { length: 3 })
+      .notNull()
+      .references(() => airports.iata, { onDelete: 'cascade' }),
+    /**
+     * Arrival airport. Intentionally NOT a foreign key: the directory covers
+     * 516 airports while the providers return the global ~86k IATA set, and a
+     * fare must not be dropped because its destination has no page yet.
+     */
+    destinationIata: char('destination_iata', { length: 3 }).notNull(),
+    /** Denormalised at ingest; "domestic" is origin country = this. */
+    destinationCountry: char('destination_country', { length: 2 }).notNull(),
+    destinationCity: text('destination_city'),
+
+    airlineCode: text('airline_code'),
+    airlineName: text('airline_name').notNull(),
+    /** Marketing numbers of the itinerary, comma separated ("CX365,CX880"). */
+    flightNumbers: text('flight_numbers'),
+    stops: integer('stops').notNull().default(0),
+    durationMinutes: integer('duration_minutes'),
+
+    /** Price in the provider's own currency, as quoted. */
+    price: numeric('price', { precision: 10, scale: 2 }).notNull(),
+    currency: char('currency', { length: 3 }).notNull(),
+    /** `price` converted at ingest time; every filter and sort uses this column. */
+    priceUsd: numeric('price_usd', { precision: 10, scale: 2 }).notNull(),
+    /** The rate that produced `price_usd`, kept for auditability. */
+    fxRate: numeric('fx_rate', { precision: 12, scale: 6 }).notNull(),
+    /**
+     * Whether `price` already includes taxes. Offers that do not are excluded
+     * from the price-threshold lists: "$299" that becomes "$412" at checkout is
+     * the fastest way to lose a reader's trust.
+     */
+    taxIncluded: boolean('tax_included').notNull().default(true),
+
+    cabin: text('cabin').notNull().default('economy'),
+    tripType: text('trip_type').notNull().default('oneway'),
+    departDate: date('depart_date', { mode: 'string' }).notNull(),
+    returnDate: date('return_date', { mode: 'string' }),
+
+    /** Affiliate deep link stored clean; /go adds the click subid at redirect. */
+    deepLink: text('deep_link').notNull(),
+    bookingPartner: text('booking_partner').notNull().default('airline'),
+
+    /** 30/90-day median for this offer; the route p25 is the cold-start proxy. */
+    baselineUsd: numeric('baseline_usd', { precision: 10, scale: 2 }),
+    discountPct: integer('discount_pct'),
+    /** 0–100 blend of discount, absolute price band, stops and duration. */
+    dealScore: integer('deal_score'),
+    /** Whether the offer clears the deal thresholds; listings default to true. */
+    isDeal: boolean('is_deal').notNull().default(false),
+
+    firstSeenAt: timestamp('first_seen_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    lastSeenAt: timestamp('last_seen_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    /** Last successful re-check; the card shows it as "verified at". */
+    verifiedAt: timestamp('verified_at', { withTimezone: true, mode: 'date' }),
+    /** Departure date 23:59, or the provider TTL when it is shorter. */
+    expiresAt: timestamp('expires_at', { withTimezone: true, mode: 'date' }).notNull(),
+
+    /** live | expired | hidden (hidden is the manual takedown switch). */
+    status: text('status').notNull().default('live'),
+    /** Last raw provider payload, truncated before write, for debugging. */
+    raw: jsonb('raw'),
+  },
+  (t) => [
+    unique('fare_offers_provider_fingerprint_key').on(t.provider, t.fingerprint),
+    /** Airport page and /deals/from/[iata]: origin first, then price. */
+    index('fare_offers_origin_idx').on(t.originIata, t.status, t.priceUsd),
+    /** /deals/under-100 and the homepage feed. */
+    index('fare_offers_price_idx').on(t.status, t.isDeal, t.priceUsd, t.departDate),
+    /** Domestic / international landing pages. */
+    index('fare_offers_domestic_idx').on(t.destinationCountry, t.status, t.priceUsd),
+    /** Expiry sweep and re-verification queue. */
+    index('fare_offers_expiry_idx').on(t.status, t.expiresAt),
+    index('fare_offers_verified_idx').on(t.verifiedAt.desc().nullsLast()),
+    check(
+      'fare_offers_iata_upper_chk',
+      sql`${t.originIata} = upper(${t.originIata}) and ${t.destinationIata} = upper(${t.destinationIata})`
+    ),
+    check('fare_offers_currency_upper_chk', sql`${t.currency} = upper(${t.currency})`),
+    check('fare_offers_cabin_chk', sql`${t.cabin} in ('economy', 'premium', 'business', 'first')`),
+    check('fare_offers_trip_type_chk', sql`${t.tripType} in ('oneway', 'roundtrip')`),
+    check('fare_offers_price_chk', sql`${t.priceUsd} > 0 and ${t.priceUsd} <= 100000`),
+    check('fare_offers_stops_chk', sql`${t.stops} between 0 and 4`),
+    check('fare_offers_status_chk', sql`${t.status} in ('live', 'expired', 'hidden')`),
+    check(
+      'fare_offers_window_chk',
+      sql`${t.returnDate} is null or ${t.returnDate} >= ${t.departDate}`
+    ),
+    check('fare_offers_link_len_chk', sql`char_length(${t.deepLink}) <= 2000`),
+  ]
+);
+
+// --------------------------------------------------------- fare price history
+/**
+ * Append-only price observations, one row per offer per day.
+ *
+ * The unique key makes a re-run idempotent and caps the table at one row per
+ * offer per day; the median over the trailing 30/90 days is what turns an
+ * absolute price into a "deal". Rows older than the retention window are
+ * deleted by the collector's maintenance step rather than updated.
+ */
+export const farePriceHistory = pgTable(
+  'fare_price_history',
+  {
+    id: bigserial('id', { mode: 'number' }).primaryKey(),
+    provider: text('provider').notNull(),
+    /** Matches fare_offers.fingerprint; not a FK so history survives a purge. */
+    fingerprint: text('fingerprint').notNull(),
+    /** Observation day (UTC). */
+    observedOn: date('observed_on', { mode: 'string' }).notNull(),
+    price: numeric('price', { precision: 10, scale: 2 }).notNull(),
+    currency: char('currency', { length: 3 }).notNull(),
+    priceUsd: numeric('price_usd', { precision: 10, scale: 2 }).notNull(),
+    observedAt: timestamp('observed_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (t) => [
+    unique('fare_price_history_key').on(t.provider, t.fingerprint, t.observedOn),
+    /** Trailing window for one offer. */
+    index('fare_price_history_series_idx').on(t.provider, t.fingerprint, t.observedOn.desc()),
+  ]
+);
+
+// ------------------------------------------------------------------ fx rates
+/**
+ * Daily USD conversion table. Fares arrive in the provider's currency (USD for
+ * US origins, CNY for Chinese ones); every offer stores the rate it was
+ * converted with, so a later rate change never rewrites a published price.
+ */
+export const fxRates = pgTable(
+  'fx_rates',
+  {
+    currency: char('currency', { length: 3 }).notNull(),
+    asOf: date('as_of', { mode: 'string' }).notNull(),
+    /** 1 unit of `currency` in USD. */
+    usdPerUnit: numeric('usd_per_unit', { precision: 14, scale: 8 }).notNull(),
+    source: text('source').notNull().default('ecb'),
+  },
+  (t) => [primaryKey({ name: 'fx_rates_pkey', columns: [t.currency, t.asOf] })]
+);
+
+// ---------------------------------------------------------- affiliate clicks
+/**
+ * One outbound "book this" click. `click_id` is both the row identity and the
+ * subid handed to the affiliate network, so a commission report joins back to
+ * the page, airport and offer that produced it.
+ *
+ * Privacy: only a salted hash of the address, plus a truncated user agent and
+ * the country header a CDN already sends. No cookie is written before the
+ * redirect.
+ */
+export const affiliateClicks = pgTable(
+  'affiliate_clicks',
+  {
+    id: bigserial('id', { mode: 'number' }).primaryKey(),
+    clickId: uuid('click_id').notNull().defaultRandom().unique('affiliate_clicks_click_id_key'),
+    /** offer = fare_offers, deal = deals (community or official card). */
+    targetKind: text('target_kind').notNull(),
+    offerId: integer('offer_id').references(() => fareOffers.id, { onDelete: 'set null' }),
+    dealId: integer('deal_id').references(() => deals.id, { onDelete: 'set null' }),
+    provider: text('provider'),
+    partner: text('partner'),
+    originIata: char('origin_iata', { length: 3 }),
+    destinationIata: char('destination_iata', { length: 3 }),
+    /** Page the click happened on: /deals, /airport/JFK, /deals/under-100 … */
+    pagePath: text('page_path'),
+    locale: text('locale'),
+    countryCode: char('country_code', { length: 2 }),
+    ipHash: text('ip_hash'),
+    userAgent: text('user_agent'),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (t) => [
+    index('affiliate_clicks_created_idx').on(t.createdAt.desc()),
+    index('affiliate_clicks_offer_idx').on(t.offerId, t.createdAt.desc()),
+    index('affiliate_clicks_deal_idx').on(t.dealId, t.createdAt.desc()),
+    check('affiliate_clicks_target_chk', sql`${t.targetKind} in ('offer', 'deal')`),
+    check(
+      'affiliate_clicks_target_ref_chk',
+      sql`(${t.targetKind} = 'offer' and ${t.dealId} is null)
+          or (${t.targetKind} = 'deal' and ${t.offerId} is null)`
+    ),
+  ]
+);
+
+// ------------------------------------------------------- provider run log
+/**
+ * One row per collector run. The only observability the 2C/2GB deployment can
+ * afford: "did last night's poll return anything, and if not, why". Read by
+ * the operator, not by the site.
+ */
+export const fareProviderRuns = pgTable(
+  'fare_provider_runs',
+  {
+    id: serial('id').primaryKey(),
+    provider: text('provider').notNull(),
+    startedAt: timestamp('started_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    finishedAt: timestamp('finished_at', { withTimezone: true, mode: 'date' }),
+    /** running | ok | partial | failed */
+    status: text('status').notNull().default('running'),
+    requests: integer('requests').notNull().default(0),
+    offersSeen: integer('offers_seen').notNull().default(0),
+    offersNew: integer('offers_new').notNull().default(0),
+    offersUpdated: integer('offers_updated').notNull().default(0),
+    errors: integer('errors').notNull().default(0),
+    /** Failure summary, at most 500 characters. */
+    message: text('message'),
+  },
+  (t) => [index('fare_provider_runs_idx').on(t.provider, t.startedAt.desc())]
 );
 
 // ------------------------------------------------------------------ reports
