@@ -573,11 +573,34 @@ async function resolveOrigin(
   return resolved;
 }
 
+function normalizeRowBookingUrl(value: string): string | null {
+  const raw = cleanLine(value);
+  if (!raw || raw.length > 600) return null;
+  try {
+    const url = new URL(raw);
+    if (
+      (url.protocol !== 'http:' && url.protocol !== 'https:') ||
+      !url.hostname.includes('.')
+    ) {
+      return null;
+    }
+    return raw;
+  } catch {
+    return null;
+  }
+}
+
 function parseImportLines(text: string): {
-  rows: { line: number; raw: string; price: number; route: string }[];
+  rows: { line: number; raw: string; price: number; route: string; bookingUrl: string | null }[];
   errors: ImportError[];
 } {
-  const rows: { line: number; raw: string; price: number; route: string }[] = [];
+  const rows: {
+    line: number;
+    raw: string;
+    price: number;
+    route: string;
+    bookingUrl: string | null;
+  }[] = [];
   const errors: ImportError[] = [];
   const lines = text.replace(/^\uFEFF/, '').split(/\r?\n/);
 
@@ -604,12 +627,30 @@ function parseImportLines(text: string): {
       errors.push({ line, raw: trimmed, message: '价格无法解析。' });
       return;
     }
+
+    // Optional third column: a per-row booking URL. If present it wins over
+    // the panel's "统一订票链接"; if absent the default is used. Only a column
+    // that actually looks like an http(s) URL is consumed, so a route that
+    // happens to contain a third token still parses as before.
+    let bookingUrl: string | null = null;
+    if (columns.length >= 3) {
+      const candidate = columns[columns.length - 1].trim();
+      if (/^https?:\/\//i.test(candidate)) {
+        bookingUrl = normalizeRowBookingUrl(candidate);
+        if (!bookingUrl) {
+          errors.push({ line, raw: trimmed, message: '订票链接需为有效的 http(s) 地址。' });
+          return;
+        }
+        columns = columns.slice(0, -1);
+      }
+    }
+
     const route = columns.slice(1).join(' ').trim();
     if (!route) {
       errors.push({ line, raw: trimmed, message: '航线为空。' });
       return;
     }
-    rows.push({ line, raw: trimmed, price, route });
+    rows.push({ line, raw: trimmed, price, route, bookingUrl });
   });
 
   return { rows, errors };
@@ -691,7 +732,8 @@ function normalizeImportDefaults(defaults: ImportDefaults):
 }
 
 /**
- * Expands a pasted two-column table into one deal per origin × destination.
+ * Expands a pasted two- or three-column table into one deal per origin ×
+ * destination. The optional third column is a per-row booking URL.
  *
  *   price<TAB>Hangzhou/Ningbo/.../Wuhan=Taipei/Kaohsiung
  *
@@ -726,6 +768,7 @@ export async function importAdminDeals(options: {
     destination: string;
     destinationEn: string | null;
     price: string;
+    bookingUrl: string | null;
   }[] = [];
 
   let skipped = 0;
@@ -773,6 +816,7 @@ export async function importAdminDeals(options: {
           destination,
           destinationEn: DESTINATION_EN[destination] ?? null,
           price,
+          bookingUrl: row.bookingUrl,
         });
       }
     }
@@ -849,7 +893,7 @@ export async function importAdminDeals(options: {
           defaults.value.tripType,
           null, // travel_from
           null, // travel_to
-          defaults.value.bookingUrl,
+          row.bookingUrl ?? defaults.value.bookingUrl,
           defaults.value.notes,
           defaults.value.notesEn,
           'visible',

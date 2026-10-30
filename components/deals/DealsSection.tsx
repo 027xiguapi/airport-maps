@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import DealsBoard from '@/components/deals/DealsBoard';
+import DealSubmitModal from '@/components/deals/DealSubmitModal';
 import type { PublicDeal } from '@/lib/deal-format';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import type { DealsMessages } from '@/lib/i18n/deals';
@@ -41,13 +42,7 @@ export default function DealsSection({ locale, lang, labels, deals, total }: Pro
               {labels.all}
               <ArrowIcon />
             </Link>
-            <Link
-              className="inline-flex items-center gap-1.5 bg-amber px-4 py-2.5 text-[13.5px] font-bold text-navy-900 transition-[filter] duration-150 hover:brightness-[1.06]"
-              href={localizedPath(locale, '/deals/new')}
-            >
-              {labels.submit}
-              <ArrowIcon />
-            </Link>
+            <DealSubmitModal locale={locale} lang={lang} labels={labels} />
           </div>
         </div>
 

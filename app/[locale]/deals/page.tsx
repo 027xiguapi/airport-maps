@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
 import Breadcrumb from '@/components/Breadcrumb';
 import DealsBoard from '@/components/deals/DealsBoard';
+import DealSubmitModal from '@/components/deals/DealSubmitModal';
 import { listDeals } from '@/lib/deals';
 import type { PublicDeal } from '@/lib/deal-format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { getDealsMessages } from '@/lib/i18n/deals';
-import { ArrowIcon } from '@/lib/icons';
 
 /**
  * Deals index. The requested page is rendered on the server (SEO, no-JS,
@@ -101,13 +100,7 @@ export default async function DealsPage({ params, searchParams }: Props) {
               <h1>{d.title}</h1>
               <div className="sub">{d.listingSub}</div>
             </div>
-            <Link
-              className="inline-flex items-center gap-1.5 bg-amber px-4 py-2.5 text-[13.5px] font-bold text-navy-900 transition-[filter] hover:brightness-[1.06]"
-              href={localizedPath(locale, '/deals/new')}
-            >
-              {d.submit}
-              <ArrowIcon />
-            </Link>
+            <DealSubmitModal locale={locale} lang={lang} labels={d} />
           </div>
         </div>
       </div>

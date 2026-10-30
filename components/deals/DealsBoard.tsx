@@ -1,8 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import DealCard from '@/components/deals/DealCard';
+import DealSubmitModal from '@/components/deals/DealSubmitModal';
 import { formatDealLabel, type PublicDeal } from '@/lib/deal-format';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import type { DealsMessages } from '@/lib/i18n/deals';
@@ -89,6 +89,14 @@ export default function DealsBoard({
   const [loadingMore, setLoadingMore] = useState(false);
   const [failed, setFailed] = useState(false);
   const [reloadToken, setReloadToken] = useState(0);
+
+  // A submission made through the "Post a deal" dialog lives in a sibling
+  // component; refresh this board so the new card appears without a reload.
+  useEffect(() => {
+    const onSubmitted = () => setReloadToken((value) => value + 1);
+    window.addEventListener('deals:submitted', onSubmitted);
+    return () => window.removeEventListener('deals:submitted', onSubmitted);
+  }, []);
   // A stale response from a previous query must never overwrite a newer one.
   const requestId = useRef(0);
   const topRef = useRef<HTMLDivElement>(null);
@@ -200,7 +208,6 @@ export default function DealsBoard({
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const hasMore = deals.length < total;
-  const submitHref = localizedPath(language, '/deals/new');
 
   const goToPage = (next: number) => {
     const target = Math.min(Math.max(1, next), totalPages);
@@ -254,12 +261,12 @@ export default function DealsBoard({
               <p className="mx-auto mt-2 max-w-[460px] text-[13.5px] leading-[1.75] text-ink-soft">
                 {labels.emptyHint}
               </p>
-              <Link
+              <DealSubmitModal
+                locale={locale}
+                lang={lang}
+                labels={labels}
                 className="mt-4 inline-flex items-center gap-1.5 bg-amber px-4 py-2.5 text-[13.5px] font-bold text-navy-900 transition-[filter] hover:brightness-[1.06]"
-                href={submitHref}
-              >
-                {labels.submit}
-              </Link>
+              />
             </>
           )}
         </div>

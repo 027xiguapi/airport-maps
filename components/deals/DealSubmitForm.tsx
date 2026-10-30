@@ -281,6 +281,11 @@ export default function DealSubmitForm({
           expiresAt: new Date().toISOString(),
         });
       }
+
+      // The dialog and the list are separate components; this event lets the
+      // board refetch immediately so a just-posted fare appears behind the
+      // confirmation without a full page reload.
+      window.dispatchEvent(new Event('deals:submitted'));
     } catch {
       setNotice('generic');
     } finally {

@@ -1,0 +1,929 @@
+{
+  "airline": "国泰航空",
+  "airlineEn": "Cathay Pacific",
+  "currency": "CNY",
+  "bookingUrl": "https://www.cathaypacific.com/cx/en_HK.html",
+  "notes": "单人往返不含税机票卡；价格不含税费，实际以出票和税费为准。",
+  "notesEn": "Round-trip fare card per person, taxes excluded; taxes are extra and availability is confirmed at booking.",
+  "expiresAt": "2026-12-31",
+  "rows": [
+    {
+      "airportIata": "CGO",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "1030.00"
+    },
+    {
+      "airportIata": "PEK",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "1030.00"
+    },
+    {
+      "airportIata": "TAO",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "1030.00"
+    },
+    {
+      "airportIata": "CSX",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "悉尼",
+      "destinationEn": "Sydney",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "悉尼",
+      "destinationEn": "Sydney",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "悉尼",
+      "destinationEn": "Sydney",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "珀斯",
+      "destinationEn": "Perth",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "悉尼",
+      "destinationEn": "Sydney",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "珀斯",
+      "destinationEn": "Perth",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "悉尼",
+      "destinationEn": "Sydney",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "XMN",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "1080.00"
+    },
+    {
+      "airportIata": "CSX",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "1210.00"
+    },
+    {
+      "airportIata": "FOC",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "1210.00"
+    },
+    {
+      "airportIata": "HAK",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "1210.00"
+    },
+    {
+      "airportIata": "XMN",
+      "destination": "布里斯班",
+      "destinationEn": "Brisbane",
+      "price": "1210.00"
+    },
+    {
+      "airportIata": "XMN",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "1210.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "阿姆斯特丹",
+      "destinationEn": "Amsterdam",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "巴黎",
+      "destinationEn": "Paris",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "布鲁塞尔",
+      "destinationEn": "Brussels",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "法兰克福",
+      "destinationEn": "Frankfurt",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "伦敦",
+      "destinationEn": "London",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "马德里",
+      "destinationEn": "Madrid",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "米兰",
+      "destinationEn": "Milan",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "慕尼黑",
+      "destinationEn": "Munich",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "苏黎世",
+      "destinationEn": "Zurich",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "阿姆斯特丹",
+      "destinationEn": "Amsterdam",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "巴黎",
+      "destinationEn": "Paris",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "法兰克福",
+      "destinationEn": "Frankfurt",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "伦敦",
+      "destinationEn": "London",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "马德里",
+      "destinationEn": "Madrid",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "米兰",
+      "destinationEn": "Milan",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "巴黎",
+      "destinationEn": "Paris",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "法兰克福",
+      "destinationEn": "Frankfurt",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "伦敦",
+      "destinationEn": "London",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "马德里",
+      "destinationEn": "Madrid",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "米兰",
+      "destinationEn": "Milan",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "慕尼黑",
+      "destinationEn": "Munich",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "苏黎世",
+      "destinationEn": "Zurich",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "阿姆斯特丹",
+      "destinationEn": "Amsterdam",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "巴黎",
+      "destinationEn": "Paris",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "法兰克福",
+      "destinationEn": "Frankfurt",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "伦敦",
+      "destinationEn": "London",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "马德里",
+      "destinationEn": "Madrid",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "米兰",
+      "destinationEn": "Milan",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "慕尼黑",
+      "destinationEn": "Munich",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "苏黎世",
+      "destinationEn": "Zurich",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "巴黎",
+      "destinationEn": "Paris",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "法兰克福",
+      "destinationEn": "Frankfurt",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "伦敦",
+      "destinationEn": "London",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "马德里",
+      "destinationEn": "Madrid",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "米兰",
+      "destinationEn": "Milan",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "慕尼黑",
+      "destinationEn": "Munich",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "苏黎世",
+      "destinationEn": "Zurich",
+      "price": "1350.00"
+    },
+    {
+      "airportIata": "CSX",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "1800.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "温哥华",
+      "destinationEn": "Vancouver",
+      "price": "1800.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "温哥华",
+      "destinationEn": "Vancouver",
+      "price": "1800.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "温哥华",
+      "destinationEn": "Vancouver",
+      "price": "1800.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "温哥华",
+      "destinationEn": "Vancouver",
+      "price": "1800.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "温哥华",
+      "destinationEn": "Vancouver",
+      "price": "1800.00"
+    },
+    {
+      "airportIata": "CGO",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "CGO",
+      "destination": "温哥华",
+      "destinationEn": "Vancouver",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "CKG",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "CKG",
+      "destination": "温哥华",
+      "destinationEn": "Vancouver",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "PEK",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "PEK",
+      "destination": "温哥华",
+      "destinationEn": "Vancouver",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "TAO",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "TAO",
+      "destination": "温哥华",
+      "destinationEn": "Vancouver",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "TFU",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "TFU",
+      "destination": "温哥华",
+      "destinationEn": "Vancouver",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "XIY",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "1930.00"
+    },
+    {
+      "airportIata": "CSX",
+      "destination": "西雅图",
+      "destinationEn": "Seattle",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "西雅图",
+      "destinationEn": "Seattle",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "西雅图",
+      "destinationEn": "Seattle",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "奥克兰",
+      "destinationEn": "Auckland",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "西雅图",
+      "destinationEn": "Seattle",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "奥克兰",
+      "destinationEn": "Auckland",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "西雅图",
+      "destinationEn": "Seattle",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "XIY",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "2520.00"
+    },
+    {
+      "airportIata": "CSX",
+      "destination": "奥克兰",
+      "destinationEn": "Auckland",
+      "price": "3420.00"
+    },
+    {
+      "airportIata": "FOC",
+      "destination": "奥克兰",
+      "destinationEn": "Auckland",
+      "price": "3420.00"
+    },
+    {
+      "airportIata": "HAK",
+      "destination": "奥克兰",
+      "destinationEn": "Auckland",
+      "price": "3420.00"
+    },
+    {
+      "airportIata": "URC",
+      "destination": "洛杉矶",
+      "destinationEn": "Los Angeles",
+      "price": "3420.00"
+    },
+    {
+      "airportIata": "XMN",
+      "destination": "奥克兰",
+      "destinationEn": "Auckland",
+      "price": "3420.00"
+    },
+    {
+      "airportIata": "XMN",
+      "destination": "基督城",
+      "destinationEn": "Christchurch",
+      "price": "3420.00"
+    },
+    {
+      "airportIata": "XMN",
+      "destination": "西雅图",
+      "destinationEn": "Seattle",
+      "price": "3420.00"
+    },
+    {
+      "airportIata": "CGO",
+      "destination": "多伦多",
+      "destinationEn": "Toronto",
+      "price": "3870.00"
+    },
+    {
+      "airportIata": "PEK",
+      "destination": "多伦多",
+      "destinationEn": "Toronto",
+      "price": "3870.00"
+    },
+    {
+      "airportIata": "TAO",
+      "destination": "多伦多",
+      "destinationEn": "Toronto",
+      "price": "3870.00"
+    },
+    {
+      "airportIata": "TFU",
+      "destination": "多伦多",
+      "destinationEn": "Toronto",
+      "price": "3870.00"
+    },
+    {
+      "airportIata": "XIY",
+      "destination": "多伦多",
+      "destinationEn": "Toronto",
+      "price": "3870.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "高雄",
+      "destinationEn": "Kaohsiung",
+      "price": "540.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "台北",
+      "destinationEn": "Taipei",
+      "price": "540.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "高雄",
+      "destinationEn": "Kaohsiung",
+      "price": "540.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "台北",
+      "destinationEn": "Taipei",
+      "price": "540.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "高雄",
+      "destinationEn": "Kaohsiung",
+      "price": "540.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "台北",
+      "destinationEn": "Taipei",
+      "price": "540.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "高雄",
+      "destinationEn": "Kaohsiung",
+      "price": "540.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "台北",
+      "destinationEn": "Taipei",
+      "price": "540.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "高雄",
+      "destinationEn": "Kaohsiung",
+      "price": "540.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "台北",
+      "destinationEn": "Taipei",
+      "price": "540.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "金边",
+      "destinationEn": "Phnom Penh",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "马尼拉",
+      "destinationEn": "Manila",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "金边",
+      "destinationEn": "Phnom Penh",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "马尼拉",
+      "destinationEn": "Manila",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "金边",
+      "destinationEn": "Phnom Penh",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "马尼拉",
+      "destinationEn": "Manila",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "金边",
+      "destinationEn": "Phnom Penh",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "马尼拉",
+      "destinationEn": "Manila",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "TFU",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "金边",
+      "destinationEn": "Phnom Penh",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "马尼拉",
+      "destinationEn": "Manila",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "曼谷",
+      "destinationEn": "Bangkok",
+      "price": "640.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "科伦坡",
+      "destinationEn": "Colombo",
+      "price": "730.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "科伦坡",
+      "destinationEn": "Colombo",
+      "price": "730.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "科伦坡",
+      "destinationEn": "Colombo",
+      "price": "730.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "科伦坡",
+      "destinationEn": "Colombo",
+      "price": "730.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "科伦坡",
+      "destinationEn": "Colombo",
+      "price": "730.00"
+    },
+    {
+      "airportIata": "HGH",
+      "destination": "胡志明市",
+      "destinationEn": "Ho Chi Minh City",
+      "price": "770.00"
+    },
+    {
+      "airportIata": "NGB",
+      "destination": "胡志明市",
+      "destinationEn": "Ho Chi Minh City",
+      "price": "770.00"
+    },
+    {
+      "airportIata": "NKG",
+      "destination": "胡志明市",
+      "destinationEn": "Ho Chi Minh City",
+      "price": "770.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "河内",
+      "destinationEn": "Hanoi",
+      "price": "770.00"
+    },
+    {
+      "airportIata": "PVG",
+      "destination": "胡志明市",
+      "destinationEn": "Ho Chi Minh City",
+      "price": "770.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "河内",
+      "destinationEn": "Hanoi",
+      "price": "770.00"
+    },
+    {
+      "airportIata": "WUH",
+      "destination": "胡志明市",
+      "destinationEn": "Ho Chi Minh City",
+      "price": "770.00"
+    },
+    {
+      "airportIata": "CGO",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "880.00"
+    },
+    {
+      "airportIata": "CGO",
+      "destination": "悉尼",
+      "destinationEn": "Sydney",
+      "price": "880.00"
+    },
+    {
+      "airportIata": "CKG",
+      "destination": "悉尼",
+      "destinationEn": "Sydney",
+      "price": "880.00"
+    },
+    {
+      "airportIata": "PEK",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "880.00"
+    },
+    {
+      "airportIata": "PEK",
+      "destination": "悉尼",
+      "destinationEn": "Sydney",
+      "price": "880.00"
+    },
+    {
+      "airportIata": "TAO",
+      "destination": "墨尔本",
+      "destinationEn": "Melbourne",
+      "price": "880.00"
+    },
+    {
+      "airportIata": "TAO",
+      "destination": "悉尼",
+      "destinationEn": "Sydney",
+      "price": "880.00"
+    },
+    {
+      "airportIata": "TFU",
+      "destination": "悉尼",
+      "destinationEn": "Sydney",
+      "price": "880.00"
+    },
+    {
+      "airportIata": "CSX",
+      "destination": "河内",
+      "destinationEn": "Hanoi",
+      "price": "990.00"
+    },
+    {
+      "airportIata": "CSX",
+      "destination": "胡志明市",
+      "destinationEn": "Ho Chi Minh City",
+      "price": "990.00"
+    },
+    {
+      "airportIata": "FOC",
+      "destination": "河内",
+      "destinationEn": "Hanoi",
+      "price": "990.00"
+    },
+    {
+      "airportIata": "FOC",
+      "destination": "胡志明市",
+      "destinationEn": "Ho Chi Minh City",
+      "price": "990.00"
+    },
+    {
+      "airportIata": "HAK",
+      "destination": "胡志明市",
+      "destinationEn": "Ho Chi Minh City",
+      "price": "990.00"
+    },
+    {
+      "airportIata": "XMN",
+      "destination": "河内",
+      "destinationEn": "Hanoi",
+      "price": "990.00"
+    },
+    {
+      "airportIata": "XMN",
+      "destination": "胡志明市",
+      "destinationEn": "Ho Chi Minh City",
+      "price": "990.00"
+    }
+  ]
+}

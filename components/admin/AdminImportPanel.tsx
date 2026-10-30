@@ -105,7 +105,8 @@ export default function AdminImportPanel({ onClose, onImported }: Props) {
           <div>
             <h2 className="font-display text-[18px] font-bold text-ink-heading">批量导入特惠机票</h2>
             <p className="mt-1 max-w-[760px] text-[12.5px] leading-[1.7] text-ink-soft">
-              从 Excel 复制「价格 + 航线」两列粘贴到下面。每行会按出发城市 ×
+              从 Excel 复制「价格 + 航线」两列粘贴到下面；可再加第三列「订票链接」，
+              每行链接优先于下方的统一链接。每行会按出发城市 ×
               目的地展开；出发城市可写中文城市名或 IATA 代码，用
               <code className="mx-1 bg-paper px-1">/</code>
               分隔，起降之间用

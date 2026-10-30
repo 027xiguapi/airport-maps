@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {
   formatDealDate,
+  formatDealDateTime,
   formatDealLabel,
   formatDealPrice,
   type DealCabin,
@@ -58,7 +59,18 @@ export default function DealCard({
           ? `– ${to}`
           : '';
   const submitted = formatDealLabel(labels.submittedBy, { name: deal.submitterName });
+  const submittedAt = formatDealLabel(labels.submittedAt, {
+    date: formatDealDateTime(deal.createdAt, lang),
+  });
   const expires = formatDealLabel(labels.expires, { date: formatDealDate(deal.expiresAt, lang) });
+  const statusLabel =
+    status === 'hidden'
+      ? labels.statusHidden
+      : expired
+        ? labels.statusExpired
+        : !deal.taxIncluded
+          ? labels.taxExcluded
+          : labels.unverified;
 
   return (
     <article
@@ -162,17 +174,8 @@ export default function DealCard({
           <span className="block truncate">
             {deal.isOfficial ? labels.officialFare : submitted}
           </span>
-          <span className="block truncate">
-            {status === 'hidden'
-              ? labels.statusHidden
-              : expired
-                ? labels.statusExpired
-                : deal.isOfficial
-                  ? ''
-                  : !deal.taxIncluded
-                    ? labels.taxExcluded
-                    : labels.unverified}
-          </span>
+          <span className="block truncate">{deal.isOfficial ? submitted : submittedAt}</span>
+          <span className="block truncate">{deal.isOfficial ? submittedAt : statusLabel}</span>
         </div>
         {status || expired ? (
           <span className="flex-none text-[11px] text-ink-faint">{expires}</span>

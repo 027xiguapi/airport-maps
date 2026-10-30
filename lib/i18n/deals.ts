@@ -98,6 +98,10 @@ export type DealsMessages = {
 
   // card
   submittedBy: string;
+  /** Submission timestamp, e.g. "Submitted Oct 30, 2026, 07:09". */
+  submittedAt: string;
+  /** Close button of the submission dialog. */
+  close: string;
   unverified: string;
   /** Badge on an official fare whose price excludes taxes. */
   taxExcluded: string;
@@ -205,6 +209,8 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     notesError: '补充说明最多 600 个字符。',
     genericError: '提交失败，请稍后重试。',
     submittedBy: '由 {name} 提交',
+    submittedAt: '提交于 {date}',
+    close: '关闭',
     unverified: '用户提交 · 未核验',
     taxExcluded: '不含税',
     officialFare: '官方票价',
@@ -284,6 +290,8 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     notesError: '補充說明最多 600 個字元。',
     genericError: '提交失敗，請稍後再試。',
     submittedBy: '由 {name} 提交',
+    submittedAt: '提交於 {date}',
+    close: '關閉',
     unverified: '使用者提交 · 未查核',
     taxExcluded: '不含稅',
     officialFare: '官方票價',
@@ -364,6 +372,8 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     notesError: 'Notes can be at most 600 characters.',
     genericError: 'Could not post the deal. Please try again.',
     submittedBy: 'Posted by {name}',
+    submittedAt: 'Submitted {date}',
+    close: 'Close',
     unverified: 'User-submitted · unverified',
     taxExcluded: 'Excl. taxes',
     officialFare: 'Official fare',
@@ -447,6 +457,8 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     notesError: 'Hinweise dürfen höchstens 600 Zeichen haben.',
     genericError: 'Einreichen fehlgeschlagen. Bitte später erneut versuchen.',
     submittedBy: 'Eingereicht von {name}',
+    submittedAt: 'Eingereicht am {date}',
+    close: 'Schließen',
     unverified: 'Von Nutzern · ungeprüft',
     taxExcluded: 'Zzgl. Steuern',
     officialFare: 'Offizieller Tarif',
@@ -530,6 +542,8 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     notesError: 'Les remarques sont limitées à 600 caractères.',
     genericError: 'Publication impossible. Réessayez plus tard.',
     submittedBy: 'Publié par {name}',
+    submittedAt: 'Soumis le {date}',
+    close: 'Fermer',
     unverified: 'Publication d’utilisateur · non vérifiée',
     taxExcluded: 'Hors taxes',
     officialFare: 'Tarif officiel',
@@ -612,6 +626,8 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     notesError: 'Le note possono contenere al massimo 600 caratteri.',
     genericError: 'Pubblicazione non riuscita. Riprova più tardi.',
     submittedBy: 'Pubblicata da {name}',
+    submittedAt: 'Inviato il {date}',
+    close: 'Chiudi',
     unverified: 'Inviata dagli utenti · non verificata',
     taxExcluded: 'Tasse escluse',
     officialFare: 'Tariffa ufficiale',
@@ -692,6 +708,8 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     notesError: '추가 정보는 최대 600자입니다.',
     genericError: '등록하지 못했습니다. 잠시 후 다시 시도해 주세요.',
     submittedBy: '{name} 님이 등록',
+    submittedAt: '{date}에 제출됨',
+    close: '닫기',
     unverified: '사용자 등록 · 미검증',
     taxExcluded: '세금 별도',
     officialFare: '공식 요금',

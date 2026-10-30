@@ -108,6 +108,34 @@ export function formatDealDate(value: string | null, lang: string): string {
   }
 }
 
+/**
+ * ISO timestamp → localized date + time in the site's time zone.
+ *
+ * Pinning the time zone matters for hydration: the card is rendered on the
+ * server and again in the browser, and a browser-local clock would produce a
+ * different string on the first client render. Asia/Shanghai is the operating
+ * time zone of the fare data and the admin, so submission times read naturally
+ * on the Chinese pages and stay stable everywhere else.
+ */
+export function formatDealDateTime(value: string | null, lang: string): string {
+  if (!value) return '';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  try {
+    return new Intl.DateTimeFormat(lang, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      hourCycle: 'h23',
+      timeZone: 'Asia/Shanghai',
+    }).format(date);
+  } catch {
+    return value.slice(0, 16).replace('T', ' ');
+  }
+}
+
 /** `{name}`-style substitution for the catalog's string templates. */
 export function formatDealLabel(template: string, values: Record<string, string | number>): string {
   return template.replace(/\{(\w+)\}/g, (_, key: string) => String(values[key] ?? ''));

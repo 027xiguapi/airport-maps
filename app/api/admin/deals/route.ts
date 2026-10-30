@@ -30,6 +30,16 @@ export const dynamic = 'force-dynamic';
 
 const NO_STORE = { 'Cache-Control': 'no-store' } as const;
 
+function forbiddenOrigin() {
+  return NextResponse.json(
+    {
+      error: 'forbidden_origin',
+      hint: '请求 Origin 与服务端识别的 Host 不一致；检查反向代理是否转发 Host / X-Forwarded-Host。',
+    },
+    { status: 403, headers: NO_STORE }
+  );
+}
+
 async function guard(): Promise<
   { ok: true; user: NonNullable<Awaited<ReturnType<typeof getCurrentUser>>> } | { ok: false; response: NextResponse }
 > {
@@ -53,9 +63,21 @@ async function guard(): Promise<
     };
   }
   if (!(await getAdminUser())) {
+    // The most common cause is a Google account that differs from the one in
+    // ADMIN_EMAILS (typo, alias, or a different test account). Return the
+    // signed-in email — it is the caller's own address — so the mismatch can
+    // be fixed without guessing. The allowlist itself is never exposed.
+    console.warn('[admin] forbidden', { email: user.email });
     return {
       ok: false,
-      response: NextResponse.json({ error: 'forbidden' }, { status: 403, headers: NO_STORE }),
+      response: NextResponse.json(
+        {
+          error: 'forbidden',
+          signedInAs: user.email,
+          hint: '当前登录邮箱不在 ADMIN_EMAILS 中；修改环境变量后重启服务再试。',
+        },
+        { status: 403, headers: NO_STORE }
+      ),
     };
   }
   return { ok: true, user };
@@ -112,9 +134,7 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   const auth = await guard();
   if (!auth.ok) return auth.response;
-  if (!isSameOrigin(request)) {
-    return NextResponse.json({ error: 'forbidden' }, { status: 403, headers: NO_STORE });
-  }
+  if (!isSameOrigin(request)) return forbiddenOrigin();
   const body = await readJson(request);
   if (!body) {
     return NextResponse.json({ error: 'invalid_request' }, { status: 400, headers: NO_STORE });
@@ -157,9 +177,7 @@ export async function POST(request: Request) {
 export async function PATCH(request: Request) {
   const auth = await guard();
   if (!auth.ok) return auth.response;
-  if (!isSameOrigin(request)) {
-    return NextResponse.json({ error: 'forbidden' }, { status: 403, headers: NO_STORE });
-  }
+  if (!isSameOrigin(request)) return forbiddenOrigin();
   const body = await readJson(request);
   if (!body) {
     return NextResponse.json({ error: 'invalid_request' }, { status: 400, headers: NO_STORE });
@@ -195,9 +213,7 @@ export async function PATCH(request: Request) {
 export async function DELETE(request: Request) {
   const auth = await guard();
   if (!auth.ok) return auth.response;
-  if (!isSameOrigin(request)) {
-    return NextResponse.json({ error: 'forbidden' }, { status: 403, headers: NO_STORE });
-  }
+  if (!isSameOrigin(request)) return forbiddenOrigin();
   const body = await readJson(request);
   if (!body) {
     return NextResponse.json({ error: 'invalid_request' }, { status: 400, headers: NO_STORE });
