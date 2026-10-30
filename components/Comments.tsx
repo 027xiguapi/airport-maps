@@ -1,9 +1,11 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { formatDealLabel } from '@/lib/deal-format';
 import { commentCountLabel } from '@/lib/comment-labels';
+import type { AuthMessages } from '@/lib/i18n/deals';
 import type { Messages } from '@/lib/i18n/messages/zh';
 import type { CommentKind, PublicComment } from '@/lib/comments';
 
@@ -17,47 +19,84 @@ type Props = {
   /** BCP 47 tag for date formatting (`zh-hans`, `zh-hant`, `en`, …). */
   lang: string;
   labels: CommentLabels;
+  /** Sign-in copy for the signed-out prompt (lib/i18n/deals.ts). */
+  authLabels: AuthMessages;
   className?: string;
 };
 
-const MAX_AUTHOR = 40;
 const MAX_BODY = 2000;
 const MIN_BODY = 5;
 
-type Notice = 'success' | 'error' | 'rate_limited' | 'invalid_name' | 'invalid_body' | null;
+type Notice = 'success' | 'error' | 'rate_limited' | 'invalid_body' | null;
+
+type Viewer = {
+  id: number;
+  name: string;
+  email: string | null;
+  picture: string | null;
+};
 
 /**
  * Reader comments block, shared by every content page (airport, country, blog,
  * static Markdown pages). Comments load from /api/comments after mount, so the
  * surrounding page keeps its static/ISR rendering and each visitor always sees
  * the current thread rather than a cached snapshot.
+ *
+ * Posting is tied to a Google session. The session is fetched after mount
+ * (never read from cookies here) so this block does not turn the 4,000+
+ * content pages dynamic; signed-out visitors get a prompt in place of the
+ * form, signed-in visitors get their name and avatar attached automatically.
  */
-export default function Comments({ pageKind, pageKey, locale, lang, labels, className }: Props) {
+export default function Comments({
+  pageKind,
+  pageKey,
+  locale,
+  lang,
+  labels,
+  authLabels,
+  className,
+}: Props) {
   const uid = useId();
-  const nameId = `${uid}-name`;
   const bodyId = `${uid}-body`;
   const statusId = `${uid}-status`;
+  const pathname = usePathname() ?? `/${locale}`;
 
   const [comments, setComments] = useState<PublicComment[] | null>(null);
   const [total, setTotal] = useState<number | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
   const [reloadToken, setReloadToken] = useState(0);
 
-  const [author, setAuthor] = useState('');
+  const [viewer, setViewer] = useState<Viewer | null | undefined>(undefined);
+  const [configured, setConfigured] = useState(true);
+
   const [body, setBody] = useState('');
   const [website, setWebsite] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [notice, setNotice] = useState<Notice>(null);
   const bodyRef = useRef<HTMLTextAreaElement>(null);
 
-  // Remember the nickname on this device; it is the one field people retype.
+  // Who is signed in? `undefined` means "not answered yet", which deliberately
+  // keeps the server and the first client render identical.
   useEffect(() => {
-    try {
-      const saved = window.localStorage.getItem('comment-author');
-      if (saved) setAuthor(saved.slice(0, MAX_AUTHOR));
-    } catch {
-      // Storage can be unavailable (private mode, blocked cookies) — ignore.
-    }
+    const controller = new AbortController();
+    fetch('/api/auth/session', {
+      signal: controller.signal,
+      cache: 'no-store',
+      headers: { Accept: 'application/json' },
+    })
+      .then(async (response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = (await response.json()) as {
+          user?: Viewer | null;
+          configured?: boolean;
+        };
+        setViewer(data.user ?? null);
+        setConfigured(data.configured !== false);
+      })
+      .catch((error: unknown) => {
+        if ((error as Error).name !== 'AbortError') setViewer(null);
+      });
+    return () => controller.abort();
   }, []);
 
   useEffect(() => {
@@ -94,21 +133,15 @@ export default function Comments({ pageKind, pageKey, locale, lang, labels, clas
         success: labels.success,
         error: labels.error,
         rate_limited: labels.rateLimited,
-        invalid_name: labels.nameError,
         invalid_body: labels.bodyError,
       }[notice]
     : '';
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (submitting) return;
+    if (submitting || !viewer) return;
 
-    const cleanAuthor = author.trim();
     const cleanBody = body.trim();
-    if (cleanAuthor.length < 2 || cleanAuthor.length > MAX_AUTHOR) {
-      setNotice('invalid_name');
-      return;
-    }
     const bodyLength = [...cleanBody].length;
     if (bodyLength < MIN_BODY || bodyLength > MAX_BODY) {
       setNotice('invalid_body');
@@ -125,7 +158,6 @@ export default function Comments({ pageKind, pageKey, locale, lang, labels, clas
           kind: pageKind,
           key: pageKey,
           locale,
-          author: cleanAuthor,
           body: cleanBody,
           website,
         }),
@@ -135,18 +167,18 @@ export default function Comments({ pageKind, pageKey, locale, lang, labels, clas
         error?: string;
       };
 
+      if (response.status === 401) {
+        // The session expired between loading the page and pressing submit:
+        // drop back to the signed-out prompt.
+        setViewer(null);
+        return;
+      }
       if (response.status === 429) {
         setNotice('rate_limited');
         return;
       }
       if (!response.ok) {
-        setNotice(
-          data.error === 'invalid_name'
-            ? 'invalid_name'
-            : data.error === 'invalid_body'
-              ? 'invalid_body'
-              : 'error'
-        );
+        setNotice(data.error === 'invalid_body' ? 'invalid_body' : 'error');
         return;
       }
 
@@ -160,11 +192,6 @@ export default function Comments({ pageKind, pageKey, locale, lang, labels, clas
       }
       setBody('');
       setNotice('success');
-      try {
-        window.localStorage.setItem('comment-author', cleanAuthor);
-      } catch {
-        // Ignore storage failures.
-      }
       bodyRef.current?.focus();
     } catch {
       setNotice('error');
@@ -176,6 +203,9 @@ export default function Comments({ pageKind, pageKey, locale, lang, labels, clas
   // Newest first: the form sits above the list, so a just-posted comment lands
   // directly under it instead of at the bottom of a long thread.
   const ordered = comments ? [...comments].reverse() : null;
+  const signInHref = `/api/auth/google?locale=${encodeURIComponent(locale)}&next=${encodeURIComponent(
+    pathname
+  )}`;
 
   return (
     <section
@@ -198,98 +228,132 @@ export default function Comments({ pageKind, pageKey, locale, lang, labels, clas
 
       <p className="mb-5 max-w-[760px] text-[13.5px] leading-[1.8] text-ink-soft">{labels.sub}</p>
 
-      <form
-        className="relative rounded-[14px] border border-line bg-card p-5 [box-shadow:var(--shadow-sm)]"
-        onSubmit={handleSubmit}
-        noValidate
-      >
-        <h3 className="font-display text-[16px] font-bold text-ink-heading">{labels.formTitle}</h3>
-        <p className="mt-1 text-[12.5px] leading-[1.7] text-ink-soft">{labels.note}</p>
-
-        <div className="mt-4">
-          <label
-            className="mb-1.5 block font-display text-[11.5px] uppercase tracking-[0.14em] text-ink-faint"
-            htmlFor={nameId}
-          >
-            {labels.nameLabel}
-          </label>
-          <Input
-            id={nameId}
-            name="author"
-            className="h-[40px] max-w-[360px]"
-            value={author}
-            onChange={(event) => {
-              setAuthor(event.target.value);
-              if (notice === 'invalid_name') setNotice(null);
-            }}
-            placeholder={labels.namePlaceholder}
-            maxLength={MAX_AUTHOR}
-            autoComplete="nickname"
-            aria-invalid={notice === 'invalid_name' || undefined}
-            aria-describedby={notice === 'invalid_name' ? statusId : undefined}
-          />
-        </div>
-
-        <div className="mt-3">
-          <label
-            className="mb-1.5 block font-display text-[11.5px] uppercase tracking-[0.14em] text-ink-faint"
-            htmlFor={bodyId}
-          >
-            {labels.bodyLabel}
-          </label>
-          <textarea
-            id={bodyId}
-            name="body"
-            ref={bodyRef}
-            className="block w-full resize-y rounded-[10px] border border-input bg-card px-4 py-3 text-[14px] leading-[1.75] text-ink outline-none transition-[border-color,box-shadow] duration-150 selection:bg-primary selection:text-primary-foreground placeholder:text-ink-faint focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/20 aria-invalid:border-destructive"
-            rows={5}
-            value={body}
-            onChange={(event) => {
-              setBody(event.target.value);
-              if (notice === 'invalid_body') setNotice(null);
-            }}
-            placeholder={labels.bodyPlaceholder}
-            maxLength={MAX_BODY}
-            aria-invalid={notice === 'invalid_body' || undefined}
-            aria-describedby={notice === 'invalid_body' ? statusId : undefined}
-          />
-          <div className="mt-1 flex items-center justify-end text-[11.5px] text-ink-faint">
-            <span>
-              {body.length}/{MAX_BODY}
-            </span>
+      {viewer === undefined ? (
+        <p className="rounded-[12px] border border-line bg-card px-5 py-4 text-[13px] text-ink-faint">
+          {authLabels.loading}
+        </p>
+      ) : viewer ? (
+        <form
+          className="relative rounded-[14px] border border-line bg-card p-5 [box-shadow:var(--shadow-sm)]"
+          onSubmit={handleSubmit}
+          noValidate
+        >
+          <div className="flex items-center gap-3">
+            {viewer.picture ? (
+              <img
+                className="h-9 w-9 flex-none rounded-full object-cover"
+                src={viewer.picture}
+                alt=""
+                width={36}
+                height={36}
+                referrerPolicy="no-referrer"
+                loading="lazy"
+              />
+            ) : (
+              <span
+                className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-sky-100 font-display text-[14px] font-bold text-sky-600"
+                aria-hidden="true"
+              >
+                {[...viewer.name][0]?.toUpperCase() ?? '?'}
+              </span>
+            )}
+            <div className="min-w-0">
+              <h3 className="font-display text-[16px] font-bold text-ink-heading">
+                {labels.formTitle}
+              </h3>
+              <p className="mt-0.5 truncate text-[12px] text-ink-soft">
+                {formatDealLabel(authLabels.signedInAs, { name: viewer.name })}
+              </p>
+            </div>
           </div>
-        </div>
+          <p className="mt-2 text-[12.5px] leading-[1.7] text-ink-soft">{labels.note}</p>
 
-        <div className="mt-3 flex flex-wrap items-center gap-3">
-          <Button type="submit" disabled={submitting}>
-            {submitting ? labels.submitting : labels.submit}
-          </Button>
-          <p
-            id={statusId}
-            className={`m-0 text-[12.5px] ${
-              notice === 'success' ? 'text-sky-600' : 'text-destructive'
-            }`}
-            role="status"
-            aria-live="polite"
-          >
-            {noticeText}
+          <div className="mt-4">
+            <label
+              className="mb-1.5 block font-display text-[11.5px] uppercase tracking-[0.14em] text-ink-faint"
+              htmlFor={bodyId}
+            >
+              {labels.bodyLabel}
+            </label>
+            <textarea
+              id={bodyId}
+              name="body"
+              ref={bodyRef}
+              className="block w-full resize-y rounded-[10px] border border-input bg-card px-4 py-3 text-[14px] leading-[1.75] text-ink outline-none transition-[border-color,box-shadow] duration-150 selection:bg-primary selection:text-primary-foreground placeholder:text-ink-faint focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/20 aria-invalid:border-destructive"
+              rows={5}
+              value={body}
+              onChange={(event) => {
+                setBody(event.target.value);
+                if (notice === 'invalid_body') setNotice(null);
+              }}
+              placeholder={labels.bodyPlaceholder}
+              maxLength={MAX_BODY}
+              aria-invalid={notice === 'invalid_body' || undefined}
+              aria-describedby={notice === 'invalid_body' ? statusId : undefined}
+            />
+            <div className="mt-1 flex items-center justify-end text-[11.5px] text-ink-faint">
+              <span>
+                {body.length}/{MAX_BODY}
+              </span>
+            </div>
+          </div>
+
+          <div className="mt-3 flex flex-wrap items-center gap-3">
+            <Button type="submit" disabled={submitting}>
+              {submitting ? labels.submitting : labels.submit}
+            </Button>
+            <p
+              id={statusId}
+              className={`m-0 text-[12.5px] ${
+                notice === 'success' ? 'text-sky-600' : 'text-destructive'
+              }`}
+              role="status"
+              aria-live="polite"
+            >
+              {noticeText}
+            </p>
+          </div>
+
+          {/* Honeypot: off-screen rather than display:none, and never focusable. */}
+          <div className="absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden" aria-hidden="true">
+            <label htmlFor={`${uid}-website`}>Website</label>
+            <input
+              id={`${uid}-website`}
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={website}
+              onChange={(event) => setWebsite(event.target.value)}
+            />
+          </div>
+        </form>
+      ) : (
+        <div className="rounded-[14px] border border-line bg-card p-5 [box-shadow:var(--shadow-sm)]">
+          <h3 className="font-display text-[16px] font-bold text-ink-heading">
+            {authLabels.commentSignInTitle}
+          </h3>
+          <p className="mt-1.5 max-w-[640px] text-[13px] leading-[1.75] text-ink-soft">
+            {authLabels.commentSignInBody}
           </p>
+          {configured ? (
+            <a
+              className="mt-4 inline-flex items-center gap-2 border border-amber bg-amber px-4 py-2.5 text-[13.5px] font-bold text-navy-900 transition-[filter] duration-150 hover:brightness-[1.06]"
+              href={signInHref}
+            >
+              {authLabels.signInWithGoogle}
+            </a>
+          ) : (
+            <div className="mt-4 border border-dashed border-line bg-paper px-4 py-3">
+              <b className="block text-[13px] text-ink-heading">{authLabels.notConfiguredTitle}</b>
+              <p className="mt-1 text-[12.5px] leading-[1.7] text-ink-soft">
+                {authLabels.notConfiguredBody}
+              </p>
+            </div>
+          )}
+          <p className="mt-4 text-[11.5px] leading-[1.7] text-ink-faint">{authLabels.privacyNote}</p>
         </div>
-
-        {/* Honeypot: off-screen rather than display:none, and never focusable. */}
-        <div className="absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden" aria-hidden="true">
-          <label htmlFor={`${uid}-website`}>Website</label>
-          <input
-            id={`${uid}-website`}
-            name="website"
-            type="text"
-            tabIndex={-1}
-            autoComplete="off"
-            value={website}
-            onChange={(event) => setWebsite(event.target.value)}
-          />
-        </div>
-      </form>
+      )}
 
       {loadFailed ? (
         <div className="mt-5 rounded-[12px] border border-dashed border-line bg-card px-5 py-6 text-center">
@@ -322,18 +386,27 @@ export default function Comments({ pageKind, pageKey, locale, lang, labels, clas
                 className="rounded-[12px] border border-line bg-card px-5 py-4 [box-shadow:var(--shadow-sm)]"
               >
                 <div className="flex items-center gap-3">
-                  <span
-                    className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-sky-100 font-display text-[15px] font-bold text-sky-600"
-                    aria-hidden="true"
-                  >
-                    {initial}
-                  </span>
+                  {comment.picture ? (
+                    <img
+                      className="h-9 w-9 flex-none rounded-full object-cover"
+                      src={comment.picture}
+                      alt=""
+                      width={36}
+                      height={36}
+                      referrerPolicy="no-referrer"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span
+                      className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-sky-100 font-display text-[15px] font-bold text-sky-600"
+                      aria-hidden="true"
+                    >
+                      {initial}
+                    </span>
+                  )}
                   <div className="min-w-0">
                     <b className="block truncate text-[14px] text-ink-heading">{comment.author}</b>
-                    <time
-                      className="text-[11.5px] text-ink-faint"
-                      dateTime={comment.createdAt}
-                    >
+                    <time className="text-[11.5px] text-ink-faint" dateTime={comment.createdAt}>
                       {formatCommentDate(comment.createdAt, lang)}
                     </time>
                   </div>

@@ -6,17 +6,25 @@ import {
   createComment,
   isCommentKind,
   isCommentRateLimited,
+  isCommentUserRateLimited,
   listComments,
   normalizeCommentLocale,
   normalizePageKey,
-  validateCommentInput,
+  validateCommentBody,
 } from '@/lib/comments';
+import { getCurrentUser } from '@/lib/auth';
+import { isSameOrigin } from '@/lib/http';
 
 /**
  * Public comment endpoint.
  *
  *   GET  /api/comments?kind=airport&key=JFK&locale=en
- *   POST /api/comments  { kind, key, locale, author, body, website }
+ *   POST /api/comments  { kind, key, locale, body, website }
+ *
+ * Posting requires a Google session: the author's name and avatar come from
+ * the account, never from the request, so a comment cannot be posted under
+ * somebody else's name. Reading is public. Rows written before sign-in was
+ * required keep their old nickname and simply have no avatar.
  *
  * `website` is a honeypot: it is hidden in the form and must stay empty. The
  * handler answers a filled honeypot with the same success shape as a real post
@@ -81,6 +89,9 @@ export async function POST(request: Request) {
       { status: 415, headers: NO_STORE }
     );
   }
+  if (!isSameOrigin(request)) {
+    return NextResponse.json({ error: 'forbidden' }, { status: 403, headers: NO_STORE });
+  }
   const declaredLength = Number(request.headers.get('content-length') ?? 0);
   if (Number.isFinite(declaredLength) && declaredLength > 10_000) {
     return NextResponse.json({ error: 'payload_too_large' }, { status: 413, headers: NO_STORE });
@@ -102,13 +113,24 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true, comment: null }, { status: 202, headers: NO_STORE });
   }
 
+  // The author is the signed-in Google account, not a form field. Checked
+  // before validating the body so an anonymous post gets a clear 401 the
+  // client can turn into a sign-in prompt.
+  const user = await getCurrentUser();
+  if (!user) {
+    return NextResponse.json(
+      { error: 'sign_in_required' },
+      { status: 401, headers: NO_STORE }
+    );
+  }
+
   const kind = payload.kind;
   const locale = normalizeCommentLocale(payload.locale);
   if (!isCommentKind(kind) || !locale) return badRequest('invalid_page');
   const key = normalizePageKey(kind, payload.key);
   if (!key) return badRequest('invalid_page');
 
-  const validation = validateCommentInput(payload.author, payload.body);
+  const validation = validateCommentBody(payload.body);
   if (!validation.ok) return badRequest(validation.error);
 
   // Two link-heavy comments are enough to make a thread look like a billboard.
@@ -120,14 +142,23 @@ export async function POST(request: Request) {
     if (!(await commentPageExists(kind, key))) return badRequest('invalid_page');
 
     const ipHash = commentIpHash(clientIp(request));
-    if (await isCommentRateLimited(ipHash)) {
+    const [ipLimited, userLimited] = await Promise.all([
+      isCommentRateLimited(ipHash),
+      isCommentUserRateLimited(user.id),
+    ]);
+    if (ipLimited || userLimited) {
       return NextResponse.json(
         { error: 'rate_limited' },
         { status: 429, headers: { ...NO_STORE, 'Retry-After': '600' } }
       );
     }
 
-    const comment = await createComment({ kind, key, locale }, validation.draft, ipHash);
+    const comment = await createComment(
+      { kind, key, locale },
+      validation.draft,
+      { userId: user.id, name: user.name, picture: user.picture },
+      ipHash
+    );
     return NextResponse.json({ ok: true, comment }, { status: 201, headers: NO_STORE });
   } catch (error) {
     console.error('[api/comments] create failed', error);

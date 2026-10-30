@@ -75,6 +75,11 @@ npm run build && npm start
 | `NEXT_PUBLIC_SITE_URL` | 建议 | 站点对外地址，用于 `canonical`、`hreflang`、Open Graph、`sitemap.xml`、`robots.txt` 与 JSON-LD。默认 `http://localhost:3000` |
 | `PGPOOL_MAX` | 否 | 连接池上限：运行时默认 `10`，**构建期默认 `4`**（`next build` 会开 11 个 worker）。CI / 低配库上建议两边都调小（见「查询层与连接池」） |
 | `COMMENTS_IP_SALT` | 生产建议 | 评论区按 IP 限流时用的哈希盐。换掉只会重置计数，不影响已有评论 |
+| `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` | Google 登录必填 | OAuth 2.0 Web 客户端凭据（Google Cloud Console → Credentials）。不填时站点照常运行，登录页提示未配置 |
+| `GOOGLE_REDIRECT_URI` | 否 | 回调地址，默认 `<对外 origin>/api/auth/google/callback`；反向代理改写了 Host 时显式指定 |
+| `DEALS_IP_SALT` | 生产建议 | 特惠机票按 IP 限流的哈希盐（缺省回退到 `COMMENTS_IP_SALT`） |
+| `AUTH_IP_SALT` | 否 | 登录会话记录 IP 哈希用的盐（缺省回退到 `COMMENTS_IP_SALT`） |
+| `ADMIN_EMAILS` | 管理后台必填 | 允许进入 `/admin/deals` 的 Google 邮箱，逗号分隔、不区分大小写。留空则任何人都不是管理员 |
 
 ## npm 脚本
 
@@ -90,6 +95,7 @@ npm run build && npm start
 | `npm run db:migrate` | `drizzle-kit migrate`：应用 `drizzle/` 下的迁移 |
 | `npm run db:studio` | `drizzle-kit studio`：在浏览器里浏览 / 编辑数据 |
 | `npm run comments` | 评论审核：`list [--all] [--limit N]` 查看、`hide <id>` 隐藏、`show <id>` 恢复、`delete <id>` 删除（见「读者评论」） |
+| `npm run deals` | 特惠机票审核：`list [--all] [--limit N]` 查看、`hide <id>` 隐藏、`show <id>` 恢复、`delete <id>` 删除、`expire` 下架过期报价（见「特惠机票与 Google 登录」） |
 | `npm run db:create` | 只建库（`--reset` 为 `DROP DATABASE ... WITH (FORCE)` 后重建） |
 | `node scripts/db-apply-sql.mjs <file.sql>` | 只跑一个 SQL 文件：`db/extensions.sql`（`pg_trgm`，建表前）或 `db/custom.sql`（`search_blob` 触发器、`directory_stats` 视图，建表后） |
 | `node scripts/verify.mjs` | 跑一遍站点依赖的关键查询 |
@@ -351,12 +357,100 @@ Field 语义：`title` / `summary` / `updated` 对应迁移前的 frontmatter（
 
 内容页（机场、国家、博客、about / contact / sources / privacy / terms）底部都有评论区；首页、目录页、航线页、航班页与工具页没有。
 
-- **存储**：`comments` 表（`db/schema.ts`），一行一条。线程键是 `(page_kind, page_key, locale)`——同一座机场的英文页和德文页是两个独立线程，读者各自用页面语言交流。`status` 为 `visible` / `hidden`，公开 API 只返回 visible。
-- **接口**：`GET /api/comments?kind=airport&key=JFK&locale=en` 取线程；`POST /api/comments` 提交 `{ kind, key, locale, author, body, website }`，其中 `website` 是蜜罐字段、必须为空。提交即显示，不做先审后发。
-- **防滥用**：蜜罐、每 IP 10 分钟 5 条（`COMMENTS_IP_SALT` 加盐后只存哈希，不存明文 IP）、正文最多 2 个链接、作者 2–40 字 / 正文 5–2000 字；2 分钟内同人同文的重复提交直接返回上一条，双击不会写两条。
+- **存储**：`comments` 表（`db/schema.ts`），一行一条。线程键是 `(page_kind, page_key, locale)`——同一座机场的英文页和德文页是两个独立线程，读者各自用页面语言交流。`user_id` 指向发帖的 Google 账号（`ON DELETE SET NULL`），`author` 是发帖时的昵称快照（最长 40 字）；登录改造前的历史评论 `user_id` 为 `NULL`，仍按原来的匿名昵称显示。`status` 为 `visible` / `hidden`，公开 API 只返回 visible。
+- **接口**：`GET /api/comments?kind=airport&key=JFK&locale=en` 取线程（公开，含作者头像 URL）；`POST /api/comments` 提交 `{ kind, key, locale, body, website }`，**必须带登录会话**，未登录返回 401 `sign_in_required`。作者名与头像一律取自登录账号，请求里没有 `author` 字段，因此不能冒名发帖。`website` 是蜜罐字段、必须为空。提交即显示，不做先审后发。
+- **防滥用**：登录门槛、蜜罐、同源校验、每 IP 10 分钟 5 条 + 每账号 10 分钟 10 条（IP 加盐后只存哈希，不存明文地址）、正文最多 2 个链接、正文 5–2000 字；2 分钟内同账号同文的重复提交直接返回上一条，双击不会写两条。
 - **审核**：`node scripts/comments.mjs list --all` 看最近评论，`hide <id>` 隐藏（`show <id>` 恢复），`delete <id>` 永久删除。
-- **渲染**：评论区是客户端组件（`components/Comments.tsx`），页面本身仍是静态 / ISR，留言在挂载后拉取，因此新评论不需要重新构建；日期用页面 `htmlLang` 格式化。评论按纯文本渲染（React 转义，不支持 Markdown / HTML），不会引入脚本。
+- **渲染**：评论区是客户端组件（`components/Comments.tsx`），页面本身仍是静态 / ISR；评论与登录状态都在挂载后拉取（`/api/comments`、`/api/auth/session`），因此新评论和登录态变化都不需要重新构建，也不会让 4,000+ 内容页变成动态渲染。未登录访客看到「登录后评论」提示与 Google 登录按钮，登录用户直接看到自己的头像、昵称和输入框。日期用页面 `htmlLang` 格式化；评论按纯文本渲染（React 转义，不支持 Markdown / HTML），不会引入脚本。
 - **首页入口**：Journal、Terminal Maps、Airport guides 三个区块的卡片显示该页面评论数（`components/CommentCount.tsx`），一次批量查询取数；数字随首页的 1 小时 ISR 刷新，卡片上的评论内容仍以详情页为准。
+
+## 特惠机票与 Google 登录
+
+首页、`/deals` 列表和机场详情页都能展示用户提交的特惠机票；提交需要 Google 登录，提交后立即公开（产品要求），过期自动下架，后台脚本可随时隐藏。
+
+### 数据模型
+
+- `users`：Google 账号，`google_sub` 唯一，只用于标识提交者；没有密码、没有邮箱验证流程。
+- `sessions`：登录会话。主键是 cookie 里随机 token 的 SHA-256——数据库导出不会直接给出可用会话；30 天有效，过期行在下次登录时顺带清理。
+- `deals`：一行一个报价。`airport_iata` 外键指向 `airports`，`status` 为 `visible` / `hidden`；`expires_at` 是列表截止时间（填了 `travel_to` 取当天 23:59，否则提交后 30 天）。`submitter_name` 是提交时的快照，删账号也不会让报价变成匿名。`is_official` 标记管理后台发布的官方票价（卡片显示「官方票价」），`tax_included=false` 显示「不含税」；`batch_id` 把一次粘贴导入的行归为一组，可整批删除；`booking_url` 对官方票价可为空。`destination_en` / `airline_en` / `notes_en` 是英文主文案：非中文页面显示英文主行 + 中文小字（航司/备注为「English (中文)」），中文页面只显示中文。
+
+三张表都是新增，不动现有数据。建表：
+
+```bash
+npm run db:push       # 开发：直接推 db/schema.ts
+# 或者 npm run db:generate && npm run db:migrate
+```
+
+### Google OAuth 配置
+
+1. Google Cloud Console → **APIs & Services → OAuth consent screen**：填应用名与支持邮箱。测试阶段把要登录的 Google 账号加进 **Test users**；对外开放前点 **Publish app**。
+2. **Credentials → Create credentials → OAuth client ID → Web application**。
+3. **Authorized redirect URIs** 加两条：
+   - `http://localhost:3003/api/auth/google/callback`
+   - `https://你的域名/api/auth/google/callback`
+4. 写入 `.env.local`：
+
+```bash
+GOOGLE_CLIENT_ID=....apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=...
+# 一般不用填；当反向代理把 Host 改成内网地址时再指定
+# GOOGLE_REDIRECT_URI=https://你的域名/api/auth/google/callback
+```
+
+改完环境变量要重启 `npm run dev` / `npm start`。未配置时站点完全可用：登录页显示「Google 登录尚未配置」，提交页先引导登录。
+
+### 登录流程
+
+- **开始**：`GET /api/auth/google?next=/deals/new&locale=zh` → 生成 state + PKCE（S256）写入 10 分钟有效的 httpOnly cookie → 跳 Google 授权页。
+- **回调**：`GET /api/auth/google/callback` 校验 state、用 verifier 换 token、读 OpenID 资料、按 `google_sub` upsert 用户、写会话 cookie（httpOnly / SameSite=Lax / 生产 Secure）→ 回跳到 `next`（只接受站内绝对路径，防开放重定向）。
+- **读取**：`GET /api/auth/session` 返回 `{ user, configured, admin }`（`admin` 表示邮箱在 `ADMIN_EMAILS` 中）。顶栏头像在挂载后调用它，所以 500+ 机场页仍是静态 / ISR，不会因为 `cookies()` 变成动态渲染。
+- **退出**：`POST /api/auth/logout`（校验 Origin，失败也会清 cookie）。
+
+### 提交与展示
+
+- **接口**：`POST /api/deals` 需要会话；`GET /api/deals?locale=en&airport=PEK&q=shanghai&limit=20&offset=0` 只返回 `visible` 且未过期的报价，`total` 用窗口函数一次取回。
+- **页面**：`/deals`（搜索 + 分页，`?q=` 与 `?page=` 都可分享/刷新）、`/deals/new`（支持 `?airport=PEK` 预填）、`/deals/mine`（本人可见，含已隐藏 / 已过期）、`/login`。
+- **首页**：英雄区之后的地图下方新增「特惠机票」区块，服务端渲染首屏，客户端挂载后再拉一次最新数据，所以新提交不必等首页 1 小时 ISR。
+- **机场页**：该机场有报价时出现「最新特惠」区块和目录锚点；没有就整块不渲染。
+- **官方票价**：管理后台录入的行标「官方票价」，`tax_included=false` 的卡片在价格下方标「不含税」；无订票链接时卡片不显示「查看订票」按钮，有链接则在新标签页打开。
+- **英文优先**：非中文页面用 `destination_en` / `airline_en` / `notes_en` 作为主文案（目的地英文主行 + 中文小字，航司/备注「English (中文)」）；中文页面保持中文原文。搜索同时匹配中英文目的地与航司。
+
+### 管理后台（/admin/deals）
+
+只对 `ADMIN_EMAILS` 中的 Google 邮箱开放；未配置时页面提示如何配置，不会是「任何登录用户都能进」。管理页是独立的中文界面（`app/(admin)/`），不参与多语言与搜索索引。
+
+- **权限**：页面与每个 `/api/admin/deals` 请求都会重新校验邮箱白名单；顶栏账户菜单对管理员多显示一个「管理后台」入口。
+- **单条 CRUD**：新增 / 编辑（价格、币种、舱位、往返、日期、订票链接、备注、状态、含税、官方标记、过期时间）/ 隐藏 / 删除。
+- **批量导入**：粘贴 Excel 的「价格 + 航线」两列，按「出发城市 × 目的地」展开成逐机场报价；支持先「解析预览」再「确认导入」，重复报价自动跳过，无法解析的行逐条报错（例如温州 WNZ 不在机场库）。导入面板可填英文航司/英文备注和统一订票链接；目的地英文名由内置城市表自动映射，未收录的城市回退中文。
+- **批量删除**：勾选后删除所选，或按 `batch_id` 删除整次导入；列表支持搜索、状态筛选、批次筛选与分页。
+- **导入文本**：`data/cathay-fare-card-2026.txt` 是图片里国泰票价卡的转录，可直接整段粘贴。
+
+导入格式示例（制表符分隔）：
+
+```
+540	杭州/宁波/南京/上海/温州/武汉=高雄/台北
+640	成都/杭州/宁波/南京/上海/温州/武汉=曼谷
+1210	厦门=布里斯班
+```
+
+出发城市写中文城市名或 IATA 代码；同组用 `/` 分隔，起降用 `=` 分隔。中文城市默认映射到该城市的主要国际机场（成都 TFU、北京 PEK、上海 PVG）。单条新增时 `出发机场 IATA` 必须是机场库中存在的三字码。
+
+### 防滥用
+
+- 必须登录；蜜罐 `website`、同源校验、仅接受 `application/json`、请求体上限。
+- 每账号 24 小时 10 条、每 IP 24 小时 20 条；10 分钟内完全相同的提交返回已有记录，双击不会写两条。
+- 订票链接只接受 http(s)，拒绝带账号密码和内部主机名；价格、日期、长度在 `lib/deals.ts` 校验，数据库约束再兜一层。
+- 服务器只暴露 Google 昵称与头像；邮箱只在「我的提交」里给本人看，公开接口不返回。
+- 立即公开是产品选择，审核手段保留：`npm run deals list --all` / `hide <id>` / `show <id>` / `delete <id>`；`npm run deals expire` 把过期报价也标成 hidden。
+
+### 文案
+
+新增文案集中在 `lib/i18n/deals.ts`（en / de / fr / it / ko / zh / tw）。没有放进 `messages/*.ts` 有两个原因：一处翻译不会在语言之间漂移；`messages/tw.ts` 是 `scripts/build-hant.mjs` 从中文目录**生成**的，手写键会在下次生成时被覆盖。
+
+### 已知边界
+
+- 提交不做真实性核验；卡片与页面都标明「用户提交 · 未核验」并附免责声明。
+- 首页和机场页的报价区块受 ISR 缓存影响，但客户端挂载后会再拉一次；`/deals` 本身 `revalidate = 60`。
 
 ## 目录结构
 
@@ -368,20 +462,35 @@ app/
     airports/page.tsx       机场目录：搜索 + 国家筛选 + 排序 + 分页
     countries/page.tsx      国家索引（按区域分组，含区域跳转条）
     country/[code]/page.tsx 单个国家 / 地区：机场介绍 + 机场列表 + 相关链接 + 常见问题（右侧目录导航）
-    airport/[code]/page.tsx 机场详情：封面 / 示意图、指南、航站楼、交通、设施、定位图、航线图（有静态渲染图时以图片为入口）、FAQ、相关链接
+    airport/[code]/page.tsx 机场详情：封面 / 示意图、指南、航站楼、交通、设施、定位图、航线图（有静态渲染图时以图片为入口）、特惠机票、FAQ、相关链接
     route/[code]/page.tsx   航线图页：航线地图 + 目的地表 + CSV / JSON 下载 + FAQ
+    deals/page.tsx          特惠机票列表：搜索 + 分页（?q= / ?page=，服务端首屏 + 挂载后刷新）
+    deals/new/page.tsx      提交特惠：需 Google 登录，支持 ?airport=PEK 预填
+    deals/mine/page.tsx     我的提交：含已隐藏 / 已过期
+    login/page.tsx          Google 登录 / 账户状态
     tool/…                  工具目录与三个工具页（坐标转换、度分秒、距离计算）
     {about,contact,privacy,terms}/  由 Markdown 渲染的静态页
     error.tsx not-found.tsx 错误边界与 404（客户端组件，从 pathname 推断语言）
+  (admin)/                  管理后台：独立根布局（中文、noindex，不经过语言重写）
+    layout.tsx              <html lang="zh-hans"> + globals.css
+    admin/deals/page.tsx    特惠机票管理：CRUD、批量导入、批量删除
+    admin/page.tsx          /admin → /admin/deals
   api/search/route.ts       搜索联想接口（支持 ?locale=）
   api/routes/[code]/route.ts  单个机场的航线数据导出（CSV / JSON）
+  api/deals/route.ts        特惠机票列表 / 提交（POST 需登录）
+  api/admin/deals/route.ts  管理后台 CRUD / 批量导入 / 批量删除（ADMIN_EMAILS 白名单）
+  api/auth/{google,session,logout}/…  Google OAuth、会话查询、退出
   sitemap.ts robots.ts      多语言站点地图与抓取规则
   globals.css               唯一样式表（Tailwind v4 CSS-first）：设计令牌 + 全部组件样式
 components/                 UI 组件（服务端为主；搜索框、语言 / 主题切换、返回顶部、地图、lightbox 为客户端）
-  airport/                  机场页与航线页的区块组件（航站楼、交通、设施、定位图、航线图、下载…）
+  airport/                  机场页与航线页的区块组件（航站楼、交通、设施、定位图、航线图、下载、特惠…）
+  deals/                    特惠卡片 / 列表 / 提交表单 / 首页区块
+  admin/                    管理后台表格 / 单条编辑 / 批量导入面板
+  AccountMenu.tsx           顶栏登录入口与账户菜单（挂载后读 /api/auth/session）
   country/ tool/ ui/        国家页区块 / 工具骨架 / shadcn 风格基元
 lib/
   queries.ts routes.ts      手写 SQL 查询层 / 航线数据与统计
+  admin.ts admin-deals.ts   管理员白名单 / 后台查询、校验、粘贴导入与批量写入
   db.ts                     连接池（含 getDb() 与构建期重试）
   content.ts                内容文档读取（content_documents 表，见「内容文档」）
   i18n/                     config（语言注册表）、catalogs（已发布语言）、messages/{zh,en,de,tw}、
@@ -394,7 +503,7 @@ db/terminology/             封闭词表：en.json（航站楼 / 设施 / 交通
 db/extensions.sql           pg_trgm 扩展（建表前应用）
 db/custom.sql               search_blob 触发器与 directory_stats 视图（建表后应用）
 drizzle/                    生成的迁移与快照（需提交）
-data/                       航线原始数据、目录批次输入、world-airports.csv
+data/                       航线原始数据、目录批次输入、world-airports.csv、国泰票价卡导入文本
 proxy.ts                    语言重写与重定向（Next 16 的 middleware）
 scripts/                    提取、建库、灌数、抓取与自检脚本
 ```
@@ -477,6 +586,8 @@ URL 约定：
 9. **最近更新**（`#recent`，按 `updated_at` 倒序）。
 10. **按国家分类**（`#countries`）：国家 / 地区网格。
 11. **列表与表格**（`#facts`，`components/HomeFacts.tsx`）：把同一批数据写成真正的 `<dl>` 与 `<table>`——「收录数字」七项（机场 / 国家地区 / 目录大区 / 不同城市名 / 航站楼 / 登机口 / 有航线图的机场），「有旅客量数据的机场」12 行（排名、IATA、机场、城市、国家、航站楼、登机口、年旅客量，机场名链到详情页），以及「机场的目录大区分布」（按 `airports.region` 汇总机场 / 有详细数据 / 航站楼 / 登机口）。区块顶部注明旅客量、航站楼与登机口数据只覆盖有详细记录的机场。数据全部来自首页已经加载的 `airports` 与 `stats`，不额外查库；航线数用「目录内且有航线数据的机场数」（367），不是航线文件里全世界的 2643。两张表都有（视觉隐藏的）`caption` 与 `scope`，窄屏在 `overflow-x-auto` 容器里横向滚动。
+
+世界地图下方还有「特惠机票」区块（`#deals`）：最新 6 条用户提交的低价票，卡片直达订票页；服务端渲染首屏，挂载后再拉一次最新数据。榜单与提交的完整说明见「特惠机票与 Google 登录」。
 
 `/countries` 按区域分组并带一条区域跳转条；每个区域块标注该区域的国家数与机场数。
 

@@ -23,6 +23,7 @@ export type CommentKind = (typeof COMMENT_KINDS)[number];
 export const COMMENT_PAGE_SLUGS = ['about', 'contact', 'sources', 'privacy', 'terms'] as const;
 export type CommentPageSlug = (typeof COMMENT_PAGE_SLUGS)[number];
 
+/** Mirrors the `comments_author_len_chk` constraint (display-name snapshot). */
 export const MAX_AUTHOR_LENGTH = 40;
 export const MAX_BODY_LENGTH = 2000;
 export const MIN_BODY_LENGTH = 5;
@@ -32,15 +33,26 @@ const THREAD_LIMIT = 200;
 /** Submissions allowed per IP in this window, across every thread. */
 const RATE_WINDOW_MINUTES = 10;
 const RATE_LIMIT = 5;
+/** Submissions allowed per signed-in account in the same window. */
+const USER_RATE_LIMIT = 10;
 /** A repeated submission inside this window is treated as a double click. */
 const DUPLICATE_WINDOW_MINUTES = 2;
 
 export type PublicComment = {
   id: number;
   author: string;
+  /** Google avatar of the author, when the account still exists. */
+  picture: string | null;
   body: string;
   /** ISO 8601, so the browser can format it in the reader's time zone. */
   createdAt: string;
+};
+
+/** The signed-in author a comment is attributed to. */
+export type CommentAuthor = {
+  userId: number;
+  name: string;
+  picture: string | null;
 };
 
 export type CommentThread = {
@@ -116,19 +128,18 @@ function cleanText(value: unknown): string {
     .trim();
 }
 
-export type CommentDraft = { author: string; body: string };
+export type CommentDraft = { body: string };
 
 export type CommentValidation =
   | { ok: true; draft: CommentDraft }
-  | { ok: false; error: 'invalid_name' | 'invalid_body' };
+  | { ok: false; error: 'invalid_body' };
 
-/** Length-checks a submission and returns the text as it will be stored. */
-export function validateCommentInput(author: unknown, body: unknown): CommentValidation {
-  const cleanAuthor = cleanText(author).replace(/\s+/g, ' ');
-  if (cleanAuthor.length < 2 || cleanAuthor.length > MAX_AUTHOR_LENGTH) {
-    return { ok: false, error: 'invalid_name' };
-  }
-
+/**
+ * Length-checks a submission and returns the body as it will be stored. The
+ * author is no longer part of the payload: the API derives it from the Google
+ * session, so nobody can post under another person's name.
+ */
+export function validateCommentBody(body: unknown): CommentValidation {
   const cleanBody = cleanText(body);
   // Count by code point so a 2000-character CJK comment is not rejected for
   // being "4000" UTF-16 units.
@@ -137,12 +148,19 @@ export function validateCommentInput(author: unknown, body: unknown): CommentVal
     return { ok: false, error: 'invalid_body' };
   }
 
-  return { ok: true, draft: { author: cleanAuthor, body: cleanBody } };
+  return { ok: true, draft: { body: cleanBody } };
+}
+
+/** Display name snapshot, cleaned and cut to the column's 40 code points. */
+export function commentAuthorName(name: string): string {
+  const cleaned = cleanText(name).replace(/\s+/g, ' ');
+  return [...cleaned].slice(0, MAX_AUTHOR_LENGTH).join('') || 'Traveler';
 }
 
 type CommentRow = {
   id: number;
   author: string;
+  picture: string | null;
   body: string;
   created_at: Date;
 };
@@ -151,8 +169,9 @@ function toPublicComment(row: CommentRow): PublicComment {
   return {
     id: row.id,
     author: row.author,
-    body: row.body,
+    picture: row.picture,
     createdAt: row.created_at.toISOString(),
+    body: row.body,
   };
 }
 
@@ -162,12 +181,14 @@ export async function listComments(thread: CommentThread): Promise<PublicComment
   // ascending before the LIMIT would pin the thread to its first 200 comments
   // and hide everything posted afterwards.
   const rows = await query<CommentRow>(
-    `select id, author, body, created_at
+    `select id, author, picture, body, created_at
        from (
-         select id, author, body, created_at
-           from comments
-          where page_kind = $1 and page_key = $2 and locale = $3 and status = 'visible'
-          order by created_at desc, id desc
+         select c.id, c.author, u.picture, c.body, c.created_at
+           from comments c
+           left join users u on u.id = c.user_id
+          where c.page_kind = $1 and c.page_key = $2 and c.locale = $3
+            and c.status = 'visible'
+          order by c.created_at desc, c.id desc
           limit $4
        ) latest
       order by created_at asc, id asc`,
@@ -236,41 +257,67 @@ export async function isCommentRateLimited(ipHash: string): Promise<boolean> {
   return Number(row?.count ?? 0) >= RATE_LIMIT;
 }
 
+/** True when this account has posted too often in the recent window. */
+export async function isCommentUserRateLimited(userId: number): Promise<boolean> {
+  const row = await queryOne<{ count: string }>(
+    `select count(*)::text as count
+       from comments
+      where user_id = $1 and created_at > now() - ($2 || ' minutes')::interval`,
+    [userId, RATE_WINDOW_MINUTES]
+  );
+  return Number(row?.count ?? 0) >= USER_RATE_LIMIT;
+}
+
 /**
  * Inserts a comment, or returns the one a double click just created. Both
  * branches return a public row so the browser can append it immediately.
+ * `author` is derived from the session by the API, never from the payload.
  */
 export async function createComment(
   thread: CommentThread,
   draft: CommentDraft,
+  author: CommentAuthor,
   ipHash: string
 ): Promise<PublicComment> {
   const duplicate = await queryOne<CommentRow>(
-    `select id, author, body, created_at
-       from comments
-      where page_kind = $1 and page_key = $2 and locale = $3
-        and ip_hash = $4 and author = $5 and body = $6
-        and created_at > now() - ($7 || ' minutes')::interval
-      order by created_at desc
+    `select c.id, c.author, u.picture, c.body, c.created_at
+       from comments c
+       left join users u on u.id = c.user_id
+      where c.page_kind = $1 and c.page_key = $2 and c.locale = $3
+        and c.user_id = $4 and c.body = $5 and c.status = 'visible'
+        and c.created_at > now() - ($6 || ' minutes')::interval
+      order by c.created_at desc
       limit 1`,
     [
       thread.kind,
       thread.key,
       thread.locale,
-      ipHash,
-      draft.author,
+      author.userId,
       draft.body,
       DUPLICATE_WINDOW_MINUTES,
     ]
   );
   if (duplicate) return toPublicComment(duplicate);
 
-  const inserted = await queryOne<CommentRow>(
-    `insert into comments (page_kind, page_key, locale, author, body, ip_hash)
-     values ($1, $2, $3, $4, $5, $6)
+  const inserted = await queryOne<{
+    id: number;
+    author: string;
+    body: string;
+    created_at: Date;
+  }>(
+    `insert into comments (page_kind, page_key, locale, user_id, author, body, ip_hash)
+     values ($1, $2, $3, $4, $5, $6, $7)
      returning id, author, body, created_at`,
-    [thread.kind, thread.key, thread.locale, draft.author, draft.body, ipHash]
+    [
+      thread.kind,
+      thread.key,
+      thread.locale,
+      author.userId,
+      commentAuthorName(author.name),
+      draft.body,
+      ipHash,
+    ]
   );
   if (!inserted) throw new Error('insert into comments returned no row');
-  return toPublicComment(inserted);
+  return toPublicComment({ ...inserted, picture: author.picture });
 }

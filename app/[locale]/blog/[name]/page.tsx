@@ -20,6 +20,7 @@ import {
   listBlogSlugs,
 } from '@/lib/blog';
 import { getMessages, parseLocale } from '@/lib/i18n';
+import { getAuthMessages } from '@/lib/i18n/deals';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { extractHeadings } from '@/lib/markdown-toc';
 import { absoluteUrl, SITE_NAME } from '@/lib/site';
@@ -182,6 +183,7 @@ export default async function BlogPostPage({ params }: Props) {
             locale={locale}
             lang={LOCALE_META[locale].htmlLang}
             labels={t.comments}
+            authLabels={getAuthMessages(locale)}
           />
 
           {related.length > 0 && (

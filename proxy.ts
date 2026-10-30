@@ -37,6 +37,9 @@ export default function proxy(request: NextRequest) {
 
   if (
     pathname.startsWith('/api') ||
+    // The administrator area has its own root layout and Chinese-only UI; it
+    // must not be rewritten into /{locale}/admin.
+    pathname.startsWith('/admin') ||
     pathname.startsWith('/_next') ||
     pathname.startsWith('/_vercel') ||
     PUBLIC_FILE.test(pathname)

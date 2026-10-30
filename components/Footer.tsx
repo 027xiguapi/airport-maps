@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { hasBlog } from '@/lib/blog';
 import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
+import { getDealsMessages } from '@/lib/i18n/deals';
 import { formatNumber } from '@/lib/format';
 import { getStats } from '@/lib/queries';
 
@@ -20,12 +21,14 @@ const LINK_CLASSES =
  */
 export default async function Footer({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
+  const d = getDealsMessages(locale);
   const stats = await getStats();
 
   const links = [
     { href: '/', label: t.nav.home },
     { href: '/airports', label: t.nav.airports },
     { href: '/countries', label: t.nav.countries },
+    { href: '/deals', label: d.kicker },
     // Chinese-only content: linked only in the locales that publish it.
     ...(hasBlog(locale) ? [{ href: '/blog', label: t.blog.nav }] : []),
     { href: '/about', label: t.footer.about },

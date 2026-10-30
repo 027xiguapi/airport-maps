@@ -18,7 +18,7 @@ export type NavItem = { href: string; label: string };
  * (4.7:1); hover still steps up to `navy-900` so the state change stays visible.
  */
 const LINK_CLASSES =
-  'whitespace-nowrap rounded-lg px-3 py-2 text-[14px] text-navy-800 transition-[background-color,color] duration-150 hover:bg-[rgba(10,42,67,0.06)] hover:text-navy-900 max-[1080px]:px-[9px] max-[1080px]:py-2 max-[1080px]:text-[13.5px] max-[820px]:flex max-[820px]:min-h-[44px] max-[820px]:items-center max-[820px]:rounded-[10px] max-[820px]:bg-white/6 max-[820px]:px-3.5 max-[820px]:py-[11px] max-[820px]:text-[15px]';
+  'whitespace-nowrap rounded-lg px-2 py-2 text-[13.5px] text-navy-800 transition-[background-color,color] duration-150 hover:bg-[rgba(10,42,67,0.06)] hover:text-navy-900 max-[1280px]:flex max-[1280px]:min-h-[44px] max-[1280px]:items-center max-[1280px]:rounded-[10px] max-[1280px]:bg-white/6 max-[1280px]:px-3.5 max-[1280px]:py-[11px] max-[1280px]:text-[15px]';
 /** Current page: the brand's amber pill. */
 const ACTIVE_CLASSES = 'bg-amber font-semibold text-navy-900';
 

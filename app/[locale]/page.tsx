@@ -6,6 +6,7 @@ import { CountryGrid } from '@/components/AirportCard';
 import { LatestPosts } from '@/components/Blog';
 import CategoryGrid, { type CategoryCard } from '@/components/CategoryGrid';
 import CommentCount from '@/components/CommentCount';
+import DealsSection from '@/components/deals/DealsSection';
 import HeroRoutes from '@/components/HeroRoutes';
 import HomeFacts from '@/components/HomeFacts';
 import HomeIntro from '@/components/HomeIntro';
@@ -21,6 +22,8 @@ import { airportGuideUpdatedMap, listGuidedAirports } from '@/lib/content';
 import { formatNumber } from '@/lib/format';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
+import { getDealsMessages } from '@/lib/i18n/deals';
+import { listDeals } from '@/lib/deals';
 import { ArrowIcon, GlobeIcon, RulerIcon, SwapIcon } from '@/lib/icons';
 import { TOOL_CARD_CLASSES, TOOL_SLUGS, toolMessages } from '@/components/tool/shell';
 import { Card } from '@/components/ui/card';
@@ -155,6 +158,15 @@ export default async function HomePage({ params }: Props) {
   const guidedTiles = guided.slice(0, 12);
 
   const shortcuts = await getAirportsByCodes(locale, SHORTCUTS);
+
+  // Reader-submitted fares: rendered on the server for SEO and refreshed by
+  // DealsBoard after mount, so a new submission appears without waiting for
+  // the page's hourly ISR. A failed read degrades to the empty state.
+  const dealBoard = await listDeals({ locale, limit: 6 }).catch((error) => {
+    console.error('[home] deals query failed', error);
+    return { deals: [], total: 0 };
+  });
+  const d = getDealsMessages(locale);
 
   // The newest articles, one row each; a locale without translations gets an
   // empty list and the section hides itself.
@@ -419,6 +431,15 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      {/* ------------------------------------------------------ flight deals */}
+      <DealsSection
+          locale={locale}
+          lang={LOCALE_META[locale].htmlLang}
+          labels={d}
+          deals={dealBoard.deals}
+          total={dealBoard.total}
+      />
+
       {/* -------------------------------------------------- world airport map */}
       {mapAirports.length > 0 && (
         <section className="section" id="map">
@@ -529,7 +550,7 @@ export default async function HomePage({ params }: Props) {
           })}
         </div>
       </section>
-      <section className="border-y border-y-line bg-card" id="browse">
+      <section className="bg-card" id="browse">
         <div className="section pb-16">
           <div className="section-head">
             <div>

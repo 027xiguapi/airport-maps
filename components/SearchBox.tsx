@@ -44,7 +44,7 @@ const API_LIMIT = 7;
  */
 const CHROME = {
   top: {
-    root: 'relative ml-auto w-[280px] flex-none max-[1080px]:w-[210px] max-[820px]:hidden',
+    root: 'relative ml-auto w-[190px] flex-none max-[1280px]:hidden',
     input:
       'h-[38px] w-full rounded-[19px] border border-[#d8e4ee] bg-[#f4f8fb] py-0 pl-4 pr-10 text-[14px] text-[#16324b] outline-none transition-[background-color,border-color] duration-150 [font-family:inherit] placeholder:text-[#8ca2b5] focus:border-[#2e7db3] focus:bg-white focus:[box-shadow:0_0_0_3px_rgba(46,125,179,0.15)]',
     icon: 'pointer-events-none absolute right-[13px] top-[9px] text-[#5e768a] opacity-60',

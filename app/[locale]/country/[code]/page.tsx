@@ -13,6 +13,7 @@ import CountryLinks from '@/components/country/CountryLinks';
 import { getCountryIntro } from '@/lib/content';
 import { getCountryAirports, orderCountryAirports } from '@/lib/country-airports';
 import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
+import { getAuthMessages } from '@/lib/i18n/deals';
 import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { getAirportsByCountry, getAllCountryCodes, getCountries, getCountry } from '@/lib/queries';
@@ -218,6 +219,7 @@ export default async function CountryPage({ params }: Props) {
             locale={locale}
             lang={LOCALE_META[locale].htmlLang}
             labels={t.comments}
+            authLabels={getAuthMessages(locale)}
           />
         </div>
       </div>

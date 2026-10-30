@@ -55,8 +55,16 @@ export default function LanguageSwitcher({
 
   return (
     <details className="group relative flex-none" aria-label={switchLabel}>
-      <summary className="inline-flex h-[34px] items-center gap-1.5 whitespace-nowrap rounded-[18px] border border-[#d8e4ee] bg-white px-3 text-[13.5px] font-medium text-[#5e768a] transition-[background-color,border-color] duration-150 hover:border-amber hover:bg-[#f4f8fb] hover:text-navy-900 max-[820px]:px-2.5 max-[820px]:text-[13px]">
-        <span>{label}</span>
+      <summary
+        className="inline-flex h-[34px] items-center gap-1.5 whitespace-nowrap rounded-[18px] border border-[#d8e4ee] bg-white px-2.5 text-[13.5px] font-medium text-[#5e768a] transition-[background-color,border-color] duration-150 hover:border-amber hover:bg-[#f4f8fb] hover:text-navy-900"
+        title={label}
+      >
+        {/* The full "Language" word cost ~45px and pushed the pill off a
+            1280px window once the account chip joined the bar; the current
+            language code is the same information in a tenth of the width. */}
+        <span className="font-display text-[11.5px] font-semibold uppercase tracking-[0.08em]">
+          {current}
+        </span>
         <svg
           width="12"
           height="12"

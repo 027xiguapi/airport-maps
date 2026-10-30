@@ -12,6 +12,8 @@ import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { getAirportGuide } from '@/lib/content';
 import { blogAirportDates, blogPostPath, listBlogPostsForAirport } from '@/lib/blog';
 import { getAirportByCode, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
+import { getAirportDeals } from '@/lib/deals';
+import { getAuthMessages, getDealsMessages } from '@/lib/i18n/deals';
 import { getAirportFacts } from '@/lib/airport-facts';
 import { getAirportGeo } from '@/lib/airport-geo';
 import { getAirportPhotos } from '@/lib/airport-photos';
@@ -25,6 +27,7 @@ import { terminalMapSvg } from '@/lib/terminal-map';
 import { buildAirportGraph, publicationDates } from './schema';
 import { buildFaq, buildFlightFaq } from './faq';
 import AirportHead from '@/components/airport/AirportHead';
+import AirportDeals from '@/components/airport/AirportDeals';
 import TerminalMapPanel from '@/components/airport/TerminalMapPanel';
 import AirportTimeSection from '@/components/airport/AirportTimeSection';
 import AirportDetailsSection from '@/components/airport/AirportDetailsSection';
@@ -147,14 +150,18 @@ export default async function AirportPage({ params }: Props) {
     permanentRedirect(localizedPath(locale, `/airport/${airport.iata}`));
   }
 
-  const [related, guide, routeMap, flights] = await Promise.all([
+  const [related, guide, routeMap, flights, airportDeals] = await Promise.all([
     getRelatedAirports(locale, airport.countryCode, airport.iata, 6),
     getAirportGuide(locale, airport.iata),
     getAirportRouteMap(locale, airport.iata),
     // aviability.com flight numbers for this airport (departures and arrivals).
     // Null for airports the flight index does not cover — the section is skipped.
     getAirportFlights(locale, airport.iata),
+    // Reader-submitted fares from this airport; the section is skipped when the
+    // directory has none for it yet.
+    getAirportDeals(locale, airport.iata, 3),
   ]);
+  const dealLabels = getDealsMessages(locale);
 
   const geo = getAirportGeo(airport.iata);
   const facts = getAirportFacts(airport.iata);
@@ -203,6 +210,7 @@ export default async function AirportPage({ params }: Props) {
     ...(geo ? [{ id: 'airport-time', label: t.toc.time }] : []),
     ...(routeMap ? [{ id: 'airport-routes', label: t.toc.routes }] : []),
     ...(flights ? [{ id: 'flights', label: t.toc.flights }] : []),
+    ...(airportDeals.length > 0 ? [{ id: 'airport-deals', label: dealLabels.kicker }] : []),
     { id: 'airport-details', label: t.toc.details },
     { id: 'related-links', label: t.toc.links },
     ...(coords ? [{ id: 'location-map', label: t.toc.location }] : []),
@@ -288,6 +296,14 @@ export default async function AirportPage({ params }: Props) {
             />
           )}
 
+          <AirportDeals
+            locale={locale}
+            lang={LOCALE_META[locale].htmlLang}
+            labels={dealLabels}
+            iata={airport.iata}
+            deals={airportDeals}
+          />
+
           <AirportDetailsSection
             locale={locale}
             airport={airport}
@@ -337,6 +353,7 @@ export default async function AirportPage({ params }: Props) {
             locale={locale}
             lang={LOCALE_META[locale].htmlLang}
             labels={t.comments}
+            authLabels={getAuthMessages(locale)}
           />
         </div>
       </div>

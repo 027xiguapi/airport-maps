@@ -282,6 +282,39 @@ export const contentDocuments = pgTable(
   ]
 );
 
+// -------------------------------------------------------------------- users
+/**
+ * Google accounts that have signed in. The account attributes reader
+ * contributions — airfare deals and comments — and is created on the first
+ * successful OAuth callback. There is no password, no email flow and no role
+ * here.
+ *
+ * `google_sub` is Google's stable subject id and the only identity key: an
+ * account can change its email or display name without becoming a new user.
+ * The password-equivalent material lives in `sessions`, never in this table.
+ */
+export const users = pgTable(
+  'users',
+  {
+    id: serial('id').primaryKey(),
+    /** Google's `sub` claim — stable for the life of the Google account. */
+    googleSub: text('google_sub').notNull().unique('users_google_sub_key'),
+    email: text('email'),
+    emailVerified: boolean('email_verified').notNull().default(false),
+    /** Display name shown next to a submitted deal or comment. */
+    name: text('name').notNull(),
+    /** Google avatar URL (https), optional. */
+    picture: text('picture'),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    lastLoginAt: timestamp('last_login_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (t) => [index('users_email_idx').on(t.email)]
+);
+
 // ----------------------------------------------------------------- comments
 /**
  * Reader comments, one row per posted message.
@@ -289,6 +322,12 @@ export const contentDocuments = pgTable(
  * A thread is identified by the page it belongs to (`page_kind` + `page_key`)
  * *and* the locale the reader was viewing, so the Chinese and German pages of
  * the same airport keep separate conversations instead of mixing scripts.
+ *
+ * Posting requires a Google session (the API enforces it): `user_id` points at
+ * the author's account and `author` is a snapshot of their display name, so a
+ * later rename never rewrites history and closing an account leaves the thread
+ * readable. Rows written before sign-in was required have `user_id = NULL` and
+ * keep their self-chosen nickname.
  *
  * `status` is the moderation switch: only 'visible' rows are ever served, and
  * it is flipped to 'hidden' by hand (scripts/comments.mjs) rather than exposed
@@ -305,6 +344,8 @@ export const comments = pgTable(
     pageKey: text('page_key').notNull(),
     /** Locale of the page the comment was written on. */
     locale: text('locale').notNull(),
+    /** Author account; NULL for comments posted before Google sign-in. */
+    userId: integer('user_id').references(() => users.id, { onDelete: 'set null' }),
     author: text('author').notNull(),
     body: text('body').notNull(),
     /** 'visible' | 'hidden' */
@@ -319,11 +360,171 @@ export const comments = pgTable(
     index('comments_thread_idx').on(t.pageKind, t.pageKey, t.locale, t.status, t.createdAt),
     /** Serves the per-IP "posted in the last N minutes" rate-limit count. */
     index('comments_ip_idx').on(t.ipHash, t.createdAt.desc()),
+    /** Serves the per-account rate-limit count. */
+    index('comments_user_idx').on(t.userId, t.createdAt.desc()),
     index('comments_created_idx').on(t.createdAt.desc()),
     check('comments_page_kind_chk', sql`${t.pageKind} in ('airport', 'country', 'blog', 'page')`),
     check('comments_status_chk', sql`${t.status} in ('visible', 'hidden')`),
+    /**
+     * The author is a display-name snapshot derived from the Google account;
+     * lib/comments.ts trims it to this limit before insert, so the long tail of
+     * Google display names cannot trip the constraint.
+     */
     check('comments_author_len_chk', sql`char_length(${t.author}) between 1 and 40`),
     check('comments_body_len_chk', sql`char_length(${t.body}) between 1 and 2000`),
+  ]
+);
+
+// ----------------------------------------------------------------- sessions
+/**
+ * Server-side login sessions. The primary key is the SHA-256 of the random
+ * token stored in the visitor's httpOnly cookie, so a leaked database dump
+ * does not hand out live sessions. Expired rows are harmless and are reaped on
+ * the next login rather than by a background job.
+ */
+export const sessions = pgTable(
+  'sessions',
+  {
+    /** sha256(cookie token), hex. The raw token never reaches the database. */
+    id: text('id').primaryKey(),
+    userId: integer('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    /** Salted hash of the login address, for abuse review only. */
+    ipHash: text('ip_hash'),
+    userAgent: text('user_agent'),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true, mode: 'date' }).notNull(),
+  },
+  (t) => [
+    index('sessions_user_idx').on(t.userId),
+    index('sessions_expires_idx').on(t.expiresAt),
+  ]
+);
+
+// -------------------------------------------------------------------- deals
+/**
+ * Reader-submitted airfare deals, one row per offer for one departure airport.
+ *
+ * A deal is tied to a directory airport (`airport_iata`) rather than free-text
+ * origin so every offer can be listed on that airport's page and the homepage
+ * without a second lookup. `destination` stays free text because a good fare is
+ * often to a city rather than a code the submitter knows.
+ *
+ * Publication is immediate (`status = 'visible'` on insert), per the product
+ * decision; `expires_at` is what removes stale offers from listings, and
+ * `scripts/deals.mjs` is the moderation escape hatch (hide/show/delete).
+ * `submitter_name` is snapshotted at insert time so deleting a user never
+ * leaves an offer anonymous.
+ *
+ * Official fares (entered through /admin/deals) reuse the same table:
+ *   - `is_official` marks them as published by the site rather than a reader,
+ *   - `tax_included = false` renders the "taxes excluded" badge,
+ *   - `batch_id` groups everything one paste-import created, so the whole
+ *     import can be reviewed or deleted as a unit,
+ *   - `booking_url` is nullable because a fare card may have no single booking
+ *     page (reader submissions still require one — lib/deals.ts enforces it).
+ */
+export const deals = pgTable(
+  'deals',
+  {
+    id: serial('id').primaryKey(),
+    /** Departure airport, always upper case (check below). */
+    airportIata: char('airport_iata', { length: 3 })
+      .notNull()
+      .references(() => airports.iata, { onDelete: 'cascade' }),
+    destination: text('destination').notNull(),
+    /** English primary for the destination; Chinese `destination` is auxiliary. */
+    destinationEn: text('destination_en'),
+    airline: text('airline').notNull(),
+    /** English primary for the airline; Chinese `airline` is auxiliary. */
+    airlineEn: text('airline_en'),
+    price: numeric('price', { precision: 10, scale: 2 }).notNull(),
+    /** ISO 4217, upper case, e.g. CNY / USD / EUR. */
+    currency: char('currency', { length: 3 }).notNull(),
+    /** economy | premium | business | first */
+    cabin: text('cabin').notNull().default('economy'),
+    /** oneway | roundtrip */
+    tripType: text('trip_type').notNull().default('oneway'),
+    /** First date the fare can be flown; optional. */
+    travelFrom: date('travel_from', { mode: 'string' }),
+    /** Last date the fare can be flown / return date; optional. */
+    travelTo: date('travel_to', { mode: 'string' }),
+    /**
+     * Airline or OTA booking page, http(s) only. Required for reader
+     * submissions (lib/deals.ts); optional for official fare cards, which may
+     * not have one canonical booking URL.
+     */
+    bookingUrl: text('booking_url'),
+    notes: text('notes').notNull().default(''),
+    /** English primary for the note; Chinese `notes` is auxiliary. */
+    notesEn: text('notes_en'),
+    /** Whether `price` already includes taxes. Official cards are often excl. */
+    taxIncluded: boolean('tax_included').notNull().default(true),
+    /** Published by an administrator rather than submitted by a reader. */
+    isOfficial: boolean('is_official').notNull().default(false),
+    /** Groups the rows created by one paste-import; NULL for single entries. */
+    batchId: text('batch_id'),
+    /** visible | hidden — hidden is the moderation switch. */
+    status: text('status').notNull().default('visible'),
+    /**
+     * The submitter. Nullable with ON DELETE SET NULL so closing an account
+     * keeps the community's fares; `submitter_name` still names the author.
+     */
+    userId: integer('user_id').references(() => users.id, { onDelete: 'set null' }),
+    submitterName: text('submitter_name').notNull(),
+    /** Salted hash only, used for rate limiting. */
+    ipHash: text('ip_hash'),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    /** Listing cutoff; travelTo + 1 day when given, otherwise +30 days. */
+    expiresAt: timestamp('expires_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .default(sql`now() + interval '30 days'`),
+    /** Last admin edit; equals created_at until the row is changed. */
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (t) => [
+    index('deals_status_created_idx').on(t.status, t.createdAt.desc()),
+    index('deals_airport_idx').on(t.airportIata, t.status, t.createdAt.desc()),
+    index('deals_user_idx').on(t.userId, t.createdAt.desc()),
+    index('deals_ip_idx').on(t.ipHash, t.createdAt.desc()),
+    index('deals_batch_idx').on(t.batchId),
+    check('deals_airport_iata_upper_chk', sql`${t.airportIata} = upper(${t.airportIata})`),
+    check('deals_currency_upper_chk', sql`${t.currency} = upper(${t.currency})`),
+    check(
+      'deals_cabin_chk',
+      sql`${t.cabin} in ('economy', 'premium', 'business', 'first')`
+    ),
+    check('deals_trip_type_chk', sql`${t.tripType} in ('oneway', 'roundtrip')`),
+    check('deals_status_chk', sql`${t.status} in ('visible', 'hidden')`),
+    check('deals_price_chk', sql`${t.price} > 0 and ${t.price} <= 1000000`),
+    check('deals_destination_len_chk', sql`char_length(${t.destination}) between 2 and 60`),
+    check(
+      'deals_destination_en_len_chk',
+      sql`${t.destinationEn} is null or char_length(${t.destinationEn}) between 2 and 60`
+    ),
+    check('deals_airline_len_chk', sql`char_length(${t.airline}) between 2 and 60`),
+    check(
+      'deals_airline_en_len_chk',
+      sql`${t.airlineEn} is null or char_length(${t.airlineEn}) between 2 and 60`
+    ),
+    check('deals_notes_len_chk', sql`char_length(${t.notes}) <= 600`),
+    check(
+      'deals_notes_en_len_chk',
+      sql`${t.notesEn} is null or char_length(${t.notesEn}) <= 600`
+    ),
+    check('deals_submitter_len_chk', sql`char_length(${t.submitterName}) between 1 and 80`),
+    check('deals_booking_url_len_chk', sql`char_length(${t.bookingUrl}) <= 600`),
+    check(
+      'deals_travel_window_chk',
+      sql`${t.travelTo} is null or ${t.travelFrom} is null or ${t.travelTo} >= ${t.travelFrom}`
+    ),
   ]
 );
 

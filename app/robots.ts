@@ -11,7 +11,7 @@ export default function robots(): MetadataRoute.Robots {
         // their images, so the source `.md` and its derived `.tw.md` are
         // reachable as plain files. The rendered /blog pages are the
         // indexable copies; keep the raw sources out of the index.
-        disallow: ['/api/', '/blog/*.md'],
+        disallow: ['/api/', '/admin', '/blog/*.md'],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

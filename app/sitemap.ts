@@ -116,6 +116,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...localeEntries('', { changeFrequency: 'daily', priority: 1 }),
     ...localeEntries('/airports', { changeFrequency: 'daily', priority: 0.9 }),
     ...localeEntries('/countries', { changeFrequency: 'weekly', priority: 0.8 }),
+    // Reader-submitted fares change daily; the page is ISR-refreshed every
+    // minute and its list re-reads on mount, so a daily crawl sees fresh offers.
+    ...localeEntries('/deals', { changeFrequency: 'daily', priority: 0.8 }),
     ...localeEntries('/tool', { changeFrequency: 'monthly', priority: 0.5 }),
     // The list lives in one place (lib/tools.ts) so a new tool page cannot be
     // added without showing up here.
