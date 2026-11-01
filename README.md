@@ -132,6 +132,7 @@ npm run build:raw                   # 完全不限制（等价于裸 vite build�
 | `AUTH_SECRET` | 登录必填 | NextAuth 用于签名/加密会话 JWT 的密钥。生成：`node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"` |
 | `AUTH_URL` | 生产建议 | 对外规范地址，如 `https://worldairportmap.com`；反向代理隐藏真实 Host 时设置 |
 | `DEALS_IP_SALT` | 生产建议 | 特惠机票按 IP 限流的哈希盐（缺省回退到 `COMMENTS_IP_SALT`） |
+| `AFF_QUERY` / `AFF_PARAM` + `AFF_VALUE` | 否 | 机采特价票的联盟参数：`AFF_QUERY=marker=123456&campaign=site` 或单参数 `AFF_PARAM=marker` + `AFF_VALUE=123456`。仅追加到 `kind='fare'` 的 `booking_url`；`deals.aff_url` 优先，社区链接不改写。留空则关闭 |
 | `ADMIN_EMAILS` | 管理后台必填 | 允许进入 `/admin/deals` 的 Google 邮箱，逗号分隔、不区分大小写。留空则任何人都不是管理员 |
 
 > **供应链策略**：`jose` 在 `package.json` 的 `pnpm.overrides` 中固定为 `6.2.13`。若服务器启用了 pnpm `minimumReleaseAge`，刚发布的 `6.2.14` 会被策略拒绝；升级 `jose` 前先确认新版本已过等待窗口。
@@ -430,7 +431,10 @@ Field 语义：`title` / `summary` / `updated` 对应迁移前的 frontmatter（
 - `users`：站内账号，只用于标识提交者/评论作者；没有密码。`google_sub` 是历史 Google 标识（可空、唯一），新账号的 provider 身份统一记录在 `auth_accounts`。
 - `auth_accounts`：`(provider, provider_account_id) → user_id` 的持久映射，NextAuth 登录成功时写入。以后接 GitHub/Apple/微信只需要加 provider，不改 `users`/`deals`/`comments` 的外键。
 - `sessions`：旧自定义会话表，NextAuth 改用加密 JWT 后不再读写；保留仅为兼容旧数据，可在确认无需回滚后删除。
-- `deals`：一行一个报价。`airport_iata` 外键指向 `airports`，`status` 为 `visible` / `hidden`；`expires_at` 是列表截止时间（填了 `travel_to` 取当天 23:59，否则提交后 30 天）。`submitter_name` 是提交时的快照，删账号也不会让报价变成匿名。`is_official` 标记管理后台发布的官方票价（卡片显示「官方票价」），`tax_included=false` 显示「不含税」；`batch_id` 把一次粘贴导入的行归为一组，可整批删除；`booking_url` 对官方票价可为空。`destination_en` / `airline_en` / `notes_en` 是英文主文案：非中文页面显示英文主行 + 中文小字（航司/备注为「English (中文)」），中文页面只显示中文。
+- `deals`：一行一个报价，社区提交、官方票价卡和机器采集的特价共用这一张表。`kind` 区分来源（`community` / `official` / `fare`）；`airport_iata` 外键指向 `airports`（出发机场），`status` 为 `visible` / `hidden`；`expires_at` 是列表截止时间（填了 `travel_to` 取当天 23:59，否则提交后 30 天）。`submitter_name` 是提交时的快照（机器报价为空）；`tax_included=false` 显示「不含税」；`batch_id` 把一次粘贴导入的行归为一组，可整批删除；`booking_url` 对官方票价可为空。`destination_en` / `airline_en` / `notes_en` 是英文主文案：非中文页面显示英文主行 + 中文小字（航司/备注为「English (中文)」），中文页面只显示中文。
+- `deals` 的机器报价字段：`provider` + `fingerprint` 唯一标识一次采集的行程，`destination_iata` / `destination_country` / `destination_city` 是到达机场信息，`price_usd` / `fx_rate` 是归一化价格，`stops` / `duration_minutes` / `flight_numbers` 是行程信息，`deal_score` / `discount_pct` / `baseline_usd` / `is_deal` 是特价判定结果，`verified_at` 是最近一次核验时间。采集器按 `(provider, fingerprint)` upsert，过期由 `expires_at` 控制。
+- `deals.aff_url`：显式联盟链接，卡片优先使用；为空时机器报价会按环境变量 `AFF_QUERY` 或 `AFF_PARAM` + `AFF_VALUE` 在 `booking_url` 上拼参（`lib/aff.ts`）。社区提交的链接不会被改写。
+- `fare_price_history` / `fx_rates` / `fare_provider_runs`：价格历史、汇率和采集运行日志，配合 `deals` 的机器报价使用。
 
 这些表都由 `db/schema.ts` 管理，不动现有静态内容。建表：
 

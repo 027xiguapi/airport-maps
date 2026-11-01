@@ -20,6 +20,8 @@ import {
 
 export type AdminDeal = {
   id: number;
+  /** The admin screen only manages the human half of the table. */
+  kind: 'community' | 'official';
   airportIata: string;
   airportCity: string;
   airportName: string;
@@ -34,10 +36,13 @@ export type AdminDeal = {
   travelFrom: string | null;
   travelTo: string | null;
   bookingUrl: string | null;
+  /** Explicit affiliate link; null means "use bookingUrl". */
+  affUrl: string | null;
   notes: string;
   notesEn: string | null;
   status: 'visible' | 'hidden';
   taxIncluded: boolean;
+  /** Derived from `kind` for the existing checkbox in the form. */
   isOfficial: boolean;
   submitterName: string;
   batchId: string | null;
@@ -48,6 +53,7 @@ export type AdminDeal = {
 
 type AdminDealRow = {
   id: number;
+  kind: 'community' | 'official';
   airport_iata: string;
   airport_city: string;
   airport_name: string;
@@ -62,12 +68,12 @@ type AdminDealRow = {
   travel_from: string | null;
   travel_to: string | null;
   booking_url: string | null;
+  aff_url: string | null;
   notes: string;
   notes_en: string | null;
   status: 'visible' | 'hidden';
   tax_included: boolean;
-  is_official: boolean;
-  submitter_name: string;
+  submitter_name: string | null;
   batch_id: string | null;
   created_at: Date;
   expires_at: Date;
@@ -76,11 +82,11 @@ type AdminDealRow = {
 };
 
 const ADMIN_DEAL_COLUMNS = `
-  d.id, d.airport_iata, d.destination, d.destination_en,
+  d.id, d.kind, d.airport_iata, d.destination, d.destination_en,
   d.airline, d.airline_en, d.price, d.currency,
   d.cabin, d.trip_type,
   d.travel_from::text as travel_from, d.travel_to::text as travel_to,
-  d.booking_url, d.notes, d.notes_en, d.status, d.tax_included, d.is_official,
+  d.booking_url, d.aff_url, d.notes, d.notes_en, d.status, d.tax_included,
   d.submitter_name, d.batch_id, d.created_at, d.expires_at, d.updated_at,
   a.city as airport_city, a.name as airport_name`;
 
@@ -91,6 +97,7 @@ const ADMIN_DEAL_JOINS = `
 function toAdminDeal(row: AdminDealRow): AdminDeal {
   return {
     id: row.id,
+    kind: row.kind,
     airportIata: row.airport_iata,
     airportCity: row.airport_city,
     airportName: row.airport_name,
@@ -105,12 +112,13 @@ function toAdminDeal(row: AdminDealRow): AdminDeal {
     travelFrom: row.travel_from,
     travelTo: row.travel_to,
     bookingUrl: row.booking_url,
+    affUrl: row.aff_url,
     notes: row.notes,
     notesEn: row.notes_en,
     status: row.status,
     taxIncluded: row.tax_included,
-    isOfficial: row.is_official,
-    submitterName: row.submitter_name,
+    isOfficial: row.kind === 'official',
+    submitterName: row.submitter_name ?? '',
     batchId: row.batch_id,
     createdAt: row.created_at.toISOString(),
     expiresAt: row.expires_at.toISOString(),
@@ -139,7 +147,8 @@ export async function listAdminDeals(filters: {
   const rows = await query<AdminDealRow>(
     `select ${ADMIN_DEAL_COLUMNS}, count(*) over()::int as total_count
        ${ADMIN_DEAL_JOINS}
-      where ($1::text is null
+      where d.kind <> 'fare'
+        and ($1::text is null
              or d.destination ilike $1 escape '\\'
              or d.destination_en ilike $1 escape '\\'
              or d.airline ilike $1 escape '\\'
@@ -160,7 +169,8 @@ export async function listAdminDeals(filters: {
 
 export async function getAdminDeal(id: number): Promise<AdminDeal | null> {
   const row = await queryOne<AdminDealRow>(
-    `select ${ADMIN_DEAL_COLUMNS} ${ADMIN_DEAL_JOINS} where d.id = $1`,
+    `select ${ADMIN_DEAL_COLUMNS} ${ADMIN_DEAL_JOINS}
+      where d.id = $1 and d.kind <> 'fare'`,
     [id]
   );
   return row ? toAdminDeal(row) : null;
@@ -182,6 +192,8 @@ type AdminDraft = {
   travelFrom: string | null;
   travelTo: string | null;
   bookingUrl: string | null;
+  /** Explicit affiliate link; null falls back to bookingUrl on the card. */
+  affUrl: string | null;
   notes: string;
   notesEn: string | null;
   status: 'visible' | 'hidden';
@@ -290,6 +302,25 @@ export function validateAdminDealInput(
     }
   }
 
+  // The affiliate link is optional; when present it must be a real http(s) URL
+  // and may be longer than a hand-typed booking link (provider deep links).
+  const rawAffUrl = cleanLine(input.affUrl);
+  let affUrl: string | null = null;
+  if (rawAffUrl) {
+    if (rawAffUrl.length > 2000) return { ok: false, message: '联盟链接过长。' };
+    try {
+      const url = new URL(rawAffUrl);
+      if (url.protocol !== 'http:' && url.protocol !== 'https:') {
+        return { ok: false, message: '联盟链接需以 http(s) 开头。' };
+      }
+      if (url.username || url.password) return { ok: false, message: '联盟链接不能包含账号密码。' };
+      if (!url.hostname.includes('.')) return { ok: false, message: '联盟链接的域名无效。' };
+      affUrl = rawAffUrl;
+    } catch {
+      return { ok: false, message: '联盟链接格式无效。' };
+    }
+  }
+
   const notes = cleanText(input.notes);
   if ([...notes].length > 600) return { ok: false, message: '备注最多 600 个字符。' };
   const notesEn = cleanText(input.notesEn);
@@ -314,6 +345,7 @@ export function validateAdminDealInput(
       travelFrom,
       travelTo,
       bookingUrl,
+      affUrl,
       notes,
       notesEn: notesEn || null,
       status,
@@ -336,13 +368,14 @@ export async function createAdminDeal(
   if (!airport) throw new Error(`airport_not_found:${draft.airportIata}`);
 
   const row = await queryOne<{ id: number }>(
-    `insert into deals (airport_iata, destination, destination_en, airline, airline_en,
+    `insert into deals (kind, airport_iata, destination, destination_en, airline, airline_en,
                         price, currency, cabin, trip_type, travel_from, travel_to,
-                        booking_url, notes, notes_en, status, user_id, submitter_name,
-                        expires_at, tax_included, is_official)
-     values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20)
+                        booking_url, aff_url, notes, notes_en, status, user_id, submitter_name,
+                        expires_at, tax_included)
+     values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21)
      returning id`,
     [
+      draft.isOfficial ? 'official' : 'community',
       draft.airportIata,
       draft.destination,
       draft.destinationEn,
@@ -355,6 +388,7 @@ export async function createAdminDeal(
       draft.travelFrom,
       draft.travelTo,
       draft.bookingUrl,
+      draft.affUrl,
       draft.notes,
       draft.notesEn,
       draft.status,
@@ -362,7 +396,6 @@ export async function createAdminDeal(
       admin.name.slice(0, 80),
       draft.expiresAt,
       draft.taxIncluded,
-      draft.isOfficial,
     ]
   );
   if (!row) throw new Error('insert into deals returned no row');
@@ -385,10 +418,10 @@ export async function updateAdminDeal(
         set airport_iata = $2, destination = $3, destination_en = $4,
             airline = $5, airline_en = $6, price = $7, currency = $8,
             cabin = $9, trip_type = $10, travel_from = $11, travel_to = $12,
-            booking_url = $13, notes = $14, notes_en = $15, status = $16,
-            expires_at = $17, tax_included = $18, is_official = $19,
+            booking_url = $13, aff_url = $14, notes = $15, notes_en = $16,
+            status = $17, expires_at = $18, tax_included = $19, kind = $20,
             updated_at = now()
-      where id = $1
+      where id = $1 and kind <> 'fare'
       returning id`,
     [
       id,
@@ -404,12 +437,13 @@ export async function updateAdminDeal(
       draft.travelFrom,
       draft.travelTo,
       draft.bookingUrl,
+      draft.affUrl,
       draft.notes,
       draft.notesEn,
       draft.status,
       draft.expiresAt,
       draft.taxIncluded,
-      draft.isOfficial,
+      draft.isOfficial ? 'official' : 'community',
     ]
   );
   return updated ? getAdminDeal(id) : null;
@@ -420,7 +454,7 @@ export async function deleteAdminDeals(ids: number[]): Promise<number> {
   const clean = [...new Set(ids.filter((id) => Number.isSafeInteger(id) && id > 0))];
   if (clean.length === 0) return 0;
   const result = await queryOne<{ deleted: string }>(
-    `with removed as (delete from deals where id = any($1::int[]) returning 1)
+    `with removed as (delete from deals where id = any($1::int[]) and kind <> 'fare' returning 1)
      select count(*)::text as deleted from removed`,
     [clean]
   );
@@ -429,7 +463,7 @@ export async function deleteAdminDeals(ids: number[]): Promise<number> {
 
 export async function deleteAdminBatch(batchId: string): Promise<number> {
   const result = await queryOne<{ deleted: string }>(
-    `with removed as (delete from deals where batch_id = $1 returning 1)
+    `with removed as (delete from deals where batch_id = $1 and kind <> 'fare' returning 1)
      select count(*)::text as deleted from removed`,
     [batchId]
   );
@@ -832,7 +866,8 @@ export async function importAdminDeals(options: {
   }>(
     `select airport_iata, destination, price::text as price, currency, tax_included
        from deals
-      where airline = $1 and status = 'visible' and expires_at > now()`,
+      where airline = $1 and kind <> 'fare'
+        and status = 'visible' and expires_at > now()`,
     [defaults.value.airline]
   );
   const existing = new Set(
@@ -878,10 +913,11 @@ export async function importAdminDeals(options: {
     for (let start = 0; start < insertOrder.length; start += chunkSize) {
       const chunk = insertOrder.slice(start, start + chunkSize);
       const values: unknown[] = [];
-      // 22 columns per row, matching the list below.
+      // 23 columns per row, matching the list below.
       const placeholders = chunk.map((row, index) => {
-        const base = index * 22;
+        const base = index * 23;
         values.push(
+          defaults.value.isOfficial ? 'official' : 'community',
           row.airportIata,
           row.destination,
           row.destinationEn,
@@ -894,6 +930,7 @@ export async function importAdminDeals(options: {
           null, // travel_from
           null, // travel_to
           row.bookingUrl ?? defaults.value.bookingUrl,
+          null, // aff_url — set later from the edit form when known
           defaults.value.notes,
           defaults.value.notesEn,
           'visible',
@@ -902,16 +939,15 @@ export async function importAdminDeals(options: {
           null, // ip_hash
           defaults.value.expiresAt,
           defaults.value.taxIncluded,
-          defaults.value.isOfficial,
           batchId
         );
-        return `(${Array.from({ length: 22 }, (_, offset) => `$${base + offset + 1}`).join(',')})`;
+        return `(${Array.from({ length: 23 }, (_, offset) => `$${base + offset + 1}`).join(',')})`;
       });
       const result = await client.query(
-        `insert into deals (airport_iata, destination, destination_en, airline, airline_en,
+        `insert into deals (kind, airport_iata, destination, destination_en, airline, airline_en,
                             price, currency, cabin, trip_type, travel_from, travel_to,
-                            booking_url, notes, notes_en, status, user_id, submitter_name,
-                            ip_hash, expires_at, tax_included, is_official, batch_id)
+                            booking_url, aff_url, notes, notes_en, status, user_id, submitter_name,
+                            ip_hash, expires_at, tax_included, batch_id)
          values ${placeholders.join(',')}`,
         values
       );

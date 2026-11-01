@@ -13,6 +13,13 @@ export const DEAL_TRIP_TYPES = ['oneway', 'roundtrip'] as const;
 export type DealTripType = (typeof DEAL_TRIP_TYPES)[number];
 
 /**
+ * Where a row came from: a reader, an administrator, or the fare collector.
+ * One table holds all three; the card and the admin screen branch on this.
+ */
+export const DEAL_KINDS = ['community', 'official', 'fare'] as const;
+export type DealKind = (typeof DEAL_KINDS)[number];
+
+/**
  * Validation failures the submission form has to explain. Kept here (not in
  * lib/deals.ts) because the browser bundle imports the union as a type and
  * must not pull in the database module.
@@ -34,6 +41,8 @@ export type DealErrorCode = (typeof DEAL_ERROR_CODES)[number];
 /** A deal as the API and every card render it. */
 export type PublicDeal = {
   id: number;
+  /** community | official | fare — see DEAL_KINDS. */
+  kind: DealKind;
   airport: {
     iata: string;
     name: string;
@@ -42,12 +51,19 @@ export type PublicDeal = {
     flagUrl: string | null;
   };
   destination: string;
-  /** Chinese auxiliary under the English destination on non-Chinese pages. */
+  /** Secondary destination line (English/Chinese pair, or the fare city). */
   destinationAlt: string | null;
+  /** Arrival IATA; machine fares only. */
+  destinationIata: string | null;
+  /** Arrival country (ISO 3166-1 alpha-2); machine fares only. */
+  destinationCountry: string | null;
   airline: string;
+  airlineCode: string | null;
   price: number;
   /** ISO 4217, e.g. CNY. */
   currency: string;
+  /** USD-normalised price; machine fares only. */
+  priceUsd: number | null;
   cabin: DealCabin;
   tripType: DealTripType;
   /** YYYY-MM-DD or null. */
@@ -55,16 +71,32 @@ export type PublicDeal = {
   travelTo: string | null;
   /** Null for an official fare card without a single booking page. */
   bookingUrl: string | null;
+  /**
+   * Affiliate link to use for the CTA. An explicitly stored link, or the
+   * booking URL with the site's affiliate parameters appended for machine
+   * fares. Null means "use bookingUrl unchanged".
+   */
+  affUrl: string | null;
   notes: string;
   /** Whether `price` includes taxes; official fare cards are often excl. */
   taxIncluded: boolean;
-  /** Published by the site (admin) rather than submitted by a reader. */
-  isOfficial: boolean;
-  submitterName: string;
+  /** Null for machine fares. */
+  submitterName: string | null;
   /** ISO 8601. */
   createdAt: string;
   /** ISO 8601; the listing cutoff. */
   expiresAt: string;
+
+  // ---- machine fares only (all null on human cards) ----
+  provider: string | null;
+  stops: number | null;
+  durationMinutes: number | null;
+  /** Marketing numbers, comma separated. */
+  flightNumbers: string | null;
+  discountPct: number | null;
+  dealScore: number | null;
+  /** ISO 8601; last successful re-check. */
+  verifiedAt: string | null;
 };
 
 /** A deal as its own submitter sees it (adds the moderation state). */
@@ -91,6 +123,35 @@ export function formatDealPrice(price: number, currency: string, lang: string): 
   } catch {
     return `${currency} ${price}`;
   }
+}
+
+/** US dollar amount in the page language ("$199", "199 US$"). */
+export function formatUsd(amount: number, lang: string): string {
+  try {
+    return new Intl.NumberFormat(lang, {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: Number.isInteger(amount) ? 0 : 2,
+      maximumFractionDigits: 2,
+    }).format(amount);
+  } catch {
+    return `$${amount}`;
+  }
+}
+
+/**
+ * Flight time for a card footer. Uses the compact `7h 20m` form everywhere
+ * except the CJK locales, where the unit words read better than the letters.
+ */
+export function formatDuration(minutes: number | null, lang: string): string {
+  if (!minutes || minutes <= 0) return '';
+  const hours = Math.floor(minutes / 60);
+  const rest = minutes % 60;
+  if (lang.startsWith('zh') || lang.startsWith('ko')) {
+    return `${hours}小时${rest > 0 ? `${rest}分` : ''}`;
+  }
+  if (lang.startsWith('ja')) return `${hours}時間${rest > 0 ? `${rest}分` : ''}`;
+  return rest > 0 ? `${hours}h ${rest}m` : `${hours}h`;
 }
 
 /** YYYY-MM-DD → a short date in the page language, pinned to UTC. */

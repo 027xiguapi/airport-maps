@@ -107,6 +107,16 @@ export type DealsMessages = {
   taxExcluded: string;
   /** Byline on an offer published by the site instead of a reader. */
   officialFare: string;
+  /** Badge on a machine-collected fare that passed its last re-check. */
+  verified: string;
+  /** `{date}` — per-card re-check timestamp. */
+  verifiedAt: string;
+  stopsNonstop: string;
+  stopsOne: string;
+  /** `{n}` — 2 or more. */
+  stopsMany: string;
+  /** Affiliate disclosure shown under a listing that contains fare cards. */
+  affiliateDisclosure: string;
   expires: string;
   oneWay: string;
   roundTrip: string;
@@ -221,6 +231,13 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     premium: '超级经济舱',
     business: '商务舱',
     first: '头等舱',
+    verified: '已验证',
+    verifiedAt: '核验于 {date}',
+    stopsNonstop: '直飞',
+    stopsOne: '经停 1 次',
+    stopsMany: '经停 {n} 次',
+    affiliateDisclosure:
+      '订票链接包含联盟链接：我们可能获得佣金，不会增加你的费用。价格变动较快，请以航司或 OTA 结账页为准。',
   },
 
   tw: {
@@ -302,6 +319,13 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     premium: '豪華經濟艙',
     business: '商務艙',
     first: '頭等艙',
+    verified: '已驗證',
+    verifiedAt: '核驗於 {date}',
+    stopsNonstop: '直飛',
+    stopsOne: '經停 1 次',
+    stopsMany: '經停 {n} 次',
+    affiliateDisclosure:
+      '訂票連結包含聯盟連結：我們可能獲得佣金，不會增加你的費用。價格變動較快，請以航司或 OTA 結帳頁為準。',
   },
 
   en: {
@@ -384,6 +408,13 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     premium: 'Premium economy',
     business: 'Business',
     first: 'First',
+    verified: 'Verified',
+    verifiedAt: 'Checked {date}',
+    stopsNonstop: 'Nonstop',
+    stopsOne: '1 stop',
+    stopsMany: '{n} stops',
+    affiliateDisclosure:
+      'Booking links are affiliate links: we may earn a commission at no extra cost to you. Prices change quickly — always confirm the total on the airline’s site.',
   },
 
   de: {
@@ -469,6 +500,13 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     premium: 'Premium Economy',
     business: 'Business',
     first: 'First',
+    verified: 'Verifiziert',
+    verifiedAt: 'Geprüft {date}',
+    stopsNonstop: 'Nonstop',
+    stopsOne: '1 Stopp',
+    stopsMany: '{n} Stopps',
+    affiliateDisclosure:
+      'Buchungslinks sind Affiliate-Links: Wir erhalten möglicherweise eine Provision, ohne dass dir zusätzliche Kosten entstehen. Preise ändern sich schnell – prüfe den Gesamtpreis immer auf der Seite der Airline.',
   },
 
   fr: {
@@ -554,6 +592,13 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     premium: 'Premium',
     business: 'Affaires',
     first: 'Première',
+    verified: 'Vérifié',
+    verifiedAt: 'Vérifié {date}',
+    stopsNonstop: 'Direct',
+    stopsOne: '1 escale',
+    stopsMany: '{n} escales',
+    affiliateDisclosure:
+      'Les liens de réservation sont des liens affiliés : nous pouvons percevoir une commission, sans coût supplémentaire pour vous. Les prix changent vite — vérifiez toujours le total sur le site de la compagnie.',
   },
 
   it: {
@@ -638,6 +683,13 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     premium: 'Premium economy',
     business: 'Business',
     first: 'Prima',
+    verified: 'Verificato',
+    verifiedAt: 'Verificato {date}',
+    stopsNonstop: 'Diretto',
+    stopsOne: '1 scalo',
+    stopsMany: '{n} scali',
+    affiliateDisclosure:
+      'I link di prenotazione sono link affiliati: potremmo guadagnare una commissione senza costi aggiuntivi per te. I prezzi cambiano rapidamente — verifica sempre il totale sul sito della compagnia.',
   },
 
   ko: {
@@ -720,6 +772,13 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     premium: '프리미엄 이코노미',
     business: '비즈니스',
     first: '퍼스트',
+    verified: '검증됨',
+    verifiedAt: '{date} 확인',
+    stopsNonstop: '직항',
+    stopsOne: '1회 경유',
+    stopsMany: '{n}회 경유',
+    affiliateDisclosure:
+      '예약 링크는 제휴 링크입니다. 추가 비용 없이 수수료를 받을 수 있습니다. 가격은 빠르게 변하므로 항공사 사이트에서 총액을 확인하세요.',
   },
 };
 

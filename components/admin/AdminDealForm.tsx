@@ -43,6 +43,7 @@ export default function AdminDealForm({ deal, onClose, onSaved }: Props) {
     travelFrom: deal?.travelFrom ?? '',
     travelTo: deal?.travelTo ?? '',
     bookingUrl: deal?.bookingUrl ?? '',
+    affUrl: deal?.affUrl ?? '',
     notes: deal?.notes ?? '',
     notesEn: deal?.notesEn ?? '',
     status: deal?.status ?? 'visible',
@@ -279,6 +280,19 @@ export default function AdminDealForm({ deal, onClose, onSaved }: Props) {
               onChange={(event) => update('bookingUrl', event.target.value)}
               placeholder="https://…（官方票价卡可以留空）"
               maxLength={600}
+            />
+          </div>
+          <div className="sm:col-span-2">
+            <label className={FIELD_LABEL} htmlFor="admin-aff">
+              联盟链接（可选，优先于订票链接）
+            </label>
+            <Input
+              id="admin-aff"
+              className={FIELD_CLASSES}
+              value={form.affUrl}
+              onChange={(event) => update('affUrl', event.target.value)}
+              placeholder="https://…?marker=…（留空则按环境变量拼参）"
+              maxLength={2000}
             />
           </div>
           <div className="sm:col-span-2">

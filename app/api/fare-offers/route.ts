@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
-import { listFareOffers } from '@/lib/fare-offers';
-import type { FareMarket, FareScope } from '@/lib/fare-format';
+import { listFareOffers, type FareMarket, type FareScope } from '@/lib/fare-offers';
 import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { DEFAULT_LOCALE, isLocale, type Locale } from '@/lib/i18n/config';
 
@@ -79,8 +78,8 @@ export async function GET(request: Request) {
       { headers: NO_STORE }
     );
   } catch (error) {
-    // A deployment that has not run migration 0004 yet answers 503 and the
-    // board shows its empty state instead of the page throwing.
+    // A deployment that has not applied the merged schema yet answers 503 and
+    // the board shows its empty state instead of the page throwing.
     console.error('[api/fare-offers] query failed', error);
     return NextResponse.json(
       { error: 'fares_unavailable', offers: [], total: 0 },

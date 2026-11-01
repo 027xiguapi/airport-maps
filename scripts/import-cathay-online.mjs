@@ -64,6 +64,7 @@ try {
       `select id
          from deals
         where airline = $1
+          and kind = 'official'
           and airport_iata = $2
           and destination = $3
           and price = $4::numeric
@@ -83,7 +84,7 @@ try {
                 notes = coalesce(nullif($5, ''), notes),
                 notes_en = coalesce(nullif($6, ''), notes_en),
                 status = 'visible',
-                is_official = true,
+                kind = 'official',
                 submitter_name = '国泰航空官方',
                 user_id = null,
                 expires_at = $7,
@@ -105,13 +106,13 @@ try {
     } else {
       await client.query(
         `insert into deals
-           (airport_iata, destination, destination_en, airline, airline_en,
+           (kind, airport_iata, destination, destination_en, airline, airline_en,
             price, currency, cabin, trip_type, travel_from, travel_to,
             booking_url, notes, notes_en, status, user_id, submitter_name,
-            ip_hash, expires_at, tax_included, is_official, batch_id)
-         values ($1, $2, $3, $4, $5, $6::numeric, $7, 'economy', 'roundtrip',
+            ip_hash, expires_at, tax_included, batch_id)
+         values ('official', $1, $2, $3, $4, $5, $6::numeric, $7, 'economy', 'roundtrip',
                  null, null, $8, $9, $10, 'visible', null, '国泰航空官方',
-                 null, $11, false, true, $12)`,
+                 null, $11, false, $12)`,
         [
           row.airportIata,
           row.destination,

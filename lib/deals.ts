@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { resolveAffiliateUrl } from '@/lib/aff';
 import { query, queryOne } from '@/lib/db';
 import {
   type DealCabin,
@@ -12,10 +13,16 @@ import {
 import type { Locale } from '@/lib/i18n/config';
 
 /**
- * Reader-submitted airfare deals (db/schema.ts → `deals`).
+ * Read/write layer for the merged `deals` table (db/schema.ts).
  *
- * Publication is immediate — a submission with a valid session is inserted as
- * `status = 'visible'` — so the guards that matter are at write time:
+ * One table holds all three kinds — reader submissions (`community`), official
+ * cards (`official`) and machine-collected fares (`fare`). This module owns the
+ * shared row shape, the localization and the public listing; the fare-specific
+ * filters live in lib/fare-offers.ts.
+ *
+ * Reader submissions publish immediately — a submission with a valid session is
+ * inserted as `status = 'visible'` — so the guards that matter are at write
+ * time:
  *
  *   - sign-in is required by the API route (no anonymous offers),
  *   - per-user and per-IP quotas (24h windows) stop a single account flooding,
@@ -199,24 +206,37 @@ export function dealIpHash(ip: string): string {
 
 type DealRow = {
   id: number;
+  kind: PublicDeal['kind'];
   airport_iata: string;
   destination: string;
   destination_en: string | null;
+  destination_iata: string | null;
+  destination_country: string | null;
+  destination_city: string | null;
   airline: string;
   airline_en: string | null;
+  airline_code: string | null;
+  flight_numbers: string | null;
+  stops: number | null;
+  duration_minutes: number | null;
   price: string;
   currency: string;
+  price_usd: string | null;
   cabin: DealCabin;
   trip_type: DealTripType;
   travel_from: string | null;
   travel_to: string | null;
   booking_url: string | null;
+  aff_url: string | null;
   notes: string;
   notes_en: string | null;
   tax_included: boolean;
-  is_official: boolean;
+  provider: string | null;
+  discount_pct: number | null;
+  deal_score: number | null;
+  verified_at: Date | null;
   status: 'visible' | 'hidden';
-  submitter_name: string;
+  submitter_name: string | null;
   created_at: Date;
   expires_at: Date;
   airport_name: string;
@@ -230,14 +250,20 @@ type DealRow = {
   total_count?: number;
 };
 
+export type { DealRow };
+
 const DEAL_COLUMNS = `
-  d.id, d.airport_iata, d.destination, d.destination_en,
-  d.airline, d.airline_en, d.price, d.currency,
+  d.id, d.kind, d.airport_iata, d.destination, d.destination_en,
+  d.destination_iata, d.destination_country, d.destination_city,
+  d.airline, d.airline_en, d.airline_code, d.flight_numbers,
+  d.stops, d.duration_minutes,
+  d.price, d.currency, d.price_usd,
   d.cabin, d.trip_type,
   -- date columns are cast to text: pg would otherwise hand back a JS Date at
   -- the server's local midnight, which serialises to the previous day in UTC.
   d.travel_from::text as travel_from, d.travel_to::text as travel_to,
-  d.booking_url, d.notes, d.notes_en, d.tax_included, d.is_official,
+  d.booking_url, d.aff_url, d.notes, d.notes_en, d.tax_included,
+  d.provider, d.discount_pct, d.deal_score, d.verified_at,
   d.status, d.submitter_name, d.created_at, d.expires_at,
   a.name as airport_name, a.name_tw as airport_name_tw, a.name_en as airport_name_en,
   a.city as airport_city, a.city_tw as airport_city_tw, a.city_en as airport_city_en,
@@ -247,6 +273,8 @@ const DEAL_JOINS = `
   from deals d
   join airports a on a.iata = d.airport_iata
   join countries c on c.code = a.country_code`;
+
+export { DEAL_COLUMNS, DEAL_JOINS };
 
 /** Airport/city wording for a deal card. */
 function localizedAirport(
@@ -278,19 +306,26 @@ function localizedDealText(
   return auxiliary && primary !== auxiliary ? `${primary} (${auxiliary})` : primary;
 }
 
-function toPublicDeal(row: DealRow, locale: Locale): PublicDeal {
+export function toPublicDeal(row: DealRow, locale: Locale): PublicDeal {
   const chinesePrimary = locale === 'zh' || locale === 'tw';
-  // The destination gets its own auxiliary line: an English name plus a Chinese
-  // parenthetical is too wide for the card's route row and would wrap mid-word.
-  const destination =
-    chinesePrimary || !row.destination_en ? row.destination : row.destination_en;
-  const destinationAlt =
-    chinesePrimary || !row.destination_en || row.destination_en === row.destination
+  const isFare = row.kind === 'fare';
+
+  // Machine fares carry an IATA pair; human cards carry free text and an
+  // optional English/Chinese pair. The card only reads these two fields.
+  const destination = isFare
+    ? row.destination_iata ?? row.destination
+    : chinesePrimary || !row.destination_en
+      ? row.destination
+      : row.destination_en;
+  const destinationAlt = isFare
+    ? row.destination_city
+    : chinesePrimary || !row.destination_en || row.destination_en === row.destination
       ? null
       : row.destination;
 
   return {
     id: row.id,
+    kind: row.kind,
     airport: {
       iata: row.airport_iata,
       name: localizedAirport(locale, row.airport_name, row.airport_name_tw, row.airport_name_en),
@@ -300,20 +335,31 @@ function toPublicDeal(row: DealRow, locale: Locale): PublicDeal {
     },
     destination,
     destinationAlt,
+    destinationIata: row.destination_iata,
+    destinationCountry: row.destination_country,
     airline: localizedDealText(locale, row.airline, row.airline_en),
+    airlineCode: row.airline_code,
     price: Number(row.price),
     currency: row.currency,
+    priceUsd: row.price_usd == null ? null : Number(row.price_usd),
     cabin: row.cabin,
     tripType: row.trip_type,
     travelFrom: row.travel_from,
     travelTo: row.travel_to,
     bookingUrl: row.booking_url,
+    affUrl: resolveAffiliateUrl(row.kind, row.booking_url, row.aff_url),
     notes: localizedDealText(locale, row.notes, row.notes_en),
     taxIncluded: row.tax_included,
-    isOfficial: row.is_official,
     submitterName: row.submitter_name,
     createdAt: row.created_at.toISOString(),
     expiresAt: row.expires_at.toISOString(),
+    provider: row.provider,
+    stops: row.stops,
+    durationMinutes: row.duration_minutes,
+    flightNumbers: row.flight_numbers,
+    discountPct: row.discount_pct,
+    dealScore: row.deal_score,
+    verifiedAt: row.verified_at ? row.verified_at.toISOString() : null,
   };
 }
 
@@ -330,8 +376,10 @@ export type DealFilters = {
 };
 
 /**
- * Public listing: visible, unexpired offers newest first. `total` comes from a
- * window function so the page and its "load more" share one round-trip.
+ * Public listing across all three kinds: visible, unexpired, deal-qualified
+ * rows ordered by last verification (machine fares) or publication time
+ * (human cards). `total` comes from a window function so the page and its
+ * "load more" share one round-trip.
  */
 export async function listDeals(filters: DealFilters): Promise<{
   deals: PublicDeal[];
@@ -345,13 +393,19 @@ export async function listDeals(filters: DealFilters): Promise<{
   const rows = await query<DealRow>(
     `select ${DEAL_COLUMNS}, count(*) over()::int as total_count
        ${DEAL_JOINS}
-      where d.status = 'visible' and d.expires_at > now()
+      where d.status = 'visible' and d.expires_at > now() and d.is_deal
+        and (d.kind <> 'fare' or d.tax_included)
         and ($1::text is null or d.airport_iata = $1)
         and ($2::text is null or d.destination ilike $2 escape '\\'
                            or d.destination_en ilike $2 escape '\\'
+                           or d.destination_iata ilike $2 escape '\\'
+                           or d.destination_city ilike $2 escape '\\'
                            or d.airline ilike $2 escape '\\'
-                           or d.airline_en ilike $2 escape '\\')
-      order by d.created_at desc, d.id desc
+                           or d.airline_en ilike $2 escape '\\'
+                           or d.airline_code ilike $2 escape '\\')
+      -- Newest publication, or the last re-check for a machine fare: a fare
+      -- refreshed today should not slide under a card posted months ago.
+      order by coalesce(d.verified_at, d.created_at) desc, d.id desc
       limit $3 offset $4`,
     [airport, q, limit, offset]
   );
@@ -370,12 +424,16 @@ export async function listDeals(filters: DealFilters): Promise<{
   const count = await queryOne<{ total: number }>(
     `select count(*)::int as total
        from deals d
-      where d.status = 'visible' and d.expires_at > now()
+      where d.status = 'visible' and d.expires_at > now() and d.is_deal
+        and (d.kind <> 'fare' or d.tax_included)
         and ($1::text is null or d.airport_iata = $1)
         and ($2::text is null or d.destination ilike $2 escape '\\'
                            or d.destination_en ilike $2 escape '\\'
+                           or d.destination_iata ilike $2 escape '\\'
+                           or d.destination_city ilike $2 escape '\\'
                            or d.airline ilike $2 escape '\\'
-                           or d.airline_en ilike $2 escape '\\')`,
+                           or d.airline_en ilike $2 escape '\\'
+                           or d.airline_code ilike $2 escape '\\')`,
     [airport, q]
   );
 
@@ -497,10 +555,10 @@ export async function createDeal(
   submitter: { userId: number; name: string; ipHash: string }
 ): Promise<PublicDeal> {
   const row = await queryOne<{ id: number }>(
-    `insert into deals (airport_iata, destination, airline, price, currency, cabin,
+    `insert into deals (kind, airport_iata, destination, airline, price, currency, cabin,
                         trip_type, travel_from, travel_to, booking_url, notes,
                         user_id, submitter_name, ip_hash, expires_at)
-     values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
+     values ('community', $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
      returning id`,
     [
       draft.airportIata,

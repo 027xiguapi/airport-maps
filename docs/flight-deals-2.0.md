@@ -106,6 +106,8 @@ PVG(23) / WUH(22) / HGH(21) / NKG(18) / NGB(17) ... 共 16 个中国出发机场
 
 ## 3. 数据模型：复用 `airports`，`deals` 不动，新增 4 张表
 
+> **2026-11-01 实施更新：本节方案已被推翻。** 采集数据最终并入 `deals` 单表，用 `kind = 'community' | 'official' | 'fare'` 区分来源；`fare_offers` 与 `affiliate_clicks` 已删除，`fare_price_history` / `fx_rates` / `fare_provider_runs` 保留。合并后的列、索引与约束见 `db/schema.ts`，迁移见 `drizzle/0005_merge_fare_offers_into_deals.sql`。下面 §3.1–§3.5 保留为当时的设计记录。
+
 ### 3.1 为什么采集数据不能写进 `deals`
 
 | 问题 | 后果 |
@@ -699,6 +701,12 @@ update fare_offers set status = 'expired'
 ---
 
 ## 8. 联盟链接与点击归因
+
+> **2026-11-01 实施更新：采用「aff 链接字段 + 环境变量拼参」，不建 `/go` 跳转、不记录点击。** 具体：
+> - `deals.aff_url` 存显式联盟链接，卡片优先使用；
+> - 机器报价（`kind='fare'`）在读取时按 `AFF_QUERY` 或 `AFF_PARAM` + `AFF_VALUE` 往 `booking_url` 上拼参（`lib/aff.ts`）；
+> - 社区提交的链接不改写；
+> - `affiliate_clicks` 已随 `fare_offers` 一起删除。若以后要做点击归因，可基于 `deals.id` 重建，并参考下面 §8.1 的 `/go` 方案。
 
 ### 8.1 站内跳转，不直连
 

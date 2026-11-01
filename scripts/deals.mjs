@@ -59,8 +59,9 @@ if (!['list', 'hide', 'show', 'delete', 'expire'].includes(command)) {
         Number.isSafeInteger(parsedLimit) && parsedLimit > 0 ? Math.min(parsedLimit, 200) : 30;
 
       const { rows } = await client.query(
-        `select id, airport_iata, destination, airline, price, currency, status,
-                submitter_name, created_at, expires_at
+        `select id, kind, airport_iata, destination, airline, price, currency, status,
+                coalesce(submitter_name, provider, '—') as submitter_label,
+                created_at, expires_at
            from deals
           ${all ? '' : "where status = 'visible' and expires_at > now()"}
           order by created_at desc
@@ -76,7 +77,7 @@ if (!['list', 'hide', 'show', 'delete', 'expire'].includes(command)) {
           const flag = row.status === 'visible' ? '' : ` [${row.status}]`;
           const stamp = row.created_at.toISOString().replace('T', ' ').slice(0, 16);
           console.log(
-            `#${row.id}${flag}${expired} ${stamp} ${row.airport_iata} → ${row.destination} · ${row.airline} · ${row.price} ${row.currency} — ${row.submitter_name} · expires ${row.expires_at
+            `#${row.id} [${row.kind}]${flag}${expired} ${stamp} ${row.airport_iata} → ${row.destination} · ${row.airline} · ${row.price} ${row.currency} — ${row.submitter_label} · expires ${row.expires_at
               .toISOString()
               .slice(0, 10)}`
           );

@@ -4,6 +4,8 @@ import {
   formatDealDateTime,
   formatDealLabel,
   formatDealPrice,
+  formatDuration,
+  formatUsd,
   type DealCabin,
   type PublicDeal,
 } from '@/lib/deal-format';
@@ -31,12 +33,18 @@ const CABIN_LABEL: Record<DealCabin, keyof DealsMessages> = {
 };
 
 /**
- * One fare. A plain component (no hooks, no server imports) so the homepage,
- * the deals page and the "my submissions" page can all render it, on either
- * side of the server/client boundary.
+ * One fare card, for all three kinds of row in the merged `deals` table:
+ * reader submissions, official cards and machine-collected fares.
+ *
+ * The branches are deliberately small: a fare adds stop/flight-time/verified
+ * details and speaks in USD, a human card adds attribution and moderation
+ * state. Everything shared — route, dates, cabin, price, CTA — is rendered once
+ * so the three kinds cannot drift apart.
  *
  * The outbound booking link is marked `nofollow sponsored` and opens in a new
- * tab: this is user-supplied commercial content, not an endorsement.
+ * tab: this is commercial content, not an endorsement. When the row carries an
+ * affiliate URL (`affUrl`, resolved in lib/aff.ts) it is used instead of the
+ * clean booking URL.
  */
 export default function DealCard({
   deal,
@@ -47,7 +55,11 @@ export default function DealCard({
   expired,
   className,
 }: Props) {
-  const price = formatDealPrice(deal.price, deal.currency, lang);
+  const isFare = deal.kind === 'fare';
+  const price =
+    isFare && deal.priceUsd != null
+      ? formatUsd(deal.priceUsd, lang)
+      : formatDealPrice(deal.price, deal.currency, lang);
   const from = formatDealDate(deal.travelFrom, lang);
   const to = formatDealDate(deal.travelTo, lang);
   const travel =
@@ -58,10 +70,15 @@ export default function DealCard({
         : to
           ? `– ${to}`
           : '';
-  const submitted = formatDealLabel(labels.submittedBy, { name: deal.submitterName });
+  const submitted = deal.submitterName
+    ? formatDealLabel(labels.submittedBy, { name: deal.submitterName })
+    : '';
   const submittedAt = formatDealLabel(labels.submittedAt, {
     date: formatDealDateTime(deal.createdAt, lang),
   });
+  const verifiedAt = deal.verifiedAt
+    ? formatDealLabel(labels.verifiedAt, { date: formatDealDateTime(deal.verifiedAt, lang) })
+    : '';
   const expires = formatDealLabel(labels.expires, { date: formatDealDate(deal.expiresAt, lang) });
   const statusLabel =
     status === 'hidden'
@@ -71,6 +88,17 @@ export default function DealCard({
         : !deal.taxIncluded
           ? labels.taxExcluded
           : labels.unverified;
+  const stops =
+    isFare && deal.stops != null
+      ? deal.stops === 0
+        ? labels.stopsNonstop
+        : deal.stops === 1
+          ? labels.stopsOne
+          : formatDealLabel(labels.stopsMany, { n: deal.stops })
+      : '';
+  const duration = isFare ? formatDuration(deal.durationMinutes, lang) : '';
+  const discount = deal.discountPct != null && deal.discountPct >= 15 ? deal.discountPct : null;
+  const href = deal.affUrl ?? deal.bookingUrl;
 
   return (
     <article
@@ -83,8 +111,13 @@ export default function DealCard({
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <span className="block truncate font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-sky-600">
+          <span className="flex items-center gap-1.5 truncate font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-sky-600">
             {deal.airline}
+            {deal.airlineCode && (
+              <span className="font-normal tracking-[0.04em] text-ink-faint">
+                {deal.airlineCode}
+              </span>
+            )}
           </span>
           <div className="mt-1.5 flex min-w-0 items-start gap-2">
             <Link
@@ -134,36 +167,65 @@ export default function DealCard({
             {labels[CABIN_LABEL[deal.cabin]]} ·{' '}
             {deal.tripType === 'roundtrip' ? labels.roundTrip : labels.oneWay}
           </div>
-          {!deal.taxIncluded && (
+          {discount !== null ? (
+            <div className="mt-1.5 font-display text-[10.5px] font-semibold uppercase tracking-[0.06em] text-amber">
+              −{discount}%
+            </div>
+          ) : !deal.taxIncluded ? (
             <div className="mt-1.5 font-display text-[10.5px] font-semibold uppercase tracking-[0.06em] text-amber">
               {labels.taxExcluded}
             </div>
-          )}
+          ) : null}
         </div>
       </div>
 
-      {travel && (
-        <div className="mt-3 flex items-center gap-1.5 text-[12.5px] text-ink-soft">
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-            className="flex-none opacity-60"
-          >
-            <rect x="3" y="5" width="18" height="16" rx="2" />
-            <path d="M3 10h18M8 3v4M16 3v4" />
-          </svg>
-          <span className="min-w-0 truncate">{travel}</span>
+      {(travel || isFare) && (
+        <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-ink-soft">
+          {travel && (
+            <>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+                className="flex-none opacity-60"
+              >
+                <rect x="3" y="5" width="18" height="16" rx="2" />
+                <path d="M3 10h18M8 3v4M16 3v4" />
+              </svg>
+              <span className="min-w-0 truncate">{travel}</span>
+            </>
+          )}
+          {stops && (
+            <>
+              <span className="flex-none text-ink-faint" aria-hidden="true">
+                ·
+              </span>
+              <span className="flex-none">{stops}</span>
+            </>
+          )}
+          {duration && (
+            <>
+              <span className="flex-none text-ink-faint" aria-hidden="true">
+                ·
+              </span>
+              <span className="flex-none">{duration}</span>
+            </>
+          )}
+          {deal.flightNumbers && (
+            <span className="w-full truncate text-[11.5px] text-ink-faint">
+              {deal.flightNumbers}
+            </span>
+          )}
         </div>
       )}
 
-      {deal.notes && (
+      {!isFare && deal.notes && (
         <p className="mt-3 line-clamp-3 whitespace-pre-wrap break-words text-[13px] leading-[1.7] text-ink-soft">
           {deal.notes}
         </p>
@@ -171,18 +233,37 @@ export default function DealCard({
 
       <div className="mt-auto flex items-end justify-between gap-3 pt-4">
         <div className="min-w-0 text-[11px] leading-[1.6] text-ink-faint">
-          <span className="block truncate">
-            {deal.isOfficial ? labels.officialFare : submitted}
-          </span>
-          <span className="block truncate">{deal.isOfficial ? submitted : submittedAt}</span>
-          <span className="block truncate">{deal.isOfficial ? submittedAt : statusLabel}</span>
+          {isFare ? (
+            <>
+              <span className="inline-flex items-center gap-1 border border-line px-1.5 py-[2px] text-[10.5px] font-semibold uppercase tracking-[0.06em] text-sky-600">
+                {labels.verified}
+              </span>
+              {verifiedAt ? (
+                <span className="mt-1 block truncate">{verifiedAt}</span>
+              ) : (
+                deal.provider && <span className="mt-1 block truncate">{deal.provider}</span>
+              )}
+            </>
+          ) : (
+            <>
+              <span className="block truncate">
+                {deal.kind === 'official' ? labels.officialFare : submitted}
+              </span>
+              <span className="block truncate">
+                {deal.kind === 'official' ? submitted : submittedAt}
+              </span>
+              <span className="block truncate">
+                {deal.kind === 'official' ? submittedAt : statusLabel}
+              </span>
+            </>
+          )}
         </div>
         {status || expired ? (
           <span className="flex-none text-[11px] text-ink-faint">{expires}</span>
-        ) : deal.bookingUrl ? (
+        ) : href ? (
           <a
             className="inline-flex flex-none items-center gap-1.5 border border-amber bg-amber px-3.5 py-2 text-[12.5px] font-bold text-navy-900 transition-[filter] duration-150 hover:brightness-[1.06]"
-            href={deal.bookingUrl}
+            href={href}
             target="_blank"
             rel="nofollow sponsored noopener noreferrer"
           >

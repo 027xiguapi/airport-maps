@@ -67,3 +67,5 @@ seo
 .backup
 /dist/
 .vinext/
+
+.zcode

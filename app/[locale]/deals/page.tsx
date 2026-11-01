@@ -121,6 +121,9 @@ export default async function DealsPage({ params, searchParams }: Props) {
         <p className="mt-6 max-w-[820px] text-[12px] leading-[1.7] text-ink-faint">
           {d.disclaimer}
         </p>
+        <p className="mt-2 max-w-[820px] text-[12px] leading-[1.7] text-ink-faint">
+          {d.affiliateDisclosure}
+        </p>
       </section>
     </>
   );
