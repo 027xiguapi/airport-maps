@@ -34,6 +34,7 @@ export const DEAL_ERROR_CODES = [
   'invalid_trip_type',
   'invalid_dates',
   'invalid_url',
+  'invalid_aff_url',
   'invalid_notes',
 ] as const;
 export type DealErrorCode = (typeof DEAL_ERROR_CODES)[number];

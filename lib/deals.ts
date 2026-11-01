@@ -38,6 +38,8 @@ export const MAX_DESTINATION_LENGTH = 60;
 export const MAX_AIRLINE_LENGTH = 60;
 export const MAX_NOTES_LENGTH = 600;
 export const MAX_BOOKING_URL_LENGTH = 600;
+/** Machine deep links and affiliate links can be much longer than a typed URL. */
+export const MAX_AFF_URL_LENGTH = 2000;
 export const MAX_PRICE = 1_000_000;
 
 /** Offers one account may publish per rolling day. */
@@ -61,6 +63,8 @@ export type DealDraft = {
   travelFrom: string | null;
   travelTo: string | null;
   bookingUrl: string;
+  /** Optional affiliate/referral link submitted by the reader. */
+  affUrl: string | null;
   notes: string;
 };
 
@@ -104,6 +108,27 @@ function oneYearAheadIso(): string {
   const date = new Date();
   date.setUTCFullYear(date.getUTCFullYear() + 2);
   return date.toISOString().slice(0, 10);
+}
+
+/**
+ * http(s) URL, or null when the field is empty; undefined when malformed.
+ * Shared by the required booking link and the optional affiliate link so the
+ * two cannot drift.
+ */
+function parseHttpUrl(value: unknown, maxLength: number): string | null | undefined {
+  const raw = cleanLine(value);
+  if (!raw) return null;
+  if (raw.length > maxLength) return undefined;
+  try {
+    const url = new URL(raw);
+    if (url.protocol !== 'http:' && url.protocol !== 'https:') return undefined;
+    if (url.username || url.password) return undefined;
+    // A host without a dot is an internal name, not a booking page.
+    if (!url.hostname.includes('.')) return undefined;
+    return raw;
+  } catch {
+    return undefined;
+  }
 }
 
 /**
@@ -161,19 +186,14 @@ export function validateDealInput(payload: Record<string, unknown>): DealValidat
     return { ok: false, error: 'invalid_dates' };
   }
 
-  const bookingUrl = cleanLine(payload.bookingUrl);
-  if (bookingUrl.length > MAX_BOOKING_URL_LENGTH) return { ok: false, error: 'invalid_url' };
-  try {
-    const url = new URL(bookingUrl);
-    if (url.protocol !== 'http:' && url.protocol !== 'https:') {
-      return { ok: false, error: 'invalid_url' };
-    }
-    if (url.username || url.password) return { ok: false, error: 'invalid_url' };
-    // A host without a dot is an internal name, not a booking page.
-    if (!url.hostname.includes('.')) return { ok: false, error: 'invalid_url' };
-  } catch {
-    return { ok: false, error: 'invalid_url' };
-  }
+  const bookingUrl = parseHttpUrl(payload.bookingUrl, MAX_BOOKING_URL_LENGTH);
+  // Required: every reader submission must point somewhere bookable.
+  if (!bookingUrl) return { ok: false, error: 'invalid_url' };
+
+  // Optional: the submitter's own affiliate/referral link. The card prefers it
+  // over the booking URL; empty is fine.
+  const affUrl = parseHttpUrl(payload.affUrl, MAX_AFF_URL_LENGTH);
+  if (affUrl === undefined) return { ok: false, error: 'invalid_aff_url' };
 
   const notes = cleanText(payload.notes);
   if ([...notes].length > MAX_NOTES_LENGTH) return { ok: false, error: 'invalid_notes' };
@@ -191,6 +211,7 @@ export function validateDealInput(payload: Record<string, unknown>): DealValidat
       travelFrom,
       travelTo,
       bookingUrl,
+      affUrl,
       notes,
     },
   };
@@ -556,9 +577,9 @@ export async function createDeal(
 ): Promise<PublicDeal> {
   const row = await queryOne<{ id: number }>(
     `insert into deals (kind, airport_iata, destination, airline, price, currency, cabin,
-                        trip_type, travel_from, travel_to, booking_url, notes,
+                        trip_type, travel_from, travel_to, booking_url, aff_url, notes,
                         user_id, submitter_name, ip_hash, expires_at)
-     values ('community', $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
+     values ('community', $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
      returning id`,
     [
       draft.airportIata,
@@ -571,6 +592,7 @@ export async function createDeal(
       draft.travelFrom,
       draft.travelTo,
       draft.bookingUrl,
+      draft.affUrl,
       draft.notes,
       submitter.userId,
       submitter.name,

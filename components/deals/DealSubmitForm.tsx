@@ -46,6 +46,7 @@ const ERROR_LABEL: Record<DealErrorCode, keyof DealsMessages> = {
   invalid_trip_type: 'airlineError',
   invalid_dates: 'dateError',
   invalid_url: 'urlError',
+  invalid_aff_url: 'affUrlError',
   invalid_notes: 'notesError',
 };
 
@@ -111,6 +112,7 @@ export default function DealSubmitForm({
   const [travelFrom, setTravelFrom] = useState('');
   const [travelTo, setTravelTo] = useState('');
   const [bookingUrl, setBookingUrl] = useState('');
+  const [affUrl, setAffUrl] = useState('');
   const [notes, setNotes] = useState('');
   const [website, setWebsite] = useState('');
 
@@ -195,6 +197,20 @@ export default function DealSubmitForm({
     } else {
       next.invalid_url = labels.urlError;
     }
+    // Optional: an affiliate/referral link the submitter wants the card to use.
+    if (affUrl.trim()) {
+      try {
+        const url = new URL(affUrl.trim());
+        if (
+          (url.protocol !== 'http:' && url.protocol !== 'https:') ||
+          !url.hostname.includes('.')
+        ) {
+          next.invalid_aff_url = labels.affUrlError;
+        }
+      } catch {
+        next.invalid_aff_url = labels.affUrlError;
+      }
+    }
     if ([...notes].length > 600) next.invalid_notes = labels.notesError;
     return next;
   }
@@ -227,6 +243,7 @@ export default function DealSubmitForm({
           travelFrom,
           travelTo,
           bookingUrl,
+          affUrl,
           notes,
           website,
         }),
@@ -278,7 +295,7 @@ export default function DealSubmitForm({
           travelFrom: travelFrom || null,
           travelTo: travelTo || null,
           bookingUrl,
-          affUrl: null,
+          affUrl: affUrl.trim() || null,
           notes,
           taxIncluded: true,
           submitterName: '',
@@ -313,6 +330,7 @@ export default function DealSubmitForm({
     setTravelFrom('');
     setTravelTo('');
     setBookingUrl('');
+    setAffUrl('');
     setNotes('');
     setErrors({});
     setNotice(null);
@@ -607,6 +625,30 @@ export default function DealSubmitForm({
             aria-invalid={Boolean(errors.invalid_url) || undefined}
           />
           {errors.invalid_url && <p className={ERROR_CLASSES}>{errors.invalid_url}</p>}
+        </div>
+
+        <div className="sm:col-span-2">
+          <label className={FIELD_LABEL} htmlFor={`${uid}-aff`}>
+            {labels.affiliateLink}
+          </label>
+          <input
+            id={`${uid}-aff`}
+            className={FIELD_CLASSES}
+            value={affUrl}
+            onChange={(event) => {
+              setAffUrl(event.target.value);
+              clearError('invalid_aff_url');
+            }}
+            placeholder={labels.affiliateLinkPlaceholder}
+            type="url"
+            inputMode="url"
+            maxLength={2000}
+            aria-invalid={Boolean(errors.invalid_aff_url) || undefined}
+          />
+          <p className="mt-1 text-[11.5px] leading-[1.6] text-ink-faint">
+            {labels.affiliateLinkHint}
+          </p>
+          {errors.invalid_aff_url && <p className={ERROR_CLASSES}>{errors.invalid_aff_url}</p>}
         </div>
 
         <div className="sm:col-span-2">

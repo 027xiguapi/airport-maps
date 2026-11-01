@@ -62,6 +62,10 @@ export type DealsMessages = {
   dateFromLabel: string;
   dateToLabel: string;
   booking: string;
+  /** Optional affiliate/referral link a reader may add to their submission. */
+  affiliateLink: string;
+  affiliateLinkPlaceholder: string;
+  affiliateLinkHint: string;
   notes: string;
   currency: string;
   /** Button on a card that opens the airline/OTA booking page. */
@@ -93,6 +97,7 @@ export type DealsMessages = {
   currencyError: string;
   dateError: string;
   urlError: string;
+  affUrlError: string;
   notesError: string;
   genericError: string;
 
@@ -156,7 +161,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     kicker: '特惠机票',
     title: '机场特惠机票',
     en: 'Flight Deals',
-    sub: '旅行者提交的机场出发特惠机票，按发布时间排序，价格与余票以航空公司或订票页面为准。',
+    sub: '社区提交、官方票价与自动核验的特价机票，按最近发布或核验时间排序；价格、税费与余票以航空公司或订票页面为准。',
     latest: '最新特惠',
     all: '查看全部特惠',
     submit: '提交特惠',
@@ -164,8 +169,9 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     emptyHint: '用 Google 登录后，把你的发现分享给其他旅行者。',
     loadError: '特惠信息暂时无法加载。',
     retry: '重试',
-    listingSub: '按机场浏览旅行者提交的低价机票，提交后会立即展示。',
-    disclaimer: '价格由用户提交，未经核验，请以航空公司或订票页面为准。',
+    listingSub: '按机场浏览社区提交、官方票价与已核验的低价机票；提交后立即展示，核验报价会标注更新时间。',
+    disclaimer:
+      '社区与官方票价由用户或航司提供，可能未经平台核验；带「已验证」标记的报价由采集器自动复核。价格、税费与余票请以航空公司或订票页面为准。',
     searchPlaceholder: '搜索目的地或航空公司',
     searchEmpty: '没有匹配的特惠，换个关键词试试。',
     loadMore: '加载更多',
@@ -189,6 +195,9 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     dateFromLabel: '去程 / 起始日期',
     dateToLabel: '返程 / 截止日期',
     booking: '订票链接',
+    affiliateLink: '联盟 / 邀请链接（可选）',
+    affiliateLinkPlaceholder: 'https://…?ref=你的邀请码',
+    affiliateLinkHint: '如果你有航司或 OTA 的邀请/联盟链接，可以填在这里；卡片会优先使用它。',
     notes: '补充说明（可选）',
     currency: '币种',
     viewDeal: '查看订票',
@@ -216,6 +225,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     currencyError: '请填写三位币种代码，如 CNY。',
     dateError: '日期无效：返程不能早于出发，也不能是过去的日期。',
     urlError: '请填写以 http:// 或 https:// 开头的订票链接。',
+    affUrlError: '请填写以 http:// 或 https:// 开头的有效联盟链接。',
     notesError: '补充说明最多 600 个字符。',
     genericError: '提交失败，请稍后重试。',
     submittedBy: '由 {name} 提交',
@@ -237,14 +247,14 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     stopsOne: '经停 1 次',
     stopsMany: '经停 {n} 次',
     affiliateDisclosure:
-      '订票链接包含联盟链接：我们可能获得佣金，不会增加你的费用。价格变动较快，请以航司或 OTA 结账页为准。',
+      '部分订票链接包含联盟链接（包括读者提交的链接）：我们或提交者可能获得佣金，不会增加你的费用。价格变动较快，请以航司或 OTA 结账页为准。',
   },
 
   tw: {
     kicker: '特惠機票',
     title: '機場特惠機票',
     en: 'Flight Deals',
-    sub: '旅客提交的機場出發特惠機票，依發佈時間排序，價格與機位以航空公司或訂票頁面為準。',
+    sub: '社群提交、官方票價與自動核驗的特價機票，依最近發佈或核驗時間排序；價格、稅費與機位以航空公司或訂票頁面為準。',
     latest: '最新特惠',
     all: '查看全部特惠',
     submit: '提交特惠',
@@ -252,8 +262,9 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     emptyHint: '用 Google 登入後，把你的發現分享給其他旅客。',
     loadError: '特惠資訊暫時無法載入。',
     retry: '重試',
-    listingSub: '依機場瀏覽旅客提交的低價機票，提交後會立即顯示。',
-    disclaimer: '價格由使用者提交，未經查核，請以航空公司或訂票頁面為準。',
+    listingSub: '依機場瀏覽社群提交、官方票價與已核驗的低價機票；提交後立即顯示，核驗報價會標註更新時間。',
+    disclaimer:
+      '社群與官方票價由旅客或航司提供，可能未經平台核驗；帶「已驗證」標記的報價由採集器自動複核。價格、稅費與機位請以航空公司或訂票頁面為準。',
     searchPlaceholder: '搜尋目的地或航空公司',
     searchEmpty: '沒有符合的特惠，換個關鍵字試試。',
     loadMore: '載入更多',
@@ -277,6 +288,9 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     dateFromLabel: '去程 / 起始日期',
     dateToLabel: '回程 / 截止日期',
     booking: '訂票連結',
+    affiliateLink: '聯盟 / 邀請連結（選填）',
+    affiliateLinkPlaceholder: 'https://…?ref=你的邀請碼',
+    affiliateLinkHint: '如果你有航司或 OTA 的邀請／聯盟連結，可以填在這裡；卡片會優先使用它。',
     notes: '補充說明（選填）',
     currency: '幣別',
     viewDeal: '查看訂票',
@@ -304,6 +318,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     currencyError: '請填寫三位幣別代碼，例如 TWD。',
     dateError: '日期無效：回程不能早於出發，也不能是過去的日期。',
     urlError: '請填寫以 http:// 或 https:// 開頭的訂票連結。',
+    affUrlError: '請填寫以 http:// 或 https:// 開頭的有效聯盟連結。',
     notesError: '補充說明最多 600 個字元。',
     genericError: '提交失敗，請稍後再試。',
     submittedBy: '由 {name} 提交',
@@ -325,14 +340,14 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     stopsOne: '經停 1 次',
     stopsMany: '經停 {n} 次',
     affiliateDisclosure:
-      '訂票連結包含聯盟連結：我們可能獲得佣金，不會增加你的費用。價格變動較快，請以航司或 OTA 結帳頁為準。',
+      '部分訂票連結包含聯盟連結（包括讀者提交的連結）：我們或提交者可能獲得佣金，不會增加你的費用。價格變動較快，請以航司或 OTA 結帳頁為準。',
   },
 
   en: {
     kicker: 'Flight deals',
     title: 'Airport flight deals',
     en: 'Deals',
-    sub: 'Low fares submitted by travellers, newest first. Always confirm the price and availability on the airline or booking page.',
+    sub: 'Community fares, official fare cards and machine-verified deals, sorted by the latest publication or re-check. Always confirm price, taxes and availability on the airline or booking page.',
     latest: 'Latest deals',
     all: 'All deals',
     submit: 'Post a deal',
@@ -340,9 +355,10 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     emptyHint: 'Sign in with Google and share the first fare.',
     loadError: 'Deals are temporarily unavailable.',
     retry: 'Retry',
-    listingSub: 'Browse low fares by departure airport. New submissions appear immediately.',
+    listingSub:
+      'Browse community submissions, official fare cards and verified fares by departure airport. New submissions appear immediately; verified fares show their last check time.',
     disclaimer:
-      'Fares are submitted by users and are not verified. Confirm on the airline or booking page.',
+      'Community and official fares are provided by travellers or airlines and may not be verified by us; fares marked Verified were re-checked automatically. Always confirm price, taxes and availability on the airline or booking page.',
     searchPlaceholder: 'Search destination or airline',
     searchEmpty: 'No matching deals. Try another search.',
     loadMore: 'Load more',
@@ -366,6 +382,10 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     dateFromLabel: 'Departure date',
     dateToLabel: 'Return / last date',
     booking: 'Booking link',
+    affiliateLink: 'Affiliate / referral link (optional)',
+    affiliateLinkPlaceholder: 'https://…?ref=your-code',
+    affiliateLinkHint:
+      'If you have an airline or OTA referral/affiliate link, add it here; the card will use it instead of the booking link.',
     notes: 'Notes (optional)',
     currency: 'Currency',
     viewDeal: 'View deal',
@@ -393,6 +413,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     currencyError: 'Enter a three-letter currency code, e.g. USD.',
     dateError: 'Invalid dates: the return cannot precede departure or be in the past.',
     urlError: 'Enter a booking link starting with http:// or https://.',
+    affUrlError: 'Enter a valid affiliate link starting with http:// or https://.',
     notesError: 'Notes can be at most 600 characters.',
     genericError: 'Could not post the deal. Please try again.',
     submittedBy: 'Posted by {name}',
@@ -414,14 +435,14 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     stopsOne: '1 stop',
     stopsMany: '{n} stops',
     affiliateDisclosure:
-      'Booking links are affiliate links: we may earn a commission at no extra cost to you. Prices change quickly — always confirm the total on the airline’s site.',
+      'Some booking links are affiliate links, including links submitted by readers: we or the submitter may earn a commission at no extra cost to you. Prices change quickly — always confirm the total on the airline’s site.',
   },
 
   de: {
     kicker: 'Flugangebote',
     title: 'Flugangebote ab Flughäfen',
     en: 'Deals',
-    sub: 'Von Reisenden eingereichte günstige Flüge, neueste zuerst. Preis und Verfügbarkeit bitte bei der Airline oder auf der Buchungsseite prüfen.',
+    sub: 'Community-Tarife, offizielle Tarifkarten und automatisch geprüfte Angebote, sortiert nach letzter Veröffentlichung oder Prüfung. Preis, Steuern und Verfügbarkeit immer bei der Airline oder auf der Buchungsseite prüfen.',
     latest: 'Neueste Angebote',
     all: 'Alle Angebote',
     submit: 'Angebot melden',
@@ -430,9 +451,9 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     loadError: 'Angebote sind derzeit nicht verfügbar.',
     retry: 'Erneut versuchen',
     listingSub:
-      'Günstige Flüge nach Abflughafen durchsuchen. Neue Angebote erscheinen sofort.',
+      'Community-Tarife, offizielle Tarifkarten und geprüfte Angebote nach Abflughafen durchsuchen. Neue Einreichungen erscheinen sofort; geprüfte Tarife zeigen den Zeitpunkt der letzten Prüfung.',
     disclaimer:
-      'Preise werden von Nutzern eingereicht und nicht geprüft. Bitte bei der Airline oder auf der Buchungsseite bestätigen.',
+      'Community- und offizielle Tarife stammen von Reisenden oder Airlines und sind möglicherweise nicht von uns geprüft; mit „Verifiziert“ markierte Tarife wurden automatisch erneut geprüft. Preis, Steuern und Verfügbarkeit bitte bei der Airline oder auf der Buchungsseite prüfen.',
     searchPlaceholder: 'Ziel oder Airline suchen',
     searchEmpty: 'Keine passenden Angebote. Andere Suche versuchen.',
     loadMore: 'Mehr laden',
@@ -456,6 +477,10 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     dateFromLabel: 'Hinflugdatum',
     dateToLabel: 'Rückflug / letztes Datum',
     booking: 'Buchungslink',
+    affiliateLink: 'Affiliate-/Empfehlungslink (optional)',
+    affiliateLinkPlaceholder: 'https://…?ref=dein-code',
+    affiliateLinkHint:
+      'Wenn du einen Empfehlungs- oder Affiliate-Link der Airline oder OTA hast, trage ihn hier ein; die Karte verwendet ihn statt des Buchungslinks.',
     notes: 'Hinweise (optional)',
     currency: 'Währung',
     viewDeal: 'Zum Angebot',
@@ -485,6 +510,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     dateError:
       'Ungültige Daten: Rückreise nicht vor Abreise und nicht in der Vergangenheit.',
     urlError: 'Bitte einen Buchungslink mit http:// oder https:// angeben.',
+    affUrlError: 'Bitte einen gültigen Affiliate-Link mit http:// oder https:// eingeben.',
     notesError: 'Hinweise dürfen höchstens 600 Zeichen haben.',
     genericError: 'Einreichen fehlgeschlagen. Bitte später erneut versuchen.',
     submittedBy: 'Eingereicht von {name}',
@@ -513,7 +539,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     kicker: 'Bons plans vols',
     title: 'Bons plans vols au départ des aéroports',
     en: 'Deals',
-    sub: 'Des tarifs soumis par les voyageurs, les plus récents en premier. Vérifiez toujours le prix et les disponibilités sur le site de la compagnie ou de réservation.',
+    sub: 'Tarifs de la communauté, fiches officielles et offres vérifiées automatiquement, triés par dernière publication ou vérification. Vérifiez toujours le prix, les taxes et les disponibilités sur le site de la compagnie ou de réservation.',
     latest: 'Derniers bons plans',
     all: 'Tous les bons plans',
     submit: 'Publier un bon plan',
@@ -522,9 +548,9 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     loadError: 'Les bons plans sont momentanément indisponibles.',
     retry: 'Réessayer',
     listingSub:
-      'Parcourez les tarifs par aéroport de départ. Les nouvelles publications apparaissent immédiatement.',
+      'Parcourez les tarifs de la communauté, les fiches officielles et les offres vérifiées par aéroport de départ. Les nouvelles soumissions apparaissent immédiatement ; les offres vérifiées affichent la date du dernier contrôle.',
     disclaimer:
-      'Les tarifs sont soumis par des utilisateurs et non vérifiés. Confirmez sur le site de la compagnie ou de réservation.',
+      'Les tarifs de la communauté et officiels proviennent de voyageurs ou de compagnies et peuvent ne pas être vérifiés par nos soins ; les tarifs marqués Vérifié ont été recontrôlés automatiquement. Vérifiez toujours le prix, les taxes et les disponibilités sur le site de la compagnie ou de réservation.',
     searchPlaceholder: 'Rechercher une destination ou une compagnie',
     searchEmpty: 'Aucun bon plan correspondant. Essayez une autre recherche.',
     loadMore: 'Charger plus',
@@ -548,6 +574,10 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     dateFromLabel: 'Date aller',
     dateToLabel: 'Retour / dernière date',
     booking: 'Lien de réservation',
+    affiliateLink: 'Lien d’affiliation / de parrainage (facultatif)',
+    affiliateLinkPlaceholder: 'https://…?ref=votre-code',
+    affiliateLinkHint:
+      'Si vous avez un lien de parrainage ou d’affiliation de la compagnie ou de l’OTA, ajoutez-le ici ; la carte l’utilisera à la place du lien de réservation.',
     notes: 'Remarques (facultatif)',
     currency: 'Devise',
     viewDeal: 'Voir l’offre',
@@ -577,6 +607,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     currencyError: 'Indiquez un code devise à trois lettres, ex. EUR.',
     dateError: 'Dates invalides : le retour ne peut précéder le départ ni être passé.',
     urlError: 'Indiquez un lien de réservation commençant par http:// ou https://.',
+    affUrlError: 'Saisissez un lien d’affiliation valide commençant par http:// ou https://.',
     notesError: 'Les remarques sont limitées à 600 caractères.',
     genericError: 'Publication impossible. Réessayez plus tard.',
     submittedBy: 'Publié par {name}',
@@ -605,7 +636,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     kicker: 'Offerte voli',
     title: 'Offerte voli dagli aeroporti',
     en: 'Deals',
-    sub: 'Tariffe inviate dai viaggiatori, le più recenti per prime. Verifica sempre prezzo e disponibilità sul sito della compagnia o di prenotazione.',
+    sub: 'Tariffe della community, schede ufficiali e offerte verificate automaticamente, ordinate per ultima pubblicazione o verifica. Verifica sempre prezzo, tasse e disponibilità sul sito della compagnia o di prenotazione.',
     latest: 'Ultime offerte',
     all: 'Tutte le offerte',
     submit: 'Pubblica un’offerta',
@@ -614,9 +645,9 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     loadError: 'Le offerte non sono disponibili al momento.',
     retry: 'Riprova',
     listingSub:
-      'Sfoglia le tariffe per aeroporto di partenza. Le nuove pubblicazioni compaiono subito.',
+      'Sfoglia tariffe della community, schede ufficiali e offerte verificate per aeroporto di partenza. Le nuove segnalazioni compaiono subito; le offerte verificate mostrano l’ultimo controllo.',
     disclaimer:
-      'Le tariffe sono inviate dagli utenti e non verificate. Confermale sul sito della compagnia o di prenotazione.',
+      'Le tariffe della community e ufficiali provengono da viaggiatori o compagnie e potrebbero non essere verificate da noi; le tariffe contrassegnate come Verificato sono state ricontrollate automaticamente. Verifica sempre prezzo, tasse e disponibilità sul sito della compagnia o di prenotazione.',
     searchPlaceholder: 'Cerca destinazione o compagnia',
     searchEmpty: 'Nessuna offerta corrispondente. Prova un’altra ricerca.',
     loadMore: 'Carica altre',
@@ -640,6 +671,10 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     dateFromLabel: 'Data di andata',
     dateToLabel: 'Ritorno / ultima data',
     booking: 'Link di prenotazione',
+    affiliateLink: 'Link di affiliazione / referral (facoltativo)',
+    affiliateLinkPlaceholder: 'https://…?ref=il-tuo-codice',
+    affiliateLinkHint:
+      'Se hai un link di referral o affiliazione della compagnia o OTA, inseriscilo qui; la scheda lo userà al posto del link di prenotazione.',
     notes: 'Note (facoltativo)',
     currency: 'Valuta',
     viewDeal: 'Vedi offerta',
@@ -668,6 +703,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     dateError:
       'Date non valide: il ritorno non può precedere la partenza né essere passato.',
     urlError: 'Inserisci un link di prenotazione che inizi con http:// o https://.',
+    affUrlError: 'Inserisci un link di affiliazione valido che inizi con http:// o https://.',
     notesError: 'Le note possono contenere al massimo 600 caratteri.',
     genericError: 'Pubblicazione non riuscita. Riprova più tardi.',
     submittedBy: 'Pubblicata da {name}',
@@ -696,7 +732,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     kicker: '특가 항공권',
     title: '공항 항공권 특가',
     en: 'Deals',
-    sub: '여행자가 올린 특가 항공권을 최신순으로 보여 줍니다. 가격과 좌석은 항공사나 예약 페이지에서 확인하세요.',
+    sub: '커뮤니티 제보, 공식 요금 카드, 자동 검증 특가를 최근 게시 또는 검증 순으로 보여 줍니다. 가격, 세금, 좌석은 항공사나 예약 페이지에서 확인하세요.',
     latest: '최신 특가',
     all: '전체 특가',
     submit: '특가 올리기',
@@ -704,9 +740,10 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     emptyHint: 'Google로 로그인하고 첫 특가를 공유해 보세요.',
     loadError: '특가 정보를 불러올 수 없습니다.',
     retry: '다시 시도',
-    listingSub: '출발 공항별로 여행자가 올린 특가를 둘러보세요. 새로 올린 특가는 즉시 표시됩니다.',
+    listingSub:
+      '출발 공항별로 커뮤니티 제보, 공식 요금 카드, 검증된 특가를 둘러보세요. 새 제보는 즉시 표시되고, 검증된 특가는 마지막 확인 시간이 표시됩니다.',
     disclaimer:
-      '가격은 사용자가 올린 정보로 검증되지 않았습니다. 항공사나 예약 페이지에서 확인하세요.',
+      '커뮤니티 및 공식 요금은 여행자나 항공사가 제공하며 플랫폼에서 검증되지 않았을 수 있습니다. ‘검증됨’ 표시가 있는 특가는 자동으로 다시 확인된 것입니다. 가격, 세금, 좌석은 항공사나 예약 페이지에서 확인하세요.',
     searchPlaceholder: '목적지 또는 항공사 검색',
     searchEmpty: '일치하는 특가가 없습니다. 다른 검색어를 입력해 보세요.',
     loadMore: '더 보기',
@@ -730,6 +767,10 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     dateFromLabel: '가는 날',
     dateToLabel: '오는 날 / 마지막 날',
     booking: '예약 링크',
+    affiliateLink: '제휴 / 추천 링크 (선택)',
+    affiliateLinkPlaceholder: 'https://…?ref=내-코드',
+    affiliateLinkHint:
+      '항공사나 OTA 제휴/추천 링크가 있으면 여기에 입력하세요. 카드는 예약 링크 대신 이 링크를 사용합니다.',
     notes: '추가 정보(선택)',
     currency: '통화',
     viewDeal: '예약 보기',
@@ -757,6 +798,7 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     currencyError: '세 글자 통화 코드를 입력하세요. 예: KRW.',
     dateError: '날짜가 올바르지 않습니다. 귀국일은 출발일보다 빠르거나 과거일 수 없습니다.',
     urlError: 'http:// 또는 https://로 시작하는 예약 링크를 입력하세요.',
+    affUrlError: 'http:// 또는 https://로 시작하는 올바른 제휴 링크를 입력하세요.',
     notesError: '추가 정보는 최대 600자입니다.',
     genericError: '등록하지 못했습니다. 잠시 후 다시 시도해 주세요.',
     submittedBy: '{name} 님이 등록',

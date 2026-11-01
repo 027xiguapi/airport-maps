@@ -433,7 +433,7 @@ Field 语义：`title` / `summary` / `updated` 对应迁移前的 frontmatter（
 - `sessions`：旧自定义会话表，NextAuth 改用加密 JWT 后不再读写；保留仅为兼容旧数据，可在确认无需回滚后删除。
 - `deals`：一行一个报价，社区提交、官方票价卡和机器采集的特价共用这一张表。`kind` 区分来源（`community` / `official` / `fare`）；`airport_iata` 外键指向 `airports`（出发机场），`status` 为 `visible` / `hidden`；`expires_at` 是列表截止时间（填了 `travel_to` 取当天 23:59，否则提交后 30 天）。`submitter_name` 是提交时的快照（机器报价为空）；`tax_included=false` 显示「不含税」；`batch_id` 把一次粘贴导入的行归为一组，可整批删除；`booking_url` 对官方票价可为空。`destination_en` / `airline_en` / `notes_en` 是英文主文案：非中文页面显示英文主行 + 中文小字（航司/备注为「English (中文)」），中文页面只显示中文。
 - `deals` 的机器报价字段：`provider` + `fingerprint` 唯一标识一次采集的行程，`destination_iata` / `destination_country` / `destination_city` 是到达机场信息，`price_usd` / `fx_rate` 是归一化价格，`stops` / `duration_minutes` / `flight_numbers` 是行程信息，`deal_score` / `discount_pct` / `baseline_usd` / `is_deal` 是特价判定结果，`verified_at` 是最近一次核验时间。采集器按 `(provider, fingerprint)` upsert，过期由 `expires_at` 控制。
-- `deals.aff_url`：显式联盟链接，卡片优先使用；为空时机器报价会按环境变量 `AFF_QUERY` 或 `AFF_PARAM` + `AFF_VALUE` 在 `booking_url` 上拼参（`lib/aff.ts`）。社区提交的链接不会被改写。
+- `deals.aff_url`：显式联盟链接，卡片优先使用；为空时机器报价会按环境变量 `AFF_QUERY` 或 `AFF_PARAM` + `AFF_VALUE` 在 `booking_url` 上拼参（`lib/aff.ts`）。社区提交时也可以填写自己的联盟/邀请链接；环境变量只作用于机器报价，社区链接不会被自动改写。
 - `fare_price_history` / `fx_rates` / `fare_provider_runs`：价格历史、汇率和采集运行日志，配合 `deals` 的机器报价使用。
 
 这些表都由 `db/schema.ts` 管理，不动现有静态内容。建表：
