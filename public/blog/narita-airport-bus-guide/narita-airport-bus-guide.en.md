@@ -4,7 +4,6 @@ title: "Narita Airport by Bus: The Low-Cost Coach to Tokyo Station"
 summary: "A practical guide to AIRPORT BUS TYO-NRT, the low-cost coach between Narita Airport (NRT) and Tokyo Station: the roughly ¥1,500 fare, the 60–70 minute run, where the counters and stops are in Terminals 1, 2 and 3, the Yaesu South Exit return stop, luggage rules, timetable frequency, and how the bus compares with the Skyliner and the N'EX."
 date: 2026-10-20
 updated: 2026-10-20
-source: 中国青旅逗游旅行 (China Youth Travel, Douyou)
 tags: Narita Airport, airport bus, Tokyo Station, Tokyo transport, NRT
 cover: images/0.webp
 ---

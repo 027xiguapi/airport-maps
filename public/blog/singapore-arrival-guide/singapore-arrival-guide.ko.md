@@ -3,7 +3,6 @@ slug: singapore-arrival-guide
 title: 싱가포르 입국: 창이 공항 단계별 안내 (공항 지도와 MRT 포함)
 summary: 싱가포르 창이 공항에서 입국 심사를 단계별로 — Arrival 표지판을 따라 입국 심사장으로 간 뒤 자동 게이트 두 개를 통과하는 방법, SG 도착 카드, 창이 공항 지도와 싱가포르 MRT 노선도까지 정리했습니다.
 date: 2026-09-30
-source: 海外轻留学
 tags: 싱가포르 입국, 창이 공항, SG 도착 카드, 싱가포르 MRT
 cover: images/0.webp
 ---

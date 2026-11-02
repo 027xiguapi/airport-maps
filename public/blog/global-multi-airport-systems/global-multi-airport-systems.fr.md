@@ -4,7 +4,6 @@ title: "Près de 60 systèmes multi-aéroports : pourquoi une métropole constru
 summary: "Une étude fondée sur les données aéroportuaires mondiales de 2018 a recensé 59 systèmes multi-aéroports, dont 93,2 % composés de deux ou trois aéroports, le schéma « un principal, un secondaire » étant le plus fréquent. Cette explication présente les trois conditions, le seuil de 70 km et la recherche en deux étapes qui sous-tendent ce résultat, et ce qu'il implique pour les villes chinoises."
 date: 2026-10-19
 updated: 2026-10-19
-source: International Air Transport
 tags: systèmes multi-aéroports, grappes aéroportuaires, aires métropolitaines, hubs de l'aviation, planification aéroportuaire
 cover: images/0.webp
 ---

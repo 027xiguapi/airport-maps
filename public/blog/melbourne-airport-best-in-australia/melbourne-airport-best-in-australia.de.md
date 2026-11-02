@@ -4,7 +4,6 @@ title: "Flughafen Melbourne zum sechsten Mal als bester Flughafen in Australien-
 summary: "Der Flughafen Melbourne ist bei den Skytrax World Airport Awards 2026 erneut als bester Flughafen in Australien-Pazifik ausgezeichnet worden, zum sechsten Mal in sieben Jahren, obwohl sein weltweiter Rang von Platz 16 auf Platz 21 fiel. Rekordzahlen im internationalen Verkehr im Januar, neue Strecken von Delta, Hong Kong Airlines und Shenzhen Airlines sowie ein Terminalausbau für 4,5 Milliarden A$ verändern den Flughafen."
 date: 2026-10-19
 updated: 2026-10-19
-source: WeMelbourne
 tags: Flughafen Melbourne, MEL, Skytrax, australische Flughäfen, Terminalausbau
 cover: images/0.webp
 ---

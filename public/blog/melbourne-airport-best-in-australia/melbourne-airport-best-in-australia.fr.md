@@ -4,7 +4,6 @@ title: "L'aéroport de Melbourne élu meilleur d'Australie-Pacifique pour la six
 summary: "L'aéroport de Melbourne a de nouveau été élu meilleur aéroport d'Australie-Pacifique aux Skytrax World Airport Awards 2026, pour la sixième fois en sept ans, alors même que son classement mondial est passé de la 16e à la 21e place. Un trafic international record en janvier, de nouvelles liaisons opérées par Delta, Hong Kong Airlines et Shenzhen Airlines, et un agrandissement du terminal de 4,5 milliards de dollars australiens transforment l'aéroport."
 date: 2026-10-19
 updated: 2026-10-19
-source: WeMelbourne
 tags: Aéroport de Melbourne, MEL, Skytrax, aéroports australiens, agrandissement du terminal
 cover: images/0.webp
 ---

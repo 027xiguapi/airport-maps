@@ -4,7 +4,6 @@ title: "Arriver à Busan Gimhae : e-Arrival Card, immigration et douanes"
 summary: "Un parcours pratique de l'arrivée à l'aéroport international de Gimhae (PUS) : remplir la e-Arrival Card coréenne trois jours à l'avance, préparer une adresse coréenne et un code postal à cinq chiffres, le couloir réservé aux étrangers avec empreintes digitales et photo du visage, les bagages et les douanes, et comment rejoindre le métro léger, le bus ou le taxi après la sortie."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: aéroport de Gimhae, arrivée en Corée, e-Arrival Card, voyage à Busan, douanes coréennes
 cover: images/0.webp
 ---

@@ -3,7 +3,6 @@ slug: singapore-arrival-guide
 title: Arriving in Singapore: Changi Airport Step by Step (with airport map and MRT)
 summary: Clearing immigration at Singapore Changi step by step — follow the Arrival signs to the Immigration Hall, then the two automated gates — plus the SG Arrival Card, a Changi airport map and the Singapore MRT network map.
 date: 2026-09-30
-source: 海外轻留学
 tags: Singapore arrival, Changi Airport, SG Arrival Card, Singapore MRT
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Arrivare a JFK: immigrazione, AirTrain e metro per Manhattan"
 summary: "Cosa succede dopo l'atterraggio al JFK di New York: la corsia per i visitatori e il colloquio CBP al Terminal 1, bagagli e dogana, i due rami dell'AirTrain per Jamaica e Howard Beach, la metro E, J e Z per Manhattan, le tariffe OMNY, l'alternativa della Long Island Rail Road e le trappole che colgono chi arriva per la prima volta."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: JFK, immigrazione USA, AirTrain, metro di New York, OMNY
 cover: images/0.webp
 ---

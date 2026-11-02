@@ -4,7 +4,6 @@ title: "Busan to Seoul by KTX: Tickets, Boarding and the 15-Minute Platform Rule
 summary: "A practical guide to the KTX from Busan Station to Seoul Station: booking on Korail or a third-party app, saving the e-ticket, a station with no security and no ticket gates, platform numbers that appear 15 minutes before departure, finding your car and seat, luggage, the 2h40 journey and the Seoul Station connections."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Korea high-speed rail, KTX, Busan Station, Seoul Station, Korea transport
 cover: images/0.webp
 ---

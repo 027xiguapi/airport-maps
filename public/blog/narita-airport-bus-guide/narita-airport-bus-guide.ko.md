@@ -4,7 +4,6 @@ title: "나리타 공항 버스: 도쿄역까지 가는 저가 고속버스"
 summary: "나리타 공항(NRT)과 도쿄역을 잇는 저가 고속버스 AIRPORT BUS TYO-NRT 실용 가이드입니다. 약 ¥1,500의 요금, 60~70분 소요, 제1·2·3터미널의 카운터와 정류장 위치, 야에스 남쪽 출구 귀경 정류장, 수하물 규정, 배차 간격, 그리고 스카이라이너·N'EX와의 비교까지 담았습니다."
 date: 2026-10-20
 updated: 2026-10-20
-source: 中国青旅逗游旅行 (China Youth Travel, Douyou)
 tags: 나리타 공항, 공항 버스, 도쿄역, 도쿄 교통, NRT
 cover: images/0.webp
 ---

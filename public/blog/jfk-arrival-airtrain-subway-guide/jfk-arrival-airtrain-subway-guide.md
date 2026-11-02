@@ -4,7 +4,6 @@ title: 落地 JFK 之后：入境排队、AirTrain 与地铁进城指南
 summary: 纽约肯尼迪机场落地后的完整走法：T1 到达层的访客通道与 CBP 入境、取行李与海关申报，AirTrain 到 Jamaica 或 Howard Beach 的两条支线，换乘地铁 E、J、Z 与长岛铁路进城，OMNY 刷卡、票价与深夜到达的注意事项。
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略
 tags: 纽约肯尼迪机场, JFK入境, AirTrain, 纽约地铁, OMNY
 cover: images/0.webp
 ---

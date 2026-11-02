@@ -4,7 +4,6 @@ title: "Immigrazione e partenze all'aeroporto del Kansai: tutto il percorso, pas
 summary: "Arrivare e partire attraverso l'aeroporto internazionale del Kansai (KIX): compilare le dichiarazioni di immigrazione e dogana su Visit Japan Web prima di partire, la quarantena e i chioschi per impronte e fotografia, lo sportello dell'immigrazione, i bagagli e i varchi doganali self-service, la camminata fino al piano dei treni e, al ritorno, il check-in, il banco tax-free, i controlli di sicurezza, il controllo passaporti e quanto tempo lasciare prima del gate."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guides)
 tags: Aeroporto internazionale del Kansai, immigrazione in Giappone, partenze dal Giappone, Visit Japan Web, procedure aeroportuali
 cover: images/0.webp
 ---

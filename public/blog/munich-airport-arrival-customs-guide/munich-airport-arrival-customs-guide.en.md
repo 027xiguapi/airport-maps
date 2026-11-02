@@ -4,7 +4,6 @@ title: 'Munich Airport Arrival Guide: the EES Process and German Customs Rules'
 summary: "How to clear arrival at Munich Airport: the papers to prepare before you fly, the EU's EES entry/exit system and its self-service steps (language, passport scan, face and fingerprint capture), the full Terminal 1 and Terminal 2 arrival flows, and the German customs lists of prohibited items and things you must declare."
 date: 2026-10-21
 updated: 2026-10-21
-source: 安利带你看世界 (Amway China)
 tags: Munich Airport, German entry, EES system, customs declaration, MUC
 cover: images/1.webp
 ---

@@ -4,7 +4,6 @@ title: "Leitfaden zum Flughafen Narita: Terminals, Züge nach Tokio und zollfrei
 summary: "Ein praktischer Leitfaden zum internationalen Flughafen Narita (NRT): wie die Terminals 1, 2 und 3 die Airlines aufteilen, ihre Ebenen und der kostenlose Shuttle zwischen den Terminals, der Skyliner, N'EX, Keisei-Züge und Flughafenbusse nach Tokio mit Fahrzeiten und Richtpreisen, die Duty-Free-Geschäfte und Debüt-Souvenirs 2025, Transfers, Übernachtungen und späte Ankünfte sowie Gepäckaufbewahrung, WLAN, Fundbüro und häufige Fragen."
 date: 2026-10-20
 updated: 2026-10-20
-source: 乐游霓虹 (Leyou Nihong)
 tags: Flughafen Narita, NRT, Verkehr in Tokio, Duty-Free am Flughafen, Zwischenstopps
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Duty-Free am Flughafen Haneda: Shops, Marken und Transitregeln in T2 und
 summary: "Ein praktischer Leitfaden zum Duty-Free-Einkauf am Flughafen Haneda (HND): das TIAT DUTY FREE SOUVENIR in T2, die beiden Shops in T3 beim Gate 109, ihre Öffnungszeiten und Marken, ANA-Gutscheine und Online-Vorbestellung sowie Duty-Free gegenüber Tax-Free, Flüssigkeiten bei Umsteigeverbindungen und was man eher am Flughafen als in der Stadt kaufen sollte."
 date: 2026-10-20
 updated: 2026-10-20
-source: ANADutyFreeShop (ANA Trading Duty Free)
 tags: Duty-Free Haneda, Duty-Free Japan, japanischer Whisky, Flughafeneinkauf, Reisen in Tokio
 cover: images/0.webp
 ---

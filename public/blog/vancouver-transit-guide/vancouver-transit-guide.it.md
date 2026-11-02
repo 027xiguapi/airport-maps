@@ -3,7 +3,6 @@ slug: vancouver-transit-guide
 title: "In coincidenza a Vancouver: guida al transito a YVR"
 summary: "Coincidenza a Vancouver su un itinerario Air Canada Seattle–Vancouver–Shanghai: nessun ritiro bagagli e nessun nuovo controllo di sicurezza, ma il passaggio alla dogana canadese è obbligatorio. I cartelli da seguire, la fase di Satellite Primary Inspection e le mappe del terminal di YVR."
 date: 2026-09-30
-source: 多肉2号
 tags: transito a Vancouver, YVR, dogana canadese, voli in coincidenza
 cover: images/0.webp
 ---

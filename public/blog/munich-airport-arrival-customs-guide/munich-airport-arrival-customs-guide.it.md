@@ -4,7 +4,6 @@ title: "Guida all'arrivo all'aeroporto di Monaco di Baviera: la procedura EES e 
 summary: "Come superare l'arrivo all'aeroporto di Monaco di Baviera: i documenti da preparare prima di partire, il sistema di ingresso/uscita EES dell'UE e i suoi passaggi self-service (lingua, scansione del passaporto, acquisizione di volto e impronte), l'intero percorso di arrivo del Terminal 1 e del Terminal 2 e gli elenchi delle dogane tedesche di articoli vietati e cose da dichiarare."
 date: 2026-10-21
 updated: 2026-10-21
-source: 安利带你看世界 (Amway China)
 tags: Aeroporto di Monaco di Baviera, ingresso in Germania, sistema EES, dichiarazione doganale, MUC
 cover: images/1.webp
 ---

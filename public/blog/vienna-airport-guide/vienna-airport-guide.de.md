@@ -4,7 +4,6 @@ title: 'Flughafen Wien: Ein vollständiger Leitfaden zu Terminals, Stadtverkehr 
 summary: 'Ein praktischer Leitfaden zum Flughafen Wien (VIE): die Terminals 1, 1A und 3 mit ihren Gate-Bereichen, der City Airport Train, Busse, die S-Bahn S7 und Railjet-Züge in die Stadt, die Schritte Check-in, Gepäckabgabe, Sicherheitskontrolle und Passkontrolle sowie Gepäckaufbewahrung, Zollfreimengen, Geldwechsel und Geldautomaten.'
 date: 2026-10-08
 updated: 2026-10-23
-source: 维也纳机场 (Vienna Airport)
 tags: Flughafen Wien, VIE, Reisen in Österreich, Flughafentransport, Abflug
 cover: images/0.webp
 ---

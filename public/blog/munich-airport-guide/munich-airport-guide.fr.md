@@ -4,7 +4,6 @@ title: "Guide des correspondances à l'aéroport de Munich : quatre combinaisons
 summary: "Un guide complet de l'aéroport de Munich (MUC) : combien de temps prend chacune des quatre combinaisons de correspondance Schengen et ce qu'elle implique, un parcours de correspondance LH727 pas à pas, l'histoire de l'aéroport, les salons gratuits, payants et réservés aux compagnies avec les cabines de sommeil NapCabs, la restauration, le duty-free, les hôtels de l'aéroport et les espaces fumeurs, ainsi que l'exploitation des vols et le paysage des compagnies de l'aéroport."
 date: 2026-10-21
 updated: 2026-10-21
-source: 亦出旅行 (Yichu Trip)
 tags: Aéroport de Munich, MUC, correspondances à l'aéroport, correspondances Schengen, Lufthansa
 cover: images/0.webp
 ---

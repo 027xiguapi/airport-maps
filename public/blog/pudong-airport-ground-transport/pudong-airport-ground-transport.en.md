@@ -3,7 +3,6 @@ slug: pudong-airport-ground-transport
 title: Arriving at Pudong Airport: Metro, Taxi and Bus Connections
 summary: How to reach the city from Pudong Airport's T1 and T2 by metro, taxi and bus — where each terminal's arrivals exits are, how the transfer hall is laid out, which door leads to the taxi rank, and which bus routes leave from where.
 date: 2026-09-29
-source: 上海交通 (Shanghai Transport)
 tags: Pudong airport transport, Shanghai metro, airport buses, taxi
 cover: images/3.webp
 ---

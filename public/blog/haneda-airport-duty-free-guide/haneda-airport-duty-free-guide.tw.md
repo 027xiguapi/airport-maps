@@ -4,7 +4,6 @@ title: 羽田機場免稅店怎麼逛：T2 與 T3 三間店、品牌與轉機限
 summary: 羽田機場（HND）免稅購物指南：T2 的 TIAT DUTY FREE SOUVENIR，T3 閘口 109 前的化妝品店與酒煙店，營業時間、主要品牌、ANA 代金券與預約取貨，以及免稅與退稅的區別、轉機液體限制和「機場買還是市區買」的判斷。
 date: 2026-10-20
 updated: 2026-10-20
-source: ANADutyFreeShop
 tags: 羽田機場免稅店, 日本免稅, 日本威士忌, 機場購物, 東京旅行
 cover: images/0.webp
 ---

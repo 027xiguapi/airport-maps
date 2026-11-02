@@ -4,7 +4,6 @@ title: "Traffico passeggeri degli aeroporti mondiali: Atlanta vince per il quint
 summary: "Atlanta ha gestito 106.3 milioni di passeggeri nel 2025 e guida il mondo per il quinto anno consecutivo, anche se il traffico è calato dell'1.6%. Shanghai Pudong è entrata per la prima volta nella top five globale con 84.99 milioni, Guangzhou Baiyun è salita al nono posto e 13 aeroporti cinesi sono nella top 50, 12 dei quali in salita."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: classifica aeroporti, traffico passeggeri, aeroporto di Shanghai Pudong, aeroporto di Atlanta, aeroporto di Guangzhou Baiyun
 cover: images/0.webp
 ---

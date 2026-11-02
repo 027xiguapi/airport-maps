@@ -4,7 +4,6 @@ title: "Ein US-B1/B2-Visum in Shenyang erneuern: DS-160, Interview-Waiver und Ab
 summary: "Eine praktische Schritt-für-Schritt-Anleitung für die Erneuerung eines US-B1/B2-Visums in Shenyang: wie Sie Foto und Namenscodes vorbereiten, das DS-160 ausfüllen und speichern, im Terminsystem die richtige Wahl für den Interview-Waiver treffen und Dokumente bei der CITIC Bank oder per EMS einreichen."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: US-Visum, Visumerneuerung, DS-160, Interview-Waiver, Shenyang
 cover: images/0.webp
 ---

@@ -3,7 +3,6 @@ slug: singapore-arrival-guide
 title: "Arriver à Singapour : l'aéroport de Changi étape par étape (avec plan de l'aéroport et MRT)"
 summary: "Passer l'immigration à l'aéroport de Singapour Changi étape par étape — suivre les panneaux Arrival jusqu'au hall de l'immigration, puis les deux portiques automatiques — plus la SG Arrival Card, un plan de l'aéroport de Changi et le plan du réseau MRT de Singapour."
 date: 2026-09-30
-source: 海外轻留学
 tags: Arrivée à Singapour, aéroport de Changi, SG Arrival Card, MRT de Singapour
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Six Piers, a Tang Roof and Zero Transfer: The Architecture of Xi'an Xian
 summary: "Terminal 5 at Xi'an Xianyang International Airport took second place in the World's Best New Airport Terminal category at the 2025 Skytrax World Airport Awards. Designed by the China Northwest Architecture Design and Research Institute, it covers about 705,500 square metres, uses China's first six-finger radial plan and wraps a Tang-inspired roof around a steel frame. Here is how the building works, in plain language."
 date: 2026-10-19
 updated: 2026-10-19
-source: Shanghai Society of Civil Engineering
 tags: Xi'an Xianyang International Airport, Terminal 5, China Northwest Architecture Design and Research Institute, six-finger radial plan, Skytrax, airport architecture
 cover: images/0.webp
 ---

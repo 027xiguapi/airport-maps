@@ -4,7 +4,6 @@ title: "Gli aeroporti più trafficati del mondo: Denver primo con 794 partenze c
 summary: "La top 30 di marzo 2024 per partenze medie giornaliere programmate di passeggeri mette Denver prima con 794, chiudendo la serie di due mesi di Dallas/Fort Worth. Delhi torna nella top ten, Las Vegas guadagna 13 posizioni, Amsterdam e Istanbul perdono circa dieci posizioni, mentre LaGuardia, Mumbai, Changi, Seattle e Newark entrano nella top 30."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: classifica aeroporti, capacità di partenza, aeroporto di Denver, aeroporto di Delhi, aeroporto di Changi
 cover: images/0.webp
 ---

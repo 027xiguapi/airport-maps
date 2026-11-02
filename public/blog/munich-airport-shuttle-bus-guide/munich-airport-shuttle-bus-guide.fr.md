@@ -4,7 +4,6 @@ title: "Guide de la navette de l'aéroport de Munich : points de rendez-vous, ho
 summary: "La navette d'arrivée du séminaire de Munich : les points de rendez-vous aux terminaux 1 et 2, les horaires du bus et comment consulter la grille en temps réel, ainsi que les quatre façons de rejoindre le centre-ville depuis l'aéroport de Munich — taxi, Uber, S-Bahn et Lufthansa Express Bus, avec itinéraires, tarifs et arrêts, et comment se connecter au Wi-Fi gratuit de l'aéroport."
 date: 2026-10-21
 updated: 2026-10-21
-source: 安利带你看世界 (Amway China)
 tags: Aéroport de Munich, navette, MUC, transport aéroport, S-Bahn
 cover: images/0.webp
 ---

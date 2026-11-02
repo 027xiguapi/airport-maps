@@ -4,7 +4,6 @@ title: "Von Jeju nach Seoul fliegen: Eine Schritt-für-Schritt-Anleitung für de
 summary: "Ein praktischer Leitfaden für den Inlandsflug von Jeju (CJU) nach Seoul Gimpo (GMP): Check-in und Gepäckabgabe auf Ebene 3 des Inlandsterminals in Jeju, die Spur nur für Ausländer nahe Gate 3, der einstündige Hüpfer und die Optionen mit T-money, Metro und Flughafenbahn nach der Landung in Gimpo – dazu die Visaregel, die visumfreie Jeju-Besucher bereits beim Check-in stoppt."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Flughafen Jeju, Flughafen Gimpo, Inlandsflug Korea, visumfreies Jeju, Visum Korea
 cover: images/0.webp
 ---

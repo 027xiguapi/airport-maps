@@ -4,7 +4,6 @@ title: "I dieci aeroporti più trafficati del mondo: Dubai primo con 4.9 milioni
 summary: "La classifica OAG di febbraio 2026 misura la capacità in posti sulle partenze, non il numero di passeggeri. Dubai guida con circa 4.9 milioni di posti, Atlanta è seconda con 4.6 milioni, Shanghai Pudong sale terza con 4.28 milioni e Guangzhou Baiyun guadagna tre posizioni fino alla quinta. Tutti e dieci gli aeroporti si trovano nell'emisfero nord."
 date: 2026-10-19
 updated: 2026-10-19
-source: Aviation Viewpoint
 tags: classifica aeroporti, OAG, capacità in posti, aeroporto di Dubai, aeroporto di Shanghai Pudong
 cover: images/0.webp
 ---

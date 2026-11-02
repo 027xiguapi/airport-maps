@@ -4,7 +4,6 @@ title: 大阪關西機場落地指南：T1／T2、吃住購物與進城四種方
 summary: 大阪關西國際機場（KIX）落地指南：T1、T2 與 Aeroplaza 的分工，機場裡怎麼吃、買、住，南海電鐵、JR HARUKA、機場巴士與計程車四種進城方式的參考時間與票價，以及現金、提前 3 小時到場與 Visit Japan Web 等實用貼士。
 date: 2026-10-20
 updated: 2026-10-20
-source: 霓虹醬日本資訊
 tags: 關西國際機場, KIX, 大阪旅行, 航廈, 機場交通, 日本自由行
 cover: images/0.webp
 ---

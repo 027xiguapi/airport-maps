@@ -4,7 +4,6 @@ title: 'Which airport for Japan? Narita, Haneda, Kansai, Chubu and Naha compared
 summary: 'Where you land shapes a Japan trip more than when you take off. This guide compares the five main gateways — Narita (NRT), Haneda (HND), Kansai (KIX), Chubu (NGO) and Naha (OKA) — on distance, trains and buses, journey time and reference fares, then covers the Haneda-versus-Narita decision, Kansai, Nagoya and Okinawa, the shared arrival steps through Visit Japan Web, and what to do after a red-eye landing.'
 date: 2026-10-20
 updated: 2026-10-20
-source: 乐意门 (Leyimen)
 tags: Japan airports, Narita, Haneda, Kansai airport, Japan arrivals
 cover: images/0.webp
 ---

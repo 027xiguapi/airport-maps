@@ -4,7 +4,6 @@ title: "Retrait des achats hors taxes à Incheon T2 : de la commande sur l'appli
 summary: "Comment retirer vos commandes hors taxes à l'aéroport d'Incheon, terminal 2 : commander sur l'application duty-free, arriver trois heures à l'avance ou une heure avant l'embarquement en transit, le point de retrait en face du Korean Traditional Culture Center au 3e étage, l'escalator qui descend vers la salle du 2e étage, les bornes, le scan du passeport et la file d'attente par numéro, ainsi que les règles sur les liquides et les correspondances."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: aéroport d'Incheon, retrait hors taxes, terminal 2, shopping en Corée, voyage en Corée
 cover: images/0.webp
 ---

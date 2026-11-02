@@ -4,7 +4,6 @@ title: 'Munich Airport Shuttle Bus Guide: Meeting Points, Schedule and Getting i
 summary: "The Munich seminar's arrival shuttle: the Terminal 1 and 2 meeting points, the bus schedule and how to check the live timetable, plus the four ways from Munich Airport into the city — taxi, Uber, the S-Bahn and the Lufthansa Express Bus, with routes, fares and stops, and how to join the airport's free Wi-Fi."
 date: 2026-10-21
 updated: 2026-10-21
-source: 安利带你看世界 (Amway China)
 tags: Munich Airport, shuttle bus, MUC, airport transport, S-Bahn
 cover: images/0.webp
 ---

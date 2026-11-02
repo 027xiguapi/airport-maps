@@ -4,7 +4,6 @@ title: "The World's Top 10 Cargo Airports: Hong Kong Still First, Eight of Ten i
 summary: "Airports Council International's 2023 cargo ranking puts Hong Kong first with 4.33 million tonnes, Memphis second with 3.88 and Shanghai Pudong third with 3.44, up 10.4 per cent. Global air cargo fell 3.1 per cent to 113 million tonnes, 95.4 per cent of 2019, and the top ten handled 29.6 million tonnes, 26 per cent of the world total."
 date: 2026-10-19
 updated: 2026-10-19
-source: Aviation Viewpoint
 tags: air cargo, ACI, cargo airport rankings, Hong Kong International, Memphis airport, Shanghai Pudong
 cover: images/0.webp
 ---

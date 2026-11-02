@@ -3,7 +3,6 @@ slug: pudong-airport-ground-transport
 title: "Arrivare all'aeroporto di Pudong: collegamenti in metropolitana, taxi e autobus"
 summary: "Come raggiungere la città dall'aeroporto di Pudong, dai terminal T1 e T2, in metropolitana, taxi e autobus: dove si trovano le uscite degli arrivi di ciascun terminal, come è disposta la sala trasferimenti, quale porta conduce al posteggio dei taxi e quali linee di autobus partono da dove."
 date: 2026-09-29
-source: 上海交通 (Shanghai Transport)
 tags: Trasporti aeroporto di Pudong, metropolitana di Shanghai, autobus aeroportuali, taxi
 cover: images/3.webp
 ---

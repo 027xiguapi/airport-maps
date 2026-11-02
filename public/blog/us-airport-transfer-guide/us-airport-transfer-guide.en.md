@@ -3,7 +3,6 @@ slug: us-airport-transfer-guide
 title: 'Transferring in the US After Arrival: Seven Major Airports, From Immigration to Your Next Gate'
 summary: 'How a US connection works once you have landed, airport by airport: the terminal and concourse layout at Los Angeles LAX, San Francisco SFO, Atlanta ATL, Chicago ORD, New York Newark EWR, Seattle SEA and Detroit DTW, the shuttle buses and airport trains between them, re-checking your bags and clearing security again, and how much connection time each airport needs.'
 date: 2026-10-10
-source: 游美旅社 (YOME Travel)
 tags: US transit, US immigration, LAX, SFO, ATL, ORD, EWR, SEA, DTW
 cover: images/0.webp
 ---

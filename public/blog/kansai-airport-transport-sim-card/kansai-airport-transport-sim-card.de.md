@@ -4,7 +4,6 @@ title: 'Ihre erste Stunde am Flughafen Kansai: Einreise, SIM-Karten, T1 und T2 s
 summary: 'Eine Schritt-für-Schritt-Anleitung für die erste Stunde am Flughafen Kansai (KIX): das Ausfüllen der Erklärung in Visit Japan Web oder des Papierformulars, die Wahl zwischen SIM-Karten von Softbank, Docomo und AU, der Ankunftsablauf in Terminal 1 und Terminal 2, der kostenlose Shuttle zwischen beiden, die Züge, Busse und Taxis in die Stadt sowie Kauf und Nutzung einer ICOCA-Karte.'
 date: 2026-10-20
 updated: 2026-10-20
-source: 唐人签证 (Tangren Visa)
 tags: Flughafen Kansai, KIX, Ankunft in Japan, SIM-Karten, ICOCA, Flughafentransport
 cover: images/0.webp
 ---

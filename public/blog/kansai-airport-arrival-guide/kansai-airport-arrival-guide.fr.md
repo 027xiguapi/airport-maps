@@ -4,7 +4,6 @@ title: "Aéroport international du Kansai : guide de premier atterrissage au T1,
 summary: "Un guide de premier atterrissage à l'aéroport international du Kansai (KIX) : comment se répartissent le terminal 1, le terminal 2 et le bâtiment Aeroplaza, où manger et faire du shopping dans le terminal, l'hôtel capsules First Cabin et l'hôtel Nikko Kansai Airport, et les quatre façons de rejoindre la ville — la ligne Nankai, le JR HARUKA, le bus de l'aéroport et les taxis — avec les tarifs et temps de trajet à prévoir."
 date: 2026-10-20
 updated: 2026-10-20
-source: 霓虹酱日本资讯 (Neon-chan Japan Info)
 tags: aéroport international du Kansai, KIX, voyage à Osaka, terminaux d'aéroport, transports aéroport, Japon
 cover: images/0.webp
 ---

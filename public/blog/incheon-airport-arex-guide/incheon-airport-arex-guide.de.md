@@ -4,7 +4,6 @@ title: "Mit der AREX zum Flughafen Incheon: Express oder All-Stop-Zug?"
 summary: "Ein praktischer Leitfaden zur AREX-Bahn vom Flughafen Incheon zur Seoul Station: der 43-minütige Expresszug für 13.000 Won, der All-Stop-Zug ab etwa 4.750 Won, wo Sie auf Ebene B1 Fahrkarten kaufen, die T-money-Regeln und die Anschlüsse an der Seoul Station."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: Nahverkehr Flughafen Incheon, AREX, Seoul Station, Flughafenbahn, Reisen in Korea
 cover: images/0.webp
 ---

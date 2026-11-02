@@ -4,7 +4,6 @@ title: "Guide de l'aéroport de Narita : terminaux, trains vers Tokyo et boutiqu
 summary: "Guide pratique de l'aéroport international de Narita (NRT) : la répartition des compagnies entre les terminaux 1, 2 et 3, leurs étages et la navette inter-terminaux gratuite, le Skyliner, le N'EX, les trains Keisei et les bus aéroport vers Tokyo avec durées et tarifs indicatifs, les boutiques hors taxes et souvenirs inédits de 2025, les correspondances, les nuits sur place et les arrivées tardives, ainsi que la consigne, le Wi-Fi, les objets trouvés et les questions courantes."
 date: 2026-10-20
 updated: 2026-10-20
-source: 乐游霓虹 (Leyou Nihong)
 tags: Aéroport de Narita, NRT, transports à Tokyo, boutiques hors taxes à l'aéroport, escales
 cover: images/0.webp
 ---

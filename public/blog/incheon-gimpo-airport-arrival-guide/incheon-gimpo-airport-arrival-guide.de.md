@@ -4,7 +4,6 @@ title: "Incheon oder Gimpo: In Seoul ankommen und in die Stadt gelangen"
 summary: "Wie sich Seouls zwei Flughäfen unterscheiden – Entfernung, Terminals, Einwanderungszeiten und die Wege in die Stadt: AREX-Express versus Züge mit allen Halten, Flughafenbusse und Taxis, dazu Q-CODE, das C-3-9-Visum und die Visumfalle für Jeju am Inlandsterminal von Gimpo."
 date: 2026-10-22
 updated: 2026-10-22
-source: VJW Chinese Simplified Edition (WeChat account)
 tags: Flughafen Incheon, Flughafen Gimpo, AREX, Seoul Nahverkehr, Einreise Korea
 cover: images/0.webp
 ---

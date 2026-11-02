@@ -4,7 +4,6 @@ title: "Flughafen Hongkong gewinnt die Auszeichnung für die weltbeste Flughafen
 summary: "Am 30. März erhielt Nuctech ein Dankesschreiben der Flughafenbehörde Hongkong für seinen Beitrag dazu, dass der internationale Flughafen Hongkong den Skytrax-Preis für die weltbeste Flughafensicherheit gewann. Bei der Zeremonie am 18. März in London belegte der Flughafen weltweit Platz vier und holte die Sicherheitskategorie zum ersten Mal in seiner 28-jährigen Geschichte – ein Novum für einen asiatischen Flughafen. Dieser Artikel trennt die Fakten zur Auszeichnung von der Beschreibung des Systems durch den Anbieter."
 date: 2026-10-19
 updated: 2026-10-19
-source: Nuctech
 tags: Flughafen Hongkong, HKG, Flughafensicherheit, Skytrax, Nuctech
 cover: images/0.webp
 ---

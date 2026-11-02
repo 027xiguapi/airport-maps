@@ -4,7 +4,6 @@ title: "Von Yeouido zum Incheon Airport mit Bus 6007: wo Sie einsteigen und wie 
 summary: "Ein praktischer Leitfaden zum Flughafenbus 6007 von Yeouido in Seoul zum Incheon International Airport: der Fußweg von den Ausgängen 3 und 4 des Hyundai-Kaufhauses zur Haltestelle Fairmont Ambassador Seoul, der Fahrpreis von etwa 17.000 Won per T-money oder in bar, das vom Fahrer verladene Gepäck, eine erste Abfahrt um 04:38 und eine letzte um 20:08, die Reihenfolge der Halte in T1 und T2 und wie viel Zeit Sie einplanen sollten."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guides)
 tags: Yeouido, Flughafenbus 6007, Incheon Airport, Verkehr in Seoul, Korea-Reise
 cover: images/0.webp
 ---

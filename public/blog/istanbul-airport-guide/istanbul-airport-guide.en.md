@@ -3,7 +3,6 @@ slug: istanbul-airport-guide
 title: Istanbul Airport for Chinese Travellers: A Golden Week Guide
 summary: iGA Istanbul Airport's guide for travellers from China — Chinese signage and video kiosks across the terminal, shopping, dining and a vast duty-free area, the iGA Lounge, and family facilities from the kids' playground to baby care rooms.
 date: 2026-09-28
-source: 伊斯坦布尔机场IST (Istanbul Airport IST)
 tags: Istanbul Airport, Turkey travel, airport transit, Chinese-language services
 cover: images/3.webp
 ---

@@ -4,7 +4,6 @@ title: "Partenze dal Terminal 1 di Changi: check-in anticipato, rimborso GST e i
 summary: "Una sequenza pratica per partire dall'aeroporto di Changi, Terminal 1: le finestre di check-in anticipato a Jewel e quali compagnie le offrono, il rimborso GST prima dell'immigrazione, i controlli automatici in partenza e la sicurezza ai gate, e come usare le ore che si guadagnano a Jewel."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Aeroporto di Changi, Singapore Changi Terminal 1, check-in anticipato, rimborso GST, Jewel Changi
 cover: images/0.webp
 ---

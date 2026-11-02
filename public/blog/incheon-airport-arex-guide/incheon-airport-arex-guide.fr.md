@@ -4,7 +4,6 @@ title: "Incheon en AREX : train Express ou omnibus ?"
 summary: "Un guide pratique de la ligne AREX, de l'aéroport international d'Incheon à la gare de Séoul : le train Express en 43 minutes pour 13,000 won, le service omnibus à partir d'environ 4,750 won, où acheter les billets au niveau B1, les règles de T-money et les correspondances à la gare de Séoul."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: transport à l'aéroport d'Incheon, AREX, gare de Séoul, train d'aéroport, voyage en Corée
 cover: images/0.webp
 ---

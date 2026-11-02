@@ -4,7 +4,6 @@ title: "Incheon Airport: Getting Between Terminal 1 and Terminal 2"
 summary: "The two ways between Incheon's terminals — the free shuttle bus (airport routes 03 and 04) from the 3F departures kerb, and the AREX all-stop train from B1 — with hours, frequency, fares and stops, plus which airlines use which terminal and what to watch for on a cross-terminal connection."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: Incheon Airport, T1 to T2, free shuttle bus, AREX, Korea travel
 cover: images/0.webp
 ---

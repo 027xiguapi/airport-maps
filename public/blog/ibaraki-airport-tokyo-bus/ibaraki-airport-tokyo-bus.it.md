@@ -4,7 +4,6 @@ title: "Dall'aeroporto di Ibaraki a Tokyo: l'autobus autostradale, tariffe e pre
 summary: "L'aeroporto di Ibaraki (IBR) non ha una stazione ferroviaria, quindi il percorso per Tokyo è un pullman autostradale fino all'uscita sud Yaesu della stazione di Tokyo: circa 85 km e 100 minuti, ¥2.200 sola andata dal 30 marzo 2025. Questa guida copre la tariffa e il pagamento attuali, le regole di prenotazione di Japan Bus Online, l'orario estivo 2026 piuttosto ridotto e i tre minuti a piedi dagli arrivi alla fermata."
 date: 2026-10-20
 updated: 2026-10-20
-source: 品质游 找春秋 (Chunqiu Travel)
 tags: Aeroporto di Ibaraki, IBR, trasporti per Tokyo, autobus autostradale, viaggio in Giappone
 cover: images/0.webp
 ---

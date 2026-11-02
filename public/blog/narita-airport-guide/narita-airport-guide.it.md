@@ -4,7 +4,6 @@ title: "Guida all'aeroporto di Narita: terminal, treni per Tokyo e acquisti duty
 summary: "Una guida pratica all'aeroporto internazionale di Narita (NRT): come i Terminal 1, 2 e 3 si dividono le compagnie, i loro piani e la navetta gratuita tra i terminal, lo Skyliner, il N'EX, i treni Keisei e gli autobus aeroportuali per Tokyo con tempi di percorrenza e tariffe indicative, i negozi duty-free del 2025 e i souvenir in anteprima, le coincidenze, i pernottamenti e gli arrivi a tarda notte, più deposito bagagli, Wi-Fi, oggetti smarriti e domande frequenti."
 date: 2026-10-20
 updated: 2026-10-20
-source: 乐游霓虹 (Leyou Nihong)
 tags: aeroporto di Narita, NRT, trasporti a Tokyo, duty-free aeroportuale, scali
 cover: images/0.webp
 ---

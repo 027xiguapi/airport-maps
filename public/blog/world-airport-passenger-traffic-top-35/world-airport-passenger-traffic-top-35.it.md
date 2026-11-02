@@ -4,7 +4,6 @@ title: "Traffico passeggeri degli aeroporti mondiali: Atlanta in testa per il te
 summary: "La classifica passeggeri 2023 di Airports Council International mette Atlanta al primo posto per il terzo anno con 104.65 milioni di passeggeri, Dubai seconda a un livello record, Heathrow di nuovo prima in Europa e Haneda di nuovo nella top five. Quattro aeroporti cinesi — Guangzhou, Shanghai Pudong, Shenzhen e Pechino Capital — sono entrati nella top 30."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: ACI, classifica passeggeri aeroporti, aeroporto di Atlanta, Dubai International, Heathrow, hub dell'aviazione
 cover: images/0.webp
 ---

@@ -3,7 +3,6 @@ slug: wuhan-tianhe-airport-guide
 title: 'Flughafen Wuhan Tianhe: Ein vollständiger Leitfaden zu T2 und T3'
 summary: 'Ein praktischer Leitfaden zum Flughafen Wuhan Tianhe (WUH): Abflüge und Ankünfte im Inland an Terminal 2 und Terminal 3, Check-in-Inseln und Annahmeschlusszeiten, die Flughafenbusse, die Metro-Linie 2, die kostenlose Luft-Bahn-Verbindung und die Fahrtrouten sowie das Parken in der Tiefgarage von T3 und auf dem Parkplatz des Verkehrszentrums.'
 date: 2026-10-05
-source: 武汉天河国际机场官网 (Wuhan Tianhe International Airport)
 tags: Flughafen Wuhan Tianhe, WUH, Terminal 3, Terminal 2, Flughafentransport
 cover: images/0.webp
 ---

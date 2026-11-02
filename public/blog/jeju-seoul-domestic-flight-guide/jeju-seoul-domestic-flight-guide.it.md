@@ -4,7 +4,6 @@ title: "Volare da Jeju a Seul: guida passo passo al volo nazionale"
 summary: "Una guida pratica al volo nazionale da Jeju (CJU) a Seul Gimpo (GMP): check-in e consegna bagagli al livello 3 del terminal nazionale di Jeju, la corsia riservata agli stranieri vicino al gate 3, il volo di un'ora e le opzioni T-money, metro e ferrovia aeroportuale dopo l'atterraggio a Gimpo — più la regola sui visti che blocca al check-in chi arriva a Jeju senza visto."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Aeroporto di Jeju, aeroporto di Gimpo, volo nazionale coreano, Jeju senza visto, visto per la Corea
 cover: images/0.webp
 ---

@@ -3,7 +3,6 @@ slug: us-airport-transfer-guide
 title: "미국 입국 후 환승: 주요 공항 7곳, 입국 심사에서 다음 게이트까지"
 summary: "미국에 도착한 뒤 환승이 어떻게 진행되는지 공항별로 정리했습니다. 로스앤젤레스 LAX, 샌프란시스코 SFO, 애틀랜타 ATL, 시카고 ORD, 뉴욕 뉴어크 EWR, 시애틀 SEA, 디트로이트 DTW의 터미널과 콘코스 구조, 터미널 사이를 잇는 셔틀버스와 공항 열차, 수하물 재위탁과 보안 검색 재통과, 그리고 공항마다 필요한 환승 시간까지 다룹니다."
 date: 2026-10-10
-source: 游美旅社 (YOME Travel)
 tags: 미국 환승, 미국 입국 심사, LAX, SFO, ATL, ORD, EWR, SEA, DTW
 cover: images/0.webp
 ---

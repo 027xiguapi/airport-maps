@@ -4,7 +4,6 @@ title: "Sechs Piers, ein Tang-Dach und null Umstieg: Die Architektur von Termina
 summary: "Terminal 5 am internationalen Flughafen Xi'an Xianyang belegte den zweiten Platz in der Kategorie „Bester neuer Flughafenterminal der Welt“ bei den Skytrax World Airport Awards 2025. Entworfen vom China Northwest Architecture Design and Research Institute, umfasst es etwa 705.500 Quadratmeter, nutzt Chinas ersten sechsfingrigen Radialplan und legt ein von der Tang-Zeit inspiriertes Dach um einen Stahlrahmen. Hier steht in verständlicher Sprache, wie das Gebäude funktioniert."
 date: 2026-10-19
 updated: 2026-10-19
-source: Shanghai Society of Civil Engineering
 tags: Internationaler Flughafen Xi'an Xianyang, Terminal 5, China Northwest Architecture Design and Research Institute, sechsfingriger Radialplan, Skytrax, Flughafenarchitektur
 cover: images/0.webp
 ---

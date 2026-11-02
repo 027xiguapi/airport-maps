@@ -4,7 +4,6 @@ title: "Busan Gimhae Airport by Light Rail: Airport Station to Line 2"
 summary: "A step-by-step guide to the Busan–Gimhae Light Rail Transit from Gimhae International Airport (PUS) into Busan: the walk from international arrivals to Airport Station, T-money and ticket fares, three stops and six minutes to Sasang, the change to the green Line 2, and journey times to Seomyeon and Haeundae."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Gimhae Airport, Busan transport, Busan-Gimhae Light Rail, Sasang Station, Korea travel
 cover: images/0.webp
 ---

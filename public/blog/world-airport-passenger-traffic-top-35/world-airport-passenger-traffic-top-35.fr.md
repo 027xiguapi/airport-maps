@@ -4,7 +4,6 @@ title: "Trafic passagers des aéroports mondiaux : Atlanta en tête pour la troi
 summary: "Le classement 2023 du Conseil international des aéroports (ACI) place Atlanta en tête pour la troisième année avec 104,65 millions de passagers, Dubaï deuxième à son meilleur rang historique, Heathrow de retour à la première place européenne et Haneda de retour dans le top cinq. Quatre aéroports chinois — Guangzhou, Shanghai Pudong, Shenzhen et Pékin Capital — entrent dans le top 30."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: ACI, classement des aéroports par passagers, aéroport d'Atlanta, Dubaï International, Heathrow, hubs aériens
 cover: images/0.webp
 ---

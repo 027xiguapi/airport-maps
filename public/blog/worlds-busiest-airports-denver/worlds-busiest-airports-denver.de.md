@@ -4,7 +4,6 @@ title: "Die verkehrsreichsten Flughäfen der Welt: Denver übernimmt mit 794 Abf
 summary: "Die Top 30 vom März 2024 nach geplanten durchschnittlichen täglichen Linienabflügen von Passagieren setzt Denver mit 794 auf Platz eins und beendet die zweimonatige Serie von Dallas/Fort Worth. Delhi kehrt in die Top ten zurück, Las Vegas steigt 13 Plätze, Amsterdam und Istanbul fallen je etwa zehn zurück, und LaGuardia, Mumbai, Changi, Seattle und Newark kommen in die Top 30."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: Flughafen-Rangliste, Abflugkapazität, Flughafen Denver, Flughafen Delhi, Flughafen Changi
 cover: images/0.webp
 ---

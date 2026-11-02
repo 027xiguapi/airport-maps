@@ -3,7 +3,6 @@ slug: us-airport-transfer-guide
 title: 'Umsteigen in den USA nach der Ankunft: Sieben große Flughäfen, von der Einwanderungskontrolle bis zum nächsten Gate'
 summary: 'Wie ein Anschluss in den USA nach der Landung abläuft, Flughafen für Flughafen: die Terminal- und Concourse-Layouts in Los Angeles LAX, San Francisco SFO, Atlanta ATL, Chicago ORD, New York Newark EWR, Seattle SEA und Detroit DTW, die Shuttlebusse und Flughafenzüge dazwischen, das erneute Aufgeben des Gepäcks und die erneute Sicherheitskontrolle sowie die Umsteigezeit, die jeder Flughafen braucht.'
 date: 2026-10-10
-source: 游美旅社 (YOME Travel)
 tags: Umsteigen in den USA, Einreise in die USA, LAX, SFO, ATL, ORD, EWR, SEA, DTW
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Von Shenyang über Seoul nach New York: Korean Air, der Umstieg in Inche
 summary: "Eine Schritt-für-Schritt-Anleitung für den Flug von Shenyang Taoxian nach New York JFK mit Korean Air über Incheon: die Visum- und EVUS-Prüfung beim Check-in, durchgechecktes Gepäck und zwei Bordkarten, die Transitsicherheitskontrolle und der Transferschalter in Terminal 2, wie viel Umsteigezeit Sie einplanen sollten und was bei der Ankunft in JFK passiert."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Flughafen Shenyang Taoxian, Korean Air, Umstieg in Incheon, JFK, Einreise in die USA, durchgechecktes Gepäck
 cover: images/0.webp
 ---

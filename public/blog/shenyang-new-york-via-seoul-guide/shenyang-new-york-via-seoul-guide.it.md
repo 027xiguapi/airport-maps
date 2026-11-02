@@ -4,7 +4,6 @@ title: "Da Shenyang a New York via Seul: Korean Air, il transito a Incheon e l'a
 summary: "Una guida passo passo per volare da Shenyang Taoxian a New York JFK con Korean Air via Incheon: il controllo del visto e dell'EVUS al check-in, i bagagli imbarcati fino a destinazione e le due carte d'imbarco, i controlli di transito e il banco trasferimenti nel Terminal 2, quanto tempo di coincidenza prevedere e cosa succede all'arrivo a JFK."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Aeroporto di Shenyang Taoxian, Korean Air, transito a Incheon, JFK, ingresso negli Stati Uniti, bagagli imbarcati fino a destinazione
 cover: images/0.webp
 ---

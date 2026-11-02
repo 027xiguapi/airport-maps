@@ -3,7 +3,6 @@ slug: istanbul-airport-guide
 title: 중국 여행자를 위한 이스탄불 공항: 골든위크 가이드
 summary: iGA 이스탄불 공항이 중국에서 온 여행자를 위해 준비한 안내서입니다 — 터미널 곳곳의 중국어 표지판과 영상 안내 키오스크, 쇼핑과 식사, 거대한 면세 구역, iGA 라운지, 그리고 어린이 놀이터부터 육아실까지 가족 편의 시설을 소개합니다.
 date: 2026-09-28
-source: 伊斯坦布尔机场IST (Istanbul Airport IST)
 tags: 이스탄불 공항, 튀르키예 여행, 공항 환승, 중국어 서비스
 cover: images/3.webp
 ---

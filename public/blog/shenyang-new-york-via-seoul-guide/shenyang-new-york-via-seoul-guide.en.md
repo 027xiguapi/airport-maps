@@ -4,7 +4,6 @@ title: "Shenyang to New York via Seoul: Korean Air, the Incheon Transfer and JFK
 summary: "A step-by-step guide to flying from Shenyang Taoxian to New York JFK with Korean Air via Incheon: the visa and EVUS check at check-in, through-checked bags and two boarding passes, transit security and the transfer desk in Terminal 2, how much connection time to allow, and what happens on arrival at JFK."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Shenyang Taoxian Airport, Korean Air, Incheon transfer, JFK, US entry, through-checked baggage
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Les bus de nuit de l'aéroport d'Incheon : lignes N, tarifs et arrêts"
 summary: "Comment fonctionnent les bus de nuit de la série N entre Séoul et l'aéroport international d'Incheon : tarifs de 10,000 et 18,000 won, points de départ à Séoul et arrêts intermédiaires, positions de dépose aux T1 et T2, et où consulter le sens aéroport-Séoul."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: bus de nuit de l'aéroport d'Incheon, N6000, N6701, transport à l'aéroport d'Incheon, voyage en Corée
 cover: images/0.webp
 ---

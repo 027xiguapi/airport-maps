@@ -3,7 +3,6 @@ slug: us-airport-transfer-guide
 title: "Correspondances aux États-Unis après l'arrivée : sept grands aéroports, de l'immigration à la porte suivante"
 summary: "Comment fonctionne une correspondance aux États-Unis une fois atterri, aéroport par aéroport : la disposition des terminaux et des halls à Los Angeles LAX, San Francisco SFO, Atlanta ATL, Chicago ORD, New York Newark EWR, Seattle SEA et Detroit DTW, les navettes et trains internes entre eux, le réenregistrement des bagages et un nouveau passage à la sûreté, et le temps de correspondance nécessaire dans chaque aéroport."
 date: 2026-10-10
-source: 游美旅社 (YOME Travel)
 tags: Transit aux États-Unis, immigration américaine, LAX, SFO, ATL, ORD, EWR, SEA, DTW
 cover: images/0.webp
 ---

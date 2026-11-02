@@ -4,7 +4,6 @@ title: 'Ibaraki Airport to Tokyo: the highway bus, fares and reservations'
 summary: 'Ibaraki Airport (IBR) has no railway station, so the run into Tokyo is a highway coach to Tokyo Station’s Yaesu South Exit: about 85 km and 100 minutes, ¥2,200 one way since 30 March 2025. This guide covers the current fare and payment, the Japan Bus Online reservation rules, the sparse 2026 summer timetable, and the three-minute walk from arrivals to the stop.'
 date: 2026-10-20
 updated: 2026-10-20
-source: 品质游 找春秋 (Chunqiu Travel)
 tags: Ibaraki Airport, IBR, Tokyo transport, highway bus, Japan travel
 cover: images/0.webp
 ---

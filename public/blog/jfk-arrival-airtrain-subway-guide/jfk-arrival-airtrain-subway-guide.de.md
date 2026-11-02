@@ -4,7 +4,6 @@ title: "Ankunft am JFK: Einreise, AirTrain und U-Bahn nach Manhattan"
 summary: "Was nach der Landung am New Yorker Flughafen JFK passiert: die Besucherspur und das CBP-Interview in Terminal 1, Gepäck und Zoll, die beiden AirTrain-Zweige nach Jamaica und Howard Beach, die U-Bahn-Linien E, J und Z nach Manhattan, die OMNY-Fahrpreise, die Alternative mit der Long Island Rail Road und die Fallen, in die Neuankömmlinge tappen."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: JFK, US-Einreise, AirTrain, U-Bahn New York, OMNY
 cover: images/0.webp
 ---

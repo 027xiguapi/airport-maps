@@ -3,7 +3,6 @@ slug: istanbul-airport-guide
 title: "L'aéroport d'Istanbul pour les voyageurs chinois : un guide pour la Semaine d'or"
 summary: "Le guide de l'aéroport iGA d'Istanbul pour les voyageurs venant de Chine — signalétique et bornes vidéo en chinois dans tout le terminal, boutiques, restauration et un vaste espace hors taxes, l'iGA Lounge, et des équipements familiaux, de l'aire de jeux pour enfants aux espaces de soins pour bébés."
 date: 2026-09-28
-source: 伊斯坦布尔机场IST (Istanbul Airport IST)
 tags: aéroport d'Istanbul, voyage en Turquie, transit aéroport, services en chinois
 cover: images/3.webp
 ---

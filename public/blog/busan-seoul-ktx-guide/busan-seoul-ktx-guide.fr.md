@@ -4,7 +4,6 @@ title: "De Busan à Séoul en KTX : billets, embarquement et la règle des 15 mi
 summary: "Un guide pratique du KTX de la gare de Busan à la gare de Séoul : réserver sur Korail ou via une application tierce, garder le e-billet, une gare sans contrôle de sûreté ni portiques, des numéros de quai qui s'affichent 15 minutes avant le départ, trouver sa voiture et sa place, les bagages, le trajet de 2 h 40 et les correspondances à la gare de Séoul."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: train à grande vitesse coréen, KTX, gare de Busan, gare de Séoul, transports en Corée
 cover: images/0.webp
 ---

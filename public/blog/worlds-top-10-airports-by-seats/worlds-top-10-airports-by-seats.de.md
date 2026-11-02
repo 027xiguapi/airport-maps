@@ -4,7 +4,6 @@ title: "Die zehn verkehrsreichsten Flughäfen der Welt: Dubai führt mit 4,9 Mil
 summary: "Die OAG-Rangliste für Februar 2026 misst die Sitzplatzkapazität bei Abflügen, nicht die Passagierzahlen. Dubai führt mit etwa 4,9 Millionen Sitzplätzen, Atlanta liegt mit 4,6 Millionen auf Platz zwei, Shanghai Pudong steigt mit 4,28 Millionen auf Platz drei und Guangzhou Baiyun springt drei Plätze nach vorn auf Rang fünf. Alle zehn Flughäfen liegen auf der Nordhalbkugel."
 date: 2026-10-19
 updated: 2026-10-19
-source: Aviation Viewpoint
 tags: Flughafen-Ranglisten, OAG, Sitzplatzkapazität, Flughafen Dubai, Flughafen Shanghai Pudong
 cover: images/0.webp
 ---

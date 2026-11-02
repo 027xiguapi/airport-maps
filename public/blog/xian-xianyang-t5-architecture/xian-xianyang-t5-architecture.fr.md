@@ -4,7 +4,6 @@ title: "Six doigts, un toit Tang et zéro transfert : l'architecture du terminal
 summary: "Le terminal 5 de l'aéroport international de Xi'an Xianyang a pris la deuxième place dans la catégorie World's Best New Airport Terminal aux Skytrax World Airport Awards 2025. Conçu par le China Northwest Architecture Design and Research Institute, il couvre environ 705 500 mètres carrés, adopte le premier plan radial à six doigts de Chine et enveloppe une ossature en acier d'un toit inspiré des Tang. Voici comment le bâtiment fonctionne, en langage clair."
 date: 2026-10-19
 updated: 2026-10-19
-source: Shanghai Society of Civil Engineering
 tags: Aéroport international de Xi'an Xianyang, terminal 5, China Northwest Architecture Design and Research Institute, plan radial à six doigts, Skytrax, architecture aéroportuaire
 cover: images/0.webp
 ---

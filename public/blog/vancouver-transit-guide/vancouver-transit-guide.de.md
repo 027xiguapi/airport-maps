@@ -3,7 +3,6 @@ slug: vancouver-transit-guide
 title: "Umsteigen in Vancouver: Der YVR-Transit-Leitfaden"
 summary: "Umsteigen in Vancouver auf einer Air-Canada-Route Seattle–Vancouver–Shanghai – keine Gepäckausgabe und keine erneute Sicherheitskontrolle, aber die kanadische Zollabfertigung ist erforderlich. Die Schilder, denen Sie folgen müssen, der Schritt Satellite Primary Inspection und die YVR-Terminalpläne."
 date: 2026-09-30
-source: 多肉2号
 tags: Umsteigen in Vancouver, YVR, kanadische Zollabfertigung, Anschlussflüge
 cover: images/0.webp
 ---

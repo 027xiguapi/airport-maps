@@ -4,7 +4,6 @@ title: "Narita in autobus: la corriera low cost per la stazione di Tokyo"
 summary: "Una guida pratica all'AIRPORT BUS TYO-NRT, la corriera low cost tra l'aeroporto di Narita (NRT) e la stazione di Tokyo: la tariffa di circa ¥1,500, il tragitto di 60–70 minuti, dove sono i banchi e le fermate nei Terminal 1, 2 e 3, la fermata di ritorno all'uscita sud di Yaesu, le regole sui bagagli, la frequenza degli orari e il confronto con lo Skyliner e il N'EX."
 date: 2026-10-20
 updated: 2026-10-20
-source: 中国青旅逗游旅行 (China Youth Travel, Douyou)
 tags: aeroporto di Narita, autobus aeroportuale, stazione di Tokyo, trasporti a Tokyo, NRT
 cover: images/0.webp
 ---

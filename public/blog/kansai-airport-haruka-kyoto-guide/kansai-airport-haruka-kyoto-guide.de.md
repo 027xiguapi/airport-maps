@@ -4,7 +4,6 @@ title: "Vom Flughafen Kansai nach Kyoto mit dem JR HARUKA: Fahrkarten, Bahnsteig
 summary: "Eine Schritt-für-Schritt-Anleitung für den JR HARUKA Limited Express vom Flughafen Kansai (KIX) nach Kyoto: das JR-Fahrkartenbüro auf Ebene 2 von Terminal 1, der Normalfahrpreis von etwa 3.490 Yen gegenüber dem Ticket für ausländische Besucher für rund 2.200 Yen, reservierte und nicht reservierte Wagen, wo das Gepäck hinkommt, die 75–80 Minuten Fahrt und ihr Abfahrtsmuster sowie die Ausgänge und Metro-Umstiege an der Kyoto Station."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guides)
 tags: Flughafen Kansai, HARUKA, Verkehr nach Kyoto, JR West, Reisen in Japan
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "인천인가 김포인가: 서울에 도착해 시내로 들어가는 �
 summary: "서울의 두 공항은 어떻게 다를까요 — 거리, 터미널, 입국 심사 시간, 그리고 시내로 들어가는 방법: AREX 직통열차와 일반열차, 공항버스와 택시, 더불어 Q-CODE, C-3-9 비자, 김포 국내선 터미널에서 무비자 여행자를 잡는 제주의 함정까지 정리했습니다."
 date: 2026-10-22
 updated: 2026-10-22
-source: VJW Chinese Simplified Edition (WeChat account)
 tags: 인천공항, 김포공항, AREX, 서울 교통, 한국 입국
 cover: images/0.webp
 ---

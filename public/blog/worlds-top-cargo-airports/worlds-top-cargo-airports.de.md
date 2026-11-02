@@ -4,7 +4,6 @@ title: "Die Top 10 der Frachtflughäfen: Hongkong bleibt Erster, acht von zehn i
 summary: "Die Frachtrangliste 2023 des Airports Council International setzt Hongkong mit 4,33 Millionen Tonnen auf Platz eins, Memphis mit 3,88 und Shanghai Pudong mit 3,44 auf Platz drei, ein Plus von 10,4 Prozent. Das weltweite Luftfrachtaufkommen sank um 3,1 Prozent auf 113 Millionen Tonnen, 95,4 Prozent des Werts von 2019, und die Top Ten bewältigten 29,6 Millionen Tonnen, 26 Prozent des Weltaufkommens."
 date: 2026-10-19
 updated: 2026-10-19
-source: Aviation Viewpoint
 tags: Luftfracht, ACI, Frachtflughafen-Rangliste, Hongkong International, Flughafen Memphis, Shanghai Pudong
 cover: images/0.webp
 ---

@@ -3,7 +3,6 @@ slug: vancouver-transit-guide
 title: 溫哥華轉機攻略
 summary: 加航西雅圖—溫哥華—上海聯程在溫哥華轉機的全流程：不取行李、不過安檢但需經過加拿大海關，附國際轉機指示牌、衛星廳主要檢查與 YVR 航廈平面圖。
 date: 2026-09-30
-source: 多肉2號
 tags: 溫哥華轉機, YVR, 加拿大海關, 聯程機票
 cover: images/0.webp
 ---

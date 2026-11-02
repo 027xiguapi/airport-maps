@@ -4,7 +4,6 @@ title: "Nachtbusse am Flughafen Incheon: N-Linien, Fahrpreise und Haltestellen"
 summary: "Wie die Nachtbusse der N-Serie zwischen Seoul und dem internationalen Flughafen Incheon verkehren: Fahrpreise von 10,000 und 18,000 Won, die Abfahrtsorte in Seoul und die Zwischenhalte, die Haltepositionen an T1 und T2 und wo man die Richtung Flughafen–Seoul nachschlägt."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: Nachtbus Flughafen Incheon, N6000, N6701, Nahverkehr Flughafen Incheon, Reisen in Korea
 cover: images/0.webp
 ---

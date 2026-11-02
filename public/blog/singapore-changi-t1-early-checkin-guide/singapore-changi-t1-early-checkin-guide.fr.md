@@ -4,7 +4,6 @@ title: "Départs du terminal 1 de Changi : enregistrement anticipé, détaxe GST
 summary: "Une séquence pratique pour partir du terminal 1 de l'aéroport de Changi : les horaires d'enregistrement anticipé à Jewel et les compagnies qui le proposent, la détaxe GST avant l'immigration, le passage automatisé à la sortie et la sûreté à la porte, et comment utiliser les heures ainsi gagnées à Jewel."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Aéroport de Changi, terminal 1 de l'aéroport de Singapour Changi, enregistrement anticipé, détaxe GST, Jewel Changi
 cover: images/0.webp
 ---

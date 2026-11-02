@@ -4,7 +4,6 @@ title: "De l'aéroport du Kansai à Kyoto en JR HARUKA : billets, quais et place
 summary: "Un guide pas à pas du limited express JR HARUKA entre l'aéroport international du Kansai (KIX) et Kyoto : le comptoir de vente JR au niveau 2 du terminal 1, le tarif normal d'environ 3 490 yens face au billet pour visiteurs étrangers à environ 2 200 yens, les voitures réservées et non réservées, où mettre les bagages, le trajet de 75 à 80 minutes et son rythme de départ, ainsi que les sorties et les correspondances de métro à la gare de Kyoto."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guides)
 tags: Aéroport international du Kansai, HARUKA, transports à Kyoto, JR West, voyage au Japon
 cover: images/0.webp
 ---

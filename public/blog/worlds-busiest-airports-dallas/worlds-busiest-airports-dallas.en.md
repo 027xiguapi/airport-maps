@@ -4,7 +4,6 @@ title: "The World's Busiest Airports: Dallas Holds First Place for a Second Mont
 summary: "The February 2024 top 30, ranked by planned average daily scheduled passenger departures, puts Dallas/Fort Worth first for a second month on 887 departures, Chicago O'Hare second on 832 and Atlanta fourth on 807. Istanbul returns to the top ten, Las Vegas and Paris CDG rejoin the top 30, and Phoenix jumps seven places."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: airport rankings, departure capacity, Dallas/Fort Worth airport, Chicago O'Hare, Istanbul airport
 cover: images/0.webp
 ---

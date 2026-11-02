@@ -3,7 +3,6 @@ slug: hong-kong-airport-guide
 title: "Guide de l'aéroport international de Hong Kong (2026) : correspondances, transports, shopping et repos"
 summary: "Un guide complet de l'aéroport international de Hong Kong (Chek Lap Kok, HKG) : la procédure de correspondance en trois étapes et l'organisation des zones de portes, le prix de la consigne, l'Airport Express et les bus de ville, la Sky Bridge et le dôme de jeu pour enfants, quatre restaurants qui valent le détour, le shopping avant et après le contrôle de sûreté, trois salons et les services gratuits — plus la hausse de la taxe d'embarquement de 2026."
 date: 2026-10-07
-source: 港了个漂 (Hong Kong Piaos)
 tags: Aéroport international de Hong Kong, HKG, Chek Lap Kok, correspondances à l'aéroport, shopping à l'aéroport de Hong Kong
 cover: images/0.webp
 ---

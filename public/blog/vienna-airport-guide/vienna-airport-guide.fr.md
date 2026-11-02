@@ -4,7 +4,6 @@ title: "Aéroport international de Vienne : guide complet des terminaux, des tra
 summary: "Un guide pratique de l'aéroport international de Vienne (VIE) : les terminaux 1, 1A et 3 et leurs zones de portes, le City Airport Train, les bus, le S-Bahn S7 et le Railjet vers la ville, les étapes d'enregistrement, de dépôt des bagages, de sûreté et de contrôle des passeports, ainsi que la consigne, les franchises douanières, le change et les distributeurs automatiques."
 date: 2026-10-08
 updated: 2026-10-23
-source: 维也纳机场 (Vienna Airport)
 tags: Aéroport de Vienne, VIE, voyage en Autriche, transport aéroport, départ
 cover: images/0.webp
 ---

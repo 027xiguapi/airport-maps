@@ -4,7 +4,6 @@ title: "L'aeroporto di Hong Kong vince il premio per la migliore sicurezza aerop
 summary: "Il 30 marzo 2026 Nuctech ha ricevuto una lettera di ringraziamento dall'Autorità aeroportuale di Hong Kong per il suo contributo alla vittoria dell'aeroporto internazionale di Hong Kong del premio Skytrax per la migliore sicurezza aeroportuale del mondo. Alla cerimonia di Londra del 18 marzo l'aeroporto si è classificato quarto al mondo e ha conquistato la categoria sicurezza per la prima volta nei suoi 28 anni di storia — un primato per un aeroporto asiatico. Questo articolo separa i fatti del premio dalla descrizione del sistema fatta dal fornitore."
 date: 2026-10-19
 updated: 2026-10-19
-source: Nuctech
 tags: Aeroporto internazionale di Hong Kong, HKG, sicurezza aeroportuale, Skytrax, Nuctech
 cover: images/0.webp
 ---

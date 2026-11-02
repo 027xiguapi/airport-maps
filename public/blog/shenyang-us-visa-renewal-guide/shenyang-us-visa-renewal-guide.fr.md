@@ -4,7 +4,6 @@ title: "Renouveler un visa américain B1/B2 à Shenyang : DS-160, dispense d'ent
 summary: "Un parcours pratique pour renouveler un visa américain B1/B2 à Shenyang : comment préparer la photo et les codes de nom, remplir et sauvegarder le DS-160, faire le bon choix de dispense d'entretien dans le système de rendez-vous et déposer les documents par la banque CITIC ou EMS."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Visa américain, renouvellement de visa, DS-160, dispense d'entretien, Shenyang
 cover: images/0.webp
 ---

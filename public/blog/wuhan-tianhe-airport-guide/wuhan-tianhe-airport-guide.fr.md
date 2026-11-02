@@ -3,7 +3,6 @@ slug: wuhan-tianhe-airport-guide
 title: "Aéroport international de Wuhan Tianhe : guide complet des terminaux 2 et 3"
 summary: "Un guide pratique de l'aéroport international de Wuhan Tianhe (WUH) : départs et arrivées intérieurs aux terminaux 2 et 3, îlots d'enregistrement et heures limites, bus aéroport, ligne 2 du métro, liaison air-rail gratuite et itinéraires routiers, plus le stationnement au parking souterrain du T3 et au parking du centre de transport."
 date: 2026-10-05
-source: 武汉天河国际机场官网 (Wuhan Tianhe International Airport)
 tags: Aéroport de Wuhan Tianhe, WUH, terminal 3, terminal 2, transport aéroport
 cover: images/0.webp
 ---

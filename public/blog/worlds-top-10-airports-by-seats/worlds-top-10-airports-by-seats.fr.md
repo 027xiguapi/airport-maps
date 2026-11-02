@@ -4,7 +4,6 @@ title: "Les dix aéroports les plus fréquentés du monde : Dubaï en tête avec
 summary: "Le classement de février 2026 d'OAG mesure la capacité en sièges au départ plutôt que le nombre de passagers. Dubaï mène avec environ 4,9 millions de sièges, Atlanta est deuxième avec 4,6 millions, Shanghai Pudong monte à la troisième place avec 4,28 millions et Guangzhou Baiyun gagne trois places pour atteindre la cinquième. Les dix aéroports se trouvent tous dans l'hémisphère nord."
 date: 2026-10-19
 updated: 2026-10-19
-source: Aviation Viewpoint
 tags: classement des aéroports, OAG, capacité en sièges, aéroport de Dubaï, aéroport de Shanghai Pudong
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Da Incheon a Gimpo: spostarsi tra i due aeroporti di Seul con biglietti 
 summary: "Incheon (ICN) e Gimpo (GMP) sono due aeroporti diversi, e un itinerario con biglietti separati lascia a voi il trasferimento. Tariffe, tempi e fermate dell'AREX omnibus, dei bus 6100 e 6101 e dei taxi, più le regole su ingressi, bagagli e margini di tempo che decidono se la coincidenza funziona."
 date: 2026-10-22
 updated: 2026-10-22
-source: 开普得机票 (Captain Travel)
 tags: Aeroporto di Incheon, aeroporto di Gimpo, trasferimento aeroportuale, AREX, trasporti in Corea
 cover: images/0.webp
 ---

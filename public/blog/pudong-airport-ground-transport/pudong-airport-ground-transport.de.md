@@ -3,7 +3,6 @@ slug: pudong-airport-ground-transport
 title: "Ankunft am Flughafen Pudong: Metro, Taxi und Busverbindungen"
 summary: "Wie Sie von Terminal 1 und Terminal 2 des Flughafens Pudong mit Metro, Taxi und Bus in die Stadt gelangen – wo die Ankunftsausgänge der einzelnen Terminals liegen, wie die Umsteigehalle aufgebaut ist, welche Tür zum Taxistand führt und welche Buslinien von wo abfahren."
 date: 2026-09-29
-source: 上海交通 (Shanghai Transport)
 tags: Flughafentransport Pudong, Metro Shanghai, Flughafenbusse, Taxi
 cover: images/3.webp
 ---

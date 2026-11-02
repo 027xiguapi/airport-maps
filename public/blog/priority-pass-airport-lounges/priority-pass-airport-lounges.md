@@ -4,7 +4,6 @@ title: Priority Pass 休息室指南：三档会籍、信用卡权益与全球�
 summary: Priority Pass（PP）是全球规模最大的机场休息室联盟，1500 多间合约休息室分布在 145 个国家和地区。本文拆解三档会籍的价格与限制、信用卡配发的 PPS 卡如何取得资格、带人规则与查找方法，并把 2024 年 3 月的全球分布整理成一张按区域查阅的表。
 date: 2026-10-19
 updated: 2026-10-19
-source: 落落说卡
 tags: Priority Pass, PP 卡, 机场贵宾室, 信用卡权益, 机场休息室
 cover: images/0.webp
 ---

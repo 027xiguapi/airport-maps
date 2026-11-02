@@ -4,7 +4,6 @@ title: "I dieci aeroporti cargo più importanti del mondo: Hong Kong ancora prim
 summary: "La classifica cargo 2023 di Airports Council International mette Hong Kong prima con 4.33 milioni di tonnellate, Memphis seconda con 3.88 e Shanghai Pudong terza con 3.44, in crescita del 10.4%. Il cargo aereo globale è calato del 3.1% a 113 milioni di tonnellate, il 95.4% del 2019, e i primi dieci hanno movimentato 29.6 milioni di tonnellate, il 26% del totale mondiale."
 date: 2026-10-19
 updated: 2026-10-19
-source: Aviation Viewpoint
 tags: trasporto aereo merci, ACI, classifica aeroporti cargo, Hong Kong International, aeroporto di Memphis, Shanghai Pudong
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Arriver à JFK : immigration, AirTrain et métro jusqu'à Manhattan"
 summary: "Ce qui vous attend après votre atterrissage à New York JFK : la file visiteurs et l'entretien CBP au terminal 1, les bagages et la douane, les deux branches de l'AirTrain vers Jamaica et Howard Beach, les métros E, J et Z vers Manhattan, les tarifs OMNY, l'alternative du Long Island Rail Road et les pièges qui guettent les primo-arrivants."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: JFK, immigration américaine, AirTrain, métro de New York, OMNY
 cover: images/0.webp
 ---

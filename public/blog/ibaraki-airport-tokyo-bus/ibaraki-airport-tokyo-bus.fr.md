@@ -4,7 +4,6 @@ title: "De l'aéroport d'Ibaraki à Tokyo : le bus autoroutier, les tarifs et le
 summary: "L'aéroport d'Ibaraki (IBR) n'a pas de gare ferroviaire : pour rejoindre Tokyo, il faut un car autoroutier jusqu'à la sortie sud Yaesu de la gare de Tokyo, soit environ 85 km et 100 minutes, à ¥2,200 l'aller simple depuis le 30 mars 2025. Ce guide couvre le tarif actuel et le paiement, les règles de réservation de Japan Bus Online, l'horaire clairsemé de l'été 2026 et les trois minutes de marche entre les arrivées et l'arrêt."
 date: 2026-10-20
 updated: 2026-10-20
-source: 品质游 找春秋 (Chunqiu Travel)
 tags: Aéroport d'Ibaraki, IBR, transport à Tokyo, bus autoroutier, voyage au Japon
 cover: images/0.webp
 ---

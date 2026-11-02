@@ -4,7 +4,6 @@ title: "Heathrow 16° nel mondo e miglior aeroporto per lo shopping, mentre Gatw
 summary: "Londra Heathrow è ancora una volta l'aeroporto britannico meglio classificato ai World Airport Awards di Skytrax, al 16° posto globale, ottavo in Europa e nominato World's Best Airport Shopping. Gatwick è l'unico altro aeroporto britannico nella top 100, salito di sei posizioni al 30° posto. Ecco la top ten 2026, i 345 negozi dietro il premio retail di Heathrow e come leggere la classifica."
 date: 2026-10-19
 updated: 2026-10-19
-source: UK Campus
 tags: Aeroporto di Heathrow, LHR, aeroporto di Gatwick, Skytrax, shopping in aeroporto
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Autobus notturni dell'aeroporto di Incheon: rotte N, tariffe e fermate"
 summary: "Come funzionano gli autobus notturni della serie N tra Seul e l'aeroporto internazionale di Incheon: tariffe di 10.000 e 18.000 won, i punti di partenza a Seul e le fermate intermedie, le posizioni di discesa a T1 e T2 e dove controllare la direzione aeroporto-Seul."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: autobus notturni aeroporto Incheon, N6000, N6701, trasporti aeroporto Incheon, viaggio in Corea
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "L'aéroport de Hong Kong remporte le prix de la meilleure sûreté aéro
 summary: "Le 30 mars 2026, Nuctech a reçu une lettre de remerciement de l'Autorité aéroportuaire de Hong Kong pour sa contribution au prix Skytrax de la meilleure sûreté aéroportuaire du monde remporté par l'aéroport international de Hong Kong. Lors de la cérémonie du 18 mars à Londres, l'aéroport s'est classé quatrième au monde et a remporté la catégorie sûreté pour la première fois de ses 28 ans d'histoire — une première pour un aéroport asiatique. Cet article sépare les faits liés au prix de la description du système par son fournisseur."
 date: 2026-10-19
 updated: 2026-10-19
-source: Nuctech
 tags: Aéroport international de Hong Kong, HKG, sûreté aéroportuaire, Skytrax, Nuctech
 cover: images/0.webp
 ---

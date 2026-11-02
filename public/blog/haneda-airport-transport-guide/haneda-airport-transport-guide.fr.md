@@ -4,7 +4,6 @@ title: "De l'aéroport de Haneda à Tokyo : monorail, Keikyu ou bus ?"
 summary: "Un guide pratique du trajet entre l'aéroport de Haneda (HND) et Tokyo : le Tokyo Monorail jusqu'à Hamamatsucho, les trains Keikyu vers Shinagawa et jusqu'à Asakusa, les bus d'aéroport vers les hôtels et le reste du Kantō, les taxis et les arrivées tardives, avec les tarifs, les stations de correspondance et un tableau indiquant quelle ligne pour quelle zone."
 date: 2026-10-20
 updated: 2026-10-20
-source: 令和日本留学工作室 (Reiwa Japan Study Studio)
 tags: transport à l'aéroport de Haneda, Tokyo Monorail, Keikyu, bus d'aéroport, voyage à Tokyo
 cover: images/0.webp
 ---

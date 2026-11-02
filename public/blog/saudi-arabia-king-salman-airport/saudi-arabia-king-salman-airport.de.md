@@ -4,7 +4,6 @@ title: "Saudi-Arabiens Plan für den größten Flughafen der Welt: King Salman I
 summary: "Saudi-Arabiens Luftfahrtstrategie zielt bis 2030 auf 330 Millionen Passagiere pro Jahr, 4,5 Millionen Tonnen Fracht und bis zu 100 Milliarden Dollar Investitionen, aufgebaut um den King Salman International Airport in Riad: 57 Quadratkilometer, sechs parallele Startbahnen, 120 Millionen Passagiere und eine Rolle als Delivery-Partner für Mace. Hier sind die Logik dahinter – und das Risiko."
 date: 2026-10-19
 updated: 2026-10-19
-source: Middle East Eye
 tags: King Salman International Airport, Riad, Saudi-Arabien, Vision 2030, Flughafenausbau
 cover: images/0.webp
 ---

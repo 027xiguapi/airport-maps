@@ -4,7 +4,6 @@ title: "Hong Kong Airport Wins World's Best Airport Security, and Nuctech Receiv
 summary: "On 30 March 2026 Nuctech received a letter of thanks from the Airport Authority Hong Kong for its part in Hong Kong International Airport winning the Skytrax award for World's Best Airport Security. At the ceremony in London on 18 March the airport ranked fourth globally and took the security category for the first time in its 28-year history — a first for an Asian airport. This article separates the award facts from the vendor's description of the system."
 date: 2026-10-19
 updated: 2026-10-19
-source: Nuctech
 tags: Hong Kong International Airport, HKG, airport security, Skytrax, Nuctech
 cover: images/0.webp
 ---

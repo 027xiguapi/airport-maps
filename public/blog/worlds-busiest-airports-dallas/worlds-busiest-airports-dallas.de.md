@@ -4,7 +4,6 @@ title: "Die verkehrsreichsten Flughäfen der Welt: Dallas bleibt einen zweiten M
 summary: "Die Top 30 des Februar 2024, geordnet nach den geplanten durchschnittlichen täglichen Abflügen im Linienpassagierverkehr, setzen Dallas/Fort Worth einen zweiten Monat mit 887 Abflügen auf Platz eins, Chicago O'Hare mit 832 auf Platz zwei und Atlanta mit 807 auf Platz vier. Istanbul kehrt in die Top Ten zurück, Las Vegas und Paris CDG kommen in die Top 30 zurück, und Phoenix springt sieben Plätze nach oben."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: Flughafen-Rankings, Abflugkapazität, Flughafen Dallas/Fort Worth, Chicago O'Hare, Flughafen Istanbul
 cover: images/0.webp
 ---

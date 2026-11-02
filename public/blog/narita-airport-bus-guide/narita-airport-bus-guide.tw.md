@@ -4,7 +4,6 @@ title: 成田機場巴士攻略：乘 AIRPORT BUS TYO-NRT 直達東京站
 summary: 成田機場（NRT）到東京站的廉價巴士指南：AIRPORT BUS TYO-NRT 約 1,500 日元的票價、60–70 分鐘車程、三個航廈的購票櫃檯與上車位置、八重洲南口的回程乘車點、行李託運規則與班次頻率，並附與 Skyliner、N'EX 的對比。
 date: 2026-10-20
 updated: 2026-10-20
-source: 中國青旅逗遊旅行
 tags: 成田機場, 機場巴士, 東京站, 東京交通, NRT
 cover: images/0.webp
 ---

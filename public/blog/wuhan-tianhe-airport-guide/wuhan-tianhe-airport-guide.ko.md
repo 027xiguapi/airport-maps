@@ -3,7 +3,6 @@ slug: wuhan-tianhe-airport-guide
 title: "우한 톈허 국제공항: T2와 T3 완전 안내"
 summary: "우한 톈허 국제공항(WUH) 실용 안내입니다. 터미널 2와 3의 국내선 출발과 도착, 체크인 아일랜드와 마감 시간, 공항 버스와 지하철 2호선, 무료 공항철도 연결과 자가용 경로, 그리고 T3 지하 주차장과 교통센터 주차장까지 다룹니다."
 date: 2026-10-05
-source: 武汉天河国际机场官网 (Wuhan Tianhe International Airport)
 tags: 우한 톈허 공항, WUH, 터미널 3, 터미널 2, 공항 교통
 cover: images/0.webp
 ---

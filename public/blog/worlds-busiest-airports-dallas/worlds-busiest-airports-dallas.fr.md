@@ -4,7 +4,6 @@ title: "Les aéroports les plus fréquentés du monde : Dallas conserve la premi
 summary: "Le top 30 de février 2024, classé selon le nombre moyen planifié de départs passagers quotidiens, place Dallas/Fort Worth premier pour un deuxième mois avec 887 départs, Chicago O'Hare deuxième avec 832 et Atlanta quatrième avec 807. Istanbul revient dans le top dix, Las Vegas et Paris CDG réintègrent le top 30, et Phoenix gagne sept places."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: classement des aéroports, capacité de départs, aéroport de Dallas/Fort Worth, Chicago O'Hare, aéroport d'Istanbul
 cover: images/0.webp
 ---

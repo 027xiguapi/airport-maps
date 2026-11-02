@@ -4,7 +4,6 @@ title: "Incheon Airport by AREX: Express or All-Stop Train?"
 summary: "A practical guide to the AREX railway from Incheon International Airport to Seoul Station: the 43-minute Express train at 13,000 won, the all-stop service from about 4,750 won, where to buy tickets on level B1, the T-money rules and the Seoul Station connections."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: Incheon Airport transport, AREX, Seoul Station, airport train, Korea travel
 cover: images/0.webp
 ---

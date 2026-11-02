@@ -4,7 +4,6 @@ title: "Mit der Stadtbahn vom Flughafen Busan Gimhae: von der Airport Station zu
 summary: "Eine Schritt-für-Schritt-Anleitung zur Busan–Gimhae Light Rail Transit vom internationalen Flughafen Gimhae (PUS) nach Busan: der Fußweg von der internationalen Ankunft zur Airport Station, Fahrpreise mit T-money und als Einzelticket, drei Stationen und sechs Minuten bis Sasang, der Umstieg zur grünen Linie 2 und Fahrzeiten nach Seomyeon und Haeundae."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Flughafen Gimhae, Verkehr in Busan, Busan-Gimhae-Stadtbahn, Station Sasang, Korea-Reise
 cover: images/0.webp
 ---

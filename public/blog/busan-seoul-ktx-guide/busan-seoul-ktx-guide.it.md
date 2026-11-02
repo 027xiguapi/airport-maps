@@ -4,7 +4,6 @@ title: "Da Busan a Seul in KTX: biglietti, imbarco e la regola dei quindici minu
 summary: "Una guida pratica al KTX dalla stazione di Busan alla stazione di Seul: prenotare su Korail o tramite un'app di terzi, salvare il biglietto elettronico, una stazione senza controlli di sicurezza e senza tornelli, i numeri dei binari che compaiono 15 minuti prima della partenza, come trovare carrozza e posto, i bagagli, il viaggio di 2h40 e i collegamenti alla stazione di Seul."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: alta velocità coreana, KTX, stazione di Busan, stazione di Seul, trasporti in Corea
 cover: images/0.webp
 ---

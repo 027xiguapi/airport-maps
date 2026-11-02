@@ -4,7 +4,6 @@ title: "L'aéroport international de Hong Kong élu meilleur aéroport du monde 
 summary: "L'aéroport international de Hong Kong (HKG) a été élu meilleur aéroport du monde aux Global Travel Awards 2026, a remporté le prix du meilleur aéroport de Chine aux TTG China Travel Awards pour la troisième année consécutive, ainsi que ceux du meilleur traitement de sûreté et des meilleurs sanitaires d'aéroport du monde aux Skytrax World Airport Awards 2026. Voici ce que mesure chaque prix et ce qu'il signifie pour les voyageurs."
 date: 2026-10-19
 updated: 2026-10-19
-source: Hong Kong SAR Government Office in Guangdong
 tags: Aéroport international de Hong Kong, HKG, meilleur aéroport du monde, Skytrax, TTG China Travel Awards
 cover: images/0.webp
 ---

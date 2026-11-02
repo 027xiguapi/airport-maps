@@ -4,7 +4,6 @@ title: "Da Busan Gimhae in metropolitana leggera: dalla stazione Airport alla li
 summary: "Una guida passo per passo alla Busan–Gimhae Light Rail Transit dall'aeroporto internazionale di Gimhae (PUS) a Busan: la camminata dagli arrivi internazionali alla stazione Airport, le tariffe con T-money e con biglietto singolo, tre fermate e sei minuti fino a Sasang, il cambio con la linea 2 verde e i tempi di percorrenza per Seomyeon e Haeundae."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: aeroporto di Gimhae, trasporti a Busan, metropolitana leggera Busan-Gimhae, stazione di Sasang, viaggiare in Corea
 cover: images/0.webp
 ---

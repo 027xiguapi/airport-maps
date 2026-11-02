@@ -4,7 +4,6 @@ title: "Flying Jeju to Seoul: A Step-by-Step Guide to the Domestic Flight"
 summary: "A practical guide to the domestic flight from Jeju (CJU) to Seoul Gimpo (GMP): check-in and bag drop on level 3 of Jeju's domestic terminal, the foreigners-only lane near gate 3, the one-hour hop, and T-money, metro and airport railway options after landing at Gimpo — plus the visa rule that stops visa-free Jeju visitors at check-in."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Jeju Airport, Gimpo Airport, Korean domestic flight, Jeju visa-free, Korea visa
 cover: images/0.webp
 ---

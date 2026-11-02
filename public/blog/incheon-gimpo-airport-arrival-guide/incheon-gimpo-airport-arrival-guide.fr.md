@@ -4,7 +4,6 @@ title: "Incheon ou Gimpo : arriver à Séoul et rejoindre la ville"
 summary: "En quoi les deux aéroports de Séoul diffèrent — distance, terminaux, temps d'immigration et moyens de rejoindre la ville : trains express et omnibus AREX, bus de l'aéroport et taxis, ainsi que Q-CODE, le visa C-3-9 et le piège du vol intérieur au terminal domestique de Gimpo pour les voyageurs exemptés de visa."
 date: 2026-10-22
 updated: 2026-10-22
-source: VJW Chinese Simplified Edition (WeChat account)
 tags: aéroport d'Incheon, aéroport de Gimpo, AREX, transports à Séoul, arrivée en Corée
 cover: images/0.webp
 ---

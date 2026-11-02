@@ -4,7 +4,6 @@ title: "Promemoria degli indirizzi coreani a Seul: copia, incolla, naviga"
 summary: "Un elenco di indirizzi coreani per Seul da copiare e incollare: aeroporti e hub di trasporto, palazzi e monumenti, parchi, quartieri dello shopping, grandi magazzini e duty-free, università e punti fotografici — e perché il coreano funziona meglio di un nome tradotto con i tassisti, Naver Map e Kakao T."
 date: 2026-10-22
 updated: 2026-10-22
-source: Xiao Han Beauty Research Club (WeChat account)
 tags: Indirizzi Seul, indirizzi coreani, Naver Map, Kakao T, viaggi in Corea
 cover: images/0.webp
 ---

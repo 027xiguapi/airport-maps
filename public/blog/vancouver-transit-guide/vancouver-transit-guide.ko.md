@@ -3,7 +3,6 @@ slug: vancouver-transit-guide
 title: "밴쿠버 환승: YVR 환승 안내"
 summary: "밴쿠버에서 Air Canada 시애틀–밴쿠버–상하이 일정으로 환승하는 방법 — 수하물을 찾지 않고 보안 검색도 다시 받지 않지만, 캐나다 세관은 통과해야 합니다. 따라가야 할 표지판, 위성 1차 심사(Satellite Primary Inspection) 단계, YVR 터미널 지도까지 정리했습니다."
 date: 2026-09-30
-source: 多肉2号
 tags: 밴쿠버 환승, YVR, 캐나다 세관, 환승 항공편
 cover: images/0.webp
 ---

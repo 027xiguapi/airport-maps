@@ -4,7 +4,6 @@ title: "Le duty-free aéroportuaire est de retour : les rayons de Daxing, Kansai
 summary: "En juillet 2023, les vols internationaux se redressaient et le duty-free aéroportuaire retrouvait un peu de vie. Un tour de trois rayons — Pékin Daxing (PKX), Osaka Kansai (KIX) et Chiang Mai (CNX) — montre ce que trois années de pandémie ont fait aux prix et à la sélection du travel retail, par rapport à 2020."
 date: 2026-10-19
 updated: 2026-10-19
-source: WhiskyENJOY
 tags: duty-free aéroportuaire, whisky, Pékin Daxing, aéroport du Kansai, aéroport de Chiang Mai
 cover: images/0.webp
 ---

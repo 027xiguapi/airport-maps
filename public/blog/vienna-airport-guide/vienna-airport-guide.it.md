@@ -4,7 +4,6 @@ title: "Aeroporto internazionale di Vienna: guida completa ai terminal, ai trasp
 summary: "Una guida pratica all'aeroporto internazionale di Vienna (VIE): i terminal 1, 1A e 3 e le loro aree gate, il City Airport Train, gli autobus, la S7 della S-Bahn e i Railjet per la città, i passaggi di check-in, consegna bagagli, sicurezza e controllo passaporti, più deposito bagagli, franchigie doganali, cambio valuta e bancomat."
 date: 2026-10-08
 updated: 2026-10-23
-source: 维也纳机场 (Vienna Airport)
 tags: aeroporto di Vienna, VIE, viaggio in Austria, trasporti aeroportuali, partenze
 cover: images/0.webp
 ---

@@ -3,7 +3,6 @@ slug: wuhan-tianhe-airport-guide
 title: 'Wuhan Tianhe International Airport: A Complete Guide to T2 and T3'
 summary: 'A practical guide to Wuhan Tianhe International Airport (WUH): domestic departures and arrivals at Terminals 2 and 3, check-in islands and cut-off times, the airport buses, Metro Line 2, the free air-rail link and driving routes, plus parking at the T3 underground car park and the Transport Centre car park.'
 date: 2026-10-05
-source: 武汉天河国际机场官网 (Wuhan Tianhe International Airport)
 tags: Wuhan Tianhe Airport, WUH, Terminal 3, Terminal 2, airport transport
 cover: images/0.webp
 ---

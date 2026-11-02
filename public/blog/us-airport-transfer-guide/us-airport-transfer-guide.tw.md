@@ -3,7 +3,6 @@ slug: us-airport-transfer-guide
 title: 美國七大國際機場轉機攻略：入境後如何換航廈、重新託運與安檢
 summary: 入境美國後轉機的完整流程與七座門戶機場的實操要點：洛杉磯 LAX、舊金山 SFO、亞特蘭大 ATL、芝加哥 ORD、紐約紐瓦克 EWR、西雅圖 SEA 與底特律 DTW 的航廈與廊廳結構、航廈之間的擺渡車與機場列車、重新交執行李與再次安檢的走法，以及各機場的轉機時間建議。
 date: 2026-10-10
-source: 遊美旅社
 tags: 美國轉機, 入境美國, LAX, SFO, ATL, ORD, EWR, SEA, DTW
 cover: images/0.webp
 ---

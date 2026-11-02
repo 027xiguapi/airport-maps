@@ -4,7 +4,6 @@ title: 關西機場落地第一小時：入境申報、電話卡、T1／T2 與 I
 summary: 大阪關西機場（KIX）落地第一小時的實操指南：Visit Japan Web 與入境卡怎麼填、Softbank／Docomo／AU 電話卡怎麼選、T1 與 T2 的出關與行李流程、T2 到 T1 的免費接駁巴士、南海電鐵與 JR HARUKA 及機場巴士進城，以及 ICOCA 的購買與使用。
 date: 2026-10-20
 updated: 2026-10-20
-source: 唐人簽證
 tags: 關西國際機場, KIX, 日本入境, 電話卡, ICOCA, 機場交通
 cover: images/0.webp
 ---

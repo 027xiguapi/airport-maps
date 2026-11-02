@@ -4,7 +4,6 @@ title: "Aeroporto di Incheon: come spostarsi tra il Terminal 1 e il Terminal 2"
 summary: "I due modi per passare da un terminal all'altro a Incheon — la navetta gratuita (linee aeroportuali 03 e 04) dalla corsia esterna del livello partenze 3F e il treno AREX omnibus dal B1 — con orari, frequenza, tariffe e fermate, più quali compagnie usano quale terminal e cosa tenere d'occhio in una coincidenza tra terminal."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: Aeroporto di Incheon, da T1 a T2, navetta gratuita, AREX, viaggio in Corea
 cover: images/0.webp
 ---

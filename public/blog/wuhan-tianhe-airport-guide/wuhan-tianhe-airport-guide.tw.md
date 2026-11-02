@@ -3,7 +3,6 @@ slug: wuhan-tianhe-airport-guide
 title: 武漢天河國際機場超全指南：T2／T3 乘機、接機與交通停車
 summary: 武漢天河國際機場（WUH）實用指南：T2、T3 航廈的國內出發與到達流程、值機島與截載時間，機場巴士、地鐵 2 號線、空港 3 路、高鐵與自駕進出港路線，以及 T3 地下停車場與交通中心停車場停車指引。
 date: 2026-10-05
-source: 武漢天河國際機場官網
 tags: 武漢天河機場, WUH, T3航廈, T2航廈, 機場交通
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Aeroporto internazionale di Shanghai Pudong: mappe dei terminal (complet
 summary: "Planimetrie piano per piano dei terminal T1 e T2 di Pudong e dei padiglioni satelliti S1 e S2 — cinque piste, oltre 50 milioni di passeggeri all'anno, arrivi al piano 1 e 2, partenze al piano 3 e l'unica cosa che non potete fare tra S1 e S2."
 date: 2026-09-30
 updated: 2026-09-30
-source: 懿旅航空票务 (Yilv Air Ticketing)
 tags: Aeroporto di Shanghai Pudong, terminal di Pudong, padiglioni satelliti, mappe dei terminal
 cover: images/0.png
 ---

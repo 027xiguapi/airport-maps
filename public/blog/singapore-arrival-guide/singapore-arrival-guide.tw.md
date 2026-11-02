@@ -3,7 +3,6 @@ slug: singapore-arrival-guide
 title: 新加坡落地入境攻略（附機場map&地鐵路線）
 summary: 新加坡樟宜機場落地入境全流程：跟著 Arrival 指示走到入境大廳、自助通關兩步走，附入境卡填寫提示、樟宜機場地圖與新加坡地鐵線路圖。
 date: 2026-09-30
-source: 海外輕留學
 tags: 新加坡入境, 樟宜機場, 入境卡, 新加坡地鐵
 cover: images/0.webp
 ---

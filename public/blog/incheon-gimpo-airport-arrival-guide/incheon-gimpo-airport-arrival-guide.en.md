@@ -4,7 +4,6 @@ title: "Incheon or Gimpo: Arriving in Seoul and Getting into the City"
 summary: "How Seoul's two airports differ — distance, terminals, immigration times and the ways into town: AREX express versus all-stop trains, airport buses and taxis, plus Q-CODE, the C-3-9 visa and the Jeju visa-free trap at Gimpo's domestic terminal."
 date: 2026-10-22
 updated: 2026-10-22
-source: VJW Chinese Simplified Edition (WeChat account)
 tags: Incheon Airport, Gimpo Airport, AREX, Seoul transport, Korea arrival
 cover: images/0.webp
 ---

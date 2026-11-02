@@ -4,7 +4,6 @@ title: "Immigration et départ à l'aéroport du Kansai : tout le parcours, éta
 summary: "Arriver et repartir par l'aéroport international du Kansai (KIX) : remplir les déclarations d'immigration et de douane sur Visit Japan Web avant de partir, la quarantaine et les bornes d'empreintes et de photo, le guichet de l'immigration, les bagages et les portiques de douane en libre-service, la marche jusqu'au niveau des trains et, au retour, l'enregistrement, le guichet de détaxe, le contrôle de sûreté, le contrôle des passeports et le temps à prévoir avant la porte."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guides)
 tags: Aéroport international du Kansai, immigration au Japon, départ du Japon, Visit Japan Web, formalités aéroportuaires
 cover: images/0.webp
 ---

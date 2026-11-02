@@ -4,7 +4,6 @@ title: "Il duty-free aeroportuale è tornato: gli scaffali di Daxing, Kansai e C
 summary: "Nel luglio 2023 i voli internazionali si stavano riprendendo e il duty-free aeroportuale recuperava un po' della sua vita di un tempo. Un giro su tre scaffali — Pechino Daxing (PKX), Osaka Kansai (KIX) e Chiang Mai (CNX) — mostra cosa hanno fatto tre anni di pandemia ai prezzi e all'assortimento del travel retail, rispetto al 2020."
 date: 2026-10-19
 updated: 2026-10-19
-source: WhiskyENJOY
 tags: duty-free aeroportuale, whisky, Pechino Daxing, aeroporto del Kansai, aeroporto di Chiang Mai
 cover: images/0.webp
 ---

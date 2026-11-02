@@ -4,7 +4,6 @@ title: "Aéroport international de Shanghai Pudong : plans des terminaux (comple
 summary: "Des plans étage par étage des terminaux T1 et T2 de Pudong et des satellites S1 et S2 — cinq pistes, plus de 50 millions de passagers par an, arrivées au 1F et au 2F, départs au 3F, et la seule chose impossible entre S1 et S2."
 date: 2026-09-30
 updated: 2026-09-30
-source: 懿旅航空票务 (Yilv Air Ticketing)
 tags: Aéroport de Shanghai Pudong, terminaux de Pudong, satellites, plans des terminaux
 cover: images/0.png
 ---

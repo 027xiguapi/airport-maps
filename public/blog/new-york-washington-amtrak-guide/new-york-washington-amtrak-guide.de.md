@@ -4,7 +4,6 @@ title: "Von New York nach Washington mit Amtrak: Acela oder Northeast Regional"
 summary: "Ein praktischer Leitfaden für die Amtrak-Fahrt vom New York Penn Station zum Washington Union Station: Acela gegen Northeast Regional, die Buchung bei Amtrak oder Omio und das Reisen mit dem E-Ticket, das Gedränge beim Einsteigen, wenn das Gleis 10–15 Minuten vorher bekannt gegeben wird, die Regeln für Gepäck und Ruhewagen und die Red Line am Union Station."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Amtrak, Penn Station, Washington Union Station, Northeast Corridor, Schienenverkehr in den USA
 cover: images/0.webp
 ---

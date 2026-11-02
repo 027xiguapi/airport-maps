@@ -4,7 +4,6 @@ title: "Weltweiter Flughafen-Passagierverkehr: Atlanta führt das Ranking zum dr
 summary: "Das Passagierranking 2023 des Airports Council International setzt Atlanta mit 104,65 Millionen zum dritten Mal auf Platz eins, Dubai mit einem Rekord auf Platz zwei, Heathrow zurück als Europas Nummer eins und Haneda zurück in die Top fünf. Vier chinesische Flughäfen – Guangzhou, Shanghai Pudong, Shenzhen und Peking Capital – schafften es in die Top 30."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: ACI, Passagierranking der Flughäfen, Flughafen Atlanta, Dubai International, Heathrow, Luftfahrt-Drehkreuze
 cover: images/0.webp
 ---

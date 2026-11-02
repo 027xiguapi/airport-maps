@@ -3,7 +3,6 @@ slug: hong-kong-airport-guide
 title: 'Leitfaden zum Flughafen Hongkong International (2026): Umsteigen, Verkehr, Einkaufen und Erholung'
 summary: "Ein vollständiger Leitfaden zum Flughafen Hongkong International (Chek Lap Kok, HKG): der dreistufige Transferablauf und die Aufteilung der Gate-Bereiche, Preise für die Gepäckaufbewahrung, der Airport Express und die Flughafenbusse in die Stadt, die Sky Bridge und die Spielkuppel, vier Restaurants, die einen Umweg lohnen, Einkaufen vor und nach der Sicherheitskontrolle, drei Lounges und die kostenlosen Services – plus die Änderung der Abflugsteuer 2026."
 date: 2026-10-07
-source: 港了个漂 (Hong Kong Piaos)
 tags: Flughafen Hongkong International, HKG, Chek Lap Kok, Flughafentransfers, Einkaufen am Flughafen Hongkong
 cover: images/0.webp
 ---

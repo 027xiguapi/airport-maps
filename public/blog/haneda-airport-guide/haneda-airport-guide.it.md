@@ -4,7 +4,6 @@ title: "Guida all'aeroporto di Tokyo Haneda: il primo aeroporto del Giappone"
 summary: "Una guida all'aeroporto internazionale di Tokyo Haneda — il timbro goshoin esclusivo dell'aeroporto e che cosa significa ogni segno, tre terminal e come spostarsi tra loro, il miglior sukiyaki e sushi del T3, i souvenir esclusivi di Haneda e come raggiungere il centro di Tokyo in 15 minuti."
 date: 2026-09-30
 updated: 2026-09-30
-source: Japan National Tourism Organization
 tags: Tokyo Haneda, timbro goshoin, viaggio in Giappone, guida aeroportuale
 cover: images/0.webp
 ---

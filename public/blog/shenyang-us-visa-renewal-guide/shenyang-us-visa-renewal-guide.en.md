@@ -4,7 +4,6 @@ title: "Renewing a US B1/B2 Visa in Shenyang: DS-160, Interview Waiver and Drop-
 summary: "A practical walkthrough for renewing a US B1/B2 visa in Shenyang: how to prepare the photo and name codes, fill and save the DS-160, get the interview-waiver choice right in the appointment system, and submit documents by CITIC Bank or EMS."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: US visa, visa renewal, DS-160, interview waiver, Shenyang
 cover: images/0.webp
 ---

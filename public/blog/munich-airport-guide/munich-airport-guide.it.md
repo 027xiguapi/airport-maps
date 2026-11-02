@@ -4,7 +4,6 @@ title: "Guida ai trasferimenti all'aeroporto di Monaco di Baviera: quattro coinc
 summary: "Una guida completa all'aeroporto di Monaco di Baviera (MUC): quanto richiede ciascuna delle quattro combinazioni di trasferimento Schengen e cosa comporta, un percorso passo passo per il trasferimento LH727, la storia dell'aeroporto, le lounge gratuite, a pagamento e riservate alle compagnie con le capsule per dormire NapCabs, la ristorazione, il duty-free, gli hotel aeroportuali e le aree fumatori, più l'operatività dei voli e il panorama delle compagnie dell'aeroporto."
 date: 2026-10-21
 updated: 2026-10-21
-source: 亦出旅行 (Yichu Trip)
 tags: Aeroporto di Monaco di Baviera, MUC, trasferimenti aeroportuali, trasferimenti Schengen, Lufthansa
 cover: images/0.webp
 ---

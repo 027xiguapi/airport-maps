@@ -4,7 +4,6 @@ title: "L'aéroport de Busan Gimhae en métro léger : d'Airport Station à la l
 summary: "Un guide pas à pas du Busan–Gimhae Light Rail Transit depuis l'aéroport international de Gimhae (PUS) vers Busan : la marche de l'arrivée internationale à Airport Station, les tarifs T-money et les billets, trois stations et six minutes jusqu'à Sasang, le changement pour la ligne 2 verte, et les temps de trajet vers Seomyeon et Haeundae."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: aéroport de Gimhae, transports à Busan, Busan-Gimhae Light Rail, station Sasang, voyage en Corée
 cover: images/0.webp
 ---

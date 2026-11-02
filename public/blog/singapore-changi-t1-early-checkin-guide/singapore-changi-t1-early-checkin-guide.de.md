@@ -4,7 +4,6 @@ title: "Abflug am Changi T1: Frühzeitiger Check-in, GST-Rückerstattung und Ein
 summary: "Eine praktische Reihenfolge für den Abflug vom Changi Airport Terminal 1: die Zeitfenster für den frühen Check-in in Jewel und welche Airlines ihn anbieten, die GST-Rückerstattung vor der Einreise, die automatische Ausreisekontrolle und die Sicherheitskontrolle am Gate sowie die Nutzung der Stunden, die das in Jewel einspart."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Flughafen Changi, Singapore Changi Terminal 1, früher Check-in, GST-Rückerstattung, Jewel Changi
 cover: images/0.webp
 ---

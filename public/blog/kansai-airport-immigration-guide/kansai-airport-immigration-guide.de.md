@@ -4,7 +4,6 @@ title: "Einreise und Abflug am Flughafen Kansai: der gesamte Ablauf Schritt für
 summary: "Ankunft und Abreise über den Kansai International Airport (KIX): die Einreise- und Zollerklärungen in Visit Japan Web vor dem Flug ausfüllen, Quarantäne und die Fingerabdruck- und Fotoautomaten, der Einreiseschalter, Gepäck und die Selbstbedienungs-Zollschranken, der Weg hinauf zur Bahnebene sowie für die Heimreise Check-in, Tax-Free-Schalter, Sicherheitskontrolle, Passkontrolle und wie viel Zeit vor dem Gate einzuplanen ist."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guides)
 tags: Flughafen Kansai, Einreise Japan, Ausreise Japan, Visit Japan Web, Flughafenverfahren
 cover: images/0.webp
 ---

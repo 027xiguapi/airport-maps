@@ -4,7 +4,6 @@ title: "Aide-mémoire des adresses coréennes à Séoul : copier, coller, se rep
 summary: "Une liste d'adresses coréennes à copier-coller pour Séoul — aéroports et pôles de transport, palais et monuments, parcs, quartiers commerçants, grands magasins et boutiques hors taxes, universités et spots photo — et pourquoi le coréen fonctionne mieux qu'un nom traduit avec les chauffeurs de taxi, Naver Map et Kakao T."
 date: 2026-10-22
 updated: 2026-10-22
-source: Xiao Han Beauty Research Club (WeChat account)
 tags: Adresses à Séoul, adresses coréennes, Naver Map, Kakao T, voyage en Corée
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Incheon Airport: Zwischen Terminal 1 und Terminal 2 wechseln"
 summary: "Die zwei Wege zwischen den Terminals von Incheon — der kostenlose Shuttlebus (Flughafenlinien 03 und 04) vom Abflugbereich im 3. Stock und der AREX-Zug mit Halt an allen Stationen vom Untergeschoss B1 — mit Betriebszeiten, Takt, Fahrpreisen und Haltestellen, dazu welche Airlines welches Terminal nutzen und worauf Sie bei einem Umstieg zwischen den Terminals achten sollten."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: Incheon Airport, T1 zu T2, kostenloser Shuttlebus, AREX, Korea-Reise
 cover: images/0.webp
 ---

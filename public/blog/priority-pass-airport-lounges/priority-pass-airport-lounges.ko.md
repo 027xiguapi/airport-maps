@@ -4,7 +4,6 @@ title: "Priority Pass 라운지: 세 등급의 가격, 신용카드로 입장하
 summary: "Priority Pass는 145개 국가와 지역에 1,500개 이상의 제휴 라운지를 둔 세계 최대 공항 라운지 네트워크입니다. 이 안내는 세 가지 회원 등급, 은행이 발급하는 Priority Pass Select 카드로 입장하는 방식, 동반인 규정, 특정 공항에서 라운지를 찾는 방법, 그리고 2024년 지역별 분포가 실제로 무엇을 덮는지를 정리합니다."
 date: 2026-10-19
 updated: 2026-10-19
-source: Luoluo Talks Cards
 tags: Priority Pass, PP 카드, 공항 라운지, 신용카드 혜택, 라운지 이용
 cover: images/0.webp
 ---

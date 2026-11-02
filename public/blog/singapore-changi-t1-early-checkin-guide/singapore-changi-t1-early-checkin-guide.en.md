@@ -4,7 +4,6 @@ title: "Changi T1 Departures: Early Check-in, GST Refund and Immigration in the 
 summary: "A practical sequence for departing from Changi Airport Terminal 1: the early check-in windows at Jewel and which airlines offer them, the GST refund before immigration, automated departure clearance and gate security, and how to use the hours that saves at Jewel."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Changi Airport, Singapore Changi Terminal 1, early check-in, GST refund, Jewel Changi
 cover: images/0.webp
 ---

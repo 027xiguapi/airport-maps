@@ -4,7 +4,6 @@ title: "Dubaï approuve un terminal de 35 milliards de dollars à Al Maktoum"
 summary: "Le 28 avril 2024, le souverain de Dubaï a approuvé un nouveau terminal à l'aéroport international Al Maktoum (DWC) : environ 35 milliards de dollars, un site de 70 kilomètres carrés, 400 portes et cinq pistes parallèles, construit par phases sur une décennie, avec une capacité de 260 millions de passagers et 12 millions de tonnes de fret, et à terme le transfert de tout le trafic de Dubai International. Voici la logique, et le risque."
 date: 2026-10-19
 updated: 2026-10-19
-source: GA Global Architecture
 tags: aéroport international Al Maktoum, DWC, aéroport international de Dubaï, Emirates, extension aéroportuaire
 cover: images/0.webp
 ---

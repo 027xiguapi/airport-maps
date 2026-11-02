@@ -4,7 +4,6 @@ title: '간사이국제공항: T1과 T2, 그리고 시내로 이어지는 첫 �
 summary: '간사이국제공항(KIX) 첫 착륙 안내입니다. 제1터미널과 제2터미널, 에어로플라자 건물이 어떻게 나뉘어 있는지, 터미널 안에서 어디서 먹고 쇼핑하는지, First Cabin 캡슐 호텔과 Nikko Kansai Airport 호텔, 그리고 시내로 가는 네 가지 방법 — 난카이선, JR HARUKA, 공항버스, 택시 — 의 요금과 소요 시간을 정리했습니다.'
 date: 2026-10-20
 updated: 2026-10-20
-source: 霓虹酱日本资讯 (Neon-chan Japan Info)
 tags: 간사이국제공항, KIX, 오사카 여행, 공항 터미널, 공항 교통, 일본
 cover: images/0.webp
 ---

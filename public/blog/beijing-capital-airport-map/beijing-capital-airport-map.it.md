@@ -4,7 +4,6 @@ title: "Aeroporto internazionale di Pechino Capitale: mappe dei terminal (comple
 summary: "Diagrammi piano per piano per i terminal T1, T2 e T3 di Pechino Capitale: tre terminal e 314 piazzole, le zone T3C, T3D e T3E, la chiusura del T1, e quali piani gestiscono i voli nazionali e internazionali."
 date: 2026-04-17
 updated: 2026-09-30
-source: 懿旅航空票务 (Yilv Air Ticketing)
 tags: aeroporto di Pechino Capitale, terminal di Pechino Capitale, T3, mappe dei terminal
 cover: images/0.webp
 ---

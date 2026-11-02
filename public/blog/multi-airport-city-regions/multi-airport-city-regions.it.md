@@ -4,7 +4,6 @@ title: "Quando una metropoli costruisce un secondo e un terzo aeroporto: lezioni
 summary: "Una lezione universitaria incentrata sui nuovi aeroporti previsti per Guangzhou e Nantong riporta in primo piano le regioni urbane multi-aeroporto. Questo commento si chiede perché le grandi aree metropolitane costruiscano un secondo e un terzo aeroporto, come si possano dividere i ruoli degli hub e come la Grande Baia possa evitare una concorrenza omogenea."
 date: 2026-10-19
 updated: 2026-10-19
-source: School of Geography, South China Normal University
 tags: regioni urbane multi-aeroporto, Grande Baia, specializzazione degli hub, nuovo aeroporto di Guangzhou, nuovo aeroporto di Nantong
 cover: images/0.webp
 ---

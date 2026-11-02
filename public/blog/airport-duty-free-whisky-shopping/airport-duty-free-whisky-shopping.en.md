@@ -4,7 +4,6 @@ title: "Airport Duty-Free Is Back: Shelves at Daxing, Kansai and Chiang Mai"
 summary: "In July 2023 international flights were recovering and airport duty-free was regaining a little life. A tour of three shelves — Beijing Daxing (PKX), Osaka Kansai (KIX) and Chiang Mai (CNX) — shows what three pandemic years did to travel-retail prices and selection, compared with 2020."
 date: 2026-10-19
 updated: 2026-10-19
-source: WhiskyENJOY
 tags: airport duty-free, whisky, Beijing Daxing, Kansai airport, Chiang Mai airport
 cover: images/0.webp
 ---

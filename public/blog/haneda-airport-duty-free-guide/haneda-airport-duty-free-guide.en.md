@@ -4,7 +4,6 @@ title: 'Duty-Free at Haneda Airport: T2 and T3 Shops, Brands and Transit Rules'
 summary: 'A practical guide to duty-free shopping at Haneda Airport (HND): the T2 TIAT DUTY FREE SOUVENIR, the two T3 shops by gate 109, their hours and brands, ANA vouchers and online pre-order, plus duty-free versus tax-free, liquids on connections and what is worth buying at the airport rather than in town.'
 date: 2026-10-20
 updated: 2026-10-20
-source: ANADutyFreeShop (ANA Trading Duty Free)
 tags: Haneda duty free, Japan duty free, Japanese whisky, airport shopping, Tokyo travel
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Quasi 60 sistemi multi-aeroporto: perché un'area metropolitana costruis
 summary: "Uno studio basato sui dati aeroportuali globali del 2018 ha individuato 59 sistemi multi-aeroporto, il 93,2% dei quali composto da due o tre aeroporti, con lo schema «uno principale, uno secondario» come il più diffuso. Questa spiegazione illustra le tre condizioni, la soglia di 70 km e la ricerca in due fasi alla base del risultato, e che cosa significa per le città cinesi."
 date: 2026-10-19
 updated: 2026-10-19
-source: International Air Transport
 tags: sistemi multi-aeroporto, cluster aeroportuali, aree metropolitane, hub dell'aviazione, pianificazione aeroportuale
 cover: images/0.webp
 ---

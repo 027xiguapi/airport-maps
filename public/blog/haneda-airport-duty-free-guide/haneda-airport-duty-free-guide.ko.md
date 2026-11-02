@@ -4,7 +4,6 @@ title: '하네다 공항 면세점: T2·T3 매장, 브랜드, 환승 규정'
 summary: '하네다 공항(HND)에서의 면세 쇼핑 실전 안내입니다. T2의 TIAT DUTY FREE SOUVENIR, 109번 게이트 앞 T3 매장 두 곳의 영업시간과 브랜드, ANA 상품권과 온라인 사전 예약, 그리고 면세와 세금 면제의 차이, 환승 시 액체류 규정, 공항에서 살 만한 것과 시내에서 사는 편이 나은 것을 정리했습니다.'
 date: 2026-10-20
 updated: 2026-10-20
-source: ANADutyFreeShop (ANA Trading Duty Free)
 tags: 하네다 면세점, 일본 면세, 일본 위스키, 공항 쇼핑, 도쿄 여행
 cover: images/0.webp
 ---

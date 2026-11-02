@@ -4,7 +4,6 @@ title: "Washington to Boston by Air: DCA Terminals, Baggage Fees and the Silver 
 summary: "A practical guide to flying from Washington Reagan National (DCA) to Boston Logan (BOS): which terminal your airline uses, the Metro ride from downtown, economy baggage rules and fees, TSA and zone boarding, and the free Silver Line into South Station."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Washington airports, Reagan National, Boston Logan, US domestic flight, Silver Line
 cover: images/0.webp
 ---

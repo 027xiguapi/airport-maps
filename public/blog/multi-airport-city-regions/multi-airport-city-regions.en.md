@@ -4,7 +4,6 @@ title: "When a Megacity Builds a Second and Third Airport: Lessons from Multi-Ai
 summary: "A campus lecture framed around the new airports planned for Guangzhou and Nantong brings multi-airport city regions back into view. This commentary asks why large metropolitan areas build second and third airports, how hub roles can be divided, and how the Greater Bay Area can avoid homogeneous competition."
 date: 2026-10-19
 updated: 2026-10-19
-source: School of Geography, South China Normal University
 tags: multi-airport city regions, Greater Bay Area, hub specialisation, Guangzhou new airport, Nantong new airport
 cover: images/0.webp
 ---

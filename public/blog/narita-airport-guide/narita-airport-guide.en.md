@@ -4,7 +4,6 @@ title: "Narita Airport Guide: Terminals, Trains into Tokyo and Duty-Free Shoppin
 summary: "A practical guide to Narita International Airport (NRT): how terminals 1, 2 and 3 divide the airlines, their floors and the free inter-terminal shuttle, the Skyliner, N'EX, Keisei trains and airport buses into Tokyo with journey times and indicative fares, the 2025 duty-free shops and debut souvenirs, transfers, overnight stays and late arrivals, plus luggage storage, Wi-Fi, lost property and common questions."
 date: 2026-10-20
 updated: 2026-10-20
-source: 乐游霓虹 (Leyou Nihong)
 tags: Narita Airport, NRT, Tokyo transport, airport duty-free, layovers
 cover: images/0.webp
 ---

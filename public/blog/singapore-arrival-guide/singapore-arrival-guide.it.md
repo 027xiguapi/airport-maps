@@ -3,7 +3,6 @@ slug: singapore-arrival-guide
 title: "Arrivare a Singapore: l'aeroporto di Changi passo dopo passo (con mappa dell'aeroporto e MRT)"
 summary: "Superare l'immigrazione all'aeroporto di Singapore Changi passo dopo passo — seguire le insegne Arrival fino alla sala immigrazione, poi i due varchi automatici — oltre alla SG Arrival Card, a una mappa dell'aeroporto di Changi e alla mappa della rete MRT di Singapore."
 date: 2026-09-30
-source: 海外轻留学
 tags: Arrivo a Singapore, aeroporto di Changi, SG Arrival Card, MRT di Singapore
 cover: images/0.webp
 ---

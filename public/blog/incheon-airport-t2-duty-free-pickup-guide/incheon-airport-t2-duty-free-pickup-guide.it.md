@@ -4,7 +4,6 @@ title: "Ritiro duty-free al T2 di Incheon: dall'ordine sull'app alla hall di rit
 summary: "Come ritirare gli ordini duty-free all'aeroporto di Incheon, Terminal 2: l'ordine sull'app duty-free, l'arrivo tre ore prima o un'ora prima dell'imbarco in transito, il punto di ritiro di fronte al Centro della cultura tradizionale coreana al 3F, la scala mobile che scende alla hall del 2F, i chioschi, la scansione del passaporto e la coda per numero, e le regole su liquidi e transiti."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Aeroporto di Incheon, ritiro duty-free, Terminal 2, shopping in Corea, viaggio in Corea
 cover: images/0.webp
 ---

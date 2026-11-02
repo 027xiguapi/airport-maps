@@ -4,7 +4,6 @@ title: '간사이 공항에서의 첫 한 시간: 입국 심사와 SIM 카드, �
 summary: '간사이 국제공항(KIX)에서의 첫 한 시간을 단계별로 정리했습니다. Visit Japan Web 신고서나 종이 신고서 작성, Softbank와 Docomo, AU SIM 카드 중 선택, 터미널 1과 터미널 2의 도착 절차, 두 터미널을 잇는 무료 셔틀, 시내로 가는 전철과 버스·택시, ICOCA 카드 구입과 사용법까지 담았습니다.'
 date: 2026-10-20
 updated: 2026-10-20
-source: 唐人签证 (Tangren Visa)
 tags: 간사이 국제공항, KIX, 일본 입국, SIM 카드, ICOCA, 공항 교통
 cover: images/0.webp
 ---

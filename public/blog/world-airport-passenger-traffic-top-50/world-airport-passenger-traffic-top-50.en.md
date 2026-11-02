@@ -4,7 +4,6 @@ title: "World Airport Passenger Traffic: Atlanta Takes a Fifth Year, Shanghai Pu
 summary: "Atlanta handled 106.3 million passengers in 2025 to lead the world for a fifth consecutive year, though traffic fell 1.6 per cent. Shanghai Pudong entered the global top five for the first time with 84.99 million, Guangzhou Baiyun climbed to ninth, and 13 Chinese airports made the top 50 — 12 of them moving up."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: airport rankings, passenger traffic, Shanghai Pudong Airport, Atlanta airport, Guangzhou Baiyun Airport
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Quel aéroport pour le Japon ? Narita, Haneda, Kansai, Chubu et Naha com
 summary: "L'aéroport d'atterrissage façonne un voyage au Japon plus que l'heure du décollage. Ce guide compare les cinq principales portes d'entrée — Narita (NRT), Haneda (HND), Kansai (KIX), Chubu (NGO) et Naha (OKA) — en termes de distance, trains et bus, temps de trajet et tarifs indicatifs, puis aborde le choix Haneda-Narita, Kansai, Nagoya et Okinawa, les étapes communes à l'arrivée via Visit Japan Web et que faire après un vol de nuit."
 date: 2026-10-20
 updated: 2026-10-20
-source: 乐意门 (Leyimen)
 tags: aéroports du Japon, Narita, Haneda, aéroport du Kansai, arrivées au Japon
 cover: images/0.webp
 ---

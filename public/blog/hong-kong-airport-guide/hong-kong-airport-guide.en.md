@@ -3,7 +3,6 @@ slug: hong-kong-airport-guide
 title: 'Hong Kong International Airport Guide (2026): Transfers, Transport, Shopping and Rest'
 summary: "A complete guide to Hong Kong International Airport (Chek Lap Kok, HKG): the three-step transfer process and how the gate ranges are laid out, left luggage prices, the Airport Express and airport buses into town, the Sky Bridge and the children's play dome, four restaurants worth the detour, shopping before and after security, three lounges and the free services — plus the 2026 departure tax change."
 date: 2026-10-07
-source: 港了个漂 (Hong Kong Piaos)
 tags: Hong Kong International Airport, HKG, Chek Lap Kok, airport transfers, Hong Kong airport shopping
 cover: images/0.webp
 ---

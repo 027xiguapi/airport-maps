@@ -4,7 +4,6 @@ title: 'Flughafen München: Umsteigeverbindungen, Lounges, Gastronomie und Duty-
 summary: "Ein vollständiger Leitfaden zum Flughafen München (MUC): wie lange die vier Schengen-Umsteigekombinationen dauern und was sie beinhalten, ein Schritt-für-Schritt-Ablauf des Umstiegs mit LH727, die Geschichte des Flughafens, kostenlose, kostenpflichtige und nur für Airline-Gäste zugängliche Lounges mit den NapCabs-Schlafkapseln, Gastronomie, Duty-Free, Flughafenhotels und Raucherbereiche sowie der Flugbetrieb und die Airline-Landschaft des Flughafens."
 date: 2026-10-21
 updated: 2026-10-21
-source: 亦出旅行 (Yichu Trip)
 tags: Flughafen München, MUC, Umsteigen am Flughafen, Schengen-Umstieg, Lufthansa
 cover: images/0.webp
 ---

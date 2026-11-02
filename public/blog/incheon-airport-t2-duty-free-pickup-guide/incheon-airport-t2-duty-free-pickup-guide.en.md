@@ -4,7 +4,6 @@ title: "Incheon T2 Duty-Free Pickup: From the App Order to the 2F Collection Hal
 summary: "How to collect duty-free orders at Incheon Airport Terminal 2: ordering on the duty-free app, arriving three hours early or one hour before boarding in transit, the pickup point opposite the Korean Traditional Culture Center on 3F, the escalator down to the 2F hall, the kiosks, passport scan and number queue, and the liquids and transfer rules."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Incheon Airport, duty-free pickup, Terminal 2, Korea shopping, Korea travel
 cover: images/0.webp
 ---

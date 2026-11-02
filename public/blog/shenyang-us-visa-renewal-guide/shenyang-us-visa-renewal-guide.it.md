@@ -4,7 +4,6 @@ title: "Rinnovare un visto USA B1/B2 a Shenyang: DS-160, esonero dal colloquio e
 summary: "Un percorso pratico per rinnovare un visto USA B1/B2 a Shenyang: come preparare la foto e i codici del nome, compilare e salvare il DS-160, scegliere correttamente l'esonero dal colloquio nel sistema di prenotazione e consegnare i documenti tramite CITIC Bank o EMS."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Visto USA, rinnovo del visto, DS-160, esonero dal colloquio, Shenyang
 cover: images/0.webp
 ---

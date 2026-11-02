@@ -4,7 +4,6 @@ title: "Flughafen Peking Capital: Terminalpläne (vollständig)"
 summary: "Etagenpläne für die Terminals T1, T2 und T3 des Flughafens Peking Capital – drei Terminals und 314 Vorfeldpositionen, die Bereiche T3C, T3D und T3E, die Schließung von T1 und die Frage, welche Etagen für Inlands- und internationalen Verkehr zuständig sind."
 date: 2026-04-17
 updated: 2026-09-30
-source: 懿旅航空票务 (Yilv Air Ticketing)
 tags: Flughafen Peking Capital, Capital-Terminals, T3, Terminalpläne
 cover: images/0.webp
 ---

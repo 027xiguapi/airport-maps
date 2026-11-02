@@ -3,7 +3,6 @@ slug: pudong-airport-ground-transport
 title: "푸둥 공항 도착: 지하철, 택시, 버스 연결"
 summary: "푸둥 공항 1·2터미널에서 지하철과 택시, 버스로 시내에 가는 방법입니다. 각 터미널 도착층 출구의 위치, 환승 홀의 구조, 택시 승차장으로 이어지는 게이트, 어디서 어떤 버스 노선이 출발하는지 정리했습니다."
 date: 2026-09-29
-source: 上海交通 (Shanghai Transport)
 tags: 푸둥 공항 교통, 상하이 지하철, 공항 버스, 택시
 cover: images/3.webp
 ---

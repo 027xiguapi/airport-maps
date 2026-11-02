@@ -4,7 +4,6 @@ title: 'Ibaraki Airport nach Tokio: der Schnellbus, Fahrpreise und Reservierunge
 summary: 'Der Ibaraki Airport (IBR) hat keinen Bahnhof, der Weg nach Tokio führt also über einen Schnellbus zum Yaesu-Südausgang des Tokio Station: etwa 85 km und 100 Minuten, ¥2.200 einfach seit dem 30. März 2025. Dieser Leitfaden behandelt den aktuellen Fahrpreis und die Zahlung, die Reservierungsregeln von Japan Bus Online, den dünnen Sommerfahrplan 2026 und den dreiminütigen Fußweg von der Ankunft zur Haltestelle.'
 date: 2026-10-20
 updated: 2026-10-20
-source: 品质游 找春秋 (Chunqiu Travel)
 tags: Ibaraki Airport, IBR, Verkehr in Tokio, Schnellbus, Japan-Reise
 cover: images/0.webp
 ---

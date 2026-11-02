@@ -4,7 +4,6 @@ title: "World Airport Passenger Traffic: Atlanta Tops the Ranking for a Third Ye
 summary: "Airports Council International's 2023 passenger ranking puts Atlanta first for a third year at 104.65 million, Dubai at a record second, Heathrow back as Europe's number one and Haneda back in the top five. Four Chinese airports — Guangzhou, Shanghai Pudong, Shenzhen and Beijing Capital — made the top 30."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: ACI, airport passenger rankings, Atlanta airport, Dubai International, Heathrow, aviation hubs
 cover: images/0.webp
 ---

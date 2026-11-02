@@ -3,7 +3,6 @@ slug: chicago-ohare-airport-guide
 title: 芝加哥奧黑爾機場入境與通勤指南：從落地到進市區
 summary: 芝加哥奧黑爾國際機場（ORD）入境與通勤指南：T1／T2／T3／T5 航廈分佈與 ATS 機場快軌、海關申報單的填寫要點與入境流程，以及前往市區的 CTA 藍線、網約車、Pace 巴士三種方式的票價、站點與換乘提示。
 date: 2026-10-07
-source: Luxvue 尚誠地產
 tags: 芝加哥奧黑爾機場, ORD, 芝加哥入境, CTA藍線, 機場通勤
 cover: images/0.webp
 ---

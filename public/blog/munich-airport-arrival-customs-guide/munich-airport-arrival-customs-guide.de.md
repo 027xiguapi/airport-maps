@@ -4,7 +4,6 @@ title: "Ankunft am Flughafen München: das EES-Verfahren und die deutschen Zollr
 summary: "Wie die Einreise am Flughafen München gelingt: die Dokumente, die Sie vor dem Flug vorbereiten sollten, das Ein-/Ausreisesystem EES der EU und seine Selbstbedienungsschritte (Sprache, Passscan, Gesichts- und Fingerabdruckerfassung), die vollständigen Ankunftsabläufe in Terminal 1 und Terminal 2 sowie die Listen des deutschen Zolls zu verbotenen Gegenständen und anzumeldenden Waren."
 date: 2026-10-21
 updated: 2026-10-21
-source: 安利带你看世界 (Amway China)
 tags: Flughafen München, Einreise nach Deutschland, EES-System, Zollerklärung, MUC
 cover: images/1.webp
 ---

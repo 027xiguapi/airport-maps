@@ -4,7 +4,6 @@ title: "Wenn eine Megastadt einen zweiten und dritten Flughafen baut: Lehren aus
 summary: "Ein Campusvortrag, gerahmt von den neuen Flughäfen, die für Guangzhou und Nantong geplant sind, rückt Multi-Airport-Stadtregionen wieder in den Blick. Dieser Kommentar fragt, warum große Metropolregionen zweite und dritte Flughäfen bauen, wie sich Drehkreuzrollen aufteilen lassen und wie die Greater Bay Area homogene Konkurrenz vermeiden kann."
 date: 2026-10-19
 updated: 2026-10-19
-source: School of Geography, South China Normal University
 tags: Multi-Airport-Stadtregionen, Greater Bay Area, Drehkreuz-Spezialisierung, neuer Flughafen Guangzhou, neuer Flughafen Nantong
 cover: images/0.webp
 ---

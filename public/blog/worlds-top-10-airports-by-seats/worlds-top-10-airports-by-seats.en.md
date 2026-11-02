@@ -4,7 +4,6 @@ title: "World's Ten Busiest Airports: Dubai Leads on 4.9 Million Seats as Pudong
 summary: "OAG's February 2026 ranking measures departure seat capacity rather than passenger numbers. Dubai leads with about 4.9 million seats, Atlanta is second on 4.6 million, Shanghai Pudong rises to third on 4.28 million and Guangzhou Baiyun jumps three places to fifth. All ten airports sit in the northern hemisphere."
 date: 2026-10-19
 updated: 2026-10-19
-source: Aviation Viewpoint
 tags: airport rankings, OAG, seat capacity, Dubai airport, Shanghai Pudong Airport
 cover: images/0.webp
 ---

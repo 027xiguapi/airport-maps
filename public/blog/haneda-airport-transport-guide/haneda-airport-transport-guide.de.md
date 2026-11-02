@@ -4,7 +4,6 @@ title: "Vom Flughafen Haneda nach Tokio: Monorail, Keikyu oder Bus?"
 summary: "Ein praktischer Leitfaden für die Fahrt vom Flughafen Haneda (HND) nach Tokio: die Tokyo Monorail nach Hamamatsucho, Keikyu-Züge nach Shinagawa und durchgehend nach Asakusa, Flughafenbusse zu Hotels und in die weitere Kanto-Region, Taxis und späte Ankünfte, mit Fahrpreisen, Umsteigestationen und einer Tabelle, welche Linie für welches Gebiet geeignet ist."
 date: 2026-10-20
 updated: 2026-10-20
-source: 令和日本留学工作室 (Reiwa Japan Study Studio)
 tags: Flughafentransport Haneda, Tokyo Monorail, Keikyu, Flughafenbus, Reisen in Tokio
 cover: images/0.webp
 ---

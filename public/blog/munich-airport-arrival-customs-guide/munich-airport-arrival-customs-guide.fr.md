@@ -4,7 +4,6 @@ title: "Guide d'arrivée à l'aéroport de Munich : la procédure EES et les rè
 summary: "Comment passer l'arrivée à l'aéroport de Munich : les documents à préparer avant de partir, le système d'entrée/sortie EES de l'UE et ses étapes en libre-service (langue, scan du passeport, capture du visage et des empreintes), le parcours d'arrivée complet des terminaux 1 et 2, et les listes douanières allemandes des objets interdits et des biens à déclarer."
 date: 2026-10-21
 updated: 2026-10-21
-source: 安利带你看世界 (Amway China)
 tags: Aéroport de Munich, entrée en Allemagne, système EES, déclaration en douane, MUC
 cover: images/1.webp
 ---

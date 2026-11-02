@@ -4,7 +4,6 @@ title: "Von Kyoto nach Umeda mit der Hankyu-Linie: sechs Zugtypen, ein Fahrpreis
 summary: "Ein praktischer Leitfaden zur Hankyu-Kyoto-Linie von Kyoto-Kawaramachi nach Osaka-Umeda: die sechs Zugtypen auseinanderhalten, der einheitliche Fahrpreis von 410 Yen ohne Zuschlag für den Limited Express, IC-Karten und Ticketgates, den Bahnsteig ohne Japanisch lesen und den Weg aus dem Terminal Umeda finden."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Hankyu Railway, Verkehr in Kyoto, Osaka Umeda, Kyoto-Kawaramachi, Verkehr in Japan
 cover: images/0.webp
 ---

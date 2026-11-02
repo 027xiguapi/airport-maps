@@ -4,7 +4,6 @@ title: "Saudi Arabia's Plan for the World's Largest Airport: King Salman Interna
 summary: "Saudi Arabia's aviation strategy targets 330 million passengers a year by 2030, 4.5 million tonnes of cargo and up to $100 billion of investment, built around King Salman International Airport in Riyadh: 57 square kilometres, six parallel runways, 120 million passengers and a delivery-partner role for Mace. Here is the logic behind it, and the risk."
 date: 2026-10-19
 updated: 2026-10-19
-source: Middle East Eye
 tags: King Salman International Airport, Riyadh, Saudi Arabia, Vision 2030, airport expansion
 cover: images/0.webp
 ---

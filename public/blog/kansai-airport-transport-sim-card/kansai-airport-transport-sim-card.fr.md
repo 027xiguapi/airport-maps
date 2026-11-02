@@ -4,7 +4,6 @@ title: "Votre première heure à l'aéroport du Kansai : immigration, cartes SIM
 summary: "Un guide pas à pas de la première heure à l'aéroport international du Kansai (KIX) : remplir la déclaration Visit Japan Web ou le formulaire papier, choisir entre les cartes SIM Softbank, Docomo et AU, le parcours d'arrivée aux terminaux 1 et 2, la navette gratuite entre les deux, les trains, bus et taxis vers la ville, et l'achat et l'utilisation d'une carte ICOCA."
 date: 2026-10-20
 updated: 2026-10-20
-source: 唐人签证 (Tangren Visa)
 tags: Aéroport international du Kansai, KIX, arrivée au Japon, cartes SIM, ICOCA, transports depuis l'aéroport
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "인천공항 AREX: 직통열차일까, 일반열차일까?"
 summary: "인천국제공항에서 서울역까지 가는 AREX 공항철도 실전 가이드: 43분 걸리는 직통열차 13,000원, 4,750원부터 시작하는 일반열차, 지하 1층에서 표를 사는 위치, T-money 규칙과 서울역에서의 환승 정보까지 정리합니다."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: 인천공항 교통, AREX, 서울역, 공항철도, 한국 여행
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Da Kyoto a Umeda sulla linea Hankyu: sei tipi di treno, un'unica tariffa
 summary: "Una guida pratica alla linea Hankyu Kyoto da Kyoto-Kawaramachi a Osaka-Umeda: distinguere i sei tipi di treno, la tariffa fissa di 410 yen senza supplemento per il limitato espresso, carte IC e tornelli, leggere la banchina senza sapere il giapponese e orientarsi all'uscita dal terminal di Umeda."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Hankyu Railway, trasporti per Kyoto, Osaka Umeda, Kyoto-Kawaramachi, trasporti in Giappone
 cover: images/0.webp
 ---

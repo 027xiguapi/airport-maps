@@ -4,7 +4,6 @@ title: "Seoul Korean Address Cheat Sheet: Copy, Paste, Navigate"
 summary: "A copy-paste list of Korean addresses for Seoul — airports and transport hubs, palaces and landmarks, parks, shopping districts, department stores and duty-free, universities and photo spots — plus why Korean works better than a translated name with taxi drivers, Naver Map and Kakao T."
 date: 2026-10-22
 updated: 2026-10-22
-source: Xiao Han Beauty Research Club (WeChat account)
 tags: Seoul addresses, Korean addresses, Naver Map, Kakao T, Korea travel
 cover: images/0.webp
 ---

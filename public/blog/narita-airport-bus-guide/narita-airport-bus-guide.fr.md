@@ -4,7 +4,6 @@ title: "Rejoindre l'aéroport de Narita en bus : le car low cost jusqu'à la gar
 summary: "Guide pratique de l'AIRPORT BUS TYO-NRT, le car low cost entre l'aéroport de Narita (NRT) et la gare de Tokyo : le tarif d'environ 1 500 ¥, le trajet de 60 à 70 minutes, l'emplacement des comptoirs et des arrêts aux terminaux 1, 2 et 3, l'arrêt retour de la sortie sud de Yaesu, les règles de bagages, la fréquence des départs, et la comparaison avec le Skyliner et le N'EX."
 date: 2026-10-20
 updated: 2026-10-20
-source: 中国青旅逗游旅行 (China Youth Travel, Douyou)
 tags: Aéroport de Narita, bus aéroport, gare de Tokyo, transports à Tokyo, NRT
 cover: images/0.webp
 ---

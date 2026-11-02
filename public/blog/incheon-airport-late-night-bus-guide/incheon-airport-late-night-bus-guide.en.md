@@ -4,7 +4,6 @@ title: "Incheon Airport Late-Night Buses: N Routes, Fares and Stops"
 summary: "How the N-series late-night buses work between Seoul and Incheon International Airport: fares of 10,000 and 18,000 won, the Seoul departure points and intermediate stops, T1 and T2 drop-off positions, and where to check the airport-to-Seoul direction."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: Incheon Airport night bus, N6000, N6701, Incheon Airport transport, Korea travel
 cover: images/0.webp
 ---

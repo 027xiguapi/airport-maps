@@ -4,7 +4,6 @@ title: "Arriving at JFK: Immigration, the AirTrain and the Subway into Manhattan
 summary: "What happens after you land at New York JFK: the visitors lane and CBP interview at Terminal 1, baggage and customs, the two AirTrain branches to Jamaica and Howard Beach, the E, J and Z subway into Manhattan, OMNY fares, the Long Island Rail Road alternative, and the traps that catch first-time arrivals."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: JFK, US immigration, AirTrain, New York subway, OMNY
 cover: images/0.webp
 ---

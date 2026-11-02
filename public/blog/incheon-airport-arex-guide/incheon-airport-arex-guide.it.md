@@ -4,7 +4,6 @@ title: "Aeroporto di Incheon con AREX: treno Express o all-stop?"
 summary: "Una guida pratica alla ferrovia AREX dall'aeroporto internazionale di Incheon alla stazione di Seul: il treno Express da 43 minuti a 13.000 won, il servizio con tutte le fermate da circa 4.750 won, dove comprare i biglietti al livello B1, le regole T-money e i collegamenti alla stazione di Seul."
 date: 2026-10-22
 updated: 2026-10-22
-source: 韩国仁川国际机场 (Incheon International Airport)
 tags: trasporti aeroporto Incheon, AREX, stazione di Seul, treno aeroportuale, viaggio in Corea
 cover: images/0.webp
 ---

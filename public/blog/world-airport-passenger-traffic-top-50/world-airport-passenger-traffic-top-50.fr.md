@@ -4,7 +4,6 @@ title: "Trafic passagers des aéroports mondiaux : Atlanta pour une cinquième a
 summary: "Atlanta a accueilli 106,3 millions de passagers en 2025 et mène le monde pour une cinquième année consécutive, malgré une baisse de 1,6 pour cent. Shanghai Pudong entre pour la première fois dans le top cinq mondial avec 84,99 millions, Guangzhou Baiyun remonte à la neuvième place et 13 aéroports chinois figurent dans le top 50 — dont 12 en progression."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: classement des aéroports, trafic passagers, aéroport de Shanghai Pudong, aéroport d'Atlanta, aéroport de Guangzhou Baiyun
 cover: images/0.webp
 ---

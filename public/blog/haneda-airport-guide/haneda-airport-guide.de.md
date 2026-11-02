@@ -4,7 +4,6 @@ title: "Leitfaden zum Flughafen Tokio-Haneda: Japans Flughafen Nummer eins"
 summary: "Ein Leitfaden zum internationalen Flughafen Tokio-Haneda — der nur am Flughafen erhältliche Goshoin-Stempel und was jede Markierung darauf bedeutet, drei Terminals und wie Sie zwischen ihnen wechseln, das beste Sukiyaki und Sushi in T3, Souvenirs, die es nur in Haneda gibt, und wie Sie in 15 Minuten ins Zentrum von Tokio kommen."
 date: 2026-09-30
 updated: 2026-09-30
-source: Japan National Tourism Organization
 tags: Flughafen Tokio-Haneda, Goshoin-Stempel, Japanreise, Flughafenleitfaden
 cover: images/0.webp
 ---

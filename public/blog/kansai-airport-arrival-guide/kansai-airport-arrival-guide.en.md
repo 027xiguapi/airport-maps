@@ -4,7 +4,6 @@ title: 'Kansai International Airport: A First-Landing Guide to T1, T2 and the Ci
 summary: 'A first-landing guide to Kansai International Airport (KIX): how Terminal 1, Terminal 2 and the Aeroplaza building divide up, where to eat and shop inside the terminal, the First Cabin capsule hotel and the Nikko Kansai Airport hotel, and the four ways into the city — the Nankai line, the JR HARUKA, the airport bus and taxis — with the fares and journey times to expect.'
 date: 2026-10-20
 updated: 2026-10-20
-source: 霓虹酱日本资讯 (Neon-chan Japan Info)
 tags: Kansai International Airport, KIX, Osaka travel, airport terminals, airport transport, Japan
 cover: images/0.webp
 ---

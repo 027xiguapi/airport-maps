@@ -3,7 +3,6 @@ slug: us-airport-transfer-guide
 title: "Transito negli Stati Uniti dopo l'arrivo: sette grandi aeroporti, dall'immigrazione al gate successivo"
 summary: "Come funziona una coincidenza negli Stati Uniti una volta atterrati, aeroporto per aeroporto: la disposizione di terminal e concourse a Los Angeles LAX, San Francisco SFO, Atlanta ATL, Chicago ORD, New York Newark EWR, Seattle SEA e Detroit DTW, le navette e i treni aeroportuali che li collegano, il ricontrollo dei bagagli e la nuova sicurezza, e quanto tempo di coincidenza serve in ciascun aeroporto."
 date: 2026-10-10
-source: 游美旅社 (YOME Travel)
 tags: Transito negli USA, immigrazione negli USA, LAX, SFO, ATL, ORD, EWR, SEA, DTW
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Kansai Airport Immigration and Departures: The Whole Flow, Step by Step"
 summary: "Arriving and leaving through Kansai International Airport (KIX): filing the Visit Japan Web immigration and customs declarations before you fly, quarantine and the fingerprint-and-photo kiosks, the immigration counter, baggage and the self-service customs gates, the walk out to the railway level, and on the way home check-in, the tax-free desk, security, passport control and how much time to leave before the gate."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guides)
 tags: Kansai International Airport, Japan immigration, Japan departure, Visit Japan Web, airport procedures
 cover: images/0.webp
 ---

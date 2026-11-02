@@ -4,7 +4,6 @@ title: "서울 한국어 주소 치트시트: 복사하고, 붙여넣고, 찾아
 summary: "서울의 공항과 교통 거점, 궁궐과 명소, 공원, 쇼핑가, 백화점과 면세점, 대학과 사진 명소까지 복사해 쓰는 한국어 주소 목록 — 그리고 택시 기사, 네이버 지도, 카카오 T에서 번역된 이름보다 한국어 주소가 나은 이유."
 date: 2026-10-22
 updated: 2026-10-22
-source: Xiao Han Beauty Research Club (WeChat account)
 tags: 서울 주소, 한국어 주소, 네이버 지도, 카카오 T, 한국 여행
 cover: images/0.webp
 ---

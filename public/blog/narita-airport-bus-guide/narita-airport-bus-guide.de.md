@@ -4,7 +4,6 @@ title: "Mit dem Bus zum Flughafen Narita: Der günstige Reisebus zum Bahnhof Tok
 summary: "Ein praktischer Leitfaden zum AIRPORT BUS TYO-NRT, dem günstigen Reisebus zwischen dem Flughafen Narita (NRT) und dem Bahnhof Tokio: der Fahrpreis von rund ¥1,500, die Fahrzeit von 60–70 Minuten, wo sich die Schalter und Haltestellen in den Terminals 1, 2 und 3 befinden, die Rückfahrthaltestelle am Yaesu-Südausgang, die Gepäckregeln, die Taktfrequenz und wie der Bus im Vergleich zu Skyliner und N'EX abschneidet."
 date: 2026-10-20
 updated: 2026-10-20
-source: 中国青旅逗游旅行 (China Youth Travel, Douyou)
 tags: Flughafen Narita, Flughafenbus, Bahnhof Tokio, Nahverkehr Tokio, NRT
 cover: images/0.webp
 ---

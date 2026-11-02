@@ -4,7 +4,6 @@ title: "Weltweiter Passagierverkehr an Flughäfen: Atlanta zum fünften Mal in F
 summary: "Atlanta fertigte 2025 106,3 Millionen Passagiere ab und führt die Welt damit das fünfte Jahr in Folge an, obwohl der Verkehr um 1,6 Prozent zurückging. Shanghai Pudong erreichte mit 84,99 Millionen erstmals die globalen Top fünf, Guangzhou Baiyun kletterte auf Platz neun, und 13 chinesische Flughäfen schafften es in die Top 50 – zwölf davon verbesserten sich."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: Flughafen-Rankings, Passagierverkehr, Flughafen Shanghai Pudong, Flughafen Atlanta, Flughafen Guangzhou Baiyun
 cover: images/0.webp
 ---

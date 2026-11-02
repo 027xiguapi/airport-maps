@@ -3,7 +3,6 @@ slug: singapore-arrival-guide
 title: "Die Ankunft in Singapur: Der Changi Airport Schritt für Schritt (mit Flughafenplan und MRT)"
 summary: "Die Einreise am Singapore Changi Airport Schritt für Schritt – folgen Sie den Arrival-Schildern zur Immigration Hall und dann den beiden automatischen Gates – plus SG Arrival Card, einem Changi-Flughafenplan und dem Netzplan der Singapore MRT."
 date: 2026-09-30
-source: 海外轻留学
 tags: Ankunft in Singapur, Changi Airport, SG Arrival Card, Singapore MRT
 cover: images/0.webp
 ---

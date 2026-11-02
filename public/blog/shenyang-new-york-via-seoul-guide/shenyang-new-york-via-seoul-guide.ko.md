@@ -4,7 +4,6 @@ title: "선양에서 뉴욕까지, 서울 경유: Korean Air, 인천 환승과 J
 summary: "선양 타오셴에서 인천을 거쳐 Korean Air로 뉴욕 JFK까지 가는 단계별 안내입니다. 체크인에서의 비자와 EVUS 확인, 위탁 수하물 직행 수속과 탑승권 두 장, 2터미널의 환승 보안 검색과 환승 데스크, 환승 시간은 얼마나 두어야 하는지, 그리고 JFK에 도착한 뒤의 절차까지 정리했습니다."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: 선양 타오셴 공항, Korean Air, 인천 환승, JFK, 미국 입국, 위탁 수하물 직행 수속
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Aéroport international de Pékin-Capitale : plans des terminaux (comple
 summary: "Des plans étage par étage pour les T1, T2 et T3 de Pékin-Capitale : trois terminaux et 314 postes de stationnement, les zones T3C, T3D et T3E, la fermeture du T1, et quels étages traitent les vols intérieurs et internationaux."
 date: 2026-04-17
 updated: 2026-09-30
-source: 懿旅航空票务 (Yilv Air Ticketing)
 tags: aéroport de Pékin-Capitale, terminaux de Pékin-Capitale, T3, plans des terminaux
 cover: images/0.webp
 ---

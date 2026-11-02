@@ -4,7 +4,6 @@ title: "Les dix premiers aéroports cargo du monde : Hong Kong toujours premier,
 summary: "Le classement cargo 2023 du Conseil international des aéroports (ACI) place Hong Kong premier avec 4,33 millions de tonnes, Memphis deuxième avec 3,88 et Shanghai Pudong troisième avec 3,44, en hausse de 10,4 pour cent. Le fret aérien mondial a reculé de 3,1 pour cent à 113 millions de tonnes, soit 95,4 pour cent de 2019, et le top dix a traité 29,6 millions de tonnes, 26 pour cent du total mondial."
 date: 2026-10-19
 updated: 2026-10-19
-source: Aviation Viewpoint
 tags: fret aérien, ACI, classement des aéroports cargo, Hong Kong International, aéroport de Memphis, Shanghai Pudong
 cover: images/0.webp
 ---

@@ -3,7 +3,6 @@ slug: pudong-airport-ground-transport
 title: 抵達浦東機場後，這樣換乘軌道交通、出租汽車、地面公交！
 summary: 浦東國際機場 T1、T2 到達後換乘軌道交通、出租汽車與地面公交的實用指引：各航廈到達出口位置、換乘位置分佈與乘車方向，來自上海市交通委。
 date: 2026-09-29
-source: 上海交通
 tags: 浦東機場交通, 上海地鐵, 機場大巴, 出租汽車
 cover: images/3.webp
 ---

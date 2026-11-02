@@ -4,7 +4,6 @@ title: "Von Busan nach Seoul mit dem KTX: Tickets, Einstieg und die 15-Minuten-R
 summary: "Ein praktischer Leitfaden für den KTX vom Bahnhof Busan zum Bahnhof Seoul: Buchung bei Korail oder in einer Drittanbieter-App, das Speichern des E-Tickets, ein Bahnhof ohne Sicherheitskontrolle und ohne Bahnsteigsperren, Bahnsteignummern, die erst 15 Minuten vor der Abfahrt erscheinen, das Finden von Wagen und Sitzplatz, Gepäck, die 2 Stunden 40 Minuten lange Fahrt und die Anschlüsse am Bahnhof Seoul."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Hochgeschwindigkeitszug Korea, KTX, Bahnhof Busan, Bahnhof Seoul, Verkehr in Korea
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Le duty-free à l'aéroport de Haneda : boutiques des terminaux 2 et 3, 
 summary: "Un guide pratique du shopping duty-free à l'aéroport de Haneda (HND) : le TIAT DUTY FREE SOUVENIR du terminal 2, les deux boutiques du terminal 3 près de la porte 109, leurs horaires et leurs marques, les bons ANA et la précommande en ligne, sans oublier la différence entre duty-free et détaxe, les liquides en correspondance et ce qui vaut la peine d'acheter à l'aéroport plutôt qu'en ville."
 date: 2026-10-20
 updated: 2026-10-20
-source: ANADutyFreeShop (ANA Trading Duty Free)
 tags: duty-free à Haneda, duty-free au Japon, whisky japonais, shopping à l'aéroport, voyage à Tokyo
 cover: images/0.webp
 ---

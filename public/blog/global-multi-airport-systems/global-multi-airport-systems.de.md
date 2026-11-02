@@ -4,7 +4,6 @@ title: "Fast 60 Multi-Airport-Systeme: Warum eine Metropolregion einen zweiten u
 summary: "Eine Studie auf Basis globaler Flughafendaten von 2018 identifizierte 59 Multi-Airport-Systeme, 93,2 % davon aus zwei oder drei Flughäfen bestehend, wobei das Muster „ein primärer, ein sekundärer Flughafen“ am häufigsten ist. Dieser Erklärtext stellt die drei Bedingungen, die 70-km-Schwelle und die zweistufige Suche hinter dem Befund vor – und was er für chinesische Städte bedeutet."
 date: 2026-10-19
 updated: 2026-10-19
-source: International Air Transport
 tags: Multi-Airport-Systeme, Flughafencluster, Metropolregionen, Luftfahrtdrehkreuze, Flughafenplanung
 cover: images/0.webp
 ---

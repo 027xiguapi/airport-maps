@@ -3,7 +3,6 @@ slug: chicago-ohare-airport-guide
 title: "Chicago O'Hare: Ankunft und in die Stadt"
 summary: "Ein Leitfaden zum Chicago O'Hare International Airport (ORD): wie die Terminals 1, 2, 3 und 5 zusammenpassen und wie der ATS-Shuttle sie verbindet, was auf das Zollanmeldungsformular gehört, der Ablauf bei der Ankunft und die drei Wege nach Chicago – die CTA Blue Line, Ride-Hailing und der Pace-Bus, mit Fahrpreisen, Haltestellen und Umstiegen."
 date: 2026-10-07
-source: Luxvue 尚诚地产 (Luxvue Real Estate)
 tags: Flughafen Chicago O'Hare, ORD, Ankunft Chicago, CTA Blue Line, Flughafentransfers
 cover: images/0.webp
 ---

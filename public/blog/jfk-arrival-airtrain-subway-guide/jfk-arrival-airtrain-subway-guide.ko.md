@@ -4,7 +4,6 @@ title: "JFK 도착: 입국 심사, AirTrain, 그리고 맨해튼으로 가는 �
 summary: "뉴욕 JFK에 내린 뒤 벌어지는 일들: 제1터미널의 방문객 통로와 CBP 인터뷰, 수하물과 세관, 자메이카와 하워드비치로 갈라지는 두 AirTrain 노선, 맨해튼으로 들어가는 E·J·Z 지하철, OMNY 요금, 롱아일랜드 철도라는 대안, 그리고 첫 방문자를 잡는 함정들."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: JFK, 미국 입국, AirTrain, 뉴욕 지하철, OMNY
 cover: images/0.webp
 ---

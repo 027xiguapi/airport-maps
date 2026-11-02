@@ -4,7 +4,6 @@ title: 'Munich Airport Transfer Guide: Four Connections, Lounges, Dining and Dut
 summary: "A complete guide to Munich Airport (MUC): how long each of the four Schengen transfer combinations takes and what it involves, a step-by-step LH727 transfer walkthrough, the airport's history, free, paid and airline-only lounges with the NapCabs sleeping pods, dining, duty-free, airport hotels and smoking areas, plus flight operations and the airport's airline landscape."
 date: 2026-10-21
 updated: 2026-10-21
-source: 亦出旅行 (Yichu Trip)
 tags: Munich Airport, MUC, airport transfers, Schengen transfers, Lufthansa
 cover: images/0.webp
 ---

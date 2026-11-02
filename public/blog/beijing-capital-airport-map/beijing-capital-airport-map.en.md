@@ -4,7 +4,6 @@ title: Beijing Capital International Airport: Terminal Maps (Complete)
 summary: Floor-by-floor diagrams for Beijing Capital's T1, T2 and T3 — three terminals and 314 stands, the T3C, T3D and T3E zones, T1's closure, and which floors handle domestic and international flights.
 date: 2026-04-17
 updated: 2026-09-30
-source: 懿旅航空票务 (Yilv Air Ticketing)
 tags: Beijing Capital Airport, Capital terminals, T3, terminal maps
 cover: images/0.webp
 ---

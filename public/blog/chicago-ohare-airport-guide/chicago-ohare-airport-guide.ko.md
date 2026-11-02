@@ -3,7 +3,6 @@ slug: chicago-ohare-airport-guide
 title: "시카고 오헤어: 도착부터 시내 이동까지"
 summary: "시카고 오헤어 국제공항(ORD) 안내입니다. 1, 2, 3, 5번 터미널이 어떻게 연결되어 있고 ATS 셔틀이 이들을 어떻게 잇는지, 세관 신고서에 무엇을 적어야 하는지, 입국 절차는 어떻게 진행되는지, 그리고 시카고 시내로 들어가는 세 가지 방법 — CTA 블루 라인, 차량 호출, Pace 버스 — 를 요금, 정류장, 환승 정보와 함께 정리했습니다."
 date: 2026-10-07
-source: Luxvue 尚诚地产 (Luxvue Real Estate)
 tags: 시카고 오헤어 공항, ORD, 시카고 도착, CTA 블루 라인, 공항 교통
 cover: images/0.webp
 ---

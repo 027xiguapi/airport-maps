@@ -4,7 +4,6 @@ title: "Kigali International Airport Ranks Third in Africa at the Skytrax World 
 summary: "Kigali International Airport has been ranked third in Africa at the 2026 Skytrax World Airport Awards, behind Marrakech Menara and King Shaka International. The ceremony was held in London on 18 March, and Singapore Changi took the global title for the 14th time. Here is where Kigali sits, how the ranking is produced, and what it says about Rwanda's aviation investment."
 date: 2026-10-19
 updated: 2026-10-19
-source: Kigali Chinese Business News
 tags: Kigali International Airport, KGL, Skytrax, Africa airport ranking, RwandAir, Changi Airport
 cover: images/0.webp
 ---

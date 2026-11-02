@@ -4,7 +4,6 @@ title: "Xi'an Xianyang's Terminal 5 Named Second-Best New Airport Terminal in th
 summary: "Terminal 5 at Xi'an Xianyang International Airport has been ranked second in the World's Best New Airport Terminal category at the 2025 Skytrax World Airport Awards, while the airport placed fifth in Skytrax's regional airport ranking for China. Here is what the two results measure, where Terminal 5 sits in the airport's expansion, and what either means for a traveller."
 date: 2026-10-19
 updated: 2026-10-19
-source: Shaanxi Communication Society
 tags: Xi'an Xianyang International Airport, Terminal 5, XIY, Skytrax, World's Best New Airport Terminal, Best Regional Airports in China
 cover: images/0.webp
 ---

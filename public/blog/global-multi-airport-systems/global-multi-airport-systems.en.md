@@ -4,7 +4,6 @@ title: "Nearly 60 Multi-Airport Systems: Why a Metro Area Builds a Second and Th
 summary: "A study based on 2018 global airport data identified 59 multi-airport systems, 93.2% of them made up of two or three airports, with a 'one primary, one secondary' pattern the most common. This explainer sets out the three conditions, the 70 km threshold and the two-step search behind the finding, and what it means for Chinese cities."
 date: 2026-10-19
 updated: 2026-10-19
-source: International Air Transport
 tags: multi-airport systems, airport clusters, metropolitan areas, aviation hubs, airport planning
 cover: images/0.webp
 ---

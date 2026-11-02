@@ -171,7 +171,7 @@ export const tw: Messages = {
       kicker: 'Terminal Maps',
       title: '熱門機場地圖',
       en: 'Airport Maps',
-      sub: '精選全球主要機場的航廈地圖封面，點擊進入機場頁面查看完整大圖。',
+      sub: '精選全球主要機場的航廈地圖封面，點選進入機場頁面檢視完整大圖。',
     },
     recent: {
       kicker: 'Freshly Published',
@@ -186,8 +186,11 @@ export const tw: Messages = {
       title: '熱門機場航線圖',
       en: 'Route Maps',
       sub: '按直飛目的地數量排序的機場，點選檢視全球航線網路、執飛航司與目的地列表。',
+      /** 左側深色面板的眉標。 */
       collection: '航線圖集',
+      /** 城市標籤列表的無障礙名稱。 */
       tabsLabel: '按城市選擇航線圖',
+      /** 右側按鈕：跳到當前城市的航線頁。 */
       explore: (city: string) => `檢視${city}航線圖`,
       play: '開始自動輪播',
       pause: '暫停自動輪播',
@@ -217,7 +220,7 @@ export const tw: Messages = {
       en: 'Lists & Tables',
       sub: '把本站收錄的機場資料整理成列表與表格：收錄概覽、有旅客量資料的機場排名，以及按目錄大區統計的分佈。',
       note: (pax: string, detailed: string, total: string) =>
-        `旅客量資料涵蓋 ${total} 座機場中的 ${pax} 座；航廈與閘口資料涵蓋其中 ${detailed} 座。航廈數量按本站收錄口徑統計，部分機場包含廊道。`,
+        `旅客量資料覆蓋 ${total} 座機場中的 ${pax} 座；航廈與閘口資料覆蓋其中 ${detailed} 座。航廈數量按本站收錄口徑統計，部分機場包含廊道。`,
       coverageTitle: '收錄數字',
       coverage: {
         airports: '機場',

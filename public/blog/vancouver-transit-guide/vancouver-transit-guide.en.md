@@ -3,7 +3,6 @@ slug: vancouver-transit-guide
 title: Connecting at Vancouver: YVR Transit Guide
 summary: Connecting at Vancouver on an Air Canada Seattle–Vancouver–Shanghai itinerary — no baggage claim and no re-screening, but Canada Customs is required. The signs to follow, the Satellite Primary Inspection step, and YVR terminal maps.
 date: 2026-09-30
-source: 多肉2号
 tags: Vancouver transit, YVR, Canada Customs, connecting flights
 cover: images/0.webp
 ---

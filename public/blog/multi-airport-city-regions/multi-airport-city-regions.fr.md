@@ -4,7 +4,6 @@ title: "Quand une mégalopole construit un deuxième et un troisième aéroport 
 summary: "Une conférence universitaire consacrée aux nouveaux aéroports prévus à Canton et à Nantong remet au premier plan les régions urbaines multi-aéroports. Ce commentaire s'interroge sur les raisons pour lesquelles les grandes aires métropolitaines construisent des deuxième et troisième aéroports, sur la manière de répartir les rôles des hubs et sur les moyens pour la Grande Baie d'éviter une concurrence homogène."
 date: 2026-10-19
 updated: 2026-10-19
-source: School of Geography, South China Normal University
 tags: régions urbaines multi-aéroports, Grande Baie, spécialisation des hubs, nouveau aéroport de Canton, nouveau aéroport de Nantong
 cover: images/0.webp
 ---

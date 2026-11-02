@@ -4,7 +4,6 @@ title: "Guide de l'aéroport de Tokyo Haneda : le premier aéroport du Japon"
 summary: "Un guide de l'aéroport international de Tokyo Haneda — le tampon goshoin exclusif à l'aéroport et la signification de chaque marque, trois terminaux et comment passer de l'un à l'autre, le meilleur sukiyaki et le meilleur sushi du terminal 3, les souvenirs introuvables ailleurs et le centre de Tokyo en 15 minutes."
 date: 2026-09-30
 updated: 2026-09-30
-source: Japan National Tourism Organization
 tags: Tokyo Haneda, tampon goshoin, voyage au Japon, guide d'aéroport
 cover: images/0.webp
 ---

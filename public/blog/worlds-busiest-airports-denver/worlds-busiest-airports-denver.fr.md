@@ -4,7 +4,6 @@ title: "Les aéroports les plus fréquentés du monde : Denver premier avec 794 
 summary: "Le top 30 de mars 2024, selon le nombre moyen planifié de départs passagers quotidiens, place Denver premier avec 794 départs, mettant fin aux deux mois de règne de Dallas/Fort Worth. Delhi revient dans le top dix, Las Vegas gagne 13 places, Amsterdam et Istanbul reculent chacun d'une dizaine, et LaGuardia, Mumbai, Changi, Seattle et Newark entrent dans le top 30."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: classement des aéroports, capacité de départs, aéroport de Denver, aéroport de Delhi, aéroport de Changi
 cover: images/0.webp
 ---

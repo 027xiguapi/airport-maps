@@ -4,7 +4,6 @@ title: "Da Washington a Boston in aereo: terminal DCA, tariffe bagagli e la Silv
 summary: "Una guida pratica per volare da Washington Reagan National (DCA) a Boston Logan (BOS): quale terminal usa la vostra compagnia, il viaggio in Metro dal centro, le regole e le tariffe dei bagagli in economy, TSA e imbarco per zone, e la Silver Line gratuita fino a South Station."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: aeroporti di Washington, Reagan National, Boston Logan, volo domestico USA, Silver Line
 cover: images/0.webp
 ---

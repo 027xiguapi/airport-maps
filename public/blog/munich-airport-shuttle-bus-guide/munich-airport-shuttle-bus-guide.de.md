@@ -4,7 +4,6 @@ title: 'Leitfaden zum Shuttlebus am Flughafen München: Treffpunkte, Fahrplan un
 summary: "Der Ankunfts-Shuttle des Münchner Seminars: die Treffpunkte in Terminal 1 und 2, der Busfahrplan und wie man den Live-Fahrplan prüft, dazu die vier Wege vom Flughafen München in die Stadt – Taxi, Uber, S-Bahn und der Lufthansa Express Bus, mit Routen, Fahrpreisen und Haltestellen, und wie man das kostenlose WLAN des Flughafens nutzt."
 date: 2026-10-21
 updated: 2026-10-21
-source: 安利带你看世界 (Amway China)
 tags: Flughafen München, Shuttlebus, MUC, Flughafentransport, S-Bahn
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Sei dita, un tetto Tang e zero trasferimenti: l'architettura del Termina
 summary: "Il Terminal 5 dell'aeroporto internazionale di Xi'an Xianyang si è classificato secondo nella categoria World's Best New Airport Terminal ai Skytrax World Airport Awards 2025. Progettato dal China Northwest Architecture Design and Research Institute, copre circa 705,500 metri quadrati, usa il primo impianto radiale a sei dita della Cina e avvolge una struttura in acciaio con un tetto ispirato ai Tang. Ecco come funziona l'edificio, in parole semplici."
 date: 2026-10-19
 updated: 2026-10-19
-source: Shanghai Society of Civil Engineering
 tags: aeroporto internazionale di Xi'an Xianyang, Terminal 5, China Northwest Architecture Design and Research Institute, impianto radiale a sei dita, Skytrax, architettura aeroportuale
 cover: images/0.webp
 ---

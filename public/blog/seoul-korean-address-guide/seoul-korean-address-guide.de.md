@@ -4,7 +4,6 @@ title: "Spickzettel für koreanische Adressen in Seoul: Kopieren, Einfügen, Nav
 summary: "Eine Copy-and-paste-Liste koreanischer Adressen für Seoul – Flughäfen und Verkehrsknoten, Paläste und Wahrzeichen, Parks, Einkaufsviertel, Kaufhäuser und Duty-Free, Universitäten und Fotospots – plus warum Koreanisch bei Taxifahrern, Naver Map und Kakao T besser funktioniert als ein übersetzter Name."
 date: 2026-10-22
 updated: 2026-10-22
-source: Xiao Han Beauty Research Club (WeChat account)
 tags: Seoul Adressen, koreanische Adressen, Naver Map, Kakao T, Korea Reisen
 cover: images/0.webp
 ---

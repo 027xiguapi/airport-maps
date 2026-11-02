@@ -4,7 +4,6 @@ title: "Duty-free-Abholung in Incheon T2: von der App-Bestellung zur Abholhalle 
 summary: "Wie Sie Duty-free-Bestellungen am Terminal 2 des Incheon Airport abholen: bestellen in der Duty-free-App, drei Stunden früher da sein oder im Transit eine Stunde vor dem Boarding, die Abholstelle gegenüber dem Korean Traditional Culture Center im 3. Stock, die Rolltreppe hinunter zur Halle im 2. Stock, die Kioske, Passscan und Nummernschlange sowie die Regeln für Flüssigkeiten und Transfers."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: Incheon Airport, Duty-free-Abholung, Terminal 2, Einkaufen in Korea, Korea-Reise
 cover: images/0.webp
 ---

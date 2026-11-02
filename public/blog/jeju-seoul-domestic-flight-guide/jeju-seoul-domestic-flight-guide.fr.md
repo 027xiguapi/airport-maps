@@ -4,7 +4,6 @@ title: "Voler de Jeju à Séoul : guide pas à pas du vol intérieur"
 summary: "Un guide pratique du vol intérieur de Jeju (CJU) à Séoul Gimpo (GMP) : enregistrement et dépôt des bagages au niveau 3 du terminal domestique de Jeju, la file réservée aux étrangers près de la porte 3, le saut d'une heure, puis les options T-money, métro et train de l'aéroport à l'arrivée à Gimpo — et la règle de visa qui bloque les voyageurs exemptés de visa dès l'enregistrement."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: aéroport de Jeju, aéroport de Gimpo, vol intérieur coréen, Jeju sans visa, visa coréen
 cover: images/0.webp
 ---

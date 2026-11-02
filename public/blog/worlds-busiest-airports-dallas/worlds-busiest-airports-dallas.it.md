@@ -4,7 +4,6 @@ title: "Gli aeroporti più trafficati del mondo: Dallas in testa per il secondo 
 summary: "La top 30 di febbraio 2024, ordinata per partenze medie giornaliere programmate di passeggeri, mette Dallas/Fort Worth prima per il secondo mese con 887 partenze, Chicago O'Hare seconda con 832 e Atlanta quarta con 807. Istanbul torna nella top ten, Las Vegas e Parigi CDG rientrano nella top 30 e Phoenix guadagna sette posizioni."
 date: 2026-10-19
 updated: 2026-10-19
-source: Xiaohu Aviation Analysis
 tags: classifica aeroporti, capacità di partenza, aeroporto Dallas/Fort Worth, Chicago O'Hare, aeroporto di Istanbul
 cover: images/0.webp
 ---

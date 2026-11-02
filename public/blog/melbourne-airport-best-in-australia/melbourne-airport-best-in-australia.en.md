@@ -4,7 +4,6 @@ title: "Melbourne Airport Named Best in Australia-Pacific for the Sixth Time, as
 summary: "Melbourne Airport has again been named Best Airport in Australia-Pacific at the Skytrax World Airport Awards 2026, the sixth time in seven years, even as its global ranking fell from 16th to 21st. Record international traffic in January, new routes from Delta, Hong Kong Airlines and Shenzhen Airlines, and a A$4.5 billion terminal expansion are reshaping the airport."
 date: 2026-10-19
 updated: 2026-10-19
-source: WeMelbourne
 tags: Melbourne Airport, MEL, Skytrax, Australian airports, terminal expansion
 cover: images/0.webp
 ---

@@ -4,7 +4,6 @@ title: "Changi élu meilleur aéroport du monde pour la 14e fois et remporte cin
 summary: "L'aéroport de Singapour Changi a été élu meilleur aéroport du monde aux Skytrax World Airport Awards 2026 à Londres le 18 mars, pour la deuxième année consécutive et la 14e fois au total. Il a aussi remporté les prix de la meilleure restauration aéroportuaire, du meilleur service d'immigration aéroportuaire, du meilleur aéroport d'Asie et du meilleur aéroport de 60 à 70 millions de passagers, tandis que le Crowne Plaza Changi Airport a gagné les deux catégories hôtelières. Dans le classement 2026 d'AirlineRatings.com, Singapore Airlines se classe troisième parmi les compagnies traditionnelles et Scoot cinquième parmi les low-cost."
 date: 2026-10-19
 updated: 2026-10-19
-source: SgEye
 tags: aéroport de Changi, SIN, Skytrax, Singapore Airlines, Scoot
 cover: images/0.webp
 ---

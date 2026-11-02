@@ -4,7 +4,6 @@ title: "Le plan de l'Arabie saoudite pour le plus grand aéroport du monde : l'a
 summary: "La stratégie aéronautique de l'Arabie saoudite vise 330 millions de passagers par an d'ici 2030, 4,5 millions de tonnes de fret et jusqu'à 100 milliards de dollars d'investissements, autour de l'aéroport international du roi Salmane à Riyad : 57 kilomètres carrés, six pistes parallèles, 120 millions de passagers et un rôle de partenaire de réalisation pour Mace. Voici la logique derrière ce projet, et le risque."
 date: 2026-10-19
 updated: 2026-10-19
-source: Middle East Eye
 tags: Aéroport international du roi Salmane, Riyad, Arabie saoudite, Vision 2030, extension aéroportuaire
 cover: images/0.webp
 ---

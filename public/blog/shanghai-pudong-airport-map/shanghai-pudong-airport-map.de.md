@@ -4,7 +4,6 @@ title: "Shanghai Pudong International Airport: Terminalpläne (vollständig)"
 summary: "Etagenpläne der Terminals T1 und T2 von Pudong sowie der Satellitenhallen S1 und S2 – fünf Start- und Landebahnen, über 50 Millionen Passagiere pro Jahr, Ankünfte auf 1F und 2F, Abflüge auf 3F und das eine, was zwischen S1 und S2 nicht möglich ist."
 date: 2026-09-30
 updated: 2026-09-30
-source: 懿旅航空票务 (Yilv Air Ticketing)
 tags: Flughafen Shanghai Pudong, Pudong-Terminals, Satellitenhallen, Terminalpläne
 cover: images/0.png
 ---

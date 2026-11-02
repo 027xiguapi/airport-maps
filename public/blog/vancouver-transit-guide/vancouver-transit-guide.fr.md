@@ -3,7 +3,6 @@ slug: vancouver-transit-guide
 title: "Correspondance à Vancouver : guide de transit à YVR"
 summary: "Correspondance à Vancouver sur un itinéraire Air Canada Seattle–Vancouver–Shanghai : pas de récupération des bagages ni de nouveau contrôle de sûreté, mais le passage par les douanes canadiennes est obligatoire. Les panneaux à suivre, l'étape Satellite Primary Inspection et les plans du terminal de YVR."
 date: 2026-09-30
-source: 多肉2号
 tags: Transit à Vancouver, YVR, douanes canadiennes, vols de correspondance
 cover: images/0.webp
 ---

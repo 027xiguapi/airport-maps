@@ -3,7 +3,6 @@ slug: istanbul-airport-guide
 title: 十一出境｜中国旅客如何轻松玩转伊斯坦布尔机场
 summary: iGA 伊斯坦布尔机场中文出行指南：全场景中文指引与智能视频咨询终端、休闲购物与免税商圈、iGA Lounge 贵宾休息室，以及家庭旅客的儿童乐园与母婴设施。
 date: 2026-09-28
-source: 伊斯坦布尔机场IST
 tags: 伊斯坦布尔机场, 土耳其旅行, 机场中转, 中文服务
 cover: images/3.webp
 ---

@@ -4,7 +4,6 @@ title: "선양에서 미국 B1/B2 비자 갱신하기: DS-160, 인터뷰 면제,
 summary: "선양에서 미국 B1/B2 비자를 갱신하는 실전 절차입니다. 사진과 이름 코드를 준비하는 방법, DS-160 작성과 저장, 예약 시스템에서 인터뷰 면제(Interview Waiver)를 올바르게 선택하는 방법, CITIC Bank나 EMS로 서류를 제출하는 방법까지 정리했습니다."
 date: 2026-10-22
 updated: 2026-10-22
-source: 微信旅行攻略 (WeChat travel guide)
 tags: 미국 비자, 비자 갱신, DS-160, 인터뷰 면제, 선양
 cover: images/0.webp
 ---
