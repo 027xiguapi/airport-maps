@@ -116,7 +116,11 @@ export default async function NewDealPage({ params, searchParams }: Props) {
         </div>
       )}
 
-      <p className="mt-6 text-[11.5px] leading-[1.7] text-ink-faint">{d.submitNote}</p>
+      {/* The signed-in form repeats this note above its fields; only the
+          signed-out state needs it here. */}
+      {!user && (
+        <p className="mt-6 text-[11.5px] leading-[1.7] text-ink-faint">{d.submitNote}</p>
+      )}
     </section>
   );
 }

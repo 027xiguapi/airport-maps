@@ -594,6 +594,7 @@ export default function DealSubmitForm({
             maxLength={600}
             aria-invalid={Boolean(errors.invalid_url) || undefined}
           />
+          <p className="mt-1 text-[11.5px] leading-[1.6] text-ink-faint">{labels.bookingHint}</p>
           {errors.invalid_url && <p className={ERROR_CLASSES}>{errors.invalid_url}</p>}
         </div>
 

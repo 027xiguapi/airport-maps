@@ -487,9 +487,10 @@ export const deals = pgTable(
     /** Last date the fare can be flown / return date; optional. */
     travelTo: date('travel_to', { mode: 'string' }),
     /**
-     * Airline or OTA booking page, http(s) only. Required for reader
-     * submissions (lib/deals.ts); optional for official fare cards, which may
-     * not have one canonical booking URL.
+     * Airline, OTA or submitter's affiliate booking page, http(s) only.
+     * Required for reader submissions (lib/deals.ts); optional for official
+     * fare cards, which may not have one canonical booking URL. Affiliate
+     * links are rendered `nofollow sponsored` and disclosed on the card/page.
      */
     bookingUrl: text('booking_url'),
     notes: text('notes').notNull().default(''),

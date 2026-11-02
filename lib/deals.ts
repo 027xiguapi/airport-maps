@@ -21,6 +21,9 @@ import type { Locale } from '@/lib/i18n/config';
  *   - per-user and per-IP quotas (24h windows) stop a single account flooding,
  *   - a double-click within ten minutes returns the existing row,
  *   - the URL must be http(s), so a submission cannot smuggle `javascript:`.
+ *     Airline, OTA and the submitter's own affiliate links are all accepted;
+ *     the form asks for the affiliate relationship to be disclosed in `notes`,
+ *     and the card labels user offers as possibly containing affiliate links.
  *
  * Stale offers disappear from listings through `expires_at`, not moderation.
  * Hiding spam is `scripts/deals.mjs hide <id>`, the same escape hatch the
