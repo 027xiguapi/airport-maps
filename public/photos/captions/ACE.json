@@ -1,8 +1,32 @@
 {
   "_note": "ace-bing-1 is a BigAirports.com statistics card, not a photo.",
-  "_skip": ["ace-bing-1.webp"],
   "ace-bing-2.webp": {
     "zh": "黄昏时分的塞萨尔·曼里克-兰萨罗特机场：招牌下是种满仙人掌的下沉花园，远处能望见兰萨罗特岛的山影。",
     "en": "César Manrique-Lanzarote Airport at dusk — the airport's sign above a sunken cactus garden, with the island's hills behind."
-  }
+  },
+  "ace-doubao-01.webp": {
+    "zh": "晴朗白天里的航站楼：黄色大字标出机场与一号航站楼，右侧立着塔台，前景是成片仙人掌。",
+    "en": "Under a clear sky the yellow lettering names the airport and Terminal 1, the control tower to the right and cacti in front."
+  },
+  "ace-doubao-02.webp": {
+    "zh": "从花园小径仰望航站楼：黄色招牌横贯屋顶，桥下停着一排租车，柱廊投下短影。",
+    "en": "Looking up from the garden path, the yellow sign runs along the roofline, rental cars parked beneath the colonnade."
+  },
+  "ace-doubao-03.webp": {
+    "zh": "空荡的机坪上望向白色航站楼，楼身上写着机场全名，两侧分别标着出发与到达。",
+    "en": "Across an empty concrete apron the white terminal carries the airport's full name, with departures and arrivals marked at either side."
+  },
+  "ace-doubao-04.webp": {
+    "zh": "隔着跑道远望航站楼，两侧各停着一架客机，灯杆高耸，前景是干燥的火山碎石地。",
+    "en": "From beyond the runway the terminal sits low between two parked airliners, floodlight masts above and dry volcanic ground in front."
+  },
+  "ace-doubao-05.webp": {
+    "zh": "机场外的环岛上立着一座抽象的金属雕塑，深色石块基座，背后是光秃的火山锥。",
+    "en": "An abstract metal sculpture stands on a dark stone plinth in a landscaped roundabout, a bare volcanic cone rising behind."
+  },
+  "ace-doubao-06.webp": {
+    "zh": "一架客机刚离地爬升，机腹掠过海滩与长栈桥，岸边是一排白色房屋和厚重积云。",
+    "en": "An airliner climbs away over the water, its belly above a beach and long pier, white houses along the shore and heavy clouds behind."
+  },
+  "_skip": ["ace-bing-1.webp"]
 }

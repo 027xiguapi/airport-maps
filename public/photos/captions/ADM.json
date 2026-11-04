@@ -1,6 +1,5 @@
 {
   "_note": "adm-bing-2 is a product photo of a framed airport-map poster (skybirdsupply.com), not the airport itself.",
-  "_skip": ["adm-bing-2.webp"],
   "adm-bing-1.webp": {
     "zh": "从空中俯瞰阿德莫尔市机场：两条跑道在草地上交叉，航站楼与机库集中在场地西南侧。",
     "en": "Airborne view of Ardmore Municipal Airport — two runways crossing over green fields, the terminal and hangars clustered on the south-west side."
@@ -8,5 +7,22 @@
   "adm-bing-3.webp": {
     "zh": "机场入口的标识墙：石砌基座上写着「ARDMORE MUNICIPAL AIRPORT」，旁边是驻场企业的名录牌。",
     "en": "The entrance sign at Ardmore Municipal Airport — the name on a stone base beside a directory of airport businesses."
-  }
+  },
+  "adm-doubao-01.webp": {
+    "zh": "从轻型飞机舷窗俯瞰，阿德莫尔市机场的跑道在绿野上交叉，一条河从林间蜿蜒而过。",
+    "en": "Seen past the wing strut of a light aircraft, Ardmore Municipal's runways cross green fields while a river bends through the trees."
+  },
+  "adm-doubao-02.webp": {
+    "zh": "黑白老照片从低空拍下机场：交叉的跑道、成排的机库与营房散布在田野之间。",
+    "en": "An old black-and-white aerial photograph shows the field's crossing runways, with rows of hangars and support buildings spread across open farmland."
+  },
+  "adm-doubao-03.webp": {
+    "zh": "美国联邦航空局的机场平面图，标出阿德莫尔市机场两条跑道的方位、标高与滑行道。",
+    "en": "A Federal Aviation Administration airport diagram lays out Ardmore Municipal's two runways, taxiways, elevations and magnetic headings."
+  },
+  "adm-doubao-04.webp": {
+    "zh": "谷歌地图截图用红色标记指出机场大致位置，四周是施普林格与吉恩奥特里之间的公路和农田。",
+    "en": "A Google Maps screenshot marks the airport's approximate location with a red pin among highways and farmland between Springer and Gene Autry."
+  },
+  "_skip": ["adm-bing-2.webp"]
 }

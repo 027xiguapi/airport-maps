@@ -1,8 +1,32 @@
 {
   "_note": "aap-bing-2 is a promotional graphic and aap-bing-3 a flight-simulator scenery render — neither is a real photo.",
-  "_skip": ["aap-bing-2.webp", "aap-bing-3.webp"],
   "aap-bing-1.webp": {
     "zh": "三马林达 APT Pranoto 国际机场航站楼外景：斜向的白色钢架撑起大跨度玻璃幕墙，雨棚一路延伸到落客区。",
     "en": "The terminal of Samarinda's APT Pranoto International Airport: a wide glass façade braced by angled white steelwork, with the canopy reaching out over the drop-off area."
-  }
+  },
+  "aap-doubao-01.webp": {
+    "zh": "航站楼前的机坪上停着一架红白两色螺旋桨客机，云层低垂，白色桁架撑起的玻璃幕墙一路铺展。",
+    "en": "A red-and-white turboprop waits on the apron as heavy cloud gathers above the long glass terminal, whose roof is carried on white steel trusses."
+  },
+  "aap-doubao-02.webp": {
+    "zh": "暮色中航站楼的弧形雨棚向外伸展，白色斜柱撑起连廊，深蓝色的云层压在天边。",
+    "en": "In the dusk the terminal's curved canopy reaches outward on white angled columns, with deep blue cloud pressing down on the horizon."
+  },
+  "aap-doubao-03.webp": {
+    "zh": "机场入口处的红色标志牌写着阿吉·潘格兰·图门贡·普拉诺托，背后是弧形屋顶的白色航站楼。",
+    "en": "A red-lettered sign at the airport entrance spells out the Aji Pangeran Tumenggung Pranoto name, with the white curved-roofed terminal rising behind."
+  },
+  "aap-doubao-04.webp": {
+    "zh": "航站楼墙面上绿色招牌与黄色编号牌并列，玻璃幕墙前的通道上有人走过，封闭连廊向右延伸。",
+    "en": "A green name sign and a yellow numbered plaque run along the terminal wall, with passengers crossing the concrete forecourt beneath a glass-and-steel walkway bridge."
+  },
+  "aap-doubao-05.webp": {
+    "zh": "从草地上望向航站楼，银色弧形屋顶两端向上翘起，玻璃幕墙映着灰白天空，左侧停着一辆巴士。",
+    "en": "From the grass, the terminal's silver roof lifts at both ends above a glass frontage mirroring the grey-white sky, a bus waiting on the left."
+  },
+  "aap-doubao-06.webp": {
+    "zh": "机场的拱形大机库敞着门，里面停着登机梯车，旁边白色塔台立在暮色草地上，一侧是长长的滑行道。",
+    "en": "A wide arched hangar stands open on the apron with boarding stairs parked inside, as the white control tower rises beside it in the fading light."
+  },
+  "_skip": ["aap-bing-2.webp", "aap-bing-3.webp"]
 }

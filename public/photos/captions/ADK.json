@@ -1,6 +1,5 @@
 {
   "_note": "adk-bing-2 carries a 'Kupi.com AI' watermark — an AI-generated picture, not a photo.",
-  "_skip": ["adk-bing-2.webp"],
   "adk-bing-1.webp": {
     "zh": "跑道尽头的阿达克：低云压着火山群，跑道灯与标线一直伸向远处的山脚。",
     "en": "Adak at the end of the runway — low cloud over the volcanic hills, the lit runway stretching towards their foot."
@@ -8,5 +7,30 @@
   "adk-bing-3.webp": {
     "zh": "隔着草甸望向阿达克机场：跑道与滑行道平铺在冻原上，机场建筑排在地平线附近。",
     "en": "Across the tundra towards Adak's airfield — runway and taxiway lying flat on the land, the airport buildings small on the horizon."
-  }
+  },
+  "adk-doubao-01.webp": {
+    "zh": "站在跑道入口：一排红色进近灯横在草丛前，灰色跑道笔直伸向覆雪的火山群。",
+    "en": "From the runway threshold a row of red approach lights crosses the grass, the grey runway running straight towards snow-streaked volcanoes."
+  },
+  "adk-doubao-02.webp": {
+    "zh": "从路边隔着围栏望向机场：蓝顶小楼旁停着一架喷气客机，云层压在雪痕斑驳的山脊上。",
+    "en": "From the road behind the fence, a jet sits beside the blue-roofed terminal while cloud presses on the snow-patched ridges."
+  },
+  "adk-doubao-03.webp": {
+    "zh": "阿达克的停机坪上，一架阿拉斯加航空客机接上舷梯，身后是积雪未消的火山与低垂的云。",
+    "en": "On Adak's apron an Alaska Airlines jet stands with its airstairs down, snow still on the volcanoes and cloud hanging low."
+  },
+  "adk-doubao-04.webp": {
+    "zh": "航站楼临街的一面：蓝色屋檐下是红粉相间的窗墙，门前空无一人，水泥路一直延伸。",
+    "en": "The landside face of the terminal — pink and red window bands under a blue roof, a covered walk, and an empty stretch of asphalt."
+  },
+  "adk-doubao-05.webp": {
+    "zh": "两名旅客走向航站楼入口，门楣上写着欢迎来到阿达克海军航空站，地面摆着一列橙色锥筒。",
+    "en": "Two travellers walk towards the terminal door beneath a sign welcoming them to N.A.F. Adak, orange cones lined along the pavement."
+  },
+  "adk-doubao-06.webp": {
+    "zh": "干枯草甸上的石砌入口标志牌，远处跑道边停着客机，雪山在云带下露出山尖。",
+    "en": "A stone-faced entrance sign stands in dry grass, with a parked jet and the terminal beyond, snowy peaks showing under a band of cloud."
+  },
+  "_skip": ["adk-bing-2.webp"]
 }

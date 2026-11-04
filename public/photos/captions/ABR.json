@@ -10,5 +10,25 @@
   "abr-bing-3.webp": {
     "zh": "登机口候机区：木梁屋顶下挂着壁画，旅客坐在落地窗前的成排座椅上等候登机。",
     "en": "The gate seating area — passengers waiting in rows by the windows under the timber ceiling that carries the mural."
+  },
+  "abr-doubao-01.webp": {
+    "zh": "冬日阴天里的阿伯丁地区机场：玻璃幕墙上方横着机场名字，机坪边缘还留着残雪。",
+    "en": "On an overcast winter day the airport's name runs across the glass front, patches of snow lingering at the apron edge."
+  },
+  "abr-doubao-02.webp": {
+    "zh": "黄昏时，深色石墙上凸起的机场字样映出一线橘色晚霞，人行道上积雪未化。",
+    "en": "At dusk the raised metal letters on the dark stone wall catch a band of orange sky, snow still lying on the walkway."
+  },
+  "abr-doubao-03.webp": {
+    "zh": "手机地图截图：红色定位钉标着阿伯丁支线机场，跑道在绿色农田间斜穿而过。",
+    "en": "A map screenshot marks Aberdeen Regional Airport with a red pin, its runway cutting diagonally through green farmland."
+  },
+  "abr-doubao-04.webp": {
+    "zh": "正上方视角的卫星影像：一条主跑道与平行滑行道贯穿草地，航站楼建筑聚在西北角。",
+    "en": "A straight-down satellite view: one runway and its parallel taxiway cross the grass, the buildings clustered at the north-west corner."
+  },
+  "abr-doubao-05.webp": {
+    "zh": "带地图服务水印的卫星底图：斜向跑道嵌在棋盘状的农田之间，公路从旁边经过。",
+    "en": "A satellite basemap carries mapping-service watermarks, showing the angled runway set among patchwork fields beside a highway."
   }
 }

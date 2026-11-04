@@ -22,6 +22,11 @@
  *                                                       (hand-written guides are
  *                                                       still never touched)
  *   node scripts/generate-airport-guides.mjs --codes AAL,AAR   restrict
+ *   node scripts/generate-airport-guides.mjs --refresh --force --codes AAL,AAR
+ *                                                       re-render existing guides
+ *                                                       that predate the marker
+ *                                                       sentence (still never
+ *                                                       the curated 60)
  *
  * Afterwards run `node scripts/build-hant.mjs` so the derived tw rows follow.
  */
@@ -32,6 +37,13 @@ import { databaseUrl, ROOT } from './_env.mjs';
 
 const DRY = process.argv.includes('--dry-run');
 const REFRESH = process.argv.includes('--refresh');
+/**
+ * Treat the airports named by `--codes` as this generator's own output even
+ * when their body predates the marker sentence (guides written by an older
+ * version of the template). Required when a batch of airport pages has to be
+ * re-rendered from current data; curated guides stay protected either way.
+ */
+const FORCE = process.argv.includes('--force');
 const codesArg = process.argv.find((a) => a.startsWith('--codes'));
 const ONLY = codesArg
   ? (codesArg.includes('=') ? codesArg.split('=')[1] : process.argv[process.argv.indexOf(codesArg) + 1])
@@ -97,14 +109,39 @@ const hardFacts = (() => {
 /** The guide's revision date, stamped on every generated document. */
 const UPDATED = '2026-10-27';
 
+/**
+ * Provenance order of every gallery photo, `public/photos/manifest.json` →
+ * code → file names. Captions live in a different file (their key order is
+ * editorial, not publication order), so the guide sorts the captions by this
+ * list to keep the page and the article in the same order.
+ */
+const PHOTO_ORDER = (() => {
+  try {
+    const manifest = JSON.parse(readFileSync(join(ROOT, 'public', 'photos', 'manifest.json'), 'utf8'));
+    return Object.fromEntries(
+      Object.entries(manifest.airports ?? {}).map(([code, entries]) => [
+        code,
+        new Map(entries.map((entry, index) => [entry.file, index])),
+      ])
+    );
+  } catch {
+    return {};
+  }
+})();
+
 /** Published gallery photos for a code (public/photos/captions/<IATA>.json). */
 function photosFor(code, locale) {
   try {
     const doc = JSON.parse(
       readFileSync(join(ROOT, 'public', 'photos', 'captions', `${photoStem(code)}.json`), 'utf8')
     );
+    const order = PHOTO_ORDER[code] ?? new Map();
     return Object.entries(doc)
       .filter(([file, value]) => !file.startsWith('_') && value && typeof value === 'object' && value[locale])
+      .sort(
+        ([a], [b]) =>
+          (order.get(a) ?? Number.MAX_SAFE_INTEGER) - (order.get(b) ?? Number.MAX_SAFE_INTEGER)
+      )
       .map(([file, value]) => ({ file, caption: value[locale] }));
   } catch {
     return [];
@@ -509,9 +546,12 @@ const generated = (code) =>
   );
 
 const all = [...airports.keys()].sort();
+if (FORCE && !ONLY) {
+  throw new Error('--force needs an explicit --codes list: it re-renders existing guides');
+}
 const targets = all.filter((code) => {
   if (editorialIatas.has(code)) return false; // curated guides are hand-written
-  if (present(code) && !(REFRESH && generated(code))) return false;
+  if (present(code) && !(REFRESH && generated(code)) && !(FORCE && ONLY?.includes(code))) return false;
   return !ONLY || ONLY.includes(code);
 });
 

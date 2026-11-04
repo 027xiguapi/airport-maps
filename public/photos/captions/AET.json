@@ -3,5 +3,17 @@
   "aet-sat-1.webp": {
     "zh": "卫星视角：阿拉卡凯特机场（AET）周边以绿色植被与农田为主。",
     "en": "Satellite view: Allakaket Airport (AET) is surrounded by green vegetation and farmland."
+  },
+  "aet-doubao-01.webp": {
+    "zh": "标注过的航拍图：阿拉卡凯特机场的碎石跑道沿着科尤库克河与村庄铺开，图上标出了风向袋与旧跑道。",
+    "en": "Annotated aerial photo: Allakaket's gravel runway stretches beside the village and the Koyukuk River, with labels marking windsocks and the abandoned old airstrip."
+  },
+  "aet-doubao-02.webp": {
+    "zh": "卫星地图视角：阿拉卡凯特机场的跑道穿过深色针叶林，图中用图钉与文字标出机场与风向袋。",
+    "en": "Satellite map view: Allakaket's runway cuts through dark spruce forest, with a pin and labels marking the airport and a windsock."
+  },
+  "aet-doubao-03.webp": {
+    "zh": "区域地图：阿拉卡凯特机场以红色图钉标在阿拉斯加内陆，周边标有诺姆、费尔班克斯与安克雷奇等城镇。",
+    "en": "Regional map: a red pin marks Allakaket Airport in interior Alaska, with Nome, Fairbanks and Anchorage labelled around it."
   }
 }

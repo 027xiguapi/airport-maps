@@ -3,5 +3,17 @@
   "agr-sat-1.webp": {
     "zh": "卫星视角：阿格拉机场的跑道铺在亚穆纳河畔的城市与农田之间，航站楼与机坪在跑道一侧。",
     "en": "Satellite view: Agra's runways lie between city and farmland beside the Yamuna, with the terminal and apron alongside the field."
+  },
+  "agr-doubao-02.webp": {
+    "zh": "宣传合成图：阿格拉机场红白相间的航站楼挂着国际到达牌子，画面叠加了客机与泰姬陵淡影。",
+    "en": "Promotional composite: Agra Airport's cream-and-red terminal carries an international arrival sign, with a jet and a faint Taj Mahal layered over the sky."
+  },
+  "agr-doubao-03.webp": {
+    "zh": "示意图：阿格拉机场航站楼与机坪的平面轮廓以浅灰线条绘出，下方标注停车、巴士、餐饮与租车等图标。",
+    "en": "Schematic map: Agra's terminal and apron are drawn in pale grey lines, with icons below for parking, bus, food and car rental."
+  },
+  "agr-doubao-01.webp": {
+    "zh": "阿格拉机场航站楼正面，蓝色横幅上写着机场名与国内到达，几名旅客拖着行李走向入口。",
+    "en": "Agra Airport's terminal frontage shows its name and domestic arrival on blue signs, with a few travellers wheeling luggage toward the entrance."
   }
 }

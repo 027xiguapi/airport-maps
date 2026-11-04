@@ -1,8 +1,32 @@
 {
   "_note": "aan-bing-2 is a screenshot of a Google Maps business listing, not a photo.",
-  "_skip": ["aan-bing-2.webp"],
   "aan-bing-1.webp": {
     "zh": "艾因国际机场 2 号航站楼夜景：入口处灯光明亮，屋檐上是阿布扎比机场公司的阿拉伯语标识。",
     "en": "Al Ain International Airport's Terminal 2 at night, its entrances lit beneath the Arabic Abu Dhabi Airports signage."
-  }
+  },
+  "aan-doubao-01.webp": {
+    "zh": "从机坪远望艾因国际机场：白色长条航站楼横展，灯杆高耸，右侧立着塔台，天空一片湛蓝。",
+    "en": "From the apron, Al Ain's long low white terminal stretches beneath tall light masts, with the control tower standing to the right under a clear blue sky."
+  },
+  "aan-doubao-03.webp": {
+    "zh": "通往艾因国际机场航站楼的车道缓缓弯入，棕榈树与草坪夹道，白色屋顶在薄霾中显得柔和。",
+    "en": "The approach road curves towards Al Ain's terminal past palms and clipped lawns, its white roof softened by the thin desert haze."
+  },
+  "aan-doubao-04.webp": {
+    "zh": "航站楼前的环岛路口，绿色大字写着机场名称，棕榈树旁停着白色轿车，天色灰蒙。",
+    "en": "A roundabout junction in front of the terminal, where green lettering spells out the airport's name above a white car parked beside the palms under a hazy sky."
+  },
+  "aan-doubao-05.webp": {
+    "zh": "高处俯瞰艾因国际机场，航站楼雨棚与机坪连成一片，远处沙地延伸到天际，云朵稀疏。",
+    "en": "Looking down over Al Ain's white terminal and apron, service vehicles parked in rows beside it and pale desert running out to the horizon beneath scattered clouds."
+  },
+  "aan-doubao-06.webp": {
+    "zh": "机场停车场里成排白色遮阳棚罩住大巴与轿车，绿地之外便是连绵的沙地与荒漠。",
+    "en": "Rows of white sunshade canopies cover coaches and cars in the airport car park, with open desert beginning just beyond the green landscaping."
+  },
+  "aan-doubao-02.webp": {
+    "zh": "艾因国际机场航站楼正面全景，浅色镂空拱廊沿立面一字排开，门前停着一辆大巴和一辆小车。",
+    "en": "Al Ain's terminal frontage seen head-on, a long colonnade of pale pierced arches running along the façade with a bus and a car drawn up outside."
+  },
+  "_skip": ["aan-bing-2.webp"]
 }
