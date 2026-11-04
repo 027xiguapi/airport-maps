@@ -195,6 +195,20 @@ export const tw: Messages = {
       play: '開始自動輪播',
       pause: '暫停自動輪播',
     },
+    /** 首頁「最新照片」輪播：最近入庫的機場實景，取最新的 6 座機場。 */
+    photos: {
+      kicker: 'Latest Photos',
+      title: '最新機場實景',
+      en: 'Latest Photos',
+      sub: '最近入庫的機場實景照片：按入庫時間取最新的 6 座機場，每座一張。',
+      ariaLabel: '最新機場照片輪播',
+      prev: '上一張照片',
+      next: '下一張照片',
+      play: '開始自動輪播',
+      pause: '暫停自動輪播',
+      counter: (index: number, total: number) => `第 ${index} / ${total} 張`,
+      view: (name: string) => `檢視${name}地圖`,
+    },
     countries: {
       kicker: 'By Country',
       title: '按國家分類的機場地圖',

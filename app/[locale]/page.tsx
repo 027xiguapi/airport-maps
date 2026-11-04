@@ -14,7 +14,8 @@ import { PopularMaps, CountryUpdates, UpdateList } from '@/components/HomeSectio
 import JsonLd from '@/components/JsonLd';
 import RouteShowcase, { type RouteShowcaseSlide } from '@/components/RouteShowcase';
 import SearchBox from '@/components/SearchBox';
-import { airportLeadPhoto } from '@/lib/airport-photos';
+import PhotoCarousel, { type PhotoCarouselSlide } from '@/components/PhotoCarousel';
+import { airportLeadPhoto, latestAirportPhotos } from '@/lib/airport-photos';
 import { blogAirportDates, getLatestBlogPosts } from '@/lib/blog';
 import { commentThreadKey } from '@/lib/comment-labels';
 import { getCommentCounts } from '@/lib/comments';
@@ -229,6 +230,35 @@ export default async function HomePage({ params }: Props) {
     }];
   });
 
+  /**
+   * Latest-photo carousel: the newest picture of each of the six most recently
+   * imported airports (lib/airport-photos.ts). Slides are assembled here, not
+   * in the client component, because the names, CTA and dot labels are all
+   * localized server-side and a function prop cannot cross that boundary.
+   */
+  const airportByCode = new Map(airports.map((airport) => [airport.iata, airport]));
+  const photoSlides: PhotoCarouselSlide[] = latestAirportPhotos(locale, 6).flatMap(
+    ({ iata, photo }) => {
+      const airport = airportByCode.get(iata);
+      if (!airport) return [];
+      return [{
+        iata,
+        name: airport.name,
+        city: airport.city,
+        countryName: airport.countryName,
+        src: photo.src,
+        width: photo.width,
+        height: photo.height,
+        caption: photo.caption,
+        credit: photo.credit.host
+          ? { label: t.airport.photosCredit(photo.credit.host), url: photo.credit.url }
+          : null,
+        href: localizedPath(locale, `/airport/${iata}`),
+        cta: t.home.photos.view(airport.name),
+      }];
+    }
+  );
+
   // Leaflet world map: the table summaries joined with static coordinates.
   const mapAirports = airports.flatMap((a) => {
     const geo = getAirportGeo(a.iata);
@@ -439,6 +469,35 @@ export default async function HomePage({ params }: Props) {
           deals={dealBoard.deals}
           total={dealBoard.total}
       />
+
+      {/* ------------------------------------------------------ latest photos */}
+      {photoSlides.length > 0 && (
+        <section className="section" id="photos">
+          <div className="section-head">
+            <div>
+              <div className="section-kicker">{t.home.photos.kicker}</div>
+              <h2 className="section-title">
+                {t.home.photos.title}
+                <span className="en">{t.home.photos.en}</span>
+              </h2>
+              <p className="sec-sub">{t.home.photos.sub}</p>
+            </div>
+          </div>
+          <PhotoCarousel
+            slides={photoSlides}
+            labels={{
+              ariaLabel: t.home.photos.ariaLabel,
+              prev: t.home.photos.prev,
+              next: t.home.photos.next,
+              play: t.home.photos.play,
+              pause: t.home.photos.pause,
+              dotLabels: photoSlides.map((_, index) =>
+                t.home.photos.counter(index + 1, photoSlides.length)
+              ),
+            }}
+          />
+        </section>
+      )}
 
       {/* -------------------------------------------------- world airport map */}
       {mapAirports.length > 0 && (

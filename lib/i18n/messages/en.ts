@@ -205,6 +205,20 @@ export const en: Messages = {
       play: 'Start the slideshow',
       pause: 'Pause the slideshow',
     },
+    /** Homepage carousel: the newest photo batch, one picture per airport. */
+    photos: {
+      kicker: 'Latest Photos',
+      title: 'Latest airport photos',
+      en: 'Latest Photos',
+      sub: 'The most recently added airport photos — the six newest airports, one picture each.',
+      ariaLabel: 'Latest airport photos carousel',
+      prev: 'Previous photo',
+      next: 'Next photo',
+      play: 'Start the slideshow',
+      pause: 'Pause the slideshow',
+      counter: (index: number, total: number) => `Photo ${index} of ${total}`,
+      view: (name: string) => `View ${name} map`,
+    },
     countries: {
       kicker: 'By Country',
       title: 'Airport maps by country',

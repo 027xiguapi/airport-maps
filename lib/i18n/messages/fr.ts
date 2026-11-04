@@ -248,6 +248,20 @@ export const fr: Messages = {
       play: 'Lancer le diaporama',
       pause: 'Mettre le diaporama en pause',
     },
+    /** Carrousel de la page d’accueil : le lot de photos le plus récent, une image par aéroport. */
+    photos: {
+      kicker: 'Photos récentes',
+      title: 'Dernières photos d’aéroport',
+      en: 'Latest Photos',
+      sub: 'Les photos d’aéroport ajoutées le plus récemment — les six aéroports les plus récents, une image chacun.',
+      ariaLabel: 'Carrousel des dernières photos d’aéroport',
+      prev: 'Photo précédente',
+      next: 'Photo suivante',
+      play: 'Lancer le diaporama',
+      pause: 'Mettre le diaporama en pause',
+      counter: (index: number, total: number) => `Photo ${index} sur ${total}`,
+      view: (name: string) => `Voir la carte de ${name}`,
+    },
     countries: {
       kicker: 'Par pays',
       title: 'Cartes d’aéroports par pays',

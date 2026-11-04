@@ -249,6 +249,20 @@ export const it: Messages = {
       play: 'Avvia la presentazione',
       pause: 'Metti in pausa la presentazione',
     },
+    /** Carosello della homepage: il lotto di foto più recente, un’immagine per aeroporto. */
+    photos: {
+      kicker: 'Foto recenti',
+      title: 'Ultime foto degli aeroporti',
+      en: 'Latest Photos',
+      sub: 'Le foto aeroportuali aggiunte di recente — i sei aeroporti più recenti, un’immagine ciascuno.',
+      ariaLabel: 'Carosello delle ultime foto aeroportuali',
+      prev: 'Foto precedente',
+      next: 'Foto successiva',
+      play: 'Avvia la presentazione',
+      pause: 'Metti in pausa la presentazione',
+      counter: (index: number, total: number) => `Foto ${index} di ${total}`,
+      view: (name: string) => `Vedi la mappa di ${name}`,
+    },
     countries: {
       kicker: 'Per paese',
       title: 'Mappe degli aeroporti per paese',

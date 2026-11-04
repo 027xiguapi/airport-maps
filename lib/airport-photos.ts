@@ -10,7 +10,9 @@ import { SOURCE_LOCALE, type Locale } from './i18n/config';
  * file names) and every file is recorded in `public/photos/manifest.json` with
  * its source page, host and pixel size. That manifest is the provenance record
  * shown as the photo's attribution line — a photo that is not in it never
- * renders, so nothing appears on the site without a traced source.
+ * renders, so nothing appears on the site without a traced source. A batch also
+ * stamps `addedAt` on the entries it writes, which is what the homepage's
+ * "latest photos" carousel orders by.
  *
  * Captions are editorial: `public/photos/captions/<IATA>.json` holds the
  * authored `zh` + `en` one-liners that describe what each photo actually shows
@@ -37,6 +39,12 @@ type ManifestPhoto = {
   pageUrl?: string;
   imageUrl?: string;
   title?: string;
+  /**
+   * ISO date the batch that brought this file in was imported. The homepage
+   * carousel orders by it; photos imported before the field existed have none
+   * and sort last.
+   */
+  addedAt?: string;
 };
 
 export type AirportPhoto = {
@@ -278,4 +286,76 @@ export function getAirportPhotos(locale: Locale, iata: string): AirportPhoto[] {
  */
 export function airportLeadPhoto(locale: Locale, iata: string): AirportPhoto | null {
   return getAirportPhotos(locale, iata)[0] ?? null;
+}
+
+/** One airport's newest published photo, with the date it entered the repo. */
+export type LatestAirportPhoto = {
+  iata: string;
+  photo: AirportPhoto;
+  /** `addedAt` of the photo's manifest entry, null for pre-stamp imports. */
+  addedAt: string | null;
+};
+
+/**
+ * The newest published picture of each airport, newest airport first — the
+ * homepage carousel's data.
+ *
+ * "Newest" is the manifest's `addedAt` stamp (a photo batch writes one when it
+ * is imported; the field is absent on everything that predates it). Only
+ * photos that would render are considered: captioned in this locale, present on
+ * disk, not `_skip`ped. Within one batch the largest picture represents the
+ * airport — the homepage stage should not upscale a thumbnail. Airports
+ * imported on the same day tie-break on IATA so the strip is stable between
+ * builds; airports without a stamp sort last and only fill the list when
+ * nothing newer exists.
+ */
+export function latestAirportPhotos(locale: Locale, limit = 6): LatestAirportPhoto[] {
+  const manifest = photos();
+  captionIndex(); // loads `skipped` alongside the captions
+
+  const newest = new Map<string, LatestAirportPhoto>();
+  for (const [code, entries] of Object.entries(manifest)) {
+    const onDisk = diskFiles(code);
+    const skip = skipped?.get(code);
+    let best: { entry: ManifestPhoto; addedAt: string } | null = null;
+
+    for (const entry of entries) {
+      if (!entry.file || !onDisk.has(entry.file) || skip?.has(entry.file)) continue;
+      const addedAt = entry.addedAt ?? '';
+      // Newest batch wins; inside one batch the largest picture wins, because
+      // the homepage stage would otherwise upscale a 300px thumbnail. On a tie
+      // the earlier file stays, so the choice is stable between builds.
+      const area = (e: ManifestPhoto) => (e.width ?? 0) * (e.height ?? 0);
+      if (!best || addedAt > best.addedAt || (addedAt === best.addedAt && area(entry) > area(best.entry))) {
+        best = { entry, addedAt };
+      }
+    }
+    if (!best) continue;
+
+    const caption = pickCaption(code, best.entry.file, locale);
+    if (caption === null) continue;
+
+    newest.set(code, {
+      iata: code,
+      addedAt: best.entry.addedAt ?? null,
+      photo: {
+        src: `/photos/${photoStem(code)}/${best.entry.file}`,
+        width: best.entry.width ?? null,
+        height: best.entry.height ?? null,
+        caption,
+        credit: {
+          host: best.entry.host ?? null,
+          url: best.entry.pageUrl ?? null,
+          title: best.entry.title ?? null,
+        },
+      },
+    });
+  }
+
+  return [...newest.values()]
+    .sort(
+      (a, b) =>
+        (b.addedAt ?? '').localeCompare(a.addedAt ?? '') || a.iata.localeCompare(b.iata)
+    )
+    .slice(0, limit);
 }

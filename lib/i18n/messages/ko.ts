@@ -208,6 +208,20 @@ export const ko: Messages = {
       play: '자동 넘김 시작',
       pause: '자동 넘김 일시정지',
     },
+    /** 홈페이지 캐러셀: 가장 최근에 추가된 사진 묶음, 공항마다 한 장. */
+    photos: {
+      kicker: '최신 사진',
+      title: '최신 공항 사진',
+      en: 'Latest Photos',
+      sub: '최근에 추가된 공항 사진입니다. 가장 최근 공항 여섯 곳을 한 장씩 보여 줍니다.',
+      ariaLabel: '최신 공항 사진 캐러셀',
+      prev: '이전 사진',
+      next: '다음 사진',
+      play: '자동 넘김 시작',
+      pause: '자동 넘김 일시정지',
+      counter: (index: number, total: number) => `사진 ${index} / ${total}`,
+      view: (name: string) => `${name} 지도 보기`,
+    },
     countries: {
       kicker: '국가별',
       title: '국가별 공항 지도',

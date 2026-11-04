@@ -194,6 +194,20 @@ export const zh = {
       play: '开始自动轮播',
       pause: '暂停自动轮播',
     },
+    /** 首页「最新照片」轮播：最近入库的机场实景，取最新的 6 座机场。 */
+    photos: {
+      kicker: 'Latest Photos',
+      title: '最新机场实景',
+      en: 'Latest Photos',
+      sub: '最近入库的机场实景照片：按入库时间取最新的 6 座机场，每座一张。',
+      ariaLabel: '最新机场照片轮播',
+      prev: '上一张照片',
+      next: '下一张照片',
+      play: '开始自动轮播',
+      pause: '暂停自动轮播',
+      counter: (index: number, total: number) => `第 ${index} / ${total} 张`,
+      view: (name: string) => `查看${name}地图`,
+    },
     countries: {
       kicker: 'By Country',
       title: '按国家分类的机场地图',

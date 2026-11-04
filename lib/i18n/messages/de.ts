@@ -209,6 +209,20 @@ export const de: Messages = {
       play: 'Diashow starten',
       pause: 'Diashow pausieren',
     },
+    /** Homepage-Karussell: der neueste Foto-Batch, ein Bild pro Flughafen. */
+    photos: {
+      kicker: 'Neueste Fotos',
+      title: 'Neueste Flughafenfotos',
+      en: 'Latest Photos',
+      sub: 'Die zuletzt aufgenommenen Flughafenfotos – die sechs neuesten Flughäfen, je ein Bild.',
+      ariaLabel: 'Karussell der neuesten Flughafenfotos',
+      prev: 'Vorheriges Foto',
+      next: 'Nächstes Foto',
+      play: 'Diashow starten',
+      pause: 'Diashow pausieren',
+      counter: (index: number, total: number) => `Foto ${index} von ${total}`,
+      view: (name: string) => `Karte von ${name} ansehen`,
+    },
     countries: {
       kicker: 'Nach Land',
       title: 'Flughafenpläne nach Land',
