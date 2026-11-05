@@ -1,8 +1,31 @@
 {
   "_note": "The two Baidu downloads were satellite screenshots. The kept picture is one of the warbirds preserved at the airport (silverhawkauthor.com documents them on site); a second preserved-aircraft photo was left out as the same subject twice.",
-  "_skip": ["alm-baidu-1.webp", "alm-baidu-2.webp", "alm-page-2.webp"],
   "alm-page-1.webp": {
     "zh": "保存在阿拉莫戈多-白沙地区机场的洛克希德 P-2H 海王星反潜巡逻机（注册号 N14447），机身背后是机场的机库与停机坪（照片：silverhawkauthor.com）。",
     "en": "A Lockheed P-2H Neptune (N14447) preserved at Alamogordo-White Sands Regional Airport, the field's hangars and tarmac behind it (photo: silverhawkauthor.com)."
-  }
+  },
+  "alm-chatgpt-01.webp": {
+    "zh": "阿拉莫戈多-白沙地区机场的主入口上方挂着机场名称标牌，门前是晴朗蓝天下的水泥步道。",
+    "en": "The main entrance of Alamogordo-White Sands Regional Airport carries the field's name above its doors, opening onto a concrete walkway under a clear blue sky."
+  },
+  "alm-chatgpt-02.webp": {
+    "zh": "俯瞰阿拉莫戈多-白沙地区机场的 21 号跑道，两侧是荒漠灌木，远处地平线上横着一道白色沙带。",
+    "en": "An aerial view of runway 21 at Alamogordo-White Sands Regional Airport, desert scrub on both sides and a pale band of sand along the horizon."
+  },
+  "alm-chatgpt-03.webp": {
+    "zh": "阿拉莫戈多机场的停机坪上停着三架小型飞机，左侧是金属机库，堆积的云团压在山脊上方。",
+    "en": "Three light aircraft are parked on the cracked apron at Alamogordo, a metal hangar on the left and towering cumulus clouds above the distant ridge."
+  },
+  "alm-chatgpt-04.webp": {
+    "zh": "无人机视角下，阿拉莫戈多机场 4 号跑道入口的标线与导流线清晰可见，画面底部有一行飞行数据。",
+    "en": "A drone view of the threshold markings at runway 4 of Alamogordo airport, with a strip of flight data printed along the bottom edge."
+  },
+  "alm-chatgpt-05.webp": {
+    "zh": "阿拉莫戈多-白沙地区机场航站楼前，星条旗与新墨西哥州旗在旗杆上飘扬，树木尚未长叶。",
+    "en": "Before the terminal at Alamogordo-White Sands Regional Airport, the Stars and Stripes and the New Mexico state flag fly from a pole above bare trees."
+  },
+  "_skip": [
+    "alm-baidu-1.webp",
+    "alm-page-2.webp"
+  ]
 }

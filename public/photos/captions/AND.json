@@ -1,10 +1,30 @@
 {
   "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
-  "_skip": [
-    "and-baidu-1.webp"
-  ],
   "and-sat-1.webp": {
     "zh": "卫星视角：两条跑道在绿地上交叉，航站楼与机坪位于交叉点附近。",
     "en": "Satellite view: two runways cross in green countryside, with the terminal and apron near the intersection."
-  }
+  },
+  "and-chatgpt-01.webp": {
+    "zh": "蓝天下这座石墙小楼有绿色金属屋顶和木质门廊，门楣标着5805，门前旗杆上飘扬着美国国旗。",
+    "en": "Under a clear blue sky, a small stone-clad terminal with a green metal roof and timber entrance portico has an American flag flying by its doors."
+  },
+  "and-chatgpt-02.webp": {
+    "zh": "航拍视角下，两条跑道在林地与农田之间交叉，跑道尽端散布着几栋白色建筑。",
+    "en": "From the air, two runways cross between woodland and farmland, with a few white buildings scattered near the ends of the strips."
+  },
+  "and-chatgpt-03.webp": {
+    "zh": "路边一座石砌标牌用大号英文字母写着安德森地区机场的欢迎语，牌后停着一辆白色皮卡。",
+    "en": "A stone-based entrance sign spells out a welcome to Anderson Regional Airport in large white letters, with a pickup truck parked behind it."
+  },
+  "and-chatgpt-04.webp": {
+    "zh": "越过铁丝网看去，跑道旁的黄色牌子标着17和35，尽头有座白色小塔，一架红色小飞机停在远处。",
+    "en": "Looking across a chain-link fence, a yellow sign beside the runway marks 17 and 35, with a small white tower and a red aircraft further along."
+  },
+  "and-chatgpt-05.webp": {
+    "zh": "机场边的儿童游乐场：蓝色软垫上画着跑道标线，绿色遮阳棚下装有滑梯和攀爬架，铁丝网外就是停机坪。",
+    "en": "A playground beside the airfield paints runway markings on its blue surface, with slides and climbing frames under green shade canopies."
+  },
+  "_skip": [
+    "and-baidu-1.webp"
+  ]
 }

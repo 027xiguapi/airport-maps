@@ -24,7 +24,6 @@
   "AAP": {
     "aap-bing-1.webp": "Das Terminal des APT Pranoto International Airport in Samarinda: eine breite Glasfassade, gestützt von schrägen weißen Stahlstreben, das Vordach reicht über die Vorfahrt hinaus.",
     "aap-doubao-01.webp": "Ein rot-weißes Turbopropflugzeug wartet auf dem Vorfeld, während sich schwere Wolken über dem langen gläsernen Terminal sammeln, dessen Dach auf weißen Stahlbindern ruht.",
-    "aap-doubao-02.webp": "In der Dämmerung reicht die geschwungene Überdachung des Terminals auf weißen Schrägstützen nach außen, während tiefblaue Wolken auf den Horizont drücken.",
     "aap-doubao-03.webp": "Ein Schild mit roten Buchstaben am Flughafeneingang nennt den Namen Aji Pangeran Tumenggung Pranoto, dahinter erhebt sich das weiße Terminal mit geschwungenem Dach.",
     "aap-doubao-04.webp": "Ein grünes Namensschild und eine gelbe Nummerntafel verlaufen an der Terminalwand, während Passagiere den Betonvorplatz unter einer Glas-Stahl-Brücke überqueren.",
     "aap-doubao-05.webp": "Von der Wiese aus hebt sich das silberne Dach des Terminals an beiden Enden über einer Glasfront, die den grauweißen Himmel spiegelt, links wartet ein Bus.",
@@ -269,19 +268,42 @@
     "aia-sat-1.webp": "Satellitenansicht: Die Startbahnen von Alliance liegen zwischen Ackerland und Prärie im Hochland von Nebraska, mit Terminal und Vorfeld neben dem Flugfeld."
   },
   "AIP": {
-    "aip-sat-1.webp": "Satellitenansicht: Der Flughafen Adampur (AIP) ist von grüner Vegetation und Ackerland umgeben."
+    "aip-sat-1.webp": "Satellitenansicht: Der Flughafen Adampur (AIP) ist von grüner Vegetation und Ackerland umgeben.",
+    "aip-chatgpt-01.webp": "Unter klarem Himmel sitzt ein blaues Adampur-Schild über dem verglasten Terminal, während eine Gruppe auf den Stufen posiert.",
+    "aip-chatgpt-02.webp": "Bogenfenster und ein kleiner Kuppelpavillon schmücken das Terminal des Adampur Airport, dazu ein hoher Fahnenmast und ein roter Teppich auf dem Rasen.",
+    "aip-chatgpt-03.webp": "Zwei Feuerwehrfahrzeuge schicken Wasserfontänen in einem Bogen über einen Airliner auf dem Vorfeld, seitlich steht ein Hubschrauber.",
+    "aip-chatgpt-04.webp": "In der Dämmerung sprüht ein Springbrunnen vor dem beleuchteten Terminal, während die indische Fahne an ihrem hohen Mast hängt.",
+    "aip-chatgpt-05.webp": "Beschäftigte in leuchtenden Warnwesten stehen in einer langen Reihe über den gepflasterten Vorplatz vor dem Terminal.",
+    "aip-chatgpt-06.webp": "Eine rot-weiße SpiceJet-Turboprop steht auf dem Vorfeld, während Beschäftigte und Besucher bei dunstigem Himmel vorbeigehen.",
+    "aip-chatgpt-07.webp": "Ein niedriger eingeschossiger Bau trägt ein blaues Schild mit der Bezeichnung Adampur Airport in Punjabi und Englisch, an der Tür hängt ein gestreiftes Vordach."
   },
   "AIR": {
     "air-sat-1.webp": "Satellitenansicht: Der Flughafen Aripuanã (AIR) liegt zwischen Stadt, Ackerland und Vegetation."
   },
   "AIT": {
-    "ait-sat-1.webp": "Satellitenansicht: Der Flughafen Aitutaki (AIT) ist von Wasser und Küste umgeben."
+    "ait-sat-1.webp": "Satellitenansicht: Der Flughafen Aitutaki (AIT) ist von Wasser und Küste umgeben.",
+    "ait-chatgpt-01.webp": "Ein cremefarben gestrichener Terminaleingang unter einem Giebeldach empfängt die Besucher unter einem Schild mit der Aufschrift Welcome to Aitutaki, umrahmt von grünen Hecken.",
+    "ait-chatgpt-02.webp": "Aus der Luft durchschneidet die Startbahn von Aitutaki geradlinig eine grüne Insel, die von Streifen helltürkiser Lagune umgeben ist.",
+    "ait-chatgpt-03.webp": "Ein weißer zweimotoriger Propeller-Airliner mit blauem Leitwerk steht auf einem hellen Vorfeld neben einer Reihe von Gepäckwagen.",
+    "ait-chatgpt-04.webp": "Ein Schild aus Treibholz mit der Bezeichnung Aitutaki International Airport steht vor einem reetgedeckten Unterstand, in dessen Schatten einige Reisende warten.",
+    "ait-chatgpt-05.webp": "Unter dichten Wolken blickt das Aitutaki-Schild des Terminals auf einen Grünstreifen, eine Willkommenstafel und einen kleinen Parkplatz mit Palmen.",
+    "ait-chatgpt-06.webp": "Vorbei an einem unscharfen Propeller und einer Triebwerksgondel erstreckt sich eine flache Insel mit ihrer Startbahn entlang der türkisfarbenen Lagune.",
+    "ait-chatgpt-07.webp": "Ein zweimotoriger Turboprop steht auf der Startbahn der Kamera zugewandt, hinter seiner Nase ist der Meereshorizont zu sehen."
   },
   "AIU": {
-    "aiu-sat-1.webp": "Auf dem Satellitenbild geht der Flughafen Enua (AIU) in das umgebende Wasser und die Küste über."
+    "aiu-sat-1.webp": "Auf dem Satellitenbild geht der Flughafen Enua (AIU) in das umgebende Wasser und die Küste über.",
+    "aiu-chatgpt-01.webp": "Unter Palmen trägt ein offenes Terminal in Grün und Rot ein Banner mit Willkommen in Atiu, während Reisende mit Rucksäcken in seinem Schatten zusammenkommen.",
+    "aiu-chatgpt-02.webp": "Vom Flügel aus gesehen wirkt die Startbahn voraus abgenutzt und fleckig, gesäumt von Buschwerk und einer Baumreihe."
   },
   "AJF": {
-    "ajf-sat-1.webp": "Satellitenansicht: Die Startbahn von Al-Jauf liegt in der nördlichen Wüste Saudi-Arabiens, mit Terminal und Vorfeld daneben sowie trockenem Land und einigen Feldern ringsum."
+    "ajf-sat-1.webp": "Satellitenansicht: Die Startbahn von Al-Jauf liegt in der nördlichen Wüste Saudi-Arabiens, mit Terminal und Vorfeld daneben sowie trockenem Land und einigen Feldern ringsum.",
+    "ajf-chatgpt-01.webp": "Die Glasfassade des Terminals trägt über den Eingangstüren die Aufschrift Al Jouf International Airport in Englisch und Arabisch.",
+    "ajf-chatgpt-02.webp": "Die Check-in-Halle ist leer, eine Reihe nummerierter Schalter leuchtet blau unter hellen Deckenlampen auf poliertem Boden.",
+    "ajf-chatgpt-03.webp": "Von oben gesehen führt eine geteilte Straße über kahlen Wüstenboden durch einen Kreisverkehr zum Flughafenterminal.",
+    "ajf-chatgpt-04.webp": "Unter einer weißen Gitterdecke tragen breite Säulen eine riesige, polierte Halle, die viel größer wirkt als das kompakte Terminal von Al-Jouf.",
+    "ajf-chatgpt-05.webp": "Zwei Wasserstrahlen kreuzen sich über einem Schmalrumpf-Jet auf dem Vorfeld, hinter dem Flughafenzaun erstreckt sich trockene Wüste.",
+    "ajf-chatgpt-06.webp": "Nach Sonnenuntergang leuchtet ein orange-violetter Himmel hinter dem beleuchteten Terminal von Al Jouf, dessen Zufahrt von Palmen gesäumt ist.",
+    "ajf-chatgpt-07.webp": "Tiefes Sonnenlicht färbt das ältere Terminal des Jouf Airport golden, während ein Airliner mit grünem Leitwerk am Gate steht."
   },
   "AJI": {
     "aji-sat-1.webp": "Satellitenansicht: Die Startbahn von Ağrı liegt auf dem Hochplateau der Osttürkei, mit Terminal und Vorfeld daneben sowie Bergen und trockenem Land ringsum."
@@ -309,10 +331,19 @@
   },
   "AKR": {
     "akr-page-1.webp": "Das Terminal des Flughafens Akure — cremefarbene Wände unter einem blauen Dach, geschwungene Vordächer über den Eingängen und eine blau-weiße Bordsteinkante.",
-    "akr-page-3.webp": "Eine ATR 72 von Overland Airways (Kennzeichen 5N-BPE) auf dem Vorfeld von Akure."
+    "akr-page-3.webp": "Eine ATR 72 von Overland Airways (Kennzeichen 5N-BPE) auf dem Vorfeld von Akure.",
+    "akr-chatgpt-01.webp": "Passagiere gehen die Straße vor dem cremefarbenen Terminal entlang, vorbei an einer Satellitenschüssel an der Wand und einer blauen Dachkante.",
+    "akr-chatgpt-02.webp": "Unter dunstigem grauem Himmel steht das Eingangstor mit der Aufschrift „Welcome to Akure Airport“ über der Straße.",
+    "akr-chatgpt-03.webp": "Passagiere überqueren das Vorfeld in Richtung einer Turboprop von Overland Cargo, dahinter steht ein weißer Frachter mit der Aufschrift Allied Air.",
+    "akr-chatgpt-04.webp": "Ein durchscheinendes blaues Vordach schützt den Eingang zur Ankunft, neben der Tür hängt ein Poster zur Gesundheitsvorsorge in der Pandemie.",
+    "akr-chatgpt-05.webp": "Auf dem Vorplatz umgibt eine Hecke das Wegweiserschild, Autos warten am Straßenrand und dahinter steht der Tower.",
+    "akr-chatgpt-06.webp": "Ein weiß-blauer Regionaljet steht auf dem Vorfeld, daneben Beschäftigte und ein Servicefahrzeug unter wolkigem Himmel.",
+    "akr-chatgpt-07.webp": "Von oben durchschneidet eine einzelne Startbahn geradlinig dunkelgrünes Buschland und Wald, an beiden Enden liegen Lichtungen."
   },
   "AKS": {
-    "aks-sat-1.webp": "Auf dem Satellitenbild geht der Flughafen Gwaunaru'u (AKS) in das umgebende Wasser und die Küste über."
+    "aks-sat-1.webp": "Auf dem Satellitenbild geht der Flughafen Gwaunaru'u (AKS) in das umgebende Wasser und die Küste über.",
+    "aks-chatgpt-01.webp": "Ein Banner mit der Aufschrift „Welcome to Gwaunaru'u Airport“ spannt sich über die Terminalfront, auf dem Rasen steht eine Menge aus Anwohnern und Kindern.",
+    "aks-chatgpt-02.webp": "Eine helle unbefestigte Piste zieht sich über eine bewaldete Halbinsel zwischen Meer und Bäumen, in einer Ansicht, die wie ein Flugsimulator-Rendering wirkt."
   },
   "AKT": {
     "akt-sat-1.webp": "Satellitenansicht: Die RAF Akrotiri (AKT) liegt zwischen Stadt, Ackerland und Vegetation."
@@ -324,12 +355,26 @@
     "akv-sat-1.webp": "Satellitenansicht: Der Flughafen Akulivik (AKV) ist von Stadt, Ackerland und Vegetation umgeben."
   },
   "AKX": {
-    "akx-sat-1.webp": "Satellitenansicht: Die Startbahn von Aktobe liegt in der kasachischen Steppe, mit Terminal und Vorfeld daneben sowie Stadt und Fluss ringsum."
+    "akx-sat-1.webp": "Satellitenansicht: Die Startbahn von Aktobe liegt in der kasachischen Steppe, mit Terminal und Vorfeld daneben sowie Stadt und Fluss ringsum.",
+    "akx-chatgpt-01.webp": "Unter klarem Mittagshimmel spiegelt die geschwungene Glasfassade des Terminals das Licht, über dem Eingang stehen rote Buchstaben.",
+    "akx-chatgpt-02.webp": "Im Terminal kreuzen gelbe Leitlinien den polierten Boden zwischen kleinen Geschäften, einem Café und Sitzreihen.",
+    "akx-chatgpt-03.webp": "Ein weißer Jet wartet an der Fluggastbrücke, während am Vorfeldrand flache, leere Steppe unter einem verblassenden Himmel beginnt.",
+    "akx-chatgpt-04.webp": "Zwei Techniker in Warnwesten arbeiten von einer roten Trittleiter aus am Triebwerk eines abgestellten Jets auf einem vereisten Wintervorfeld.",
+    "akx-chatgpt-05.webp": "Eine blau-weiße Turboprop steht auf dem Vorfeld neben einem Tankwagen, während zwei Bodenkräfte sie unter hellem Himmel betreuen.",
+    "akx-chatgpt-06.webp": "Rote Buchstaben mit der Aufschrift „Aliya Moldagulova Airport“ stehen auf der grauen Terminalwand, auf dem Vorplatz liegt dünner Schnee.",
+    "akx-chatgpt-07.webp": "Beete mit orangefarbenen und rosa Blumen füllen den Vordergrund unterhalb des Terminals, auf dessen Dach rote Buchstaben stehen."
   },
   "ALA": {
     "ala-baidu-1.webp": "Das Terminal von Almaty bei Tag — die fließende Dachlinie mit ihrer Rampe, die den Verkehr hinauf zu den Abflügen führt.",
     "ala-baidu-2.webp": "Bei Nacht leuchtet das rote Neon „АЭРОПОРТ АЛМАТЫ“ über der verglasten Front.",
-    "ala-baidu-3.webp": "Ein Winterbild vor dem Terminal — Taxis und Kleinbusse im Schnee unter der diamantförmigen Dachspitze."
+    "ala-baidu-3.webp": "Ein Winterbild vor dem Terminal — Taxis und Kleinbusse im Schnee unter der diamantförmigen Dachspitze.",
+    "ala-chatgpt-01.webp": "Die Buchstaben ALA beherrschen die Glasfassade des Terminals von Almaty, darunter stehen der kasachische und der englische Name des Flughafens.",
+    "ala-chatgpt-02.webp": "Aus der Luft trennen breite Rasenflächen die Startbahn von Almaty von den Rollbahnen, während Airliner das Vorfeld am blau bedachten Terminal füllen.",
+    "ala-chatgpt-03.webp": "Mehrere weiße Airliner stehen auf dem Vorfeld, einer mit grünem Leitwerk, und in klarer Luft erheben sich dahinter schneebedeckte Berge.",
+    "ala-chatgpt-04.webp": "Ein blau-weißer Jet wartet bei bedecktem Himmel auf dem Vorfeld, daneben steht ein Gepäckband mit der Aufschrift ALA.",
+    "ala-chatgpt-05.webp": "Unter schneebedeckten Gipfeln trägt das Dach die Worte ALMATY AIRPORT, auf dem Vorfeld steht ein weißer Jet, links der Tower.",
+    "ala-chatgpt-06.webp": "In dieser Luftaufnahme bei Tag gehen die hellblauen Dächer des Terminals ineinander über, Airliner besetzen die Stellplätze, daneben liegt eine Baustelle.",
+    "ala-chatgpt-07.webp": "Eine Satellitenansicht des Flughafens Almaty — eine lange Startbahn schneidet diagonal am Vorfeld und den Rollbahnen vorbei, auf der anderen Seite liegt dichte Wohnbebauung."
   },
   "ALB": {
     "alb-sat-1.webp": "Satellitenansicht: Die Startbahnen von Albany verlaufen am Rand der Städte im Hudson Valley, mit Terminal und Vorfeld östlich des Flugfelds."
@@ -344,28 +389,46 @@
     "alh-sat-1.webp": "Satellitenansicht: Die Startbahnen von Albany liegen zwischen Wald und Ackerland an der Südküste Westaustraliens, mit Terminal und Vorfeld neben dem Flugfeld."
   },
   "ALI": {
-    "ali-sat-1.webp": "Satellitenansicht: Der Alice International Airport (ALI) ist von Stadt, Ackerland und Vegetation umgeben."
+    "ali-sat-1.webp": "Satellitenansicht: Der Alice International Airport (ALI) ist von Stadt, Ackerland und Vegetation umgeben.",
+    "ali-chatgpt-01.webp": "Eine VFR-Karte mit Alice International Airport (ALI) im Zentrum zeigt dessen VOR, die umliegenden Höhenpunkte und nahe gelegene Orte."
   },
   "ALJ": {
     "alj-sat-1.webp": "Satellitenansicht: Die Startbahnen von Alexander Bay liegen an der trockenen Küste nahe der Mündung des Orange River, mit Terminal und Vorfeld daneben."
   },
   "ALL": {
-    "all-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Riviera Villanova d'Albenga International Airport (ALL) zwischen grüner Vegetation und Ackerland."
+    "all-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Riviera Villanova d'Albenga International Airport (ALL) zwischen grüner Vegetation und Ackerland.",
+    "all-chatgpt-01.webp": "Aus der Luft liegt die Startbahn von Albenga in einem grünen Tal neben einem breiten Kiesflussbett, hinter dem Flugfeld erheben sich Bergrücken.",
+    "all-chatgpt-02.webp": "Der rot-weiße Kontrollturm erhebt sich hinter einem niedrigen Terminalgebäude, dessen vordere Wand den Schriftzug ALBENGA trägt, dahinter Berge.",
+    "all-chatgpt-03.webp": "In der Dämmerung stehen zwei Business-Jets auf dem Betonvorfeld des Flughafens Albenga, dahinter ein Terminalgebäude mit Glasfront.",
+    "all-chatgpt-04.webp": "Im Abendlicht steht auf dem Vorfeld von Albenga ein kleines weiß-gelbes einmotoriges Propellerflugzeug, dahinter dunkle Berge.",
+    "all-chatgpt-05.webp": "Aus der Luft betrachtet liegen die Startbahn von Albenga und ihr weites Grasfeld zwischen einer Straße und einem Flussbett, mit der Küstenstadt und dem Meer in der Ferne.",
+    "all-chatgpt-06.webp": "Ein Hubschrauber steht auf dem Vorfeld vor einem weißen Zelthangar in Albenga, unter einem blauen Himmel voller Quellwolken."
   },
   "ALM": {
-    "alm-page-1.webp": "Eine Lockheed P-2H Neptune (N14447), erhalten am Alamogordo-White Sands Regional Airport, dahinter die Hangars und das Vorfeld des Platzes (Foto: silverhawkauthor.com)."
+    "alm-page-1.webp": "Eine Lockheed P-2H Neptune (N14447), erhalten am Alamogordo-White Sands Regional Airport, dahinter die Hangars und das Vorfeld des Platzes (Foto: silverhawkauthor.com).",
+    "alm-chatgpt-01.webp": "Der Haupteingang des Alamogordo-White Sands Regional Airport trägt den Namen des Flugplatzes über den Türen und öffnet sich zu einem Betonweg unter klarem blauem Himmel.",
+    "alm-chatgpt-02.webp": "Eine Luftaufnahme der Startbahn 21 am Alamogordo-White Sands Regional Airport, auf beiden Seiten Wüstengestrüpp und ein blasses Sandband am Horizont.",
+    "alm-chatgpt-03.webp": "Drei Leichtflugzeuge stehen auf dem rissigen Vorfeld von Alamogordo, links ein Metallhangar und über dem fernen Bergrücken hoch aufgetürmte Quellwolken.",
+    "alm-chatgpt-04.webp": "Eine Drohnenansicht der Schwellenmarkierungen an der Startbahn 4 des Flughafens Alamogordo, mit einer Zeile Flugdaten am unteren Bildrand.",
+    "alm-chatgpt-05.webp": "Vor dem Terminal des Alamogordo-White Sands Regional Airport wehen die Stars and Stripes und die Flagge des Staates New Mexico an einem Mast über kahlen Bäumen."
   },
   "ALP": {
     "alp-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Aleppo International Airport (ALP) zwischen trockenem Boden und kahlem Land."
   },
   "ALQ": {
-    "alq-sat-1.webp": "Satellitenansicht: Der Flughafen Alegrete Novo (ALQ) ist von Stadt, Ackerland und Vegetation umgeben."
+    "alq-sat-1.webp": "Satellitenansicht: Der Flughafen Alegrete Novo (ALQ) ist von Stadt, Ackerland und Vegetation umgeben.",
+    "alq-chatgpt-01.webp": "Unter dem gelben Vordach des Flughafens Alegrete nennt ein blaues Schild den Namen des Flugplatzes, und ein Hund liegt auf dem Betonweg am Eingang.",
+    "alq-chatgpt-02.webp": "Vor dem Terminal von Alegrete steht eine kleine blau-weiße einmotorige Turboprop mit Azul-Aufschrift auf dem befestigten Vorfeld unter einem gefleckten Himmel.",
+    "alq-chatgpt-03.webp": "Die Vorderseite des Terminals von Alegrete zeigt zwei blaue Vordachschilder mit dem Namen des Flughafens, über trockenem Gras und unter einem wolkenlosen Himmel.",
+    "alq-chatgpt-04.webp": "Unter tiefblauem Himmel steht ein Turboprop-Flugzeug von Azul auf dem Vorfeld von Alegrete, während einige wenige Menschen daneben warten.",
+    "alq-chatgpt-05.webp": "Von der Seite gesehen ziehen sich die blauen Schilder des Terminals von Alegrete entlang der gelben Dachvorsprünge, davor stehen einige Bänke im Gras."
   },
   "ALR": {
     "alr-sat-1.webp": "Auf dem Satellitenbild geht das Alexandra Aerodrome (ALR) in den umgebenden trockenen Boden und das kahle Land über."
   },
   "ALU": {
-    "alu-sat-1.webp": "Satellitenansicht: Der Flughafen Alula (ALU) ist von Stadt, Ackerland und Vegetation umgeben."
+    "alu-sat-1.webp": "Satellitenansicht: Der Flughafen Alula (ALU) ist von Stadt, Ackerland und Vegetation umgeben.",
+    "alu-chatgpt-01.webp": "Eine Luftaufnahme aus dem Flugsimulator: eine Wüstenküste, an deren Strand sich ein kleines Dorf entlangzieht und neben der ein Flugfeld mit seinen Gebäuden liegt."
   },
   "ALY": {
     "aly-baidu-1.webp": "Das alte El-Nouzha-Terminal in Alexandria — ein weißes mehrstöckiges Gebäude mit einer Menge Reisender davor und arabischer Schrift über dem Eingang."
@@ -376,7 +439,14 @@
   "AMD": {
     "amd-page-3.webp": "Das Terminal bei Nacht — violettes Licht über dem auskragenden Dach, Säulen über dem Bordstein, und der Flughafenname in Gujarati entlang der Fassade.",
     "amd-page-4.webp": "Das Terminal von der Vorfahrt aus — weiße Membrandächer über der Fahrbahn und eine durchgehende Glas-Stahl-Front.",
-    "amd-page-5.webp": "Eine Kunstwand im Terminal — zwei Bronzefiguren vor einer als Strichzeichnung dargestellten Stadtansicht, ein Bildschirm zeigt den vollständigen Flughafennamen."
+    "amd-page-5.webp": "Eine Kunstwand im Terminal — zwei Bronzefiguren vor einer als Strichzeichnung dargestellten Stadtansicht, ein Bildschirm zeigt den vollständigen Flughafennamen.",
+    "amd-chatgpt-01.webp": "Bei Tageslicht trägt die Front des Terminals den vollständigen Namen des Flughafens in blauen Buchstaben, während unten Reisende und weiße Autos am Bordstein entlangfahren.",
+    "amd-chatgpt-02.webp": "Als die Dämmerung zunimmt, überzieht violettes Licht die Front des Terminals, während ein weißer überdachter Steg die Fahrbahn zu einer beleuchteten Reihe kleiner Läden überspannt.",
+    "amd-chatgpt-03.webp": "Ein Verkehrsflugzeug in IndiGo-Bemalung steht auf dem Betonvorfeld, im Hintergrund sind das Terminal und aufgemalte Rollbahnmarkierungen zu erkennen.",
+    "amd-chatgpt-04.webp": "Eine Luftaufnahme des Terminals zeigt ein mehrteiliges Silberdach, Parkplätze und eine Ringstraße davor sowie ein Verkehrsflugzeug auf dem Vorfeld daneben.",
+    "amd-chatgpt-05.webp": "Bei Nacht spenden von unten beleuchtete weiße Membrandächer auf dem Vorplatz den Flanierenden Schutz, dahinter die erleuchtete Fassade des Terminals.",
+    "amd-chatgpt-06.webp": "Eine Luftaufnahme in der Dämmerung zeigt einen hohen Turm, der sich nach oben hin öffnet und warm mit farbigen Lichtbändern leuchtet, neben niedrigeren Gebäuden und einer beleuchteten Stadt unterhalb der Hügel.",
+    "amd-chatgpt-07.webp": "Auf einem regennassen Vorfeld bei Nacht wartet ein Jet von IndiGo an seiner Parkposition, während Bodengerät neben dem Bug steht."
   },
   "AMH": {
     "amh-sat-1.webp": "Satellitenansicht: Die Startbahn von Arba Minch liegt zwischen Ackerland und Hügeln im äthiopischen Grabenbruch, mit Terminal und Vorfeld daneben."
@@ -391,19 +461,39 @@
     "anb-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Anniston Regional Airport (ANB) zwischen grüner Vegetation und Ackerland."
   },
   "AND": {
-    "and-sat-1.webp": "Satellitenansicht: Zwei Startbahnen kreuzen sich in grüner Landschaft, Terminal und Vorfeld liegen nahe dem Kreuzungspunkt."
+    "and-sat-1.webp": "Satellitenansicht: Zwei Startbahnen kreuzen sich in grüner Landschaft, Terminal und Vorfeld liegen nahe dem Kreuzungspunkt.",
+    "and-chatgpt-01.webp": "Unter klarem blauem Himmel steht ein kleines, steinverkleidetes Terminal mit grünem Metalldach und hölzernem Eingangsportal, an dessen Türen eine amerikanische Flagge weht.",
+    "and-chatgpt-02.webp": "Aus der Luft kreuzen sich zwei Startbahnen zwischen Wald und Ackerland, einige weiße Gebäude verteilen sich an den Enden der Bahnen.",
+    "and-chatgpt-03.webp": "Ein Eingangsschild auf steinernem Sockel heißt mit großen weißen Buchstaben am Anderson Regional Airport willkommen, dahinter steht ein Pick-up.",
+    "and-chatgpt-04.webp": "Durch einen Maschendrahtzaun gesehen markiert ein gelbes Schild neben der Startbahn 17 und 35, weiter hinten stehen ein kleiner weißer Turm und ein rotes Flugzeug.",
+    "and-chatgpt-05.webp": "Ein Spielplatz neben dem Flugfeld trägt Startbahnmarkierungen auf seinem blauen Boden, unter grünen Sonnendächern stehen Rutschen und Klettergerüste."
   },
   "ANE": {
-    "ane-sat-1.webp": "Satellitenansicht: Der Flughafen Angers Marcé (ANE) liegt zwischen grüner Vegetation und Ackerland."
+    "ane-sat-1.webp": "Satellitenansicht: Der Flughafen Angers Marcé (ANE) liegt zwischen grüner Vegetation und Ackerland.",
+    "ane-chatgpt-01.webp": "Unter dichten Wolken breitet sich das niedrige graue Terminal weit aus, sein Name in orangen Buchstaben über der Verglasung, davor ein leerer Vorplatz.",
+    "ane-chatgpt-02.webp": "In tiefer Abendsonne steht ein Turboprop-Verkehrsflugzeug vor dem Terminal, daneben der Kontrollturm und ein niedriges Gebäude mit der Aufschrift Angers-Marce, in der Nähe Bodenpersonal.",
+    "ane-chatgpt-03.webp": "Eine Luftaufnahme zeigt Reihen grauer Hangars entlang des Vorfelds, einen Kontrollturm in der Mitte und mehrere Leichtflugzeuge auf dem Beton.",
+    "ane-chatgpt-04.webp": "Ein Screenshot aus dem Flugsimulator zeigt die Startbahn 26, die gerade in die Ferne verläuft, mit scharf gezeichneter Mittellinie und Aufsetzmarkierungen zwischen Gras und Wald.",
+    "ane-chatgpt-05.webp": "Unter einem flachen grauen Himmel steht ein kleines weißes Leichtflugzeug im Gras neben einem roten Schild mit der Aufschrift 26-08.",
+    "ane-chatgpt-06.webp": "An einer weißen Wand am Flughafeneingang steht eine orange Flugzeuggrafik neben den Worten Angers Loire Aéroport, darunter ist die Gemeinde Marcé vermerkt.",
+    "ane-chatgpt-07.webp": "Ein weiß-grünes Leichtflugzeug steht neben gelben Rolllinien auf dem Vorfeld, dahinter eine Reihe dunkler Hangars unter klarem Himmel."
   },
   "ANI": {
-    "ani-sat-1.webp": "Satellitenansicht: Die Startbahn von Aniak verläuft am Kuskokwim River, mit Terminal und Vorfeld daneben sowie Wald und Feuchtgebieten ringsum."
+    "ani-sat-1.webp": "Satellitenansicht: Die Startbahn von Aniak verläuft am Kuskokwim River, mit Terminal und Vorfeld daneben sowie Wald und Feuchtgebieten ringsum.",
+    "ani-chatgpt-01.webp": "In der Satellitenansicht verläuft eine gerade Startbahn neben einem breiten Fluss, daneben liegen verstreute Häuser, Straßen und dichter Wald.",
+    "ani-chatgpt-02.webp": "Ein Turboprop-Verkehrsflugzeug steht auf dem Vorfeld vor niedrigen weißen Gebäuden, dahinter verschwimmen bewaldete Berge im Dunst, davor liegt ein Boot am Kai vertäut.",
+    "ani-chatgpt-03.webp": "Eine Winterluftaufnahme zeigt die schneebedeckte Startbahn zwischen zwei zugefrorenen Flussarmen, die Dächer des Dorfes leuchten warm in der tiefen Sonne."
   },
   "ANM": {
     "anm-sat-1.webp": "Satellitenansicht: Der Flughafen Antsirabe (ANM) liegt zwischen Wasser und Küste."
   },
   "ANN": {
-    "ann-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Annette Island Airport (ANN) zwischen grüner Vegetation und Ackerland."
+    "ann-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Annette Island Airport (ANN) zwischen grüner Vegetation und Ackerland.",
+    "ann-chatgpt-01.webp": "In dieser Schwarz-Weiß-Luftaufnahme treffen Vorfeld und Rollbahn zwischen fleckigem Gras aufeinander, am Rand stehen ein langer Hangar und einige niedrige Gebäude.",
+    "ann-chatgpt-02.webp": "Dieses Flughafendiagramm zeigt zwei sich kreuzende Startbahnen mit der Bezeichnung 07/25 und 02/20, deren Längen und die Platzhöhe angegeben sind.",
+    "ann-chatgpt-03.webp": "Ein Blick aus dem Cockpit im Flugsimulator geht über Propellerblätter auf eine Startbahn in flacher Schneelandschaft, dahinter Berge und Meer.",
+    "ann-chatgpt-04.webp": "Auf einer alten Schwarz-Weiß-Aufnahme verkündet ein Schild am Maschendrahtzaun, der Flughafen diene Ketchikan und Umgebung, links ist ein Pan-Am-Heck zu sehen.",
+    "ann-chatgpt-05.webp": "Eine Lagekarte mit einem Flugzeugsymbol verortet das Flugfeld auf einer Insel südlich von Ketchikan, die Karte nennt außerdem Hydaburg und Prince Rupert."
   },
   "ANR": {
     "anr-baidu-1.webp": "Antwerpen aus der Luft — Hangars verstreut zwischen der von Gras umgebenen Startbahn und den Rollwegen, rechts Straßen und Lagerhallen.",
@@ -420,14 +510,24 @@
     "anx-sat-1.webp": "Satellitenansicht: Die Startbahn von Andenes liegt auf der Insel Andøya, mit Terminal und Vorfeld daneben sowie Meer und Bergen ringsum."
   },
   "AOC": {
-    "aoc-sat-1.webp": "Auf dem Satellitenbild geht der Flughafen Leipzig–Altenburg (AOC) in die umgebende grüne Vegetation und das Ackerland über."
+    "aoc-sat-1.webp": "Auf dem Satellitenbild geht der Flughafen Leipzig–Altenburg (AOC) in die umgebende grüne Vegetation und das Ackerland über.",
+    "aoc-chatgpt-01.webp": "Unter klarem blauem Himmel fängt die verglaste Front des weißen Terminals das Sonnenlicht ein, rechts erhebt sich ein schlanker zylindrischer Kontrollturm.",
+    "aoc-chatgpt-02.webp": "Die Abflughalle ist leer, schräge Holzsäulen tragen die Decke über Reihen blauer Sitze und einem unbesetzten Check-in-Schalter.",
+    "aoc-chatgpt-03.webp": "Ein Kartenausschnitt zeigt die Startbahn, die diagonal durch Felder und Wälder schneidet, umgeben von Kiesgruben und rechteckigen Ackerflächen.",
+    "aoc-chatgpt-04.webp": "Schwere Wolken hängen über der langen Betonstartbahn und dem gemähten Gras, am fernen Horizont zeigt sich eine dünne Linie von Dorfdächern.",
+    "aoc-chatgpt-05.webp": "Ein Ryanair-Verkehrsflugzeug und ein kleiner Business-Jet teilen sich das Vorfeld, entlang der aufgemalten Parklinien steht ein rotes Feuerwehrfahrzeug am Turm.",
+    "aoc-chatgpt-06.webp": "Bei einem Tag der offenen Tür der Luftfahrt steht ein graues Seeaufklärungsflugzeug auf dem Gras, eine deutsche Flagge am Leitwerk, und Menschenmengen versammeln sich um eine gelbe Rettungskapsel.",
+    "aoc-chatgpt-07.webp": "Mehrere Leichtflugzeuge stehen in einem breiten Hangar, vorn eine rot-weiße Kunstflugmaschine, der Betonboden ist grün gestrichen mit gelber Umrandung."
   },
   "AOE": {
     "aoe-sat-1.webp": "Satellitenansicht: Die Startbahn von Eskişehir liegt am Stadtrand auf dem anatolischen Plateau, mit Terminal und Vorfeld daneben."
   },
   "AOG": {
     "aog-baidu-1.webp": "Die Front des Terminals des Flughafens Anshan Teng'ao — rote Schriftzeichen für Anshan und die Aufschrift „An Shan“ auf dem Dach, darunter ein fast leerer Vorplatz.",
-    "aog-baidu-2.webp": "Näher am Terminal — Stufen und Laternen vor der verglasten Front, links der runde Kontrollturm."
+    "aog-baidu-2.webp": "Näher am Terminal — Stufen und Laternen vor der verglasten Front, links der runde Kontrollturm.",
+    "aog-chatgpt-01.webp": "Unter tiefblauem Himmel trägt das Dach des Terminals große rote Anshan-Schriftzeichen und die Schrift „An Shan“, dahinter ist die Verglasung des Kontrollturms zu sehen.",
+    "aog-chatgpt-02.webp": "Über dem Eingang des grauen Terminals hängt ein rotes Banner, während eine Gruppe Menschen unter Fensterreihen die Stufen hinaufgeht.",
+    "aog-chatgpt-03.webp": "Ein Kartenausschnitt setzt eine rote Markierung direkt westlich der Stadt Anshan, die Autobahnen G15 und G16 und die Berge im Osten sind gut zu erkennen."
   },
   "AOJ": {
     "aoj-baidu-1.webp": "Im Terminal: „Welcome to AOMORI“ in Holzbuchstaben neben zwei traditionellen Kokeshi-Puppen.",
@@ -622,9 +722,6 @@
     "axt-baidu-1.webp": "Das Terminal von Akita in der Dämmerung — die Aufschrift „Flughafen Akita“ über der ziegelsteinfarbenen Fassade, in der Mitte der Kontrollturm, warmes Licht hinter dem Glas.",
     "axt-baidu-2.webp": "Die Terminalfront bei Tag — Bänder aus rostroter Verkleidung zwischen dunkler Verglasung, auf der Vorplatzstraße leichter Verkehr.",
     "axt-baidu-3.webp": "Neben dem Terminaleingang — Säulen und Pflanzkübel unter der orangefarbenen Dachuntersicht, dahinter ein Weg zum Parkplatz."
-  },
-  "AXU": {
-    "axu-page-1.webp": "Die Namenstafel am Terminal des Flughafens Axum — Amharisch neben „AXUM YOHANNES IV AIRPORT“, darüber das Emblem von Ethiopian Airlines (aufgenommen nach der Wiedereröffnung 2024)."
   },
   "AYJ": {
     "ayj-sat-1.webp": "Satellitenansicht: Der Maharshi Valmiki International Airport (AYJ) liegt zwischen Stadt, Ackerland und Vegetation."

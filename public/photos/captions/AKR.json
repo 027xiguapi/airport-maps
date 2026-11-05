@@ -1,6 +1,5 @@
 {
   "_note": "akr-baidu-1/2 are hotel and generator photos; akr-page-2 is a generic night runway shot of a twin-aisle jet — Akure takes no widebodies and its runway is unlit.",
-  "_skip": ["akr-baidu-1.webp", "akr-baidu-2.webp", "akr-page-2.webp"],
   "akr-page-1.webp": {
     "zh": "阿库雷机场的航站楼：米黄色墙面配蓝色屋檐，入口上方是弧形雨棚，路缘刷着蓝白相间的标线。",
     "en": "Akure Airport's terminal — cream walls under a blue roof, curved canopies over the entrances and a blue-and-white kerb line."
@@ -8,5 +7,34 @@
   "akr-page-3.webp": {
     "zh": "Overland Airways 的 ATR 72 涡桨客机停在阿库雷机场的机坪上（注册号 5N-BPE）。",
     "en": "An Overland Airways ATR 72 (registration 5N-BPE) parked on Akure's apron."
-  }
+  },
+  "akr-chatgpt-01.webp": {
+    "zh": "旅客们走在航站楼前的道路上，米色墙面配着蓝色屋檐，墙边还装着一口卫星天线。",
+    "en": "Passengers walk along the road in front of the cream terminal, past a wall-mounted satellite dish and a blue roof edge."
+  },
+  "akr-chatgpt-02.webp": {
+    "zh": "灰蒙蒙的天色下，写着「阿库雷机场」的门楼立在入口，几个人在路边等候。",
+    "en": "Under a hazy grey sky, the entrance gate carrying the words 'Welcome to Akure Airport' stands over the road."
+  },
+  "akr-chatgpt-03.webp": {
+    "zh": "旅客们穿过机坪，走向一架写着奥弗兰德货运的涡桨飞机，后方停着一架白色喷气货机。",
+    "en": "Passengers cross the apron towards an Overland Cargo turboprop, with a white freighter marked Allied Air parked behind."
+  },
+  "akr-chatgpt-04.webp": {
+    "zh": "到达厅入口上方搭着蓝色半透明雨棚，门边贴着防疫提示海报，旅客正往里走。",
+    "en": "A translucent blue canopy shelters the arrival entrance, where a pandemic health poster is fixed beside the door."
+  },
+  "akr-chatgpt-05.webp": {
+    "zh": "机场入口前的广场上，绿篱围着指路牌，车辆停在路边，远处是塔台和航站楼。",
+    "en": "At the forecourt a hedge surrounds the direction sign, cars wait along the kerb and the tower stands beyond."
+  },
+  "akr-chatgpt-06.webp": {
+    "zh": "机坪上停着一架白蓝涂装的支线客机，机旁有地勤和一辆白色小巴，四周十分空旷。",
+    "en": "A white and blue regional jet rests on the apron with ground staff and a service van alongside under a cloudy sky."
+  },
+  "akr-chatgpt-07.webp": {
+    "zh": "航拍视角下，一条跑道笔直穿过深绿色的林地与灌木，两端各有一片空地。",
+    "en": "From above, a single runway cuts straight through dark green scrub and woodland, with clearings at either end."
+  },
+  "_skip": ["akr-baidu-1.webp", "akr-baidu-2.webp", "akr-page-2.webp"]
 }

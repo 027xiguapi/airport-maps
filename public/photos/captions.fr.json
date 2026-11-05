@@ -30,7 +30,6 @@
   "AAP": {
     "aap-bing-1.webp": "Le terminal de l'aéroport international APT Pranoto de Samarinda : une large façade de verre soutenue par une charpente métallique blanche inclinée, l'auvent s'avançant au-dessus de la zone de dépose.",
     "aap-doubao-01.webp": "Un turbopropulseur rouge et blanc attend sur l’aire de trafic tandis que de lourds nuages s’amoncellent au-dessus du long terminal vitré, dont le toit repose sur des fermes d’acier blanches.",
-    "aap-doubao-02.webp": "Au crépuscule, l’auvent courbe du terminal s’étend vers l’extérieur sur des colonnes blanches inclinées, des nuages bleu profond pesant sur l’horizon.",
     "aap-doubao-03.webp": "Un panneau à lettres rouges à l’entrée de l’aéroport inscrit le nom Aji Pangeran Tumenggung Pranoto, le terminal blanc au toit courbe se dressant derrière.",
     "aap-doubao-04.webp": "Un panneau nominatif vert et une plaque numérotée jaune courent le long du mur du terminal, des passagers traversant le parvis de béton sous une passerelle verre et acier.",
     "aap-doubao-05.webp": "Depuis la pelouse, le toit argenté du terminal se relève à ses deux extrémités au-dessus d’une façade vitrée qui reflète le ciel gris-blanc, un bus attendant sur la gauche.",
@@ -275,19 +274,42 @@
     "aia-sat-1.webp": "Vue satellite : les pistes d'Alliance s'étendent au milieu des terres agricoles et de la prairie des hautes plaines du Nebraska, avec le terminal et l'aire de trafic en bordure du terrain."
   },
   "AIP": {
-    "aip-sat-1.webp": "Vue satellite : l'aéroport d'Adampur (AIP) est entouré de végétation verdoyante et de terres agricoles."
+    "aip-sat-1.webp": "Vue satellite : l'aéroport d'Adampur (AIP) est entouré de végétation verdoyante et de terres agricoles.",
+    "aip-chatgpt-01.webp": "Sous un ciel dégagé, un panneau bleu Adampur surmonte un terminal vitré tandis qu'un groupe pose sur les marches.",
+    "aip-chatgpt-02.webp": "Des fenêtres cintrées et un petit pavillon à coupole ornent le terminal d'Adampur Airport, avec un haut mât de drapeau et un tapis rouge sur la pelouse.",
+    "aip-chatgpt-03.webp": "Deux camions de pompiers lancent des jets d'eau en arc au-dessus d'un avion de ligne sur le tarmac, un hélicoptère stationnant sur le côté.",
+    "aip-chatgpt-04.webp": "Au crépuscule, une fontaine jaillit devant le terminal illuminé tandis que le drapeau indien pend à son haut mât.",
+    "aip-chatgpt-05.webp": "Des employés en gilets fluorescents forment une longue file sur le parvis pavé devant le terminal.",
+    "aip-chatgpt-06.webp": "Un turbopropulseur SpiceJet rouge et blanc stationne sur le tarmac tandis que des agents au sol et des visiteurs circulent sous un ciel brumeux.",
+    "aip-chatgpt-07.webp": "Un bâtiment bas d'un seul niveau porte un panneau bleu indiquant Adampur Airport en pendjabi et en anglais, avec un auvent rayé à sa porte."
   },
   "AIR": {
     "air-sat-1.webp": "Vue satellite : l'aéroport d'Aripuanã (AIR) se trouve entre la ville, les terres agricoles et la végétation."
   },
   "AIT": {
-    "ait-sat-1.webp": "Vue satellite : l'aéroport d'Aitutaki (AIT) est entouré d'eau et de littoral."
+    "ait-sat-1.webp": "Vue satellite : l'aéroport d'Aitutaki (AIT) est entouré d'eau et de littoral.",
+    "ait-chatgpt-01.webp": "Une entrée de terminal peinte en crème sous un toit à pignon accueille les visiteurs sous un panneau Welcome to Aitutaki, encadré de haies vertes.",
+    "ait-chatgpt-02.webp": "Vue du ciel, la piste d'Aitutaki traverse droit une île verdoyante entourée de bandes de lagon turquoise pâle.",
+    "ait-chatgpt-03.webp": "Un avion de ligne bimoteur à hélices blanc à queue bleue stationne sur un tarmac clair près d'une file de chariots à bagages.",
+    "ait-chatgpt-04.webp": "Un panneau en bois flotté indiquant Aitutaki International Airport se dresse devant un abri au toit de chaume où quelques voyageurs attendent à l'ombre.",
+    "ait-chatgpt-05.webp": "Sous un ciel très nuageux, le panneau Aitutaki du terminal fait face à une bande herbue, un panneau de bienvenue et un petit parking planté de palmiers.",
+    "ait-chatgpt-06.webp": "Au-delà d'une hélice et d'une nacelle de moteur floues, une île basse et sa piste s'étirent le long du lagon turquoise.",
+    "ait-chatgpt-07.webp": "Un turbopropulseur bimoteur fait face à l'objectif sur la piste, l'horizon marin visible derrière son nez."
   },
   "AIU": {
-    "aiu-sat-1.webp": "Sur l'image satellite, l'aéroport d'Enua (AIU) se fond dans l'eau et le littoral environnants."
+    "aiu-sat-1.webp": "Sur l'image satellite, l'aéroport d'Enua (AIU) se fond dans l'eau et le littoral environnants.",
+    "aiu-chatgpt-01.webp": "Sous les palmiers, un terminal ouvert vert et rouge porte une banderole de bienvenue à Atiu tandis que des voyageurs avec des sacs à dos se rassemblent à son ombre.",
+    "aiu-chatgpt-02.webp": "Depuis l'aile, la piste devant paraît usée et irrégulière, bordée de broussailles et d'une ligne d'arbres."
   },
   "AJF": {
-    "ajf-sat-1.webp": "Vue satellite : la piste d'Al-Jawf s'étend dans le désert du nord de l'Arabie saoudite, bordée par le terminal et l'aire de trafic, avec des terres arides et quelques champs alentour."
+    "ajf-sat-1.webp": "Vue satellite : la piste d'Al-Jawf s'étend dans le désert du nord de l'Arabie saoudite, bordée par le terminal et l'aire de trafic, avec des terres arides et quelques champs alentour.",
+    "ajf-chatgpt-01.webp": "La façade vitrée du terminal porte, au-dessus de ses portes d'entrée, l'inscription Al Jouf International Airport en anglais et en arabe.",
+    "ajf-chatgpt-02.webp": "Le hall d'enregistrement est vide, une rangée de comptoirs numérotés luit en bleu sous de vifs éclairages au plafond, sur un sol poli.",
+    "ajf-chatgpt-03.webp": "Vue du ciel, une route à chaussées séparées traverse un désert nu, passe un rond-point et mène au terminal de l'aéroport.",
+    "ajf-chatgpt-04.webp": "Sous un plafond en treillis blanc, de larges colonnes soutiennent une vaste salle polie qui paraît bien plus grande que le terminal compact d'Al-Jouf.",
+    "ajf-chatgpt-05.webp": "Deux jets d'eau se croisent au-dessus d'un avion à fuselage étroit sur le tarmac, le désert aride s'étendant au-delà de la clôture.",
+    "ajf-chatgpt-06.webp": "Après le coucher du soleil, un ciel orange et violet rougeoie derrière le terminal éclairé d'Al Jouf, dont la route d'accès est bordée de palmiers.",
+    "ajf-chatgpt-07.webp": "La lumière rasante du soleil dore le vieux terminal de Jouf Airport tandis qu'un avion de ligne à queue verte stationne à la porte."
   },
   "AJI": {
     "aji-sat-1.webp": "Vue satellite : la piste d'Ağrı s'étend sur le haut plateau de l'est de la Turquie, bordée par le terminal et l'aire de trafic, avec des montagnes et des terres arides alentour."
@@ -315,10 +337,19 @@
   },
   "AKR": {
     "akr-page-1.webp": "Le terminal de l'aéroport d'Akure — des murs crème sous un toit bleu, des auvents incurvés au-dessus des entrées et une bordure bleue et blanche le long du trottoir.",
-    "akr-page-3.webp": "Un ATR 72 d'Overland Airways (immatriculation 5N-BPE) stationné sur l'aire de trafic d'Akure."
+    "akr-page-3.webp": "Un ATR 72 d'Overland Airways (immatriculation 5N-BPE) stationné sur l'aire de trafic d'Akure.",
+    "akr-chatgpt-01.webp": "Des passagers longent la route devant le terminal crème, passant devant une antenne parabolique murale et un bord de toit bleu.",
+    "akr-chatgpt-02.webp": "Sous un ciel gris brumeux, le portail d'entrée portant les mots « Welcome to Akure Airport » se dresse au-dessus de la route.",
+    "akr-chatgpt-03.webp": "Des passagers traversent le tarmac vers un turbopropulseur Overland Cargo, un cargo blanc marqué Allied Air stationnant derrière.",
+    "akr-chatgpt-04.webp": "Un auvent bleu translucide abrite l'entrée des arrivées, où une affiche sanitaire liée à la pandémie est fixée à côté de la porte.",
+    "akr-chatgpt-05.webp": "Sur le parvis, une haie entoure le panneau de direction, des voitures attendent le long du trottoir et la tour se dresse plus loin.",
+    "akr-chatgpt-06.webp": "Un jet régional blanc et bleu stationne sur le tarmac, avec des agents au sol et une camionnette de service à côté, sous un ciel nuageux.",
+    "akr-chatgpt-07.webp": "Vue du ciel, une piste unique traverse droit une brousse vert sombre et des bois, avec des clairières à chaque extrémité."
   },
   "AKS": {
-    "aks-sat-1.webp": "Sur l'image satellite, l'aéroport de Gwaunaru'u (AKS) se fond dans l'eau et le littoral environnants."
+    "aks-sat-1.webp": "Sur l'image satellite, l'aéroport de Gwaunaru'u (AKS) se fond dans l'eau et le littoral environnants.",
+    "aks-chatgpt-01.webp": "Une banderole portant « Welcome to Gwaunaru'u Airport » barre la façade du terminal, une foule d'habitants et d'enfants se tenant sur l'herbe.",
+    "aks-chatgpt-02.webp": "Une piste claire non revêtue traverse une péninsule boisée entre la mer et les arbres, dans ce qui ressemble à un rendu de simulateur de vol."
   },
   "AKT": {
     "akt-sat-1.webp": "Vue satellite : RAF Akrotiri (AKT) se trouve entre la ville, les terres agricoles et la végétation."
@@ -330,12 +361,26 @@
     "akv-sat-1.webp": "Vue satellite : l'aéroport d'Akulivik (AKV) est entouré de la ville, des terres agricoles et de la végétation."
   },
   "AKX": {
-    "akx-sat-1.webp": "Vue satellite : la piste d'Aktioubé s'étend dans la steppe kazakhe, bordée par le terminal et l'aire de trafic, avec la ville et une rivière alentour."
+    "akx-sat-1.webp": "Vue satellite : la piste d'Aktioubé s'étend dans la steppe kazakhe, bordée par le terminal et l'aire de trafic, avec la ville et une rivière alentour.",
+    "akx-chatgpt-01.webp": "Sous un ciel dégagé de midi, la façade vitrée incurvée du terminal reflète la lumière, avec des lettres rouges au-dessus de l'entrée.",
+    "akx-chatgpt-02.webp": "À l'intérieur du terminal, des lignes jaunes de guidage traversent le sol poli entre de petites boutiques, un café et des rangées de sièges.",
+    "akx-chatgpt-03.webp": "Un jet blanc attend à la passerelle tandis que le bord du tarmac laisse place à une steppe plate et déserte sous un ciel qui s'assombrit.",
+    "akx-chatgpt-04.webp": "Deux techniciens en gilets fluorescents travaillent depuis un escabeau rouge sur le moteur d'un jet stationné, sur un tarmac hivernal verglacé.",
+    "akx-chatgpt-05.webp": "Un turbopropulseur bleu et blanc stationne sur le tarmac près d'un camion-citerne tandis que deux agents au sol s'en occupent sous un ciel lumineux.",
+    "akx-chatgpt-06.webp": "Des lettres rouges formant « Aliya Moldagulova Airport » se dressent sur le mur gris du terminal, avec une fine couche de neige sur le parvis.",
+    "akx-chatgpt-07.webp": "Des massifs de fleurs orange et roses remplissent le premier plan sous le terminal, où des lettres rouges se dressent sur le toit."
   },
   "ALA": {
     "ala-baidu-1.webp": "Le terminal d'Almaty de jour — la ligne de toit ondoyante et sa rampe qui mène la circulation vers les départs.",
     "ala-baidu-2.webp": "La nuit, le néon rouge « АЭРОПОРТ АЛМАТЫ » brille au-dessus de la façade vitrée.",
-    "ala-baidu-3.webp": "Une vue d'hiver devant le terminal — des taxis et des minibus dans la neige, sous le fleuron en losange du toit."
+    "ala-baidu-3.webp": "Une vue d'hiver devant le terminal — des taxis et des minibus dans la neige, sous le fleuron en losange du toit.",
+    "ala-chatgpt-01.webp": "Les lettres ALA dominent la façade vitrée du terminal d'Almaty, avec le nom kazakh et anglais de l'aéroport en dessous.",
+    "ala-chatgpt-02.webp": "Vue du ciel, de larges pelouses séparent la piste d'Almaty des voies de circulation tandis que les avions de ligne remplissent le tarmac près du terminal au toit bleu.",
+    "ala-chatgpt-03.webp": "Plusieurs avions de ligne blancs stationnent sur le tarmac, l'un à queue verte, et des montagnes enneigées se dressent au-delà dans un air limpide.",
+    "ala-chatgpt-04.webp": "Un jet bleu et blanc attend sur le tarmac sous un ciel couvert, un tapis à bagages marqué ALA stationnant à côté.",
+    "ala-chatgpt-05.webp": "Sous des sommets enneigés, le toit porte les mots ALMATY AIRPORT, avec un jet blanc sur le tarmac et la tour à gauche.",
+    "ala-chatgpt-06.webp": "Sur cette vue aérienne de jour, les toits bleu pâle du terminal se rejoignent, les avions de ligne occupent les postes et un chantier se trouve à côté.",
+    "ala-chatgpt-07.webp": "Vue satellite de l'aéroport d'Almaty — une longue piste coupe en diagonale devant le tarmac et les voies de circulation, avec un habitat dense de l'autre côté."
   },
   "ALB": {
     "alb-sat-1.webp": "Vue satellite : les pistes d'Albany longent la lisière des villes de la vallée de l'Hudson, avec le terminal et l'aire de trafic à l'est du terrain."
@@ -350,28 +395,46 @@
     "alh-sat-1.webp": "Vue satellite : les pistes d'Albany s'étendent parmi les forêts et les terres agricoles de la côte sud de l'Australie-Occidentale, avec le terminal et l'aire de trafic le long du terrain."
   },
   "ALI": {
-    "ali-sat-1.webp": "Vue satellite : l'aéroport international d'Alice (ALI) est entouré de la ville, des terres agricoles et de la végétation."
+    "ali-sat-1.webp": "Vue satellite : l'aéroport international d'Alice (ALI) est entouré de la ville, des terres agricoles et de la végétation.",
+    "ali-chatgpt-01.webp": "Une carte VFR centrée sur Alice International Airport (ALI) indique son VOR, les élévations ponctuelles alentour et les villes proches."
   },
   "ALJ": {
     "alj-sat-1.webp": "Vue satellite : les pistes d'Alexander Bay se trouvent sur la côte aride, près de l'embouchure du fleuve Orange, avec le terminal et l'aire de trafic à côté."
   },
   "ALL": {
-    "all-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport international Riviera Villanova d'Albenga (ALL) se trouve entre végétation verdoyante et terres agricoles."
+    "all-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport international Riviera Villanova d'Albenga (ALL) se trouve entre végétation verdoyante et terres agricoles.",
+    "all-chatgpt-01.webp": "Vue du ciel, la piste d'Albenga se niche dans une vallée verdoyante près d'un large lit de galets, des crêtes montagneuses se dressant au-delà du terrain.",
+    "all-chatgpt-02.webp": "La tour de contrôle rouge et blanche s'élève derrière un bâtiment terminal bas, le nom ALBENGA inscrit sur le mur devant, avec des montagnes au-delà.",
+    "all-chatgpt-03.webp": "Au crépuscule, deux jets d'affaires stationnent sur le tarmac en béton de l'aéroport d'Albenga, avec un terminal vitré derrière eux.",
+    "all-chatgpt-04.webp": "Dans la lumière du soir à Albenga, un petit avion à hélice monomoteur blanc et jaune stationne sur le tarmac, des montagnes sombres au-delà.",
+    "all-chatgpt-05.webp": "Vue de l’air, la piste d’Albenga et son vaste terrain herbeux s’étendent entre une route et un lit de rivière, avec la ville côtière et la mer au loin.",
+    "all-chatgpt-06.webp": "Un hélicoptère stationne sur le tarmac devant un hangar en forme de tente blanche à Albenga, sous un ciel bleu rempli de nuages cotonneux."
   },
   "ALM": {
-    "alm-page-1.webp": "Un Lockheed P-2H Neptune (N14447) conservé à l'aéroport régional d'Alamogordo-White Sands, avec les hangars et le tarmac du terrain en arrière-plan (photo : silverhawkauthor.com)."
+    "alm-page-1.webp": "Un Lockheed P-2H Neptune (N14447) conservé à l'aéroport régional d'Alamogordo-White Sands, avec les hangars et le tarmac du terrain en arrière-plan (photo : silverhawkauthor.com).",
+    "alm-chatgpt-01.webp": "L’entrée principale de l’Alamogordo-White Sands Regional Airport porte le nom du terrain au-dessus de ses portes et s’ouvre sur un chemin bétonné sous un ciel bleu dégagé.",
+    "alm-chatgpt-02.webp": "Vue aérienne de la piste 21 de l’Alamogordo-White Sands Regional Airport, avec des broussailles désertiques de part et d’autre et une bande de sable pâle à l’horizon.",
+    "alm-chatgpt-03.webp": "Trois avions légers sont garés sur le tarmac fissuré d’Alamogordo, un hangar métallique à gauche et des cumulus imposants au-dessus de la crête lointaine.",
+    "alm-chatgpt-04.webp": "Vue par drone des marques de seuil de la piste 4 de l’aéroport d’Alamogordo, avec une bande de données de vol imprimée le long du bord inférieur.",
+    "alm-chatgpt-05.webp": "Devant le terminal de l’Alamogordo-White Sands Regional Airport, les Stars and Stripes et le drapeau de l’État du Nouveau-Mexique flottent sur un mât au-dessus d’arbres dénudés."
   },
   "ALP": {
     "alp-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport international d'Alep (ALP) se trouve entre terres arides et sol nu."
   },
   "ALQ": {
-    "alq-sat-1.webp": "Vue satellite : l'aéroport d'Alegrete Novo (ALQ) est entouré de la ville, des terres agricoles et de la végétation."
+    "alq-sat-1.webp": "Vue satellite : l'aéroport d'Alegrete Novo (ALQ) est entouré de la ville, des terres agricoles et de la végétation.",
+    "alq-chatgpt-01.webp": "Sous l’auvent jaune de l’aéroport d’Alegrete, un panneau bleu porte le nom du terrain, et un chien est couché sur le chemin bétonné près de l’entrée.",
+    "alq-chatgpt-02.webp": "Devant le terminal d’Alegrete, un petit turbopropulseur monomoteur bleu et blanc aux couleurs d’Azul stationne sur le tarmac pavé sous un ciel pommelé.",
+    "alq-chatgpt-03.webp": "La façade du terminal d’Alegrete présente deux panneaux bleus d’auvent portant le nom de l’aéroport, au-dessus d’une herbe sèche et sous un ciel sans nuages.",
+    "alq-chatgpt-04.webp": "Sous un ciel bleu profond, un turbopropulseur d’Azul stationne sur le tarmac d’Alegrete tandis que quelques personnes attendent à côté.",
+    "alq-chatgpt-05.webp": "Vu de côté, les panneaux bleus du terminal d’Alegrete suivent ses avant-toits jaunes, avec quelques bancs installés sur l’herbe devant."
   },
   "ALR": {
     "alr-sat-1.webp": "Sur l'image satellite, l'aérodrome d'Alexandra (ALR) se fond dans les terres arides et le sol nu environnants."
   },
   "ALU": {
-    "alu-sat-1.webp": "Vue satellite : l'aéroport d'Alula (ALU) est entouré de la ville, des terres agricoles et de la végétation."
+    "alu-sat-1.webp": "Vue satellite : l'aéroport d'Alula (ALU) est entouré de la ville, des terres agricoles et de la végétation.",
+    "alu-chatgpt-01.webp": "Vue aérienne issue d’un simulateur de vol : un littoral désertique où un petit village suit la plage, avec un terrain d’aviation et ses bâtiments à côté."
   },
   "ALY": {
     "aly-baidu-1.webp": "L'ancien terminal d'El Nouzha à Alexandrie — un bâtiment blanc à plusieurs étages, avec une foule de voyageurs devant et une inscription en arabe au-dessus de l'entrée."
@@ -382,7 +445,14 @@
   "AMD": {
     "amd-page-3.webp": "Le terminal de nuit — une lumière violette baigne le toit en porte-à-faux, des colonnes au-dessus du bord du trottoir, et le nom de l'aéroport en gujarati le long du bandeau.",
     "amd-page-4.webp": "Le terminal depuis la zone de dépose — des auvents tendus blancs au-dessus de la chaussée, avec une façade continue en verre et acier.",
-    "amd-page-5.webp": "Un mur artistique à l'intérieur du terminal — deux figures en bronze devant un paysage urbain dessiné au trait, avec un écran affichant le nom complet de l'aéroport."
+    "amd-page-5.webp": "Un mur artistique à l'intérieur du terminal — deux figures en bronze devant un paysage urbain dessiné au trait, avec un écran affichant le nom complet de l'aéroport.",
+    "amd-chatgpt-01.webp": "En plein jour, la façade du terminal porte le nom complet de l’aéroport en lettres bleues, des voyageurs et des voitures blanches circulant le long du trottoir en contrebas.",
+    "amd-chatgpt-02.webp": "À la tombée du soir, une lumière violette baigne la façade du terminal tandis qu’une passerelle blanche couverte franchit la chaussée vers une rangée de petites boutiques éclairées.",
+    "amd-chatgpt-03.webp": "Un avion de ligne aux couleurs d’IndiGo stationne sur le tarmac en béton, avec le terminal et les marques de voie de circulation peintes en arrière-plan.",
+    "amd-chatgpt-04.webp": "Vue aérienne du terminal : un toit argenté en plusieurs parties, des parkings et un périphérique devant, avec un avion de ligne garé sur le tarmac à côté.",
+    "amd-chatgpt-05.webp": "La nuit, des auvents tendus blancs éclairés par le bas abritent les promeneurs sur la place, avec la façade illuminée du terminal derrière eux.",
+    "amd-chatgpt-06.webp": "Vue aérienne au crépuscule d’une haute tour qui s’évase au sommet, luisant d’une lumière chaude avec des bandes colorées, auprès de bâtiments plus bas et d’une ville éclairée sous les collines.",
+    "amd-chatgpt-07.webp": "Sur un tarmac luisant de pluie, la nuit, un jet d’IndiGo attend à sa place tandis que du matériel au sol est garé près du nez."
   },
   "AMH": {
     "amh-sat-1.webp": "Vue satellite : la piste d'Arba Minch s'étend parmi les terres agricoles et les collines de la vallée du Rift éthiopienne, bordée par le terminal et l'aire de trafic."
@@ -397,19 +467,39 @@
     "anb-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport régional d'Anniston (ANB) se trouve entre végétation verdoyante et terres agricoles."
   },
   "AND": {
-    "and-sat-1.webp": "Vue satellite : deux pistes se croisent dans une campagne verdoyante, avec le terminal et l'aire de trafic près de l'intersection."
+    "and-sat-1.webp": "Vue satellite : deux pistes se croisent dans une campagne verdoyante, avec le terminal et l'aire de trafic près de l'intersection.",
+    "and-chatgpt-01.webp": "Sous un ciel bleu dégagé, un petit terminal habillé de pierre, coiffé d’un toit métallique vert et doté d’un portique d’entrée en bois, voit flotter un drapeau américain près de ses portes.",
+    "and-chatgpt-02.webp": "Vue de l’air, deux pistes se croisent entre bois et terres agricoles, quelques bâtiments blancs dispersés près des extrémités des bandes.",
+    "and-chatgpt-03.webp": "Un panneau d’entrée sur base de pierre souhaite la bienvenue à l’Anderson Regional Airport en grandes lettres blanches, un pick-up garé derrière.",
+    "and-chatgpt-04.webp": "À travers un grillage, un panneau jaune près de la piste indique 17 et 35, plus loin se dressent une petite tour blanche et un avion rouge.",
+    "and-chatgpt-05.webp": "Une aire de jeux voisine du terrain d’aviation peint des marques de piste sur son sol bleu, avec toboggans et structures d’escalade sous des ombrières vertes."
   },
   "ANE": {
-    "ane-sat-1.webp": "Vue satellite : l'aéroport d'Angers Marcé (ANE) se trouve entre végétation verdoyante et terres agricoles."
+    "ane-sat-1.webp": "Vue satellite : l'aéroport d'Angers Marcé (ANE) se trouve entre végétation verdoyante et terres agricoles.",
+    "ane-chatgpt-01.webp": "Sous un ciel très couvert, le terminal bas et gris s’étire largement, son nom en lettres orange au-dessus des vitrages, avec un parvis vide devant.",
+    "ane-chatgpt-02.webp": "Dans le soleil bas du soir, un avion de ligne à turbopropulseur stationne devant le terminal, avec la tour de contrôle et un bâtiment bas portant l’inscription Angers-Marce à côté, et du personnel au sol à proximité.",
+    "ane-chatgpt-03.webp": "Une vue aérienne montre des rangées de hangars gris le long du tarmac, une tour de contrôle au milieu et plusieurs avions légers garés sur le béton.",
+    "ane-chatgpt-04.webp": "Une capture d’écran de simulateur de vol montre la piste 26 filant droit vers l’horizon, son axe et ses marques de toucher des roues nets entre herbe et bois.",
+    "ane-chatgpt-05.webp": "Sous un ciel gris uniforme, un petit avion léger blanc repose sur l’herbe près d’un panneau rouge indiquant 26-08.",
+    "ane-chatgpt-06.webp": "Sur un mur blanc à l’entrée de l’aéroport, un graphique d’avion orange voisine les mots Angers Loire Aéroport, avec la commune de Marcé indiquée en dessous.",
+    "ane-chatgpt-07.webp": "Un avion léger blanc et vert est garé près des lignes jaunes de circulation sur le tarmac, avec une rangée de hangars sombres derrière sous un ciel dégagé."
   },
   "ANI": {
-    "ani-sat-1.webp": "Vue satellite : la piste d'Aniak longe le fleuve Kuskokwim, bordée par le terminal et l'aire de trafic, avec des forêts et des zones humides alentour."
+    "ani-sat-1.webp": "Vue satellite : la piste d'Aniak longe le fleuve Kuskokwim, bordée par le terminal et l'aire de trafic, avec des forêts et des zones humides alentour.",
+    "ani-chatgpt-01.webp": "Sur l’image satellite, une piste rectiligne longe un large fleuve, avec des maisons dispersées, des routes et une forêt dense alentour.",
+    "ani-chatgpt-02.webp": "Un avion de ligne à turbopropulseur stationne sur le tarmac devant de bas bâtiments blancs, des montagnes boisées se fondant dans la brume derrière et une barge amarrée au quai devant.",
+    "ani-chatgpt-03.webp": "Vue aérienne d’hiver : la piste couverte de neige s’étend entre deux bras de rivière gelés, les toits du village luisant chaudement dans le soleil bas."
   },
   "ANM": {
     "anm-sat-1.webp": "Vue satellite : l'aéroport d'Antsirabe (ANM) se trouve entre l'eau et le littoral."
   },
   "ANN": {
-    "ann-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport d'Annette Island (ANN) se trouve entre végétation verdoyante et terres agricoles."
+    "ann-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport d'Annette Island (ANN) se trouve entre végétation verdoyante et terres agricoles.",
+    "ann-chatgpt-01.webp": "Sur cette vue aérienne en noir et blanc, tarmac et voie de circulation se rejoignent parmi une herbe clairsemée, avec un long hangar et quelques bâtiments bas en bordure.",
+    "ann-chatgpt-02.webp": "Ce diagramme d’aérodrome montre deux pistes qui se croisent, numérotées 07/25 et 02/20, avec leurs longueurs et l’altitude du terrain indiquées.",
+    "ann-chatgpt-03.webp": "Une vue depuis le cockpit dans un simulateur de vol passe par-dessus les pales d’hélice vers une piste dans une plaine enneigée, avec montagnes et mer au-delà.",
+    "ann-chatgpt-04.webp": "Sur une vieille photo en noir et blanc, un panneau près du grillage indique que l’aéroport dessert Ketchikan et ses environs, une queue Pan Am visible à gauche.",
+    "ann-chatgpt-05.webp": "Une carte de situation avec un symbole d’avion place le terrain sur une île au sud de Ketchikan, la carte mentionnant aussi Hydaburg et Prince Rupert."
   },
   "ANR": {
     "anr-baidu-1.webp": "Anvers vu du ciel — des hangars dispersés entre la piste entourée d'herbe et les voies de circulation, avec des routes et des entrepôts à droite.",
@@ -426,14 +516,24 @@
     "anx-sat-1.webp": "Vue satellite : la piste d'Andenes se trouve sur l'île d'Andøya, bordée par le terminal et l'aire de trafic, avec la mer et des montagnes alentour."
   },
   "AOC": {
-    "aoc-sat-1.webp": "Sur l'image satellite, l'aéroport de Leipzig–Altenburg (AOC) se fond dans la végétation verdoyante et les terres agricoles environnantes."
+    "aoc-sat-1.webp": "Sur l'image satellite, l'aéroport de Leipzig–Altenburg (AOC) se fond dans la végétation verdoyante et les terres agricoles environnantes.",
+    "aoc-chatgpt-01.webp": "Sous un ciel bleu dégagé, la façade vitrée du terminal blanc capte le soleil, une fine tour de contrôle cylindrique s’élevant à droite.",
+    "aoc-chatgpt-02.webp": "Le hall des départs est vide, des colonnes de bois inclinées soutenant le plafond au-dessus de rangées de sièges bleus et d’un comptoir d’enregistrement sans personnel.",
+    "aoc-chatgpt-03.webp": "Une capture de carte montre la piste coupant en diagonale champs et bois, entourée de gravières et de terres agricoles rectangulaires.",
+    "aoc-chatgpt-04.webp": "De lourds nuages pèsent sur la longue piste en béton et l’herbe tondue, une fine ligne de toits de village se dessinant à l’horizon.",
+    "aoc-chatgpt-05.webp": "Un avion de ligne Ryanair et un petit jet d’affaires partagent le tarmac, un camion de pompiers rouge garé près de la tour le long des lignes de stationnement peintes.",
+    "aoc-chatgpt-06.webp": "Lors d’une journée portes ouvertes aéronautique, un avion de patrouille maritime gris se tient sur l’herbe, un drapeau allemand sur sa dérive et des visiteurs rassemblés autour d’une capsule de sauvetage jaune.",
+    "aoc-chatgpt-07.webp": "Plusieurs avions légers s’abritent dans un large hangar, une machine de voltige rouge et blanche devant, le sol en béton peint en vert avec un liseré jaune."
   },
   "AOE": {
     "aoe-sat-1.webp": "Vue satellite : la piste d'Eskişehir s'étend en bordure de la ville, sur le plateau anatolien, bordée par le terminal et l'aire de trafic."
   },
   "AOG": {
     "aog-baidu-1.webp": "La façade du terminal de l'aéroport d'Anshan Teng'ao — des caractères rouges « 鞍山 » et l'inscription « An Shan » sur le toit, un parvis presque vide en dessous.",
-    "aog-baidu-2.webp": "Vue rapprochée du terminal — des marches et des lanternes devant la façade vitrée, la tour de contrôle ronde à gauche."
+    "aog-baidu-2.webp": "Vue rapprochée du terminal — des marches et des lanternes devant la façade vitrée, la tour de contrôle ronde à gauche.",
+    "aog-chatgpt-01.webp": "Sous un ciel bleu profond, le toit du terminal porte de grands caractères rouges Anshan et l’inscription « An Shan », la verrière de la tour de contrôle apparaissant derrière.",
+    "aog-chatgpt-02.webp": "Une banderole rouge pend au-dessus de l’entrée du terminal gris tandis qu’un groupe de personnes monte les marches sous des rangées de fenêtres.",
+    "aog-chatgpt-03.webp": "Une capture de carte place une épingle rouge juste à l’ouest de la ville d’Anshan, les autoroutes G15 et G16 et les montagnes à l’est étant bien lisibles."
   },
   "AOJ": {
     "aoj-baidu-1.webp": "À l'intérieur du terminal : « Welcome to AOMORI » en lettres de bois, à côté de deux poupées kokeshi traditionnelles.",
@@ -628,9 +728,6 @@
     "axt-baidu-1.webp": "Le terminal d'Akita au crépuscule — les caractères « 秋田空港 » au-dessus de la façade ton brique, la tour de contrôle en son centre et une lumière chaude derrière les vitres.",
     "axt-baidu-2.webp": "La façade du terminal de jour — des bandes de parement rouge rouille entre des vitrages sombres, avec peu de circulation sur la route du parvis.",
     "axt-baidu-3.webp": "À côté de l'entrée du terminal — des colonnes et des jardinières sous le soffite orange, une allée piétonne menant au parking au-delà."
-  },
-  "AXU": {
-    "axu-page-1.webp": "Le panneau nominatif sur le terminal de l'aéroport d'Aksoum — l'amharique à côté de « AXUM YOHANNES IV AIRPORT », l'emblème d'Ethiopian Airlines au-dessus (photographié après la réouverture de 2024)."
   },
   "AYJ": {
     "ayj-sat-1.webp": "Vue satellite : l'aéroport international Maharshi Valmiki (AYJ) s'étend entre ville, terres agricoles et végétation."

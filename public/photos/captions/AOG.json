@@ -1,6 +1,5 @@
 {
   "_note": "aog-baidu-3 is a near-duplicate of aog-baidu-2 from the same spot, kept out to avoid three copies of one facade.",
-  "_skip": ["aog-baidu-3.webp"],
   "aog-baidu-1.webp": {
     "zh": "鞍山腾鳌机场航站楼正面：楼顶立着红色「鞍山」字样与 An Shan 标识，广场上只有零星车辆。",
     "en": "The front of Anshan Teng'ao Airport's terminal — red '鞍山' characters and 'An Shan' lettering on the roof, an almost empty forecourt below."
@@ -8,5 +7,18 @@
   "aog-baidu-2.webp": {
     "zh": "航站楼近景：玻璃幕墙前的台阶与灯笼，左侧是圆形的塔台。",
     "en": "A closer view of the terminal — steps and lanterns before the glazed frontage, the round control tower to the left."
-  }
+  },
+  "aog-chatgpt-01.webp": {
+    "zh": "蓝天之下，楼顶红色「鞍山」二字与An Shan字样醒目，塔台的玻璃室从屋后探出。",
+    "en": "Under a deep blue sky the terminal roof carries big red Anshan characters and 'An Shan' script, with the control tower's glazing showing behind."
+  },
+  "aog-chatgpt-02.webp": {
+    "zh": "灰色航站楼入口前挂着红色横幅，一行人正沿台阶往里走，门厅上方是整排玻璃窗。",
+    "en": "A red banner hangs over the grey terminal entrance while a group of people heads up the steps beneath rows of windows."
+  },
+  "aog-chatgpt-03.webp": {
+    "zh": "地图截图：红色定位标落在鞍山市区以西，G15与G16高速及东部山地都清晰可辨。",
+    "en": "A map screenshot drops a red pin just west of Anshan city, with the G15 and G16 expressways and the mountains to the east clearly legible."
+  },
+  "_skip": ["aog-baidu-3.webp"]
 }

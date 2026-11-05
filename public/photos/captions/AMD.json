@@ -1,12 +1,5 @@
 {
   "_note": "2026-10-17: the airport's own Adani site now yields three verifiable AMD photographs (lit frontage, drop-off canopies, interior art wall). Earlier stock/hotel/crash images remain skipped.",
-  "_skip": [
-    "amd-baidu-1.webp",
-    "amd-baidu-2.webp",
-    "amd-baidu-3.webp",
-    "amd-page-1.webp",
-    "amd-page-2.webp"
-  ],
   "amd-page-3.webp": {
     "zh": "艾哈迈达巴德机场航站楼的夜景：紫色灯光照亮悬挑屋面，斜撑立柱下是车道与落客区，檐口可见古吉拉特语的机场名。",
     "en": "The terminal at night — purple light washing the cantilevered roof, columns over the kerbside, and the airport name in Gujarati along the fascia."
@@ -18,5 +11,40 @@
   "amd-page-5.webp": {
     "zh": "航站楼内的艺术墙：线描城市景观前立着两件铜色人物浮雕，右侧信息屏显示机场全名。",
     "en": "An art wall inside the terminal — two bronze figures in front of a line-drawn cityscape, with a screen showing the airport full name."
-  }
+  },
+  "amd-chatgpt-01.webp": {
+    "zh": "阳光下的航站楼正面，檐口一行蓝色英文字标出机场全名，立柱间的车道上有旅客与白色轿车穿行。",
+    "en": "In daylight the terminal front carries the airport's full name in blue letters, with travellers and white cars moving along the kerb below."
+  },
+  "amd-chatgpt-02.webp": {
+    "zh": "暮色渐深，航站楼沿街立面泛起紫色光，一座白色膜顶通道横跨车道，尽头是亮灯的小商铺。",
+    "en": "As dusk deepens, purple light washes the terminal front while a white canopy walkway spans the roadway toward a lit row of small shops."
+  },
+  "amd-chatgpt-03.webp": {
+    "zh": "一架靛蓝航空涂装的客机停在宽阔的混凝土机坪上，远处航站楼与滑行道标记清晰可见。",
+    "en": "An IndiGo-liveried airliner stands on the concrete apron, with the terminal and painted taxiway markings visible in the background."
+  },
+  "amd-chatgpt-04.webp": {
+    "zh": "从空中俯瞰航站楼：银灰色屋面分成数段，前方是停车场与环形车道，楼侧机坪停着一架客机。",
+    "en": "An aerial view of the terminal shows a multi-part silver roof, car parks and a ring road in front, with one airliner parked on the apron beside it."
+  },
+  "amd-chatgpt-05.webp": {
+    "zh": "夜色中，航站楼前广场上几顶白色膜结构天篷亮着灯，旅客在其下穿行，背景是亮灯的航站楼立面。",
+    "en": "At night, white tensile canopies lit from below shelter strollers on the forecourt plaza, with the illuminated terminal facade behind them."
+  },
+  "amd-chatgpt-06.webp": {
+    "zh": "暮色中的夜景航拍：一座上宽下窄的高塔亮着暖光，塔顶有红蓝色灯带，旁侧建筑与山下城镇灯光连成一片。",
+    "en": "A dusk aerial of a tall tower that flares at the top, glowing warm with bands of coloured light, beside lower buildings and a lit town below the hills."
+  },
+  "amd-chatgpt-07.webp": {
+    "zh": "夜间雨后的机坪上，一架靛蓝航空客机停靠在登机位，湿地面反射着灯光，机头旁有地勤车辆。",
+    "en": "On a rain-slicked apron at night, an IndiGo jet waits at its stand while ground equipment sits near the nose."
+  },
+  "_skip": [
+    "amd-baidu-1.webp",
+    "amd-baidu-2.webp",
+    "amd-baidu-3.webp",
+    "amd-page-1.webp",
+    "amd-page-2.webp"
+  ]
 }

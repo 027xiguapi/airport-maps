@@ -3,5 +3,33 @@
   "aoc-sat-1.webp": {
     "zh": "在卫星图上，莱比锡-阿尔滕堡机场（AOC）与周围的绿色植被与农田连成一片。",
     "en": "In the satellite image, Leipzig–Altenburg Airport (AOC) blends into the surrounding green vegetation and farmland."
+  },
+  "aoc-chatgpt-01.webp": {
+    "zh": "晴朗天空下，白色航站楼的玻璃幕墙映着阳光，右侧圆柱形塔台高高立起。",
+    "en": "Under a clear blue sky, the white terminal's glazed front catches the sun, with a slender cylindrical control tower rising to the right."
+  },
+  "aoc-chatgpt-02.webp": {
+    "zh": "候机楼内空空荡荡，木构斜柱撑起天花板，蓝色座椅旁是值机柜台与一道绿色出口灯。",
+    "en": "The departure hall stands empty, angled timber columns holding up the ceiling above rows of blue seats and an unmanned check-in counter."
+  },
+  "aoc-chatgpt-03.webp": {
+    "zh": "地图截图：机场跑道斜穿田野与林地，周围是几片采砂湖和成块的农田。",
+    "en": "A map screenshot shows the runway cutting diagonally through fields and woods, ringed by gravel pits and rectangular farmland."
+  },
+  "aoc-chatgpt-04.webp": {
+    "zh": "阴云低压，从屋顶望出去是长长的水泥跑道与齐整草地，远处地平线上有一线村落。",
+    "en": "Heavy cloud hangs over the long concrete runway and mown grass, with a thin line of village roofs on the horizon beyond."
+  },
+  "aoc-chatgpt-05.webp": {
+    "zh": "机坪上停着一架瑞安航空客机与一架小型喷气机，红色消防车守在塔台旁的停机线边。",
+    "en": "A Ryanair airliner and a small business jet share the apron, a red fire truck parked by the tower along the painted stand lines."
+  },
+  "aoc-chatgpt-06.webp": {
+    "zh": "航空开放日：一架灰蓝色军用巡逻机停在草地上，机尾画着德国国旗，黄色救生舱前围着参观人群。",
+    "en": "At an aviation open day, a grey maritime patrol aircraft stands on grass, a German flag on its tailfin and crowds gathered around a yellow rescue pod."
+  },
+  "aoc-chatgpt-07.webp": {
+    "zh": "宽大的机库里停着几架轻型飞机，红色特技机最显眼，地面刷着绿色地坪与黄色标线。",
+    "en": "Several light aircraft shelter inside a wide hangar, a red and white aerobatic machine in front, the concrete floor painted green with a yellow outline."
   }
 }
