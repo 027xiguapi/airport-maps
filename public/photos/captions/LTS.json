@@ -3,5 +3,33 @@
   "lts-sat-1.webp": {
     "zh": "在卫星图上，阿尔特斯空军基地（LTS）与周围的城镇、农田与植被连成一片。",
     "en": "In the satellite image, Altus Air Force Base (LTS) blends into the surrounding town, farmland and vegetation."
+  },
+  "lts-chatgpt-01.webp": {
+    "zh": "雾霾中，一排灰色军用大飞机首尾相接地停在滑行道上，机头齐刷刷朝向镜头。",
+    "en": "In thick haze a long row of grey military jets is parked nose to tail on the taxiway, all facing the camera."
+  },
+  "lts-chatgpt-02.webp": {
+    "zh": "一架灰色大型军用运输机停在机坪上，机头印着美军字样，舱门旁架着登机梯。",
+    "en": "A large grey military transport aircraft marked U.S. Air Force stands on the apron with boarding stairs at its forward door."
+  },
+  "lts-chatgpt-03.webp": {
+    "zh": "晴空下，一架灰色军用运输机刚刚离地爬升，起落架仍垂在机身下方，远处是平坦的草原。",
+    "en": "Under a blue sky the grey transport climbs away just after lift-off, gear still hanging down, over flat grassland stretching to the horizon."
+  },
+  "lts-chatgpt-04.webp": {
+    "zh": "一架军用运输机贴着跑道低飞，背景里成排的加油机与白色机库在枯草后方排开。",
+    "en": "A military transport skims low over the runway, with rows of parked tankers and pale hangars lined up beyond the dry grass."
+  },
+  "lts-chatgpt-05.webp": {
+    "zh": "机坪上一排加油机的机头依次排开，身穿反光背心和制服的地面人员站在黄黑标线之间。",
+    "en": "The noses of a row of tankers line up across the apron while ground crew in reflective vests and uniforms stand among the yellow markings."
+  },
+  "lts-chatgpt-06.webp": {
+    "zh": "阴沉的天空下，宽阔的水泥滑行道一直伸向地平线，远处有几辆保障车辆缓缓行驶。",
+    "en": "Beneath an overcast sky the wide concrete taxiway runs straight to the horizon, where a few ground vehicles move in the distance."
+  },
+  "lts-chatgpt-07.webp": {
+    "zh": "透过前景的输油管架，一架灰色大型加油机的机头与发动机清晰可见，远处还停着另一架。",
+    "en": "Framed past a refuelling boom in the foreground, a grey tanker's nose and engines stand out clearly while another aircraft waits beyond."
   }
 }

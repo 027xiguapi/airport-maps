@@ -1,8 +1,28 @@
 {
   "_note": "The Baidu downloads showed Tulum (Mexico) and an unidentified US apron; the usable picture came from the Flugzeugbilder.de catalogue (photographer Sebastian Arndt, December 2025) and shows the airstrip itself.",
-  "_skip": ["ttq-baidu-1.webp", "ttq-baidu-2.webp", "ttq-baidu-3.webp"],
   "ttq-page-1.webp": {
     "zh": "托尔图格罗简易机场：Nature Air 的塞斯纳大篷车（TI-BDY）停在柏油跑道上，绿顶候机棚与热带雨林就在机翼后方（摄影：Sebastian Arndt／flugzeugbilder.de）。",
     "en": "The Tortuguero airstrip — a Nature Air Cessna Caravan (TI-BDY) on the asphalt, the small green-roofed waiting shed and rainforest right behind the wing (photo: Sebastian Arndt / Flugzeugbilder.de)."
-  }
+  },
+  "ttq-chatgpt-01.webp": {
+    "zh": "空荡的柏油跑道笔直伸向热带树林，白色中线与入口标线清晰，两侧草地被绿网围住。",
+    "en": "An empty asphalt runway runs straight toward dense tropical trees, its white centreline and threshold markings crisp between grass verges and a green mesh fence."
+  },
+  "ttq-chatgpt-02.webp": {
+    "zh": "一架白色单发螺旋桨小飞机正面停在水泥机坪上，前方草地摆着两只橙色锥桶，背后是棕榈与蓝天。",
+    "en": "A small white single-engine turboprop faces the camera on a concrete apron, two orange cones on the grass in front and palms against a blue sky behind."
+  },
+  "ttq-chatgpt-03.webp": {
+    "zh": "从机舱侧窗望出去，白色发动机短舱印着红字，螺旋桨在转，远处机坪停着另一架小飞机，旁边是红顶候机棚。",
+    "en": "Through the cabin window, a white engine nacelle marked in red and a spinning propeller frame a distant apron where another small blue-and-white aircraft waits beside a red-roofed shelter."
+  },
+  "ttq-chatgpt-04.webp": {
+    "zh": "一架白色小飞机侧身停在机坪上，尾翼涂着红蓝条纹，机身侧面写着注册号，四周是棕榈与浓蓝的天空。",
+    "en": "A white turboprop sits side-on across the apron, red and blue stripes on its tail, its registration on the fuselage, palms and a deep blue sky around it."
+  },
+  "ttq-chatgpt-05.webp": {
+    "zh": "热带水岸边，一座绿顶木凉棚藏在树阴里，一只灰鹭立在草地上，前景是平静的深色水面。",
+    "en": "On a tropical waterside bank a green-roofed timber shelter sits in the shade of trees while a heron stands on the grass above dark, still water."
+  },
+  "_skip": ["ttq-baidu-1.webp", "ttq-baidu-2.webp", "ttq-baidu-3.webp"]
 }

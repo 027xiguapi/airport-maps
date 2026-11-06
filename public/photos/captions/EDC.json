@@ -1,10 +1,38 @@
 {
   "_note": "one download is an FSX add-on page's simulator screenshot and another a Hyatt Place hotel listing.",
-  "_skip": [
-    "edc-baidu-2.webp"
-  ],
   "edc-baidu-3.webp": {
     "zh": "机场的白色控制塔台：方形塔身顶部是玻璃指挥室，塔下停着车辆与一架直升机。",
     "en": "The airport's white control tower — a glazed cab on a square shaft, vehicles and a helicopter at its base."
-  }
+  },
+  "edc-chatgpt-01.webp": {
+    "zh": "深蓝色暮色中，一座带弧形雨棚的白色机库亮着灯，玻璃幕墙上的“Henriksen”字样清晰可见。",
+    "en": "In deep blue dusk, a white hangar with a sweeping curved canopy glows with lights, its glass facade lettered Henriksen above the apron."
+  },
+  "edc-chatgpt-02.webp": {
+    "zh": "暮色里，白色公务机停在弧形雨棚下，加油车贴着机身作业，地面摆着几只橙色锥筒。",
+    "en": "At dusk a white business jet waits beneath the curved canopy while a fuel truck works alongside it, with orange cones marking the concrete apron."
+  },
+  "edc-chatgpt-03.webp": {
+    "zh": "宽敞的旅客休息厅铺着浅色木地板，落地窗外是停机坪，中央陈列着一台巨大的喷气发动机。",
+    "en": "A spacious lounge with pale wood floors and stone pillars looks out through tall windows onto the apron, a large jet engine displayed on a stand in the middle."
+  },
+  "edc-chatgpt-04.webp": {
+    "zh": "前台处两名工作人员隔着柜台递钥匙，显示器上是“Austin Executive”的标志。",
+    "en": "Behind the front desk two staff members pass a set of keys across the counter, with the Austin Executive logo shown on the monitor beside them."
+  },
+  "edc-chatgpt-05.webp": {
+    "zh": "蓝天下，白色机库外墙写着“Austin Executive”字样，黄色防撞柱沿水泥路面排开。",
+    "en": "Under a clear blue sky, a huge white hangar carries the words Austin Executive Airport, with yellow bollards lining the empty concrete road in front."
+  },
+  "edc-chatgpt-06.webp": {
+    "zh": "夜色中的机库灯火通明，几架小型单发飞机与一架双发飞机并排停放在光洁的地板上。",
+    "en": "The hangar is brightly lit after dark, with several small single-engine aircraft and one twin-engine plane parked side by side on the polished floor."
+  },
+  "edc-chatgpt-07.webp": {
+    "zh": "夜里，机库前的弧形雨棚亮着一排灯，白色墙面与水泥停机坪在暗处泛着微光。",
+    "en": "At night the curved canopy outside the hangar glows with a row of lamps, lighting white walls and a wide sweep of concrete apron."
+  },
+  "_skip": [
+    "edc-baidu-2.webp"
+  ]
 }

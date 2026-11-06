@@ -3,5 +3,29 @@
   "pnr-sat-1.webp": {
     "zh": "卫星视角：黑角机场的跑道紧邻大西洋海岸，航站楼与机坪在跑道东侧，周围是城市与林地。",
     "en": "Satellite view: Pointe-Noire's runway lies beside the Atlantic coast, with the terminal and apron east of it and city and woodland around."
+  },
+  "pnr-chatgpt-01.webp": {
+    "zh": "阴天里，黑角机场宽阔的蓝色玻璃幕墙上方立着金色字母招牌，站前空地上停着几辆汽车。",
+    "en": "On an overcast day, gold letters reading Aeroport A.A. Neto de Pointe Noire stand above the wide blue glass front of the terminal, with cars parked on the forecourt."
+  },
+  "pnr-chatgpt-02.webp": {
+    "zh": "从空中看，机坪上停着几架大小不一的飞机，黄色引导线交错其间，远处是成片低矮房屋和海岸线。",
+    "en": "Seen from above, several aircraft of different sizes are parked on the apron between yellow guide lines, with low houses and the sea horizon beyond."
+  },
+  "pnr-chatgpt-03.webp": {
+    "zh": "潮湿的阴天里，沥青跑道入口的白色条纹向远方延伸，尽头只有一排低矮树木和灰蒙蒙的天空。",
+    "en": "White threshold bars on the dark asphalt runway stretch toward a flat horizon where a line of low trees meets a hazy grey sky."
+  },
+  "pnr-chatgpt-04.webp": {
+    "zh": "值机大厅里，蓝色柜台上方悬挂着编号一到六的显示屏，穿制服的工作人员站在柜台后，地面光可鉴人。",
+    "en": "In the check-in hall, monitors numbered one to six hang above blue counters where uniformed staff stand waiting on a highly polished floor."
+  },
+  "pnr-chatgpt-05.webp": {
+    "zh": "晴空下，航站楼深色的玻璃幕墙映出云影，屋顶上立着机场名称的招牌，楼前停车区停满浅色出租车。",
+    "en": "Under a bright sky the terminal's dark glass front mirrors the clouds, a sign stands on the roof, and pale taxis fill the parking area in front."
+  },
+  "pnr-chatgpt-06.webp": {
+    "zh": "航站楼内部的多层大厅里，自动扶梯向上延伸，通高的玻璃墙透进天光，中层回廊上有人倚栏张望。",
+    "en": "Inside the terminal's multi-level hall, escalators climb toward a glass wall that lets in daylight while people stand along the mezzanine railing above."
   }
 }

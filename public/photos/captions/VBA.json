@@ -1,12 +1,16 @@
 {
   "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "vba-sat-1.webp": {
+    "zh": "卫星视角：一条跑道穿过缅甸中部的绿色丘陵，小型机坪与航站楼在跑道一侧。",
+    "en": "Satellite view: a runway runs through green hills in central Myanmar, with a small apron and terminal alongside it."
+  },
+  "vba-chatgpt-01.webp": {
+    "zh": "机场入口的深色石墙标牌上嵌着金色字母，上方是缅甸文，红顶航站楼在阴沉的天空下露出轮廓。",
+    "en": "A dark stone gateway sign carries gold lettering over Burmese script, with the red roof of the terminal rising behind under a flat grey sky."
+  },
   "_skip": [
     "vba-baidu-1.webp",
     "vba-baidu-2.webp",
     "vba-baidu-3.webp"
-  ],
-  "vba-sat-1.webp": {
-    "zh": "卫星视角：一条跑道穿过缅甸中部的绿色丘陵，小型机坪与航站楼在跑道一侧。",
-    "en": "Satellite view: a runway runs through green hills in central Myanmar, with a small apron and terminal alongside it."
-  }
+  ]
 }

@@ -1,12 +1,40 @@
 {
   "_note": "2026-10-17: a verifiable dusk view of the Băneasa terminal and tower (bbu-page-3) is published; earlier wrong-airport images remain skipped.",
+  "bbu-page-3.webp": {
+    "zh": "暮色中的伯尼亚萨机场：蓝色航站楼与塔台亮着灯，机坪上停着巴士与一架客机。",
+    "en": "Băneasa at dusk — the blue terminal and tower lit up, buses and an airliner on the apron."
+  },
+  "bbu-chatgpt-01.webp": {
+    "zh": "蓝色的弧形航站楼顶上立着一串大写字母，写着布加勒斯特伯尼亚萨的机场名，楼前停着一辆白色货车。",
+    "en": "Above the curved blue terminal a long row of capitals spells the Bucharest Băneasa name, with a white van waiting outside."
+  },
+  "bbu-chatgpt-02.webp": {
+    "zh": "俯瞰机场：圆顶的环形航站楼居中，塔台与长条形办公楼围在四周，前方是大片草地和停满汽车的停车场。",
+    "en": "From above, the round domed terminal sits at the centre, ringed by the tower and long office blocks, with a wide lawn and packed car parks in front."
+  },
+  "bbu-chatgpt-03.webp": {
+    "zh": "晴空下，一架黄色单翼特技飞机停在水泥机坪上，塔台与环形的奥雷尔·弗拉伊库航站楼在它身后。",
+    "en": "A yellow single-seat aerobatic aircraft rests on the concrete apron, the control tower and the round Aurel Vlaicu terminal behind it under a cloud-streaked sky."
+  },
+  "bbu-chatgpt-04.webp": {
+    "zh": "米黄色的弧形航站楼伸展开来，深色玻璃穹顶压在中段，蓝色字母牌标出弗拉伊库的名字，塔台从屋顶后探出。",
+    "en": "The pale yellow terminal sweeps around, its dark glass dome set mid-curve, blue letters naming Aurel Vlaicu and the tower rising just behind the roofline."
+  },
+  "bbu-chatgpt-05.webp": {
+    "zh": "夜里，一架深蓝与银白涂装的喷气公务机停在泛光灯照亮的机坪上，橙红色锥筒摆在四周，塔台在后方亮着灯。",
+    "en": "A blue and silver business jet stands on the apron at night, lit by floodlights with orange cones around it and the illuminated tower behind."
+  },
+  "bbu-chatgpt-06.webp": {
+    "zh": "一架涡桨飞机的机翼与螺旋桨压在上方，下方是蓝色航站楼、塔台和人群，楼顶写着布加勒斯特伯尼亚萨。",
+    "en": "A turboprop's wing and propeller loom over the frame, below them the blue terminal, tower and a gathered crowd beneath the Bucharest Băneasa lettering."
+  },
+  "bbu-chatgpt-07.webp": {
+    "zh": "宽幅画面里，一架白色公务机停在机坪右侧，环形的航站楼与塔台在左侧排开，晴朗天空下投下清晰的影子。",
+    "en": "In a wide frame a white business jet sits on the right of the apron while the round terminal and tower line the left, sharp shadows under a clear sky."
+  },
   "_skip": [
     "bbu-baidu-2.webp",
     "bbu-page-1.webp",
     "bbu-page-2.webp"
-  ],
-  "bbu-page-3.webp": {
-    "zh": "暮色中的伯尼亚萨机场：蓝色航站楼与塔台亮着灯，机坪上停着巴士与一架客机。",
-    "en": "Băneasa at dusk — the blue terminal and tower lit up, buses and an airliner on the apron."
-  }
+  ]
 }

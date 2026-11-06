@@ -3,5 +3,29 @@
   "zca-sat-1.webp": {
     "zh": "卫星视角：阿恩斯贝格-门登机场（ZCA）周边以绿色植被与农田为主。",
     "en": "Satellite view: Arnsberg Menden Airport (ZCA) is surrounded by green vegetation and farmland."
+  },
+  "zca-chatgpt-01.webp": {
+    "zh": "从空中看，航站楼与塔台紧贴深色森林，白色屋顶上写着机场名称，机坪上停着几架轻型飞机。",
+    "en": "From the air the terminal and its tower sit against dense dark forest, the airport name painted along a white roof and light aircraft parked on the apron below."
+  },
+  "zca-chatgpt-02.webp": {
+    "zh": "灰色墙面的航站楼上用黑字写着机场名称，玻璃塔台从屋顶探出，楼前是长满草的空地与一排盆栽。",
+    "en": "The grey-clad terminal displays the airfield name in black letters, a glazed control cab rising from its roof, with open grass and a line of planters in front."
+  },
+  "zca-chatgpt-03.webp": {
+    "zh": "高空俯瞰，一条跑道斜穿过森林与农田，跑道近端标着编号 06，几座白色机库聚在中段。",
+    "en": "From high above, a single runway cuts diagonally through forest and farmland, its near threshold marked 06 and a cluster of white hangars halfway along."
+  },
+  "zca-chatgpt-04.webp": {
+    "zh": "日落时分，沥青跑道的白色箭头标线一路排列，太阳正落在跑道尽头的树线后面。",
+    "en": "At sunset the sun drops behind the tree line at the far end of an asphalt runway, rows of white chevron markings catching the last light in the foreground."
+  },
+  "zca-chatgpt-05.webp": {
+    "zh": "阳光下的航站楼前停着一架白色公务机，塔台窗户上挂着标有 05 的黄牌，露台上聚着人群。",
+    "en": "A white business jet waits on the apron below the terminal, a yellow panel marked 05 on the tower windows, and a crowd gathered along the terrace in bright sun."
+  },
+  "zca-chatgpt-06.webp": {
+    "zh": "近距离看，一架深灰双发轻型飞机正在滑行，螺旋桨转成虚影，驾驶舱里的飞行员清晰可见，旁边立着锥桶。",
+    "en": "Close up, a dark grey light twin taxis past, its propeller a blur, the pilot clearly visible in the cockpit and an orange cone standing on the grass verge."
   }
 }

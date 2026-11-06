@@ -3,5 +3,33 @@
   "mdq-sat-1.webp": {
     "zh": "卫星视角：马德普拉塔机场的跑道铺在大西洋海岸与潘帕斯草原之间，航站楼与机坪在跑道一侧。",
     "en": "Satellite view: Mar del Plata's runway lies between the Atlantic coast and the pampas, with the terminal and apron alongside it."
+  },
+  "mdq-chatgpt-01.webp": {
+    "zh": "暮色中的航站楼外墙亮着灯，红色大字写着马德普拉塔国际机场，塔台立在后方。",
+    "en": "At dusk the terminal facade is lit, its long red sign reading Mar del Plata international airport with the control tower behind."
+  },
+  "mdq-chatgpt-02.webp": {
+    "zh": "航拍中蓝色屋顶的航站楼与塔台连成一片，一架阿根廷航空客机停在廊桥旁，停车场排满车辆。",
+    "en": "Aerial view of the blue-roofed terminal and control tower joined together, an Aerolíneas Argentinas jet at the gate and a car park packed with vehicles."
+  },
+  "mdq-chatgpt-03.webp": {
+    "zh": "一架荷航支线客机停在机坪上，后方是白色航站楼与小塔台，前景铺着草地。",
+    "en": "A KLM Cityhopper regional jet sits on the apron before a low white terminal, a small tower and grass in the foreground."
+  },
+  "mdq-chatgpt-04.webp": {
+    "zh": "值机大厅里橙色柜台依次排开，上方屏幕显示着航班信息，旅客在隔离带前排队。",
+    "en": "Orange check-in desks line the bright hall, flight information screens above them and passengers queuing behind belt barriers."
+  },
+  "mdq-chatgpt-05.webp": {
+    "zh": "候机厅里旅客坐在黑色座椅上等候，头顶的长条灯带照亮整片白色大厅。",
+    "en": "Travellers wait on rows of black seats in a wide white lounge, long strips of ceiling light running overhead."
+  },
+  "mdq-chatgpt-06.webp": {
+    "zh": "一架蓝白涂装的客机在跑道上滑行，前面横着铁丝网，草地泛黄，天空灰蒙。",
+    "en": "A blue and white airliner taxis along the runway beyond a wire fence, dry grass in the foreground under a pale sky."
+  },
+  "mdq-chatgpt-07.webp": {
+    "zh": "国际出发口前旅客排着队，白色地面映出灯光，蓝色指示牌标着国际登机。",
+    "en": "Passengers queue before the international boarding gate, the polished white floor mirroring the long ceiling lights."
   }
 }

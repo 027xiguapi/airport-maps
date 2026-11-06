@@ -1,6 +1,5 @@
 {
   "_note": "The three Baidu downloads were celebrity-gossip photos. The two usable pictures come from CORPAC's official airport data sheet (ficha técnica) PDF for Huánuco — photos embedded in the document, extracted and converted. planespotters.net (a lead for Bucharest's BBU) disallows crawling in its robots.txt.",
-  "_skip": ["huu-baidu-1.webp", "huu-baidu-2.webp", "huu-baidu-3.webp"],
   "huu-page-1.webp": {
     "zh": "瓦努科机场跑道旁的橙色风向袋：蓝色围栏后是依山而建的城区（照片出自 CORPAC 官方机场资料表，2023 年 9 月）。",
     "en": "The orange windsock beside Huánuco's runway — the hillside city rising beyond the blue fence (photo from CORPAC's official airport data sheet, September 2023)."
@@ -8,5 +7,34 @@
   "huu-page-2.webp": {
     "zh": "候机大厅内景：整面落地玻璃朝向跑道，旅客坐在联排座椅上候机（照片出自 CORPAC 官方机场资料表）。",
     "en": "The departure lounge — floor-to-ceiling glazing onto the airfield, passengers waiting in rows (photo from CORPAC's official airport data sheet)."
-  }
+  },
+  "huu-chatgpt-01.webp": {
+    "zh": "瓦努科机场的航站楼入口处，蓝色招牌横在玻璃幕墙上方，坡道通向大门，背后是干旱的褐色山峦。",
+    "en": "At the entrance to Huánuco's terminal a long blue sign spans the glass frontage, a ramp leading up toward the doors beneath dry brown hills."
+  },
+  "huu-chatgpt-02.webp": {
+    "zh": "机场的黑色高架塔台立在航站楼旁，蓝色招牌写着机场全名，云层压着两侧的青山。",
+    "en": "A black tower on stilts rises beside the terminal, whose blue fascia carries the airport's full name beneath heavy cloud and green mountains."
+  },
+  "huu-chatgpt-03.webp": {
+    "zh": "一架红尾双发涡桨客机停在机坪上，旅客沿着客梯登机，烈日下的机身白得发亮。",
+    "en": "An LC Perú twin turboprop stands on the apron as passengers climb the rear stairs, its red tail bright under a hot blue sky."
+  },
+  "huu-chatgpt-04.webp": {
+    "zh": "旅客拖着行李走上机坪，一架红色尾翼的客机停在土山脚下，山坡上密布着砖房。",
+    "en": "Passengers walk out across the apron toward a red-tailed aircraft parked below a barren hillside dotted with brick houses."
+  },
+  "huu-chatgpt-05.webp": {
+    "zh": "跑道边的白色标线在阳光下反光，另一侧是干枯的草坡，远处山脊层层叠叠。",
+    "en": "The pale runway edge marking catches the sun, with dry grass along the shoulder and layered brown ridges beyond."
+  },
+  "huu-chatgpt-06.webp": {
+    "zh": "航站楼外的坡道上，旅客背着包走向入口，屋顶蓝底白字的机场全名横贯整面墙。",
+    "en": "A traveller with a backpack walks the ramp outside the terminal, whose roofline carries the airport's full name in white letters."
+  },
+  "huu-chatgpt-07.webp": {
+    "zh": "一辆消防车向滑行的客机喷出水柱，水雾在机身前散开，远处是深绿色的山坡。",
+    "en": "A fire truck sprays an arc of water over a taxiing airliner, the spray bursting into mist in front of the red-tailed fuselage."
+  },
+  "_skip": ["huu-baidu-1.webp", "huu-baidu-2.webp", "huu-baidu-3.webp"]
 }

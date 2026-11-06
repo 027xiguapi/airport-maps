@@ -1,8 +1,36 @@
 {
   "_note": "svd-baidu-1 and svd-baidu-3 are listings for a Nairobi hotel that merely shares the 'Argyle' name.",
-  "_skip": ["svd-baidu-1.webp", "svd-baidu-3.webp"],
   "svd-baidu-2.webp": {
     "zh": "雨后的阿盖尔国际机场：蓝色弧形屋顶的航站楼前停着 LIAT 的客机，湿漉漉的机坪映着天空，山丘在云下层叠。",
     "en": "Argyle International after rain — a LIAT aircraft before the blue-vaulted terminal, the wet apron mirroring the sky, hills layered under cloud."
-  }
+  },
+  "svd-chatgpt-01.webp": {
+    "zh": "亮蓝与草绿色相间的航站楼挂着机场招牌，前方停车场停满车辆，背后是一线深蓝的海。",
+    "en": "The brilliant blue and green terminal carries the airport's name above a full car park, with a strip of deep sea behind it."
+  },
+  "svd-chatgpt-02.webp": {
+    "zh": "从高处俯瞰机场：蓝顶航站楼旁展开宽阔的机坪，几架小型飞机停在其间，跑道顺着海岸伸向远方。",
+    "en": "From above, a wide apron spreads beside the blue-roofed terminal, where several light aircraft are parked and the runway runs away along the coast."
+  },
+  "svd-chatgpt-03.webp": {
+    "zh": "维珍航空、英国航空、捷蓝与加拿大航空的客机依次停靠在蓝色航站楼的廊桥前，背后是浓绿的山丘。",
+    "en": "Virgin Atlantic, British Airways, jetBlue and Air Canada jets line up at the jet bridges of a blue-roofed terminal backed by thickly wooded hills."
+  },
+  "svd-chatgpt-04.webp": {
+    "zh": "空客 A330-300 停在机坪上，廊桥已接好舱门，地勤在机腹下作业，远处是绿丘与蓝天。",
+    "en": "An Airbus A330-300 sits at the gate with the jet bridge connected, ground crew working beneath the fuselage and green hills beyond."
+  },
+  "svd-chatgpt-05.webp": {
+    "zh": "弧形玻璃幕墙的航站楼挂着蓝色机场字牌，前方是空空荡荡的浅色机坪，天上堆着白云。",
+    "en": "The curved glass frontage of the terminal carries the airport name in blue letters above an empty pale apron under a cloud-filled sky."
+  },
+  "svd-chatgpt-06.webp": {
+    "zh": "航拍：一条崭新的黑色跑道横卧在尚未完工的土黄色工地上，翠绿田野与白色浪花环绕四周。",
+    "en": "An aerial view shows a fresh black runway laid across raw earthworks, with green fields and white surf wrapping the surrounding coast."
+  },
+  "svd-chatgpt-07.webp": {
+    "zh": "暮色里，一架小型螺旋桨飞机停在机坪上，旅客拎着行李从锥筒间走向航站楼，天边泛起淡粉。",
+    "en": "At dusk a small prop aircraft waits on the apron while passengers with luggage walk between cones toward the terminal under a pink-tinged sky."
+  },
+  "_skip": ["svd-baidu-1.webp", "svd-baidu-3.webp"]
 }

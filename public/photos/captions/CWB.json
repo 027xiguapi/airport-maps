@@ -1,6 +1,5 @@
 {
   "_note": "cwb-baidu-3 is an aerial of the Curitiba city skyline, not the airport.",
-  "_skip": ["cwb-baidu-3.webp"],
   "cwb-baidu-1.webp": {
     "zh": "巴西空军（Força Aérea Brasileira）的波音 737 从库里蒂巴的跑道上腾空而起。",
     "en": "A Brazilian Air Force Boeing 737 climbing away from Curitiba's runway."
@@ -8,5 +7,34 @@
   "cwb-baidu-2.webp": {
     "zh": "滑行道上的图-154 客机：三发客机正对镜头滑行——这类罕见机型正是航空摄影者蹲守库里蒂巴的理由。",
     "en": "A Tu-154 taxiing head-on, its three engines in view — the kind of rare visitor that draws spotters to Curitiba."
-  }
+  },
+  "cwb-chatgpt-01.webp": {
+    "zh": "晴朗的蓝天下，航站楼檐下蓝底白字的牌子写着机场全名，楼前是一片修剪整齐的草地。",
+    "en": "Under a clear blue sky, a long blue sign lettered with the airport's full name runs beneath the terminal canopy above a neatly mown lawn."
+  },
+  "cwb-chatgpt-02.webp": {
+    "zh": "俯瞰航站楼与成片停车场，车辆密密麻麻排成行列，远处跑道外是摊开的城市与云层。",
+    "en": "Seen from high above, the terminal and its sprawling car parks are packed with vehicles, the runway and the wide city lying beyond under cloud."
+  },
+  "cwb-chatgpt-03.webp": {
+    "zh": "航拍里，一排客机停在航站楼前的机位上，跑道旁的草地上有两个椭圆形绿岛。",
+    "en": "From the air, a row of airliners stands at the terminal's gates, with two oval grass islands set into the pavement beside the runway."
+  },
+  "cwb-chatgpt-04.webp": {
+    "zh": "机头正对镜头的客机已接上廊桥，下方停着黄黑条纹的牵引车，潮湿的机坪上摆着一排橙色锥桶。",
+    "en": "A jet sits nose-on at the jet bridge with a yellow-and-black pushback tug beneath and orange cones dotted across the wet apron."
+  },
+  "cwb-chatgpt-05.webp": {
+    "zh": "航拍中航站楼的廊桥一字排开，红色尾翼的客机停在机位，跑道与滑行道在草地间交汇。",
+    "en": "An aerial shows the terminal's jet bridges in a row, red-tailed airliners at the stands, and a runway meeting its taxiways across green grass."
+  },
+  "cwb-chatgpt-06.webp": {
+    "zh": "航站楼顶部排着蓝色的大字招牌，楼前蓝色遮阳棚下停满汽车，路边立着租车公司的指示牌。",
+    "en": "Blue lettering spans the terminal's roofline above a car park shaded by blue canopies, with car-rental direction signs standing at the kerb."
+  },
+  "cwb-chatgpt-07.webp": {
+    "zh": "垂直俯拍的航站楼与指廊之间停着两架客机，环形停车场停满车，一架飞机正落在跑道上。",
+    "en": "A top-down aerial shows two aircraft at the terminal fingers, ring-shaped car parks filled with cars, and a jet touching down on the runway."
+  },
+  "_skip": ["cwb-baidu-3.webp"]
 }

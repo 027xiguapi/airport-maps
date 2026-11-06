@@ -1,8 +1,36 @@
 {
   "_note": "ayq-baidu-1 is a wing view of Uluru from the air (not the airport), and ayq-baidu-3 is an FSLabs P3Dv5 flight-simulator screenshot.",
-  "_skip": ["ayq-baidu-1.webp", "ayq-baidu-3.webp"],
   "ayq-baidu-2.webp": {
     "zh": "航站楼前的接驳区：通往乌鲁鲁的观光大巴停在带顶棚的走廊旁，站牌写着机场与团队集合点。",
     "en": "The transfer area outside the terminal — Uluru tour coaches lined up under the covered walkway beside the airport meeting-point signs."
-  }
+  },
+  "ayq-chatgpt-01.webp": {
+    "zh": "暮色中，一排白色帐篷式尖顶被落日镀金，一架白色支线客机停在旁边，旅客提着行李走向机坪边缘。",
+    "en": "At dusk the terminal's row of white tent peaks glows in the low sun while a white regional jet waits nearby and passengers walk out to the apron."
+  },
+  "ayq-chatgpt-02.webp": {
+    "zh": "红土机坪上停着数架客机，其中一架标有Jetstar，巨大的赭色岩体在远处地平线露出一线轮廓。",
+    "en": "On the red-earth apron several airliners are parked, one of them marked Jetstar, with the vast ochre rock just showing on the distant horizon."
+  },
+  "ayq-chatgpt-03.webp": {
+    "zh": "跑道一端，一架尾翼绘着袋鼠标志的客机停在13号跑道数字旁，赭红色巨岩横卧在低矮灌木平原的尽头。",
+    "en": "At one end of the runway a jet with a kangaroo on its tail waits by the painted 13 marker, the great ochre rock lying beyond low scrub."
+  },
+  "ayq-chatgpt-04.webp": {
+    "zh": "砖红色航站楼的廊檐上用金属字母拼出康奈兰机场的英文名，玻璃门前有旅客进出，前方是空旷的停车场。",
+    "en": "Metal letters above the brick-red terminal spell out Connellan Airport, travellers passing through the glass doors in front of an empty car park."
+  },
+  "ayq-chatgpt-05.webp": {
+    "zh": "烈日下，一架白色客机停在机坪上，旅客正沿舷梯登机，地面刷着设备通道的红色大字，远处是红色荒原。",
+    "en": "Under a hard blue sky a Virgin Australia jet waits with stairs at its door as passengers walk across the apron, red desert along the horizon."
+  },
+  "ayq-chatgpt-06.webp": {
+    "zh": "航站楼内，成排金属座椅沿墙摆开，红色自助值机柜台前排着隔离带，地面反着光，远处墙面刷成青绿色。",
+    "en": "Inside the terminal, rows of metal seats line the wall while red self-service kiosks and queuing posts fill the hall, a teal wall at the far end."
+  },
+  "ayq-chatgpt-07.webp": {
+    "zh": "隔着舷窗俯瞰，一条长跑道斜切过红色荒原，机坪上停着一架客机，航站楼与停车场挤在跑道一侧。",
+    "en": "Seen through a cabin window, a long runway slants across red desert while an airliner sits on the apron and the terminal and car park crowd one side."
+  },
+  "_skip": ["ayq-baidu-1.webp", "ayq-baidu-3.webp"]
 }

@@ -1,6 +1,5 @@
 {
   "_note": "mol-baidu-1 shows a Boeing 777 in Orenair colours — a type that cannot operate from Molde's short runway, so the picture is plainly from another airport.",
-  "_skip": ["mol-baidu-1.webp"],
   "mol-baidu-2.webp": {
     "zh": "透过航站楼玻璃看机坪：挪威航空的 737 停在廊桥旁，地勤正在进行保障。",
     "en": "A Norwegian 737 at the gate seen through the terminal glazing, ground crew working around it."
@@ -8,5 +7,34 @@
   "mol-baidu-3.webp": {
     "zh": "机场在峡湾与雪山之间的位置：跑道铺在山脚与水面的窄带上，云层压着雪峰。",
     "en": "The airport between fjord and mountains — its runway on the narrow shelf between water and slope, cloud dragging across the peaks."
-  }
+  },
+  "mol-chatgpt-01.webp": {
+    "zh": "深色木立面的航站楼前停着房车，广告横幅挂在墙上，远处是峡湾与雪山。",
+    "en": "A camper van and car park outside the dark timber terminal, a travel banner on its wall and snow-capped mountains across the fjord."
+  },
+  "mol-chatgpt-02.webp": {
+    "zh": "航拍中跑道铺在水边狭长的绿地上，右侧是小镇，背后横着积雪的山脉。",
+    "en": "From the air the runway lies on a narrow green shelf beside the fjord, a small town to the right and snow-covered peaks behind."
+  },
+  "mol-chatgpt-03.webp": {
+    "zh": "航拍俯瞰机坪与滑行道，红白涂装的螺旋桨客机正在滑行，停机坪上停着几架小飞机。",
+    "en": "An aerial view over the apron and taxiway, a red and white turboprop rolling along, several light aircraft parked nearby."
+  },
+  "mol-chatgpt-04.webp": {
+    "zh": "阴云下深色木墙的航站楼延伸开，屋顶立着机场标牌，路边划有巴士车道，旅客走向入口。",
+    "en": "Under a grey sky the long dark-timbered terminal stretches away, its rooftop sign above and a bus lane marked on the road outside."
+  },
+  "mol-chatgpt-05.webp": {
+    "zh": "夜里空荡的值机大厅，自助柜台与屏幕亮着，黑色地板映出灯影，隔离带前无人排队。",
+    "en": "The check-in hall stands empty at night, self-service kiosks and screens glowing over a black tiled floor with nobody in line."
+  },
+  "mol-chatgpt-06.webp": {
+    "zh": "一架客机低低掠过防波堤上空准备降落，海水湛蓝，背后是淡蓝的山影。",
+    "en": "An airliner descends low over a rocky breakwater toward the runway, blue water below and hazy mountains behind."
+  },
+  "mol-chatgpt-07.webp": {
+    "zh": "航站楼入口上方挂着莫尔德阿罗机场的银色字牌，屋顶积着残雪，玻璃通道连着登机区。",
+    "en": "The airport's name plate sits above the entrance of a timber-clad terminal, snow on the roof and a glazed walkway alongside."
+  },
+  "_skip": ["mol-baidu-1.webp"]
 }

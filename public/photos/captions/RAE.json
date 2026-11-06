@@ -1,11 +1,35 @@
 {
   "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
-  "_skip": [
-    "rae-baidu-1.webp",
-    "rae-baidu-2.webp"
-  ],
   "rae-sat-1.webp": {
     "zh": "卫星视角：一条跑道斜穿阿拉尔郊外的干旱平原，机坪与航站楼在跑道一侧。",
     "en": "Satellite view: a runway cuts across arid plain outside Arar, with the apron and terminal alongside it."
-  }
+  },
+  "rae-chatgpt-01.webp": {
+    "zh": "弧形玻璃幕墙的航站楼外，登机口标牌用阿拉伯文和英文写着三号门。",
+    "en": "Outside a terminal with a curved glass wall, a sign marks Gate 3 in Arabic and English."
+  },
+  "rae-chatgpt-02.webp": {
+    "zh": "宽敞明亮的候机大厅里，旅客拖着行李走过，头顶的深蓝指示牌写着出发。",
+    "en": "Travellers pull their luggage across a bright, wide concourse beneath dark blue signs pointing to departures."
+  },
+  "rae-chatgpt-03.webp": {
+    "zh": "一架沙特航空的宽体客机停在宽阔的混凝土机坪上，晴朗的蓝天没有一丝云。",
+    "en": "A Saudia wide-body jet stands on a broad concrete apron under a cloudless blue sky."
+  },
+  "rae-chatgpt-04.webp": {
+    "zh": "夜里，旅客拉着行李箱走向亮着灯的出发入口，光滑的石板地面映出灯光。",
+    "en": "At night, travellers wheel their cases toward the lit departures entrance, the polished floor reflecting the glow."
+  },
+  "rae-chatgpt-05.webp": {
+    "zh": "到达大厅空旷安静，蓝白色调的租车柜台前拉起隔离带，地面反着灯光。",
+    "en": "The arrivals hall stands quiet and empty, blue barriers set before car-rental desks while the polished floor mirrors the ceiling lights."
+  },
+  "rae-chatgpt-06.webp": {
+    "zh": "黄昏的航拍里，跑道灯连成一条亮线，笔直伸向暮色中的荒漠。",
+    "en": "In this dusk aerial view the runway edge lights form a bright line running straight out into the desert dark."
+  },
+  "_skip": [
+    "rae-baidu-1.webp",
+    "rae-baidu-2.webp"
+  ]
 }

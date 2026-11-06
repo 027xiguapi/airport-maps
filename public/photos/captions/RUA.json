@@ -1,8 +1,32 @@
 {
   "_note": "The three Baidu downloads showed the Queen Elizabeth National Park entrance sign, not the airport. The kept picture is embedded in the UCAA's official ESIA report for the Arua aerodrome expansion (July 2025) — the aerodrome's fire/rescue vehicle by its garage; the rest of that report's photographs are maps, vegetation surveys and signature sheets.",
-  "_skip": ["rua-baidu-1.webp", "rua-baidu-2.webp", "rua-baidu-3.webp"],
   "rua-page-1.webp": {
     "zh": "阿鲁阿机场的消防车与车库：黄色消防车停在围栏内的站房旁（照片出自乌干达民航局 2025 年 7 月《阿鲁阿机场扩建环评报告》）。",
     "en": "Arua aerodrome's fire vehicle at its garage inside the perimeter fence (photo from the Uganda CAA's July 2025 ESIA report on the Arua aerodrome expansion)."
-  }
+  },
+  "rua-chatgpt-01.webp": {
+    "zh": "一栋石砌墙面的单层小楼前，旅客提着行李聚集在门口，头顶是成团的云。",
+    "en": "Passengers gather with bags outside a single-storey building with a stone-clad wall, under a sky of billowing cloud."
+  },
+  "rua-chatgpt-02.webp": {
+    "zh": "一名穿蓝衬衫的男子站在红土与沥青交界的机坪上，望着远处的单发螺旋桨飞机。",
+    "en": "A man in a blue shirt stands where red earth meets asphalt, watching a single-engine propeller aircraft parked further along the apron."
+  },
+  "rua-chatgpt-03.webp": {
+    "zh": "红土机坪上，一架双发螺旋桨小客机的舱门敞开，一名工作人员提着箱子走向舷梯。",
+    "en": "On a red-earth apron a small twin-turboprop airliner stands with its door open as a handler carries a case toward the steps."
+  },
+  "rua-chatgpt-04.webp": {
+    "zh": "空荡的灰色机坪边，一座白色弧形屋顶的航站楼静静立着，黄色标线划出弯道。",
+    "en": "A long white terminal with a shallow curved roof stands beside an empty grey apron, a yellow guide line sweeping past."
+  },
+  "rua-chatgpt-05.webp": {
+    "zh": "一片长满野草的红色土地延伸向远处的树线，低垂的云层压着灰白的天空。",
+    "en": "Red earth patched with wild grass stretches toward a distant treeline beneath a low, pale grey sky."
+  },
+  "rua-chatgpt-06.webp": {
+    "zh": "机坪上停着几架单发螺旋桨飞机，最近一架的机尾印着蓝色标志，机翼下有人作业。",
+    "en": "Several single-engine aircraft occupy the apron, the nearest one showing a blue tail emblem while a worker stands under its wing."
+  },
+  "_skip": ["rua-baidu-1.webp", "rua-baidu-2.webp", "rua-baidu-3.webp"]
 }

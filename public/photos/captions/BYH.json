@@ -1,10 +1,22 @@
 {
   "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
-  "_skip": [
-    "byh-baidu-1.webp"
-  ],
   "byh-sat-1.webp": {
     "zh": "卫星视角：一条长跑道斜穿农田，机坪与机库在跑道中段一侧。",
     "en": "Satellite view: a long runway cuts diagonally across farmland, with the apron and hangars beside its midpoint."
-  }
+  },
+  "byh-chatgpt-01.webp": {
+    "zh": "日出时，一架小型单发涡桨飞机停在机坪上，低矮的白色航站楼立在其后，几个人影正走向飞机。",
+    "en": "At sunrise a small single-engine turboprop waits on the apron before a low white terminal, a few figures walking toward it as the sun flares."
+  },
+  "byh-chatgpt-02.webp": {
+    "zh": "航拍这座机场：一架白色双发客机孤零零停在巨大空荡的水泥机坪上，远处是白色塔台、水塔与成片树林。",
+    "en": "An aerial view of the field: one white twin-jet airliner alone on a vast empty concrete apron, with the white tower, water tower and woods beyond."
+  },
+  "byh-chatgpt-03.webp": {
+    "zh": "白色塔台挂着彩色徽标，旁边是低矮的单层办公楼与大片草坪，前景是刷着白线的宽阔机坪，停车位空无一人。",
+    "en": "The white tower carries a small emblem, with a low single-storey office block and lawns beside it and a broad line-marked apron empty in the foreground."
+  },
+  "_skip": [
+    "byh-baidu-1.webp"
+  ]
 }

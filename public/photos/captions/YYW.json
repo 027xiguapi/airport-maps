@@ -1,11 +1,15 @@
 {
   "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
-  "_skip": [
-    "yyw-baidu-2.webp",
-    "yyw-baidu-3.webp"
-  ],
   "yyw-sat-1.webp": {
     "zh": "卫星视角：一条跑道穿过安大略北部的森林，机坪与小型航站楼在跑道中段。",
     "en": "Satellite view: a runway cuts through forest in northern Ontario, with the apron and small terminal at its midpoint."
-  }
+  },
+  "yyw-chatgpt-01.webp": {
+    "zh": "一条碎石路笔直穿过绿色田野，通向远处白色厂房与红顶小屋组成的建筑群，路边立着电线杆。",
+    "en": "A gravel road runs straight across green fields toward a cluster of white industrial buildings with red trim, utility poles standing along the verge under a pale overcast sky."
+  },
+  "_skip": [
+    "yyw-baidu-2.webp",
+    "yyw-baidu-3.webp"
+  ]
 }

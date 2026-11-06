@@ -1,8 +1,36 @@
 {
   "_note": "ixa-baidu-2 shows a memorial statue with a domed building, and ixa-baidu-3 a temple gate — Tripura landmarks, not the airport.",
-  "_skip": ["ixa-baidu-2.webp", "ixa-baidu-3.webp"],
   "ixa-baidu-1.webp": {
     "zh": "阿加尔塔拉机场机坪上的一架双发涡桨飞机：正对镜头停放，远处是特里普拉低矮的丘陵。",
     "en": "A twin turboprop facing the camera on Agartala's apron, the low hills of Tripura beyond the airfield."
-  }
+  },
+  "ixa-chatgpt-01.webp": {
+    "zh": "航站楼白色挑檐上嵌着蓝色的机场英文名，门前棕榈与花圃沿步道铺开。",
+    "en": "The terminal's white canopy carries the airport's name in blue, with palms and flower beds along the paved path under an overcast sky."
+  },
+  "ixa-chatgpt-02.webp": {
+    "zh": "出发大厅里，黑色指示牌指向值机柜台与电子客票，上方展墙嵌着一排赤陶器物。",
+    "en": "In the departures hall a dark sign points to check-in counters and e-ticketing, with a row of terracotta pieces set into the wall above."
+  },
+  "ixa-chatgpt-03.webp": {
+    "zh": "印有靛蓝航空涂装的窄体客机停在廊桥旁，地勤人员围在机腹下作业。",
+    "en": "An IndiGo-liveried narrowbody sits at the jet bridge while ground crew work around its fuselage and engine."
+  },
+  "ixa-chatgpt-04.webp": {
+    "zh": "夜里航站楼顶端亮起蓝色的印地文机场名，白色张拉膜雨棚一路排开。",
+    "en": "At night the terminal's blue Devanagari airport sign glows above a run of white tensile canopies."
+  },
+  "ixa-chatgpt-05.webp": {
+    "zh": "隔着带刺的铁丝网，一架红尾客机正滑过跑道，背景是雾蒙蒙的树线。",
+    "en": "Seen past a barbed-wire fence, a red-tailed jet rolls along the runway against a hazy line of trees."
+  },
+  "ixa-chatgpt-06.webp": {
+    "zh": "低矮的候机楼铺着淡绿色屋面，格构照明塔架立在机坪边，塔台在最右侧。",
+    "en": "A low white terminal with a pale green roof stands behind the apron, a lattice floodlight mast in front and the control tower at the far right."
+  },
+  "ixa-chatgpt-07.webp": {
+    "zh": "登机梯靠上一架靛蓝航空客机的前舱门，蓝天里堆着大朵积云。",
+    "en": "A boarding stair is pushed against the forward door of an IndiGo jet beneath towering cumulus clouds."
+  },
+  "_skip": ["ixa-baidu-2.webp", "ixa-baidu-3.webp"]
 }

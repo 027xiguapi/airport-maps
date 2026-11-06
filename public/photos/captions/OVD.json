@@ -1,12 +1,40 @@
 {
   "_note": "2026-10-17: the simulator renders remain skipped; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "ovd-sat-1.webp": {
+    "zh": "卫星视角：跑道位于海岸与山丘之间的台地上，航站楼与机坪在跑道中段。",
+    "en": "Satellite view: the runway sits on a plateau between the coast and the hills, with the terminal and apron at its midpoint."
+  },
+  "ovd-chatgpt-01.webp": {
+    "zh": "阴沉的天空下，阿斯图里亚斯机场航站楼玻璃幕墙上排列着白色大字，三面旗帜旁的黄色升降平台正在作业。",
+    "en": "Under an overcast sky, large white letters spell out Asturias Airport across the terminal's glass facade while a yellow lifting platform works near three flags."
+  },
+  "ovd-chatgpt-02.webp": {
+    "zh": "航拍视角下，一条宽阔跑道与弯曲滑行道在一大片针叶林和绿色田块之间交会，地面裸露出红褐色土带。",
+    "en": "From the air, a wide runway and a curving taxiway meet among dense conifer forest and green fields, with strips of reddish earth showing between the pavement."
+  },
+  "ovd-chatgpt-03.webp": {
+    "zh": "一架红色尾翼的客机停在廊桥前，后方航站楼上写着阿斯图里亚斯机场，白色塔台耸立在灰云下。",
+    "en": "An airliner with a red tail stands at a jet bridge, the words Asturias Airport on the terminal behind it and a white control tower rising into grey cloud."
+  },
+  "ovd-chatgpt-04.webp": {
+    "zh": "值机大厅的白色网架屋顶下，旅客在汉莎航空行李托运柜台前排队，头顶的航班显示屏亮着绿色字迹。",
+    "en": "Under the white lattice roof of the check-in hall, travellers queue at a Lufthansa bag drop while a flight information screen above glows with green text."
+  },
+  "ovd-chatgpt-05.webp": {
+    "zh": "一架瑞安航空客机停在机坪上，尾翼和机身涂成蓝黄两色，身后是深绿色的树林和没有云的蓝天。",
+    "en": "A Ryanair airliner rests on the apron with its blue and yellow tail and fuselage catching the sun, a dark treeline and a cloudless blue sky behind it."
+  },
+  "ovd-chatgpt-06.webp": {
+    "zh": "多云的天空下，几架客机并排停在航站楼前的机坪上，其中一架绿色尾翼的飞机旁架着登机梯。",
+    "en": "Several airliners sit side by side on the apron in front of the terminal under a cloudy sky, boarding stairs standing beside one with a green tail."
+  },
+  "ovd-chatgpt-07.webp": {
+    "zh": "候机走廊里铺着打磨光亮的地砖，木条拼成的黄色天花板下摆放着成排座椅，远处挂着咖啡吧的招牌。",
+    "en": "A polished stone floor runs down the departures corridor past rows of seats beneath a yellow slatted ceiling, with a cafeteria sign at the far end."
+  },
   "_skip": [
     "ovd-baidu-1.webp",
     "ovd-baidu-2.webp",
     "ovd-baidu-3.webp"
-  ],
-  "ovd-sat-1.webp": {
-    "zh": "卫星视角：跑道位于海岸与山丘之间的台地上，航站楼与机坪在跑道中段。",
-    "en": "Satellite view: the runway sits on a plateau between the coast and the hills, with the terminal and apron at its midpoint."
-  }
+  ]
 }

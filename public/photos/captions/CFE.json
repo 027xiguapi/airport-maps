@@ -1,6 +1,5 @@
 {
   "_note": "cfe-baidu-1 is a hotel listing photo (ibis Styles), not the airport.",
-  "_skip": ["cfe-baidu-1.webp"],
   "cfe-baidu-2.webp": {
     "zh": "公务航空航站楼（terminal affaires）：深色外墙上写着「départs · departures」，门前是旋转门与落客车道。",
     "en": "The business-aviation terminal — 'départs / departures' across its dark façade, a revolving door and drop-off lane in front."
@@ -8,5 +7,34 @@
   "cfe-baidu-3.webp": {
     "zh": "停机坪上的一架达索猎鹰公务机，后方是机场塔台与航站楼。",
     "en": "A Dassault Falcon business jet on the apron, with the control tower and terminal behind it."
-  }
+  },
+  "cfe-chatgpt-01.webp": {
+    "zh": "环形车道中央的柱子上立着双翼机雕塑，旅客拖着行李箱走向玻璃幕墙的航站楼。",
+    "en": "A biplane sculpture stands on a pylon in the middle of the drop-off roundabout as a traveller wheels a suitcase toward the glass-fronted terminal."
+  },
+  "cfe-chatgpt-02.webp": {
+    "zh": "航拍视角：指廊从主楼向停机坪伸出，几架小飞机停在机位，远处是红瓦屋顶的城镇与田野。",
+    "en": "From above, the pier stretches out from the main building onto the apron, with a few small aircraft parked and a red-roofed town beyond."
+  },
+  "cfe-chatgpt-03.webp": {
+    "zh": "旅客正沿移动客梯登上一架客机，机坪上地勤人员穿着反光背心，航站楼上方写着机场名称。",
+    "en": "Passengers climb mobile stairs to board a jet while a high-visibility ground worker stands by, the terminal's name sign above them."
+  },
+  "cfe-chatgpt-04.webp": {
+    "zh": "航拍图上标出草地跑道与硬质跑道，左侧停放区里几架小型飞机旁是成片农田。",
+    "en": "An annotated aerial of the airfield marks the grass and paved runways, with a handful of light aircraft parked beside fields on the left."
+  },
+  "cfe-chatgpt-05.webp": {
+    "zh": "从高处俯瞰航站楼与停满汽车的停车场，机坪上停着两架客机，双翼机雕塑立在车道环岛中。",
+    "en": "Looking down, the terminal and its packed car parks surround an apron where two airliners stand, with the biplane monument on its roundabout island."
+  },
+  "cfe-chatgpt-06.webp": {
+    "zh": "一架法国航空 HOP 涂装的支线客机停在机坪上，行李装卸车与地勤车在机身旁作业，远处是山丘。",
+    "en": "An Air France HOP regional jet rests on the apron while a baggage loader and a ground vehicle work at its side, hills rising beyond."
+  },
+  "cfe-chatgpt-07.webp": {
+    "zh": "旅客背着双肩包走进旋转门，门楣上黄色的「départs」字样十分醒目。",
+    "en": "A traveller with a backpack steps through the revolving doors beneath yellow 'départs' lettering on the terminal's dark canopy."
+  },
+  "_skip": ["cfe-baidu-1.webp"]
 }

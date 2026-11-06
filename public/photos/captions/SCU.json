@@ -1,11 +1,39 @@
 {
   "_note": "2026-10-17: the San Antonio (Texas) images remain skipped; a labelled Esri World Imagery satellite view of Santiago de Cuba airport is published instead.",
-  "_skip": [
-    "scu-baidu-1.webp",
-    "scu-baidu-2.webp"
-  ],
   "scu-sat-1.webp": {
     "zh": "卫星视角：跑道紧邻圣地亚哥-德古巴海岸，航站楼与机坪在跑道一侧，加勒比海在下方。",
     "en": "Satellite view: the runway lies beside the Santiago de Cuba coast, with the terminal and apron alongside it and the Caribbean below."
-  }
+  },
+  "scu-chatgpt-01.webp": {
+    "zh": "红白相间的航站楼上写着圣地亚哥-德古巴的机场名称，塔台立在左侧，旅客拖着行李走向入口。",
+    "en": "The red and white terminal, lettered with Santiago de Cuba's airport name, stands beneath a blue sky as passengers with luggage walk across the apron."
+  },
+  "scu-chatgpt-02.webp": {
+    "zh": "机坪上一架红蓝白涂装的客机只露出尾翼，地面人员穿着黄色背心，旁边停着几辆行李车。",
+    "en": "Only the red, white and blue tail of an airliner shows on the apron, with baggage carts parked alongside and ground staff in yellow vests nearby."
+  },
+  "scu-chatgpt-03.webp": {
+    "zh": "航站楼内的值机大厅空无一人，红色立柱与蓝色隔离带之间排着空荡的通道，地面贴着圆形地标。",
+    "en": "The check-in hall is empty, its blue queue barriers and red columns framing silent lanes while round distance markers dot the tiled floor."
+  },
+  "scu-chatgpt-04.webp": {
+    "zh": "跑道入口处的白色箭头指向远处的沥青道面，两侧是干枯的草地，山峦在薄雾中显出海蓝色轮廓。",
+    "en": "White arrow markings lead into the asphalt runway, flanked by dry grass, with hazy blue mountains rising along the horizon."
+  },
+  "scu-chatgpt-05.webp": {
+    "zh": "一架涂着 Silver 字样的双发涡桨飞机停在机坪上，身后是塔台和挂着机场名称横幅的航站楼。",
+    "en": "A twin-engine turboprop lettered Silver rests on the apron, with the control tower and the airport's name banner on the terminal behind it."
+  },
+  "scu-chatgpt-06.webp": {
+    "zh": "从草坪一侧望去，整排红白航站楼横贯画面，左侧塔台高耸，远处山脊清晰，天空一片湛蓝。",
+    "en": "Seen from the grass, the long red and white terminal stretches across the frame, with the tower on the left and mountains under a clear blue sky."
+  },
+  "scu-chatgpt-07.webp": {
+    "zh": "值机区前立着蓝白两色的告示牌，红墙下几排隔离带围出通道，地面散落着红色圆形标记。",
+    "en": "A blue and white information sign stands before the check-in area, where barrier lines form empty lanes above red circular floor markings."
+  },
+  "_skip": [
+    "scu-baidu-1.webp",
+    "scu-baidu-2.webp"
+  ]
 }

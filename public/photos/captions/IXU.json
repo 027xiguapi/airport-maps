@@ -1,10 +1,5 @@
 {
   "_note": "2026-10-17: the Airports Authority of India page now yields three terminal photos; earlier stock/hotel images stay skipped.",
-  "_skip": [
-    "ixu-baidu-1.webp",
-    "ixu-baidu-2.webp",
-    "ixu-baidu-3.webp"
-  ],
   "ixu-page-1.webp": {
     "zh": "奥兰加巴德机场航站楼外景：白色弧顶下是落客车道与出发层入口。",
     "en": "The terminal forecourt — a white barrel-vaulted roof over the drop-off lane and departures entrance."
@@ -16,5 +11,38 @@
   "ixu-page-3.webp": {
     "zh": "出发层入口：雨棚上写着「WELCOME TO CHHATRAPATI SAMBHAJINAGAR AIRPORT」与「प्रस्थान DEPARTURE」。",
     "en": "The departures entrance — the canopy lettered 'WELCOME TO CHHATRAPATI SAMBHAJINAGAR AIRPORT' and 'प्रस्थान DEPARTURE'."
-  }
+  },
+  "ixu-chatgpt-01.webp": {
+    "zh": "航站楼前的蓝色标示写着机场英文名，右侧一块牌子上标着「到达」，门前一排绿植。",
+    "en": "Blue signs on the terminal read 'Aurangabad Airport' and 'Arrival', with a row of potted plants along the kerb."
+  },
+  "ixu-chatgpt-02.webp": {
+    "zh": "一架靛蓝航空客机在跑道上滑行，围墙外是连片城区屋顶，近处地上摊着一片亮黄色的东西。",
+    "en": "An IndiGo jet rolls along the runway beyond a low boundary wall, town rooftops behind and a bright yellow patch on the ground in front."
+  },
+  "ixu-chatgpt-03.webp": {
+    "zh": "旅客们提着行李穿过机坪，走向远处那道长长的弧形金属屋面航站楼。",
+    "en": "Passengers walk out across the apron toward the long curved metal roof of the terminal in the low sun."
+  },
+  "ixu-chatgpt-04.webp": {
+    "zh": "一架大型双发客机开着着陆灯正对镜头，灰白的雾霭里能看见左侧的格子塔架。",
+    "en": "A large twin-jet faces the camera with its landing lights on, a stack of lattice towers hazy at the left edge."
+  },
+  "ixu-chatgpt-05.webp": {
+    "zh": "蓝色「出发」指示牌挂在钢桁架雨棚下，行李车排成一列，两名安保人员正往里走。",
+    "en": "A blue 'Departure' sign hangs beneath the steel-truss canopy, luggage trolleys lined up as two security staff walk in."
+  },
+  "ixu-chatgpt-06.webp": {
+    "zh": "夜色里航站楼顶的机场名牌亮着白光，车灯扫过路障与成排的盆栽。",
+    "en": "At night the airport's name glows white above the entrance while headlights sweep across barriers and rows of potted plants."
+  },
+  "ixu-chatgpt-07.webp": {
+    "zh": "阴雨雾霾中，一架尾翼朱红的客机正对镜头滑行，前方是枯黄的灌木与草地。",
+    "en": "A red-tailed jet rolls head-on down the runway through drizzle, dry scrub and grass filling the foreground."
+  },
+  "_skip": [
+    "ixu-baidu-1.webp",
+    "ixu-baidu-2.webp",
+    "ixu-baidu-3.webp"
+  ]
 }
