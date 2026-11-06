@@ -1,13 +1,5 @@
 {
   "_note": "2026-10-17: flyaustin.com's own pages yield the entrance fountain and the Barbara Jordan Terminal interior; simulator screenshots remain skipped.",
-  "_skip": [
-    "aus-baidu-1.webp",
-    "aus-baidu-2.webp",
-    "aus-baidu-3.webp",
-    "aus-page-1.webp",
-    "aus-page-2.webp",
-    "aus-page-3.webp"
-  ],
   "aus-page-4.webp": {
     "zh": "奥斯汀-伯格斯特罗姆机场的入口标志墙与喷泉：暮色中亮着机场全名与标志。",
     "en": "The entrance monument and fountain at Austin-Bergstrom — the airport's name and mark lit at dusk."
@@ -15,5 +7,41 @@
   "aus-page-5.webp": {
     "zh": "芭芭拉·乔丹航站楼内景：旅客拖着行李经过「C Gates 1–25」指示牌与航班信息屏。",
     "en": "Inside the Barbara Jordan Terminal — travellers with bags passing the \"C Gates 1–25\" sign and departure screens."
-  }
+  },
+  "aus-chatgpt-01.webp": {
+    "zh": "航站楼大厅里，旅客拖着行李箱走向登机口，头顶悬挂着黄色的登机口指示牌。",
+    "en": "Under the \"BARBARA JORDAN TERMINAL\" wall lettering, passengers haul rolling bags toward the gates."
+  },
+  "aus-chatgpt-02.webp": {
+    "zh": "俯瞰航站楼与机坪：多架客机停在廊桥旁，停车场与在建工程环绕四周。",
+    "en": "An aerial view of the terminal and apron, where jets fill the jet bridges beside packed car parks and a building site."
+  },
+  "aus-chatgpt-03.webp": {
+    "zh": "夜幕下的机坪上，客机停在廊桥前，航站楼灯光映在深蓝色的天幕下。",
+    "en": "At night on the apron, an airliner waits at its jet bridge as terminal lights glow beneath a deep blue sky."
+  },
+  "aus-chatgpt-04.webp": {
+    "zh": "候机长廊里，旅客在餐饮店旁用餐，落地窗把机坪的日光洒满地面。",
+    "en": "In the departure concourse, travellers eat beside food stands as daylight from the tall windows floods the polished floor."
+  },
+  "aus-chatgpt-05.webp": {
+    "zh": "远处的机场全景：跑道与滑行道在草地间铺开，航站楼和塔台散布其中。",
+    "en": "A distant aerial of the airfield, its runways and taxiways cutting across open grassland with the terminal and tower far off."
+  },
+  "aus-chatgpt-06.webp": {
+    "zh": "两架客机并排停靠在灰色航站楼前，机身尾翼的红白蓝涂装十分醒目。",
+    "en": "Two airliners sit side by side before the grey terminal, their red, white and blue tail liveries bright in the sun."
+  },
+  "aus-chatgpt-07.webp": {
+    "zh": "这是一张航站楼安检区的建筑效果图：木格栅吊顶下排着隔离带，墙上有彩色壁画。",
+    "en": "An architectural rendering of a terminal security hall, with a wood-slat ceiling, queue barriers and colourful murals along the walls."
+  },
+  "_skip": [
+    "aus-baidu-1.webp",
+    "aus-baidu-2.webp",
+    "aus-baidu-3.webp",
+    "aus-page-1.webp",
+    "aus-page-2.webp",
+    "aus-page-3.webp"
+  ]
 }

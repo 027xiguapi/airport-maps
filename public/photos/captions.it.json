@@ -84,7 +84,6 @@
   },
   "ABQ": {
     "abq-bing-1.webp": "Il Sunport nell'ora d'oro: il terminal si trova dietro file di parcheggi multipiano e stalli, con lo skyline di Albuquerque e la scarpata del deserto oltre.",
-    "abq-bing-2.webp": "Il fronte lato terra del terminal — «ALBUQUERQUE» illuminata sui blocchi in terracotta in stile Pueblo Revival, con navette e auto sulla strada sottostante.",
     "abq-bing-3.webp": "Veduta aerea del terminal e del piazzale: satelliti rosa in stile Pueblo collegati al piazzale tramite passerelle d'imbarco, aerei parcheggiati ai gate, parcheggi multipiano e la città sullo sfondo.",
     "abq-doubao-01.webp": "Al crepuscolo la strada rialzata del terminal ospita navette e auto sotto pensiline color verde acqua, mentre le nuvole scorrono sopra i blocchi color terracotta.",
     "abq-doubao-02.webp": "Dall'alto i pannelli solari coprono i parcheggi mentre le concourse rosa pallido si stendono sull'apron, con gli aerei parcheggiati alle due estremità.",
@@ -550,7 +549,13 @@
     "apk-sat-1.webp": "Vista satellitare: l'Aeroporto di Apataki (APK) si trova tra acqua e costa."
   },
   "APN": {
-    "apn-sat-1.webp": "Vista satellitare: le piste di Alpena si trovano tra boschi e terreni agricoli accanto al lago Huron, con il terminal e il piazzale aeromobili a fianco del campo."
+    "apn-sat-1.webp": "Vista satellitare: le piste di Alpena si trovano tra boschi e terreni agricoli accanto al lago Huron, con il terminal e il piazzale aeromobili a fianco del campo.",
+    "apn-chatgpt-01.webp": "Al crepuscolo una luce calda illumina la facciata in pietra e vetro del terminal, con le lettere APN sopra l'ingresso.",
+    "apn-chatgpt-02.webp": "Una mappa satellitare osserva dall'alto l'aeroporto di Alpena, dove piste che si incrociano si trovano tra boschi verde scuro con l'acqua su un lato.",
+    "apn-chatgpt-03.webp": "Il sole basso della sera indora un lato del terminal mentre il resto resta in ombra, e la strada davanti è vuota.",
+    "apn-chatgpt-04.webp": "All'interno del terminal file di sedili grigi guardano verso alte finestre, su un pavimento chiaro effetto legno che arriva fino alla parete di fondo.",
+    "apn-chatgpt-05.webp": "I sedili costeggiano le finestre della sala d'attesa mentre una scala mobile è ferma sull'apron e il cielo brilla di un arancione tenue.",
+    "apn-chatgpt-06.webp": "Due chioschi self-service si trovano davanti ai banchi del check-in, con il marchio Delta accanto e una bandiera americana sulla parete."
   },
   "APO": {
     "apo-sat-1.webp": "Vista satellitare: la pista di Apartadó si trova tra foresta pluviale e terreni agricoli nelle pianure caraibiche, con il terminal e il piazzale aeromobili a fianco."
@@ -562,10 +567,24 @@
     "aqg-sat-1.webp": "Vista satellitare: la pista di Anqing si trova tra la riva settentrionale dello Yangtze e basse colline, con il terminal e il piazzale aeromobili a fianco."
   },
   "AQJ": {
-    "aqj-sat-1.webp": "Vista satellitare: una pista e una via di rullaggio parallela attraversano il deserto, con il terminal e il piazzale aeromobili a metà percorso."
+    "aqj-sat-1.webp": "Vista satellitare: una pista e una via di rullaggio parallela attraversano il deserto, con il terminal e il piazzale aeromobili a metà percorso.",
+    "aqj-chatgpt-01.webp": "Il terminal color crema dell'aeroporto si incurva lungo la strada, con il nome scritto in arabo e in inglese sulla facciata.",
+    "aqj-chatgpt-02.webp": "I passeggeri attraversano l'apron con le borse verso la scaletta d'imbarco ferma accanto a un bianco aereo a fusoliera stretta, con colline aride sullo sfondo.",
+    "aqj-chatgpt-03.webp": "Una torre di controllo bianca si allarga alla base e porta un anello di vetro in cima, con montagne desertiche spoglie che si alzano dietro.",
+    "aqj-chatgpt-04.webp": "I viaggiatori portano fuori le valigie dall'uscita degli arrivi, dove una pensilina in tessuto ombreggia le porte a vetri e un gruppo di persone in attesa.",
+    "aqj-chatgpt-05.webp": "Vista dall'alto, una siepe potata corre al centro della strada davanti alla hall delle partenze, attraversata da un passaggio pedonale.",
+    "aqj-chatgpt-06.webp": "Una fila di piccoli business jet è parcheggiata sull'apron, con le fusoliere bianche che catturano la luce del pomeriggio davanti a colline brulle.",
+    "aqj-chatgpt-07.webp": "Getti d'acqua si alzano da entrambi i lati ad arco sopra l'aereo di linea, mentre il personale di terra in gilet ad alta visibilità resta indietro a guardare."
   },
   "ARA": {
-    "ara-sat-1.webp": "Vista satellitare: l'Aeroporto Regionale di Acadiana (ARA) si trova tra vegetazione e terreni agricoli."
+    "ara-sat-1.webp": "Vista satellitare: l'Aeroporto Regionale di Acadiana (ARA) si trova tra vegetazione e terreni agricoli.",
+    "ara-chatgpt-01.webp": "Lettere argentate compongono il nome dell'aeroporto sulla pensilina d'ingresso, con pareti chiare, mattoni e un prato sotto un cielo azzurro.",
+    "ara-chatgpt-02.webp": "Dall'alto, la pista 35 taglia dritta i campi coltivati mentre un raccordo porta a destra verso hangar e un piazzale pavimentato.",
+    "ara-chatgpt-03.webp": "Un piccolo aereo leggero bianco è fermo sull'apron di cemento, con la matricola dipinta sulla fusoliera e acqua e campi verdi sullo sfondo.",
+    "ara-chatgpt-04.webp": "Colonne in mattoni sostengono una pensilina bianca d'ingresso sormontata dalla scritta TERMINAL, con prato e una pista lontana oltre la recinzione.",
+    "ara-chatgpt-05.webp": "L'emblema dell'aeroporto è stampato sulla parete della sala d'attesa, dove file di sedili neri guardano televisori e una serie di poster incorniciati.",
+    "ara-chatgpt-06.webp": "Un hangar aperto si trova dietro un piccolo aereo a pistoni e un jet leggero parcheggiati sull'ampio piazzale di cemento.",
+    "ara-chatgpt-07.webp": "Nell'hangar due uomini maneggiano una bombola verde accanto al portello del muso aperto di un jet leggero, con un altro piccolo aereo bianco parcheggiato dietro."
   },
   "ARC": {
     "arc-sat-1.webp": "Vista satellitare: una pista in ghiaia attraversa boschi e laghi vicino ad Arctic Village, con il villaggio all'estremità settentrionale."
@@ -579,7 +598,14 @@
     "ark-baidu-3.webp": "Lo sportello 'ARUSHA AIRPORT INFORMATION' nella sua casetta in legno — le strutture dell'aeroporto ben in vista."
   },
   "ARM": {
-    "arm-sat-1.webp": "Vista satellitare: le piste di Armidale si trovano tra colline e terreni agricoli sull'altopiano del New England, con il terminal e il piazzale accanto al campo."
+    "arm-sat-1.webp": "Vista satellitare: le piste di Armidale si trovano tra colline e terreni agricoli sull'altopiano del New England, con il terminal e il piazzale accanto al campo.",
+    "arm-chatgpt-01.webp": "Sotto un cielo coperto, due viaggiatori trascinano le valigie davanti all'ingresso vetrato del basso terminal grigio di Armidale Regional Airport.",
+    "arm-chatgpt-02.webp": "Dall'alto, la pista corre dritta accanto a prati verdi mentre un raccordo ad anello appena asfaltato gira intorno all'apron e ai suoi hangar.",
+    "arm-chatgpt-03.webp": "Al crepuscolo un turboprop a due motori è fermo sull'apron accanto al terminal vetrato, con la sua ombra che si allunga sull'asfalto scuro.",
+    "arm-chatgpt-04.webp": "L'estremità scura a timpano del terminal è vetrata dalla gronda al suolo, con pannelli artistici color ruggine accanto a un sentiero in mattoni rossi.",
+    "arm-chatgpt-05.webp": "Al calare della notte lampade calde brillano sotto la pensilina del terminal, mentre la coda di un aereo sull'apron lontano cattura l'ultima luce.",
+    "arm-chatgpt-06.webp": "Nella hall del check-in vuota un dipendente in divisa si appoggia a un banco sotto schermi contrassegnati Qantas e Link Airways.",
+    "arm-chatgpt-07.webp": "Sotto un cielo azzurro limpido i passeggeri scendono da un turboprop QantasLink sull'apron mentre il personale di terra attende accanto all'ala."
   },
   "ARN": {
     "arn-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'Aeroporto di Stoccolma Arlanda (ARN) si inseriscono nella rete urbana e stradale."
@@ -588,10 +614,24 @@
     "aru-sat-1.webp": "Vista satellitare: la pista di Araçatuba si trova tra terreni agricoli e città nell'interno dello stato di São Paulo, con il terminal e il piazzale accanto."
   },
   "ARW": {
-    "arw-sat-1.webp": "Vista satellitare: la pista di Arad si trova nella pianura occidentale rumena, con il terminal e il piazzale accanto e la città e i terreni agricoli tutt'intorno."
+    "arw-sat-1.webp": "Vista satellitare: la pista di Arad si trova nella pianura occidentale rumena, con il terminal e il piazzale accanto e la città e i terreni agricoli tutt'intorno.",
+    "arw-chatgpt-01.webp": "Al crepuscolo la facciata blu dell'aeroporto di Arad si illumina con la scritta Aeroportul Arad, mentre i viaggiatori attraversano il vasto piazzale di cemento sottostante.",
+    "arw-chatgpt-02.webp": "Un aereo di linea scende verso la pista sotto nuvole da bel tempo mentre sull'apron attendono mezzi di terra e una scaletta d'imbarco ARAD AIRPORT.",
+    "arw-chatgpt-03.webp": "Diversi aerei di linea condividono l'apron, davanti un jet magenta con la scritta wizzair.com e dietro un bianco velivolo moldavo, mentre il personale di terra lavora alle scalette.",
+    "arw-chatgpt-04.webp": "La hall del check-in è vuota e luminosa, con il cartello blu soprastante che indica in rumeno e in inglese il check-in e i gate.",
+    "arw-chatgpt-05.webp": "Chevron bianchi e luci di bordo pista si allontanano verso un orizzonte pallido e velato, con tracce di pneumatici che scuriscono la superficie di cemento.",
+    "arw-chatgpt-06.webp": "Sotto un cielo blu senza nuvole, un aereo di linea bianco bimotore a elica è parcheggiato sull'apron di cemento, con una lunga ombra sotto di sé.",
+    "arw-chatgpt-07.webp": "Un bianco aereo a fusoliera stretta è collegato a una scaletta d'imbarco ARAD AIRPORT mentre davanti attende un'auto follow-me a scacchi gialli e neri."
   },
   "ARX": {
-    "arx-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto Regionale Aracati Dragão do Mar (ARX) si confonde con la vegetazione verde e i terreni agricoli circostanti."
+    "arx-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto Regionale Aracati Dragão do Mar (ARX) si confonde con la vegetazione verde e i terreni agricoli circostanti.",
+    "arx-chatgpt-01.webp": "Sotto un cielo grigio pesante, alcuni addetti stanno davanti al lungo terminal dal tetto di paglia di Aracati mentre poco lontano è parcheggiata un'auto della polizia.",
+    "arx-chatgpt-02.webp": "Visto dall'alto, il terminal appare come una fila di ripidi timpani coperti di paglia, con parcheggi e un apron chiaro tutto intorno.",
+    "arx-chatgpt-03.webp": "Un aereo di linea Azul in livrea blu e bianca è fermo sull'apron mentre una folla si raduna accanto al tetto di paglia del terminal.",
+    "arx-chatgpt-04.webp": "Diversi piccoli aerei monomotore sono parcheggiati sul cemento davanti al terminal dal tetto di paglia, con spettatori radunati all'ombra.",
+    "arx-chatgpt-05.webp": "Ampie linee di rullaggio arancioni attraversano l'apron di cemento, dove business jet e aerei leggeri sono parcheggiati davanti al lungo terminal dal tetto di paglia.",
+    "arx-chatgpt-06.webp": "Un cartello verde a bordo strada indica la direzione del terminal passeggeri, e un alto serbatoio bianco si erge accanto ai tetti di paglia sotto un cielo azzurro.",
+    "arx-chatgpt-07.webp": "Aerei leggeri sono parcheggiati sull'apron davanti al terminal dal tetto di paglia, tra cui un velivolo arancione acceso ad ala bassa con il tettuccio coperto."
   },
   "ASA": {
     "asa-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto Internazionale di Assab (ASA) si trova tra terreno arido e terra brulla."
@@ -601,13 +641,20 @@
     "asb-baidu-3.webp": "L'edificio del terminal cargo — pareti bianche sotto una fascia verde, una lunga fila di banchine di carico a livello del suolo."
   },
   "ASD": {
-    "asd-sat-1.webp": "Vista satellitare: l'Aeroporto di Andros Town (ASD) si trova tra città, terreni agricoli e vegetazione."
+    "asd-sat-1.webp": "Vista satellitare: l'Aeroporto di Andros Town (ASD) si trova tra città, terreni agricoli e vegetazione.",
+    "asd-chatgpt-01.webp": "Un terminal blu e bianco a un solo piano porta l'insegna Andros Town International Airport, con la bandiera delle Bahamas su un'asta e pozzanghere sull'apron bagnato."
   },
   "ASE": {
     "ase-sat-1.webp": "Vista satellitare: la pista di Aspen si trova in una valle delle Montagne Rocciose, con il terminal e il piazzale accanto e foreste e cime innevate tutt'intorno."
   },
   "ASF": {
-    "asf-sat-1.webp": "Vista satellitare: la pista di Astrakhan si trova nella bassa pianura del Volga, con il terminal e il piazzale accanto e corsi d'acqua e terre aride tutt'intorno."
+    "asf-sat-1.webp": "Vista satellitare: la pista di Astrakhan si trova nella bassa pianura del Volga, con il terminal e il piazzale accanto e corsi d'acqua e terre aride tutt'intorno.",
+    "asf-chatgpt-01.webp": "La facciata di vetro blu del terminal riempie l'inquadratura sotto enormi lettere blu sul tetto, con un prato curato e piccoli conifere davanti a cui passano i passeggeri.",
+    "asf-chatgpt-02.webp": "Una lunga fila di chioschi self-service per il check-in costeggia la parete rivestita in legno della hall delle partenze, con gli schermi che brillano di rosa, mentre un viaggiatore in cappotto di pelliccia usa una macchina.",
+    "asf-chatgpt-03.webp": "Al tramonto un aereo di linea con il tricolore russo sulla coda è fermo davanti al terminal di vetro, con una passerella che attende accanto sotto un cielo arancione e viola.",
+    "asf-chatgpt-04.webp": "All'interno del terminal un ampio corridoio dal pavimento in piastrelle lucide corre tra parapetti vetrati del soppalco, luci a soffitto in fila e qualche passeggero che passeggia.",
+    "asf-chatgpt-05.webp": "I passeggeri con i bagagli si radunano alle porte vetrate d'ingresso, con le lettere blu sul tetto che spiccano contro un cielo grigio sopra la pavimentazione bagnata.",
+    "asf-chatgpt-06.webp": "Al crepuscolo il terminal più vecchio mostra un rivestimento in pietra beige e file di finestre, la sua insegna blu accanto a una torre piena di antenne, con conifere coniche sul prato."
   },
   "ASJ": {
     "asj-baidu-1.webp": "Sul piazzale davanti al terminal — passeggeri con i bagagli diretti all'edificio contrassegnato 'AMAMI', con il personale di terra che li indirizza.",
@@ -618,11 +665,22 @@
     "asm-sat-1.webp": "Vista satellitare: la pista di Asmara si trova sull'altopiano, con il terminal e il piazzale accanto e la città e i crinali tutt'intorno."
   },
   "ASO": {
-    "aso-sat-1.webp": "Vista satellitare: la pista di Asosa si trova tra colline e boschi nell'Etiopia occidentale, con il terminal e il piazzale accanto."
+    "aso-sat-1.webp": "Vista satellitare: la pista di Asosa si trova tra colline e boschi nell'Etiopia occidentale, con il terminal e il piazzale accanto.",
+    "aso-chatgpt-01.webp": "Lettere bianche dell'aeroporto sovrastano una facciata di vetro blu, pensiline in cemento sostenute da colonne incrociate, e attraverso le vetrate si vedono i banchi del check-in e i sedili d'attesa.",
+    "aso-chatgpt-02.webp": "Da un pendio al tramonto un aereo di linea bimotore turboelica è fermo sull'apron mentre edifici dal tetto verde e la pista si distendono su una campagna aperta, con colline sullo sfondo.",
+    "aso-chatgpt-03.webp": "Nella calda luce serale due scale curve in pietra abbracciano una vasca di pietra all'ingresso dell'aeroporto, con bandiere che sventolano sopra e il nome dell'aeroporto scritto sul vetro.",
+    "aso-chatgpt-04.webp": "Un'immagine satellitare mostra una singola pista che taglia una fitta foresta verde, con terreni agricoli sparsi e piccoli insediamenti intorno e nessun dettaglio della superficie visibile."
   },
   "ASP": {
     "asp-page-2.webp": "La vecchia torre di controllo di Alice Springs — un fusto in mattoni sotto la cabina vetrata, un Fokker F.27 in attesa sul piazzale (ca. 1970; foto Terry Martin, collezione CAHS, tramite l'Airways Museum).",
-    "asp-page-3.webp": "Alice Springs dall'alto — piste e vie di rullaggio stese attraverso il deserto rosso, la torre, il terminal e il piazzale allineati lungo il campo (collezione CAHS, tramite l'Airways Museum)."
+    "asp-page-3.webp": "Alice Springs dall'alto — piste e vie di rullaggio stese attraverso il deserto rosso, la torre, il terminal e il piazzale allineati lungo il campo (collezione CAHS, tramite l'Airways Museum).",
+    "asp-chatgpt-01.webp": "Colonne rosse e vele ombreggianti bianche costeggiano il marciapiede del terminal, con l'insegna Qantas sulla fascia soprastante e auto e un furgone bianco in attesa fuori.",
+    "asp-chatgpt-02.webp": "Una vista aerea mette in evidenza la lunga pista, il raccordo e il piazzale con alcuni aerei leggeri parcheggiati, mentre terminal, hangar e parcheggi si distribuiscono sul terreno rosso del deserto.",
+    "asp-chatgpt-03.webp": "La coda rossa di un aereo di linea Virgin riempie l'inquadratura sopra i motori posteriori, con due addetti di rampa sotto l'ala tra i fiori selvatici gialli.",
+    "asp-chatgpt-04.webp": "Sedute nere vuote riempiono una tranquilla sala partenze, accanto il banco dell'agenzia viaggi è chiuso dietro la sua griglia, con pannelli murali a strisce e un pavimento lucido sotto le luci del soffitto.",
+    "asp-chatgpt-05.webp": "Una vista aerea dall'alto mostra quattro aerei di linea parcheggiati fianco a fianco su piazzole di terra rossa, una pista che taglia la boscaglia più in là e basse catene montuose all'orizzonte.",
+    "asp-chatgpt-06.webp": "Un jet regionale QantasLink sale dalla pista nel deserto, la coda rossa luminosa contro il cielo sereno, mentre due aerei di linea in sosta restano parcheggiati oltre l'erba secca, dall'altra parte della pista.",
+    "asp-chatgpt-07.webp": "I banchi check-in Qantas allineano la hall dietro le barriere rosse che serpeggiano verso un cartello sanitario, il tutto su una moquette a motivi blu e gialli."
   },
   "ASV": {
     "asv-sat-1.webp": "Vista satellitare: la pista di Amboseli si trova nella savana ai piedi del Kilimanjaro, con il terminal e il piazzale accanto."
@@ -640,7 +698,8 @@
     "ath-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'Aeroporto Internazionale di Atene (ATH) si inseriscono nella rete urbana e stradale."
   },
   "ATK": {
-    "atk-sat-1.webp": "Vista satellitare: la pista di Atqasuk si trova nella tundra del North Slope dell'Alaska, con il terminal e il piazzale accanto e zone umide e laghi tutt'intorno."
+    "atk-sat-1.webp": "Vista satellitare: la pista di Atqasuk si trova nella tundra del North Slope dell'Alaska, con il terminal e il piazzale accanto e zone umide e laghi tutt'intorno.",
+    "atk-chatgpt-01.webp": "Sotto un sole basso, un piccolo monomotore riposa sul piazzale in ghiaia accanto a un terminal a un solo piano, a un pick-up parcheggiato e alla tundra ondulata."
   },
   "ATL": {
     "atl-sat-1.webp": "Nell'immagine satellitare, i terminal e le piste dell'Aeroporto Internazionale Hartsfield–Jackson di Atlanta (ATL) si inseriscono nella rete urbana e stradale."
@@ -652,7 +711,14 @@
     "atr-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto Internazionale di Atar (ATR) si confonde con la città, i terreni agricoli e la vegetazione circostanti."
   },
   "ATW": {
-    "atw-sat-1.webp": "Vista satellitare: due piste si incrociano tra terreni agricoli e città, con il terminal e il piazzale al centro del campo."
+    "atw-sat-1.webp": "Vista satellitare: due piste si incrociano tra terreni agricoli e città, con il terminal e il piazzale al centro del campo.",
+    "atw-chatgpt-01.webp": "Sotto una pensilina curva, l'insegna sopra l'ingresso recita Appleton International Airport, con pilastri in mattoni e porte a vetri che conducono alla hall.",
+    "atw-chatgpt-02.webp": "In una giornata serena tre aerei di linea blu e arancione sostano fianco a fianco alle passerelle, con pannelli solari sul tetto del terminal e raccordi oltre.",
+    "atw-chatgpt-03.webp": "Un jet regionale American Eagle bimotore accelera lungo la pista oltre l'erba alta, la coda a strisce rosse, bianche e blu sotto i cumuli.",
+    "atw-chatgpt-04.webp": "All'interno del terminal una parete vetrata a doppia altezza si alza su pavimenti lucidi e un soffitto curvo, mentre un viaggiatore spinge il bagaglio davanti al banco circolare.",
+    "atw-chatgpt-05.webp": "Tre pennoni si alzano accanto alla strada davanti al terminal, il cui ingresso è scuro sotto il cielo sereno, con la torre di controllo sulla sinistra.",
+    "atw-chatgpt-06.webp": "Dopo il tramonto due jet regionali nei colori di United attendono alle passerelle mentre la torre e l'ultimo bagliore sul campo si dissolvono in silhouette.",
+    "atw-chatgpt-07.webp": "File di sedute grigie stanno sotto un soffitto in legno curvo nella sala dei gate, dove un addetto spinge un carrello per le pulizie davanti alle finestre che guardano sul piazzale."
   },
   "ATZ": {
     "atz-sat-1.webp": "Vista satellitare: la pista di Asyut si trova dove la valle del Nilo incontra il deserto, con il terminal e il piazzale accanto."
@@ -661,31 +727,60 @@
     "aug-sat-1.webp": "Vista satellitare: una pista corta incastonata tra boschi e città, con il terminal e il piazzale accanto."
   },
   "AUH": {
-    "auh-baidu-1.webp": "Il tetto ondulato dell'Aeroporto Internazionale Zayed — un aereo di linea che passa sopra, con la strada di sosta e le pensiline frangisole in primo piano."
+    "auh-baidu-1.webp": "Il tetto ondulato dell'Aeroporto Internazionale Zayed — un aereo di linea che passa sopra, con la strada di sosta e le pensiline frangisole in primo piano.",
+    "auh-chatgpt-01.webp": "Enormi archi bianchi si incurvano sopra la hall principale, dove un'isola di sedute curva si trova tra negozi duty-free e schermi informativi, con viaggiatori in movimento sullo sfondo.",
+    "auh-chatgpt-02.webp": "Dall'alto il terminal dal tetto ondulato è circondato da strade sopraelevate, con pannelli solari che coprono il parcheggio a destra e aerei di linea parcheggiati sul piazzale.",
+    "auh-chatgpt-03.webp": "Al crepuscolo il terminal a forma di X risplende di luce, un aereo di linea si presenta di fronte al gate e il piazzale e i raccordi si stagliano netti sotto i fari.",
+    "auh-chatgpt-04.webp": "Sotto un cielo azzurro la facciata vetrata del terminal sale e scende con il tetto ondulato, il bordo bianco luminoso al sole sopra le pensiline della strada.",
+    "auh-chatgpt-05.webp": "Lunghe file di banchi check-in bianchi si estendono tra alti pilastri contrassegnati C e D, sotto volte sovrapposte e schermi di indicazione illuminati.",
+    "auh-chatgpt-06.webp": "Di notte la facciata ondulata del terminal è inondata di luce mentre un autobus percorre la strada di scarico davanti ai pilastri numerati da 1 a 7.",
+    "auh-chatgpt-07.webp": "Questa vista aerea comprende il tetto metallico ondulato del terminal, le passerelle e le piazzole sottostanti, e a sinistra il parcheggio coperto di pannelli solari."
   },
   "AUK": {
     "auk-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto di Alakanuk (AUK) si trova tra vegetazione verde e terreni agricoli."
   },
   "AUR": {
-    "aur-sat-1.webp": "Vista satellitare: la pista di Aurillac si trova tra colline e terreni agricoli sul Massiccio Centrale, con il terminal e il piazzale accanto."
+    "aur-sat-1.webp": "Vista satellitare: la pista di Aurillac si trova tra colline e terreni agricoli sul Massiccio Centrale, con il terminal e il piazzale accanto.",
+    "aur-chatgpt-01.webp": "Enormi lettere blu che compongono AURILLAC si stagliano sul muro chiaro del terminal, con la piccola torre di controllo accanto e nuvole bianche nel cielo azzurro.",
+    "aur-chatgpt-02.webp": "Uno screenshot annotato di una mappa satellitare indica la pista, il piazzale e un impianto di pannelli solari a sud dell'aeroporto di Aurillac-Tronquières.",
+    "aur-chatgpt-03.webp": "I passeggeri scendono dalla scaletta di un bimotore turboelica e attraversano il piazzale verso il terminal, passando davanti a una torre di controllo con cabina di vetro e a un camion dei pompieri rosso.",
+    "aur-chatgpt-04.webp": "Questa immagine aerea mostra file di edifici bassi a tetto piatto e parcheggi tagliati da una tangenziale, con erba e alberi intorno e nessuna pista in vista.",
+    "aur-chatgpt-05.webp": "Su un piazzale bagnato dalla pioggia un bimotore turboelica nei colori di HOP! è rivolto verso l'obiettivo, con linee guida gialle che corrono verso l'erba bagnata.",
+    "aur-chatgpt-06.webp": "Un turboelica bianco sosta sul piazzale con un trattore arancione parcheggiato accanto alla prua, mentre lungo la fusoliera si leggono le scritte HOP! e Air France.",
+    "aur-chatgpt-07.webp": "Un aereo leggero monomotore rosso, bianco e giallo sosta sul piazzale, la sigla ben leggibile sulla deriva, con bassi capannoni sotto un cielo grigio oltre."
   },
   "AUS": {
     "aus-page-4.webp": "Il monumento d'ingresso e la fontana presso l'Austin-Bergstrom — il nome e il simbolo dell'aeroporto illuminati al crepuscolo.",
-    "aus-page-5.webp": "All'interno del Barbara Jordan Terminal — viaggiatori con i bagagli che passano davanti al cartello \"C Gates 1–25\" e ai monitor delle partenze."
+    "aus-page-5.webp": "All'interno del Barbara Jordan Terminal — viaggiatori con i bagagli che passano davanti al cartello \"C Gates 1–25\" e ai monitor delle partenze.",
+    "aus-chatgpt-01.webp": "Sotto la scritta a parete “BARBARA JORDAN TERMINAL”, i passeggeri trascinano i trolley verso i gate.",
+    "aus-chatgpt-02.webp": "Una vista aerea del terminal e del piazzale, dove i jet occupano le passerelle accanto a parcheggi pieni e a un cantiere.",
+    "aus-chatgpt-03.webp": "Di notte sul piazzale un aereo di linea attende alla sua passerella mentre le luci del terminal brillano sotto un cielo blu intenso.",
+    "aus-chatgpt-04.webp": "Nella sala partenze i viaggiatori mangiano accanto ai punti ristoro mentre la luce del giorno dalle alte finestre inonda il pavimento lucido.",
+    "aus-chatgpt-05.webp": "Una vista aerea lontana del campo di volo, con le piste e i raccordi che tagliano un prato aperto e il terminal e la torre in lontananza.",
+    "aus-chatgpt-06.webp": "Due aerei di linea sostano fianco a fianco davanti al terminal grigio, le livree rosse, bianche e blu delle code luminose al sole.",
+    "aus-chatgpt-07.webp": "Un rendering architettonico di una sala controlli di sicurezza del terminal, con soffitto a doghe di legno, barriere per la fila e murales colorati lungo le pareti."
   },
   "AUU": {
-    "auu-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Aurukun (AUU) si confonde con la città, i terreni agricoli e la vegetazione circostanti."
+    "auu-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Aurukun (AUU) si confonde con la città, i terreni agricoli e la vegetazione circostanti.",
+    "auu-chatgpt-01.webp": "Sotto un cielo azzurro limpido, un bimotore turboelica attende sul piazzale scuro davanti al terminal con la scritta “Welcome to Aurukun”."
   },
   "AUX_": {
     "aux-sat-1.webp": "Vista satellitare: l'Aeroporto di Araguaína (AUX) è circondato da città, terreni agricoli e vegetazione."
   },
   "AUY": {
-    "auy-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Aneityum (AUY) si confonde con l'acqua e la costa circostanti."
+    "auy-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Aneityum (AUY) si confonde con l'acqua e la costa circostanti.",
+    "auy-chatgpt-01.webp": "Un edificio giallo pallido a un piano porta l'insegna “MYSTERY IS. AIRPORT”, circondato da prato, palme e tettoie di paglia.",
+    "auy-chatgpt-02.webp": "Nell'immagine satellitare la pista di Aneityum si allunga lungo la costa stretta dell'isola, circondata da un'acqua di barriera turchese brillante.",
+    "auy-chatgpt-03.webp": "Un piccolo aereo bimotore sfiora basso la pista in erba, in procinto di toccare terra, con fitte palme dietro."
   },
   "AVA": {
     "ava-baidu-1.webp": "Il terminal dell'Aeroporto di Anshun Huangguoshu, i caratteri rossi '黄果树' sul tetto dalle linee curve, un piazzale antistante quasi vuoto in basso.",
     "ava-baidu-2.webp": "Il terminal e la torre al crepuscolo — un cartellone ai margini della strada con la scritta '21℃的城市' e la torre di controllo illuminata contro il cielo della sera.",
-    "ava-baidu-3.webp": "Passeggeri che escono verso l'imbarco — l'insegna dorata '黄果树' e la facciata vetrata alle loro spalle, la torre sopra."
+    "ava-baidu-3.webp": "Passeggeri che escono verso l'imbarco — l'insegna dorata '黄果树' e la facciata vetrata alle loro spalle, la torre sopra.",
+    "ava-chatgpt-01.webp": "Sotto un cielo sereno il tetto curvo argentato del terminal porta grandi caratteri rossi sopra una facciata vetrata e una strada vuota.",
+    "ava-chatgpt-02.webp": "Vista aerea del nuovo terminal, con la torre di controllo a sinistra, la pista dietro il tetto e ordinate file di giovani alberi nel parcheggio.",
+    "ava-chatgpt-03.webp": "In una giornata piovosa e coperta i passeggeri salgono una scaletta coperta dipinta con il nome dell'aeroporto, mentre il piazzale luccica di pioggia.",
+    "ava-chatgpt-04.webp": "Un terminal più vecchio con pareti color crema e pensiline bordate di rosso, la torre di controllo che si alza dietro e paletti bianchi lungo il vialetto."
   },
   "AVB": {
     "avb-sat-1.webp": "Nell'immagine satellitare, la pista della Base Aerea di Aviano (AVB) si trova tra vegetazione verde e terreni agricoli."
@@ -704,13 +799,22 @@
     "avv-baidu-2.webp": "Le porte degli arrivi e delle partenze — 'Domestic Arrivals' accanto a 'International & Domestic Departures', con le indicazioni anche in cinese per i collegamenti di Avalon con la Cina."
   },
   "AWA": {
-    "awa-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto Internazionale di Hawassa (AWA) si trova tra città, terreni agricoli e vegetazione."
+    "awa-sat-1.webp": "Nell'immagine satellitare, la pista dell'Aeroporto Internazionale di Hawassa (AWA) si trova tra città, terreni agricoli e vegetazione.",
+    "awa-chatgpt-01.webp": "Sotto un cielo percorso da nuvole, alcune persone si raccolgono vicino alle porte a vetri sotto la larga pensilina chiara del terminal, con un attraversamento pedonale che arriva dal prato.",
+    "awa-chatgpt-02.webp": "Sotto un cielo blu intenso, un aereo di linea con la coda verde, gialla e rossa sosta sul piazzale mentre i passeggeri salgono la scaletta."
   },
   "AWD": {
     "awd-sat-1.webp": "Vista satellitare: l'Aeroporto di Aniwa (AWD) si trova tra acqua e costa."
   },
   "AWZ": {
-    "awz-sat-1.webp": "Vista satellitare: la pista corre parallela alla griglia stradale di Ahvaz, con il terminal e il piazzale a metà del suo percorso."
+    "awz-sat-1.webp": "Vista satellitare: la pista corre parallela alla griglia stradale di Ahvaz, con il terminal e il piazzale a metà del suo percorso.",
+    "awz-chatgpt-01.webp": "La facciata del terminal riporta il nome dell'aeroporto in inglese e in persiano, con taxi gialli e bianchi parcheggiati davanti.",
+    "awz-chatgpt-02.webp": "Nella sala partenze le luci del soffitto a cassettoni si riflettono sul pavimento lucido, con pochi viaggiatori sparsi tra le file di sedute.",
+    "awz-chatgpt-03.webp": "Un sole basso indora il vecchio terminal mentre tre passeggeri con le borse attraversano il piazzale verso l'edificio.",
+    "awz-chatgpt-04.webp": "I passeggeri salgono su una scaletta con la scritta “IranAir”, uno si volta a salutare, mentre altri attendono sul piazzale sottostante.",
+    "awz-chatgpt-05.webp": "Di notte la facciata del terminal brilla di scritte persiane e inglesi blu, con moto e cartelloni pubblicitari appoggiati al muro.",
+    "awz-chatgpt-06.webp": "Un jet con motori posteriori attende davanti al vecchio terminal a strisce arancioni e blu su un piazzale bagnato dalla pioggia, con la torre alla sua destra.",
+    "awz-chatgpt-07.webp": "Di notte il nome dell'aeroporto brilla sopra l'ingresso del terminal, con alcune auto ferme sul piazzale antistante."
   },
   "AXF": {
     "axf-sat-1.webp": "Nell'immagine satellitare, l'Aeroporto di Alxa Left Banner Bayanhot (AXF) si confonde con il terreno arido e la terra brulla circostanti."
@@ -728,6 +832,9 @@
     "axt-baidu-1.webp": "Il terminal di Akita al crepuscolo — la scritta '秋田空港' sopra la facciata color mattone, la torre di controllo al centro e una luce calda dietro i vetri.",
     "axt-baidu-2.webp": "La facciata del terminal di giorno — fasce di rivestimento rosso ruggine tra vetrate scure, con poco traffico sulla strada antistante.",
     "axt-baidu-3.webp": "Accanto all'ingresso del terminal — colonne e fioriere sotto l'intradosso arancione, un camminamento che porta al parcheggio, più avanti."
+  },
+  "AXU": {
+    "axu-page-2.webp": "La targa del terminal dell'aeroporto di Axum — caratteri amarici accanto a 'AXUM YOHANNES IV AIRPORT', il marchio di Ethiopian Airlines sopra (fotografata dopo la riapertura del 2024)."
   },
   "AYJ": {
     "ayj-sat-1.webp": "Vista satellitare: l'Aeroporto Internazionale Maharshi Valmiki (AYJ) si trova tra città, terreni agricoli e vegetazione."

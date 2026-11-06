@@ -1,12 +1,40 @@
 {
   "_note": "2026-10-17: no verifiable ground photo could be fetched; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "atw-sat-1.webp": {
+    "zh": "卫星视角：两条跑道在农田与城镇之间交叉，航站楼与机坪位于机场中部。",
+    "en": "Satellite view: two runways cross between farmland and town, with the terminal and apron in the middle of the field."
+  },
+  "atw-chatgpt-01.webp": {
+    "zh": "航站楼入口的弧形采光顶下，门楣上写着阿普尔顿国际机场，砖砌门柱旁是通往大厅的玻璃门。",
+    "en": "Beneath a curved canopy, the sign over the entrance reads Appleton International Airport, with brick pillars and glass doors leading into the hall."
+  },
+  "atw-chatgpt-02.webp": {
+    "zh": "晴天里，三架蓝橙涂装的客机并排停在廊桥旁，航站楼屋顶铺着太阳能板，远处是滑行道与草地。",
+    "en": "On a clear day three blue-and-orange airliners stand side by side at the jet bridges, with solar panels on the terminal roof and taxiways beyond."
+  },
+  "atw-chatgpt-03.webp": {
+    "zh": "草地上方的跑道上，一架美国鹰航空的双发支线客机正加速滑跑，机尾是红白蓝条纹，天空堆着积云。",
+    "en": "A twin-engine American Eagle regional jet accelerates along the runway past tall grass, its tail in red, white and blue stripes under cumulus clouds."
+  },
+  "atw-chatgpt-04.webp": {
+    "zh": "航站楼大厅里，挑高的玻璃幕墙下是抛光地面与弧形吊顶，圆形服务台前有一名旅客拖着行李经过。",
+    "en": "Inside the terminal a double-height glass wall rises above polished floors and a curved ceiling, with a traveller wheeling luggage past the round service desk."
+  },
+  "atw-chatgpt-05.webp": {
+    "zh": "晴空下，三根旗杆立在航站楼前的车道旁，深色顶棚下是入口，左侧远处耸立着机场塔台。",
+    "en": "Three flagpoles stand beside the roadway in front of the terminal, whose entrance shelter is dark beneath a clear sky, with the control tower off to the left."
+  },
+  "atw-chatgpt-06.webp": {
+    "zh": "日落后的机坪上，两架联合航空涂装的支线客机停在廊桥边，塔台与跑道尽头的橙红晚霞构成剪影。",
+    "en": "After sunset two regional jets in United colours wait at the jet bridges while the tower and the afterglow over the field fade into silhouette."
+  },
+  "atw-chatgpt-07.webp": {
+    "zh": "候机区的木质曲面吊顶下排着一列列灰色座椅，落地窗外是停机坪，一名工作人员推着清洁车走过。",
+    "en": "Rows of grey seats sit beneath a curving wooden ceiling in the gate lounge, where a staff member pushes a cleaning cart past windows looking onto the apron."
+  },
   "_skip": [
     "atw-baidu-1.webp",
     "atw-baidu-2.webp",
     "atw-baidu-3.webp"
-  ],
-  "atw-sat-1.webp": {
-    "zh": "卫星视角：两条跑道在农田与城镇之间交叉，航站楼与机坪位于机场中部。",
-    "en": "Satellite view: two runways cross between farmland and town, with the terminal and apron in the middle of the field."
-  }
+  ]
 }

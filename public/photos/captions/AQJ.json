@@ -1,12 +1,40 @@
 {
   "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
+  "aqj-sat-1.webp": {
+    "zh": "卫星视角：一条跑道与平行滑行道铺在沙漠中，航站楼与机坪在跑道中段。",
+    "en": "Satellite view: a runway and parallel taxiway laid across desert, with the terminal and apron at its midpoint."
+  },
+  "aqj-chatgpt-01.webp": {
+    "zh": "亚喀巴机场航站楼米白色外墙沿弧线展开，墙上写着机场的阿拉伯文与英文名称。",
+    "en": "The airport's cream terminal curves along the roadside, its facade lettered with the name in Arabic and English."
+  },
+  "aqj-chatgpt-02.webp": {
+    "zh": "旅客提着行李走过机坪，登机梯车停在白色客机旁，远处是干燥的山影。",
+    "en": "Passengers carry their bags across the apron toward boarding stairs parked beside a white narrow-body jet, with dry hills beyond."
+  },
+  "aqj-chatgpt-03.webp": {
+    "zh": "白色管制塔底部呈喇叭状向外张开，塔台顶部是环形玻璃窗，背后是裸露的荒山。",
+    "en": "A white control tower flares outward at its base and carries a ring of glass at the top, with bare desert mountains rising behind."
+  },
+  "aqj-chatgpt-04.webp": {
+    "zh": "旅客拖着行李箱从到达厅门口走出，遮阳篷下是玻璃门与一排等候的人。",
+    "en": "Travellers wheel their suitcases out of the arrivals entrance, where a fabric canopy shades the glass doors and a cluster of waiting people."
+  },
+  "aqj-chatgpt-05.webp": {
+    "zh": "从高处看，出发厅前的道路中间隔着修剪整齐的绿篱，斑马线横过路面。",
+    "en": "From above, a clipped hedge runs down the middle of the road in front of the departures hall, with a zebra crossing laid across it."
+  },
+  "aqj-chatgpt-06.webp": {
+    "zh": "机坪上依次停着一排小型公务机，白色机身反射着午后的光，远处是荒山。",
+    "en": "A row of small business jets stands parked across the apron, their white fuselages catching the afternoon light against bare hills."
+  },
+  "aqj-chatgpt-07.webp": {
+    "zh": "水柱从两侧喷向客机，在机身上方架起一道水门，地勤人员站在一旁观看。",
+    "en": "Water jets spray in from both sides to arch over the airliner, while ground crew in hi-vis vests stand back and watch."
+  },
   "_skip": [
     "aqj-baidu-1.webp",
     "aqj-baidu-2.webp",
     "aqj-baidu-3.webp"
-  ],
-  "aqj-sat-1.webp": {
-    "zh": "卫星视角：一条跑道与平行滑行道铺在沙漠中，航站楼与机坪在跑道中段。",
-    "en": "Satellite view: a runway and parallel taxiway laid across desert, with the terminal and apron at its midpoint."
-  }
+  ]
 }

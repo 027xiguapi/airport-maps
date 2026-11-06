@@ -1,6 +1,5 @@
 {
   "_note": "The Baidu downloads were hotel listings and a cabin interior. The two usable pictures come from the Airways Museum's Alice Springs tower page (CAHS collection photographs, credits as captioned): the tower with a Fokker F.27 on the apron (c. 1970) and an aerial of the field.",
-  "_skip": ["asp-baidu-1.webp", "asp-baidu-2.webp", "asp-baidu-3.webp", "asp-page-1.webp"],
   "asp-page-2.webp": {
     "zh": "爱丽丝泉机场的老塔台：砖砌塔身顶着玻璃指挥室，机坪上一架福克 F.27 客机正待出发（约 1970 年；Terry Martin 摄，澳大利亚民航史学会 CAHS 收藏，经 Airways Museum 提供）。",
     "en": "Alice Springs' old control tower — a brick shaft under the glazed cab, a Fokker F.27 waiting on the apron (c. 1970; photo Terry Martin, CAHS collection, via the Airways Museum)."
@@ -8,5 +7,34 @@
   "asp-page-3.webp": {
     "zh": "爱丽丝泉机场俯瞰：跑道与滑行道铺在红土荒漠上，塔台、航站楼与停机坪排成一列（澳大利亚民航史学会 CAHS 收藏，经 Airways Museum 提供）。",
     "en": "Alice Springs from the air — runways and taxiways laid across the red desert, the tower, terminal and apron lined up along the field (CAHS collection, via the Airways Museum)."
-  }
+  },
+  "asp-chatgpt-01.webp": {
+    "zh": "航站楼外的落客道排列着红色立柱，白色遮阳帆连成一片，楼顶挂着澳洲航空的招牌，路边停着白色的车。",
+    "en": "Red columns and white shade sails line the terminal kerbside, the Qantas sign on the fascia above, with cars and a white van waiting outside."
+  },
+  "asp-chatgpt-02.webp": {
+    "zh": "航拍视图显示长跑道、滑行道与机坪，机坪上停着几架小飞机，航站楼、机库和停车场散落在红土荒原上。",
+    "en": "An aerial view picks out the long runway, taxiway and apron with a few light aircraft parked, the terminal, hangars and car parks dotted over red desert ground."
+  },
+  "asp-chatgpt-03.webp": {
+    "zh": "机坪上一架客机的红色尾翼写着维珍字样，尾吊发动机清晰可见，两名地勤站在机翼下，前景开着黄色野花。",
+    "en": "The red tail of a Virgin airliner fills the frame above its rear-mounted engines, two ground crew standing under the wing among yellow wildflowers."
+  },
+  "asp-chatgpt-04.webp": {
+    "zh": "候机区里一排黑色座椅空着，旁边的旅行社柜台已经拉下格栅，彩条墙面立在走廊边，磨光地面映着顶灯。",
+    "en": "Empty black seats fill a quiet departures lounge, the travel agency counter beside them closed behind its grille, striped wall panels and a polished floor under ceiling lights."
+  },
+  "asp-chatgpt-05.webp": {
+    "zh": "航拍俯瞰红土机坪，四架客机并排停在土色停机位上，远处一条跑道横过灌木荒原，天际是低矮的山脊。",
+    "en": "An aerial view looks down on four airliners parked side by side on red earth stands, a runway crossing the scrub beyond and low ranges on the horizon."
+  },
+  "asp-chatgpt-06.webp": {
+    "zh": "一架支线客机正从荒原跑道起飞，红色尾翼在晴空下很醒目，跑道另一侧停着两架封存的客机，前景是枯草。",
+    "en": "A QantasLink regional jet climbs away from the desert runway, red tail bright against the clear sky, while two stored airliners sit parked across the strip beyond dry grass."
+  },
+  "asp-chatgpt-07.webp": {
+    "zh": "值机大厅里排开澳洲航空的柜台，红色隔离带拉出蛇形通道，一块防疫提示牌立在队首，地毯铺着蓝黄花纹。",
+    "en": "Qantas check-in counters line the hall behind red queue barriers snaking toward a health notice board, all set on a carpet patterned in blue and yellow."
+  },
+  "_skip": ["asp-baidu-1.webp", "asp-baidu-2.webp", "asp-baidu-3.webp", "asp-page-1.webp"]
 }

@@ -1,10 +1,38 @@
 {
   "_note": "2026-10-17: no verifiable ground photo found; a labelled Esri World Imagery satellite view of the airport is published instead.",
-  "_skip": [
-    "awz-baidu-1.webp"
-  ],
   "awz-sat-1.webp": {
     "zh": "卫星视角：跑道平行于阿瓦士的城市路网，航站楼与机坪在跑道中段。",
     "en": "Satellite view: the runway runs parallel to Ahvaz's street grid, with the terminal and apron at its midpoint."
-  }
+  },
+  "awz-chatgpt-01.webp": {
+    "zh": "白天航站楼正面写着英文与波斯文机场名称，站前停满黄白两色出租车。",
+    "en": "The terminal front carries the airport's name in English and Persian, with yellow and white taxis parked outside."
+  },
+  "awz-chatgpt-02.webp": {
+    "zh": "候机大厅里，格纹吊顶的灯光映在光洁地砖上，成排座椅间只有零星旅客。",
+    "en": "Inside the departure hall, lights from the coffered ceiling reflect on the polished floor, a few travellers scattered among rows of seats."
+  },
+  "awz-chatgpt-03.webp": {
+    "zh": "夕阳把老航站楼染成金黄色，三名旅客提着行李从机坪走向大楼。",
+    "en": "Low sun turns the old terminal gold as three passengers with bags walk across the apron toward the building."
+  },
+  "awz-chatgpt-04.webp": {
+    "zh": "旅客沿着印有「IranAir」字样的舷梯登机，有人回头挥手，机坪上还有人等候。",
+    "en": "Passengers climb airstairs marked \"IranAir\", one turning to wave, while others wait on the apron below."
+  },
+  "awz-chatgpt-05.webp": {
+    "zh": "航站楼外墙的波斯文与英文招牌在夜里亮起蓝光，墙边靠着广告牌和摩托车。",
+    "en": "At night the terminal facade glows with blue Persian and English lettering, motorbikes and poster boards against the wall."
+  },
+  "awz-chatgpt-06.webp": {
+    "zh": "阴雨天里机坪积水反光，一架尾部双发的客机停在橙蓝条纹的老航站楼前，塔台在右侧。",
+    "en": "A rear-engined jet waits before the orange-and-blue striped old terminal on a rain-soaked apron, the tower to its right."
+  },
+  "awz-chatgpt-07.webp": {
+    "zh": "夜里航站楼入口上方亮着机场名招牌，广场上停着几辆汽车。",
+    "en": "At night the airport's name glows above the terminal entrance, a few cars standing on the forecourt."
+  },
+  "_skip": [
+    "awz-baidu-1.webp"
+  ]
 }

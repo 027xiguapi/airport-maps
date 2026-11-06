@@ -1,8 +1,36 @@
 {
   "_note": "auh-baidu-2 and auh-baidu-3 carry an 'iniBuilds' watermark — they are flight-simulator renders of Zayed International, not photographs.",
-  "_skip": ["auh-baidu-2.webp", "auh-baidu-3.webp"],
   "auh-baidu-1.webp": {
     "zh": "扎耶德国际机场航站楼的波浪形屋顶：一架客机正好从屋顶上方飞过，前景是落客车道与遮阳棚。",
     "en": "The wave-form roof of Zayed International Airport — an airliner passing overhead, with the drop-off road and sun canopies in the foreground."
-  }
+  },
+  "auh-chatgpt-01.webp": {
+    "zh": "航站楼中央大厅里，巨大的白色拱肋在头顶交错，弧形座椅岛周围是免税店与指示屏，远处有旅客走动。",
+    "en": "Huge white arches sweep overhead in the main hall, where a curved seating island sits among duty-free shops and screens with travellers moving in the distance."
+  },
+  "auh-chatgpt-02.webp": {
+    "zh": "从空中俯瞰，波浪形屋顶的航站楼被高架道路环绕，右侧停车楼顶铺满太阳能板，机坪上停着客机。",
+    "en": "From the air the wave-roofed terminal is ringed by elevated roads, with solar panels covering the car park on the right and airliners parked on the apron."
+  },
+  "auh-chatgpt-03.webp": {
+    "zh": "暮色中，呈 X 形展开的航站楼灯火通明，一架客机正面停靠在廊桥前，机坪与滑行道在灯光下清晰可见。",
+    "en": "At dusk the X-shaped terminal glows with light, an airliner faces the gate head-on, and the apron and taxiways stand out sharply under the floodlights."
+  },
+  "auh-chatgpt-04.webp": {
+    "zh": "蓝天下，航站楼的玻璃幕墙随波浪形屋顶起伏，白色檐口在阳光里泛着光，下方是车道与遮阳棚。",
+    "en": "Under a blue sky the terminal's glass curtain wall rises and falls with its wave-shaped roof, its white edge bright in the sun above the roadway canopies."
+  },
+  "auh-chatgpt-05.webp": {
+    "zh": "值机大厅里，一排排白色柜台在柱子间延展，柱身上标着 C 与 D 区，头顶是层叠的拱形屋盖与指示灯。",
+    "en": "Long rows of white check-in counters stretch between tall pillars marked C and D, beneath layered arched canopies and lit direction screens."
+  },
+  "auh-chatgpt-06.webp": {
+    "zh": "夜里，航站楼波浪形外墙被灯带照亮，落客车道上的巴士正缓缓驶过，路边立着编号 1 到 7 的柱牌。",
+    "en": "At night the terminal's wave-shaped facade is washed with light while a bus rolls along the drop-off road past numbered pillars from 1 to 7."
+  },
+  "auh-chatgpt-07.webp": {
+    "zh": "航拍视角里，航站楼起伏的金属屋顶占据画面，下方是伸出的廊桥与停机位，左侧停车楼铺满太阳能板。",
+    "en": "This aerial look takes in the rippling metal roof of the terminal, the jet bridges and stands below it, and the solar-panelled car park to the left."
+  },
+  "_skip": ["auh-baidu-2.webp", "auh-baidu-3.webp"]
 }
