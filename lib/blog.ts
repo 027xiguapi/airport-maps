@@ -3,13 +3,13 @@ import { join } from 'node:path';
 import { LOCALE_META, SOURCE_LOCALE, localizedPath, type Locale } from './i18n/config';
 
 /**
- * Blog content store. Articles live in `public/blog/<slug>/` — one directory per
- * article, images beside the text — so an article is a self-contained folder
- * that can be dropped in from the publishing tool of the day and checked by
- * `scripts/check-blog.mjs`. The Markdown is read at build time; the images are
- * served straight out of `public/`, which is why they live there rather than in
- * the database with the long-form guides (lib/content.ts) — an article is a
- * folder of images with text, not a single document.
+ * Blog content store. An article is one self-contained folder under
+ * `public/blog/<slug>/`: its Markdown beside the images the text shows, so a
+ * piece can be dropped in from whatever publishing tool produced it and checked
+ * by `scripts/check-blog.mjs`. Everything is read from disk at build/ISR time —
+ * articles have no database table, unlike the long-form guides in
+ * lib/content.ts, because an article is a folder of images with text rather
+ * than a single document.
  *
  *   public/blog/<slug>/<slug>.md      article: flat frontmatter + Markdown body
  *   public/blog/<slug>/<slug>.en.md   English version
@@ -19,7 +19,29 @@ import { LOCALE_META, SOURCE_LOCALE, localizedPath, type Locale } from './i18n/c
  *   public/blog/<slug>/<slug>.ko.md   Korean version (translated from the English one)
  *   public/blog/<slug>/<slug>.tw.md   derived Traditional Chinese, written by
  *                                     scripts/build-hant.mjs
- *   public/blog/<slug>/images/N.ext   referenced from the body as ./images/N.ext
+ *   public/blog/<slug>/images/N.ext   body images, referenced as ./images/N.ext
+ *
+ * Frontmatter is flat `key: value`: `title`, `summary`, `date`, plus optionally
+ * `updated`, `source`, `tags` and `cover`. `cover` is a path inside the
+ * article's own folder (`images/0.webp`), never an absolute URL, because the
+ * folder — not one file — is the unit that ships and that check-blog.mjs
+ * validates.
+ *
+ * Images, in detail. They are ordinary files in `public/`, served byte-for-byte
+ * by Next at `/blog/<slug>/images/N.ext`, which is why they sit here instead of
+ * in the database with the guide text: nothing has to import, hash or resize
+ * them, and an editor can add a figure by copying it into the folder. The body
+ * only ever names a figure relatively (`./images/3.webp`); `Markdown` prepends
+ * the article's URL base (`imageBase`) so the same Markdown renders anywhere,
+ * and `blogImageBase()` / `blogCoverUrl()` are the only two URL builders — a
+ * third one would be a bug. Because the bytes are served as-is, the extension
+ * has to match the real payload (WeChat exports serve WebP under `.jpg`, and a
+ * mismatch would ship the wrong Content-Type); check-blog.mjs enforces that,
+ * along with every reference resolving, images living in `images/`, and every
+ * translation carrying exactly the same figures as the source. Presentation is
+ * deliberately left to CSS: figures are phone screenshots and posters at wildly
+ * different shapes, so the article page caps their height instead of resizing
+ * files, and the card grids show covers `object-contain` in a fixed frame.
  *
  * Language coverage: the articles are written in Chinese, translated into
  * English, German, French, Italian and Korean, and derived into Traditional
@@ -255,10 +277,18 @@ export function blogPostAlternates(slug: string): Record<string, string> {
  * CTA, the US TSA, Priority Pass, Airports Council International, Singapore's
  * GST, Batumi's "BUS" signage and so on. Skipped while indexing so an article
  * can never attach itself to an unrelated airport page.
+ *
+ * `LED` is deliberately not listed. The signage articles write "LED 屏" in
+ * prose, which none of the patterns below match, whereas Saint Petersburg's
+ * article names the airport itself as （LED） — blocking the code would only lose
+ * a real airport. Codes that are currencies or shops rather than airports (the
+ * rand's `ZAR`, Moscow's `GUM` department store) need no entry either: neither
+ * is in the airport directory, and the article page drops whatever
+ * `getAirportsByCodes` does not return.
  */
 const NON_AIRPORT_CODES = new Set([
   'ATM', 'BUS', 'CAT', 'RER', 'ACI', 'GST', 'CTA', 'TSA', 'PPS',
-  'CNY', 'CNN', 'THE', 'MAS', 'FOR', 'PRM', 'SAT', 'INN', 'LED', 'TER', 'CHS',
+  'CNY', 'CNN', 'THE', 'MAS', 'FOR', 'PRM', 'SAT', 'INN', 'TER', 'CHS',
 ]);
 
 /** One article's claim on an airport code. */
@@ -270,7 +300,27 @@ type ArticleRef = {
   date: string;
 };
 
-let airportIndexCache: { signature: string; index: Map<string, ArticleRef[]> } | null = null;
+/** One airport a single article covers. */
+type ArticleCode = {
+  code: string;
+  /** True when the article links this airport's page itself. */
+  linked: boolean;
+};
+
+/**
+ * Both directions of the airport ↔ article relation, so each page can answer
+ * the other's question without a second scan: the airport page asks which
+ * articles cover it (`byAirport`), the article page asks which airports it
+ * covers (`byArticle`).
+ */
+type AirportIndex = {
+  /** Airport code -> the articles that cover it. */
+  byAirport: Map<string, ArticleRef[]>;
+  /** Article slug -> the airports it covers, in first-mention order. */
+  byArticle: Map<string, ArticleCode[]>;
+};
+
+let airportIndexCache: { signature: string; index: AirportIndex } | null = null;
 
 /** Fingerprint of the article tree, so an edit or a new folder rebuilds the index. */
 function articleSignature(): string {
@@ -290,38 +340,56 @@ function articleSignature(): string {
 }
 
 /**
- * Airport code -> the articles that cover it. Built from the Chinese source of
- * every article (all of them have one) and cached for the process: the airport
- * pages ask for it once each, and re-reading 88 files per page would be silly.
- *
- * A code counts when the article links `/airport/<CODE>` or names it as an
- * airport — `（LHR）` in a table, `机场代码 **WUH**` in a fact box. Prose that
- * merely happens to contain three capitals is ignored by design.
+ * The airport codes one article names, deduplicated, in the order the article
+ * first mentions them. A code counts when the article links `/airport/<CODE>`
+ * or names it as an airport — `（LHR）` in a table, `机场代码 **WUH**` in a fact
+ * box. Prose that merely happens to contain three capitals is ignored by
+ * design, which is what keeps `NON_AIRPORT_CODES` short.
  */
-function articleAirportIndex(): Map<string, ArticleRef[]> {
+function articleMentions(text: string): ArticleCode[] {
+  // One pass so the order is the article's own; the alternatives mirror the
+  // three ways an article has ever named an airport.
+  const mention = /\/airport\/([A-Z]{3})\b|[（(]([A-Z]{3})[）)]|机场代码\s*\*{0,2}([A-Z]{3})/g;
+  const found = new Map<string, ArticleCode>();
+  for (const match of text.matchAll(mention)) {
+    const code = match[1] ?? match[2] ?? match[3];
+    if (!code || NON_AIRPORT_CODES.has(code)) continue;
+    const linked = match[1] !== undefined;
+    const seen = found.get(code);
+    if (seen) seen.linked = seen.linked || linked;
+    else found.set(code, { code, linked });
+  }
+  return [...found.values()];
+}
+
+/**
+ * Airport ↔ article index, built from the Chinese source of every article (all
+ * of them have one) and cached for the process: each airport page asks for its
+ * articles and each article page for its airports, so re-reading 100+ files per
+ * page would be silly. The signature is the article tree's fingerprint, so an
+ * edited article or a new folder rebuilds it.
+ */
+function airportIndex(): AirportIndex {
   const signature = articleSignature();
   if (airportIndexCache?.signature === signature) return airportIndexCache.index;
 
-  const index = new Map<string, ArticleRef[]>();
+  const byAirport = new Map<string, ArticleRef[]>();
+  const byArticle = new Map<string, ArticleCode[]>();
   for (const slug of articleDirs()) {
     const path = join(process.cwd(), 'public', 'blog', slug, `${slug}.md`);
     if (!existsSync(path)) continue;
     const text = readFileSync(path, 'utf8');
-
-    const linked = new Set([...text.matchAll(/\/airport\/([A-Z]{3})\b/g)].map((m) => m[1]));
-    const named = new Set([
-      ...[...text.matchAll(/[（(]([A-Z]{3})[）)]/g)].map((m) => m[1]),
-      ...[...text.matchAll(/机场代码\s*\*{0,2}([A-Z]{3})/g)].map((m) => m[1]),
-    ]);
     const date = /^date:\s*(\d{4}-\d{2}-\d{2})\s*$/m.exec(text)?.[1] ?? '';
-
-    for (const code of new Set([...linked, ...named])) {
-      if (NON_AIRPORT_CODES.has(code)) continue;
-      if (!index.has(code)) index.set(code, []);
-      index.get(code)!.push({ slug, linked: linked.has(code), date });
+    const mentions = articleMentions(text);
+    byArticle.set(slug, mentions);
+    for (const { code, linked } of mentions) {
+      const refs = byAirport.get(code);
+      if (refs) refs.push({ slug, linked, date });
+      else byAirport.set(code, [{ slug, linked, date }]);
     }
   }
 
+  const index = { byAirport, byArticle };
   airportIndexCache = { signature, index };
   return index;
 }
@@ -333,7 +401,7 @@ function articleAirportIndex(): Map<string, ArticleRef[]> {
  * as Chinese text on another language's page.
  */
 export function listBlogPostsForAirport(locale: Locale, iata: string, limit = 4): BlogPost[] {
-  const refs = articleAirportIndex().get(iata.toUpperCase()) ?? [];
+  const refs = airportIndex().byAirport.get(iata.toUpperCase()) ?? [];
   return refs
     .map((ref) => ({ ref, post: readPost(ref.slug, locale) }))
     .filter((entry): entry is { ref: ArticleRef; post: BlogPost } => entry.post !== null)
@@ -348,13 +416,29 @@ export function listBlogPostsForAirport(locale: Locale, iata: string, limit = 4)
 }
 
 /**
+ * The airports one article covers — the article page's "airports in this
+ * article" block, and the mirror image of `listBlogPostsForAirport`. Coded
+ * airports the article links itself come first (a deliberate reference outranks
+ * a passing mention), then the rest in first-mention order. Codes the directory
+ * does not carry are filtered out by the caller (`getAirportsByCodes`), so a
+ * mention of an airport this site has no page for links nowhere.
+ */
+export function blogPostAirportCodes(slug: string): string[] {
+  const refs = airportIndex().byArticle.get(slug) ?? [];
+  return [
+    ...refs.filter((ref) => ref.linked).map((ref) => ref.code),
+    ...refs.filter((ref) => !ref.linked).map((ref) => ref.code),
+  ];
+}
+
+/**
  * Airport code -> its newest article date. The homepage's "recently updated"
  * list and the sitemap use it so a fresh guide counts as fresh content for the
  * airport it covers, even when the airport record itself has not changed.
  */
 export function blogAirportDates(): Map<string, string> {
   const dates = new Map<string, string>();
-  for (const [code, refs] of articleAirportIndex()) {
+  for (const [code, refs] of airportIndex().byAirport) {
     const newest = refs.reduce((latest, ref) => (ref.date > latest ? ref.date : latest), '');
     if (newest) dates.set(code, newest);
   }

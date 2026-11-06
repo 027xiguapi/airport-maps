@@ -3,29 +3,53 @@ import { join } from 'node:path';
 import { SOURCE_LOCALE, type Locale } from './i18n/config';
 
 /**
- * Real-world photos of an airport, shown in the page's photo gallery.
+ * Real-world photos of an airport: the airport page's photo gallery, the
+ * picture that leads its link previews, and the homepage's "latest photos"
+ * strip.
  *
- * Acquisition lives outside the app: third-party photos are downloaded into
- * `public/photos/<IATA>/` (one directory per airport, `<iata>-<source>-<n>.webp`
- * file names) and every file is recorded in `public/photos/manifest.json` with
- * its source page, host and pixel size. That manifest is the provenance record
- * shown as the photo's attribution line — a photo that is not in it never
- * renders, so nothing appears on the site without a traced source. A batch also
- * stamps `addedAt` on the entries it writes, which is what the homepage's
- * "latest photos" carousel orders by.
+ * Everything lives under `public/photos/`:
  *
- * Captions are editorial: `public/photos/captions/<IATA>.json` holds the
- * authored `zh` + `en` one-liners that describe what each photo actually shows
- * (written from the picture, not the file name); `public/photos/captions.tw.json`
- * is the generated Traditional-Chinese copy, produced by
- * `scripts/build-photo-captions.mjs` — the same derived-not-authored split the
- * rest of the site uses for `tw`.
+ *   <STEM>/<iata>-<source>-<n>.webp   the pictures, served as-is at
+ *                                     /photos/<STEM>/<file>
+ *   manifest.json                     one entry per file — host, pageUrl,
+ *                                     imageUrl, title, pixel size, and the
+ *                                     `addedAt` date of the importing batch
+ *   captions/<STEM>.json              the authored `zh` + `en` one-liners per
+ *                                     file, plus `_skip` for anything that must
+ *                                     not show
+ *   captions.tw.json                  generated Traditional Chinese copy
+ *                                     (scripts/build-photo-captions.mjs)
+ *   captions.<de|fr|it|ko>.json       translations of the English captions
  *
- * The caption doubles as the publication gate: a photo enters the gallery
- * exactly when its caption has been written, and `_skip` takes one back out.
- * A downloaded batch therefore stays invisible until an editor has looked at
- * each picture — nothing reaches a page un-reviewed — and airports whose
- * photos have not been fetched yet simply have no gallery.
+ * Acquisition lives outside the app: the `scripts/fetch-airport-photos*.mjs`
+ * batch tools download third-party pictures into the airport's directory and
+ * record each one in the manifest, which is what the credit line under the
+ * figure prints. A file that is not in the manifest never renders, so nothing
+ * reaches the site without a traced source.
+ *
+ * Two gates stand between a downloaded batch and the gallery:
+ *
+ *   1. Provenance and presence — the manifest must name the file and the file
+ *      must still exist on disk. A manifest row whose file was deleted renders
+ *      nothing rather than a broken image.
+ *   2. Review — the caption is the publication gate. `captions/<STEM>.json`
+ *      holds a one-liner written from the picture (not from the file name), and
+ *      `_skip` takes back out a frame an editor decided does not show the
+ *      airport (a stock aircraft shot, a product mock-up). A fresh batch is
+ *      therefore invisible until someone has looked at every frame, and an
+ *      airport with no batch yet simply has no gallery section.
+ *
+ * `STEM` is the IATA code, except for codes that cannot be file or directory
+ * names on Windows — `AUX` is a legacy DOS device name, so its directory and
+ * caption file use the escaped stem from `scripts/photo-file-aliases.json`
+ * (`AUX_`). That table is shared with the generator and validation scripts so
+ * the on-disk names cannot drift; public URLs and the manifest key always use
+ * the real code.
+ *
+ * Captions resolve per locale: the authored `zh`/`en` pair, the derived `tw`,
+ * or a translated `de`/`fr`/`it`/`ko` file, with German, French, Italian and
+ * Korean falling back to English rather than Chinese — the same rule
+ * lib/content.ts follows.
  *
  * Server-side only — never import this from a client component.
  */

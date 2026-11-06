@@ -20,7 +20,14 @@ export const COMMENT_KINDS = ['airport', 'country', 'blog', 'page'] as const;
 export type CommentKind = (typeof COMMENT_KINDS)[number];
 
 /** Static Markdown pages that carry a thread (kind='page'). */
-export const COMMENT_PAGE_SLUGS = ['about', 'contact', 'sources', 'privacy', 'terms'] as const;
+export const COMMENT_PAGE_SLUGS = [
+  'about',
+  'contact',
+  'sources',
+  'privacy',
+  'disclaimer',
+  'terms',
+] as const;
 export type CommentPageSlug = (typeof COMMENT_PAGE_SLUGS)[number];
 
 /** Mirrors the `comments_author_len_chk` constraint (display-name snapshot). */

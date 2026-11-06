@@ -916,6 +916,7 @@ export const de: Messages = {
     contact: 'Kontakt',
     sources: 'Datenquellen',
     privacy: 'Datenschutz',
+    disclaimer: 'Haftungsausschluss',
     terms: 'Nutzungsbedingungen',
   },
 
@@ -976,6 +977,11 @@ export const de: Messages = {
     more: 'Lesen',
     all: 'Alle Beiträge',
     morePosts: 'Weitere Beiträge',
+    airportsKicker: 'Flughäfen',
+    airportsTitle: 'Flughäfen in diesem Beitrag',
+    airportsEn: 'Airports Covered',
+    airportsSub:
+      'Ein Klick öffnet die Flughafenseite mit Terminalplan, Bodenverkehr und FAQ.',
     back: 'Zurück zur Beitragsliste',
     empty: 'Noch keine Beiträge.',
     readingMinutes: (n: number) => `${n} Min. Lesezeit`,

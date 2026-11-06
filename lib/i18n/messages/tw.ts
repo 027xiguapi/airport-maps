@@ -874,6 +874,7 @@ export const tw: Messages = {
     contact: '聯絡我們',
     sources: '資料來源',
     privacy: '隱私政策',
+    disclaimer: '免責宣告',
     terms: '使用條款',
   },
 
@@ -949,6 +950,11 @@ export const tw: Messages = {
     all: '全部文章',
     /** 文章頁底部的相關文章列表。 */
     morePosts: '更多文章',
+    /** 文章頁的「本文涉及的機場」：正文提到的機場鏈回各自機場頁。 */
+    airportsKicker: 'Airports',
+    airportsTitle: '本文涉及的機場',
+    airportsEn: 'Airports Covered',
+    airportsSub: '點選進入對應機場頁：航廈地圖、地面交通與常見問題。',
     back: '返回文章列表',
     empty: '暫時還沒有文章。',
     readingMinutes: (n: number) => `約 ${n} 分鐘讀完`,

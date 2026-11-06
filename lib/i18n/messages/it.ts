@@ -955,6 +955,7 @@ export const it: Messages = {
     contact: 'Contatti',
     sources: 'Fonti dei dati',
     privacy: 'Privacy',
+    disclaimer: 'Disclaimer',
     terms: 'Termini di utilizzo',
   },
 
@@ -1028,6 +1029,11 @@ export const it: Messages = {
     more: 'Leggi',
     all: 'Tutti gli articoli',
     morePosts: 'Altri articoli',
+    airportsKicker: 'Aeroporti',
+    airportsTitle: 'Aeroporti citati in questo articolo',
+    airportsEn: 'Airports Covered',
+    airportsSub:
+      'Ogni link apre la pagina dell’aeroporto: mappa dei terminal, trasporti e FAQ.',
     back: 'Torna all’elenco degli articoli',
     empty: 'Nessun articolo al momento.',
     readingMinutes: (n: number) => `${n} min di lettura`,

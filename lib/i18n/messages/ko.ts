@@ -905,6 +905,7 @@ export const ko: Messages = {
     contact: '문의하기',
     sources: '데이터 출처',
     privacy: '개인정보 처리방침',
+    disclaimer: '면책 고지',
     terms: '이용약관',
   },
 
@@ -975,6 +976,10 @@ export const ko: Messages = {
     all: '전체 글',
     /** Related-post list at the bottom of an article. */
     morePosts: '더 많은 글',
+    airportsKicker: '공항',
+    airportsTitle: '이 글에 나오는 공항',
+    airportsEn: 'Airports Covered',
+    airportsSub: '공항 페이지에서 터미널 지도, 지상 교통, 자주 묻는 질문을 확인할 수 있습니다.',
     back: '글 목록으로 돌아가기',
     empty: '아직 글이 없습니다.',
     readingMinutes: (n: number) => `약 ${n}분 소요`,

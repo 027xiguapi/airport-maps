@@ -9,6 +9,7 @@ import { getMessages } from '@/lib/i18n';
 import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { getAuthMessages, getDealsMessages } from '@/lib/i18n/deals';
 import { hasBlog } from '@/lib/blog';
+import { ADSENSE_REVIEW_MODE } from '@/lib/site';
 
 export default function Header({ locale }: { locale: Locale }) {
   const t = getMessages(locale);
@@ -19,7 +20,10 @@ export default function Header({ locale }: { locale: Locale }) {
     { href: '/', label: t.nav.home },
     { href: '/airports', label: t.nav.airports },
     { href: '/countries', label: t.nav.countries },
-    { href: '/deals', label: d.kicker },
+    // Review mode (lib/site.ts) keeps the fare board out of the navigation: the
+    // page still resolves at /deals, it is simply not advertised while the
+    // advertising account is being reviewed.
+    ...(ADSENSE_REVIEW_MODE ? [] : [{ href: '/deals', label: d.kicker }]),
     { href: '/tool', label: t.nav.tools },
     // Articles are published in Chinese, so the link appears only where the
     // /blog routes exist instead of leading to a 404.

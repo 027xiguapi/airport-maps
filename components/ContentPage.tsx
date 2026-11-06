@@ -10,7 +10,13 @@ import { getAuthMessages } from '@/lib/i18n/deals';
 import { getPage } from '@/lib/content';
 
 /** Slugs available to the about / contact / sources / privacy / terms routes. */
-export type PageSlug = 'about' | 'contact' | 'sources' | 'privacy' | 'terms';
+export type PageSlug =
+  | 'about'
+  | 'contact'
+  | 'sources'
+  | 'privacy'
+  | 'disclaimer'
+  | 'terms';
 
 /** Shared metadata for a Markdown page, driven by its stored title/summary. */
 export async function contentPageMetadata(locale: Locale, slug: PageSlug): Promise<Metadata> {
@@ -42,6 +48,7 @@ export default async function ContentPage({ locale, slug }: { locale: Locale; sl
     contact: t.footer.contact,
     sources: t.footer.sources,
     privacy: t.footer.privacy,
+    disclaimer: t.footer.disclaimer,
     terms: t.footer.terms,
   }[slug];
 

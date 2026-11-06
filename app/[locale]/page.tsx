@@ -39,7 +39,16 @@ import {
 import { coverUrl, mapImageCodes } from '@/lib/map-images';
 import { routeDestinationCounts } from '@/lib/routes';
 import { routeImageUrl } from '@/lib/route-images';
-import { absoluteUrl, ORG_NODE_ID, SITE_IMAGE, SITE_NAME, SITE_URL, WEBSITE_NODE_ID, webPageRights } from '@/lib/site';
+import {
+  absoluteUrl,
+  ADSENSE_REVIEW_MODE,
+  ORG_NODE_ID,
+  SITE_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+  WEBSITE_NODE_ID,
+  webPageRights,
+} from '@/lib/site';
 import { getAirportGeo } from '@/lib/airport-geo';
 import worldAirportsMeta from '@/lib/world-airports-meta.json';
 
@@ -163,15 +172,21 @@ export default async function HomePage({ params }: Props) {
   // Reader-submitted fares: rendered on the server for SEO and refreshed by
   // DealsBoard after mount, so a new submission appears without waiting for
   // the page's hourly ISR. A failed read degrades to the empty state.
-  const dealBoard = await listDeals({ locale, limit: 6 }).catch((error) => {
-    console.error('[home] deals query failed', error);
-    return { deals: [], total: 0 };
-  });
+  //
+  // In review mode (lib/site.ts) the section is not rendered at all, so the
+  // query is skipped with it: the homepage then costs one round trip less and
+  // carries no outbound booking links.
+  const dealBoard = ADSENSE_REVIEW_MODE
+    ? { deals: [], total: 0 }
+    : await listDeals({ locale, limit: 6 }).catch((error) => {
+        console.error('[home] deals query failed', error);
+        return { deals: [], total: 0 };
+      });
   const d = getDealsMessages(locale);
 
   // The newest articles, one row each; a locale without translations gets an
   // empty list and the section hides itself.
-  const blogPosts = getLatestBlogPosts(locale, 6);
+  const blogPosts = getLatestBlogPosts(locale, 10);
 
   // Comment counts for the three card sections below. One batched query for
   // every visible card; it rides the page's hourly ISR, so a new comment shows
@@ -461,14 +476,53 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      {/* ------------------------------------------------------------ blog */}
+      {/* Editorial first: the long-form articles are what a reader — and a
+          human reviewer — should meet before any data table, so the strip sits
+          directly under the hero. The one homepage section whose frame is
+          inline utilities rather than the shared `.section` family — same
+          declarations, one-to-one. */}
+      {blogPosts.length > 0 && (
+          <section className="mx-auto max-w-[1240px] px-6 pb-[8px] pt-16" id="blog">
+            <div className="mb-7 flex items-end justify-between gap-5 max-[820px]:flex-wrap max-[820px]:items-start max-[820px]:gap-y-2.5">
+              <div className="min-w-0">
+                <div className="mb-2 inline-flex items-center gap-[9px] font-display text-[12.5px] font-semibold uppercase tracking-[0.24em] text-sky-600 before:h-[2px] before:w-[26px] before:bg-[var(--amber)] before:content-['']">
+                  {t.blog.kicker}
+                </div>
+                <h2 className="text-[27px] font-black tracking-[0.01em] text-ink-heading">
+                  {t.blog.title}
+                  <span className="ml-3 font-display text-[15px] font-medium uppercase tracking-[0.14em] text-ink-faint">
+                  {t.blog.en}
+                </span>
+                </h2>
+                <p className="mt-1.5 max-w-[760px] text-[14px] text-ink-soft">{t.blog.sub}</p>
+              </div>
+              <Link
+                  className="inline-flex items-center gap-1.5 whitespace-nowrap text-[14px] font-semibold text-sky-600 transition-[gap] duration-150 hover:gap-2.5 max-[820px]:flex-none"
+                  href={localizedPath(locale, '/blog')}
+              >
+                {t.blog.all}
+                <ArrowIcon />
+              </Link>
+            </div>
+            <LatestPosts locale={locale} posts={blogPosts} commentCounts={commentCounts} />
+          </section>
+      )}
+
       {/* ------------------------------------------------------ flight deals */}
-      <DealsSection
-          locale={locale}
-          lang={LOCALE_META[locale].htmlLang}
-          labels={d}
-          deals={dealBoard.deals}
-          total={dealBoard.total}
-      />
+      {/* Withdrawn while the advertising account is under review (lib/site.ts):
+          a new site whose prime slot is a row of outbound booking links reads as
+          a traffic broker, and those buttons sit right where the ad slots will
+          be. Flip ADSENSE_REVIEW_MODE to false and rebuild to restore it. */}
+      {!ADSENSE_REVIEW_MODE && (
+        <DealsSection
+            locale={locale}
+            lang={LOCALE_META[locale].htmlLang}
+            labels={d}
+            deals={dealBoard.deals}
+            total={dealBoard.total}
+        />
+      )}
 
       {/* ------------------------------------------------------ latest photos */}
       {photoSlides.length > 0 && (
@@ -538,36 +592,6 @@ export default async function HomePage({ params }: Props) {
             }}
           />
         </section>
-      )}
-
-      {/* ------------------------------------------------------------ blog */}
-      {/* The one homepage section whose frame is inline utilities rather than
-          the shared `.section` family — same declarations, one-to-one. */}
-      {blogPosts.length > 0 && (
-          <section className="mx-auto max-w-[1240px] px-6 pb-[8px] pt-16" id="blog">
-            <div className="mb-7 flex items-end justify-between gap-5 max-[820px]:flex-wrap max-[820px]:items-start max-[820px]:gap-y-2.5">
-              <div className="min-w-0">
-                <div className="mb-2 inline-flex items-center gap-[9px] font-display text-[12.5px] font-semibold uppercase tracking-[0.24em] text-sky-600 before:h-[2px] before:w-[26px] before:bg-[var(--amber)] before:content-['']">
-                  {t.blog.kicker}
-                </div>
-                <h2 className="text-[27px] font-black tracking-[0.01em] text-ink-heading">
-                  {t.blog.title}
-                  <span className="ml-3 font-display text-[15px] font-medium uppercase tracking-[0.14em] text-ink-faint">
-                  {t.blog.en}
-                </span>
-                </h2>
-                <p className="mt-1.5 max-w-[760px] text-[14px] text-ink-soft">{t.blog.sub}</p>
-              </div>
-              <Link
-                  className="inline-flex items-center gap-1.5 whitespace-nowrap text-[14px] font-semibold text-sky-600 transition-[gap] duration-150 hover:gap-2.5 max-[820px]:flex-none"
-                  href={localizedPath(locale, '/blog')}
-              >
-                {t.blog.all}
-                <ArrowIcon />
-              </Link>
-            </div>
-            <LatestPosts locale={locale} posts={blogPosts} commentCounts={commentCounts} />
-          </section>
       )}
 
       {/* ------------------------------------------------------------- tools */}

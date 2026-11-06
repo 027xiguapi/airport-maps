@@ -873,6 +873,7 @@ export const zh = {
     contact: '联系我们',
     sources: '数据来源',
     privacy: '隐私政策',
+    disclaimer: '免责声明',
     terms: '使用条款',
   },
 
@@ -948,6 +949,11 @@ export const zh = {
     all: '全部文章',
     /** 文章页底部的相关文章列表。 */
     morePosts: '更多文章',
+    /** 文章页的「本文涉及的机场」：正文提到的机场链回各自机场页。 */
+    airportsKicker: 'Airports',
+    airportsTitle: '本文涉及的机场',
+    airportsEn: 'Airports Covered',
+    airportsSub: '点击进入对应机场页：航站楼地图、地面交通与常见问题。',
     back: '返回文章列表',
     empty: '暂时还没有文章。',
     readingMinutes: (n: number) => `约 ${n} 分钟读完`,

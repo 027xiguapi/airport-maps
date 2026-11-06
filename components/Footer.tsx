@@ -5,6 +5,7 @@ import { localizedPath, type Locale } from '@/lib/i18n/config';
 import { getDealsMessages } from '@/lib/i18n/deals';
 import { formatNumber } from '@/lib/format';
 import { getStats } from '@/lib/queries';
+import { ADSENSE_REVIEW_MODE } from '@/lib/site';
 
 /** The three intro columns share one type treatment, so it is written once. */
 const COL_TITLE_CLASSES =
@@ -28,13 +29,15 @@ export default async function Footer({ locale }: { locale: Locale }) {
     { href: '/', label: t.nav.home },
     { href: '/airports', label: t.nav.airports },
     { href: '/countries', label: t.nav.countries },
-    { href: '/deals', label: d.kicker },
+    // Unlinked during review (lib/site.ts); /deals itself still resolves.
+    ...(ADSENSE_REVIEW_MODE ? [] : [{ href: '/deals', label: d.kicker }]),
     // Chinese-only content: linked only in the locales that publish it.
     ...(hasBlog(locale) ? [{ href: '/blog', label: t.blog.nav }] : []),
     { href: '/about', label: t.footer.about },
     { href: '/contact', label: t.footer.contact },
     { href: '/sources', label: t.footer.sources },
     { href: '/privacy', label: t.footer.privacy },
+    { href: '/disclaimer', label: t.footer.disclaimer },
     { href: '/terms', label: t.footer.terms },
   ];
 

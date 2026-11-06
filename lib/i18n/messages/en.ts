@@ -915,6 +915,7 @@ export const en: Messages = {
     contact: 'Contact',
     sources: 'Data sources',
     privacy: 'Privacy policy',
+    disclaimer: 'Disclaimer',
     terms: 'Terms of use',
   },
 
@@ -988,6 +989,11 @@ export const en: Messages = {
     more: 'Read',
     all: 'All articles',
     morePosts: 'More articles',
+    /** Article page's "airports in this article" block (lib/blog.ts). */
+    airportsKicker: 'Airports',
+    airportsTitle: 'Airports in this article',
+    airportsEn: 'Airports Covered',
+    airportsSub: 'Open an airport page for its terminal map, ground transport and FAQ.',
     back: 'Back to the article list',
     empty: 'No articles yet.',
     readingMinutes: (n: number) => `${n} min read`,

@@ -1,5 +1,6 @@
 import { query } from './db';
-import { SOURCE_LOCALE, type Locale } from './i18n/config';
+import { DEFAULT_LOCALE, SOURCE_LOCALE, type Locale } from './i18n/config';
+import { DISCLAIMER } from './legal/disclaimer';
 
 /**
  * Long-form editorial Markdown — airport guides, country introductions and the
@@ -125,10 +126,31 @@ export function getCountryIntro(locale: Locale, code: string): Promise<MarkdownD
 }
 
 /**
+ * Pages that ship with the application rather than the database. The disclaimer
+ * is the one page whose availability cannot depend on a content push: it is what
+ * discloses the site's affiliate links, so it has to be live the moment the code
+ * carrying them is (lib/legal/disclaimer.ts explains the reasoning).
+ *
+ * Everything else — about, contact, sources, privacy, terms — stays in
+ * `content_documents`, where it can be edited and translated without a release.
+ */
+const BUNDLED_PAGES: Record<string, Partial<Record<Locale, MarkdownDoc>>> = {
+  disclaimer: DISCLAIMER,
+};
+
+/** A bundled page in the requested language, falling back to the default one. */
+function bundledPage(locale: Locale, slug: string): MarkdownDoc | null {
+  const pages = BUNDLED_PAGES[slug];
+  if (!pages) return null;
+  return pages[locale] ?? pages[DEFAULT_LOCALE] ?? null;
+}
+
+/**
  * Slugs of every static page available in a locale (or its fallback). Pages are
  * authored per locale, so a page that exists in one language and not another
  * would 404 there — the union of the locale and its source is what routes are
- * generated from.
+ * generated from. Bundled pages are added on top: they exist in every published
+ * language by construction, not because a row says so.
  */
 export async function listPageSlugs(locale: Locale): Promise<string[]> {
   const rows = await query<{ subject: string }>(
@@ -138,13 +160,15 @@ export async function listPageSlugs(locale: Locale): Promise<string[]> {
       ORDER BY subject`,
     [localeChain(locale)]
   );
-  return rows.map((row) => row.subject);
+  const slugs = new Set(rows.map((row) => row.subject));
+  for (const slug of Object.keys(BUNDLED_PAGES)) slugs.add(slug);
+  return [...slugs].sort();
 }
 
 /** A static Markdown page such as about / privacy / terms. */
-export function getPage(locale: Locale, slug: string): Promise<MarkdownDoc | null> {
-  if (!/^[a-z0-9-]+$/.test(slug)) return Promise.resolve(null);
-  return getDocument('page', locale, slug);
+export async function getPage(locale: Locale, slug: string): Promise<MarkdownDoc | null> {
+  if (!/^[a-z0-9-]+$/.test(slug)) return null;
+  return (await getDocument('page', locale, slug)) ?? bundledPage(locale, slug);
 }
 
 /** IATA codes that have a guide in this locale (or its source fallback). */

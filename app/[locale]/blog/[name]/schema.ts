@@ -16,13 +16,20 @@ import {
  * graphs — site identity, authorship, a WebPage wrapper whose main entity is
  * the article — so every page in the site describes the same entities with the
  * same stable node ids.
+ *
+ * `airports` are the directory airports the article covers. They are cited as
+ * `about` on the BlogPosting, using the `#airport-<IATA>` node id the airport
+ * page defines, which is the mirror image of that page's `subjectOf` citation
+ * of the article.
  */
 export function buildBlogPostGraph({
   locale,
   post,
+  airports = [],
 }: {
   locale: Locale;
   post: BlogPost;
+  airports?: { iata: string; name: string }[];
 }): Record<string, unknown> {
   const t = getMessages(locale);
   const pageUrl = absoluteUrl(localizedPath(locale, blogPostPath(post.slug)));
@@ -87,6 +94,16 @@ export function buildBlogPostGraph({
         // claimed as this site's authorship.
         ...(post.source && { creditText: post.source }),
         ...(post.tags.length > 0 && { keywords: post.tags.join(', ') }),
+        ...(airports.length > 0 && {
+          about: airports.map((airport) => ({
+            '@type': 'Airport',
+            // The id the airport page's own graph defines for this airport.
+            '@id': `${SITE_URL}/#airport-${airport.iata}`,
+            name: airport.name,
+            iataCode: airport.iata,
+            url: absoluteUrl(localizedPath(locale, `/airport/${airport.iata}`)),
+          })),
+        }),
         ...(image && { image: [image], thumbnailUrl: image }),
       },
       {

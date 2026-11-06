@@ -11,6 +11,7 @@ import { formatDate } from '@/lib/format';
 import {
   blogCoverUrl,
   blogImageBase,
+  blogPostAirportCodes,
   blogPostAlternates,
   blogPostLocales,
   blogPostPath,
@@ -19,11 +20,13 @@ import {
   listBlogPosts,
   listBlogSlugs,
 } from '@/lib/blog';
+import { getAirportsByCodes } from '@/lib/queries';
 import { getMessages, parseLocale } from '@/lib/i18n';
 import { getAuthMessages } from '@/lib/i18n/deals';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { extractHeadings } from '@/lib/markdown-toc';
 import { absoluteUrl, SITE_NAME } from '@/lib/site';
+import ArticleAirports from '@/components/ArticleAirports';
 import { buildBlogPostGraph } from './schema';
 
 export const revalidate = 3600;
@@ -89,13 +92,22 @@ export default async function BlogPostPage({ params }: Props) {
   // The right-hand rail's items: the article's h2/h3 headings, ids matching the
   // ones components/Markdown.tsx renders (lib/markdown-toc.ts is shared).
   const toc = extractHeadings(post.body);
+  // Airports the article covers, in the article's own order (linked ones first;
+  // see lib/blog.ts). Filtered through the directory, so an airport this site
+  // has no page for never becomes a dead link. Capped: five list-style pieces
+  // name twenty airports, and the block is a pointer to the airport pages, not
+  // a second table of contents.
+  const airportCodes = blogPostAirportCodes(post.slug);
+  const airports = (await getAirportsByCodes(locale, airportCodes))
+    .sort((a, b) => airportCodes.indexOf(a.iata) - airportCodes.indexOf(b.iata))
+    .slice(0, 12);
   const related = listBlogPosts(locale)
     .filter((other) => other.slug !== post.slug)
     .slice(0, 3);
 
   return (
     <>
-      <JsonLd data={buildBlogPostGraph({ locale, post })} />
+      <JsonLd data={buildBlogPostGraph({ locale, post, airports })} />
 
       <div className="page-head">
         <div className="page-head-inner">
@@ -176,6 +188,8 @@ export default async function BlogPostPage({ params }: Props) {
               {post.body}
             </Markdown>
           </div>
+
+          <ArticleAirports locale={locale} airports={airports} />
 
           <Comments
             pageKind="blog"

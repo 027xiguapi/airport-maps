@@ -10,7 +10,11 @@ import { getMessages, languageAlternates, parseLocale } from '@/lib/i18n';
 import { PUBLISHED_LOCALES } from '@/lib/i18n/catalogs';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
 import { getAirportGuide } from '@/lib/content';
-import { blogAirportDates, blogPostPath, listBlogPostsForAirport } from '@/lib/blog';
+import {
+  blogAirportDates,
+  blogPostPath,
+  listBlogPostsForAirport,
+} from '@/lib/blog';
 import { getAirportByCode, getAirportRoutes, getRelatedAirports } from '@/lib/queries';
 import { getAirportDeals } from '@/lib/deals';
 import { getAuthMessages, getDealsMessages } from '@/lib/i18n/deals';
@@ -150,6 +154,18 @@ export default async function AirportPage({ params }: Props) {
     permanentRedirect(localizedPath(locale, `/airport/${airport.iata}`));
   }
 
+  // Every article from /blog that covers this airport, newest first, with the
+  // pieces that link this page ranked first (lib/blog.ts). The page shows the
+  // first four as cards, but the section subtitle counts them all and the
+  // JSON-LD cites them all: the four on screen are a reading order, not the
+  // extent of the reference. Read from disk, so this needs no query of its own.
+  const airportArticles = listBlogPostsForAirport(
+    locale,
+    airport.iata,
+    Number.POSITIVE_INFINITY
+  );
+  const blogPosts = airportArticles.slice(0, 4);
+
   const [related, guide, routeMap, flights, airportDeals] = await Promise.all([
     getRelatedAirports(locale, airport.countryCode, airport.iata, 6),
     getAirportGuide(locale, airport.iata),
@@ -165,11 +181,6 @@ export default async function AirportPage({ params }: Props) {
 
   const geo = getAirportGeo(airport.iata);
   const facts = getAirportFacts(airport.iata);
-  // Articles from /blog that cover this airport, newest first. Rendered as a
-  // section of its own and cited in the JSON-LD, so the walkthrough content the
-  // blog holds is discoverable from the airport page rather than only through
-  // the blog index.
-  const blogPosts = listBlogPostsForAirport(locale, airport.iata, 4);
   // Real photos of this airport, when a batch has been downloaded for the code
   // (public/photos + manifest). Empty for most airports today.
   const photos = getAirportPhotos(locale, airport.iata);
@@ -232,7 +243,10 @@ export default async function AirportPage({ params }: Props) {
           guide,
           faqItems,
           photos,
-          articles: blogPosts.map((post) => ({
+          // Every article that covers this airport, not just the four the
+          // section renders: `subjectOf` is the machine-readable half of the
+          // airport ↔ blog link, mirrored by the article's `about` airports.
+          articles: airportArticles.map((post) => ({
             title: post.title,
             url: localizedPath(locale, blogPostPath(post.slug)),
             date: post.updated ?? post.date,
@@ -326,7 +340,12 @@ export default async function AirportPage({ params }: Props) {
 
           {guide && <GuideSection locale={locale} guide={guide} />}
 
-          <BlogPostsSection locale={locale} iata={airport.iata} posts={blogPosts} />
+          <BlogPostsSection
+            locale={locale}
+            iata={airport.iata}
+            posts={blogPosts}
+            total={airportArticles.length}
+          />
 
           <TerminalsSection
             locale={locale}

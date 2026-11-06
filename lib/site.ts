@@ -21,6 +21,25 @@ export const EDITORIAL_NODE_ID = `${SITE_URL}/#editorial-team`;
 export const WEBSITE_NODE_ID = `${SITE_URL}/#website`;
 
 
+/**
+ * Review mode: the single switch that takes the site's commercial surfaces out
+ * of the picture while the advertising account is being reviewed.
+ *
+ * A brand-new site whose most valuable screen is occupied by reader-submitted
+ * fares with outbound booking links reads to an automated reviewer as a traffic
+ * broker rather than a reference site — and those links, sitting next to the ad
+ * slots, are also where accidental clicks come from. While this is `true`:
+ *
+ *   - the homepage renders no deals section (and skips its database query),
+ *   - the header and footer link to /deals nowhere,
+ *   - the /deals page itself still resolves at its own URL, so existing
+ *     submissions stay reachable and nothing 404s.
+ *
+ * Set it back to `false` and rebuild once the account is approved; nothing else
+ * in the code depends on it.
+ */
+export const ADSENSE_REVIEW_MODE = true;
+
 /** Airports listed per page in the directory. */
 export const PAGE_SIZE = 24;
 

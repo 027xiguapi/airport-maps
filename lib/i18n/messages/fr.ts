@@ -959,6 +959,7 @@ export const fr: Messages = {
     contact: 'Contact',
     sources: 'Sources des données',
     privacy: 'Confidentialité',
+    disclaimer: 'Avertissement',
     terms: 'Conditions d’utilisation',
   },
 
@@ -1032,6 +1033,11 @@ export const fr: Messages = {
     more: 'Lire',
     all: 'Tous les articles',
     morePosts: 'Plus d’articles',
+    airportsKicker: 'Aéroports',
+    airportsTitle: 'Aéroports cités dans cet article',
+    airportsEn: 'Airports Covered',
+    airportsSub:
+      'Chaque lien ouvre la page de l’aéroport : plan des terminaux, accès et FAQ.',
     back: 'Retour à la liste des articles',
     empty: 'Aucun article pour le moment.',
     readingMinutes: (n: number) => `${n} min de lecture`,
