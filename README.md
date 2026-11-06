@@ -110,7 +110,7 @@ npm run build:raw                   # 完全不限制（等价于裸 vite build�
    sudo systemctl start airport-maps
    ```
 
-3. **留够磁盘**：`dist/` 约 460 MB，其中 `public/` 的 456 MB 图片会在每次构建时整份复制过去。根分区至少要留 2 GB 余量，否则 `ENOSPC` 看起来也像「构建崩了」（`df -h` 先看一眼）。
+3. **留够磁盘**：`dist/` 约 535 MB，其中 `public/` 的 530 MB 静态资源会在每次构建时整份复制过去（`photos/` 的实景照片约 170 MB、`blog/` 的文章插图约 86 MB 占大头）。根分区至少要留 2 GB 余量，否则 `ENOSPC` 看起来也像「构建崩了」（`df -h` 先看一眼）。
 
 4. **更稳的做法是异地构建**：在 CI 或开发机上 `npm run build`，再把产物同步上去，服务器只跑 `vinext start`：
 
@@ -547,7 +547,7 @@ app/
     airports/page.tsx       机场目录：搜索 + 国家筛选 + 排序 + 分页
     countries/page.tsx      国家索引（按区域分组，含区域跳转条）
     country/[code]/page.tsx 单个国家 / 地区：机场介绍 + 机场列表 + 相关链接 + 常见问题（右侧目录导航）
-    airport/[code]/page.tsx 机场详情：封面 / 示意图、指南、航站楼、交通、设施、定位图、航线图（有静态渲染图时以图片为入口）、特惠机票、FAQ、相关链接
+    airport/[code]/page.tsx 机场详情：封面 / 示意图、实景照片、指南与博客文章、航站楼、交通、设施、定位图、航线图（有静态渲染图时以图片为入口）、特惠机票、FAQ、相关链接
     route/[code]/page.tsx   航线图页：航线地图 + 目的地表 + CSV / JSON 下载 + FAQ
     deals/page.tsx          特惠机票列表：搜索 + 分页（?q= / ?page=，服务端首屏 + 挂载后刷新）
     deals/new/page.tsx      提交特惠：需 Google 登录，支持 ?airport=PEK 预填
@@ -582,6 +582,7 @@ lib/
                             de-vocab.json（德语词表）、de-data.ts（词表查找）、display.ts（标点 / 数字 / 维基语言）
   format.ts geo-convert.ts  按语言格式化 / 坐标与距离数学（纯函数，前后端共用）
   terminal-map.ts map-images.ts route-images.ts  航站楼示意图 SVG / 封面图索引 / 航线渲染图索引
+  blog.ts airport-photos.ts  博客文章（public/blog）与机场实景照片（public/photos）的读取、发布闸门与「机场 ↔ 文章」双向索引
   airport-geo.ts airport-links.ts encyclopedia-links.ts 坐标时区、官网、百科外链三张静态表
 db/schema.ts                Drizzle 表结构（表、索引、约束）——结构的唯一来源
 db/terminology/             封闭词表：en.json（航站楼 / 设施 / 交通方式）、tw-phrases.json（台湾用法例外）
@@ -623,19 +624,37 @@ scripts/                    提取、建库、灌数、抓取与自检脚本
 | 机场页位置图 | `components/airport/LocationMap*.tsx` + `MapZoom.tsx` | 定位图 + 进入大图查看（lightbox + 缩放插件） |
 | 航线页航线图 | `components/airport/RouteMap*.tsx` | 见上一节 |
 
-图片资产（均在 `public/`，总体约 160MB）：
+图片资产（均在 `public/`，合计约 530MB）：
 
 | 目录 | 内容 |
 | --- | --- |
 | `maps/`（638 张） | 机场封面图，`lib/map-images.ts` 按 IATA 索引；机场页下载按钮与首页图片位使用。其中 376 张由 `node scripts/generate-airport-maps.mjs` 用 OpenStreetMap 几何生成（ODbL，图上带 `© OpenStreetMap contributors`，溯源在 `scripts/maps-manifest.json`），其余是第三方下载图。目录里只有图片 |
 | `source-maps/`（638 张） | 上者的原始大图（宽 2000px），供需要原尺寸的场景。516 座目录机场全部有封面（`AUX` 使用 `AUX_.png` 别名文件；见 `node scripts/check-maps.mjs`） |
 | `terminal-maps/{CODE}/`（63 座） | 航站楼平面图 PNG + PDF，带 `terminal-maps-manifest.json` 溯源（来源、sha256、许可说明）；缺文件时图片回退到封面或 SVG 示意图、PDF 回退到搜索 |
+| `photos/{IATA}/`（516 座 / 2100 余张，约 170MB） | 机场实景照片：图片本体 + `manifest.json`（逐文件记录来源域名、来源页、尺寸与批次日期 `addedAt`）+ `captions/<IATA>.json`（人工撰写的说明，同时是**发布闸门**）+ 派生的 `captions.tw.json` 与翻译的 `captions.{de,fr,it,ko}.json`。读取、过滤与「说明优先」的发布规则在 `lib/airport-photos.ts`，见下节 |
+| `blog/<slug>/images/`（101 篇 / 780 余张，约 86MB） | 博客插图和封面，与文章 Markdown 放在同一个 `public/blog/<slug>/` 目录里，正文用 `./images/N.webp` 相对引用；`scripts/check-blog.mjs` 校验引用、扩展名与译文一致性，见下节 |
 | `route/`（16 张） | 航线图的静态渲染图：首页航线区 12 座，加上机场页航线区单独渲染的 ICN、DEN、DFW、IAH（`scripts/generate-route-images.mjs`） |
 | `terminal-maps.png` | 首页「网站介绍」区块的照片（`components/HomeIntro.tsx`，1023×600） |
 | `flags/`（101 张） | 国家 / 地区旗帜（与 `countries` 数量一致） |
 | `data/world-airports.json`、`world-airport-map.jpg` | 首页地图索引与英雄区世界地图底图（`components/HeroRoutes.tsx` 在它上面用服务端 SVG 画大圆航线动画，`prefers-reduced-motion` 时静止） |
 
 另有 `lib/airport-geo.ts`（60 座机场的坐标与 IANA 时区，用于时间 / 详情 / 定位图区块）、`lib/airport-links.ts`（75 条机场官网）、`lib/encyclopedia-links.ts`（维基百科 / 百度百科外链）三张静态表——机场表里没有这些字段，缺失时对应按钮不渲染（错链接比没链接更糟）。
+
+### 机场实景照片（`public/photos/`）
+
+机场页的「机场实景照片」板块、链接预览图与首页「最新照片」都读这一份数据。**没有图片表**：图是文件，来源与说明是 JSON。
+
+- **目录**：`<代码>/<代码>-<来源>-<序号>.webp` 是图片本体，页面地址为 `/photos/<代码>/<文件>`；`manifest.json` 逐文件记录来源域名（`host`）、来源页（`pageUrl`）、像素尺寸，批次导入时再写 `addedAt`（首页轮播按它倒序）。**不在 manifest 里的文件永远不会渲染**，图片下的署名行就是读 manifest 的 host / pageUrl。
+- **说明文字就是发布闸门**：`captions/<代码>.json` 存人工撰写的 `zh` + `en` 一句话说明（看图写，不照文件名），`_skip` 数组把「其实不是这座机场」的图撤下；`captions.tw.json` 由 `scripts/build-photo-captions.mjs` 派生，`captions.{de,fr,it,ko}.json` 是翻译（缺条回退英文，不回落中文）。**没有说明的照片不上线**，所以刚下载的批次在人工过目之前是隐形的，没有批次照片的机场就不会有这一节。
+- **文件名别名**：`AUX` 这类 Windows 设备名不能当目录名，磁盘上写作 `AUX_`，对照表是 `scripts/photo-file-aliases.json`（读取脚本与生成脚本共用）；manifest 键与页面 URL 仍用真实代码。
+- 抓取脚本（`fetch-airport-photos.mjs` / `-from-pages` / `-satellite-photos`）只负责下载并写 manifest；哪张图最终出现在页面上，由说明文字决定。
+
+### 博客文章与插图（`public/blog/`）
+
+- **一篇文章一个目录**：`<slug>.md` 是中文源（`---` frontmatter + 正文），`<slug>.{en,de,fr,it,ko}.md` 是译文，`<slug>.tw.md` 由 `scripts/build-hant.mjs` 派生，`images/` 放插图。文章不进数据库，构建期直接读盘（`lib/blog.ts`），所以新增文章 = 加一个目录。
+- **插图**：正文只写相对路径 `./images/3.webp`，`components/Markdown.tsx` 用 `imageBase` 拼成 `/blog/<slug>/images/3.webp`；`cover:` 封面同样是目录内的相对路径。文件原样由 Next 从 `public/` 提供，所以**扩展名必须与真实格式一致**（公众号导出常把 WebP 存成 `.jpg`，浏览器会拿到错误的 Content-Type）。
+- **校验**：`node scripts/check-blog.mjs` 检查目录名 / `slug` / frontmatter、每张图是否存在、扩展名与载荷是否一致，以及每篇译文的图片集合是否与源文一致；`--fix` 只修机械问题（改名、归位、清理抓取残留），不改文字。
+- **与机场页互链**：`lib/blog.ts` 扫每篇中文源的 `/airport/<代码>` 链接和「（代码）」「机场代码 XXX」写法，建立双向索引——机场页的 Articles 板块列出覆盖本场的文章（卡片显示最新 4 篇，副标题与 JSON-LD 用完整数量），文章页的「本文涉及的机场」（`components/ArticleAirports.tsx`）链回文中提到的机场，两边的 JSON-LD 用 `subjectOf` / `about` 互相引用。索引会跳过 `NON_AIRPORT_CODES` 里那些「看着像机场代码、其实是别的东西」的三字母词（ATM、RER、TSA…）。
 
 ## 站点地图与 SEO
 
