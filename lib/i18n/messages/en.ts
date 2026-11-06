@@ -218,6 +218,8 @@ export const en: Messages = {
       pause: 'Pause the slideshow',
       counter: (index: number, total: number) => `Photo ${index} of ${total}`,
       view: (name: string) => `View ${name} map`,
+      /** Button overlaid on each picture: open that airport's page. */
+      open: 'Open airport page',
     },
     countries: {
       kicker: 'By Country',

@@ -46,14 +46,9 @@ export default function PhotosGallery({
 }) {
   const [index, setIndex] = useState(-1);
 
-  // A lone photo would stretch the full prose column at its natural aspect
-  // ratio; two share a row; three or more fill the standard 3-up grid.
-  const grid =
-    photos.length === 1
-      ? 'mx-auto grid max-w-[560px] gap-5'
-      : photos.length === 2
-        ? 'grid gap-5 sm:grid-cols-2'
-        : 'grid gap-5 sm:grid-cols-2 lg:grid-cols-3';
+  // One picture per row: the gallery reads as a vertical stack of large
+  // photos, so each caption sits directly under the picture it describes.
+  const grid = 'grid grid-cols-1 gap-5';
 
   return (
     <>

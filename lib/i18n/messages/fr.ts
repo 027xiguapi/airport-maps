@@ -261,6 +261,8 @@ export const fr: Messages = {
       pause: 'Mettre le diaporama en pause',
       counter: (index: number, total: number) => `Photo ${index} sur ${total}`,
       view: (name: string) => `Voir la carte de ${name}`,
+      /** Bouton superposé à chaque photo : ouvre la page de l’aéroport. */
+      open: 'Ouvrir la page de l’aéroport',
     },
     countries: {
       kicker: 'Par pays',

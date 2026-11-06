@@ -221,6 +221,8 @@ export const ko: Messages = {
       pause: '자동 넘김 일시정지',
       counter: (index: number, total: number) => `사진 ${index} / ${total}`,
       view: (name: string) => `${name} 지도 보기`,
+      /** 사진 위 버튼: 해당 공항 페이지를 엽니다. */
+      open: '공항 페이지 열기',
     },
     countries: {
       kicker: '국가별',

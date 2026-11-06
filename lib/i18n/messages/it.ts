@@ -262,6 +262,8 @@ export const it: Messages = {
       pause: 'Metti in pausa la presentazione',
       counter: (index: number, total: number) => `Foto ${index} di ${total}`,
       view: (name: string) => `Vedi la mappa di ${name}`,
+      /** Pulsante sovrapposto a ogni foto: apre la pagina dell’aeroporto. */
+      open: 'Apri la pagina dell’aeroporto',
     },
     countries: {
       kicker: 'Per paese',

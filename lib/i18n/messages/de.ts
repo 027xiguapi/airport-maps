@@ -222,6 +222,8 @@ export const de: Messages = {
       pause: 'Diashow pausieren',
       counter: (index: number, total: number) => `Foto ${index} von ${total}`,
       view: (name: string) => `Karte von ${name} ansehen`,
+      /** Schaltfläche auf jedem Bild: öffnet die Flughafenseite. */
+      open: 'Flughafenseite öffnen',
     },
     countries: {
       kicker: 'Nach Land',

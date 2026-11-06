@@ -208,6 +208,8 @@ export const tw: Messages = {
       pause: '暫停自動輪播',
       counter: (index: number, total: number) => `第 ${index} / ${total} 張`,
       view: (name: string) => `檢視${name}地圖`,
+      /** 圖片上的按鈕：直接開啟該機場頁面。 */
+      open: '開啟機場頁',
     },
     countries: {
       kicker: 'By Country',

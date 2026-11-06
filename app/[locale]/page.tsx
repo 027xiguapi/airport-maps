@@ -494,6 +494,7 @@ export default async function HomePage({ params }: Props) {
               dotLabels: photoSlides.map((_, index) =>
                 t.home.photos.counter(index + 1, photoSlides.length)
               ),
+              open: t.home.photos.open,
             }}
           />
         </section>

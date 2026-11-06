@@ -207,6 +207,8 @@ export const zh = {
       pause: '暂停自动轮播',
       counter: (index: number, total: number) => `第 ${index} / ${total} 张`,
       view: (name: string) => `查看${name}地图`,
+      /** 图片上的按钮：直接打开该机场页面。 */
+      open: '打开机场页',
     },
     countries: {
       kicker: 'By Country',

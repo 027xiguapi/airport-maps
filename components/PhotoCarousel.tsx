@@ -13,7 +13,9 @@ import { ArrowIcon, BackIcon, PauseIcon, PlayIcon } from '@/lib/icons';
  * real links to the six airport pages (so the section keeps six crawlable
  * links), whose click is intercepted to switch the slide instead, the same
  * pattern the route showcase's city tabs use. Middle-click and "open in new
- * tab" still land on the airport page.
+ * tab" still land on the airport page. Every picture — the stage and each
+ * thumbnail — also carries a visible button that goes straight to its airport
+ * page without changing the slide first.
  *
  * It advances on its own until the visitor takes over — a real pointer
  * hovering it, keyboard focus inside it, or the pause button — and never
@@ -61,6 +63,8 @@ export default function PhotoCarousel({
      * server — functions cannot cross the server/client boundary.
      */
     dotLabels: string[];
+    /** Label of the button overlaid on every picture ("Open airport page"). */
+    open: string;
   };
 }) {
   const [active, setActive] = useState(0);
@@ -184,6 +188,18 @@ export default function PhotoCarousel({
             />
           </Link>
 
+          {/* A visible button on the picture itself: the stage's image link is
+              easy to miss, and this is the affordance the strip repeats. */}
+          <Link
+            href={slide.href}
+            aria-label={`${labels.open}: ${slide.name}`}
+            title={labels.open}
+            className="absolute right-3.5 top-3.5 inline-flex items-center gap-1.5 border border-white/32 bg-navy-950/60 px-3 py-1.5 text-[12px] font-semibold text-white backdrop-blur-[3px] transition-colors duration-150 hover:border-amber hover:bg-amber hover:text-navy-950 sm:right-4 sm:top-4"
+          >
+            {labels.open}
+            <ArrowIcon width={12} height={12} />
+          </Link>
+
           {total > 1 && (
             <>
               <button
@@ -300,41 +316,56 @@ export default function PhotoCarousel({
           className="mt-3 grid grid-cols-3 gap-2 sm:grid-cols-6"
         >
           {slides.map((item, index) => (
-            <Link
+            <div
               key={item.iata}
-              ref={(node) => {
-                tabRefs.current[index] = node;
-              }}
-              href={item.href}
-              id={`home-photo-tab-${item.iata}`}
-              role="tab"
-              aria-selected={index === active}
-              aria-controls="home-photo-panel"
-              tabIndex={index === active ? 0 : -1}
-              aria-label={`${item.name} (${item.iata})`}
-              onClick={(event) => {
-                event.preventDefault();
-                setActive(index);
-              }}
-              className={`group relative block overflow-hidden border transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 ${
+              className={`group relative overflow-hidden border transition-colors duration-150 ${
                 index === active ? 'border-amber' : 'border-line hover:border-navy-900/35'
               }`}
             >
-              <img
-                src={item.src}
-                alt=""
-                loading="lazy"
-                decoding="async"
-                className="aspect-[3/2] w-full object-cover transition-[opacity,transform] duration-200 group-hover:opacity-95 motion-safe:group-hover:scale-[1.03]"
-              />
-              <span
-                className={`absolute left-2 top-2 inline-flex items-center bg-navy-950/72 px-1.5 py-0.5 font-display text-[10.5px] font-semibold uppercase tracking-[0.14em] backdrop-blur-[2px] ${
-                  index === active ? 'text-amber' : 'text-white/85'
-                }`}
+              <Link
+                ref={(node) => {
+                  tabRefs.current[index] = node;
+                }}
+                href={item.href}
+                id={`home-photo-tab-${item.iata}`}
+                role="tab"
+                aria-selected={index === active}
+                aria-controls="home-photo-panel"
+                tabIndex={index === active ? 0 : -1}
+                aria-label={`${item.name} (${item.iata})`}
+                onClick={(event) => {
+                  event.preventDefault();
+                  setActive(index);
+                }}
+                className="block focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-sky-500"
               >
-                {item.iata}
-              </span>
-            </Link>
+                <img
+                  src={item.src}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-[3/2] w-full object-cover transition-[opacity,transform] duration-200 group-hover:opacity-95 motion-safe:group-hover:scale-[1.03]"
+                />
+                <span
+                  className={`absolute left-2 top-2 inline-flex items-center bg-navy-950/72 px-1.5 py-0.5 font-display text-[10.5px] font-semibold uppercase tracking-[0.14em] backdrop-blur-[2px] ${
+                    index === active ? 'text-amber' : 'text-white/85'
+                  }`}
+                >
+                  {item.iata}
+                </span>
+              </Link>
+
+              {/* Every picture carries its own jump button, so a visitor can
+                  leave for the airport page without first selecting the slide. */}
+              <Link
+                href={item.href}
+                aria-label={`${labels.open}: ${item.name}`}
+                title={labels.open}
+                className="absolute bottom-1.5 right-1.5 inline-flex h-[22px] w-[22px] items-center justify-center border border-white/35 bg-navy-950/70 text-white backdrop-blur-[2px] transition-colors duration-150 hover:border-amber hover:bg-amber hover:text-navy-950 [&>svg]:h-[11px] [&>svg]:w-[11px] [&>svg]:-rotate-45"
+              >
+                <ArrowIcon />
+              </Link>
+            </div>
           ))}
         </div>
       )}
