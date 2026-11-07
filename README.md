@@ -692,7 +692,7 @@ URL 约定：
 11. **按国家分类**（`#countries`）：国家 / 地区网格。
 12. **列表与表格**（`#facts`，`components/HomeFacts.tsx`）：把同一批数据写成真正的 `<dl>` 与 `<table>`——「收录数字」七项（机场 / 国家地区 / 目录大区 / 不同城市名 / 航站楼 / 登机口 / 有航线图的机场），「有旅客量数据的机场」12 行（排名、IATA、机场、城市、国家、航站楼、登机口、年旅客量，机场名链到详情页），以及「机场的目录大区分布」（按 `airports.region` 汇总机场 / 有详细数据 / 航站楼 / 登机口）。区块顶部注明旅客量、航站楼与登机口数据只覆盖有详细记录的机场。数据全部来自首页已经加载的 `airports` 与 `stats`，不额外查库；航线数用「目录内且有航线数据的机场数」（367），不是航线文件里全世界的 2643。两张表都有（视觉隐藏的）`caption` 与 `scope`，窄屏在 `overflow-x-auto` 容器里横向滚动。
 
-「特惠机票」区块（`#deals`）在审核期整体不渲染（见「广告审核模式与免责声明」）；关闭审核模式后它排在旅行笔记之后、世界地图之前，展示最新 6 条用户提交的低价票，卡片直达订票页；服务端渲染首屏，挂载后再拉一次最新数据。榜单与提交的完整说明见「特惠机票与 Google 登录」。
+「特惠机票」区块（`#deals`）排在旅行笔记之后、世界地图之前，展示最新 6 条报价（读者提交与管理后台发布的官方票价混排），卡片直达订票页；服务端渲染首屏，挂载后再拉一次最新数据。`ADSENSE_REVIEW_MODE = true` 时整段隐藏（见「广告审核模式与免责声明」）。榜单与提交的完整说明见「特惠机票与 Google 登录」。
 
 `/countries` 按区域分组并带一条区域跳转条；每个区域块标注该区域的国家数与机场数。
 
@@ -730,7 +730,7 @@ URL 约定：
 
 ## 广告审核模式与免责声明
 
-- **`ADSENSE_REVIEW_MODE`**（`lib/site.ts`）：为 `true` 时首页不渲染「特惠机票」区块（`listDeals` 查询一起跳过），顶栏与页脚也不再链接 `/deals`，`/deals` 页面本身仍可打开、已提交的报价不会丢。审核通过后把常量改成 `false` 重新构建即可，其余代码不依赖它。
+- **`ADSENSE_REVIEW_MODE`**（`lib/site.ts`）：为 `true` 时首页不渲染「特惠机票」区块（`listDeals` 查询一起跳过），顶栏与页脚也不再链接 `/deals`，`/deals` 页面本身仍可打开、已提交的报价不会丢。审核通过后把常量改成 `false` 重新构建即可，其余代码不依赖它——**当前取值 `false`，区块已恢复**。
 - **免责声明页** `/disclaimer`（`app/[locale]/disclaimer/page.tsx`）与 about / privacy 等固定页共用 `ContentPage`，但正文不在 `content_documents` 里，而是随代码发布的 `lib/legal/disclaimer.ts`（英语、简体、繁体、德语、法语、意大利语、韩语七种）。原因：这一页披露的是联盟链接与非官方性质，必须和带联盟链接的功能同一批上线，不能依赖一次 `content:push`；缺语言时回退英语（`lib/content.ts` 的 `bundledPage`）。`listPageSlugs` 会把它并进站点地图，七种语言的页脚「免责声明 / Disclaimer / Haftungsausschluss …」都指向它。
 - 新增语言时补一个 `DISCLAIMER[locale]` 条目即可；繁体先用 `scripts/build-hant.mjs` 的 `toHant` 从简体转出，再粘进该文件（该生成器只覆盖 `messages/tw.ts`、`content_documents` 与博客 `.tw.md`）。
 - 联盟披露目前出现在两处：本页（全站声明）与特惠机票区块底部的 `labels.disclaimer` 一行。AdSense 广告位不要紧贴 `View deal` 一类外链按钮，那是无效流量的常见来源。

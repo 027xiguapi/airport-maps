@@ -36,9 +36,10 @@ export const WEBSITE_NODE_ID = `${SITE_URL}/#website`;
  *     submissions stay reachable and nothing 404s.
  *
  * Set it back to `false` and rebuild once the account is approved; nothing else
- * in the code depends on it.
+ * in the code depends on it. It is currently `false` — the review window is
+ * over, so the homepage, header and footer carry the fare board again.
  */
-export const ADSENSE_REVIEW_MODE = true;
+export const ADSENSE_REVIEW_MODE = false;
 
 /** Airports listed per page in the directory. */
 export const PAGE_SIZE = 24;
