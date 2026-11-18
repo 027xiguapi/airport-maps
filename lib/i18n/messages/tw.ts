@@ -43,6 +43,7 @@ export const tw: Messages = {
   },
 
   common: {
+    advertisement: '廣告',
     skipToContent: '跳到主要內容',
     backToTop: '回到頂部',
     breadcrumbLabel: '麵包屑導航',
@@ -50,7 +51,6 @@ export const tw: Messages = {
     viewMap: '檢視地圖',
     terminalMap: '航廈地圖',
     /** 廣告位 iframe 的無障礙標題（components/ads/）。 */
-    advertisement: '廣告',
     /**
      * 機場頁 <title>/og:title。有航廈資料的機場（60 座）把"幾座航廈、
      * 幾個閘口"直接寫進標題，對上 "how many terminals/gates" 與"幾個航廈"
@@ -857,6 +857,7 @@ export const tw: Messages = {
   },
 
   footer: {
+    sponsored: '贊助連結',
     mapsTitle: '詳細航廈地圖',
     mapsBody:
       '導航世界各地的機場和航廈可能很有挑戰性。我們的機場地圖提供航廈、閘口、值機區、行李提取處、商店、餐廳、貴賓室和交通樞紐的詳細布局，讓您的旅行體驗更順暢。',

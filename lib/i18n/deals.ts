@@ -4,7 +4,7 @@ import type { Locale } from './config';
  * Copy for the two features added on top of the directory: reader-submitted
  * airfare deals (`deals`) and Google sign-in (`auth`).
  *
- * Kept in one module rather than inside the seven locale catalogs for two
+ * Kept in one module rather than inside the individual locale catalogs for two
  * reasons: a new string is translated in one place and cannot drift between
  * languages, and `lib/i18n/messages/tw.ts` is *generated* from the Chinese
  * catalog by `scripts/build-hant.mjs` — hand-added keys there would be
@@ -18,7 +18,7 @@ import type { Locale } from './config';
  */
 
 /** Locales whose UI catalog exists (lib/i18n/catalogs.ts). */
-type PublishedLocale = 'en' | 'de' | 'fr' | 'it' | 'ko' | 'zh' | 'tw';
+type PublishedLocale = 'en' | 'de' | 'fr' | 'it' | 'ko' | 'zh' | 'tw' | 'es' | 'pt';
 
 export type DealsMessages = {
   // section & pages
@@ -744,6 +744,180 @@ export const DEALS: Record<PublishedLocale, DealsMessages> = {
     business: '비즈니스',
     first: '퍼스트',
   },
+
+  es: {
+    kicker: 'Ofertas de vuelos',
+    title: 'Ofertas de vuelos desde aeropuertos',
+    en: 'Ofertas',
+    sub: 'Vuelos baratos desde aeropuertos, publicados por viajeros y creadores individuales, incluidos sus propios enlaces de afiliado. Los más recientes primero; confirma siempre el precio y la disponibilidad en la aerolínea o en la página de reserva.',
+    latest: 'Últimas ofertas',
+    all: 'Todas las ofertas',
+    submit: 'Publicar una oferta',
+    empty: 'Todavía no hay ofertas.',
+    emptyHint: 'Inicia sesión con Google y comparte la primera tarifa, o tu propio enlace de afiliado.',
+    loadError: 'Las ofertas no están disponibles temporalmente.',
+    retry: 'Volver a intentarlo',
+    listingSub:
+      'Explora tarifas baratas por aeropuerto de salida. Los particulares también pueden publicar sus propios enlaces de afiliado; las ofertas nuevas aparecen al instante.',
+    disclaimer:
+      'Algunos enlaces de reserva son enlaces de afiliado del autor, que puede recibir una comisión. Las tarifas las envían los usuarios y no están verificadas; confírmalas siempre en la aerolínea o en la página de reserva.',
+    searchPlaceholder: 'Busca un destino o una aerolínea',
+    searchEmpty: 'No hay ofertas que coincidan. Prueba con otra búsqueda.',
+    loadMore: 'Cargar más',
+    loadingMore: 'Cargando…',
+    previousPage: 'Anterior',
+    nextPage: 'Siguiente',
+    pageOf: 'Página {page} de {total}',
+    paginationLabel: 'Paginación',
+    mineTitle: 'Mis envíos',
+    mineEmpty: 'Todavía no has publicado ninguna oferta.',
+    statusHidden: 'Oculta',
+    statusExpired: 'Caducada',
+    backToDeals: 'Volver a las ofertas',
+    from: 'Aeropuerto de salida',
+    to: 'Destino',
+    airline: 'Aerolínea',
+    price: 'Precio',
+    cabin: 'Cabina',
+    trip: 'Tipo de viaje',
+    travelDates: 'Fechas de viaje',
+    dateFromLabel: 'Fecha de ida',
+    dateToLabel: 'Vuelta / última fecha',
+    booking: 'Enlace de reserva o de afiliado',
+    bookingHint:
+      'Los enlaces de afiliado son bienvenidos; indica la relación de afiliado en las notas de arriba para que los lectores puedan reconocerla.',
+    notes: 'Notas (opcional)',
+    currency: 'Moneda',
+    viewDeal: 'Ver oferta',
+    submitTitle: 'Publicar una oferta de vuelo',
+    submitSub:
+      'Comparte una tarifa que hayas encontrado o tu propio enlace de afiliado. Se publica al instante en la página de ofertas.',
+    submitNote:
+      'Los particulares pueden publicar sus propios enlaces de afiliado. Asegúrate de que la tarifa sea real y reservable, e indica en las notas que el enlace es de afiliado. Las ofertas falsas, caducadas o engañosas se eliminan.',
+    submitting: 'Publicando…',
+    success: 'Publicado: tu oferta ya está en la página de ofertas.',
+    rateLimited: 'Has alcanzado el límite de envíos de hoy. Vuelve a intentarlo mañana.',
+    signInTitle: 'Inicia sesión para publicar',
+    signInBody:
+      'Para evitar el spam, publicar una oferta requiere una cuenta de Google.',
+    signInCta: 'Iniciar sesión con Google',
+    airportPlaceholder: 'Código IATA, p. ej., PEK',
+    destinationPlaceholder: 'Ciudad o aeropuerto, p. ej., Shanghái / PVG',
+    airlinePlaceholder: 'p. ej., Air China',
+    pricePlaceholder: 'Total con impuestos, p. ej., 680',
+    currencyPlaceholder: 'EUR',
+    bookingPlaceholder: 'https://… (aerolínea, OTA o tu enlace de afiliado)',
+    notesPlaceholder: 'Equipaje, escalas, condiciones; marca los enlaces de afiliado como tales… (opcional)',
+    airportError: 'Introduce un código de aeropuerto válido de tres letras.',
+    destinationError: 'Introduce un destino (2–60 caracteres).',
+    airlineError: 'Introduce una aerolínea (2–60 caracteres).',
+    priceError: 'Introduce un precio válido mayor que 0.',
+    currencyError: 'Introduce un código de moneda de tres letras, p. ej., EUR.',
+    dateError: 'Fechas no válidas: la vuelta no puede ser anterior a la ida ni estar en el pasado.',
+    urlError: 'Introduce un enlace de reserva o de afiliado que empiece por http:// o https://.',
+    notesError: 'Las notas pueden tener como máximo 600 caracteres.',
+    genericError: 'No se ha podido publicar la oferta. Vuelve a intentarlo.',
+    submittedBy: 'Publicado por {name}',
+    submittedAt: 'Enviado el {date}',
+    close: 'Cerrar',
+    unverified: 'Sin verificar · puede contener enlaces de afiliado',
+    taxExcluded: 'Impuestos no incluidos',
+    officialFare: 'Tarifa oficial',
+    expires: 'Válida hasta el {date}',
+    oneWay: 'Solo ida',
+    roundTrip: 'Ida y vuelta',
+    economy: 'Económica',
+    premium: 'Económica premium',
+    business: 'Ejecutiva',
+    first: 'Primera',
+  },
+
+  pt: {
+    kicker: 'Ofertas de voos',
+    title: 'Ofertas de voos saindo de aeroportos',
+    en: 'Ofertas',
+    sub: 'Passagens baratas saindo de aeroportos, enviadas por viajantes e criadores individuais — incluindo seus próprios links de afiliado. Mais recentes primeiro; confirme sempre o preço e a disponibilidade no site da companhia aérea ou de reserva.',
+    latest: 'Últimas ofertas',
+    all: 'Todas as ofertas',
+    submit: 'Publicar oferta',
+    empty: 'Ainda não há ofertas.',
+    emptyHint: 'Entre com o Google e compartilhe a primeira tarifa, ou seu próprio link de afiliado.',
+    loadError: 'As ofertas estão temporariamente indisponíveis.',
+    retry: 'Tentar novamente',
+    listingSub:
+      'Navegue por tarifas baixas por aeroporto de partida. Pessoas físicas também podem publicar seus próprios links de afiliado — novas ofertas aparecem na hora.',
+    disclaimer:
+      'Alguns links de reserva são links de afiliado do autor, que pode receber uma comissão. As tarifas são enviadas por usuários e não verificadas — confirme sempre no site da companhia aérea ou de reserva.',
+    searchPlaceholder: 'Buscar destino ou companhia aérea',
+    searchEmpty: 'Nenhuma oferta encontrada. Tente outra busca.',
+    loadMore: 'Carregar mais',
+    loadingMore: 'Carregando…',
+    previousPage: 'Anterior',
+    nextPage: 'Próxima',
+    pageOf: 'Página {page} de {total}',
+    paginationLabel: 'Paginação',
+    mineTitle: 'Minhas publicações',
+    mineEmpty: 'Você ainda não publicou nenhuma oferta.',
+    statusHidden: 'Oculta',
+    statusExpired: 'Expirada',
+    backToDeals: 'Voltar às ofertas',
+    from: 'Aeroporto de partida',
+    to: 'Destino',
+    airline: 'Companhia aérea',
+    price: 'Preço',
+    cabin: 'Cabine',
+    trip: 'Tipo de viagem',
+    travelDates: 'Datas da viagem',
+    dateFromLabel: 'Data de ida',
+    dateToLabel: 'Volta / última data',
+    booking: 'Link de reserva ou de afiliado',
+    bookingHint:
+      'Links de afiliado são bem-vindos — indique a relação de afiliado nas observações acima para que os leitores possam identificar.',
+    notes: 'Observações (opcional)',
+    currency: 'Moeda',
+    viewDeal: 'Ver oferta',
+    submitTitle: 'Publicar oferta de voo',
+    submitSub:
+      'Compartilhe uma tarifa que você encontrou ou seu próprio link de afiliado. Ela entra no ar imediatamente na página de ofertas.',
+    submitNote:
+      'Pessoas físicas podem publicar seus próprios links de afiliado. Certifique-se de que a tarifa é real e reservável, e diga nas observações que o link é de afiliado. Ofertas falsas, expiradas ou enganosas são removidas.',
+    submitting: 'Publicando…',
+    success: 'Publicado — sua oferta já está na página de ofertas.',
+    rateLimited: 'Você atingiu o limite de publicações de hoje. Tente novamente amanhã.',
+    signInTitle: 'Entre para publicar',
+    signInBody:
+      'Para evitar spam, publicar uma oferta exige uma conta do Google.',
+    signInCta: 'Entrar com o Google',
+    airportPlaceholder: 'Código IATA, ex. PEK',
+    destinationPlaceholder: 'Cidade ou aeroporto, ex. Xangai / PVG',
+    airlinePlaceholder: 'ex. Air China',
+    pricePlaceholder: 'Total com impostos, ex. 680',
+    currencyPlaceholder: 'BRL',
+    bookingPlaceholder: 'https://… (companhia aérea, OTA ou seu link de afiliado)',
+    notesPlaceholder: 'Bagagem, conexões, condições; marque links de afiliado como tais… (opcional)',
+    airportError: 'Informe um código de aeroporto válido de três letras.',
+    destinationError: 'Informe um destino (2–60 caracteres).',
+    airlineError: 'Informe uma companhia aérea (2–60 caracteres).',
+    priceError: 'Informe um preço válido maior que 0.',
+    currencyError: 'Informe um código de moeda de três letras, ex. BRL.',
+    dateError: 'Datas inválidas: a volta não pode ser anterior à ida nem estar no passado.',
+    urlError: 'Informe um link de reserva ou de afiliado que comece com http:// ou https://.',
+    notesError: 'As observações podem ter no máximo 600 caracteres.',
+    genericError: 'Não foi possível publicar a oferta. Tente novamente.',
+    submittedBy: 'Publicado por {name}',
+    submittedAt: 'Enviado em {date}',
+    close: 'Fechar',
+    unverified: 'Não verificado · pode conter links de afiliado',
+    taxExcluded: 'Impostos não incluídos',
+    officialFare: 'Tarifa oficial',
+    expires: 'Válida até {date}',
+    oneWay: 'Somente ida',
+    roundTrip: 'Ida e volta',
+    economy: 'Econômica',
+    premium: 'Econômica premium',
+    business: 'Executiva',
+    first: 'Primeira classe',
+  },
 };
 
 export const AUTH: Record<PublishedLocale, AuthMessages> = {
@@ -930,6 +1104,60 @@ export const AUTH: Record<PublishedLocale, AuthMessages> = {
     retry: '다시 시도',
     accountMenu: '계정 메뉴',
     backHome: '홈으로',
+  },
+
+  es: {
+    signInTitle: 'Iniciar sesión',
+    signInSub:
+      'Inicia sesión con Google para publicar ofertas de vuelos, participar en la conversación y ver tus envíos.',
+    signInWithGoogle: 'Iniciar sesión con Google',
+    signOut: 'Cerrar sesión',
+    signedInAs: 'Sesión iniciada como {name}',
+    notConfiguredTitle: 'El inicio de sesión con Google no está configurado',
+    notConfiguredBody:
+      'Un administrador debe configurar GOOGLE_CLIENT_ID y GOOGLE_CLIENT_SECRET en .env.local para activar el inicio de sesión.',
+    oauthError: 'No se ha podido iniciar sesión. Vuelve a intentarlo.',
+    accessDenied: 'Has cancelado la autorización de Google.',
+    stateError: 'Tu sesión ha caducado. Inicia sesión de nuevo.',
+    continueCta: 'Continuar',
+    mySubmissions: 'Mis envíos',
+    admin: 'Administración',
+    commentSignInTitle: 'Inicia sesión para comentar',
+    commentSignInBody:
+      'Los comentarios ahora usan el inicio de sesión con Google, así que tu nombre y tu avatar aparecen con lo que publicas.',
+    privacyNote:
+      'El inicio de sesión solo se usa para identificar a quienes publican ofertas o comentarios. Solo guardamos el nombre, el correo electrónico y la URL del avatar que proporciona Google.',
+    loading: 'Cargando…',
+    retry: 'Volver a intentarlo',
+    accountMenu: 'Menú de la cuenta',
+    backHome: 'Volver al inicio',
+  },
+
+  pt: {
+    signInTitle: 'Entrar',
+    signInSub:
+      'Entre com o Google para publicar ofertas de voos, participar da discussão e ver suas publicações.',
+    signInWithGoogle: 'Entrar com o Google',
+    signOut: 'Sair',
+    signedInAs: 'Você entrou como {name}',
+    notConfiguredTitle: 'O login com o Google não está configurado',
+    notConfiguredBody:
+      'Um administrador precisa definir GOOGLE_CLIENT_ID e GOOGLE_CLIENT_SECRET no .env.local para ativar o login.',
+    oauthError: 'Não foi possível entrar. Tente novamente.',
+    accessDenied: 'Você cancelou a autorização do Google.',
+    stateError: 'Sua sessão expirou. Entre novamente.',
+    continueCta: 'Continuar',
+    mySubmissions: 'Minhas publicações',
+    admin: 'Administração',
+    commentSignInTitle: 'Entre para comentar',
+    commentSignInBody:
+      'Os comentários agora usam o login com o Google, então seu nome e avatar aparecem com o que você publicar.',
+    privacyNote:
+      'O login é usado apenas para identificar quem publica ofertas ou comentários. Armazenamos somente o nome, o e-mail e a URL do avatar fornecidos pelo Google.',
+    loading: 'Carregando…',
+    retry: 'Tentar novamente',
+    accountMenu: 'Menu da conta',
+    backHome: 'Voltar ao início',
   },
 };
 

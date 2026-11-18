@@ -115,7 +115,12 @@ function ReferenceLinks({
   const wikiTitle =
     locale === 'en'
       ? nameEn
-      : locale === 'de' || locale === 'fr' || locale === 'it' || locale === 'ko'
+      : locale === 'de' ||
+          locale === 'fr' ||
+          locale === 'it' ||
+          locale === 'ko' ||
+          locale === 'es' ||
+          locale === 'pt'
         ? name
         : titleZh;
 

@@ -10,8 +10,8 @@ import type { Locale } from '@/lib/i18n/config';
  * deployment step (content:import, then content:push) and a locale that missed
  * that step would fall back to another language — or 404 — on the one page a
  * reviewer opens to check compliance. Keeping it here makes the English,
- * Chinese, Traditional Chinese, German, French, Italian and Korean versions
- * deploy atomically with the app.
+ * Chinese, Traditional Chinese, German, French, Italian, Korean, Spanish and
+ * Portuguese versions deploy atomically with the app.
  *
  * Markdown only: `##` headings, `-` bullets, `**bold**` — the same subset the
  * other pages use (components/Markdown.tsx). Do not add links to booking
@@ -398,5 +398,109 @@ Se un prezzo, una mappa o un collegamento sono errati, segnalalo dalla pagina de
 ## 문의와 정정
 
 가격, 지도, 노선에 잘못된 점이 있으면 문의 페이지로 알려 주세요. 정정은 우선 처리합니다. 이 페이지에 관한 법적 문의도 같은 경로로 받습니다.`,
+  },
+
+  es: {
+    title: 'Aviso legal y divulgación de enlaces de afiliados',
+    summary:
+      'Qué son —y qué no son— los mapas, las tarifas y los enlaces externos de este sitio: exactitud de los datos, enlaces de afiliados, publicidad y los límites de nuestra responsabilidad.',
+    updated: UPDATED,
+    body: `World Airport Maps es un sitio de referencia aeroportuaria independiente. Esta página explica qué es el contenido del sitio, cómo se financia y dónde termina su responsabilidad. Se aplica a todas las páginas, en todos los idiomas.
+
+## No es una fuente oficial
+
+Este sitio no es un aeropuerto, una aerolínea, una agencia de viajes ni un organismo público, y no está afiliado a ninguno de ellos. Es una herramienta de planificación elaborada a partir de datos públicos y trabajo editorial.
+
+- **Los diagramas de terminales son ilustrativos.** Se dibujan a partir del número de terminales y puertas y de los nodos de transporte terrestre, para mostrar cómo se estructura un aeropuerto — no a partir de planos levantados sobre el terreno. La forma, la escala y la orientación pueden diferir del edificio real.
+- **Los datos se quedan desactualizados.** Los terminales abren y cierran, los números de puerta cambian, las aerolíneas se trasladan entre terminales, y las rutas de transporte, los horarios del primer y último servicio y las tarifas se revisan sin aviso.
+- **Comprueba antes de viajar.** Para puertas, plazos de check-in, tiempos mínimos de conexión, visados, normas de entrada y requisitos de seguridad, fíate del aeropuerto, de tu aerolínea y de las autoridades competentes.
+
+## Tarifas, ofertas y reservas
+
+Las tarifas de la sección de ofertas son **enviadas por los lectores** y este sitio no las verifica ni las garantiza.
+
+- Un precio publicado es lo que una persona vio en un momento dado. Los impuestos, las tasas, el equipaje, la selección de asiento, las fechas de viaje y la disponibilidad pueden modificarlo.
+- Este sitio no vende boletos, no bloquea reservas ni acepta pagos. Toda reserva se completa en el sitio web del tercero, según sus propios términos y su política de privacidad.
+- No se garantiza que ninguna oferta siga disponible. Los anuncios pueden retirarse o caducar en cualquier momento, y un precio que ha cambiado no es una declaración falsa de este sitio.
+
+## Enlaces de afiliados
+
+Algunos enlaces externos de este sitio son **enlaces de afiliados** — principalmente los enlaces de reserva asociados a las tarifas, además de algunas recomendaciones de transporte y servicios. Si sigues uno de ellos y completas una compra, el operador puede pagar una comisión a este sitio.
+
+- La comisión sale del margen del operador. **No cambia el precio que pagas**, y no se te cobra más por llegar a través de este sitio.
+- La comisión no compra contenido editorial. El sitio no vende clasificaciones, reseñas ni emplazamientos, y ningún pago decide lo que dice una página.
+- La divulgación aparece tanto en la página que contiene cada enlace como aquí; esta página es la declaración válida para todo el sitio.
+
+## Publicidad
+
+La publicidad de este sitio la sirven redes publicitarias de terceros; la política de privacidad enumera las actuales. Los anunciantes no obtienen datos de los lectores a través de este sitio y no pueden influir en el contenido editorial. La aparición de un anuncio aquí no constituye una recomendación del producto o servicio ni una garantía de su seguridad, legalidad o calidad.
+
+## Contenido enviado por los lectores
+
+Las tarifas, los comentarios y las correcciones los envían los lectores. El material manifiestamente ilícito se elimina, pero el sitio no puede verificar la exactitud, la vigencia ni la integridad de cada envío. Las decisiones que se tomen a partir de esa información son responsabilidad tuya.
+
+## Sitios web externos
+
+Este sitio puede enlazar a aeropuertos, aerolíneas, operadores de transporte y otros terceros. Su contenido, sus precios, su disponibilidad y sus prácticas de privacidad son responsabilidad de esos terceros; este sitio no los controla y no asume ninguna responsabilidad por ellos.
+
+## Limitación de responsabilidad
+
+La cláusula completa figura en las condiciones de uso. En resumen: en la máxima medida permitida por la ley, el sitio no responde por vuelos perdidos, itinerarios modificados, denegación de embarque, costos adicionales o pérdida de datos derivados del uso de este sitio.
+
+## Preguntas y correcciones
+
+Si un precio, un mapa o una ruta de este sitio es incorrecto, avísanos a través de la página de contacto; las correcciones se atienden primero. Las cuestiones legales sobre esta página nos llegan por el mismo canal.`,
+  },
+
+  pt: {
+    title: 'Aviso legal e divulgação de links de afiliados',
+    summary:
+      'O que são — e o que não são — os mapas, as tarifas e os links externos deste site: precisão dos dados, links de afiliados, publicidade e os limites da nossa responsabilidade.',
+    updated: UPDATED,
+    body: `O World Airport Maps é um site de referência aeroportuária independente. Esta página explica o que é o conteúdo do site, como ele é financiado e onde termina a sua responsabilidade. Ela se aplica a todas as páginas, em todos os idiomas.
+
+## Não é uma fonte oficial
+
+Este site não é um aeroporto, uma companhia aérea, uma agência de viagens ou um órgão governamental, e não é afiliado a nenhum deles. É uma ferramenta de planejamento construída a partir de dados públicos e trabalho editorial.
+
+- **Os diagramas dos terminais são ilustrativos.** Eles são desenhados a partir do número de terminais e portões e dos nós de transporte terrestre, para mostrar como um aeroporto é estruturado — não a partir de plantas levantadas em campo. Forma, escala e orientação podem diferir do edifício real.
+- **As informações ficam desatualizadas.** Terminais abrem e fecham, números de portão mudam, companhias aéreas mudam de terminal, e rotas de transporte, horários do primeiro e do último serviço e tarifas são revisados sem aviso prévio.
+- **Confira antes de viajar.** Para portões, prazos de check-in, tempos mínimos de conexão, vistos, regras de entrada e requisitos de segurança, baseie-se no aeroporto, na sua companhia aérea e nas autoridades competentes.
+
+## Tarifas, ofertas e reservas
+
+As tarifas da seção de ofertas são **enviadas por leitores** e não são verificadas nem garantidas por este site.
+
+- Um preço listado é o que uma pessoa viu em um determinado momento. Impostos, taxas, bagagem, escolha de assento, datas de viagem e disponibilidade podem alterá-lo.
+- Este site não vende passagens, não bloqueia reservas nem recebe pagamentos. Toda reserva é concluída no site do terceiro, segundo os termos e a política de privacidade dele.
+- Nenhuma oferta tem garantia de que ainda estará disponível. Os anúncios podem ser removidos ou expirar a qualquer momento, e um preço que mudou não é uma declaração falsa deste site.
+
+## Links de afiliados
+
+Alguns links externos deste site são **links de afiliados** — principalmente os links de reserva associados às tarifas, além de algumas recomendações de transporte e serviços. Se você seguir um deles e concluir uma compra, o operador poderá pagar uma comissão a este site.
+
+- A comissão sai da margem do operador. **Ela não altera o preço que você paga**, e você não paga mais por ter chegado por meio deste site.
+- A comissão não compra conteúdo editorial. O site não vende rankings, avaliações ou posicionamentos, e nenhum pagamento decide o que uma página diz.
+- A divulgação aparece tanto na página que contém cada link quanto aqui; esta página é a declaração válida para todo o site.
+
+## Publicidade
+
+A publicidade deste site é veiculada por redes de anúncios de terceiros; a política de privacidade lista as atuais. Os anunciantes não obtêm dados dos leitores por meio deste site e não podem influenciar o conteúdo editorial. Um anúncio exibido aqui não é um endosso do produto ou serviço, nem uma garantia de sua segurança, legalidade ou qualidade.
+
+## Conteúdo enviado por leitores
+
+Tarifas, comentários e correções são enviados por leitores. Materiais manifestamente ilícitos são removidos, mas o site não consegue verificar a precisão, a atualidade ou a completude de cada envio. As decisões tomadas com base nisso são de sua própria responsabilidade.
+
+## Sites externos
+
+Este site pode ter links para aeroportos, companhias aéreas, operadores de transporte e outros terceiros. O conteúdo, os preços, a disponibilidade e as práticas de privacidade deles são de responsabilidade deles; este site não os controla e não assume nenhuma responsabilidade por eles.
+
+## Limitação de responsabilidade
+
+A cláusula completa está nos termos de uso. Em resumo: na máxima medida permitida por lei, o site não se responsabiliza por voos perdidos, itinerários alterados, embarque negado, custos adicionais ou perda de dados decorrentes do uso deste site.
+
+## Dúvidas e correções
+
+Se um preço, um mapa ou uma rota aqui estiver errado, avise-nos pela página de contato — as correções são tratadas prioritariamente. Questões legais sobre esta página chegam até nós pelo mesmo canal.`,
   },
 };

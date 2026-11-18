@@ -61,6 +61,7 @@ export const de: Messages = {
   },
 
   common: {
+    advertisement: 'Anzeige',
     skipToContent: 'Zum Hauptinhalt springen',
     backToTop: 'Nach oben',
     breadcrumbLabel: 'Navigationspfad',
@@ -68,7 +69,6 @@ export const de: Messages = {
     viewMap: 'Karte ansehen',
     terminalMap: 'Terminalplan',
     /** Accessible iframe title on the ad slots (components/ads/). */
-    advertisement: 'Anzeige',
     latestAirportTitle: (
       year: number,
       name: string,
@@ -898,6 +898,7 @@ export const de: Messages = {
   },
 
   footer: {
+    sponsored: 'Gesponsert',
     mapsTitle: 'Detaillierte Terminalpläne',
     mapsBody:
       'Sich an Flughäfen und ihren Terminals zurechtzufinden, kann herausfordernd sein. Unsere Flughafenpläne zeigen detaillierte Layouts von Terminals, Gates, Check-in-Bereichen, Gepäckausgabe, Geschäften, Restaurants, Lounges und Verkehrsknoten, damit Ihre Reise reibungsloser verläuft.',

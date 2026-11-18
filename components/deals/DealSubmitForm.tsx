@@ -102,9 +102,11 @@ export default function DealSubmitForm({
       ? 'CNY'
       : locale === 'ko'
         ? 'KRW'
-        : locale === 'de' || locale === 'fr' || locale === 'it'
+        : locale === 'de' || locale === 'fr' || locale === 'it' || locale === 'es'
           ? 'EUR'
-          : 'USD'
+          : locale === 'pt'
+            ? 'BRL'
+            : 'USD'
   );
   const [cabin, setCabin] = useState<DealCabin>('economy');
   const [tripType, setTripType] = useState<DealTripType>('oneway');

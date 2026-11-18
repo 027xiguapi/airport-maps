@@ -42,6 +42,7 @@ export const zh = {
   },
 
   common: {
+    advertisement: '广告',
     skipToContent: '跳到主要内容',
     backToTop: '回到顶部',
     breadcrumbLabel: '面包屑导航',
@@ -49,7 +50,6 @@ export const zh = {
     viewMap: '查看地图',
     terminalMap: '航站楼地图',
     /** 广告位 iframe 的无障碍标题（components/ads/）。 */
-    advertisement: '广告',
     /**
      * 机场页 <title>/og:title。有航站楼数据的机场（60 座）把"几座航站楼、
      * 几个登机口"直接写进标题，对上 "how many terminals/gates" 与"几个航站楼"
@@ -856,6 +856,7 @@ export const zh = {
   },
 
   footer: {
+    sponsored: '赞助链接',
     mapsTitle: '详细航站楼地图',
     mapsBody:
       '导航世界各地的机场和航站楼可能很有挑战性。我们的机场地图提供航站楼、登机口、值机区、行李提取处、商店、餐厅、贵宾室和交通枢纽的详细布局，让您的旅行体验更顺畅。',

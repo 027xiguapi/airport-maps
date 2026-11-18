@@ -15,6 +15,8 @@ import { germanAirportName, germanCity, germanCountry } from './i18n/de-data';
 import { frenchAirportName, frenchCity, frenchCountry } from './i18n/fr-data';
 import { italianAirportName, italianCity, italianCountry } from './i18n/it-data';
 import { koreanAirportName, koreanCity, koreanCountry } from './i18n/ko-data';
+import { spanishAirportName, spanishCity, spanishCountry } from './i18n/es-data';
+import { portugueseAirportName, portugueseCity, portugueseCountry } from './i18n/pt-data';
 
 /**
  * Flight numbers for the airport page's flight board.
@@ -87,6 +89,8 @@ function vocabulary(locale: Locale) {
   if (locale === 'fr') return { airport: frenchAirportName, city: frenchCity, country: frenchCountry };
   if (locale === 'it') return { airport: italianAirportName, city: italianCity, country: italianCountry };
   if (locale === 'ko') return { airport: koreanAirportName, city: koreanCity, country: koreanCountry };
+  if (locale === 'es') return { airport: spanishAirportName, city: spanishCity, country: spanishCountry };
+  if (locale === 'pt') return { airport: portugueseAirportName, city: portugueseCity, country: portugueseCountry };
   return null;
 }
 

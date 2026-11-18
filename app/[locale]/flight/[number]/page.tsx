@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import Faq from '@/components/Faq';
+import AdsterraBanner from '@/components/ads/AdsterraBanner';
+import AdsterraStrip from '@/components/ads/AdsterraStrip';
 import JsonLd from '@/components/JsonLd';
 import TocNav, { type TocItem } from '@/components/TocNav';
 import FlightHead from '@/components/flight/FlightHead';
@@ -149,6 +151,9 @@ export default async function FlightPage({ params }: Props) {
       <div className="ap-with-toc">
         <aside className="ap-toc">
           <TocNav items={tocItems} label={t.toc.label} />
+          {/* 160×300 below the contents list; the wrapper hides itself below
+              the desktop breakpoint (globals.css). */}
+          <AdsterraBanner unit="half-page" title={t.common.advertisement} className="mt-6" />
         </aside>
 
         <div className="ap-body">
@@ -177,6 +182,8 @@ export default async function FlightPage({ params }: Props) {
               {t.flight.overviewNote}
             </p>
           </section>
+
+          <AdsterraStrip title={t.common.advertisement} className="my-12" />
 
           <section className="ap-extra" id="flight-route">
             <div className="section-head">
@@ -370,6 +377,12 @@ export default async function FlightPage({ params }: Props) {
               </ul>
             </section>
           )}
+
+          <AdsterraBanner
+            unit="medium-rectangle"
+            title={t.common.advertisement}
+            className="my-12"
+          />
 
           <div className="section-head" id="faq" style={{ marginTop: 46, marginBottom: 18 }}>
             <div>

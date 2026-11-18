@@ -1,9 +1,11 @@
 import { DEFAULT_LOCALE, LOCALES, type Locale } from './config';
 import { de } from './messages/de';
 import { en } from './messages/en';
+import { es } from './messages/es';
 import { fr } from './messages/fr';
 import { it } from './messages/it';
 import { ko } from './messages/ko';
+import { pt } from './messages/pt';
 import { tw } from './messages/tw';
 import { zh, type Messages } from './messages/zh';
 
@@ -20,7 +22,17 @@ import { zh, type Messages } from './messages/zh';
  * appear in the switcher as disabled entries and their URL prefixes redirect to
  * the visitor's best published language.
  */
-const CATALOGS: Partial<Record<Locale, Messages>> = { en, de, fr, it, ko, zh, tw };
+const CATALOGS: Partial<Record<Locale, Messages>> = {
+  en,
+  es,
+  pt,
+  de,
+  fr,
+  it,
+  ko,
+  zh,
+  tw,
+};
 
 /** Locales whose UI catalog exists; everything else falls back to the default. */
 export const PUBLISHED_LOCALES = LOCALES.filter(

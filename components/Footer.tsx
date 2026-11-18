@@ -6,6 +6,7 @@ import { getDealsMessages } from '@/lib/i18n/deals';
 import { formatNumber } from '@/lib/format';
 import { getStats } from '@/lib/queries';
 import { ADSENSE_REVIEW_MODE } from '@/lib/site';
+import { ADSTERRA_SMARTLINK_URL } from '@/lib/ads';
 
 /** The three intro columns share one type treatment, so it is written once. */
 const COL_TITLE_CLASSES =
@@ -91,6 +92,16 @@ export default async function Footer({ locale }: { locale: Locale }) {
               {link.label}
             </Link>
           ))}
+          {/* Adsterra Smartlink (direct link) — external, so a plain anchor,
+              opened in a new tab and marked sponsored for crawlers. */}
+          <a
+            className={LINK_CLASSES}
+            href={ADSTERRA_SMARTLINK_URL}
+            rel="sponsored noopener"
+            target="_blank"
+          >
+            {t.footer.sponsored}
+          </a>
         </nav>
       </div>
     </footer>

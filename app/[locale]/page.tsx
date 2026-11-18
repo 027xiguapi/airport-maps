@@ -11,6 +11,8 @@ import HeroRoutes from '@/components/HeroRoutes';
 import HomeFacts from '@/components/HomeFacts';
 import HomeIntro from '@/components/HomeIntro';
 import { PopularMaps, CountryUpdates, UpdateList } from '@/components/HomeSections';
+import AdsterraBanner from '@/components/ads/AdsterraBanner';
+import AdsterraStrip from '@/components/ads/AdsterraStrip';
 import JsonLd from '@/components/JsonLd';
 import RouteShowcase, { type RouteShowcaseSlide } from '@/components/RouteShowcase';
 import SearchBox from '@/components/SearchBox';
@@ -594,6 +596,8 @@ export default async function HomePage({ params }: Props) {
         </section>
       )}
 
+      <AdsterraStrip title={t.common.advertisement} className="my-12" />
+
       {/* ------------------------------------------------------------- tools */}
       <section className="section" id="tools">
         <div className="section-head">
@@ -664,6 +668,8 @@ export default async function HomePage({ params }: Props) {
         </div>
         <PopularMaps locale={locale} airports={popular} commentCounts={commentCounts} />
       </section>
+
+      <AdsterraBanner unit="medium-rectangle" title={t.common.advertisement} className="my-12" />
 
       {/* ----------------------------------------------------------- route maps */}
       {routeSlides.length > 0 && (

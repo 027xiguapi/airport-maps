@@ -6,6 +6,8 @@ import Comments from '@/components/Comments';
 import { PostGrid } from '@/components/Blog';
 import JsonLd from '@/components/JsonLd';
 import Markdown from '@/components/Markdown';
+import AdsterraBanner from '@/components/ads/AdsterraBanner';
+import AdsterraStrip from '@/components/ads/AdsterraStrip';
 import TocNav from '@/components/TocNav';
 import { formatDate } from '@/lib/format';
 import {
@@ -24,7 +26,7 @@ import { getAirportsByCodes } from '@/lib/queries';
 import { getMessages, parseLocale } from '@/lib/i18n';
 import { getAuthMessages } from '@/lib/i18n/deals';
 import { LOCALE_META, localizedPath } from '@/lib/i18n/config';
-import { extractHeadings } from '@/lib/markdown-toc';
+import { extractHeadings, createIdAllocator, splitBeforeHeading } from '@/lib/markdown-toc';
 import { absoluteUrl, SITE_NAME } from '@/lib/site';
 import ArticleAirports from '@/components/ArticleAirports';
 import { buildBlogPostGraph } from './schema';
@@ -92,6 +94,13 @@ export default async function BlogPostPage({ params }: Props) {
   // The right-hand rail's items: the article's h2/h3 headings, ids matching the
   // ones components/Markdown.tsx renders (lib/markdown-toc.ts is shared).
   const toc = extractHeadings(post.body);
+  // Long articles are rendered as two Markdown islands with the leaderboard
+  // between them; one allocator feeds both so their heading ids stay the exact
+  // sequence extractHeadings walked above (anchors still resolve). The split
+  // sits before the third h2, past the article's opening sections.
+  const headingIds = createIdAllocator();
+  const split = splitBeforeHeading(post.body, 3);
+  const [bodyLead, bodyRest] = split ?? [post.body, null];
   // Airports the article covers, in the article's own order (linked ones first;
   // see lib/blog.ts). Filtered through the directory, so an airport this site
   // has no page for never becomes a dead link. Capped: five list-style pieces
@@ -160,6 +169,9 @@ export default async function BlogPostPage({ params }: Props) {
         {toc.length >= 3 && (
           <aside className="ap-toc">
             <TocNav items={toc} label={t.toc.label} />
+            {/* 160×600 below the contents list; the wrapper hides itself
+                below the desktop breakpoint (globals.css). */}
+            <AdsterraBanner unit="skyscraper" title={t.common.advertisement} className="mt-6" />
           </aside>
         )}
 
@@ -184,10 +196,28 @@ export default async function BlogPostPage({ params }: Props) {
             <Markdown
               className="[&_img]:mx-auto [&_img]:max-h-[68vh] [&_img]:w-auto [&_img]:object-contain"
               imageBase={blogImageBase(post.slug)}
+              nextId={headingIds}
             >
-              {post.body}
+              {bodyLead}
             </Markdown>
+
+            {/* Mid-article when the body splits before its third h2 (see
+                splitBeforeHeading), the end-of-article slot otherwise. The
+                strip picks 320×50 / 468×60 / 728×90 by viewport. */}
+            <AdsterraStrip title={t.common.advertisement} className="my-12" />
+
+            {bodyRest && (
+              <Markdown
+                className="[&_img]:mx-auto [&_img]:max-h-[68vh] [&_img]:w-auto [&_img]:object-contain"
+                imageBase={blogImageBase(post.slug)}
+                nextId={headingIds}
+              >
+                {bodyRest}
+              </Markdown>
+            )}
           </div>
+
+          <AdsterraBanner unit="medium-rectangle" title={t.common.advertisement} className="my-12" />
 
           <ArticleAirports locale={locale} airports={airports} />
 

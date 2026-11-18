@@ -6,6 +6,8 @@ import { isGateRangePhrase } from '@/lib/i18n/de-data';
 import { isFrenchGateRangePhrase } from '@/lib/i18n/fr-data';
 import { isItalianGateRangePhrase } from '@/lib/i18n/it-data';
 import { isKoreanGateRangePhrase } from '@/lib/i18n/ko-data';
+import { isSpanishGateRangePhrase } from '@/lib/i18n/es-data';
+import { isPortugueseGateRangePhrase } from '@/lib/i18n/pt-data';
 import { clauseSeparator, isCjkLocale, listSeparator } from '@/lib/i18n/display';
 import type { AirportDetail, AirportFlightBoard, Terminal } from '@/lib/types';
 
@@ -26,7 +28,9 @@ function gatePhrase(locale: Locale, t: ReturnType<typeof getMessages>, terminal:
     isGateRangePhrase(gateRange) ||
     (locale === 'fr' && isFrenchGateRangePhrase(gateRange)) ||
     (locale === 'it' && isItalianGateRangePhrase(gateRange)) ||
-    (locale === 'ko' && isKoreanGateRangePhrase(gateRange));
+    (locale === 'ko' && isKoreanGateRangePhrase(gateRange)) ||
+    (locale === 'es' && isSpanishGateRangePhrase(gateRange)) ||
+    (locale === 'pt' && isPortugueseGateRangePhrase(gateRange));
   return isPhrase ? gateRange : t.units.gatesLabel(gateRange);
 }
 

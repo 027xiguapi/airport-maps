@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { notFound, permanentRedirect } from 'next/navigation';
 import Comments from '@/components/Comments';
 import Faq from '@/components/Faq';
+import AdsterraBanner from '@/components/ads/AdsterraBanner';
+import AdsterraStrip from '@/components/ads/AdsterraStrip';
 import JsonLd from '@/components/JsonLd';
 import Markdown from '@/components/Markdown';
 import TocNav, { type TocItem } from '@/components/TocNav';
@@ -269,6 +271,9 @@ export default async function AirportPage({ params }: Props) {
       <div className="ap-with-toc">
         <aside className="ap-toc">
           <TocNav items={tocItems} label={t.toc.label} />
+          {/* 160×300 below the contents list; the wrapper hides itself below
+              the desktop breakpoint (globals.css). */}
+          <AdsterraBanner unit="half-page" title={t.common.advertisement} className="mt-6" />
         </aside>
 
         <div className="ap-body">
@@ -284,6 +289,8 @@ export default async function AirportPage({ params }: Props) {
             terminalMapUrl={terminalMap.png}
             terminalPdfUrl={terminalMap.pdf}
           />
+
+          <AdsterraStrip title={t.common.advertisement} className="my-12" />
 
           {photos.length > 0 && (
             <PhotosSection locale={locale} iata={airport.iata} name={airport.name} photos={photos} />
@@ -354,6 +361,8 @@ export default async function AirportPage({ params }: Props) {
           />
 
           <TransitFacilities locale={locale} transit={airport.transit} facilities={airport.facilities} />
+
+          <AdsterraBanner unit="medium-rectangle" title={t.common.advertisement} className="my-12" />
 
           <div className="section-head" id="faq" style={{ marginTop: 46, marginBottom: 18 }}>
             <div>

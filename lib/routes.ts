@@ -7,6 +7,8 @@ import { germanAirportName, germanCity, germanCountry } from './i18n/de-data';
 import { frenchAirportName, frenchCity, frenchCountry } from './i18n/fr-data';
 import { italianAirportName, italianCity, italianCountry } from './i18n/it-data';
 import { koreanAirportName, koreanCity, koreanCountry } from './i18n/ko-data';
+import { spanishAirportName, spanishCity, spanishCountry } from './i18n/es-data';
+import { portugueseAirportName, portugueseCity, portugueseCountry } from './i18n/pt-data';
 
 /**
  * Route data for the airport page's route map.
@@ -159,9 +161,10 @@ export async function getAirportRouteMap(
   if (!raw || raw.destinations.length === 0) return null;
 
   const world = loadWorldAirports();
-  // German/French/Italian/Korean apply their vocabulary to the bulk index too
-  // (Peking / Pékin / Pechino, Vereinigte Staaten / États-Unis / Stati Uniti,
-  // 베이징 / 미국); the airport name stays international.
+  // German/French/Italian/Korean/Spanish/Portuguese apply their vocabulary to
+  // the bulk index too (Peking / Pékin / Pechino / Pekín, Vereinigte Staaten /
+  // États-Unis / Stati Uniti / Estados Unidos); the airport name stays
+  // international.
   const vocab =
     locale === 'de'
       ? { airport: germanAirportName, city: germanCity, country: germanCountry }
@@ -171,7 +174,15 @@ export async function getAirportRouteMap(
           ? { airport: italianAirportName, city: italianCity, country: italianCountry }
           : locale === 'ko'
             ? { airport: koreanAirportName, city: koreanCity, country: koreanCountry }
-            : null;
+            : locale === 'es'
+              ? { airport: spanishAirportName, city: spanishCity, country: spanishCountry }
+              : locale === 'pt'
+                ? {
+                    airport: portugueseAirportName,
+                    city: portugueseCity,
+                    country: portugueseCountry,
+                  }
+                : null;
   const destinations: RouteDestination[] = [];
   for (const entry of raw.destinations) {
     const place = world.get(entry.iata);

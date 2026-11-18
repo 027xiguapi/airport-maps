@@ -42,6 +42,11 @@ export function intlLocale(locale: Locale): string {
       return 'it-IT';
     case 'ko':
       return 'ko-KR';
+    case 'es':
+      return 'es-ES';
+    case 'pt':
+      // The catalog is Brazilian Portuguese (see LOCALE_META.acceptLanguage).
+      return 'pt-BR';
     default:
       return 'en-US';
   }
@@ -49,15 +54,19 @@ export function intlLocale(locale: Locale): string {
 
 /**
  * Wikipedia language edition to link to. Traditional Chinese pages use the
- * Chinese edition with the article's Traditional title; German, French, Italian
- * and Korean use de./fr./it./ko.wikipedia with the localized name.
+ * Chinese edition with the article's Traditional title; German, French, Italian,
+ * Korean, Spanish and Portuguese use their own edition with the localized name.
  */
-export function wikipediaLocale(locale: Locale): 'en' | 'zh' | 'de' | 'fr' | 'it' | 'ko' {
+export function wikipediaLocale(
+  locale: Locale
+): 'en' | 'zh' | 'de' | 'fr' | 'it' | 'ko' | 'es' | 'pt' {
   if (locale === 'en') return 'en';
   if (locale === 'de') return 'de';
   if (locale === 'fr') return 'fr';
   if (locale === 'it') return 'it';
   if (locale === 'ko') return 'ko';
+  if (locale === 'es') return 'es';
+  if (locale === 'pt') return 'pt';
   return 'zh';
 }
 
@@ -66,5 +75,5 @@ export function wikipediaLocale(locale: Locale): 'en' | 'zh' | 'de' | 'fr' | 'it
  * Korean audiences, so its link is offered only on the Chinese and English pages.
  */
 export function showsBaike(locale: Locale): boolean {
-  return locale !== 'tw' && locale !== 'de' && locale !== 'fr' && locale !== 'it' && locale !== 'ko';
+  return locale === 'zh' || locale === 'en';
 }

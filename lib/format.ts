@@ -5,13 +5,15 @@ import { intlLocale, isCjkLocale } from './i18n/display';
 /**
  * Display formatters. Passenger volume is stored in millions and rendered the
  * way each locale expresses it: 万 / 亿 for Chinese, "million" for English,
- * "Millionen" for German, "millions" for French, "milioni" for Italian and
- * 만 / 억 for Korean.
+ * "Millionen" for German, "millions" for French, "milioni" for Italian,
+ * "millones" for Spanish, "milhões" for Portuguese and 만 / 억 for Korean.
  */
 
 /** Intl locale per UI locale; unknown locales fall back to en-US. */
 const NUMBER_LOCALE: Partial<Record<Locale, string>> = {
   en: 'en-US',
+  es: 'es-ES',
+  pt: 'pt-BR',
   de: 'de-DE',
   fr: 'fr-FR',
   it: 'it-IT',
@@ -55,6 +57,17 @@ export function formatPax(
     // millions and takes a plural "i" above one.
     const rounded = Number(trimZeros(millions.toFixed(2)));
     return `circa ${formatNumber(rounded, locale)} milion${rounded === 1 ? 'e' : 'i'}`;
+  }
+  if (locale === 'es') {
+    // "unos 67 millones" / "unos 1 millón" — Spanish keeps the scale in
+    // millions and changes the noun, not a suffix, above one.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `unos ${formatNumber(rounded, locale)} ${rounded === 1 ? 'millón' : 'millones'}`;
+  }
+  if (locale === 'pt') {
+    // "cerca de 67 milhões" / "cerca de 1 milhão" — Portuguese likewise.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `cerca de ${formatNumber(rounded, locale)} ${rounded === 1 ? 'milhão' : 'milhões'}`;
   }
   if (locale === 'ko') {
     // 약 6,700만 명 / 약 1억 800만 명 — Korean groups by 10,000 (만) and

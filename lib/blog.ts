@@ -44,15 +44,16 @@ import { LOCALE_META, SOURCE_LOCALE, localizedPath, type Locale } from './i18n/c
  * files, and the card grids show covers `object-contain` in a fixed frame.
  *
  * Language coverage: the articles are written in Chinese, translated into
- * English, German, French, Italian and Korean, and derived into Traditional
- * Chinese. A locale shows the blog only where files for it exist, and a missing
- * translation means the article is simply absent from that locale's list —
- * never Chinese text on an English, German, French, Italian or Korean page, the
- * same rule the country introductions follow.
+ * English, German, French, Italian, Korean, Spanish and Portuguese, and derived
+ * into Traditional Chinese. A locale shows the blog only where files for it
+ * exist, and a missing translation means the article is simply absent from that
+ * locale's list — never Chinese text on an English, German, French, Italian,
+ * Korean, Spanish or Portuguese page, the same rule the country introductions
+ * follow.
  */
 
 /** Locales the blog can appear in, in switcher order. */
-export const BLOG_LOCALES: Locale[] = ['en', 'de', 'fr', 'it', 'ko', 'zh', 'tw'];
+export const BLOG_LOCALES: Locale[] = ['en', 'es', 'pt', 'de', 'fr', 'it', 'ko', 'zh', 'tw'];
 
 export type BlogPost = {
   /** Directory name and URL segment. */
@@ -141,14 +142,17 @@ function articlePath(slug: string, locale: Locale): string | null {
 /**
  * Candidate file names for an article, most specific first.
  *
- * `en`, `de`, `fr`, `it` and `ko` deliberately have no fallback: an article
- * that has not been translated is absent from that language's blog rather than
- * shown in Chinese. `tw` falls back to the Chinese source only as a safety net —
- * the derived file is written by scripts/build-hant.mjs and normally always present.
+ * `en`, `es`, `pt`, `de`, `fr`, `it` and `ko` deliberately have no fallback: an
+ * article that has not been translated is absent from that language's blog
+ * rather than shown in Chinese. `tw` falls back to the Chinese source only as a
+ * safety net — the derived file is written by scripts/build-hant.mjs and
+ * normally always present.
  */
 function articleNames(slug: string, locale: Locale): string[] {
   if (locale === 'tw') return [`${slug}.tw.md`, `${slug}.md`];
   if (locale === 'en') return [`${slug}.en.md`];
+  if (locale === 'es') return [`${slug}.es.md`];
+  if (locale === 'pt') return [`${slug}.pt.md`];
   if (locale === 'de') return [`${slug}.de.md`];
   if (locale === 'fr') return [`${slug}.fr.md`];
   if (locale === 'it') return [`${slug}.it.md`];

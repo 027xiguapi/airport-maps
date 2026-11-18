@@ -60,17 +60,17 @@ function toDoc(row: DocumentRow): MarkdownDoc {
 }
 
 /**
- * Requested locale first, then the authored source — first match wins. German,
- * French, Italian and Korean fall back to English before the Chinese source:
- * those pages should never show a Chinese paragraph, even when the translation
- * is missing.
+ * Requested locale first, then the authored source — first match wins.
+ * Traditional Chinese derives from the simplified source, so it falls back to
+ * `zh`; every other translated locale falls back to English. Those pages must
+ * never show a Chinese paragraph when a translation is missing, and the
+ * English fallback keeps a Spanish or Portuguese page readable while its own
+ * translation is still being written.
  */
 function localeChain(locale: Locale): Locale[] {
   if (locale === SOURCE_LOCALE) return [locale];
-  if (locale === 'de' || locale === 'fr' || locale === 'it' || locale === 'ko') {
-    return [locale, 'en'];
-  }
-  return [locale, SOURCE_LOCALE];
+  if (locale === 'tw') return [locale, SOURCE_LOCALE];
+  return [locale, 'en'];
 }
 
 /** One document in the best available language, or null when none exists. */
@@ -99,7 +99,7 @@ export function getAirportGuide(locale: Locale, iata: string): Promise<MarkdownD
 /**
  * Newest `updated` date per airport among the given locales' guides, as a map
  * keyed by IATA. The sitemap needs this for every airport at once — asking
- * per-airport would be 363 round trips for the same rows.
+ * per-airport would be 516 round trips for the same rows.
  */
 export async function airportGuideUpdatedMap(
   locales: readonly Locale[]

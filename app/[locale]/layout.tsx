@@ -4,6 +4,7 @@ import '../globals.css';
 import BackToTop from '@/components/BackToTop';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import AdsterraSocialBar from '@/components/ads/AdsterraSocialBar';
 import { getMessages, LOCALE_META, parseLocale, PUBLISHED_LOCALES } from '@/lib/i18n';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
 
@@ -90,11 +91,6 @@ export default async function LocaleLayout({
             __html: `try{var t=localStorage.getItem('theme');if(t!=='dark'&&t!=='light'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t}catch(e){}`,
           }}
         />
-        <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5878114055897626"
-            crossOrigin="anonymous"
-        ></script>
       </head>
       <body>
         {/* Fonts load from the CDN at runtime; the stacks in globals.css fall
@@ -112,6 +108,10 @@ export default async function LocaleLayout({
         <main id="view">{children}</main>
         <Footer locale={locale} />
         <BackToTop label={t.common.backToTop} />
+        {/* Site-level Adsterra unit (Social Bar); the locale layout persists
+            across client navigations, and the component guards itself against
+            double-injection. */}
+        <AdsterraSocialBar />
       </body>
     </html>
   );

@@ -96,6 +96,7 @@ export const fr: Messages = {
   },
 
   common: {
+    advertisement: 'Publicité',
     skipToContent: 'Aller au contenu principal',
     backToTop: 'Retour en haut',
     breadcrumbLabel: 'Fil d’Ariane',
@@ -103,7 +104,6 @@ export const fr: Messages = {
     viewMap: 'Voir la carte',
     terminalMap: 'Plan du terminal',
     /** Accessible iframe title on the ad slots (components/ads/). */
-    advertisement: 'Publicité',
     /**
      * Airport page <title>/og:title. Airports with compiled data lead with the
      * counts Google is asked for ("how many terminals/gates does X have"); the
@@ -942,6 +942,7 @@ export const fr: Messages = {
   },
 
   footer: {
+    sponsored: 'Sponsorisé',
     mapsTitle: 'Plans détaillés des terminaux',
     mapsBody:
       'S’orienter dans les aéroports et leurs terminaux peut être un défi. Nos cartes montrent la disposition détaillée des terminaux, des portes, des zones d’enregistrement, des tapis bagages, des boutiques, des restaurants, des salons et des pôles de transport, pour un voyage plus fluide.',

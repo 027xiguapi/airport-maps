@@ -40,6 +40,26 @@ import {
   koreanSearchAlias,
   koreanTerminalName,
 } from './i18n/ko-data';
+import {
+  spanishAirportName,
+  spanishCity,
+  spanishCountry,
+  spanishGateRange,
+  spanishLabel,
+  spanishRegion,
+  spanishSearchAlias,
+  spanishTerminalName,
+} from './i18n/es-data';
+import {
+  portugueseAirportName,
+  portugueseCity,
+  portugueseCountry,
+  portugueseGateRange,
+  portugueseLabel,
+  portugueseRegion,
+  portugueseSearchAlias,
+  portugueseTerminalName,
+} from './i18n/pt-data';
 import type {
   AirportDetail,
   AirportListParams,
@@ -64,11 +84,11 @@ function likePattern(value: string): string {
  * Picks the localized value, falling back to English or the Chinese source.
  * `tw` is the derived Traditional-Chinese layer (see scripts/_hant.mjs).
  *
- * German, French, Italian and Korean have no `_de`/`_fr`/`_it`/`_ko` columns:
- * they localize the English column and translate the closed vocabularies
- * (lib/i18n/de-data.ts, fr-data.ts, it-data.ts, ko-data.ts), so a per-locale
- * translator is passed for fields where the language differs (city, country,
- * terminal name, …). Fields without one keep their English value.
+ * German, French, Italian, Korean, Spanish and Portuguese have no
+ * `_de`/`_fr`/`_it`/`_ko`/`_es`/`_pt` columns: they localize the English
+ * column and translate the closed vocabularies (lib/i18n/*-data.ts), so a
+ * per-locale translator is passed for fields where the language differs (city,
+ * country, terminal name, …). Fields without one keep their English value.
  */
 type Translator = (value: string) => string;
 
@@ -80,7 +100,9 @@ function pick(
   de?: Translator,
   fr?: Translator,
   ko?: Translator,
-  it?: Translator
+  it?: Translator,
+  es?: Translator,
+  pt?: Translator
 ): string {
   if (locale === 'en') return en ?? zh ?? '';
   if (locale === 'tw') return tw ?? zh ?? en ?? '';
@@ -100,6 +122,14 @@ function pick(
     const base = en ?? zh ?? '';
     return ko ? ko(base) : base;
   }
+  if (locale === 'es') {
+    const base = en ?? zh ?? '';
+    return es ? es(base) : base;
+  }
+  if (locale === 'pt') {
+    const base = en ?? zh ?? '';
+    return pt ? pt(base) : base;
+  }
   return zh ?? en ?? '';
 }
 
@@ -112,7 +142,9 @@ function pickStrict(
   de?: Translator,
   fr?: Translator,
   ko?: Translator,
-  it?: Translator
+  it?: Translator,
+  es?: Translator,
+  pt?: Translator
 ): string | null {
   if (locale === 'en') return en;
   if (locale === 'tw') return tw;
@@ -120,6 +152,8 @@ function pickStrict(
   if (locale === 'fr') return en == null ? null : fr ? fr(en) : en;
   if (locale === 'it') return en == null ? null : it ? it(en) : en;
   if (locale === 'ko') return en == null ? null : ko ? ko(en) : en;
+  if (locale === 'es') return en == null ? null : es ? es(en) : en;
+  if (locale === 'pt') return en == null ? null : pt ? pt(en) : en;
   return zh;
 }
 
@@ -233,15 +267,11 @@ function sortSql(sort: AirportSort, locale: Locale): string {
     case 'updated':
       return 'a.updated_at DESC, a.iata ASC';
     case 'name':
-      // Chinese sorts by the collation's pinyin order; locales whose names come
-      // from the English column (en/de/fr/it/ko) sort by that column.
-      return locale === 'en' ||
-        locale === 'de' ||
-        locale === 'fr' ||
-        locale === 'it' ||
-        locale === 'ko'
-        ? 'a.name_en ASC, a.iata ASC'
-        : 'a.name ASC, a.iata ASC';
+      // Chinese sorts by the collation's pinyin order; every translated locale
+      // sorts by the English source column its names are derived from.
+      return locale === 'zh' || locale === 'tw'
+        ? 'a.name ASC, a.iata ASC'
+        : 'a.name_en ASC, a.iata ASC';
     case 'pax':
     default:
       return 'a.annual_pax_m DESC NULLS LAST, a.iata ASC';
@@ -262,11 +292,13 @@ function toSummary(row: AirportRow, locale: Locale): AirportSummary {
       germanAirportName,
       frenchAirportName,
       koreanAirportName,
-      italianAirportName
+      italianAirportName,
+      spanishAirportName,
+      portugueseAirportName
     ),
     nameZh: row.name_zh,
     nameEn: row.name_en,
-    city: pick(locale, row.city_zh, row.city_tw, row.city_en, germanCity, frenchCity, koreanCity, italianCity),
+    city: pick(locale, row.city_zh, row.city_tw, row.city_en, germanCity, frenchCity, koreanCity, italianCity, spanishCity, portugueseCity),
     cityEn: row.city_en,
     countryCode: row.country_code,
     countryName: pick(
@@ -277,7 +309,9 @@ function toSummary(row: AirportRow, locale: Locale): AirportSummary {
       germanCountry,
       frenchCountry,
       koreanCountry,
-      italianCountry
+      italianCountry,
+      spanishCountry,
+      portugueseCountry
     ),
     countryNameEn: row.country_name_en,
     region: pick(
@@ -288,7 +322,9 @@ function toSummary(row: AirportRow, locale: Locale): AirportSummary {
       germanRegion,
       frenchRegion,
       koreanRegion,
-      italianRegion
+      italianRegion,
+      spanishRegion,
+      portugueseRegion
     ),
     flagUrl: row.flag_url,
     gateCount: row.gate_count,
@@ -311,7 +347,9 @@ function toTerminal(row: TerminalJson, locale: Locale): Terminal {
       germanTerminalName,
       frenchTerminalName,
       koreanTerminalName,
-      italianTerminalName
+      italianTerminalName,
+      spanishTerminalName,
+      portugueseTerminalName
     ),
     gateRange:
       pick(
@@ -322,7 +360,9 @@ function toTerminal(row: TerminalJson, locale: Locale): Terminal {
         germanGateRange,
         frenchGateRange,
         koreanGateRange,
-        italianGateRange
+        italianGateRange,
+        spanishGateRange,
+        portugueseGateRange
       ) || null,
     gateCount: row.gate_count,
     // Editorial airline lists are not machine-translatable, so a missing
@@ -331,7 +371,7 @@ function toTerminal(row: TerminalJson, locale: Locale): Terminal {
     isSatellite: row.is_satellite,
     amenities: (row.amenities ?? []).map<Amenity>((a) => ({
       icon: a.icon,
-      label: pick(locale, a.label_zh, a.label_tw, a.label_en, germanLabel, frenchLabel, koreanLabel, italianLabel),
+      label: pick(locale, a.label_zh, a.label_tw, a.label_en, germanLabel, frenchLabel, koreanLabel, italianLabel, spanishLabel, portugueseLabel),
     })),
   };
 }
@@ -407,7 +447,7 @@ export async function getBusiestCities(locale: Locale, limit = 5): Promise<CityH
   );
 
   return rows.map((row) => ({
-    city: pick(locale, row.city_zh, row.city_tw, row.city_en, germanCity, frenchCity, koreanCity, italianCity),
+    city: pick(locale, row.city_zh, row.city_tw, row.city_en, germanCity, frenchCity, koreanCity, italianCity, spanishCity, portugueseCity),
     cityEn: row.city_en,
     countryCode: row.country_code,
     countryName: pick(
@@ -418,7 +458,9 @@ export async function getBusiestCities(locale: Locale, limit = 5): Promise<CityH
       germanCountry,
       frenchCountry,
       koreanCountry,
-      italianCountry
+      italianCountry,
+      spanishCountry,
+      portugueseCountry
     ),
     flagUrl: row.flag_url,
     airportCount: row.airport_count,
@@ -432,7 +474,9 @@ export async function getBusiestCities(locale: Locale, limit = 5): Promise<CityH
       germanAirportName,
       frenchAirportName,
       koreanAirportName,
-      italianAirportName
+      italianAirportName,
+      spanishAirportName,
+      portugueseAirportName
     ),
     leadSlug: row.lead_slug,
     iatas: row.iatas ?? [],
@@ -484,7 +528,9 @@ export async function getCountries(locale: Locale): Promise<CountryWithCount[]> 
       germanCountry,
       frenchCountry,
       koreanCountry,
-      italianCountry
+      italianCountry,
+      spanishCountry,
+      portugueseCountry
     ),
     nameZh: row.name_zh,
     nameEn: row.name_en,
@@ -496,7 +542,9 @@ export async function getCountries(locale: Locale): Promise<CountryWithCount[]> 
       germanRegion,
       frenchRegion,
       koreanRegion,
-      italianRegion
+      italianRegion,
+      spanishRegion,
+      portugueseRegion
     ),
     flagUrl: row.flag_url,
     sortOrder: row.sort_order,
@@ -533,7 +581,9 @@ export async function getCountry(locale: Locale, code: string): Promise<Country 
       germanCountry,
       frenchCountry,
       koreanCountry,
-      italianCountry
+      italianCountry,
+      spanishCountry,
+      portugueseCountry
     ),
     nameZh: row.name_zh,
     nameEn: row.name_en,
@@ -545,7 +595,9 @@ export async function getCountry(locale: Locale, code: string): Promise<Country 
       germanRegion,
       frenchRegion,
       koreanRegion,
-      italianRegion
+      italianRegion,
+      spanishRegion,
+      portugueseRegion
     ),
     flagUrl: row.flag_url,
     sortOrder: row.sort_order,
@@ -647,15 +699,13 @@ export async function getAirportByCode(
      ) g ON true
      WHERE a.iata = upper($1) OR a.slug = lower($1)
      LIMIT 1`,
-    // Missing descriptions fall back to the authored source language — except
-    // for German, French, Italian and Korean, which fall back to English: a
-    // Chinese paragraph inside those pages would be less useful than the English
-    // one.
+    // Missing descriptions fall back to the authored source language only for
+    // the Chinese locales; every translated locale falls back to English: a
+    // Chinese paragraph inside those pages would be less useful than the
+    // English one.
     [
       code.trim(),
-      locale === 'de' || locale === 'fr' || locale === 'it' || locale === 'ko'
-        ? 'en'
-        : SOURCE_LOCALE,
+      locale === 'zh' || locale === 'tw' ? SOURCE_LOCALE : 'en',
       locale,
     ]
   );
@@ -668,7 +718,7 @@ export async function getAirportByCode(
     terminals: (row.terminals ?? []).map((t) => toTerminal(t, locale)),
     facilities: (row.facilities ?? []).map<Amenity>((f) => ({
       icon: f.icon,
-      label: pick(locale, f.label_zh, f.label_tw, f.label_en, germanLabel, frenchLabel, koreanLabel, italianLabel),
+      label: pick(locale, f.label_zh, f.label_tw, f.label_en, germanLabel, frenchLabel, koreanLabel, italianLabel, spanishLabel, portugueseLabel),
     })),
     transit: (row.transit ?? []).map<TransitOption>((t) => ({
       icon: t.icon,
@@ -778,7 +828,11 @@ export async function searchAirports(
                 ? italianSearchAlias(value)
                 : locale === 'ko'
                   ? koreanSearchAlias(value)
-                  : null;
+                  : locale === 'es'
+                    ? spanishSearchAlias(value)
+                    : locale === 'pt'
+                      ? portugueseSearchAlias(value)
+                      : null;
         return alias ? likePattern(alias) : null;
       })(),
       limit,
@@ -796,10 +850,12 @@ export async function searchAirports(
       germanAirportName,
       frenchAirportName,
       koreanAirportName,
-      italianAirportName
+      italianAirportName,
+      spanishAirportName,
+      portugueseAirportName
     ),
     nameEn: row.name_en,
-    city: pick(locale, row.city_zh, row.city_tw, row.city_en, germanCity, frenchCity, koreanCity, italianCity),
+    city: pick(locale, row.city_zh, row.city_tw, row.city_en, germanCity, frenchCity, koreanCity, italianCity, spanishCity, portugueseCity),
     countryCode: row.country_code,
     countryName: pick(
       locale,
@@ -809,7 +865,9 @@ export async function searchAirports(
       germanCountry,
       frenchCountry,
       koreanCountry,
-      italianCountry
+      italianCountry,
+      spanishCountry,
+      portugueseCountry
     ),
     flagUrl: row.flag_url,
   }));
@@ -852,8 +910,8 @@ export async function listAirports(
       `c.name_en   ILIKE $${patternIndex} ESCAPE '\\'`,
       `a.iata = upper($${termIndex})`,
     ];
-    // German/French/Italian/Korean exonym typed instead of the English name
-    // ("Peking", "Pékin", "Pechino", "도쿄").
+    // German/French/Italian/Korean/Spanish/Portuguese exonym typed instead of
+    // the English name ("Peking", "Pékin", "Pechino", "도쿄", "Pekín").
     const alias =
       locale === 'de'
         ? germanSearchAlias(term)
@@ -863,7 +921,11 @@ export async function listAirports(
             ? italianSearchAlias(term)
             : locale === 'ko'
               ? koreanSearchAlias(term)
-              : null;
+              : locale === 'es'
+                ? spanishSearchAlias(term)
+                : locale === 'pt'
+                  ? portugueseSearchAlias(term)
+                  : null;
     if (alias) {
       args.push(likePattern(alias));
       clauses.push(`a.search_blob ILIKE $${args.length} ESCAPE '\\'`);

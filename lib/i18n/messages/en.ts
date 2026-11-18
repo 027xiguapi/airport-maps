@@ -53,6 +53,7 @@ export const en: Messages = {
   },
 
   common: {
+    advertisement: 'Advertisement',
     skipToContent: 'Skip to main content',
     backToTop: 'Back to top',
     breadcrumbLabel: 'Breadcrumb',
@@ -60,7 +61,6 @@ export const en: Messages = {
     viewMap: 'View map',
     terminalMap: 'Terminal map',
     /** Accessible iframe title on the ad slots (components/ads/). */
-    advertisement: 'Advertisement',
     /**
      * Airport page <title>/og:title. Airports with compiled data lead with the
      * counts Google is asked for ("how many terminals/gates does X have"); the
@@ -898,6 +898,7 @@ export const en: Messages = {
   },
 
   footer: {
+    sponsored: 'Sponsored',
     mapsTitle: 'Detailed terminal maps',
     mapsBody:
       'Navigating airports and their terminals can be a challenge. Our airport maps show detailed layouts of terminals, gates, check-in areas, baggage claim, shops, restaurants, lounges and transport interchanges so your journey runs more smoothly.',

@@ -57,6 +57,7 @@ export const ko: Messages = {
   },
 
   common: {
+    advertisement: '광고',
     skipToContent: '본문으로 건너뛰기',
     backToTop: '맨 위로',
     breadcrumbLabel: '이동 경로',
@@ -64,7 +65,6 @@ export const ko: Messages = {
     viewMap: '지도 보기',
     terminalMap: '터미널 지도',
     /** Accessible iframe title on the ad slots (components/ads/). */
-    advertisement: '광고',
     /**
      * Airport page <title>/og:title. Airports with compiled terminal data lead
      * with the counts the search queries ask for; directory airports without
@@ -888,6 +888,7 @@ export const ko: Messages = {
   },
 
   footer: {
+    sponsored: '스폰서',
     mapsTitle: '상세 터미널 지도',
     mapsBody:
       '전 세계 공항과 터미널을 오가는 일은 쉽지 않습니다. 저희 공항 지도는 터미널, 게이트, 체크인 구역, 수하물 수취대, 상점, 레스토랑, 라운지, 교통 거점의 배치를 상세히 보여 주어 여행이 한결 수월해집니다.',

@@ -19,7 +19,8 @@ import { SOURCE_LOCALE, type Locale } from './i18n/config';
  *                                     not show
  *   captions.tw.json                  generated Traditional Chinese copy
  *                                     (scripts/build-photo-captions.mjs)
- *   captions.<de|fr|it|ko>.json       translations of the English captions
+ *   captions.<locale>.json            translations of the English captions
+ *                                     (de / fr / it / ko / es / pt)
  *
  * Acquisition lives outside the app: the `scripts/fetch-airport-photos*.mjs`
  * batch tools download third-party pictures into the airport's directory and
@@ -230,7 +231,7 @@ function twCaptionIndex(): Map<string, Map<string, string>> {
 const translatedCaptions = new Map<Locale, Map<string, Map<string, string>>>();
 
 function translatedCaptionIndex(
-  locale: 'de' | 'fr' | 'it' | 'ko'
+  locale: Locale
 ): Map<string, Map<string, string>> {
   const cached = translatedCaptions.get(locale);
   if (cached) return cached;
@@ -257,18 +258,16 @@ function pickCaption(iata: string, file: string, locale: Locale): string | null 
     const tw = twCaptionIndex().get(iata)?.get(file);
     if (tw) return tw;
   }
-  if (locale === 'de' || locale === 'fr' || locale === 'it' || locale === 'ko') {
+  // Every translated locale reads `captions.<locale>.json` when that file
+  // exists; a missing translation falls through to the English caption.
+  if (locale !== SOURCE_LOCALE && locale !== 'tw') {
     const translated = translatedCaptionIndex(locale).get(iata)?.get(file);
     if (translated) return translated;
   }
   const authored = captionIndex().get(iata)?.get(file);
   if (!authored) return null;
-  // German, French, Italian and Korean fall back to the English caption, never
-  // to the Chinese one.
-  const fallback =
-    locale === 'de' || locale === 'fr' || locale === 'it' || locale === 'ko'
-      ? 'en'
-      : SOURCE_LOCALE;
+  // Translated pages fall back to the English caption, never to the Chinese one.
+  const fallback = locale !== SOURCE_LOCALE && locale !== 'tw' ? 'en' : SOURCE_LOCALE;
   return authored[locale] ?? authored[fallback] ?? authored[SOURCE_LOCALE] ?? null;
 }
 

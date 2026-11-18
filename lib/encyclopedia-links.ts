@@ -11,8 +11,10 @@
  */
 
 /** Wikipedia article URL — MediaWiki titles use underscores for spaces. */
-export const wikiUrl = (lang: 'en' | 'zh' | 'de' | 'fr' | 'it' | 'ko', title: string) =>
-  `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, '_'))}`;
+export const wikiUrl = (
+  lang: 'en' | 'zh' | 'de' | 'fr' | 'it' | 'ko' | 'es' | 'pt',
+  title: string
+) => `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, '_'))}`;
 
 /** Baidu Baike entry URL — major airports and countries have an entry under their Chinese name. */
 export const baikeUrl = (title: string) => `https://baike.baidu.com/item/${encodeURIComponent(title)}`;

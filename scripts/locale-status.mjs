@@ -13,7 +13,7 @@
  * introductions, static pages, blog articles — is counted per locale so the gap
  * is visible instead of guessed:
  *
- *   guides    content_documents kind='airport'   (zh/en/tw: 366, de: 363)
+ *   guides    content_documents kind='airport'   (published locales: 516)
  *   country   content_documents kind='country'
  *   pages     content_documents kind='page'
  *   blog      public/blog/<slug>/<slug>.<suffix>.md
@@ -65,11 +65,15 @@ function blogCounts(locales) {
             ? '.it.md'
             : locale === 'ko'
               ? '.ko.md'
-              : locale === 'tw'
-                ? '.tw.md'
-                : locale === 'zh'
-                  ? '.md'
-                  : null;
+              : locale === 'es'
+                ? '.es.md'
+                : locale === 'pt'
+                  ? '.pt.md'
+                  : locale === 'tw'
+                    ? '.tw.md'
+                    : locale === 'zh'
+                      ? '.md'
+                      : null;
   const articles = readdirSync(dir, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name);
@@ -106,13 +110,27 @@ async function documentCounts(locales) {
   }
 }
 
+/**
+ * Locales registered in `lib/i18n/catalogs.ts` CATALOGS — the actual publishing
+ * switch the app routes on. A `<code>.ts` file can exist while the catalog is
+ * deliberately not registered yet (pt during a staged rollout): that language is
+ * still "planned" and its prefixes redirect.
+ */
+function publishedLocales() {
+  const source = readFileSync(join(ROOT, 'lib', 'i18n', 'catalogs.ts'), 'utf8');
+  const block = /const CATALOGS[^=]*=\s*\{([\s\S]*?)\};/.exec(source);
+  if (!block) throw new Error('could not find the CATALOGS literal in lib/i18n/catalogs.ts');
+  return new Set([...block[1].matchAll(/\b([a-z]{2})\b/g)].map((m) => m[1]));
+}
+
 const locales = registeredLocales();
 const meta = localeMeta(locales);
+const publishedSet = publishedLocales();
 const docs = await documentCounts(locales);
 const blogs = blogCounts(locales);
 
 const rows = locales.map((locale) => {
-  const published = existsSync(join(ROOT, 'lib', 'i18n', 'messages', `${locale}.ts`));
+  const published = publishedSet.has(locale);
   return {
     code: locale,
     hreflang: meta[locale].htmlLang,
