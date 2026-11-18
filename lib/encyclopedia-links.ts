@@ -12,7 +12,21 @@
 
 /** Wikipedia article URL — MediaWiki titles use underscores for spaces. */
 export const wikiUrl = (
-  lang: 'en' | 'zh' | 'de' | 'fr' | 'it' | 'ko' | 'es' | 'pt',
+  lang:
+    | 'en'
+    | 'zh'
+    | 'de'
+    | 'fr'
+    | 'it'
+    | 'ko'
+    | 'es'
+    | 'pt'
+    | 'id'
+    | 'vi'
+    | 'ja'
+    | 'ru'
+    | 'tr'
+    | 'th',
   title: string
 ) => `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, '_'))}`;
 

@@ -53,7 +53,23 @@ import { LOCALE_META, SOURCE_LOCALE, localizedPath, type Locale } from './i18n/c
  */
 
 /** Locales the blog can appear in, in switcher order. */
-export const BLOG_LOCALES: Locale[] = ['en', 'es', 'pt', 'de', 'fr', 'it', 'ko', 'zh', 'tw'];
+export const BLOG_LOCALES: Locale[] = [
+  'en',
+  'es',
+  'pt',
+  'de',
+  'fr',
+  'it',
+  'ko',
+  'id',
+  'ja',
+  'vi',
+  'ru',
+  'tr',
+  'th',
+  'zh',
+  'tw',
+];
 
 export type BlogPost = {
   /** Directory name and URL segment. */
@@ -142,22 +158,34 @@ function articlePath(slug: string, locale: Locale): string | null {
 /**
  * Candidate file names for an article, most specific first.
  *
- * `en`, `es`, `pt`, `de`, `fr`, `it` and `ko` deliberately have no fallback: an
+ * `en`, `es`, `pt`, `de`, `fr`, `it`, `ko`, `id`, `ja`, `vi`, `ru`, `tr` and `th` deliberately have no fallback: an
  * article that has not been translated is absent from that language's blog
  * rather than shown in Chinese. `tw` falls back to the Chinese source only as a
  * safety net — the derived file is written by scripts/build-hant.mjs and
  * normally always present.
  */
+/** Article file suffix per locale; `tw` and Chinese are handled around this. */
+const ARTICLE_SUFFIX: Partial<Record<Locale, string>> = {
+  en: '.en.md',
+  es: '.es.md',
+  pt: '.pt.md',
+  de: '.de.md',
+  fr: '.fr.md',
+  it: '.it.md',
+  ko: '.ko.md',
+  id: '.id.md',
+  ja: '.ja.md',
+  vi: '.vi.md',
+  ru: '.ru.md',
+  tr: '.tr.md',
+  th: '.th.md',
+  zh: '.md',
+};
+
 function articleNames(slug: string, locale: Locale): string[] {
   if (locale === 'tw') return [`${slug}.tw.md`, `${slug}.md`];
-  if (locale === 'en') return [`${slug}.en.md`];
-  if (locale === 'es') return [`${slug}.es.md`];
-  if (locale === 'pt') return [`${slug}.pt.md`];
-  if (locale === 'de') return [`${slug}.de.md`];
-  if (locale === 'fr') return [`${slug}.fr.md`];
-  if (locale === 'it') return [`${slug}.it.md`];
-  if (locale === 'ko') return [`${slug}.ko.md`];
-  return [`${slug}.md`];
+  const suffix = ARTICLE_SUFFIX[locale];
+  return suffix ? [`${slug}${suffix}`] : [`${slug}.md`];
 }
 
 function readPost(slug: string, locale: Locale): BlogPost | null {

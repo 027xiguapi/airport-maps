@@ -120,7 +120,13 @@ function ReferenceLinks({
           locale === 'it' ||
           locale === 'ko' ||
           locale === 'es' ||
-          locale === 'pt'
+          locale === 'pt' ||
+          locale === 'id' ||
+          locale === 'vi' ||
+          locale === 'ja' ||
+          locale === 'ru' ||
+          locale === 'tr' ||
+          locale === 'th'
         ? name
         : titleZh;
 

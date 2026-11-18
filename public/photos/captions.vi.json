@@ -1,0 +1,1755 @@
+{
+  "_readme": [
+    "Chú thích ảnh tiếng Việt, khóa theo mã IATA rồi tên tệp ảnh.",
+    "Dịch từ chú thích tiếng Anh trong public/photos/captions/<IATA>.json.",
+    "lib/airport-photos.ts đọc tệp này với tên captions.vi.json; sân bay hoặc tệp",
+    "thiếu ở đây sẽ dùng chú thích tiếng Anh, không bao giờ dùng bản tiếng Trung."
+  ],
+  "AAA": {
+    "aaa-page-1.webp": "Đảo san hô Anaa nhìn từ Trạm Vũ trụ Quốc tế (ảnh NASA ISS007-E-14624, phạm vi công cộng) — đảo hẹp với vành rạn san hô trắng và đầm phá xanh ngọc; sân bay nằm trên đảo chính."
+  },
+  "AAE": {
+    "aae-sat-1.webp": "Ảnh vệ tinh: các đường băng của Annaba nằm giữa bờ biển Địa Trung Hải và những ngọn đồi, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AAL": {
+    "aal-bing-2.webp": "Mặt trước nhà ga Sân bay Aalborg — mái che thấp đỡ trên một hàng cột, phía sau là lối vào bằng kính.",
+    "aal-bing-3.webp": "Lên máy bay trên sân đỗ: hành khách leo cầu thang lên một chiếc máy bay phản lực của Atlantic Airways trong khi nhân viên mặt đất đứng chờ."
+  },
+  "AAN": {
+    "aan-bing-1.webp": "Nhà ga 2 của Sân bay Quốc tế Al Ain về đêm, các lối vào sáng đèn dưới biển hiệu Abu Dhabi Airports bằng tiếng Ả Rập.",
+    "aan-doubao-01.webp": "Từ sân đỗ, nhà ga trắng dài và thấp của Al Ain trải dài dưới những cột đèn cao, tháp không lưu đứng bên phải dưới bầu trời xanh quang đãng.",
+    "aan-doubao-03.webp": "Đường vào uốn cong dẫn tới nhà ga Al Ain qua những hàng cọ và bãi cỏ cắt tỉa, mái trắng của nhà ga mờ đi trong lớp sương mù sa mạc mỏng.",
+    "aan-doubao-04.webp": "Một bùng binh trước nhà ga, nơi dòng chữ xanh ghi tên sân bay phía trên một chiếc ô tô trắng đỗ bên hàng cọ dưới bầu trời mù sương.",
+    "aan-doubao-05.webp": "Nhìn xuống nhà ga trắng và sân đỗ của Al Ain, các xe phục vụ đỗ thành hàng bên cạnh, sa mạc nhạt màu chạy tới tận chân trời dưới những đám mây rải rác.",
+    "aan-doubao-06.webp": "Những hàng mái che nắng trắng phủ lên xe khách và ô tô trong bãi đỗ của sân bay, sa mạc trống trải bắt đầu ngay sau dải cây xanh.",
+    "aan-doubao-02.webp": "Mặt trước nhà ga Al Ain nhìn chính diện, một dãy cột vòm nhạt màu chạy dọc mặt tiền, bên ngoài có một xe buýt và một ô tô đỗ."
+  },
+  "AAO": {
+    "aao-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Anaco (AAO) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "AAP": {
+    "aap-bing-1.webp": "Nhà ga Sân bay Quốc tế APT Pranoto ở Samarinda: mặt tiền kính rộng được giằng bằng khung thép trắng nghiêng, mái che vươn ra trên khu vực đón trả khách.",
+    "aap-doubao-01.webp": "Một chiếc máy bay cánh quạt đỏ trắng chờ trên sân đỗ trong khi mây dày tụ lại trên nhà ga kính dài, mái của nó đỡ bằng các giàn thép trắng.",
+    "aap-doubao-03.webp": "Tấm biển chữ đỏ ở lối vào sân bay ghi tên Aji Pangeran Tumenggung Pranoto, phía sau là nhà ga mái cong màu trắng.",
+    "aap-doubao-04.webp": "Biển tên màu xanh và bảng số màu vàng chạy dọc tường nhà ga, hành khách băng qua sân trước bê tông dưới cầu đi bộ kính và thép.",
+    "aap-doubao-05.webp": "Từ bãi cỏ, mái bạc của nhà ga nhô lên ở hai đầu trên mặt tiền kính phản chiếu bầu trời xám trắng, một xe buýt chờ bên trái.",
+    "aap-doubao-06.webp": "Một nhà chứa máy bay hình vòm rộng mở trên sân đỗ với cầu thang lên máy bay đỗ bên trong, trong khi tháp không lưu trắng vươn lên bên cạnh trong ánh sáng nhạt dần."
+  },
+  "AAR": {
+    "aar-sat-1.webp": "Ảnh vệ tinh: hai đường băng của Aarhus nằm giữa đồng ruộng trên bờ biển phía đông Jutland, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AAT": {
+    "aat-sat-1.webp": "Ảnh vệ tinh: đường băng của Altay nằm giữa các thung lũng và vùng tuyết phủ ở dãy Altai, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AAX": {
+    "aax-bing-2.webp": "Bên trong nhà ga Sân bay Araxá: hàng người chờ tại quầy làm thủ tục và những dãy ghế kim loại hướng ra cửa kính dẫn tới sân đỗ.",
+    "aax-bing-3.webp": "Ảnh chụp từ trên cao Sân bay Araxá: một đường băng nhựa chạy qua vùng cao nguyên đất đỏ, sân đỗ và nhà chứa máy bay nằm dọc điểm giữa.",
+    "aax-doubao-01.webp": "Dòng chữ xanh lam trên dải mặt tiền nhà ga ghi tên sân bay phía trên tường gạch đỏ và mép mái trắng hình răng cưa dưới bầu trời quang đãng.",
+    "aax-doubao-02.webp": "Nhìn chính diện lối vào, cửa kính mở ra sảnh làm thủ tục và hành lý, phía trên là biển lên máy bay nhỏ màu xanh dưới bầu trời xanh trong.",
+    "aax-doubao-03.webp": "Ô tô đỗ trong bãi có bóng mát trước nhà ga, mặt tiền gạch đỏ, dải xanh và mép mái hình răng cưa nổi bật dưới bầu trời sáng.",
+    "aax-doubao-05.webp": "Ảnh chụp màn hình bản đồ vệ tinh đánh dấu đường băng và đường lăn của Sân bay Araxá bên các con phố xung quanh, có các nhãn địa danh phủ lên ảnh.",
+    "aax-doubao-04.webp": "Một chiếc máy bay phản lực thương gia trắng đỗ ngay trong cửa nhà chứa máy bay đang mở, thân máy bay bóng loáng phản chiếu cỏ và trời phía ngoài ngưỡng cửa."
+  },
+  "AAY": {
+    "aay-sat-1.webp": "Ảnh vệ tinh: đường băng của Al Ghaydah nằm giữa bờ biển Yemen và những ngọn đồi khô cằn, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "ABA": {
+    "aba-sat-1.webp": "Ảnh vệ tinh: đường băng chạy dọc rìa Abakan, sân đỗ và nhà ga ở bên cạnh điểm giữa."
+  },
+  "ABB": {
+    "abb-bing-1.webp": "Ảnh chụp từ trên cao Sân bay Quốc tế Asaba: những mái nhà ga hình vòm và tháp không lưu tối màu bên đường băng, phía trước là trạm cứu hỏa đỏ trắng và một xe chở nhiên liệu.",
+    "abb-bing-2.webp": "Mặt trước nhà ga và bãi đỗ xe — vách kính hình tam giác nằm trong mặt tiền hình vòm, tháp không lưu ở bên trái.",
+    "abb-bing-3.webp": "Nhà ga nhìn từ sân đỗ: những mái vòm trắng bên tháp không lưu độc lập, dưới các hàng cột đèn pha."
+  },
+  "ABC": {
+    "abc-sat-1.webp": "Ảnh vệ tinh: Sân bay Albacete / Căn cứ Không quân Los Llanos (ABC) được bao quanh bởi đất khô và vùng đất trống."
+  },
+  "ABD": {
+    "abd-bing-1.webp": "Biển hiệu lối vào Sân bay Quốc tế Abadan — tiếng Ba Tư và tiếng Anh đặt cạnh nhau, cả hai đều ghi “Ayatollah Jami International Airport”.",
+    "abd-bing-3.webp": "Lối vào nhà ga: hành khách kéo hành lý về phía sảnh dưới biển hiệu chữ đỏ, trên lối đi lát gạch hoa văn."
+  },
+  "ABI": {
+    "abi-bing-1.webp": "Ảnh chụp từ trên cao Sân bay Khu vực Abilene: những mái che trắng như lều trên vòng đón trả khách, một máy bay chở khách đang lên khách trên sân đỗ.",
+    "abi-bing-2.webp": "Tháp không lưu và những mái che của nhà ga, một chiếc C-130 bay ngang phía trên.",
+    "abi-bing-3.webp": "Nhìn dọc đường băng về phía tháp — vạch trắng kéo dài trên mặt nhựa tối tới tháp đỏ trắng ở chân trời.",
+    "abi-doubao-01.webp": "Xe bán tải chờ dưới mái che đỏ trong bãi cạnh nhà ga, lá cờ Texas bay phía trên, một máy bay chở khách ở đường lăn phía ngoài bãi cỏ.",
+    "abi-doubao-02.webp": "Hai máy bay phản lực khu vực bốn động cơ đuôi đỏ đỗ trên sân đỗ bê tông, những chiếc nón cam đặt bên cạnh dưới bầu trời xanh thẳm không mây.",
+    "abi-doubao-03.webp": "Một tháp có chóp đỏ vươn lên bên tòa nhà ga màu nâu nhạt, cây sồi lớn tỏa bóng trên bãi cỏ và một xe đẩy hành lý đỏ đỗ bên phải.",
+    "abi-doubao-04.webp": "Hai thang cuốn đưa từ quảng trường lên nhà ga dưới mái căng trắng đỡ bằng cột bê tông, bên phải có một bia lịch sử.",
+    "abi-doubao-05.webp": "Về đêm, những mái che trắng hình vỏ sò của nhà ga sáng lên phía trên lối vào, cờ treo lặng trên cột, ô tô đỗ bên dưới trong bóng tối.",
+    "abi-doubao-06.webp": "Ảnh chụp màn hình bản đồ vệ tinh với ghim đỏ đánh dấu Sân bay Khu vực Abilene, hai đường băng, đường lăn và các tòa nhà ga nằm giữa đồng ruộng."
+  },
+  "ABL": {
+    "abl-sat-1.webp": "Ảnh vệ tinh: đường băng sỏi của Ambler nằm giữa lãnh nguyên và rừng cây bên sông Kobuk, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "ABQ": {
+    "abq-bing-1.webp": "Sunport trong giờ vàng: nhà ga nằm sau những dãy bãi đỗ và gian đỗ xe, phía xa là đường chân trời Albuquerque và vách núi sa mạc.",
+    "abq-bing-3.webp": "Ảnh từ trên cao nhà ga và sân đỗ: các nhà ga kiểu Pueblo màu hồng nối với sân đỗ bằng cầu ống, máy bay đỗ tại cửa ra máy bay, bãi đỗ nhiều tầng và thành phố phía sau.",
+    "abq-doubao-01.webp": "Lúc chạng vạng, đường cong nâng cao trước nhà ga có xe đưa đón và ô tô dưới mái che xanh mòng két, mây trôi trên những khối nhà màu đất nung.",
+    "abq-doubao-02.webp": "Nhìn từ trên cao, tấm pin mặt trời phủ mái bãi đỗ trong khi các nhà ga hồng nhạt trải rộng trên sân đỗ, máy bay đỗ ở cả hai đầu.",
+    "abq-doubao-03.webp": "Ảnh chụp màn hình có thanh tiêu đề xanh hiển thị toàn cảnh các đường băng và nhà ga, lưới phố thành phố chạy tới những dãy núi có vệt tuyết.",
+    "abq-doubao-04.webp": "Sau khi trời tối, mặt tiền nhà ga được chiếu sáng ấm áp trong khi những dải đèn xanh ngọc men theo mái che phía trên con đường vắng.",
+    "abq-doubao-05.webp": "Nhìn từ bên hông, máy bay đỗ tại cầu ống trong khi gara đỗ xe có mái pin mặt trời và những hàng ô tô lấp đầy tiền cảnh.",
+    "abq-doubao-06.webp": "Một bức ảnh cũ bạc màu của sân bay: ô tô chật kín bãi trước nhà ga gạch, một máy bay chở khách chờ trên sân đỗ."
+  },
+  "ABR": {
+    "abr-bing-1.webp": "Bức tranh tường lớn phía trên khu vực chờ — cảnh phố thị vùng đồng cỏ được vẽ khắp bức tường, điểm nổi bật nhất của nhà ga.",
+    "abr-bing-2.webp": "Hàng người uốn lượn trước cửa DEPARTURES, bên phải là các kiosk tự phục vụ và quầy làm thủ tục của Delta.",
+    "abr-bing-3.webp": "Khu ghế chờ tại cửa ra máy bay — hành khách chờ thành hàng bên cửa sổ dưới trần gỗ đỡ bức tranh tường.",
+    "abr-doubao-01.webp": "Vào một ngày đông u ám, tên sân bay chạy ngang mặt tiền kính, những mảng tuyết còn đọng ở rìa sân đỗ.",
+    "abr-doubao-02.webp": "Lúc chạng vạng, những chữ kim loại nổi trên bức tường đá tối bắt lấy dải trời cam, tuyết vẫn phủ trên lối đi.",
+    "abr-doubao-03.webp": "Ảnh chụp màn hình bản đồ đánh dấu Sân bay Khu vực Aberdeen bằng ghim đỏ, đường băng cắt chéo qua vùng đồng ruộng xanh.",
+    "abr-doubao-04.webp": "Ảnh vệ tinh nhìn thẳng xuống: một đường băng và đường lăn song song cắt qua bãi cỏ, các tòa nhà tập trung ở góc tây bắc.",
+    "abr-doubao-05.webp": "Ảnh nền vệ tinh có hình mờ của dịch vụ bản đồ, cho thấy đường băng nằm chéo giữa những thửa ruộng chắp vá bên một xa lộ."
+  },
+  "ABS": {
+    "abs-bing-1.webp": "Sân bay nhìn từ đường vào: nhà ga thấp và tháp không lưu giữa hàng cây, sa mạc bao quanh bốn phía.",
+    "abs-bing-3.webp": "Biển “ABU SIMBEL AIRPORT” trên mái nhà ga, phía trên bức tường vẽ tranh theo phong cách Ai Cập cổ đại."
+  },
+  "ABT": {
+    "abt-sat-1.webp": "Ảnh vệ tinh: đường băng của Al Baha nằm trên cao nguyên trong dãy Asir, nhà ga và sân đỗ bên cạnh, xung quanh là thị trấn và các dãy núi."
+  },
+  "ABU": {
+    "abu-sat-1.webp": "Ảnh vệ tinh: Sân bay AA Bere Tallo (Haliwen) (ABU) nằm giữa đất khô và vùng đất trống."
+  },
+  "ABX": {
+    "abx-sat-1.webp": "Ảnh vệ tinh: đường băng của Albury nằm giữa đồng ruộng và đồi bên sông Murray, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "ACD": {
+    "acd-bing-1.webp": "Sân bay cỏ Acandí — một chiếc Cessna nhỏ trên sân đỗ sỏi, một máy bay khác đỗ trên cỏ, xung quanh là rừng nhiệt đới và đồi thấp."
+  },
+  "ACE": {
+    "ace-bing-2.webp": "Sân bay César Manrique-Lanzarote lúc chạng vạng — biển hiệu sân bay phía trên khu vườn xương rồng trũng, phía sau là đồi núi của đảo.",
+    "ace-doubao-01.webp": "Dưới bầu trời quang đãng, dòng chữ vàng ghi tên sân bay và Nhà ga 1, tháp không lưu bên phải và xương rồng phía trước.",
+    "ace-doubao-02.webp": "Nhìn lên từ lối đi trong vườn, biển hiệu vàng chạy dọc mép mái, xe thuê đỗ dưới dãy cột.",
+    "ace-doubao-03.webp": "Bên kia sân đỗ bê tông trống, nhà ga trắng mang tên đầy đủ của sân bay, hai bên ghi lối đi và lối đến.",
+    "ace-doubao-04.webp": "Từ phía ngoài đường băng, nhà ga thấp thoáng giữa hai máy bay chở khách đỗ, cột đèn pha phía trên và nền đất núi lửa khô phía trước.",
+    "ace-doubao-05.webp": "Một tác phẩm điêu khắc kim loại trừu tượng đứng trên bệ đá tối trong bùng binh có cảnh quan, phía sau là một miệng núi lửa trơ trọi.",
+    "ace-doubao-06.webp": "Một máy bay chở khách bay lên trên mặt nước, bụng máy bay phía trên bãi biển và cầu tàu dài, nhà trắng dọc bờ và mây dày phía sau."
+  },
+  "ACF": {
+    "acf-sat-1.webp": "Ảnh vệ tinh: Sân bay Aral Tarim (ACF) được bao quanh bởi đất khô và vùng đất trống."
+  },
+  "ACI": {
+    "aci-sat-1.webp": "Ảnh vệ tinh: đường băng ngắn của Alderney nằm trên đảo Channel, nhà ga và sân đỗ bên cạnh, xung quanh là bờ biển và đồng cỏ."
+  },
+  "ACR": {
+    "acr-sat-1.webp": "Ảnh vệ tinh: Sân bay Araracuara (ACR) được bao quanh bởi thảm thực vật xanh và đồng ruộng."
+  },
+  "ACV": {
+    "acv-bing-1.webp": "Dòng chữ “ARCATA – EUREKA AIRPORT” trên tường ngoài nhà ga, ghi tên hai thành phố mà sân bay phục vụ.",
+    "acv-bing-3.webp": "Bên cạnh sân bay: xe cộ qua lại trước các nhà chứa máy bay trong khi một máy bay cánh quạt nhỏ bay lên trên đường băng."
+  },
+  "ACY": {
+    "acy-bing-1.webp": "Mặt phía đất liền của nhà ga — vách kim loại bạc và kính rộng, bên phải ghi “ATLANTIC CITY INTERNATIONAL AIRPORT”.",
+    "acy-bing-2.webp": "Tượng đài chữ “A” ở lối vào sân bay: một chữ A màu xanh cắt qua bóng máy bay nhỏ trên bãi cỏ trước nhà ga.",
+    "acy-bing-3.webp": "Ảnh chụp từ trên cao Sân bay Quốc tế Atlantic City: nhà ga và sảnh ở giữa, bãi đỗ xe và đường lăn xung quanh, đường chân trời thành phố lơ lửng phía xa."
+  },
+  "ADB": {
+    "adb-sat-1.webp": "Ảnh vệ tinh: các đường băng và đường lăn ở Izmir nằm trên đồng bằng bên biển Aegean, nhà ga và sân đỗ ở phía nam sân bay."
+  },
+  "ADE": {
+    "ade-bing-3.webp": "Nhà ga và tháp không lưu Sân bay Quốc tế Aden — tên sân bay bằng tiếng Ả Rập trên tường, phía trước đỗ hai xe kéo đẩy máy bay."
+  },
+  "ADF": {
+    "adf-sat-1.webp": "Ảnh vệ tinh: đường băng của Adıyaman nằm trên cao nguyên đông nam Thổ Nhĩ Kỳ, nhà ga và sân đỗ bên cạnh, xung quanh là đồi và đồng ruộng."
+  },
+  "ADK": {
+    "adk-bing-1.webp": "Adak ở cuối đường băng — mây thấp trên những ngọn đồi núi lửa, đường băng sáng đèn vươn tới chân đồi.",
+    "adk-bing-3.webp": "Băng qua lãnh nguyên về phía sân bay Adak — đường băng và đường lăn nằm phẳng trên mặt đất, các tòa nhà sân bay nhỏ bé ở chân trời.",
+    "adk-doubao-01.webp": "Từ đầu đường băng, một hàng đèn tiếp cận đỏ băng qua bãi cỏ, đường băng xám chạy thẳng tới những ngọn núi lửa có vệt tuyết.",
+    "adk-doubao-02.webp": "Từ con đường sau hàng rào, một chiếc máy bay phản lực đỗ bên nhà ga mái xanh trong khi mây ép xuống các dãy núi lốm đốm tuyết.",
+    "adk-doubao-03.webp": "Trên sân đỗ Adak, một chiếc máy bay của Alaska Airlines đứng với cầu thang hạ xuống, tuyết còn trên các núi lửa và mây treo thấp.",
+    "adk-doubao-04.webp": "Mặt phía đất liền của nhà ga — dải cửa sổ hồng và đỏ dưới mái xanh, lối đi có mái che và một đoạn nhựa đường vắng.",
+    "adk-doubao-05.webp": "Hai du khách đi bộ về phía cửa nhà ga dưới tấm biển chào mừng đến N.A.F. Adak, những chiếc nón cam xếp dọc lối đi.",
+    "adk-doubao-06.webp": "Biển hiệu lối vào ốp đá đứng giữa bãi cỏ khô, phía xa là máy bay đỗ và nhà ga, những đỉnh núi tuyết hiện dưới dải mây."
+  },
+  "ADL": {
+    "adl-sat-1.webp": "Ảnh vệ tinh: đường băng và nhà ga của Adelaide nằm phía tây trung tâm thành phố, xung quanh là cảng, khu công nghiệp và nhà ở."
+  },
+  "ADM": {
+    "adm-bing-1.webp": "Ảnh chụp từ trên không Sân bay Thành phố Ardmore — hai đường băng cắt nhau trên cánh đồng xanh, nhà ga và các nhà chứa máy bay tập trung ở phía tây nam.",
+    "adm-bing-3.webp": "Biển hiệu lối vào Sân bay Thành phố Ardmore — tên sân bay trên bệ đá bên cạnh bảng danh mục các doanh nghiệp tại sân bay.",
+    "adm-doubao-01.webp": "Nhìn qua thanh giằng cánh của một máy bay nhỏ, các đường băng của Ardmore Municipal cắt nhau trên cánh đồng xanh trong khi một con sông uốn qua hàng cây.",
+    "adm-doubao-02.webp": "Một bức ảnh hàng không đen trắng cũ cho thấy các đường băng cắt nhau của sân bay, những dãy nhà chứa máy bay và công trình phụ trải rộng trên vùng đồng ruộng.",
+    "adm-doubao-03.webp": "Sơ đồ sân bay của Cục Hàng không Liên bang bố trí hai đường băng, đường lăn, độ cao và hướng từ của Ardmore Municipal.",
+    "adm-doubao-04.webp": "Ảnh chụp màn hình Google Maps đánh dấu vị trí gần đúng của sân bay bằng ghim đỏ giữa các xa lộ và đồng ruộng giữa Springer và Gene Autry."
+  },
+  "ADS": {
+    "ads-sat-1.webp": "Ảnh vệ tinh: Sân bay Addison (ADS) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "ADU": {
+    "adu-sat-1.webp": "Ảnh vệ tinh: đường băng của Ardabil nằm trên cao nguyên Iran, nhà ga và sân đỗ bên cạnh, xung quanh là núi và đất khô."
+  },
+  "ADW": {
+    "adw-sat-1.webp": "Ảnh vệ tinh: Căn cứ Liên quân Andrews (ADW) nằm giữa thảm thực vật xanh và đồng ruộng.",
+    "adw-doubao-01.webp": "Từ trên cao, Căn cứ Liên quân Andrews hiện ra với hai đường băng song song dài và các đường lăn nối nhau trải khắp bãi cỏ rộng và sân đỗ lát.",
+    "adw-doubao-02.webp": "Những hàng máy bay phản lực nhỏ đỗ ngay ngắn trên sân đỗ, bên trái là cụm nhà chứa máy bay mái vòm và phía sau là đường băng chính.",
+    "adw-doubao-03.webp": "Những chiếc máy bay phản lực hai động cơ trắng đỗ thành hàng ngay ngắn trên sân đỗ bê tông rộng, ba chiếc trực thăng đứng gần cuối khung hình.",
+    "adw-doubao-04.webp": "Dưới bầu trời xám, một hàng máy bay chiến đấu chờ trước nhà chứa máy bay mái cong lớn trong khi một đường băng chạy ngang phía xa.",
+    "adw-doubao-05.webp": "Biển hiệu lối vào căn cứ mở đầu bằng quốc huy Không quân Hoa Kỳ phía trên dòng chữ Andrews Air Force Base và Joint Base Andrews.",
+    "adw-doubao-06.webp": "Ảnh vệ tinh Google cho thấy bố cục đường băng của căn cứ, bao quanh là khu nhà ở ngoại ô, xa lộ và những mảng rừng."
+  },
+  "AEG": {
+    "aeg-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Aek Godang (AEG) nằm giữa thảm thực vật xanh và đồng ruộng.",
+    "aeg-doubao-01.webp": "Dưới mây dày, nhà ga Sân bay Aek Godang khoác các dải màu xanh lá, vàng và cam, tên sân bay viết bằng chữ đỏ trên mặt tiền."
+  },
+  "AEH": {
+    "aeh-sat-1.webp": "Ảnh vệ tinh: Sân bay Abeche (AEH) được bao quanh bởi đất khô và vùng đất trống."
+  },
+  "AEP": {
+    "aep-baidu-1.webp": "Các kiosk tự phục vụ của LATAM trong sảnh làm thủ tục — một hàng máy màu vàng với hành khách đang làm thủ tục.",
+    "aep-baidu-2.webp": "Một máy bay chở khách của Austral lăn bánh với đường chân trời Buenos Aires vươn lên sau đuôi.",
+    "aep-baidu-3.webp": "Một chiếc Boeing 737 của Aerolíneas Argentinas với các tòa tháp và cây cối thành phố phía sau."
+  },
+  "AES": {
+    "aes-sat-1.webp": "Ảnh vệ tinh: đường băng của Alesund nằm giữa các đảo và vịnh hẹp, nhà ga và sân đỗ bên cạnh, xung quanh là biển và núi."
+  },
+  "AET": {
+    "aet-sat-1.webp": "Ảnh vệ tinh: Sân bay Allakaket (AET) được bao quanh bởi thảm thực vật xanh và đồng ruộng.",
+    "aet-doubao-01.webp": "Ảnh hàng không có chú thích: đường băng sỏi của Allakaket trải dài bên ngôi làng và sông Koyukuk, các nhãn đánh dấu cột gió và đường băng cũ bị bỏ hoang.",
+    "aet-doubao-02.webp": "Ảnh bản đồ vệ tinh: đường băng của Allakaket cắt qua rừng vân sam tối, một ghim và các nhãn đánh dấu sân bay và một cột gió.",
+    "aet-doubao-03.webp": "Bản đồ khu vực: ghim đỏ đánh dấu Sân bay Allakaket ở nội địa Alaska, các nhãn Nome, Fairbanks và Anchorage xung quanh."
+  },
+  "AEU": {
+    "aeu-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Đảo Abu Musa (AEU) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
+  },
+  "AEX": {
+    "aex-sat-1.webp": "Ảnh vệ tinh: các đường băng của Alexandria nằm giữa sông và rừng cây ở Louisiana, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AEY": {
+    "aey-sat-1.webp": "Ảnh vệ tinh: đường băng của Akureyri nằm giữa vịnh hẹp và thung lũng ở bắc Iceland, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AFL": {
+    "afl-sat-1.webp": "Ảnh vệ tinh: đường băng của Alta Floresta nằm ở rìa rừng nhiệt đới Amazon, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AFY": {
+    "afy-sat-1.webp": "Ảnh vệ tinh: Căn cứ Không quân Afyon (AFY) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "AGB": {
+    "agb-sat-1.webp": "Ảnh vệ tinh: Sân bay Augsburg (AGB) được bao quanh bởi thảm thực vật xanh và đồng ruộng."
+  },
+  "AGC": {
+    "agc-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Quận Allegheny (AGC) hòa vào thảm thực vật xanh và đồng ruộng xung quanh."
+  },
+  "AGQ": {
+    "agq-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Dhokimion (AGQ) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "AGR": {
+    "agr-sat-1.webp": "Ảnh vệ tinh: các đường băng của Agra nằm giữa thành phố và đồng ruộng bên sông Yamuna, nhà ga và sân đỗ ở bên cạnh.",
+    "agr-doubao-02.webp": "Ảnh ghép quảng cáo: nhà ga màu kem và đỏ của Sân bay Agra mang biển lối đến quốc tế, một máy bay phản lực và hình Taj Mahal mờ nhạt chồng lên bầu trời.",
+    "agr-doubao-03.webp": "Bản đồ sơ đồ: nhà ga và sân đỗ của Agra được vẽ bằng nét xám nhạt, bên dưới là các biểu tượng bãi đỗ xe, xe buýt, ăn uống và thuê xe.",
+    "agr-doubao-01.webp": "Mặt tiền nhà ga Sân bay Agra ghi tên sân bay và lối đến nội địa trên biển xanh, vài du khách kéo hành lý về phía lối vào."
+  },
+  "AGS": {
+    "ags-sat-1.webp": "Ảnh vệ tinh: các đường băng của Augusta nằm giữa rừng cây và thị trấn bên sông Savannah, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AGX": {
+    "agx-sat-1.webp": "Ảnh vệ tinh: đường băng của Agatti nằm trên một đảo Lakshadweep hẹp, nhà ga và sân đỗ bên cạnh, xung quanh là đầm phá và rạn san hô.",
+    "agx-doubao-01.webp": "Ảnh trích từ video: cú tiếp cận thấp xuống đường băng Agatti, con đường băng ôm sát hòn đảo hẹp giữa đầm phá xanh ngọc và sóng trắng.",
+    "agx-doubao-02.webp": "Ảnh chụp từ trên cao: đường băng của Agatti chiếm gần như toàn bộ hòn đảo mảnh, bao quanh là vùng nước nông xanh nhạt đổ xuống biển xanh thẳm.",
+    "agx-doubao-03.webp": "Một máy bay chở khách lướt thấp trên đầm phá xanh ngọc khi vào tiếp cận đường băng Agatti, sân đỗ và những tòa nhà thấp ở cuối đường băng.",
+    "agx-doubao-04.webp": "Lúc chạng vạng, ảnh chụp từ trên cao theo đường băng Agatti trải dài trên hòn đảo hẹp về phía chân trời, nước rạn san hô phẳng lặng ngoài các bãi biển hai bên."
+  },
+  "AGZ": {
+    "agz-sat-1.webp": "Ảnh vệ tinh: Sân bay Aggeneys (AGZ) được bao quanh bởi đất khô và vùng đất trống."
+  },
+  "AHB": {
+    "ahb-baidu-2.webp": "Trên sân đỗ: một máy bay chở khách sơn màu xanh lá đỗ cùng tháp không lưu và nhà ga của Abha ở bên phải."
+  },
+  "AHE": {
+    "ahe-sat-1.webp": "Ảnh vệ tinh: đường băng của Ahe nằm trên một motu hẹp của đảo san hô, nhà ga và sân đỗ bên cạnh, xung quanh là đầm phá và rạn san hô."
+  },
+  "AHN": {
+    "ahn-baidu-1.webp": "Bên ngoài nhà ga: Trung tâm Bay Ben Epps bằng gạch, trước sân có tượng voi."
+  },
+  "AHO": {
+    "aho-baidu-2.webp": "Một chiếc Boeing 737 của Ryanair trên sân đỗ Alghero, phía sau là nhà ga và thiết bị mặt đất."
+  },
+  "AHS": {
+    "ahs-sat-1.webp": "Ảnh vệ tinh: Sân bay Ahuas (AHS) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "AIA": {
+    "aia-sat-1.webp": "Ảnh vệ tinh: các đường băng của Alliance nằm giữa đồng ruộng và thảo nguyên trên cao nguyên Nebraska, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AIP": {
+    "aip-sat-1.webp": "Ảnh vệ tinh: Sân bay Adampur (AIP) được bao quanh bởi thảm thực vật xanh và đồng ruộng.",
+    "aip-chatgpt-01.webp": "Dưới bầu trời quang đãng, biển hiệu Adampur màu xanh đặt trên nhà ga mặt tiền kính trong khi một nhóm người tạo dáng trên bậc thang.",
+    "aip-chatgpt-02.webp": "Cửa sổ hình vòm và một gian nhà nhỏ hình vòm trang trí nhà ga Sân bay Adampur, bên cạnh là cột cờ cao và thảm đỏ trải trên bãi cỏ.",
+    "aip-chatgpt-03.webp": "Hai xe cứu hỏa phun những tia nước vòng qua một máy bay chở khách trên sân đỗ, một chiếc trực thăng đỗ ở một bên.",
+    "aip-chatgpt-04.webp": "Lúc chạng vạng, đài phun nước phun trước nhà ga sáng đèn trong khi lá cờ Ấn Độ treo trên cột cao.",
+    "aip-chatgpt-05.webp": "Nhân viên mặc áo phản quang sáng màu đứng thành hàng dài khắp sân trước lát đá trước nhà ga.",
+    "aip-chatgpt-06.webp": "Một chiếc máy bay cánh quạt đỏ trắng của SpiceJet nghỉ trên sân đỗ trong khi nhân viên mặt đất và khách đi bộ gần đó dưới bầu trời mù sương.",
+    "aip-chatgpt-07.webp": "Một tòa nhà một tầng thấp mang biển xanh ghi tên Sân bay Adampur bằng tiếng Punjab và tiếng Anh, cửa có mái hiên sọc."
+  },
+  "AIR": {
+    "air-sat-1.webp": "Ảnh vệ tinh: Sân bay Aripuanã (AIR) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "AIT": {
+    "ait-sat-1.webp": "Ảnh vệ tinh: Sân bay Aitutaki (AIT) được bao quanh bởi nước và bờ biển.",
+    "ait-chatgpt-01.webp": "Lối vào nhà ga sơn màu kem dưới mái nhà dốc chào đón du khách dưới tấm biển “Welcome to Aitutaki”, hai bên là hàng rào cây xanh.",
+    "ait-chatgpt-02.webp": "Từ trên không, đường băng Aitutaki cắt thẳng qua một hòn đảo nhỏ xanh tươi bao quanh bởi những dải đầm phá xanh ngọc nhạt.",
+    "ait-chatgpt-03.webp": "Một máy bay cánh quạt hai động cơ màu trắng với đuôi xanh đỗ trên sân đỗ nhạt màu bên cạnh một đoàn xe đẩy hành lý.",
+    "ait-chatgpt-04.webp": "Một tấm biển gỗ lũa ghi tên Sân bay Quốc tế Aitutaki đứng trước mái che lợp tranh, nơi vài du khách chờ trong bóng mát.",
+    "ait-chatgpt-05.webp": "Dưới mây dày, biển Aitutaki của nhà ga hướng ra bãi cỏ, một bảng chào mừng và bãi đỗ xe nhỏ có cọ.",
+    "ait-chatgpt-06.webp": "Qua cánh quạt và vỏ động cơ mờ đi, một hòn đảo nhỏ thấp với đường băng trải dài bên đầm phá xanh ngọc.",
+    "ait-chatgpt-07.webp": "Một chiếc máy bay cánh quạt hai động cơ hướng về phía máy ảnh trên đường băng, đường chân trời biển hiện ra sau mũi máy bay."
+  },
+  "AIU": {
+    "aiu-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Enua (AIU) hòa vào nước và bờ biển xung quanh.",
+    "aiu-chatgpt-01.webp": "Dưới hàng cọ, một nhà ga mở bốn phía sơn xanh và đỏ mang băng rôn chào mừng đến Atiu trong khi du khách mang ba lô tụ tập trong bóng mát.",
+    "aiu-chatgpt-02.webp": "Từ bên cánh máy bay, đường băng phía trước trông cũ và loang lổ, hai bên là cây bụi và một hàng cây."
+  },
+  "AJF": {
+    "ajf-sat-1.webp": "Ảnh vệ tinh: đường băng của Al-Jawf nằm trong sa mạc phía bắc Ả Rập Xê Út, nhà ga và sân đỗ bên cạnh, xung quanh là đất khô và vài thửa ruộng.",
+    "ajf-chatgpt-01.webp": "Mặt tiền kính của nhà ga ghi Al Jouf International Airport bằng tiếng Anh và tiếng Ả Rập phía trên cửa vào.",
+    "ajf-chatgpt-02.webp": "Sảnh làm thủ tục vắng không, một hàng quầy đánh số sáng xanh dưới đèn trần rực rỡ trên nền lát bóng.",
+    "ajf-chatgpt-03.webp": "Nhìn từ trên cao, một con đường phân đôi chạy qua sa mạc trống qua bùng binh về phía nhà ga sân bay.",
+    "ajf-chatgpt-04.webp": "Dưới trần lưới trắng, những cây cột rộng đỡ một sảnh rộng lớn lát bóng, trông lớn hơn nhiều so với nhà ga nhỏ gọn của Al-Jouf.",
+    "ajf-chatgpt-05.webp": "Hai tia nước cắt nhau phía trên một máy bay thân hẹp trên sân đỗ, sa mạc khô cằn trải dài ngoài hàng rào sân bay.",
+    "ajf-chatgpt-06.webp": "Sau hoàng hôn, bầu trời cam và tím rực sáng sau nhà ga Al Jouf sáng đèn, đường vào rợp bóng cọ.",
+    "ajf-chatgpt-07.webp": "Ánh nắng thấp nhuộm vàng nhà ga cũ của Sân bay Jouf trong khi một máy bay chở khách đuôi xanh đỗ tại cửa ra máy bay."
+  },
+  "AJI": {
+    "aji-sat-1.webp": "Ảnh vệ tinh: đường băng của Ağrı nằm trên cao nguyên cao ở đông Thổ Nhĩ Kỳ, nhà ga và sân đỗ bên cạnh, xung quanh là núi và đất khô."
+  },
+  "AJL": {
+    "ajl-sat-1.webp": "Ảnh vệ tinh: đường băng của Lengpui nằm giữa những ngọn đồi xanh của Mizoram, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AJR": {
+    "ajr-sat-1.webp": "Ảnh vệ tinh: đường băng của Arvidsjaur nằm giữa rừng và hồ ở bắc Thụy Điển, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AKA": {
+    "aka-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Ankang Fuqiang (AKA) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "AKD": {
+    "akd-sat-1.webp": "Ảnh vệ tinh: Sân bay Akola (AKD) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "AKJ": {
+    "akj-sat-1.webp": "Ảnh vệ tinh: đường băng của Asahikawa nằm giữa đồng ruộng và đồi ở trung tâm Hokkaido, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AKL": {
+    "akl-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Auckland (AKL)."
+  },
+  "AKP": {
+    "akp-sat-1.webp": "Ảnh vệ tinh: đường băng sỏi của Anaktuvuk Pass nằm trong một thung lũng dãy Brooks, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AKR": {
+    "akr-page-1.webp": "Nhà ga Sân bay Akure — tường màu kem dưới mái xanh, mái che cong trên các lối vào và vạch lề đường xanh trắng.",
+    "akr-page-3.webp": "Một chiếc ATR 72 của Overland Airways (số đăng ký 5N-BPE) đỗ trên sân đỗ Akure.",
+    "akr-chatgpt-01.webp": "Hành khách đi dọc con đường trước nhà ga màu kem, qua một chảo vệ tinh gắn tường và mép mái xanh.",
+    "akr-chatgpt-02.webp": "Dưới bầu trời xám mù sương, cổng vào mang dòng chữ “Welcome to Akure Airport” đứng trên con đường.",
+    "akr-chatgpt-03.webp": "Hành khách băng qua sân đỗ về phía một chiếc máy bay cánh quạt của Overland Cargo, phía sau đỗ một máy bay chở hàng trắng mang nhãn Allied Air.",
+    "akr-chatgpt-04.webp": "Một mái che xanh trong mờ che lối vào phòng đến, nơi có áp phích y tế đại dịch dán bên cửa.",
+    "akr-chatgpt-05.webp": "Tại sân trước, hàng rào cây bao quanh biển chỉ dẫn, ô tô chờ dọc lề đường và tháp không lưu đứng phía xa.",
+    "akr-chatgpt-06.webp": "Một máy bay phản lực khu vực trắng xanh nghỉ trên sân đỗ cùng nhân viên mặt đất và một xe phục vụ bên cạnh dưới bầu trời nhiều mây.",
+    "akr-chatgpt-07.webp": "Từ trên cao, một đường băng cắt thẳng qua cây bụi và rừng cây xanh thẫm, hai đầu có khoảng trống."
+  },
+  "AKS": {
+    "aks-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Gwaunaru'u (AKS) hòa vào nước và bờ biển xung quanh.",
+    "aks-chatgpt-01.webp": "Một băng rôn ghi “Welcome to Gwaunaru'u Airport” trải ngang mặt trước nhà ga, đám đông cư dân địa phương và trẻ em đứng trên bãi cỏ.",
+    "aks-chatgpt-02.webp": "Một dải đất nhạt chưa lát chạy ngang bán đảo rợp cây giữa biển và rừng, trông như một hình dựng từ trình mô phỏng bay."
+  },
+  "AKT": {
+    "akt-sat-1.webp": "Ảnh vệ tinh: Căn cứ Không quân Hoàng gia Akrotiri (AKT) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "AKU": {
+    "aku-sat-1.webp": "Ảnh vệ tinh: đường băng của Aksu nằm giữa ốc đảo và đồng ruộng ở rìa phía bắc Taklamakan, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AKV": {
+    "akv-sat-1.webp": "Ảnh vệ tinh: Sân bay Akulivik (AKV) được bao quanh bởi thị trấn, đồng ruộng và cây cối."
+  },
+  "AKX": {
+    "akx-sat-1.webp": "Ảnh vệ tinh: đường băng của Aktobe nằm trên thảo nguyên Kazakhstan, nhà ga và sân đỗ bên cạnh, xung quanh là thành phố và sông.",
+    "akx-chatgpt-01.webp": "Dưới bầu trời trưa quang đãng, mặt tiền kính cong của nhà ga phản chiếu ánh sáng, phía trên lối vào là những chữ đỏ.",
+    "akx-chatgpt-02.webp": "Bên trong nhà ga, những vạch chỉ dẫn màu vàng băng qua nền lát bóng giữa các cửa hàng nhỏ, quán cà phê và dãy ghế.",
+    "akx-chatgpt-03.webp": "Một chiếc máy bay phản lực trắng chờ tại cầu ống trong khi rìa sân đỗ nhường chỗ cho thảo nguyên phẳng trống dưới bầu trời nhạt dần.",
+    "akx-chatgpt-04.webp": "Hai kỹ sư mặc áo phản quang làm việc từ một thang bậc đỏ bên động cơ một chiếc máy bay đỗ trên sân đỗ mùa đông phủ băng.",
+    "akx-chatgpt-05.webp": "Một chiếc máy bay cánh quạt xanh trắng đỗ trên sân đỗ bên cạnh xe bồn nhiên liệu trong khi hai nhân viên mặt đất chăm sóc nó dưới bầu trời sáng.",
+    "akx-chatgpt-06.webp": "Những chữ đỏ ghi “Aliya Moldagulova Airport” đứng trên bức tường nhà ga xám, sân trước có tuyết mỏng.",
+    "akx-chatgpt-07.webp": "Những luống hoa cam và hồng lấp đầy tiền cảnh dưới nhà ga, nơi những chữ đỏ đứng trên mái."
+  },
+  "ALA": {
+    "ala-baidu-1.webp": "Nhà ga Almaty ban ngày — đường mái uốn lượn với đoạn đường dốc đưa xe lên khu vực đi.",
+    "ala-baidu-2.webp": "Về đêm, đèn neon đỏ “АЭРОПОРТ АЛМАТЫ” sáng lên trên mặt tiền kính.",
+    "ala-baidu-3.webp": "Cảnh mùa đông trước nhà ga — taxi và xe buýt nhỏ trong tuyết dưới chóp mái hình kim cương.",
+    "ala-chatgpt-01.webp": "Những chữ ALA chiếm ưu thế trên mặt tiền kính nhà ga Almaty, bên dưới là tên sân bay bằng tiếng Kazakh và tiếng Anh.",
+    "ala-chatgpt-02.webp": "Nhìn từ trên không, những bãi cỏ rộng ngăn đường băng Almaty với các đường lăn trong khi máy bay chở khách lấp đầy sân đỗ bên nhà ga mái xanh.",
+    "ala-chatgpt-03.webp": "Nhiều máy bay chở khách trắng đỗ trên sân đỗ, một chiếc có đuôi xanh, phía xa là những ngọn núi phủ tuyết trong không khí trong lành.",
+    "ala-chatgpt-04.webp": "Một chiếc máy bay phản lực xanh trắng chờ trên sân đỗ dưới bầu trời u ám, bên cạnh đỗ một băng tải hành lý ghi ALA.",
+    "ala-chatgpt-05.webp": "Dưới những đỉnh núi phủ tuyết, mái nhà ga mang dòng chữ ALMATY AIRPORT, một máy bay phản lực trắng trên sân đỗ và tháp không lưu bên trái.",
+    "ala-chatgpt-06.webp": "Trong ảnh hàng không ban ngày này, những mái nhà ga xanh nhạt nối liền nhau, máy bay chở khách chiếm các vị trí đỗ và một công trường xây dựng nằm bên cạnh.",
+    "ala-chatgpt-07.webp": "Ảnh vệ tinh sân bay Almaty — một đường băng dài cắt chéo qua sân đỗ và đường lăn, phía bên kia là khu nhà ở dày đặc."
+  },
+  "ALB": {
+    "alb-sat-1.webp": "Ảnh vệ tinh: các đường băng của Albany chạy dọc rìa các thị trấn Thung lũng Hudson, nhà ga và sân đỗ ở phía đông sân bay."
+  },
+  "ALC": {
+    "alc-sat-1.webp": "Ảnh vệ tinh: đường băng của Alicante chạy song song với bờ biển, nhà ga và sân đỗ ở phía đông, xung quanh là thành phố và những nhà kính trắng."
+  },
+  "ALF": {
+    "alf-sat-1.webp": "Ảnh vệ tinh: đường băng của Alta nằm giữa vịnh hẹp và cao nguyên, nhà ga và sân đỗ bên cạnh, xung quanh là nước và đồi thấp."
+  },
+  "ALH": {
+    "alh-sat-1.webp": "Ảnh vệ tinh: các đường băng của Albany nằm giữa rừng và đồng ruộng trên bờ biển phía nam Tây Úc, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "ALI": {
+    "ali-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Alice (ALI) được bao quanh bởi thị trấn, đồng ruộng và cây cối.",
+    "ali-chatgpt-01.webp": "Biểu đồ phân khu VFR lấy Sân bay Quốc tế Alice (ALI) làm trung tâm, đánh dấu VOR của sân bay, độ cao các điểm xung quanh và các thị trấn lân cận."
+  },
+  "ALJ": {
+    "alj-sat-1.webp": "Ảnh vệ tinh: các đường băng ở Alexander Bay nằm trên bờ biển khô cằn gần cửa sông Orange, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "ALL": {
+    "all-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Quốc tế Riviera Villanova d'Albenga (ALL) nằm giữa thảm thực vật xanh và đồng ruộng.",
+    "all-chatgpt-01.webp": "Nhìn từ trên không, đường băng Albenga nằm trong một thung lũng xanh bên lòng sông sỏi rộng, phía xa là các dãy núi vươn lên.",
+    "all-chatgpt-02.webp": "Tháp không lưu đỏ trắng vươn lên sau một tòa nhà ga thấp, trên tường phía trước có chữ ALBENGA và phía xa là núi.",
+    "all-chatgpt-03.webp": "Lúc chạng vạng, hai máy bay thương gia đỗ trên sân đỗ bê tông của sân bay Albenga, phía sau là tòa nhà ga mặt tiền kính.",
+    "all-chatgpt-04.webp": "Trong ánh chiều tại Albenga, một chiếc máy bay cánh quạt một động cơ nhỏ màu trắng vàng đỗ trên sân đỗ, phía xa là núi tối.",
+    "all-chatgpt-05.webp": "Từ trên không, đường băng Albenga và bãi cỏ rộng của nó nằm giữa một con đường và lòng sông, phía xa là thị trấn ven biển và biển.",
+    "all-chatgpt-06.webp": "Một chiếc trực thăng nghỉ trên sân đỗ trước nhà chứa máy bay lều trắng tại Albenga, dưới bầu trời xanh đầy mây bồng bềnh."
+  },
+  "ALM": {
+    "alm-page-1.webp": "Một chiếc Lockheed P-2H Neptune (N14447) được bảo tồn tại Sân bay Khu vực Alamogordo-White Sands, phía sau là các nhà chứa máy bay và sân lát của sân bay (ảnh: silverhawkauthor.com).",
+    "alm-chatgpt-01.webp": "Lối vào chính của Sân bay Khu vực Alamogordo-White Sands mang tên sân bay phía trên cửa, mở ra lối đi bê tông dưới bầu trời xanh trong.",
+    "alm-chatgpt-02.webp": "Ảnh chụp từ trên không đường băng 21 của Sân bay Khu vực Alamogordo-White Sands, cây bụi sa mạc hai bên và dải cát nhạt dọc chân trời.",
+    "alm-chatgpt-03.webp": "Ba máy bay hạng nhẹ đỗ trên sân đỗ nứt nẻ tại Alamogordo, bên trái là nhà chứa máy bay kim loại và phía trên dãy núi xa là những đám mây tích cao vút.",
+    "alm-chatgpt-04.webp": "Ảnh chụp bằng drone các vạch ngưỡng đường băng 4 của sân bay Alamogordo, dọc mép dưới có in một dải dữ liệu chuyến bay.",
+    "alm-chatgpt-05.webp": "Trước nhà ga Sân bay Khu vực Alamogordo-White Sands, cờ Hoa Kỳ và cờ bang New Mexico bay trên cột phía trên những hàng cây trụi lá."
+  },
+  "ALP": {
+    "alp-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Quốc tế Aleppo (ALP) nằm giữa đất khô và vùng đất trống."
+  },
+  "ALQ": {
+    "alq-sat-1.webp": "Ảnh vệ tinh: Sân bay Alegrete Novo (ALQ) được bao quanh bởi thị trấn, đồng ruộng và cây cối.",
+    "alq-chatgpt-01.webp": "Dưới mái che vàng tại sân bay Alegrete, một biển xanh mang tên sân bay, và một con chó nằm trên lối bê tông bên lối vào.",
+    "alq-chatgpt-02.webp": "Trước nhà ga Alegrete, một chiếc máy bay cánh quạt một động cơ nhỏ màu xanh trắng mang nhãn Azul đỗ trên sân đỗ lát dưới bầu trời loang lổ.",
+    "alq-chatgpt-03.webp": "Mặt trước nhà ga Alegrete có hai biển mái che xanh ghi tên sân bay, phía trên bãi cỏ khô dưới bầu trời không mây.",
+    "alq-chatgpt-04.webp": "Dưới bầu trời xanh thẳm, một chiếc máy bay cánh quạt của Azul đỗ trên sân đỗ Alegrete trong khi vài người chờ bên cạnh.",
+    "alq-chatgpt-05.webp": "Nhìn từ bên hông, những biển xanh của nhà ga Alegrete chạy dọc mái hiên vàng, vài chiếc ghế đặt trên bãi cỏ phía trước."
+  },
+  "ALR": {
+    "alr-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Alexandra (ALR) hòa vào đất khô và vùng đất trống xung quanh."
+  },
+  "ALU": {
+    "alu-sat-1.webp": "Ảnh vệ tinh: Sân bay Alula (ALU) được bao quanh bởi thị trấn, đồng ruộng và cây cối.",
+    "alu-chatgpt-01.webp": "Ảnh hàng không mô phỏng bay về một bờ biển sa mạc, nơi một ngôi làng nhỏ chạy dọc bãi biển và một sân bay với các tòa nhà nằm bên cạnh."
+  },
+  "ALY": {
+    "aly-baidu-1.webp": "Nhà ga El Nouzha cũ ở Alexandria — tòa nhà trắng nhiều tầng với đám đông du khách bên ngoài và chữ Ả Rập trên lối vào."
+  },
+  "AMB": {
+    "amb-sat-1.webp": "Ảnh vệ tinh: Sân bay Ambilobe (AMB) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "AMD": {
+    "amd-page-3.webp": "Nhà ga về đêm — ánh sáng tím phủ lên mái đua, các cột trên lề đường và tên sân bay bằng tiếng Gujarat dọc dải mặt tiền.",
+    "amd-page-4.webp": "Nhà ga nhìn từ khu đón trả khách — những mái căng trắng trên đường xe chạy, với mặt tiền kính và thép liên tục.",
+    "amd-page-5.webp": "Một bức tường nghệ thuật bên trong nhà ga — hai bức tượng đồng trước cảnh thành phố vẽ bằng nét, màn hình hiển thị tên đầy đủ của sân bay.",
+    "amd-chatgpt-01.webp": "Ban ngày, mặt trước nhà ga mang tên đầy đủ của sân bay bằng chữ xanh, du khách và ô tô trắng di chuyển dọc lề đường bên dưới.",
+    "amd-chatgpt-02.webp": "Khi màn đêm buông xuống, ánh sáng tím phủ lên mặt trước nhà ga trong khi lối đi mái căng trắng bắc qua đường xe chạy về phía dãy cửa hàng nhỏ sáng đèn.",
+    "amd-chatgpt-03.webp": "Một máy bay chở khách sơn màu IndiGo đỗ trên sân đỗ bê tông, phía sau là nhà ga và các vạch đường lăn sơn.",
+    "amd-chatgpt-04.webp": "Ảnh chụp từ trên cao nhà ga cho thấy mái bạc nhiều phần, bãi đỗ xe và đường vành đai phía trước, một máy bay chở khách đỗ trên sân đỗ bên cạnh.",
+    "amd-chatgpt-05.webp": "Về đêm, những mái căng trắng được chiếu sáng từ bên dưới che cho người đi dạo trên quảng trường trước nhà ga, phía sau là mặt tiền nhà ga sáng đèn.",
+    "amd-chatgpt-06.webp": "Ảnh hàng không lúc chạng vạng về một tòa tháp cao loe ra ở đỉnh, tỏa sáng ấm áp với các dải đèn màu, bên cạnh những tòa nhà thấp và thị trấn sáng đèn dưới chân đồi.",
+    "amd-chatgpt-07.webp": "Trên sân đỗ ướt mưa về đêm, một chiếc máy bay phản lực IndiGo chờ tại vị trí đỗ trong khi thiết bị mặt đất đặt gần mũi máy bay."
+  },
+  "AMH": {
+    "amh-sat-1.webp": "Ảnh vệ tinh: đường băng của Arba Minch nằm giữa đồng ruộng và đồi núi trong Thung lũng Tách giãn Ethiopia, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AMS": {
+    "ams-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Amsterdam Schiphol (AMS) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "AMV": {
+    "amv-sat-1.webp": "Ảnh vệ tinh: Sân bay Amderma (AMV) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "ANB": {
+    "anb-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Khu vực Anniston (ANB) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "AND": {
+    "and-sat-1.webp": "Ảnh vệ tinh: hai đường băng cắt nhau giữa vùng nông thôn xanh, nhà ga và sân đỗ gần điểm giao.",
+    "and-chatgpt-01.webp": "Dưới bầu trời xanh trong, một nhà ga nhỏ ốp đá với mái kim loại xanh và cổng vào bằng gỗ có lá cờ Hoa Kỳ bay bên cửa.",
+    "and-chatgpt-02.webp": "Từ trên không, hai đường băng cắt nhau giữa rừng và đồng ruộng, vài tòa nhà trắng rải rác gần các đầu đường băng.",
+    "and-chatgpt-03.webp": "Một biển hiệu lối vào ốp đá ghi lời chào mừng đến Sân bay Khu vực Anderson bằng chữ trắng lớn, phía sau đỗ một xe bán tải.",
+    "and-chatgpt-04.webp": "Nhìn qua hàng rào lưới, một biển vàng bên đường băng đánh dấu 17 và 35, phía xa có một tháp trắng nhỏ và một máy bay đỏ.",
+    "and-chatgpt-05.webp": "Một sân chơi bên sân bay vẽ các vạch đường băng trên mặt sân xanh, với cầu trượt và khung leo dưới mái che xanh."
+  },
+  "ANE": {
+    "ane-sat-1.webp": "Ảnh vệ tinh: Sân bay Angers Marcé (ANE) nằm giữa thảm thực vật xanh và đồng ruộng.",
+    "ane-chatgpt-01.webp": "Dưới mây dày, nhà ga xám thấp trải rộng, tên sân bay bằng chữ cam phía trên kính, sân trước vắng vẻ.",
+    "ane-chatgpt-02.webp": "Trong ánh nắng chiều thấp, một máy bay cánh quạt chở khách nghỉ trước nhà ga, bên cạnh là tháp không lưu và một tòa nhà thấp ghi Angers-Marce, nhân viên mặt đất ở gần.",
+    "ane-chatgpt-03.webp": "Ảnh chụp từ trên cao cho thấy những dãy nhà chứa máy bay xám dọc sân đỗ, tháp không lưu ở giữa và vài máy bay hạng nhẹ đỗ trên bê tông.",
+    "ane-chatgpt-04.webp": "Ảnh chụp màn hình mô phỏng bay cho thấy đường băng 26 chạy thẳng vào xa xăm, vạch tim đường và vạch tiếp đất sắc nét giữa cỏ và rừng.",
+    "ane-chatgpt-05.webp": "Dưới bầu trời xám phẳng lặng, một chiếc máy bay hạng nhẹ nhỏ màu trắng nghỉ trên cỏ bên một biển đỏ đánh dấu 26-08.",
+    "ane-chatgpt-06.webp": "Trên bức tường trắng ở lối vào sân bay, hình máy bay màu cam nằm cạnh dòng chữ Angers Loire Aéroport, bên dưới ghi xã Marcé.",
+    "ane-chatgpt-07.webp": "Một chiếc máy bay hạng nhẹ trắng xanh đỗ bên các vạch lăn vàng trên sân đỗ, phía sau là dãy nhà chứa máy bay tối màu dưới bầu trời quang đãng."
+  },
+  "ANI": {
+    "ani-sat-1.webp": "Ảnh vệ tinh: đường băng của Aniak chạy dọc sông Kuskokwim, nhà ga và sân đỗ bên cạnh, xung quanh là rừng và vùng đất ngập nước.",
+    "ani-chatgpt-01.webp": "Trong ảnh vệ tinh, một đường băng thẳng chạy bên một con sông rộng, cùng những ngôi nhà, đường sá rải rác và rừng rậm.",
+    "ani-chatgpt-02.webp": "Một máy bay cánh quạt chở khách đỗ trên sân đỗ trước những tòa nhà trắng thấp, phía sau là núi rừng mờ trong sương và phía trước là một sà lan buộc tại bến.",
+    "ani-chatgpt-03.webp": "Ảnh hàng không mùa đông cho thấy đường băng phủ tuyết nằm giữa hai nhánh sông đóng băng, mái nhà làng tỏa sáng ấm áp trong nắng thấp."
+  },
+  "ANM": {
+    "anm-sat-1.webp": "Ảnh vệ tinh: Sân bay Antsirabe (ANM) nằm giữa nước và bờ biển."
+  },
+  "ANN": {
+    "ann-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Đảo Annette (ANN) nằm giữa thảm thực vật xanh và đồng ruộng.",
+    "ann-chatgpt-01.webp": "Trong ảnh hàng không đen trắng này, sân đỗ và đường lăn gặp nhau giữa bãi cỏ loang lổ, một nhà chứa máy bay dài và vài tòa nhà thấp dọc mép.",
+    "ann-chatgpt-02.webp": "Sơ đồ sân bay này cho thấy hai đường băng cắt nhau mang nhãn 07/25 và 02/20, kèm chiều dài và độ cao sân bay.",
+    "ann-chatgpt-03.webp": "Góc nhìn từ buồng lái trong trình mô phỏng bay qua các cánh quạt về phía đường băng giữa vùng tuyết phẳng, phía xa là núi và biển.",
+    "ann-chatgpt-04.webp": "Trong một bức ảnh đen trắng cũ, biển bên hàng rào lưới ghi sân bay phục vụ Ketchikan và vùng lân cận, bên trái thấy đuôi máy bay Pan Am.",
+    "ann-chatgpt-05.webp": "Bản đồ vị trí có biểu tượng máy bay đặt sân bay trên một hòn đảo phía nam Ketchikan, bản đồ cũng ghi Hydaburg và Prince Rupert."
+  },
+  "ANR": {
+    "anr-baidu-1.webp": "Antwerp từ trên không — các nhà chứa máy bay rải rác giữa đường băng có cỏ bao quanh và các đường lăn, bên phải là đường sá và nhà kho.",
+    "anr-baidu-2.webp": "Nhà ga trắng thấp với tháp không lưu tối màu vươn lên ở trung tâm sân đỗ.",
+    "anr-baidu-3.webp": "Nhìn qua sân đỗ từ mái nhà ga — thấy tháp không lưu, các vị trí lên máy bay và xe mặt đất."
+  },
+  "ANS": {
+    "ans-sat-1.webp": "Ảnh vệ tinh: Sân bay Andahuaylas (ANS) được bao quanh bởi đất khô và vùng đất trống."
+  },
+  "ANV": {
+    "anv-sat-1.webp": "Ảnh vệ tinh: đường băng sỏi của Anvik nằm giữa rừng và vùng đất ngập nước bên sông Yukon, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "ANX": {
+    "anx-sat-1.webp": "Ảnh vệ tinh: đường băng của Andenes nằm trên đảo Andøya, nhà ga và sân đỗ bên cạnh, xung quanh là biển và núi."
+  },
+  "AOC": {
+    "aoc-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Leipzig–Altenburg (AOC) hòa vào thảm thực vật xanh và đồng ruộng xung quanh.",
+    "aoc-chatgpt-01.webp": "Dưới bầu trời xanh trong, mặt tiền kính của nhà ga trắng bắt nắng, một tháp không lưu hình trụ mảnh vươn lên bên phải.",
+    "aoc-chatgpt-02.webp": "Sảnh khởi hành vắng không, những cột gỗ nghiêng đỡ trần phía trên các dãy ghế xanh và một quầy làm thủ tục không người.",
+    "aoc-chatgpt-03.webp": "Ảnh chụp màn hình bản đồ cho thấy đường băng cắt chéo qua ruộng và rừng, bao quanh là các hố sỏi và đồng ruộng hình chữ nhật.",
+    "aoc-chatgpt-04.webp": "Mây dày treo trên đường băng bê tông dài và bãi cỏ cắt, phía xa là một hàng mái nhà làng mảnh trên chân trời.",
+    "aoc-chatgpt-05.webp": "Một máy bay chở khách Ryanair và một máy bay thương gia nhỏ dùng chung sân đỗ, một xe cứu hỏa đỏ đỗ bên tháp dọc các vạch vị trí đỗ sơn.",
+    "aoc-chatgpt-06.webp": "Trong ngày hội hàng không, một máy bay tuần tra hàng hải xám đỗ trên cỏ, cờ Đức trên đuôi và đám đông tụ tập quanh một khoang cứu hộ vàng.",
+    "aoc-chatgpt-07.webp": "Nhiều máy bay hạng nhẹ trú trong một nhà chứa máy bay rộng, phía trước là một chiếc máy bay nhào lộn đỏ trắng, nền bê tông sơn xanh viền vàng."
+  },
+  "AOE": {
+    "aoe-sat-1.webp": "Ảnh vệ tinh: đường băng của Eskişehir nằm ở rìa thành phố trên cao nguyên Anatolia, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AOG": {
+    "aog-baidu-1.webp": "Mặt trước nhà ga Sân bay Anshan Teng'ao — chữ “鞍山” đỏ và dòng chữ “An Shan” trên mái, sân trước gần như trống.",
+    "aog-baidu-2.webp": "Cận cảnh nhà ga — bậc thang và đèn lồng trước mặt tiền kính, tháp không lưu tròn ở bên trái.",
+    "aog-chatgpt-01.webp": "Dưới bầu trời xanh thẳm, mái nhà ga mang chữ Anshan đỏ lớn và dòng chữ “An Shan”, phía sau thấy phần kính của tháp không lưu.",
+    "aog-chatgpt-02.webp": "Một băng rôn đỏ treo trên lối vào nhà ga xám trong khi một nhóm người bước lên bậc thang dưới những dãy cửa sổ.",
+    "aog-chatgpt-03.webp": "Ảnh chụp màn hình bản đồ đặt ghim đỏ ngay phía tây thành phố Anshan, các xa lộ G15 và G16 và vùng núi phía đông hiện rõ."
+  },
+  "AOJ": {
+    "aoj-baidu-1.webp": "Bên trong nhà ga: dòng chữ “Welcome to AOMORI” ghép bằng chữ gỗ bên cạnh hai búp bê kokeshi truyền thống.",
+    "aoj-baidu-2.webp": "Sảnh hành lý — băng chuyền uốn quanh các cột ốp gỗ dưới những tấm bảng chiếu sáng về bốn mùa của Aomori.",
+    "aoj-baidu-3.webp": "Khu ẩm thực “AOMORI AIRPORT FOREST DINING” — quầy gỗ ấm áp tựa vào bức tường kính rợp lá, bàn ăn ở bên phải."
+  },
+  "AOO": {
+    "aoo-sat-1.webp": "Ảnh vệ tinh: các đường băng của Altoona nằm giữa rừng và các dãy núi Alleghenies, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AOT": {
+    "aot-sat-1.webp": "Ảnh vệ tinh: Sân bay Aosta Corrado Gex (AOT) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "APK": {
+    "apk-sat-1.webp": "Ảnh vệ tinh: Sân bay Apataki (APK) nằm giữa nước và bờ biển."
+  },
+  "APN": {
+    "apn-sat-1.webp": "Ảnh vệ tinh: các đường băng của Alpena nằm giữa rừng và đồng ruộng bên hồ Huron, nhà ga và sân đỗ ở bên cạnh.",
+    "apn-chatgpt-01.webp": "Lúc chạng vạng, ánh sáng ấm chiếu lên mặt tiền đá và kính của nhà ga, phía trên lối vào là các chữ APN.",
+    "apn-chatgpt-02.webp": "Ảnh vệ tinh nhìn xuống sân bay Alpena, nơi các đường băng cắt nhau nằm giữa rừng cây xanh thẫm với mặt nước ở một rìa.",
+    "apn-chatgpt-03.webp": "Nắng chiều thấp nhuộm vàng một phía nhà ga trong khi phần còn lại chìm trong bóng tối, con đường phía trước vắng không.",
+    "apn-chatgpt-04.webp": "Bên trong nhà ga, những dãy ghế xám hướng ra cửa sổ cao trên nền giả gỗ nhạt chạy tới bức tường cuối.",
+    "apn-chatgpt-05.webp": "Ghế xếp dọc cửa sổ phòng chờ trong khi một bộ cầu thang di động đứng trên sân đỗ và bầu trời ửng cam nhạt.",
+    "apn-chatgpt-06.webp": "Hai kiosk tự phục vụ đứng trước các quầy làm thủ tục, bên cạnh là nhãn hiệu Delta và một lá cờ Hoa Kỳ trên tường."
+  },
+  "APO": {
+    "apo-sat-1.webp": "Ảnh vệ tinh: đường băng của Apartadó nằm giữa rừng mưa và đồng ruộng ở vùng đất thấp Caribe, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AQA": {
+    "aqa-sat-1.webp": "Ảnh vệ tinh: đường băng của Araraquara nằm giữa đồng ruộng và thị trấn ở nội địa bang São Paulo, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AQG": {
+    "aqg-sat-1.webp": "Ảnh vệ tinh: đường băng của Anqing nằm giữa bờ bắc sông Dương Tử và những ngọn đồi thấp, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AQJ": {
+    "aqj-sat-1.webp": "Ảnh vệ tinh: một đường băng và đường lăn song song trải qua sa mạc, nhà ga và sân đỗ ở điểm giữa.",
+    "aqj-chatgpt-01.webp": "Nhà ga màu kem của sân bay uốn theo lề đường, mặt tiền ghi tên sân bay bằng tiếng Ả Rập và tiếng Anh.",
+    "aqj-chatgpt-02.webp": "Hành khách mang túi băng qua sân đỗ về phía cầu thang lên máy bay đỗ bên một chiếc máy bay thân hẹp trắng, phía xa là đồi khô.",
+    "aqj-chatgpt-03.webp": "Một tháp không lưu trắng loe rộng ở chân và có vòng kính ở đỉnh, phía sau là những ngọn núi sa mạc trơ trọi.",
+    "aqj-chatgpt-04.webp": "Du khách kéo vali ra khỏi lối vào phòng đến, nơi mái vải che cửa kính và một nhóm người đang chờ.",
+    "aqj-chatgpt-05.webp": "Từ trên cao, một hàng rào cây cắt tỉa chạy giữa con đường trước sảnh khởi hành, có vạch sang đường kẻ ngang qua.",
+    "aqj-chatgpt-06.webp": "Một hàng máy bay thương gia nhỏ đỗ khắp sân đỗ, thân trắng bắt ánh nắng chiều trên nền đồi trọc.",
+    "aqj-chatgpt-07.webp": "Những tia nước phun vào từ hai bên tạo vòm qua máy bay chở khách, trong khi nhân viên mặt đất mặc áo phản quang đứng lùi lại quan sát."
+  },
+  "ARA": {
+    "ara-sat-1.webp": "Ảnh vệ tinh: Sân bay Khu vực Acadiana (ARA) nằm giữa thảm thực vật xanh và đồng ruộng.",
+    "ara-chatgpt-01.webp": "Những chữ bạc ghi tên sân bay trên mái che lối vào, với tường nhạt, gạch và bãi cỏ dưới bầu trời xanh.",
+    "ara-chatgpt-02.webp": "Từ trên không, đường băng 35 cắt thẳng qua đồng ruộng trong khi một đường lăn dẫn tới các nhà chứa máy bay và sân đỗ lát ở bên phải.",
+    "ara-chatgpt-03.webp": "Một chiếc máy bay thể thao hạng nhẹ nhỏ màu trắng nghỉ trên sân đỗ bê tông, số đăng ký sơn dọc thân, phía sau là nước và cánh đồng xanh.",
+    "ara-chatgpt-04.webp": "Những cột gạch đỡ mái che lối vào màu trắng, phía trên là chữ TERMINAL, phía ngoài hàng rào là bãi cỏ và đường băng xa.",
+    "ara-chatgpt-05.webp": "Biểu tượng của sân bay được in trên tường phòng chờ, nơi những dãy ghế đen hướng về tivi và một hàng áp phích đóng khung.",
+    "ara-chatgpt-06.webp": "Một nhà chứa máy bay mở cửa phía sau một chiếc máy bay piston nhỏ và một máy bay phản lực hạng nhẹ đỗ trên sân bê tông rộng.",
+    "ara-chatgpt-07.webp": "Bên trong nhà chứa máy bay, hai người đang vận hành một bình khí xanh bên cửa mũi mở của một máy bay phản lực hạng nhẹ, phía sau đỗ một chiếc máy bay trắng nhỏ khác."
+  },
+  "ARC": {
+    "arc-sat-1.webp": "Ảnh vệ tinh: một đường băng sỏi cắt qua rừng và hồ gần Arctic Village, ngôi làng nằm ở đầu phía bắc."
+  },
+  "ARE": {
+    "are-sat-1.webp": "Ảnh vệ tinh: Sân bay Antonio Nery Juarbe Pol (ARE) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "ARK": {
+    "ark-baidu-1.webp": "Lối vào nhà ga — du khách và người đưa tiễn tụ tập dưới mái che vải.",
+    "ark-baidu-2.webp": "Máy bay hạng nhẹ trên sân đỗ — một hàng Cessna dưới mây, núi ở chân trời.",
+    "ark-baidu-3.webp": "Cửa sập “ARUSHA AIRPORT INFORMATION” trong nhà gỗ — các tiện ích của sân bay hiện rõ trước mắt."
+  },
+  "ARM": {
+    "arm-sat-1.webp": "Ảnh vệ tinh: các đường băng của Armidale nằm giữa đồi và đồng ruộng trên cao nguyên New England, nhà ga và sân đỗ ở bên cạnh.",
+    "arm-chatgpt-01.webp": "Dưới bầu trời u ám, hai du khách kéo vali qua lối vào kính của nhà ga xám thấp Sân bay Khu vực Armidale.",
+    "arm-chatgpt-02.webp": "Từ trên không, đường băng chạy thẳng qua những bãi cỏ xanh trong khi một đường lăn vòng mới lát uốn quanh sân đỗ và các nhà chứa máy bay.",
+    "arm-chatgpt-03.webp": "Lúc chạng vạng, một máy bay cánh quạt hai động cơ nghỉ trên sân đỗ bên nhà ga vách kính, bóng của nó trải dài trên mặt bê tông tối.",
+    "arm-chatgpt-04.webp": "Đầu hồi mái dốc tối màu của nhà ga được ốp kính từ mái xuống chân, bên cạnh lối đi gạch đỏ là các tấm nghệ thuật màu gỉ sét.",
+    "arm-chatgpt-05.webp": "Đèn ấm tỏa sáng dưới mái che nhà ga khi màn đêm buông, trong khi đuôi một chiếc máy bay trên sân đỗ xa bắt lấy ánh sáng cuối cùng.",
+    "arm-chatgpt-06.webp": "Trong sảnh làm thủ tục vắng vẻ, một nhân viên đồng phục tựa vào quầy dưới các màn hình ghi Qantas và Link Airways.",
+    "arm-chatgpt-07.webp": "Dưới bầu trời xanh trong, hành khách bước xuống từ một chiếc máy bay cánh quạt QantasLink xuống sân đỗ trong khi nhân viên mặt đất chờ bên cánh."
+  },
+  "ARN": {
+    "arn-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Stockholm Arlanda (ARN) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "ARU": {
+    "aru-sat-1.webp": "Ảnh vệ tinh: đường băng của Araçatuba nằm giữa đồng ruộng và thị trấn ở nội địa bang São Paulo, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "ARW": {
+    "arw-sat-1.webp": "Ảnh vệ tinh: đường băng của Arad nằm trên đồng bằng phía tây Romania, nhà ga và sân đỗ bên cạnh, xung quanh là thành phố và đồng ruộng.",
+    "arw-chatgpt-01.webp": "Lúc chạng vạng, mặt tiền xanh của Sân bay Arad sáng lên với biển Aeroportul Arad, du khách băng qua sân trước bê tông rộng bên dưới.",
+    "arw-chatgpt-02.webp": "Một máy bay chở khách hạ xuống đường băng dưới những đám mây trời đẹp trong khi thiết bị mặt đất và cầu thang lên máy bay ARAD AIRPORT chờ trên sân đỗ.",
+    "arw-chatgpt-03.webp": "Nhiều máy bay chở khách dùng chung sân đỗ, phía trước là một máy bay phản lực màu hồng đỏ ghi wizzair.com, phía sau là một máy bay trắng của Moldova, nhân viên mặt đất làm việc ở cầu thang.",
+    "arw-chatgpt-04.webp": "Sảnh làm thủ tục vắng và sáng, biển chỉ dẫn trên cao màu xanh hướng tới quầy làm thủ tục và cửa ra máy bay bằng tiếng Romania và tiếng Anh.",
+    "arw-chatgpt-05.webp": "Những mũi tên trắng và đèn viền đường băng lùi dần về phía chân trời nhạt mờ, vết lốp làm tối mặt bê tông.",
+    "arw-chatgpt-06.webp": "Dưới bầu trời xanh không mây, một máy bay cánh quạt hai động cơ màu trắng đỗ trên sân đỗ bê tông với bóng dài bên dưới.",
+    "arw-chatgpt-07.webp": "Một chiếc máy bay thân hẹp trắng nối với cầu thang lên máy bay ARAD AIRPORT trong khi một xe dẫn đường kẻ ca-rô vàng đen chờ phía trước."
+  },
+  "ARX": {
+    "arx-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Khu vực Aracati Dragão do Mar (ARX) hòa vào thảm thực vật xanh và đồng ruộng xung quanh.",
+    "arx-chatgpt-01.webp": "Dưới bầu trời xám nặng, nhân viên đứng bên ngoài nhà ga mái tranh dài ở Aracati trong khi một xe cảnh sát đỗ gần đó.",
+    "arx-chatgpt-02.webp": "Nhìn từ trên cao, nhà ga hiện ra như một dãy đầu hồi mái tranh dốc, bãi đỗ xe và sân đỗ nhẹ trải quanh đó.",
+    "arx-chatgpt-03.webp": "Một máy bay chở khách Azul sơn xanh trắng đỗ trên sân đỗ trong khi đám đông tụ tập bên mái tranh của nhà ga.",
+    "arx-chatgpt-04.webp": "Nhiều máy bay một động cơ nhỏ đỗ trên bê tông trước nhà ga mái tranh, khán giả tụ tập dưới bóng mát.",
+    "arx-chatgpt-05.webp": "Những vạch taxi cam đậm uốn qua sân đỗ bê tông, nơi máy bay thương gia và máy bay hạng nhẹ đỗ trước nhà ga mái tranh dài.",
+    "arx-chatgpt-06.webp": "Một biển chỉ đường xanh bên lề ghi lối tới nhà ga hành khách, một tháp nước trắng cao vươn lên bên những mái tranh dưới bầu trời xanh.",
+    "arx-chatgpt-07.webp": "Máy bay hạng nhẹ đỗ trên sân đỗ trước nhà ga mái tranh, trong đó có một chiếc cánh thấp màu cam sáng được phủ bạt."
+  },
+  "ASA": {
+    "asa-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Quốc tế Assab (ASA) nằm giữa đất khô và vùng đất trống."
+  },
+  "ASB": {
+    "asb-baidu-2.webp": "Trên sân đỗ hàng hóa: một chiếc An-74 chở hàng của Turkmenistan Airlines đỗ trước nhà ga YÜK (hàng hóa).",
+    "asb-baidu-3.webp": "Tòa nhà ga hàng hóa — tường trắng dưới dải màu xanh, một dãy dài cửa bốc xếp ở mặt đất."
+  },
+  "ASD": {
+    "asd-sat-1.webp": "Ảnh vệ tinh: Sân bay Andros Town (ASD) nằm giữa thị trấn, đồng ruộng và cây cối.",
+    "asd-chatgpt-01.webp": "Một nhà ga một tầng xanh trắng mang biển Sân bay Quốc tế Andros Town, cờ Bahamas trên cột và những vũng nước trên sân đỗ ướt."
+  },
+  "ASE": {
+    "ase-sat-1.webp": "Ảnh vệ tinh: đường băng của Aspen nằm trong một thung lũng dãy Rocky, nhà ga và sân đỗ bên cạnh, xung quanh là rừng và đỉnh núi tuyết."
+  },
+  "ASF": {
+    "asf-sat-1.webp": "Ảnh vệ tinh: đường băng của Astrakhan nằm trên vùng trũng hạ lưu sông Volga, nhà ga và sân đỗ bên cạnh, xung quanh là sông ngòi và đất khô.",
+    "asf-chatgpt-01.webp": "Mặt tiền kính xanh của nhà ga chiếm trọn khung hình dưới những chữ lớn màu xanh trên mái, bãi cỏ gọn gàng và những cây thông nhỏ nơi hành khách đi qua.",
+    "asf-chatgpt-02.webp": "Một dãy dài kiosk tự phục vụ làm thủ tục dọc bức tường ốp gỗ của sảnh khởi hành, màn hình sáng hồng, một du khách mặc áo lông đang thao tác máy.",
+    "asf-chatgpt-03.webp": "Lúc hoàng hôn, một máy bay chở khách với cờ ba màu Nga trên đuôi đỗ trước nhà ga kính, cầu ống chờ bên cạnh dưới bầu trời cam và tím.",
+    "asf-chatgpt-04.webp": "Bên trong nhà ga, một hành lang rộng lát gạch bóng chạy giữa lan can tầng lửng kính, đèn trần thành hàng và vài hành khách đang dạo bước.",
+    "asf-chatgpt-05.webp": "Hành khách mang hành lý tụ tập tại cửa kính lối vào, những chữ xanh trên mái nổi bật trên bầu trời xám phía trên mặt đường ẩm ướt.",
+    "asf-chatgpt-06.webp": "Trong ánh chạng vạng, nhà ga cũ hiện ra với lớp đá màu be và những dãy cửa sổ, biển sân bay xanh bên một tòa tháp đầy ăng-ten, những cây thông hình nón trên bãi cỏ."
+  },
+  "ASJ": {
+    "asj-baidu-1.webp": "Trên sân đỗ trước nhà ga — hành khách mang hành lý đi về phía tòa nhà ghi “AMAMI”, nhân viên mặt đất đang chỉ dẫn.",
+    "asj-baidu-2.webp": "Máy bay của Japan Air Commuter tại các vị trí đỗ — hai máy bay phản lực khu vực đang lên khách dưới các biển hiệu, biển ngay ngoài đường băng.",
+    "asj-baidu-3.webp": "Amami nhìn từ trên không — đường băng chạy dọc bờ biển, mặt nước lốm đốm rạn san hô trải dài bên dưới."
+  },
+  "ASM": {
+    "asm-sat-1.webp": "Ảnh vệ tinh: đường băng của Asmara nằm trên cao nguyên, nhà ga và sân đỗ bên cạnh, xung quanh là thành phố và các dãy núi."
+  },
+  "ASO": {
+    "aso-sat-1.webp": "Ảnh vệ tinh: đường băng của Asosa nằm giữa đồi và rừng ở miền tây Ethiopia, nhà ga và sân đỗ ở bên cạnh.",
+    "aso-chatgpt-01.webp": "Dòng chữ trắng của sân bay đặt trên mặt tiền kính xanh, mái che bê tông đỡ bằng cột chéo, qua kính thấy quầy làm thủ tục và ghế chờ.",
+    "aso-chatgpt-02.webp": "Từ một sườn đồi lúc hoàng hôn, một máy bay cánh quạt hai động cơ nghỉ trên sân đỗ trong khi những tòa nhà mái xanh và đường băng trải trên đồng ruộng, phía xa là đồi.",
+    "aso-chatgpt-03.webp": "Trong ánh chiều ấm áp, hai cầu thang đá cong ôm lấy bồn đá ở lối vào sân bay, cờ bay phía trên và tên sân bay ghi trên kính.",
+    "aso-chatgpt-04.webp": "Ảnh vệ tinh cho thấy một đường băng cắt qua rừng cây xanh rậm, xung quanh là đồng ruộng và khu dân cư nhỏ rải rác, không thấy chi tiết mặt đất."
+  },
+  "ASP": {
+    "asp-page-2.webp": "Tháp không lưu cũ của Alice Springs — thân gạch dưới cabin kính, một chiếc Fokker F.27 chờ trên sân đỗ (khoảng 1970; ảnh Terry Martin, bộ sưu tập CAHS, qua Airways Museum).",
+    "asp-page-3.webp": "Alice Springs nhìn từ trên không — đường băng và đường lăn trải qua sa mạc đỏ, tháp không lưu, nhà ga và sân đỗ xếp dọc sân bay (bộ sưu tập CAHS, qua Airways Museum).",
+    "asp-chatgpt-01.webp": "Những cột đỏ và bạt che nắng trắng chạy dọc lề đường trước nhà ga, biển Qantas trên dải mặt tiền phía trên, ô tô và một xe van trắng chờ bên ngoài.",
+    "asp-chatgpt-02.webp": "Ảnh chụp từ trên cao cho thấy đường băng dài, đường lăn và sân đỗ với vài máy bay hạng nhẹ đỗ, nhà ga, nhà chứa máy bay và bãi đỗ xe rải rác trên nền sa mạc đỏ.",
+    "asp-chatgpt-03.webp": "Đuôi đỏ của một máy bay chở khách Virgin chiếm trọn khung hình phía trên động cơ gắn sau, hai nhân viên mặt đất đứng dưới cánh giữa những bông hoa dại vàng.",
+    "asp-chatgpt-04.webp": "Những ghế đen trống lấp đầy phòng chờ khởi hành yên tĩnh, quầy đại lý du lịch bên cạnh đóng cửa sau lưới sắt, tường ốp sọc và nền bóng dưới đèn trần.",
+    "asp-chatgpt-05.webp": "Ảnh chụp từ trên cao nhìn xuống bốn máy bay chở khách đỗ cạnh nhau trên các vị trí đất đỏ, một đường băng cắt qua cây bụi phía xa và dãy núi thấp ở chân trời.",
+    "asp-chatgpt-06.webp": "Một máy bay phản lực khu vực QantasLink bay lên khỏi đường băng sa mạc, đuôi đỏ nổi bật trên nền trời trong, trong khi hai máy bay chở khách lưu kho đỗ bên kia dải cỏ khô.",
+    "asp-chatgpt-07.webp": "Các quầy làm thủ tục Qantas xếp dọc sảnh sau những rào chắn xếp hàng đỏ uốn về bảng thông báo y tế, tất cả trên thảm hoa văn xanh và vàng."
+  },
+  "ASV": {
+    "asv-sat-1.webp": "Ảnh vệ tinh: đường băng của Amboseli nằm trên thảo nguyên dưới chân Kilimanjaro, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "ASW": {
+    "asw-sat-1.webp": "Ảnh vệ tinh: đường băng của Aswan nằm giữa thung lũng sông Nile và sa mạc, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "ATB": {
+    "atb-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Atbara (ATB) hòa vào đất khô và vùng đất trống xung quanh."
+  },
+  "ATC": {
+    "atc-sat-1.webp": "Ảnh vệ tinh: đường băng của Arthur's Town nằm trên bờ biển Bahamas, nhà ga và sân đỗ bên cạnh, xung quanh là biển và cây cối."
+  },
+  "ATH": {
+    "ath-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế Athens (ATH) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "ATK": {
+    "atk-sat-1.webp": "Ảnh vệ tinh: đường băng của Atqasuk nằm trên lãnh nguyên North Slope Alaska, nhà ga và sân đỗ bên cạnh, xung quanh là đầm lầy và hồ.",
+    "atk-chatgpt-01.webp": "Dưới ánh nắng thấp, một chiếc máy bay một động cơ nhỏ nghỉ trên sân đỗ sỏi bên nhà ga một tầng, một xe bán tải đỗ và lãnh nguyên nhấp nhô."
+  },
+  "ATL": {
+    "atl-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế Hartsfield–Jackson Atlanta (ATL) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "ATM": {
+    "atm-sat-1.webp": "Ảnh vệ tinh: đường băng của Altamira nằm giữa rừng mưa Amazon và sông ngòi, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "ATR": {
+    "atr-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Quốc tế Atar (ATR) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
+  },
+  "ATW": {
+    "atw-sat-1.webp": "Ảnh vệ tinh: hai đường băng cắt nhau giữa đồng ruộng và thị trấn, nhà ga và sân đỗ ở giữa sân bay.",
+    "atw-chatgpt-01.webp": "Dưới mái che cong, biển trên lối vào ghi Appleton International Airport, với cột gạch và cửa kính dẫn vào sảnh.",
+    "atw-chatgpt-02.webp": "Vào ngày quang đãng, ba máy bay chở khách xanh cam đỗ cạnh nhau tại cầu ống, tấm pin mặt trời trên mái nhà ga và đường lăn phía xa.",
+    "atw-chatgpt-03.webp": "Một máy bay phản lực khu vực hai động cơ American Eagle tăng tốc dọc đường băng qua bãi cỏ cao, đuôi sọc đỏ, trắng và xanh dưới mây tích.",
+    "atw-chatgpt-04.webp": "Bên trong nhà ga, một bức tường kính cao hai tầng vươn lên trên nền lát bóng và trần cong, một du khách kéo hành lý qua quầy dịch vụ tròn.",
+    "atw-chatgpt-05.webp": "Ba cột cờ đứng bên đường trước nhà ga, mái che lối vào tối màu dưới bầu trời quang đãng, tháp không lưu ở phía trái.",
+    "atw-chatgpt-06.webp": "Sau hoàng hôn, hai máy bay phản lực khu vực mang màu United chờ tại cầu ống trong khi tháp không lưu và ánh chiều tà trên sân bay mờ dần thành bóng đen.",
+    "atw-chatgpt-07.webp": "Những dãy ghế xám nằm dưới trần gỗ cong ở phòng chờ cửa ra máy bay, một nhân viên đẩy xe vệ sinh qua cửa sổ nhìn ra sân đỗ."
+  },
+  "ATZ": {
+    "atz-sat-1.webp": "Ảnh vệ tinh: đường băng của Asyut nằm nơi thung lũng sông Nile gặp sa mạc, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AUG": {
+    "aug-sat-1.webp": "Ảnh vệ tinh: một đường băng ngắn nằm giữa rừng và thị trấn, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "AUH": {
+    "auh-baidu-1.webp": "Mái nhà hình sóng của Sân bay Quốc tế Zayed — một máy bay chở khách bay ngang phía trên, đường đón trả khách và mái che nắng ở tiền cảnh.",
+    "auh-chatgpt-01.webp": "Những vòm trắng khổng lồ vút qua phía trên sảnh chính, nơi một đảo ghế cong nằm giữa các cửa hàng miễn thuế và màn hình với hành khách di chuyển phía xa.",
+    "auh-chatgpt-02.webp": "Từ trên không, nhà ga mái hình sóng được bao quanh bởi đường trên cao, tấm pin mặt trời phủ bãi đỗ xe bên phải và máy bay chở khách đỗ trên sân đỗ.",
+    "auh-chatgpt-03.webp": "Lúc chạng vạng, nhà ga hình chữ X sáng rực, một máy bay chở khách hướng chính diện về cửa ra, sân đỗ và đường lăn nổi bật dưới đèn pha.",
+    "auh-chatgpt-04.webp": "Dưới bầu trời xanh, vách kính của nhà ga lên xuống theo mái hình sóng, mép trắng sáng lên dưới nắng phía trên các mái che đường xe chạy.",
+    "auh-chatgpt-05.webp": "Những dãy dài quầy làm thủ tục trắng trải giữa các cột cao đánh dấu C và D, bên dưới các mái vòm xếp lớp và màn hình chỉ dẫn sáng đèn.",
+    "auh-chatgpt-06.webp": "Về đêm, mặt tiền hình sóng của nhà ga được chiếu sáng trong khi một xe buýt chạy dọc đường đón trả khách qua các cột đánh số từ 1 đến 7.",
+    "auh-chatgpt-07.webp": "Góc nhìn trên cao này bao quát mái kim loại gợn sóng của nhà ga, các cầu ống và vị trí đỗ bên dưới, cùng bãi đỗ xe có tấm pin mặt trời ở bên trái."
+  },
+  "AUK": {
+    "auk-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Alakanuk (AUK) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "AUR": {
+    "aur-sat-1.webp": "Ảnh vệ tinh: đường băng của Aurillac nằm giữa đồi và đồng ruộng trên khối núi Massif Central, nhà ga và sân đỗ ở bên cạnh.",
+    "aur-chatgpt-01.webp": "Những chữ xanh khổng lồ ghi AURILLAC đặt trên bức tường nhạt của nhà ga, bên cạnh là tháp không lưu nhỏ và mây trắng trên bầu trời xanh.",
+    "aur-chatgpt-02.webp": "Ảnh chụp màn hình bản đồ vệ tinh có chú thích đánh dấu đường băng, sân đỗ và một dãy pin mặt trời ở phía nam sân bay Aurillac-Tronquières.",
+    "aur-chatgpt-03.webp": "Hành khách bước xuống cầu thang của một chiếc máy bay cánh quạt hai động cơ và băng qua sân đỗ về phía nhà ga, qua tháp không lưu cabin kính và một xe cứu hỏa đỏ.",
+    "aur-chatgpt-04.webp": "Khung ảnh hàng không này cho thấy những dãy nhà thấp mái bằng và bãi đỗ xe bị đường vành đai cắt ngang, xung quanh là cỏ và cây, không thấy đường băng.",
+    "aur-chatgpt-05.webp": "Trên sân đỗ ướt mưa, một chiếc máy bay cánh quạt hai động cơ mang màu HOP! hướng về phía máy ảnh, các vạch chỉ dẫn vàng chạy về phía bãi cỏ ướt.",
+    "aur-chatgpt-06.webp": "Một chiếc máy bay cánh quạt trắng đỗ trên sân đỗ với một máy kéo cam đỗ bên mũi, dòng chữ HOP! và Air France hiện dọc thân máy bay.",
+    "aur-chatgpt-07.webp": "Một chiếc máy bay hạng nhẹ một động cơ màu đỏ, trắng và vàng đỗ trên sân đỗ, số đăng ký rõ trên đuôi, phía xa là những nhà kho thấp dưới bầu trời xám."
+  },
+  "AUS": {
+    "aus-page-4.webp": "Tượng đài lối vào và đài phun nước tại Austin-Bergstrom — tên và biểu tượng sân bay sáng đèn lúc chạng vạng.",
+    "aus-page-5.webp": "Bên trong Nhà ga Barbara Jordan — du khách mang túi đi qua biển “C Gates 1–25” và màn hình khởi hành.",
+    "aus-chatgpt-01.webp": "Dưới dòng chữ “BARBARA JORDAN TERMINAL” trên tường, hành khách kéo túi có bánh về phía cửa ra máy bay.",
+    "aus-chatgpt-02.webp": "Ảnh chụp từ trên cao nhà ga và sân đỗ, nơi máy bay phản lực lấp đầy các cầu ống bên những bãi đỗ xe chật kín và một công trường xây dựng.",
+    "aus-chatgpt-03.webp": "Về đêm trên sân đỗ, một máy bay chở khách chờ tại cầu ống trong khi đèn nhà ga tỏa sáng dưới bầu trời xanh thẳm.",
+    "aus-chatgpt-04.webp": "Trong hành lang khởi hành, du khách ăn uống bên các quầy thức ăn trong khi ánh sáng từ cửa sổ cao tràn lên nền lát bóng.",
+    "aus-chatgpt-05.webp": "Ảnh hàng không từ xa của sân bay, đường băng và đường lăn cắt qua đồng cỏ rộng với nhà ga và tháp không lưu ở phía xa.",
+    "aus-chatgpt-06.webp": "Hai máy bay chở khách đỗ cạnh nhau trước nhà ga xám, sơn đuôi đỏ, trắng và xanh nổi bật dưới nắng.",
+    "aus-chatgpt-07.webp": "Hình phối cảnh kiến trúc của sảnh an ninh nhà ga, với trần gỗ thanh, rào chắn xếp hàng và các bức tranh tường đầy màu sắc."
+  },
+  "AUU": {
+    "auu-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Aurukun (AUU) hòa vào thị trấn, đồng ruộng và cây cối xung quanh.",
+    "auu-chatgpt-01.webp": "Một chiếc máy bay cánh quạt hai động cơ chờ trên sân đỗ tối bên ngoài nhà ga “Welcome to Aurukun” dưới bầu trời xanh trong."
+  },
+  "AUX_": {
+    "aux-sat-1.webp": "Ảnh vệ tinh: Sân bay Araguaína (AUX) được bao quanh bởi thị trấn, đồng ruộng và cây cối."
+  },
+  "AUY": {
+    "auy-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Aneityum (AUY) hòa vào nước và bờ biển xung quanh.",
+    "auy-chatgpt-01.webp": "Một tòa nhà một tầng màu vàng nhạt mang biển “MYSTERY IS. AIRPORT”, xung quanh là bãi cỏ, cọ và mái che lợp tranh.",
+    "auy-chatgpt-02.webp": "Trong ảnh vệ tinh, đường băng của Aneityum trải dài dọc bờ biển hẹp của đảo, bao quanh bởi nước rạn san hô xanh ngọc sáng.",
+    "auy-chatgpt-03.webp": "Một chiếc máy bay hai động cơ nhỏ lướt thấp trên dải cỏ, sắp chạm đất, phía sau là những hàng cọ dày."
+  },
+  "AVA": {
+    "ava-baidu-1.webp": "Nhà ga Sân bay Anshun Huangguoshu, chữ “黄果树” đỏ trên mái cong, sân trước gần như trống.",
+    "ava-baidu-2.webp": "Nhà ga và tháp không lưu lúc chạng vạng — một biển quảng cáo ven đường ghi “21℃的城市” với tháp không lưu sáng đèn trên nền trời chiều.",
+    "ava-baidu-3.webp": "Hành khách bước ra lên máy bay — phía sau là biển “黄果树” mạ vàng và mặt tiền kính, phía trên là tháp không lưu.",
+    "ava-chatgpt-01.webp": "Dưới bầu trời quang đãng, mái bạc cong của nhà ga mang những chữ đỏ lớn phía trên mặt tiền kính và con đường vắng.",
+    "ava-chatgpt-02.webp": "Ảnh chụp từ trên cao nhà ga mới, tháp không lưu bên trái, đường băng phía sau mái và những hàng cây non gọn gàng trong bãi đỗ xe.",
+    "ava-chatgpt-03.webp": "Vào một ngày mưa u ám, hành khách leo cầu thang có mái che sơn tên sân bay trong khi sân đỗ bóng nước mưa.",
+    "ava-chatgpt-04.webp": "Một nhà ga cũ tường màu kem với mái che viền đỏ, phía sau là tháp không lưu vươn lên và những cột chắn trắng dọc lối xe vào."
+  },
+  "AVB": {
+    "avb-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Căn cứ Không quân Aviano (AVB) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "AVK": {
+    "avk-sat-1.webp": "Ảnh vệ tinh: Sân bay Arvaikheer (AVK) được bao quanh bởi thị trấn, đồng ruộng và cây cối."
+  },
+  "AVL": {
+    "avl-page-3.webp": "Biển hiệu lối vào Sân bay Khu vực Asheville — chữ xanh bên cạnh bảng hiển thị SHUTTLE LOT, phía sau là đồi rợp cây."
+  },
+  "AVR": {
+    "avr-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Amravati (AVR) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "AVV": {
+    "avv-baidu-1.webp": "Mái che vải căng trước nhà ga, trải trên sân trước và lối đi trên khung thép.",
+    "avv-baidu-2.webp": "Cửa đến và đi — “Domestic Arrivals” bên cạnh “International & Domestic Departures”, biển hiệu cũng có tiếng Trung cho các chuyến bay tới Trung Quốc của Avalon."
+  },
+  "AWA": {
+    "awa-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Quốc tế Hawassa (AWA) nằm giữa thị trấn, đồng ruộng và cây cối.",
+    "awa-chatgpt-01.webp": "Dưới bầu trời có mây kéo thành vệt, mọi người tụ tập bên cửa kính dưới mái che nhạt rộng của nhà ga, một vạch sang đường dẫn từ bãi cỏ vào.",
+    "awa-chatgpt-02.webp": "Dưới bầu trời xanh thẳm, một máy bay chở khách với đuôi xanh, vàng và đỏ đỗ trên sân đỗ khi hành khách leo cầu thang."
+  },
+  "AWD": {
+    "awd-sat-1.webp": "Ảnh vệ tinh: Sân bay Aniwa (AWD) nằm giữa nước và bờ biển."
+  },
+  "AWZ": {
+    "awz-sat-1.webp": "Ảnh vệ tinh: đường băng chạy song song với lưới phố của Ahvaz, nhà ga và sân đỗ ở điểm giữa.",
+    "awz-chatgpt-01.webp": "Mặt trước nhà ga mang tên sân bay bằng tiếng Anh và tiếng Ba Tư, bên ngoài đỗ taxi vàng và trắng.",
+    "awz-chatgpt-02.webp": "Bên trong sảnh khởi hành, đèn từ trần ô vuông phản chiếu trên nền lát bóng, vài du khách rải rác giữa những dãy ghế.",
+    "awz-chatgpt-03.webp": "Nắng thấp nhuộm vàng nhà ga cũ khi ba hành khách mang túi băng qua sân đỗ về phía tòa nhà.",
+    "awz-chatgpt-04.webp": "Hành khách leo cầu thang ghi “IranAir”, một người quay lại vẫy tay, những người khác chờ trên sân đỗ bên dưới.",
+    "awz-chatgpt-05.webp": "Về đêm, mặt tiền nhà ga sáng lên với chữ Ba Tư và tiếng Anh màu xanh, xe máy và bảng áp phích dựa vào tường.",
+    "awz-chatgpt-06.webp": "Một chiếc máy bay phản lực động cơ sau chờ trước nhà ga cũ sọc cam xanh trên sân đỗ ướt mưa, tháp không lưu bên phải.",
+    "awz-chatgpt-07.webp": "Về đêm, tên sân bay sáng lên phía trên lối vào nhà ga, vài chiếc ô tô đỗ ở sân trước."
+  },
+  "AXF": {
+    "axf-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Alxa Left Banner Bayanhot (AXF) hòa vào đất khô và vùng đất trống xung quanh."
+  },
+  "AXJ": {
+    "axj-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Amakusa (AXJ) hòa vào thảm thực vật xanh và đồng ruộng xung quanh."
+  },
+  "AXK": {
+    "axk-sat-1.webp": "Ảnh vệ tinh: Sân bay Ataq (AXK) nằm giữa đất khô và vùng đất trống."
+  },
+  "AXR": {
+    "axr-sat-1.webp": "Ảnh vệ tinh: đường băng của Arutua nằm trên một đảo nhỏ của đảo san hô ở Tuamotus, nhà ga và sân đỗ bên cạnh, xung quanh là đầm phá."
+  },
+  "AXT": {
+    "axt-baidu-1.webp": "Nhà ga Akita lúc chạng vạng — chữ “秋田空港” trên mặt tiền màu gạch, tháp không lưu ở giữa và ánh sáng ấm phía sau kính.",
+    "axt-baidu-2.webp": "Mặt trước nhà ga ban ngày — các dải ốp màu đỏ gỉ giữa kính tối, lưu lượng xe thưa thớt trên đường trước sân.",
+    "axt-baidu-3.webp": "Bên cạnh lối vào nhà ga — cột và chậu cây dưới trần cam, lối đi dẫn tới bãi đỗ xe phía xa."
+  },
+  "AXU": {
+    "axu-page-2.webp": "Bảng tên trên nhà ga sân bay Axum — tiếng Amharic bên cạnh “AXUM YOHANNES IV AIRPORT”, phía trên là biểu tượng Ethiopian Airlines (ảnh chụp sau lần mở cửa lại năm 2024).",
+    "axu-chatgpt-01.webp": "Dưới bầu trời xanh, một tháp không lưu ốp đá đứng bên nhà ga hình vòm, một du khách kéo vali qua các luống hoa.",
+    "axu-chatgpt-02.webp": "Từ trên không, nhà ga mái xanh và sân đỗ bê tông rộng nằm giữa vùng đồng ruộng chắp vá, đường băng cắt ngang phần dưới khung hình.",
+    "axu-chatgpt-03.webp": "Dưới nắng sáng, một máy bay cánh quạt hai động cơ mang màu Ethiopian đỗ trên sân đỗ, cửa cabin mở với cầu thang bên cạnh.",
+    "axu-chatgpt-04.webp": "Nắng chiều xiên qua nhà ga nhạt màu, biển chữ ghi tên tiếng Anh của sân bay, bên dưới là những ghế trống và một chiếc thang dựng bên trái.",
+    "axu-chatgpt-05.webp": "Hành khách bước lên lối đi bê tông tới lối vào nhà ga dưới các cổng vòm ghi tiếng Amharic và tiếng Anh, hai bên là bãi cỏ xanh.",
+    "axu-chatgpt-06.webp": "Lúc hoàng hôn, một sân bay nhỏ nhuộm vàng, tháp trắng và nhà ga thấp bên một chiếc máy bay cánh quạt hai động cơ đỗ, phía xa là đồi rợp cây và đồng cỏ."
+  },
+  "AYJ": {
+    "ayj-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Maharshi Valmiki (AYJ) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "AYQ": {
+    "ayq-baidu-2.webp": "Khu trung chuyển bên ngoài nhà ga — xe khách tham quan Uluru xếp hàng dưới lối đi có mái che bên các biển điểm hẹn của sân bay.",
+    "ayq-chatgpt-01.webp": "Lúc chạng vạng, dãy đỉnh lều trắng của nhà ga sáng lên trong nắng thấp trong khi một máy bay phản lực khu vực trắng chờ gần đó và hành khách bước ra sân đỗ.",
+    "ayq-chatgpt-02.webp": "Trên sân đỗ đất đỏ, nhiều máy bay chở khách đỗ, một chiếc mang nhãn Jetstar, tảng đá màu vàng đất rộng lớn mới hiện ra ở chân trời xa.",
+    "ayq-chatgpt-03.webp": "Ở một đầu đường băng, một máy bay có hình con kangaroo trên đuôi chờ bên vạch sơn 13, tảng đá vàng đất lớn nằm ngoài bụi cây thấp.",
+    "ayq-chatgpt-04.webp": "Những chữ kim loại trên nhà ga đỏ gạch ghi Connellan Airport, du khách đi qua cửa kính trước bãi đỗ xe trống.",
+    "ayq-chatgpt-05.webp": "Dưới bầu trời xanh gắt, một máy bay Virgin Australia chờ với cầu thang ở cửa khi hành khách băng qua sân đỗ, sa mạc đỏ dọc chân trời.",
+    "ayq-chatgpt-06.webp": "Bên trong nhà ga, những dãy ghế kim loại xếp dọc tường trong khi kiosk tự phục vụ đỏ và cột xếp hàng lấp đầy sảnh, cuối sảnh là bức tường xanh mòng két.",
+    "ayq-chatgpt-07.webp": "Nhìn qua cửa sổ cabin, một đường băng dài xiên qua sa mạc đỏ trong khi một máy bay chở khách đỗ trên sân đỗ và nhà ga cùng bãi đỗ xe chen chúc một bên."
+  },
+  "AYT": {
+    "ayt-page-1.webp": "Sân bay Antalya nhìn từ trên không — máy bay chở khách đỗ thành hình quạt quanh nhà ga vệ tinh tròn, các cầu ống tỏa ra (thanh tiêu đề tin tức của ảnh đã được cắt bỏ)."
+  },
+  "AZH": {
+    "azh-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Azamgarh (AZH) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
+  },
+  "AZN": {
+    "azn-sat-1.webp": "Ảnh vệ tinh: đường băng của Andijan nằm giữa đồng ruộng và thị trấn trong Thung lũng Fergana, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "BBU": {
+    "bbu-page-3.webp": "Băneasa lúc chạng vạng — nhà ga và tháp xanh sáng đèn, xe buýt và một máy bay chở khách trên sân đỗ.",
+    "bbu-chatgpt-01.webp": "Phía trên nhà ga xanh cong, một hàng dài chữ ghi tên Bucharest Băneasa, bên ngoài có một xe van trắng chờ.",
+    "bbu-chatgpt-02.webp": "Từ trên cao, nhà ga mái vòm tròn nằm ở trung tâm, bao quanh là tháp không lưu và các dãy văn phòng dài, phía trước là bãi cỏ rộng và bãi đỗ xe chật kín.",
+    "bbu-chatgpt-03.webp": "Một chiếc máy bay nhào lộn một chỗ màu vàng nghỉ trên sân đỗ bê tông, phía sau là tháp không lưu và nhà ga tròn Aurel Vlaicu dưới bầu trời có mây kéo vệt.",
+    "bbu-chatgpt-04.webp": "Nhà ga vàng nhạt uốn cong, vòm kính tối đặt giữa đường cong, chữ xanh ghi Aurel Vlaicu và tháp không lưu vươn lên ngay sau mép mái.",
+    "bbu-chatgpt-05.webp": "Một chiếc máy bay thương gia xanh bạc đỗ trên sân đỗ ban đêm, được đèn pha chiếu sáng với nón cam xung quanh và tháp không lưu sáng đèn phía sau.",
+    "bbu-chatgpt-06.webp": "Cánh và cánh quạt của một máy bay cánh quạt thấp thoáng phía trên khung hình, bên dưới là nhà ga xanh, tháp không lưu và đám đông tụ tập dưới dòng chữ Bucharest Băneasa.",
+    "bbu-chatgpt-07.webp": "Trong khung hình rộng, một máy bay thương gia trắng đỗ bên phải sân đỗ trong khi nhà ga tròn và tháp không lưu xếp dọc bên trái, bóng đổ sắc nét dưới bầu trời trong."
+  },
+  "BCN": {
+    "bcn-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Barcelona–El Prat (BCN) hiện rõ."
+  },
+  "BIG": {
+    "big-sat-1.webp": "Ảnh vệ tinh: Sân bay Lục quân Allen (BIG) được bao quanh bởi thị trấn, đồng ruộng và cây cối."
+  },
+  "BKK": {
+    "bkk-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Suvarnabhumi (BKK)."
+  },
+  "BPS": {
+    "bps-sat-1.webp": "Ảnh vệ tinh: đường băng của Porto Seguro nằm giữa rừng và bãi biển trên bờ Đại Tây Dương của Brazil, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "BYF": {
+    "byf-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Albert Bray (BYF) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "BYH": {
+    "byh-sat-1.webp": "Ảnh vệ tinh: một đường băng dài cắt chéo qua đồng ruộng, sân đỗ và nhà chứa máy bay ở bên cạnh điểm giữa.",
+    "byh-chatgpt-01.webp": "Lúc mặt trời mọc, một chiếc máy bay cánh quạt một động cơ nhỏ chờ trên sân đỗ trước nhà ga trắng thấp, vài bóng người đi về phía nó khi mặt trời lóe sáng.",
+    "byh-chatgpt-02.webp": "Ảnh chụp từ trên cao sân bay: một máy bay phản lực hai động cơ trắng đỗ một mình trên sân đỗ bê tông rộng trống, phía xa là tháp trắng, tháp nước và rừng.",
+    "byh-chatgpt-03.webp": "Tháp trắng mang một biểu tượng nhỏ, bên cạnh là dãy văn phòng một tầng thấp và bãi cỏ, phía trước là sân đỗ rộng có vạch kẻ trống trải."
+  },
+  "CAI": {
+    "cai-page-1.webp": "Quầy lễ tân phòng chờ EgyptAir / Star Alliance tại Sân bay Quốc tế Cairo — ốp gỗ và bàn cà phê đá cẩm thạch, phía sau cửa là khu ghế ngồi yên tĩnh (Bộ Hàng không Dân dụng Ai Cập, tháng 1 năm 2025, qua State Information Service).",
+    "cai-page-2.webp": "Khu làm thủ tục hạng thương gia của EgyptAir — quầy xanh dưới màn hình chuyến bay khi hành khách làm thủ tục (Bộ Hàng không Dân dụng Ai Cập, tháng 8 năm 2021, qua State Information Service)."
+  },
+  "CAK": {
+    "cak-page-1.webp": "Một quầy làm thủ tục của American Airlines — nhân viên xử lý hành lý trong khi hành khách quan sát, phía sau là nhận diện xanh trắng của hãng.",
+    "cak-page-2.webp": "Hành lang phòng đến — du khách mang túi đi về phía lối ra dưới biển “Arrivals”."
+  },
+  "CAN": {
+    "can-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Bạch Vân Quảng Châu (CAN) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "CDG": {
+    "cdg-baidu-1.webp": "Bên trong Nhà ga 1 tại Charles de Gaulle — dãy “Bars, Restaurants” trong giếng trời tròn dưới các bức tường kính, du khách nối đuôi đi qua.",
+    "cdg-baidu-2.webp": "Thang cuốn về phía Nhà ga 2 — biển trên cao ghi “Bagages / Baggage / 行李提取” và “Sortie / Exit” bằng ba thứ tiếng."
+  },
+  "CFE": {
+    "cfe-baidu-2.webp": "Nhà ga hàng không thương gia — chữ “départs / departures” trên mặt tiền tối, cửa xoay và làn đón trả khách phía trước.",
+    "cfe-baidu-3.webp": "Một chiếc Dassault Falcon thương gia trên sân đỗ, phía sau là tháp không lưu và nhà ga.",
+    "cfe-chatgpt-01.webp": "Một tác phẩm điêu khắc máy bay hai tầng cánh đứng trên cột giữa bùng binh đón trả khách khi một du khách kéo vali về phía nhà ga mặt tiền kính.",
+    "cfe-chatgpt-02.webp": "Từ trên cao, cầu hành khách vươn từ tòa nhà chính ra sân đỗ, vài máy bay nhỏ đỗ và phía xa là thị trấn mái đỏ.",
+    "cfe-chatgpt-03.webp": "Hành khách leo cầu thang di động lên máy bay trong khi một nhân viên mặt đất mặc áo phản quang đứng bên, phía trên là biển tên nhà ga.",
+    "cfe-chatgpt-04.webp": "Ảnh hàng không có chú thích của sân bay đánh dấu đường băng cỏ và đường băng lát, vài máy bay hạng nhẹ đỗ bên ruộng ở bên trái.",
+    "cfe-chatgpt-05.webp": "Nhìn xuống, nhà ga và các bãi đỗ xe chật kín bao quanh sân đỗ nơi hai máy bay chở khách đỗ, tượng đài máy bay hai tầng cánh trên đảo bùng binh.",
+    "cfe-chatgpt-06.webp": "Một máy bay phản lực khu vực HOP của Air France nghỉ trên sân đỗ trong khi máy xếp hành lý và một xe mặt đất làm việc bên cạnh, phía xa là đồi.",
+    "cfe-chatgpt-07.webp": "Một du khách mang ba lô bước qua cửa xoay dưới chữ “départs” màu vàng trên mái che tối của nhà ga."
+  },
+  "CGK": {
+    "cgk-baidu-1.webp": "Bên trong nhà ga Soekarno-Hatta — những vòm đỏ chạm lộng đứng dưới trần hình học của sảnh khởi hành.",
+    "cgk-baidu-2.webp": "Hành lang lên máy bay — dầm xanh và kính nhìn ra cây nhiệt đới, biển vàng chỉ tới cửa D6."
+  },
+  "CJS": {
+    "cjs-sat-1.webp": "Ảnh vệ tinh: các đường băng của Ciudad Juárez nằm giữa thành phố và đất khô ở rìa sa mạc Chihuahua, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "CLO": {
+    "clo-sat-1.webp": "Ảnh vệ tinh: đường băng của Cali nằm trong thung lũng Cauca, nhà ga và sân đỗ ở phía đông, xung quanh là thành phố và ruộng mía.",
+    "clo-chatgpt-01.webp": "Đường mái răng cưa tối màu của nhà ga nhô vào bầu trời nhiều mây trong khi taxi và ô tô chờ trên đường đón trả khách, phía xa là tháp không lưu.",
+    "clo-chatgpt-02.webp": "Ảnh chụp từ trên cao lần theo một đường băng thẳng dài và đường lăn song song, máy bay đỗ bên nhà ga ở bên trái giữa vùng đồng ruộng bằng phẳng.",
+    "clo-chatgpt-03.webp": "Nhìn từ phía sau, một máy bay phản lực hai động cơ trắng đỗ trên sân đỗ với tháp không lưu thuôn, cột đèn pha và nhà ga có hàng rào cây phía sau.",
+    "clo-chatgpt-04.webp": "Du khách ngồi từng hai, ba người trên ghế băng trong sảnh khởi hành, cửa hàng và màn hình chuyến bay dọc hai bên, lá cọ thấp thoáng ngoài các ô cửa mở.",
+    "clo-chatgpt-05.webp": "Một máy bay đuôi đỏ và vỏ động cơ đỏ chờ tại cửa B9, xe đẩy hành lý và thiết bị mặt đất rải rác trên sân đỗ phía trước.",
+    "clo-chatgpt-06.webp": "Dưới bầu trời xanh có mây kéo vệt, một máy bay mang nhãn LATAM đỗ trên sân đỗ trong khi tháp không lưu bê tông vươn lên trên nhà ga bên cạnh những cây cọ.",
+    "clo-chatgpt-07.webp": "Một máy bay chở khách hướng về phía máy ảnh tại cửa ra, cầu ống treo từ nhà ga bên phải và một xe đẩy hành lý xanh trên sân đỗ có vạch đỏ."
+  },
+  "CMF": {
+    "cmf-sat-1.webp": "Ảnh vệ tinh: đường băng nằm trong vùng nông thôn xanh ngoài Chambéry, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "COR": {
+    "cor-sat-1.webp": "Ảnh vệ tinh: các đường băng của Cordoba nằm phía bắc thành phố, nhà ga và sân đỗ ở phía đông sân bay, xung quanh là đồng ruộng và nhà ở."
+  },
+  "CPC": {
+    "cpc-sat-1.webp": "Ảnh vệ tinh: đường băng của San Martín de los Andes nằm giữa thung lũng và hồ ở dãy Andes Patagonia, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "CPH": {
+    "cph-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Copenhagen Kastrup (CPH) hiện rõ."
+  },
+  "CPT": {
+    "cpt-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Quốc tế Cape Town (CPT) hiện rõ."
+  },
+  "CTD": {
+    "ctd-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Alonso Valderrama (CTD) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
+  },
+  "CUM": {
+    "cum-sat-1.webp": "Ảnh vệ tinh: đường băng của Cumaná nằm giữa thành phố và đồi trên bờ biển Caribe của Venezuela, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "CUZ": {
+    "cuz-sat-1.webp": "Ảnh vệ tinh: đường băng của Cusco nằm trong một thung lũng Andes, nhà ga và sân đỗ bên cạnh, xung quanh là thành phố và sườn đồi.",
+    "cuz-chatgpt-01.webp": "Ô tô và taxi xếp hàng dọc làn đón trả khách bên ngoài nhà ga có tên viết trên mái che, phía trái thấy núi.",
+    "cuz-chatgpt-02.webp": "Ảnh chụp từ trên cao cho thấy một đường băng đơn nằm giữa khu nhà mái đỏ dày đặc, những triền đồi bậc thang bao quanh thành phố.",
+    "cuz-chatgpt-03.webp": "Một máy bay mang màu LAN đỗ tại nhà ga, nhân viên mặt đất xử lý xe đẩy hành lý bên cạnh dưới dãy núi xanh thẫm.",
+    "cuz-chatgpt-04.webp": "Dưới mây xám nặng, du khách đi bộ trước nhà ga, tên sân bay trên mái che và biển CORPAC trên tháp phía trên lan can vàng.",
+    "cuz-chatgpt-05.webp": "Nhìn qua cánh máy bay, một đường lăn chạy về phía đường băng qua bãi cỏ vàng khô, phía xa là sườn đồi thành phố và núi.",
+    "cuz-chatgpt-06.webp": "Một máy bay LATAM đỗ trên sân đỗ trước dãy nhà gạch, biển “07” vàng trên tường và mây tích cao vút trên các ngọn đồi.",
+    "cuz-chatgpt-07.webp": "Một máy bay lăn qua sân đỗ qua hai máy bay LAN đỗ tại cửa ra, phía sau là những ngôi nhà gạch chen chúc trên sườn đồi xanh."
+  },
+  "CWB": {
+    "cwb-baidu-1.webp": "Một chiếc Boeing 737 của Không quân Brazil bay lên khỏi đường băng Curitiba.",
+    "cwb-baidu-2.webp": "Một chiếc Tu-154 lăn bánh hướng về phía máy ảnh, thấy rõ ba động cơ — kiểu máy bay hiếm hoi thu hút dân săn máy bay đến Curitiba.",
+    "cwb-chatgpt-01.webp": "Dưới bầu trời xanh trong, một biển xanh dài ghi tên đầy đủ của sân bay chạy dưới mái che nhà ga trên bãi cỏ cắt gọn gàng.",
+    "cwb-chatgpt-02.webp": "Nhìn từ trên cao, nhà ga và các bãi đỗ xe rộng lớn chật kín xe, đường băng và thành phố rộng lớn nằm phía xa dưới mây.",
+    "cwb-chatgpt-03.webp": "Từ trên không, một hàng máy bay chở khách đỗ tại cửa ra của nhà ga, hai đảo cỏ hình bầu dục nằm trong mặt lát bên đường băng.",
+    "cwb-chatgpt-04.webp": "Một máy bay đỗ chính diện tại cầu ống với xe kéo đẩy vàng đen bên dưới và nón cam rải rác trên sân đỗ ướt.",
+    "cwb-chatgpt-05.webp": "Ảnh chụp từ trên cao cho thấy các cầu ống của nhà ga xếp thành hàng, máy bay đuôi đỏ tại các vị trí đỗ và một đường băng gặp các đường lăn qua bãi cỏ xanh.",
+    "cwb-chatgpt-06.webp": "Dòng chữ xanh trải trên mép mái nhà ga phía trên bãi đỗ xe có mái che xanh, các biển chỉ dẫn thuê xe đặt ở lề đường.",
+    "cwb-chatgpt-07.webp": "Ảnh hàng không nhìn thẳng xuống cho thấy hai máy bay tại các cầu ống của nhà ga, bãi đỗ xe hình vòng chật kín ô tô và một máy bay đang chạm đất trên đường băng."
+  },
+  "CYA": {
+    "cya-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Quốc tế Antoine-Simon (CYA) nằm giữa thị trấn, đồng ruộng và cây cối.",
+    "cya-chatgpt-01.webp": "Một biển trắng dưới mái che xanh nhạt chào du khách bằng tiếng Pháp đến Sân bay Quốc tế Antoine Simon tại Les Cayes, người qua lại bên dưới.",
+    "cya-chatgpt-02.webp": "Dưới bầu trời u ám, một máy bay phản lực khu vực trắng với động cơ gắn sau và đuôi chữ T lăn qua sân đỗ nhựa tối bên một bức tường cây xanh.",
+    "cya-chatgpt-03.webp": "Dưới nắng trưa sáng, một chiếc máy bay cánh quạt một động cơ nhỏ màu xanh trắng đỗ trên sân đỗ bê tông với cửa cabin mở và một người đứng ở bậc thang.",
+    "cya-chatgpt-04.webp": "Một máy bay phản lực khu vực xanh trắng lăn trên đường băng ướt qua màn chào bằng vòi rồng, hai lính cứu hỏa mặc đồ tối nhắm vòi từ bãi cỏ.",
+    "cya-chatgpt-05.webp": "Một biển xanh ghi Aeroport Antoine Simon des Cayes đứng bên hàng rào lưới, một cây cọ và hoa trúc đào hồng dưới bầu trời sáng có mây tích.",
+    "cya-chatgpt-06.webp": "Mặt trời lặn nhuộm vàng sân đỗ phía sau một nhà ga trắng nhỏ có tường ghi Les Cayes Airport, vài du khách đứng gần lối vào.",
+    "cya-chatgpt-07.webp": "Lối vào phòng đến màu xanh bạc hà nhạt mang biển trắng ghi Arrivee phía trên hai mũi tên chỉ xuống, phía trước là lan can xanh và cây bụi."
+  },
+  "DEL": {
+    "del-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế Indira Gandhi (DEL) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "DHF": {
+    "dhf-sat-1.webp": "Ảnh vệ tinh: Căn cứ Không quân Al Dhafra (DHF) được bao quanh bởi đất khô và vùng đất trống."
+  },
+  "DIE": {
+    "die-sat-1.webp": "Ảnh vệ tinh: đường băng của Antsiranana nằm giữa đồi và thị trấn ở bắc Madagascar, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "DOH": {
+    "doh-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Quốc tế Hamad (DOH) hiện rõ."
+  },
+  "DUB": {
+    "dub-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Dublin (DUB) hiện rõ."
+  },
+  "DXB": {
+    "dxb-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Dubai (DXB) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "EDC": {
+    "edc-baidu-3.webp": "Tháp không lưu trắng của sân bay — cabin kính trên thân vuông, xe cộ và một chiếc trực thăng ở chân tháp.",
+    "edc-chatgpt-01.webp": "Trong ánh chạng vạng xanh thẳm, một nhà chứa máy bay trắng với mái che cong rộng sáng đèn, mặt tiền kính ghi Henriksen phía trên sân đỗ.",
+    "edc-chatgpt-02.webp": "Lúc chạng vạng, một máy bay thương gia trắng chờ dưới mái che cong trong khi xe bồn nhiên liệu làm việc bên cạnh, nón cam đánh dấu sân đỗ bê tông.",
+    "edc-chatgpt-03.webp": "Một phòng chờ rộng rãi với sàn gỗ nhạt và cột đá nhìn qua cửa sổ cao ra sân đỗ, một động cơ máy bay lớn trưng bày trên giá ở giữa.",
+    "edc-chatgpt-04.webp": "Sau quầy lễ tân, hai nhân viên trao một chùm chìa khóa qua quầy, màn hình bên cạnh hiển thị logo Austin Executive.",
+    "edc-chatgpt-05.webp": "Dưới bầu trời xanh trong, một nhà chứa máy bay trắng khổng lồ mang dòng chữ Austin Executive Airport, những cột chắn vàng xếp dọc con đường bê tông trống phía trước.",
+    "edc-chatgpt-06.webp": "Nhà chứa máy bay sáng rực sau khi trời tối, vài máy bay một động cơ nhỏ và một máy bay hai động cơ đỗ cạnh nhau trên nền bóng.",
+    "edc-chatgpt-07.webp": "Về đêm, mái che cong bên ngoài nhà chứa máy bay sáng lên với một hàng đèn, chiếu sáng tường trắng và một dải sân đỗ bê tông rộng."
+  },
+  "EPS": {
+    "eps-sat-1.webp": "Ảnh vệ tinh: Sân bay Arroyo Barril (EPS) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "EWR": {
+    "ewr-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Newark Liberty (EWR) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "FCO": {
+    "fco-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Roma Fiumicino (FCO)."
+  },
+  "FMM": {
+    "fmm-sat-1.webp": "Ảnh vệ tinh: đường băng của Memmingen nằm giữa đồi Allgäu và đồng ruộng, nhà ga và sân đỗ ở phía bắc sân bay."
+  },
+  "FON": {
+    "fon-sat-1.webp": "Ảnh vệ tinh: sân bay La Fortuna được khoanh đỏ, bao quanh bởi rừng mưa và đồng ruộng ở Costa Rica.",
+    "fon-chatgpt-01.webp": "Trong ảnh chụp từ trên cao, một đường băng đánh dấu 24 cắt qua cánh đồng xanh, một tòa nhà mái đỏ và nhà chứa máy bay xanh tập trung ở một đầu, phía xa là rừng mưa và núi.",
+    "fon-chatgpt-02.webp": "Lúc hoàng hôn, một chiếc máy bay một động cơ đỏ trắng chờ trên đường băng đánh dấu FON, trong khi một ngọn núi lửa khổng lồ vươn lên như hình nón tối dưới bầu trời rực sáng.",
+    "fon-chatgpt-03.webp": "Một chiếc máy bay cánh quạt một động cơ trắng ghi SANSA lăn dọc đường băng, phía sau vươn lên một ngọn núi lửa hình nón dốc vào bầu trời nhạt.",
+    "fon-chatgpt-04.webp": "Một chóp cánh quạt và vỏ động cơ lấp đầy tiền cảnh bên trái, phía xa một sân đỗ trống trải tới chân ngọn núi lửa nằm dưới những dải mây tích.",
+    "fon-chatgpt-05.webp": "Một chiếc máy bay cánh quạt hai động cơ trắng mang nhãn NatureAir đỗ ở rìa bãi cỏ với nón cam bên cạnh, một ngọn núi lửa xa mờ trong sương.",
+    "fon-chatgpt-06.webp": "Một chiếc máy bay cánh quạt một động cơ trắng tiếp cận với bánh hạ xuống, lướt thấp trên ngọn cây khi vào hạ cánh trên đường băng rợp rừng.",
+    "fon-chatgpt-07.webp": "Hành khách mang ba lô nối đuôi đi qua sân đỗ trong khi một nhân viên mặt đất cầm bảng kẹp đứng bên máy bay ghi SANSA, phía sau là ngọn núi lửa che khuất trong mây."
+  },
+  "FRA": {
+    "fra-baidu-2.webp": "The Squaire tại Sân bay Frankfurt — tòa nhà trắng cong dài bắc qua đường sắt trên các trụ nghiêng, đường cao tốc chạy ngang qua.",
+    "fra-baidu-3.webp": "Frankfurt nhìn từ trên không — máy bay và xe thi công rải rác trên sân đỗ và đường băng, đường chân trời thành phố phía xa sau vành đai rừng."
+  },
+  "GOY": {
+    "goy-sat-1.webp": "Ảnh vệ tinh: Sân bay Ampara (GOY), đường băng 07/25 cắt qua thảm thực vật xanh và đồng ruộng ở miền đông Sri Lanka.",
+    "goy-chatgpt-01.webp": "Đây không phải ảnh chụp mà là một thẻ dữ liệu sân bay tối màu, với VCCG bằng chữ xanh lớn và chú thích ghi ADP, Ampara Airport và Ampara, Sri Lanka."
+  },
+  "GPA": {
+    "gpa-sat-1.webp": "Ảnh vệ tinh: đường băng của sân bay Patras nằm giữa bờ biển và đồi ở tây bắc Peloponnese, nhà ga và sân đỗ ở bên cạnh.",
+    "gpa-chatgpt-01.webp": "Dưới mái che xanh thẳm, nhà ga Araxos thấp hướng ra sân trước trống nơi một chiếc taxi chờ dưới bầu trời quang đãng.",
+    "gpa-chatgpt-02.webp": "Một chiếc Airbus của Aegean với cầu thang di động ở cửa đỗ trên sân đỗ khi nắng chiều thấp và bóng dài trải trên mặt bê tông.",
+    "gpa-chatgpt-03.webp": "Từ trên không, ngưỡng đường băng đánh dấu 07 bằng chữ số trắng lớn, bên trái là nhà chứa máy bay và sân đỗ, xung quanh là đồng ruộng.",
+    "gpa-chatgpt-04.webp": "Quầy kiểm soát hộ chiếu trống bên trong nhà ga, biển xanh ghi tiếng Hy Lạp và tiếng Anh phía trên các buồng kính và nền lát bóng.",
+    "gpa-chatgpt-05.webp": "Hành khách mang túi băng qua sân đỗ lên một chiếc Boeing 737-800 vàng của TUIfly bằng cầu thang di động vào một buổi chiều sáng.",
+    "gpa-chatgpt-06.webp": "Ở một góc nhà ga, kiosk Master Coffee Air đóng cửa, phía xa trong sảnh là các biển chỉ dẫn kiểm soát an ninh và cơ quan hàng không dân dụng."
+  },
+  "GRB": {
+    "grb-sat-1.webp": "Ảnh vệ tinh: hai đường băng của Green Bay nằm trên đồng bằng bên hồ Michigan, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "GRU": {
+    "gru-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế São Paulo/Guarulhos (GRU) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "GUW": {
+    "guw-sat-1.webp": "Ảnh vệ tinh: đường băng của Atyrau nằm trên vùng trũng Caspian khô cằn, nhà ga và sân đỗ bên cạnh, xung quanh là sông và đầm lầy."
+  },
+  "GYL": {
+    "gyl-sat-1.webp": "Ảnh vệ tinh: Sân bay Argyle (GYL) nằm giữa đất khô và vùng đất trống."
+  },
+  "GZP": {
+    "gzp-sat-1.webp": "Ảnh vệ tinh: đường băng của Gazipaşa nằm trên đồng bằng ven biển giữa dãy Taurus và Địa Trung Hải, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "HKG": {
+    "hkg-baidu-1.webp": "Từ cửa sổ cabin: một chiếc máy bay Cathay tại vị trí đỗ trước mái vòm của nhà ga, vạch vị trí “S35” sơn trên sân đỗ bên dưới.",
+    "hkg-baidu-2.webp": "Tầng khởi hành của Nhà ga 1 — băng chuyền đi bộ dưới trần hình sóng, biển cửa 40 và 41 phía trên, du khách kéo hành lý đi qua.",
+    "hkg-baidu-3.webp": "Một chiếc Boeing 747 của Cathay Pacific Cargo cất cánh từ đường băng phía biển, một phà chạy bên dưới máy bay.",
+    "hkg-chatgpt-01.webp": "Nhìn xuống giếng trời Nhà ga 1, các thang cuốn xếp tầng dưới trần lưới trong khi du khách di chuyển giữa các tầng.",
+    "hkg-chatgpt-02.webp": "Từ trên không, hòn đảo lấn biển mang hai đường băng và nhà ga dài, phía sau vịnh là núi xanh vươn lên.",
+    "hkg-chatgpt-03.webp": "Một chiếc Boeing 747 của Cathay Pacific đỗ tại vị trí bên mái nhà ga hình sóng, xe đẩy và pallet hàng hóa rải rác trên sân đỗ.",
+    "hkg-chatgpt-04.webp": "Trong hành lang khởi hành, biển cửa 211 và 212 kẹp hai băng chuyền đi bộ chạy về phía trần vòm.",
+    "hkg-chatgpt-05.webp": "Nhìn từ trên cao dưới mây, hòn đảo sân bay và các dải đường băng nằm giữa vùng nước rộng, những ngọn đồi mờ dọc bờ xa.",
+    "hkg-chatgpt-06.webp": "Máy bay Cathay Pacific xếp dọc các vị trí đỗ trước hành lang mái hình sóng, tháp không lưu vươn lên phía sau trên sân đỗ.",
+    "hkg-chatgpt-07.webp": "Từ trên không, hành lang dài hình chữ Y vươn ra với hàng chục máy bay đỗ mũi vào các cửa ra."
+  },
+  "HND": {
+    "hnd-sat-1.webp": "Ảnh vệ tinh: Sân bay Tokyo Haneda (HND) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "HOF": {
+    "hof-sat-1.webp": "Ảnh vệ tinh: đường băng của Al-Ahsa nằm giữa ốc đảo và sa mạc, nhà ga và sân đỗ bên cạnh, xung quanh là rừng cọ và thị trấn."
+  },
+  "HPN": {
+    "hpn-sat-1.webp": "Ảnh vệ tinh: Sân bay Quận Westchester (HPN) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "HQQ": {
+    "hqq-sat-1.webp": "Ảnh vệ tinh: Sân bay Anyang Hongqiqu (HQQ) được bao quanh bởi thị trấn, đồng ruộng và cây cối."
+  },
+  "HRH": {
+    "hrh-sat-1.webp": "Ảnh vệ tinh: Sân bay Aligarh (HRH) được bao quanh bởi thị trấn, đồng ruộng và cây cối."
+  },
+  "HUU": {
+    "huu-page-1.webp": "Cột gió cam bên đường băng Huánuco — thành phố trên sườn đồi vươn lên sau hàng rào xanh (ảnh từ bảng dữ liệu sân bay chính thức của CORPAC, tháng 9 năm 2023).",
+    "huu-page-2.webp": "Phòng chờ khởi hành — kính từ sàn tới trần nhìn ra sân bay, hành khách chờ thành hàng (ảnh từ bảng dữ liệu sân bay chính thức của CORPAC).",
+    "huu-chatgpt-01.webp": "Ở lối vào nhà ga Huánuco, một biển xanh dài trải ngang mặt tiền kính, một dốc dẫn lên cửa dưới những ngọn đồi nâu khô.",
+    "huu-chatgpt-02.webp": "Một tháp đen trên cột chống vươn lên bên nhà ga, dải mặt tiền xanh mang tên đầy đủ của sân bay dưới mây dày và núi xanh.",
+    "huu-chatgpt-03.webp": "Một chiếc máy bay cánh quạt hai động cơ của LC Perú đỗ trên sân đỗ khi hành khách leo cầu thang sau, đuôi đỏ nổi bật dưới bầu trời xanh nóng.",
+    "huu-chatgpt-04.webp": "Hành khách bước ra sân đỗ về phía một máy bay đuôi đỏ đỗ dưới sườn đồi trơ trọi rải rác những ngôi nhà gạch.",
+    "huu-chatgpt-05.webp": "Vạch mép đường băng nhạt màu bắt nắng, cỏ khô dọc lề và những dãy núi nâu xếp lớp phía xa.",
+    "huu-chatgpt-06.webp": "Một du khách mang ba lô đi trên dốc ngoài nhà ga, mép mái mang tên đầy đủ của sân bay bằng chữ trắng.",
+    "huu-chatgpt-07.webp": "Một xe cứu hỏa phun vòng nước qua một máy bay chở khách đang lăn, tia nước tung thành sương trước thân máy bay đuôi đỏ."
+  },
+  "HVA": {
+    "hva-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Analalava (HVA) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
+  },
+  "IAD": {
+    "iad-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Washington Dulles (IAD) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "ICN": {
+    "icn-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Incheon (ICN) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "IEO": {
+    "ieo-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Aioun el Atrouss (IEO) nằm giữa đất khô và vùng đất trống."
+  },
+  "IQA": {
+    "iqa-sat-1.webp": "Trong ảnh vệ tinh, Căn cứ Không quân Al Asad (IQA) hòa vào đất khô và vùng đất trống xung quanh.",
+    "iqa-chatgpt-01.webp": "Nhìn từ trên không, những hàng máy bay chiến đấu đỗ trên sân đỗ sa mạc, đường băng và các tòa nhà căn cứ nhạt màu trải về phía chân trời.",
+    "iqa-chatgpt-02.webp": "Lúc hoàng hôn, căn cứ sa mạc được chia thành các khối bằng tường chắn nổ, phía trước là nhà chứa máy bay mái trắng lớn và phía xa là đồng ruộng.",
+    "iqa-chatgpt-03.webp": "Một chiếc F-16 xám nghỉ trong cửa hầm kiên cố bê tông, nắp buồng lái mở trong khi mưa nhẹ rơi ngoài vòm.",
+    "iqa-chatgpt-04.webp": "Nhân viên mặt đất mặc ngụy trang sa mạc làm việc ở các mối nối đường băng bên một xe quét trắng và máy nén vàng dưới bầu trời sáng nhiều mây.",
+    "iqa-chatgpt-05.webp": "Lúc hoàng hôn, hai chiếc trực thăng cánh quạt nối tiếp đứng trên sân đỗ, một thành viên phi hành làm việc trên một chiếc trong khi khung máy bay chìm vào bóng đen.",
+    "iqa-chatgpt-06.webp": "Một chiếc máy bay vận tải nhỏ màu trắng chờ trên sân đỗ với cầu thang sau hạ xuống khi binh lính đi qua và một người chào.",
+    "iqa-chatgpt-07.webp": "Từ trên không, căn cứ sa mạc trải ra thành những hàng lều vòm và xe cộ đỗ, một đường băng cắt ngang vùng đất trống phía sau."
+  },
+  "ISL": {
+    "isl-sat-1.webp": "Ảnh vệ tinh: Sân bay İstanbul Atatürk (ISL) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "IST": {
+    "ist-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Istanbul (IST)."
+  },
+  "IVA": {
+    "iva-sat-1.webp": "Ảnh vệ tinh: Sân bay Ampampamena (IVA) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "IXA": {
+    "ixa-baidu-1.webp": "Một chiếc máy bay cánh quạt hai động cơ hướng về phía máy ảnh trên sân đỗ Agartala, phía xa sân bay là những ngọn đồi thấp của Tripura.",
+    "ixa-chatgpt-01.webp": "Mái che trắng của nhà ga mang tên sân bay bằng chữ xanh, cọ và luống hoa dọc lối đi lát dưới bầu trời u ám.",
+    "ixa-chatgpt-02.webp": "Trong sảnh khởi hành, một biển tối chỉ tới quầy làm thủ tục và vé điện tử, phía trên tường có một hàng đồ gốm đất nung.",
+    "ixa-chatgpt-03.webp": "Một chiếc máy bay thân hẹp sơn màu IndiGo đỗ tại cầu ống trong khi nhân viên mặt đất làm việc quanh thân và động cơ.",
+    "ixa-chatgpt-04.webp": "Về đêm, biển tên sân bay bằng chữ Devanagari xanh của nhà ga sáng lên phía trên một dãy mái căng trắng.",
+    "ixa-chatgpt-05.webp": "Nhìn qua hàng rào dây thép gai, một máy bay đuôi đỏ lăn dọc đường băng trên nền hàng cây mờ sương.",
+    "ixa-chatgpt-06.webp": "Một nhà ga trắng thấp với mái xanh nhạt đứng sau sân đỗ, phía trước là cột đèn pha dạng lưới và tháp không lưu ở phía xa bên phải.",
+    "ixa-chatgpt-07.webp": "Một cầu thang lên máy bay được đẩy áp vào cửa trước của một chiếc máy bay IndiGo dưới những đám mây tích cao vút."
+  },
+  "IXD": {
+    "ixd-sat-1.webp": "Ảnh vệ tinh: các đường băng của Prayagraj nằm giữa thành phố và đồng ruộng trên đồng bằng sông Hằng, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "IXU": {
+    "ixu-page-1.webp": "Sân trước nhà ga — mái vòm trắng hình thùng trên làn đón trả khách và lối vào phòng khởi hành.",
+    "ixu-page-2.webp": "Nhà ga nhìn từ bãi cỏ — mái cong chạy dọc mặt tiền, tháp không lưu ở phía xa bên phải.",
+    "ixu-page-3.webp": "Lối vào phòng khởi hành — mái che ghi “WELCOME TO CHHATRAPATI SAMBHAJINAGAR AIRPORT” và “प्रस्थान DEPARTURE”.",
+    "ixu-chatgpt-01.webp": "Những biển xanh trên nhà ga ghi “Aurangabad Airport” và “Arrival”, một hàng chậu cây dọc lề đường.",
+    "ixu-chatgpt-02.webp": "Một chiếc máy bay IndiGo lăn dọc đường băng ngoài bức tường thấp, phía sau là mái nhà thị trấn và phía trước là một mảng vàng sáng trên mặt đất.",
+    "ixu-chatgpt-03.webp": "Hành khách bước ra sân đỗ về phía mái kim loại cong dài của nhà ga trong ánh nắng thấp.",
+    "ixu-chatgpt-04.webp": "Một chiếc máy bay phản lực hai động cơ lớn hướng về phía máy ảnh với đèn hạ cánh bật, một chồng tháp lưới mờ ở mép trái.",
+    "ixu-chatgpt-05.webp": "Một biển “Departure” xanh treo dưới mái che giàn thép, xe đẩy hành lý xếp hàng khi hai nhân viên an ninh bước vào.",
+    "ixu-chatgpt-06.webp": "Về đêm, tên sân bay sáng trắng phía trên lối vào trong khi đèn pha ô tô quét qua rào chắn và những hàng chậu cây.",
+    "ixu-chatgpt-07.webp": "Một máy bay đuôi đỏ lăn chính diện xuống đường băng trong mưa phùn, cây bụi khô và cỏ lấp đầy tiền cảnh."
+  },
+  "JEG": {
+    "jeg-sat-1.webp": "Ảnh vệ tinh: đường băng ngắn của Aasiaat nằm trên một đảo Greenland, nhà ga và sân đỗ bên cạnh, xung quanh là biển và đá trơ trọi.",
+    "jeg-chatgpt-01.webp": "Một tòa tháp ốp xanh dưới mái bản lề bạc có bàn picnic bên ngoài, phía sau là bãi biển và những đảo đá nhỏ trải dài.",
+    "jeg-chatgpt-02.webp": "Du khách mang hành lý đi về phía nhà ga xanh ghi “AASIAAT”, tháp không lưu vươn thẳng từ mái.",
+    "jeg-chatgpt-03.webp": "Một chiếc máy bay cánh quạt hai động cơ đỏ của Air Greenland nghỉ trên mặt sỏi, phía xa là nước xanh và một tảng băng trôi nhạt màu.",
+    "jeg-chatgpt-04.webp": "Hành khách bước qua cánh quạt đỏ về phía nhà ga “AASIAAT”, những mảng tuyết còn đọng trên đá phía sau.",
+    "jeg-chatgpt-05.webp": "Trong phòng chờ nhỏ, vài hành khách chờ trên ghế băng bên cửa kính khung đỏ và các tấm nghệ thuật khung gỗ.",
+    "jeg-chatgpt-06.webp": "Nhìn xuống sân đỗ, tháp và nhà ga xanh đứng bên trái, một chiếc máy bay cánh quạt đỗ trên bãi sỏi và phía xa là biển.",
+    "jeg-chatgpt-07.webp": "Hành khách mặc áo ấm lê bước qua tuyết về phía cửa phòng đến, biển “AASIAAT” của tháp xanh nổi bật phía trên."
+  },
+  "JFK": {
+    "jfk-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Quốc tế John F. Kennedy (JFK) hiện rõ."
+  },
+  "JIB": {
+    "jib-sat-1.webp": "Ảnh vệ tinh: đường băng của Djibouti nằm trên bờ nam vịnh Tadjoura, nhà ga và sân đỗ ở phía bắc sân bay, xung quanh là cảng và thành phố."
+  },
+  "JOG": {
+    "jog-sat-1.webp": "Ảnh vệ tinh: đường băng và đường lăn của Yogyakarta nằm ở rìa phía đông thành phố, nhà ga và sân đỗ ở phía bắc sân bay."
+  },
+  "JSI": {
+    "jsi-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc gia Đảo Skiathos (JSI) được bao quanh bởi nước và bờ biển."
+  },
+  "JTY": {
+    "jty-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Astypalaia (JTY) hòa vào nước và bờ biển xung quanh.",
+    "jty-chatgpt-01.webp": "Một nhà ga trắng mái bằng chạy dọc sân trước sỏi, một khối tháp tròn ở đầu bên phải và xe đẩy hành lý đỗ phía trước.",
+    "jty-chatgpt-02.webp": "Lúc chạng vạng, đường băng và đường lăn uốn cong qua một nhà ga trắng thấp, phía xa là biển lặng và mũi đất tối.",
+    "jty-chatgpt-03.webp": "Một du khách giơ thẻ lên máy bay và hộ chiếu trên sân đỗ, phía sau là một chiếc máy bay cánh quạt hai động cơ đỗ trong nắng thấp.",
+    "jty-chatgpt-04.webp": "Một vòng cung vàng uốn qua sân đỗ trống về phía nhà ga trắng nhỏ, cabin tháp không lưu đặt ở góc dưới bầu trời quang đãng.",
+    "jty-chatgpt-05.webp": "Từ trên không, một đường băng đơn nằm dọc bán đảo nhô ra vùng nước xanh thẳm, nhà ga chen chúc bên cạnh điểm giữa."
+  },
+  "JVA": {
+    "jva-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Ankavandra (JVA) nằm giữa đất khô và vùng đất trống.",
+    "jva-chatgpt-01.webp": "Trên một dải cỏ khô dưới những ngọn núi xanh, một chiếc máy bay cánh quạt một động cơ nhỏ màu trắng đỗ trong khi đám đông dân làng tụ tập quanh nó."
+  },
+  "KIX": {
+    "kix-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Kansai (KIX)."
+  },
+  "KQA": {
+    "kqa-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Akutan (KQA) nằm giữa đất khô và vùng đất trống."
+  },
+  "KSO": {
+    "kso-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Quốc gia Kastoria Aristotle (KSO) nằm giữa thị trấn, đồng ruộng và cây cối.",
+    "kso-chatgpt-01.webp": "Những chữ Hy Lạp vàng dọc mái hiên ghi tên sân bay phía trên lối vào phòng khởi hành, nơi những chậu cây trắng xếp dọc lối đi.",
+    "kso-chatgpt-02.webp": "Trong ánh chiều, một chiếc máy bay chở khách trắng nhỏ chờ trên sân đỗ trước tháp không lưu, phía sau là hồ và dãy núi.",
+    "kso-chatgpt-03.webp": "Một chiếc máy bay cánh quạt hai động cơ trắng sọc đỏ xanh lăn qua một biển đỏ đánh dấu 12-30, phía xa đường băng là đồi.",
+    "kso-chatgpt-04.webp": "Lúc chạng vạng, mặt trước nhà ga vắng vẻ, biển hiệu sáng cam ấm trong nắng cuối trong khi bóng dài trải trên mặt lát.",
+    "kso-chatgpt-05.webp": "Nhiều máy bay chở khách với các màu sơn khác nhau đỗ tại cầu ống của nhà ga, một chiếc là máy bay AEGEAN xanh trắng."
+  },
+  "KUL": {
+    "kul-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Kuala Lumpur (KUL)."
+  },
+  "LAK": {
+    "lak-sat-1.webp": "Ảnh vệ tinh: Sân bay Aklavik/Freddie Carmichael (LAK) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "LAX": {
+    "lax-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế Los Angeles (LAX) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "LBE": {
+    "lbe-sat-1.webp": "Ảnh vệ tinh: đường băng của Latrobe nằm giữa đồi và rừng ở Pennsylvania, nhà ga và sân đỗ ở bên cạnh.",
+    "lbe-chatgpt-01.webp": "Dưới bầu trời xanh có mây trắng, du khách mang túi băng qua trước nhà ga mái xanh mòng két trong khi cờ Hoa Kỳ bay ở lề đường.",
+    "lbe-chatgpt-02.webp": "Chụp qua cánh máy bay, hai đường băng cắt nhau trên đồng ruộng xanh trong khi những dãy nhà chứa máy bay trắng và vị trí đỗ xếp dọc sân đỗ bên dưới.",
+    "lbe-chatgpt-03.webp": "Bên cạnh cầu ống, một chiếc máy bay chở khách toàn màu vàng được xe kéo đẩy ra trong khi nón cam đánh dấu các vạch sân đỗ sơn.",
+    "lbe-chatgpt-04.webp": "Trong phòng chờ khởi hành, hai hành khách chờ trên ghế cạnh cửa sổ với túi dưới chân trong khi những người khác kéo hành lý dọc hành lang.",
+    "lbe-chatgpt-05.webp": "Từ trên không, những dãy nhà chứa máy bay trắng và đường băng rộng nằm giữa cây cối, phía xa là thị trấn và đồi mờ.",
+    "lbe-chatgpt-06.webp": "Hai máy bay thương gia trắng đỗ cạnh nhau trên sân đỗ, một chiếc mở cửa cabin và hạ cầu thang, dưới bầu trời nhạt mờ sương.",
+    "lbe-chatgpt-07.webp": "Vạch tim đường chạy thẳng phía trước giữa hai lề cỏ vàng khô, phía xa là dãy đồi thấp dưới bầu trời xanh trong."
+  },
+  "LCG": {
+    "lcg-sat-1.webp": "Ảnh vệ tinh: đường băng của A Coruña nằm giữa những ngọn đồi ven biển Galicia, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "LEI": {
+    "lei-sat-1.webp": "Ảnh vệ tinh: đường băng chạy dọc bờ biển Almería, nhà ga và sân đỗ ở đầu phía tây và Địa Trung Hải bên dưới."
+  },
+  "LET": {
+    "let-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Quốc tế Alfredo Vásquez Cobo (LET) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "LFK": {
+    "lfk-baidu-1.webp": "Một chiếc Cessna đang vào tiếp cận — dải cỏ và tháp nước màu đỏ gỉ dưới cánh, đặc trưng nông thôn của sân bay gói trong một khung hình.",
+    "lfk-chatgpt-01.webp": "Trên nền trời xanh trong, bức tường nhạt của nhà ga mang tên sân bay bằng chữ tối, hàng cây bụi thấp được cắt tỉa dọc tòa nhà mái xanh.",
+    "lfk-chatgpt-02.webp": "Những mũi tên trắng và vạch chỉ dẫn vàng đánh dấu ngưỡng đường băng tối, cỏ khô trải về phía hàng cây xa.",
+    "lfk-chatgpt-03.webp": "Một chiếc máy bay cánh quạt một động cơ màu hạt dẻ và trắng nghỉ trên sân đỗ, phía sau là tháp vô tuyến và nhà ga mái xanh.",
+    "lfk-chatgpt-04.webp": "Dưới bầu trời xám, một chiếc máy bay cánh quạt hai động cơ đỗ trong cửa mở của nhà chứa máy bay, khung mái thép tối hiện rõ bên trong.",
+    "lfk-chatgpt-05.webp": "Nhìn thẳng từ trên xuống, một chiếc máy bay một động cơ cánh trên màu trắng đỗ trên sân đỗ bê tông, đổ bóng sắc nét trên các tấm lát.",
+    "lfk-chatgpt-06.webp": "Những chữ xanh trên tường kem của nhà ga ghi tên sân bay phía trên hai tấm biển sân bay của năm đóng khung, bên dưới là hàng rào cây cắt tỉa.",
+    "lfk-chatgpt-07.webp": "Khung hình từ bản tin truyền hình cho thấy hai chiếc máy bay hai động cơ nhỏ trong nhà chứa máy bay, một chiếc được kê trên kích, phía dưới là băng dự báo thời tiết."
+  },
+  "LGA": {
+    "lga-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay LaGuardia (LGA)."
+  },
+  "LGW": {
+    "lgw-sat-1.webp": "Ảnh vệ tinh: Sân bay Gatwick (LGW) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "LHE": {
+    "lhe-sat-1.webp": "Ảnh vệ tinh: các đường băng và đường lăn song song của Lahore cắt qua rìa đông nam thành phố, nhà ga và sân đỗ ở phía bắc sân bay."
+  },
+  "LHR": {
+    "lhr-baidu-1.webp": "Heathrow nhìn từ trên không — các cầu hành khách và vị trí đỗ chật kín máy bay, đường băng và đường lăn trải dài.",
+    "lhr-baidu-2.webp": "Từ cửa sổ nhà ga: một chiếc máy bay Japan Airlines tại cửa ra, phía xa là tháp không lưu Heathrow.",
+    "lhr-baidu-3.webp": "Heathrow lúc chạng vạng — các nhà ga sáng đèn, một chiếc máy bay Etihad đỗ trên sân đỗ."
+  },
+  "LIS": {
+    "lis-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Humberto Delgado (LIS)."
+  },
+  "LIT": {
+    "lit-sat-1.webp": "Ảnh vệ tinh: các đường băng của Little Rock chạy dọc bờ nam sông Arkansas, nhà ga và sân đỗ ở phía bắc sân bay."
+  },
+  "LLU": {
+    "llu-sat-1.webp": "Trên ảnh vệ tinh, bãi đáp trực thăng Alluitsup Paa (LLU) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "LME": {
+    "lme-sat-1.webp": "Ảnh vệ tinh: Sân bay Le Mans-Arnage (LME) được bao quanh bởi thảm thực vật xanh và đồng ruộng."
+  },
+  "LTI": {
+    "lti-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Altai (LTI) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "LTS": {
+    "lts-sat-1.webp": "Trong ảnh vệ tinh, Căn cứ Không quân Altus (LTS) hòa vào thị trấn, đồng ruộng và cây cối xung quanh.",
+    "lts-chatgpt-01.webp": "Trong màn sương mù dày, một hàng dài máy bay quân sự xám đỗ nối đuôi nhau trên đường lăn, tất cả hướng về phía máy ảnh.",
+    "lts-chatgpt-02.webp": "Một chiếc máy bay vận tải quân sự lớn màu xám mang nhãn U.S. Air Force đỗ trên sân đỗ với cầu thang lên máy bay ở cửa trước.",
+    "lts-chatgpt-03.webp": "Dưới bầu trời xanh, chiếc vận tải cơ xám bay lên ngay sau khi cất cánh, càng vẫn buông xuống, trên vùng đồng cỏ phẳng trải tới chân trời.",
+    "lts-chatgpt-04.webp": "Một chiếc vận tải quân sự lướt thấp trên đường băng, phía xa là những hàng máy bay tiếp dầu và nhà chứa máy bay nhạt màu xếp dọc ngoài bãi cỏ khô.",
+    "lts-chatgpt-05.webp": "Mũi của một hàng máy bay tiếp dầu xếp thẳng trên sân đỗ trong khi nhân viên mặt đất mặc áo phản quang và đồng phục đứng giữa các vạch vàng.",
+    "lts-chatgpt-06.webp": "Dưới bầu trời u ám, đường lăn bê tông rộng chạy thẳng tới chân trời, vài xe mặt đất di chuyển phía xa.",
+    "lts-chatgpt-07.webp": "Qua cần tiếp dầu ở tiền cảnh, mũi và động cơ của một chiếc máy bay tiếp dầu xám hiện rõ trong khi một máy bay khác chờ phía xa."
+  },
+  "LYM": {
+    "lym-sat-1.webp": "Ảnh vệ tinh: Sân bay Ashford (LYM) được bao quanh bởi thảm thực vật xanh và đồng ruộng.",
+    "lym-chatgpt-01.webp": "Ảnh chụp từ trên cao một đường băng thẳng cắt chéo qua cánh đồng xanh, phía xa là một thị trấn ven biển trải rộng."
+  },
+  "MAD": {
+    "mad-sat-1.webp": "Ảnh vệ tinh: Sân bay Madrid–Barajas (MAD) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "MDQ": {
+    "mdq-sat-1.webp": "Ảnh vệ tinh: đường băng của Mar del Plata nằm giữa bờ biển Đại Tây Dương và đồng bằng pampa, nhà ga và sân đỗ ở bên cạnh.",
+    "mdq-chatgpt-01.webp": "Lúc chạng vạng, mặt tiền nhà ga sáng đèn, biển đỏ dài ghi Mar del Plata international airport với tháp không lưu phía sau.",
+    "mdq-chatgpt-02.webp": "Ảnh chụp từ trên cao nhà ga mái xanh và tháp không lưu liền nhau, một máy bay Aerolíneas Argentinas tại cửa ra và bãi đỗ xe chật kín ô tô.",
+    "mdq-chatgpt-03.webp": "Một máy bay phản lực khu vực KLM Cityhopper đỗ trên sân đỗ trước nhà ga trắng thấp, một tháp nhỏ và bãi cỏ ở tiền cảnh.",
+    "mdq-chatgpt-04.webp": "Những quầy làm thủ tục cam xếp dọc sảnh sáng, màn hình thông tin chuyến bay phía trên và hành khách xếp hàng sau rào chắn.",
+    "mdq-chatgpt-05.webp": "Du khách chờ trên những dãy ghế đen trong phòng chờ trắng rộng, các dải đèn trần dài chạy phía trên.",
+    "mdq-chatgpt-06.webp": "Một máy bay chở khách xanh trắng lăn dọc đường băng ngoài hàng rào dây, cỏ khô ở tiền cảnh dưới bầu trời nhạt.",
+    "mdq-chatgpt-07.webp": "Hành khách xếp hàng trước cửa lên máy bay quốc tế, nền trắng bóng phản chiếu những dải đèn trần dài."
+  },
+  "MEL": {
+    "mel-sat-1.webp": "Ảnh vệ tinh: Sân bay Melbourne (MEL), với các đường băng, quần thể nhà ga và khu công nghiệp Tullamarine."
+  },
+  "MEX": {
+    "mex-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Mexico City (MEX) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "MGQ": {
+    "mgq-sat-1.webp": "Ảnh vệ tinh: đường băng của Mogadishu nằm bên bờ Ấn Độ Dương, nhà ga và sân đỗ bên cạnh, xung quanh là thành phố và bãi biển."
+  },
+  "MIA": {
+    "mia-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Quốc tế Miami (MIA) hiện rõ."
+  },
+  "MLG": {
+    "mlg-sat-1.webp": "Ảnh vệ tinh: các đường băng của Malang nằm giữa thị trấn và đồng ruộng vùng cao Java, nhà ga và sân đỗ ở bên cạnh, phía xa là núi lửa."
+  },
+  "MNL": {
+    "mnl-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Quốc tế Ninoy Aquino (MNL) hiện rõ."
+  },
+  "MOL": {
+    "mol-baidu-2.webp": "Một chiếc Boeing 737 của Norwegian tại cửa ra nhìn qua kính nhà ga, nhân viên mặt đất làm việc quanh máy bay.",
+    "mol-baidu-3.webp": "Sân bay giữa vịnh hẹp và núi — đường băng trên thềm hẹp giữa nước và sườn dốc, mây kéo ngang các đỉnh.",
+    "mol-chatgpt-01.webp": "Một xe cắm trại và bãi đỗ xe bên ngoài nhà ga gỗ tối, một băng rôn du lịch trên tường và núi phủ tuyết bên kia vịnh hẹp.",
+    "mol-chatgpt-02.webp": "Từ trên không, đường băng nằm trên một thềm xanh hẹp bên vịnh hẹp, một thị trấn nhỏ bên phải và những đỉnh núi phủ tuyết phía sau.",
+    "mol-chatgpt-03.webp": "Ảnh chụp từ trên cao qua sân đỗ và đường lăn, một chiếc máy bay cánh quạt đỏ trắng đang lăn, vài máy bay hạng nhẹ đỗ gần đó.",
+    "mol-chatgpt-04.webp": "Dưới bầu trời xám, nhà ga dài ốp gỗ tối trải dài, biển tên trên mái phía trên và làn xe buýt được kẻ trên đường bên ngoài.",
+    "mol-chatgpt-05.webp": "Sảnh làm thủ tục trống vào ban đêm, kiosk tự phục vụ và màn hình sáng trên nền gạch đen, không ai xếp hàng.",
+    "mol-chatgpt-06.webp": "Một máy bay chở khách hạ thấp qua đê chắn sóng đá về phía đường băng, bên dưới là nước xanh và phía sau là núi mờ.",
+    "mol-chatgpt-07.webp": "Bảng tên sân bay đặt phía trên lối vào nhà ga ốp gỗ, tuyết trên mái và lối đi kính bên cạnh."
+  },
+  "MRD": {
+    "mrd-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Alberto Carnevalli (MRD) hòa vào thảm thực vật xanh và đồng ruộng xung quanh."
+  },
+  "MUC": {
+    "muc-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay München (MUC) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "MXP": {
+    "mxp-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Milan Malpensa (MXP) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "MZI": {
+    "mzi-sat-1.webp": "Ảnh vệ tinh: Sân bay Mopti (MZI) nằm giữa đất khô và vùng đất trống.",
+    "mzi-chatgpt-01.webp": "Dưới một cây cọ cao, nhà ga màu kem mang biển ghi Aeroport de Mopti Hambodedjo, du khách chờ trên nền đất đỏ bên ngoài.",
+    "mzi-chatgpt-02.webp": "Một chiếc máy bay cánh quạt hai động cơ trắng đỗ trên sân đỗ nhạt màu khi hành khách bước ra lên máy bay, cây bụi khô trải tới chân trời.",
+    "mzi-chatgpt-03.webp": "Phía trên lối vào nhà ga, các biển ghi đến và đi bằng tiếng Pháp và tiếng Anh, bên ngoài đỗ xe bán tải trắng và lính đội mũ nồi xanh đứng gần đó.",
+    "mzi-chatgpt-04.webp": "Dưới bầu trời xanh trong, một chiếc máy bay cánh quạt hai động cơ trắng có sọc xanh đỗ nghiêng trên sân đỗ, phía sau là cây cọ và nhà ga thấp.",
+    "mzi-chatgpt-05.webp": "Du khách đội mũ rộng vành đi về phía một chiếc máy bay cánh quạt hai động cơ nhỏ trên sân đỗ đỏ nhạt trong khi một xe bồn nhiên liệu chờ bên cạnh.",
+    "mzi-chatgpt-06.webp": "Trong màn sương trắng phẳng lặng, một người lính mặc ngụy trang đứng trên bê tông nhìn một chiếc máy bay cánh quạt hai động cơ màu vàng cát di chuyển qua sân đỗ.",
+    "mzi-chatgpt-07.webp": "Một máy bay có biểu tượng đuôi xanh chờ bên kia đám hành lý trải trên nền đất khô, nơi nhân viên hành lý xếp túi lên xe."
+  },
+  "NRT": {
+    "nrt-baidu-1.webp": "Sảnh khởi hành nội địa của Nhà ga 1, biển ghi “Domestic Departures” bằng tiếng Nhật, tiếng Trung, tiếng Hàn và tiếng Anh.",
+    "nrt-baidu-3.webp": "Sân đỗ nhìn từ nhà ga — một chiếc ANA 787 và hai chiếc A320 của Vanilla Air đỗ phía xa."
+  },
+  "NSK": {
+    "nsk-sat-1.webp": "Ảnh vệ tinh: đường băng của Norilsk nằm trên lãnh nguyên trong vòng Bắc Cực, nhà ga và sân đỗ bên cạnh, xung quanh là hồ và khu công nghiệp."
+  },
+  "OAJ": {
+    "oaj-sat-1.webp": "Ảnh vệ tinh: đường băng của Jacksonville nằm giữa rừng và đồng ruộng trên đồng bằng ven biển Bắc Carolina, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "OBS": {
+    "obs-sat-1.webp": "Ảnh vệ tinh: Sân bay Aubenas-South Ardèche (OBS) nằm giữa thảm thực vật xanh và đồng ruộng.",
+    "obs-chatgpt-01.webp": "Nhìn từ trên không, một đường băng đơn chạy giữa những ngọn đồi nhấp nhô phủ cây bụi, sân đỗ nhạt và vài tòa nhà thấp ở rìa.",
+    "obs-chatgpt-02.webp": "Một tháp không lưu trắng, vài nhà chứa máy bay và máy bay hạng nhẹ rải rác trên cỏ đứng trước dãy núi xanh dài.",
+    "obs-chatgpt-03.webp": "Một chiếc máy bay hạng nhẹ nhỏ màu trắng nghỉ trên mặt lát với núi phủ tuyết vươn lên phía sau và vài đám mây trên bầu trời xanh.",
+    "obs-chatgpt-04.webp": "Một chiếc máy bay cánh quạt hai động cơ sơn đỏ và vàng đỗ trên sân đỗ rộng với cửa mở và cầu thang lên máy bay đã đặt.",
+    "obs-chatgpt-05.webp": "Dưới bầu trời u ám, hàng chục máy bay hạng nhẹ đỗ sát nhau trên cỏ và bê tông trong khi vài người đi lại giữa chúng.",
+    "obs-chatgpt-06.webp": "Một chiếc máy bay hạng nhẹ trắng cam đỗ trên bê tông trước nhà ga trắng một tầng, dưới bầu trời xanh không mây.",
+    "obs-chatgpt-07.webp": "Sau hàng rào lưới xanh, du khách nhìn một chiếc máy bay cánh quạt hai động cơ sơn dải đỏ vàng dưới nắng sáng."
+  },
+  "OCV": {
+    "ocv-sat-1.webp": "Ảnh vệ tinh: Sân bay Aguas Claras (OCV) nằm giữa thị trấn, đồng ruộng và cây cối.",
+    "ocv-chatgpt-01.webp": "Mái trắng cong của nhà ga mang tên Aeropuerto Aguas Claras Ocaña, những chậu hoa dọc mặt trước và bầu trời xanh thẳm phía trên.",
+    "ocv-chatgpt-02.webp": "Hai lá cờ bay trên cột trước nhà ga, một lá tối màu và một lá vàng, xanh, đỏ, phía trên lề đường sơn sọc vàng đen.",
+    "ocv-chatgpt-03.webp": "Qua những tàu lá cọ, một chiếc máy bay vận tải quân sự xám lớn đỗ trên sân đỗ bên tháp không lưu trắng, phía xa là đồi xanh.",
+    "ocv-chatgpt-04.webp": "Một chiếc máy bay cánh quạt hai động cơ trắng di chuyển trên đường băng ướt, phía trước là cỏ khô cao và phía sau là núi xanh quấn mây."
+  },
+  "OES": {
+    "oes-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Antoine de Saint Exupéry (OES) hòa vào đất khô và vùng đất trống xung quanh.",
+    "oes-chatgpt-01.webp": "Một bức tường gạch trắng mang dòng chữ Aerodromo Saint A Exupery và cơ quan hàng không dân dụng, một nhóm người đi qua các cột cổng màu xanh ngọc.",
+    "oes-chatgpt-02.webp": "Một tháp không lưu trắng viền xanh nối với nhà ga thấp, phía trước có cây nhỏ và mây mảnh trên bầu trời xanh.",
+    "oes-chatgpt-03.webp": "Một đường băng sỏi đỏ vắng vẻ trải dài giữa cỏ khô, đường chân trời phẳng gặp bầu trời xanh nhạt.",
+    "oes-chatgpt-04.webp": "Chụp từ bên dưới, cabin kính của tháp không lưu trắng vươn lên trên bầu trời xanh trong, phía trên mái ngói xanh và tường gạch.",
+    "oes-chatgpt-05.webp": "Một chiếc máy bay cánh quạt hai động cơ trắng sọc xanh đỗ mũi về phía máy ảnh trên mặt lát, phía sau là hàng cây.",
+    "oes-chatgpt-06.webp": "Đây là ảnh chụp màn hình bản đồ có ghim đỏ đánh dấu Aeroclub San Antonio Oeste, bên cạnh khu bảo tồn vịnh và đường ven biển."
+  },
+  "OKC": {
+    "okc-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Will Rogers World (OKC) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "ORD": {
+    "ord-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế O'Hare (ORD) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "ORY": {
+    "ory-sat-1.webp": "Ảnh vệ tinh: Sân bay Paris Orly (ORY) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "OUD": {
+    "oud-sat-1.webp": "Ảnh vệ tinh: hai đường băng của Oujda nằm trên đồng bằng khô cằn phía đông Maroc, nhà ga và sân đỗ ở giữa.",
+    "oud-chatgpt-01.webp": "Dưới bầu trời xanh trong, mái che cong màu be của Sân bay Oujda Angads che lối vào kính, hành khách và xe đẩy hành lý đi qua cửa.",
+    "oud-chatgpt-02.webp": "Hành khách băng qua sân đỗ bê tông về phía nhà ga trong khi cầu thang lên máy bay đặt bên phải, tên sân bay viết trên tòa nhà phía sau hàng rào cây.",
+    "oud-chatgpt-03.webp": "Lúc hoàng hôn, một máy bay Royal Air Maroc chờ tại cầu ống trước nhà ga ốp các tấm hình học góc cạnh, bầu trời rực cam.",
+    "oud-chatgpt-04.webp": "Về đêm, các biển tiếng Ả Rập và Latinh dưới mái cong của nhà ga sáng đèn, mặt đường lát bóng phản chiếu ánh tím.",
+    "oud-chatgpt-05.webp": "Nhân viên đồng phục đứng thành hàng trên sân đỗ mờ sương, tên sân bay ghép bằng chữ trên hàng rào cây, mũi một máy bay chở khách trắng thấy ở góc dưới bên phải.",
+    "oud-chatgpt-06.webp": "Ngưỡng đường băng nhựa rộng với những vạch trắng gọn gàng trải qua nền đất nâu khô, phía xa là dãy núi dưới bầu trời xanh có mây kéo vệt."
+  },
+  "OVD": {
+    "ovd-sat-1.webp": "Ảnh vệ tinh: đường băng nằm trên cao nguyên giữa bờ biển và đồi, nhà ga và sân đỗ ở điểm giữa.",
+    "ovd-chatgpt-01.webp": "Dưới bầu trời u ám, những chữ trắng lớn ghi Asturias Airport trên mặt tiền kính của nhà ga trong khi một sàn nâng vàng làm việc gần ba lá cờ.",
+    "ovd-chatgpt-02.webp": "Từ trên không, một đường băng rộng và đường lăn uốn cong gặp nhau giữa rừng thông rậm và cánh đồng xanh, những dải đất đỏ lộ ra giữa mặt lát.",
+    "ovd-chatgpt-03.webp": "Một máy bay chở khách đuôi đỏ đỗ tại cầu ống, dòng chữ Asturias Airport trên nhà ga phía sau và tháp không lưu trắng vươn vào mây xám.",
+    "ovd-chatgpt-04.webp": "Dưới mái lưới trắng của sảnh làm thủ tục, du khách xếp hàng tại quầy gửi hành lý Lufthansa trong khi màn hình thông tin chuyến bay phía trên sáng chữ xanh.",
+    "ovd-chatgpt-05.webp": "Một máy bay chở khách Ryanair nghỉ trên sân đỗ với đuôi và thân xanh vàng bắt nắng, phía sau là hàng cây tối và bầu trời xanh không mây.",
+    "ovd-chatgpt-06.webp": "Nhiều máy bay chở khách đỗ cạnh nhau trên sân đỗ trước nhà ga dưới bầu trời nhiều mây, cầu thang lên máy bay đứng bên một chiếc đuôi xanh.",
+    "ovd-chatgpt-07.webp": "Nền đá bóng chạy dọc hành lang khởi hành qua những dãy ghế dưới trần lam vàng, cuối hành lang là biển quán cà phê."
+  },
+  "PEK": {
+    "pek-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Thủ đô Bắc Kinh (PEK)."
+  },
+  "PKH": {
+    "pkh-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Alexion (PKH) hòa vào nước và bờ biển xung quanh."
+  },
+  "PNR": {
+    "pnr-sat-1.webp": "Ảnh vệ tinh: đường băng của Pointe-Noire nằm bên bờ Đại Tây Dương, nhà ga và sân đỗ ở phía đông, xung quanh là thành phố và rừng.",
+    "pnr-chatgpt-01.webp": "Vào một ngày u ám, những chữ vàng ghi Aeroport A.A. Neto de Pointe Noire đặt trên mặt tiền kính xanh rộng của nhà ga, ô tô đỗ ở sân trước.",
+    "pnr-chatgpt-02.webp": "Nhìn từ trên cao, nhiều máy bay đủ kích cỡ đỗ trên sân đỗ giữa các vạch chỉ dẫn vàng, phía xa là nhà thấp và đường chân trời biển.",
+    "pnr-chatgpt-03.webp": "Những vạch ngưỡng trắng trên đường băng nhựa tối trải về phía chân trời phẳng, nơi hàng cây thấp gặp bầu trời xám mờ.",
+    "pnr-chatgpt-04.webp": "Trong sảnh làm thủ tục, các màn hình đánh số một đến sáu treo trên quầy xanh, nhân viên đồng phục đứng chờ trên nền lát bóng.",
+    "pnr-chatgpt-05.webp": "Dưới bầu trời sáng, mặt kính tối của nhà ga phản chiếu mây, một biển đặt trên mái và taxi nhạt màu lấp đầy bãi đỗ phía trước.",
+    "pnr-chatgpt-06.webp": "Bên trong sảnh nhiều tầng của nhà ga, thang cuốn vươn lên bức tường kính đón ánh sáng trong khi mọi người đứng dọc lan can tầng lửng phía trên."
+  },
+  "PSO": {
+    "pso-sat-1.webp": "Ảnh vệ tinh: đường băng của Pasto nằm trong một thung lũng Andes, nhà ga và sân đỗ bên cạnh, xung quanh là núi và đồng ruộng."
+  },
+  "PVG": {
+    "pvg-baidu-1.webp": "Nhà ga Phố Đông nhìn từ cửa sổ cabin — “上海 SHANGHAI” trên mép mái, máy bay China Eastern tại các cửa ra."
+  },
+  "PVK": {
+    "pvk-sat-1.webp": "Ảnh vệ tinh: đường băng của Preveza nằm giữa các đầm phá và biển trên bờ biển phía tây Hy Lạp, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "PXA": {
+    "pxa-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Atung Bungsu (PXA) nằm giữa thảm thực vật xanh và đồng ruộng.",
+    "pxa-chatgpt-01.webp": "Dưới bầu trời xanh trong, tên sân bay gắn trên mặt tiền xanh vàng của nhà ga, phía trước là cây lá rộng và bóng dài dưới mái hiên.",
+    "pxa-chatgpt-02.webp": "Ảnh chụp từ trên cao cho thấy những vạch trắng ngưỡng đường băng 24 trên mặt nhựa tối, hai bên là rừng rậm và đất bị mưa nhuộm nâu.",
+    "pxa-chatgpt-03.webp": "Một chiếc máy bay cánh quạt một động cơ cánh trên nhỏ màu trắng đỗ trên sân đỗ, phía xa là cánh đồng xanh và đồi xanh nhạt mờ vào nhau trong sương.",
+    "pxa-chatgpt-04.webp": "Từ trên cao, nhà ga thấp nằm giữa vùng đất xanh rộng mở với dãy núi xanh dài phía sau và một tòa nhà mái vòm trắng nhỏ bên trái.",
+    "pxa-chatgpt-05.webp": "Trong bãi đỗ xe trống, những ô đỗ sơn trắng xếp thành hàng ngay ngắn bên lề đường kẻ sọc đen vàng, núi mờ dưới những đám mây chồng chất.",
+    "pxa-chatgpt-06.webp": "Lúc chạng vạng, bầu trời rực cam và đỏ, đèn nhà ga bật sáng, mặt đất ẩm phản chiếu ánh sáng cuối cùng dọc chân trời.",
+    "pxa-chatgpt-07.webp": "Dưới mây dày, một chiếc máy bay cánh quạt hai động cơ trắng đỗ trên nền bùn trước một tòa nhà mái đỏ dài, đuôi sơn đỏ và cột gió cam ở bên phải."
+  },
+  "PYR": {
+    "pyr-sat-1.webp": "Trong ảnh vệ tinh, Căn cứ Không quân Andravida (PYR) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
+  },
+  "QNJ": {
+    "qnj-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Annemasse (QNJ) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "QSF": {
+    "qsf-sat-1.webp": "Ảnh vệ tinh: đường băng của Setif nằm trên cao nguyên Atlas, nhà ga và sân đỗ bên cạnh, xung quanh là đất khô và thị trấn."
+  },
+  "QXB": {
+    "qxb-sat-1.webp": "Trong ảnh vệ tinh, sân bay Aix Les Milles (QXB) hòa vào thị trấn, đồng ruộng và cây cối xung quanh.",
+    "qxb-chatgpt-01.webp": "Một chiếc máy bay một động cơ nhỏ màu trắng lăn qua tháp không lưu thấp và các tòa nhà ga dưới bầu trời xám phẳng lặng.",
+    "qxb-chatgpt-02.webp": "Trong ảnh chụp từ trên cao này, hai đường băng cắt nhau giữa đồng ruộng, sân đỗ và nhà chứa máy bay xếp dọc một bên.",
+    "qxb-chatgpt-03.webp": "Một hàng máy bay hạng nhẹ trắng gọn gàng đỗ trên sân đỗ dưới nắng sáng, phía sau là tháp không lưu và hàng cây.",
+    "qxb-chatgpt-04.webp": "Một tháp không lưu màu kem vươn lên từ giữa nhà ga thấp, hai bên là nhà chứa máy bay dưới những ngọn đồi xám trơ trọi.",
+    "qxb-chatgpt-05.webp": "Từ trên không, một tuyến đường sắt, đồng cỏ và cây mùa thu viền quanh sân bay, phía xa là những ngọn đồi thấp mờ dần.",
+    "qxb-chatgpt-06.webp": "Mặt trời nằm trên chân trời khi một chiếc máy bay nhào lộn đỏ trắng chờ bên đường băng, cabin kính bắt lấy ánh sáng."
+  },
+  "RAE": {
+    "rae-sat-1.webp": "Ảnh vệ tinh: một đường băng cắt qua đồng bằng khô cằn ngoài Arar, sân đỗ và nhà ga ở bên cạnh.",
+    "rae-chatgpt-01.webp": "Bên ngoài nhà ga có vách kính cong, một biển đánh dấu Cổng 3 bằng tiếng Ả Rập và tiếng Anh.",
+    "rae-chatgpt-02.webp": "Du khách kéo hành lý qua sảnh sáng rộng dưới các biển xanh đậm chỉ tới khu khởi hành.",
+    "rae-chatgpt-03.webp": "Một chiếc máy bay thân rộng của Saudia đỗ trên sân đỗ bê tông rộng dưới bầu trời xanh không mây.",
+    "rae-chatgpt-04.webp": "Về đêm, du khách kéo vali về phía lối vào phòng khởi hành sáng đèn, nền lát bóng phản chiếu ánh sáng.",
+    "rae-chatgpt-05.webp": "Sảnh phòng đến yên tĩnh và trống, rào chắn xanh đặt trước các quầy thuê xe trong khi nền lát bóng soi đèn trần.",
+    "rae-chatgpt-06.webp": "Trong ảnh hàng không lúc chạng vạng này, đèn viền đường băng tạo thành một đường sáng chạy thẳng vào bóng tối sa mạc."
+  },
+  "RAF": {
+    "raf-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Rafaela (RAF) nằm giữa đất khô và vùng đất trống."
+  },
+  "RCH": {
+    "rch-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Almirante Padilla (RCH) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "REL": {
+    "rel-sat-1.webp": "Ảnh vệ tinh: đường băng của Rawson nằm trên cao nguyên Patagonia, nhà ga và sân đỗ bên cạnh, xung quanh là cây bụi khô và thị trấn."
+  },
+  "RUA": {
+    "rua-page-1.webp": "Xe cứu hỏa của sân bay Arua tại gara trong hàng rào vành đai (ảnh từ báo cáo ESIA tháng 7 năm 2025 của Cục Hàng không Dân dụng Uganda về việc mở rộng sân bay Arua).",
+    "rua-chatgpt-01.webp": "Hành khách mang túi tụ tập bên ngoài một tòa nhà một tầng có tường ốp đá, dưới bầu trời mây cuồn cuộn.",
+    "rua-chatgpt-02.webp": "Một người đàn ông mặc áo xanh đứng nơi đất đỏ gặp nhựa đường, nhìn một chiếc máy bay cánh quạt một động cơ đỗ xa hơn trên sân đỗ.",
+    "rua-chatgpt-03.webp": "Trên sân đỗ đất đỏ, một chiếc máy bay cánh quạt hai động cơ nhỏ đỗ với cửa mở khi một nhân viên xách va li về phía cầu thang.",
+    "rua-chatgpt-04.webp": "Một nhà ga trắng dài với mái cong nông đứng bên sân đỗ xám trống, một vạch chỉ dẫn vàng uốn qua.",
+    "rua-chatgpt-05.webp": "Đất đỏ lốm đốm cỏ dại trải về phía hàng cây xa dưới bầu trời xám nhạt thấp.",
+    "rua-chatgpt-06.webp": "Nhiều máy bay một động cơ chiếm sân đỗ, chiếc gần nhất có biểu tượng đuôi xanh trong khi một nhân viên đứng dưới cánh."
+  },
+  "RUH": {
+    "ruh-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Quốc tế King Khalid (RUH) hiện rõ."
+  },
+  "SAY": {
+    "say-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Siena-Ampugnano (SAY) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "SBK": {
+    "sbk-sat-1.webp": "Ảnh vệ tinh: Sân bay Saint-Brieuc-Armor (SBK) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "SCL": {
+    "scl-baidu-1.webp": "Nhà ga nhìn từ bên ngoài — mái vòm bắc qua mặt tiền thép và kính, một lối đi nối đường xe chạy với bãi đỗ xe."
+  },
+  "SCO": {
+    "sco-baidu-1.webp": "Lên máy bay ban đêm — hành khách leo cầu thang lên một chiếc máy bay FlyArystan, màu đỏ nổi bật dưới đèn sân đỗ.",
+    "sco-chatgpt-01.webp": "Dưới bầu trời xanh trong, mặt tiền xám của Sân bay Quốc tế Aktau mang tên sân bay bằng tiếng Kazakh và tiếng Anh.",
+    "sco-chatgpt-02.webp": "Nhìn từ trên cao, hai cầu ống vươn từ nhà ga ra sân đỗ trong khi đường băng nằm gần chân trời.",
+    "sco-chatgpt-03.webp": "Trong ánh sáng nhạt dần, một máy bay chở khách đỗ trước nhà ga với cầu thang ở cửa, hoàng hôn nhuộm mây vàng.",
+    "sco-chatgpt-04.webp": "Nhựa đường lấp đầy khung hình khi những chữ số ngưỡng trắng và vạch tim đường chạy thẳng tới bãi cỏ khô ở phía xa.",
+    "sco-chatgpt-05.webp": "Nhiều máy bay chở khách xanh trắng đỗ cạnh nhau tại cầu ống, một tháp không lưu thấp vươn lên phía sau trong ánh sáng ban mai.",
+    "sco-chatgpt-06.webp": "Một chiếc máy bay Air Astana chờ trên sân đỗ bê tông nứt nẻ với cầu thang đặt ở cả cửa trước và cửa sau.",
+    "sco-chatgpt-07.webp": "Sau hoàng hôn, bầu trời chuyển hồng và tím khi biển tối của sân bay sáng lên trên sân trước vắng vẻ."
+  },
+  "SCU": {
+    "scu-sat-1.webp": "Ảnh vệ tinh: đường băng nằm bên bờ biển Santiago de Cuba, nhà ga và sân đỗ ở bên cạnh và vùng Caribe bên dưới.",
+    "scu-chatgpt-01.webp": "Nhà ga đỏ trắng, mang tên sân bay Santiago de Cuba, đứng dưới bầu trời xanh khi hành khách mang hành lý băng qua sân đỗ.",
+    "scu-chatgpt-02.webp": "Chỉ thấy phần đuôi đỏ, trắng và xanh của một máy bay chở khách trên sân đỗ, xe đẩy hành lý đỗ bên cạnh và nhân viên mặt đất mặc áo vàng gần đó.",
+    "scu-chatgpt-03.webp": "Sảnh làm thủ tục trống, rào chắn xanh và cột đỏ tạo khung cho những làn yên tĩnh trong khi các vạch tròn khoảng cách rải rác trên nền gạch.",
+    "scu-chatgpt-04.webp": "Những vạch mũi tên trắng dẫn vào đường băng nhựa, hai bên là cỏ khô, phía xa là núi xanh mờ dọc chân trời.",
+    "scu-chatgpt-05.webp": "Một chiếc máy bay cánh quạt hai động cơ ghi Silver nghỉ trên sân đỗ, phía sau là tháp không lưu và băng rôn tên sân bay trên nhà ga.",
+    "scu-chatgpt-06.webp": "Nhìn từ bãi cỏ, nhà ga đỏ trắng dài trải ngang khung hình, tháp không lưu bên trái và núi dưới bầu trời xanh trong.",
+    "scu-chatgpt-07.webp": "Một biển thông tin xanh trắng đứng trước khu làm thủ tục, nơi các làn rào chắn tạo thành lối trống trên những vạch tròn đỏ trên nền."
+  },
+  "SDN": {
+    "sdn-page-1.webp": "Sân bay Sandane — một chiếc Widerøe Dash 8 trên sân đỗ với cầu thang hạ xuống, vịnh hẹp và núi trải rộng phía sau máy bay (ảnh: Bjoern Huke / PlanePictures.net)."
+  },
+  "SEA": {
+    "sea-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế Seattle–Tacoma (SEA) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "SFO": {
+    "sfo-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế San Francisco (SFO)."
+  },
+  "SGN": {
+    "sgn-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Tân Sơn Nhất (SGN)."
+  },
+  "SID": {
+    "sid-sat-1.webp": "Ảnh vệ tinh: đường băng của Sal nằm trên bờ biển khô cằn của đảo Cabo Verde, nhà ga và sân đỗ ở phía đông sân bay.",
+    "sid-chatgpt-01.webp": "Dưới mái che xanh ghi Partidas và Departures, du khách băng qua con đường sọc trước nhà ga cam trắng.",
+    "sid-chatgpt-02.webp": "Từ trên cao, nhà ga và tháp không lưu nằm trên nền đất khô cằn sau những hàng ô tô đỗ, chân trời là biển.",
+    "sid-chatgpt-03.webp": "Một máy bay chở khách ghi Cabo Verde trên phần trước thân đỗ trên sân đỗ với cầu thang di động ở cửa và nhân viên mặt đất làm việc quanh đó.",
+    "sid-chatgpt-04.webp": "Cửa sổ khung cam chạy dọc mặt tiền nhà ga dài, chữ xanh trên mái ghi tên sân bay phía trên con đường nơi một chiếc ô tô bạc chờ.",
+    "sid-chatgpt-05.webp": "Ảnh chụp từ trên cao cho thấy hai máy bay nhỏ đỗ bên một mái lều trắng, tháp không lưu ở phía dưới bên trái và đường băng phía xa.",
+    "sid-chatgpt-06.webp": "Một máy bay chở khách đuôi và vỏ động cơ cam hướng về phía máy ảnh trên đường lăn dưới bầu trời u ám, đường chân trời phẳng trống quanh đó."
+  },
+  "SIN": {
+    "sin-sat-1.webp": "Ảnh vệ tinh: Sân bay Singapore Changi (SIN) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "SLK": {
+    "slk-sat-1.webp": "Ảnh vệ tinh: Sân bay Khu vực Adirondack (SLK) được bao quanh bởi thảm thực vật xanh và đồng ruộng.",
+    "slk-chatgpt-01.webp": "Nhà ga gỗ nâu tối có hiên gỗ đồ sộ, phía trước là lối đi bê tông và các luống sỏi dưới bầu trời không mây.",
+    "slk-chatgpt-02.webp": "Từ trên không, hai đường băng gặp nhau giữa bãi cỏ cắt và rừng thông rậm, mây đổ bóng trên những ngọn đồi xa.",
+    "slk-chatgpt-03.webp": "Lúc chạng vạng, một chiếc máy bay hai động cơ nhỏ của Cape Air chờ trên sân đỗ trước nhà ga gỗ Adirondack khi hai người đi dạo qua.",
+    "slk-chatgpt-04.webp": "Chụp từ trên cao lúc hoàng hôn, nhà ga gỗ và nhà chứa máy bay trắng kẹp sân đỗ có hai máy bay nhỏ, phía trước là bãi đỗ xe đông.",
+    "slk-chatgpt-05.webp": "Những chữ số mờ của đường băng 27 và vạch ngưỡng dẫn vào bãi cỏ xanh lúc chạng vạng, mây cam và tím phía trên núi.",
+    "slk-chatgpt-06.webp": "Những dãy ghế gỗ bọc da đặt trên thảm xám, cây xanh bên cửa sổ và một biển nâu chỉ về phía quán cà phê và nhà vệ sinh.",
+    "slk-chatgpt-07.webp": "Một chiếc máy bay cánh quạt hai động cơ của Cape Air với hình chim trắng trên đuôi xanh nghỉ trên đường lăn, số đăng ký hiện rõ.",
+    "slk-chatgpt-08.webp": "Một chiếc máy bay cánh quạt hai động cơ bay lên ngay sau khi cất cánh, trên hàng cây và đường băng, phía sau là đồi rừng."
+  },
+  "SNU": {
+    "snu-sat-1.webp": "Ảnh vệ tinh: đường băng của Santa Clara nằm giữa thành phố và đồng ruộng ở trung tâm Cuba, nhà ga và sân đỗ ở bên cạnh.",
+    "snu-chatgpt-01.webp": "Những chữ đỏ nâu ghi tên Sân bay Quốc tế Abel Santamaria trên mặt tiền xanh, vài du khách đứng bên ngoài.",
+    "snu-chatgpt-02.webp": "Nhìn từ trên cao, một chiếc máy bay cánh quạt hai động cơ trắng đỗ bên nhà ga mái đỏ trong khi xe buýt và ô tô chờ gần đó, phía xa là cánh đồng xanh.",
+    "snu-chatgpt-03.webp": "Cầu thang di động đặt ở mũi một máy bay chở khách trắng khi hành khách mang túi xếp hàng trên sân đỗ trước nhà ga xanh và biển tên của nó.",
+    "snu-chatgpt-04.webp": "Những áp phích bãi biển treo trên tường cam của sảnh làm thủ tục, nền lát bóng phản chiếu quầy và đèn trần, gần như không có ai.",
+    "snu-chatgpt-05.webp": "Những dãy ghế cam lấp đầy phòng chờ khởi hành, phần lớn trống, vài hành khách chờ dưới các áp phích phong cảnh trên nền xanh trắng.",
+    "snu-chatgpt-06.webp": "Ảnh chụp màn hình mô phỏng bay cho thấy một đường băng dài cắt thẳng qua rừng rậm, đường lăn vòng và đồng ruộng rải rác ở rìa.",
+    "snu-chatgpt-07.webp": "Những cây cọ đứng trước nhà ga xanh, dòng chữ trắng ghi tên sân bay phía trên sân trước nơi vài chiếc ô tô vàng đỗ."
+  },
+  "SOC": {
+    "soc-baidu-1.webp": "Mặt trước nhà ga — “ADI SOEMARMO AIRPORT” dưới mái ngói đỏ, cột cờ và hàng rào xếp thành hàng ngay ngắn.",
+    "soc-chatgpt-01.webp": "Một con đường vào thẳng có mũi tên trắng và vạch sang đường dẫn tới nhà ga, cọ và cây bụi cắt tỉa dọc lề dưới mây tích.",
+    "soc-chatgpt-02.webp": "Trong sảnh làm thủ tục, nền nhạt bóng phản chiếu một hàng cột hoa văn và đèn lồng treo khi hành khách xếp hàng tại quầy.",
+    "soc-chatgpt-03.webp": "Một chiếc máy bay Garuda Indonesia nghỉ trên sân đỗ trước nhà ga, đuôi xanh cao vươn lên trên dải mái ngói đỏ dài.",
+    "soc-chatgpt-04.webp": "Những mái kiểu Java xếp lớp và đầu hồi chạm khắc làm nên nét riêng của nhà ga, biển lối vào đặt trên bãi cỏ có cây che bóng.",
+    "soc-chatgpt-05.webp": "Nhìn dọc sân đỗ, nhiều máy bay Garuda Indonesia đỗ thành hàng trước các tòa nhà ga mái đỏ và những mái nhà thị trấn phía xa.",
+    "soc-chatgpt-06.webp": "Trong ánh sáng vàng thấp, một chiếc máy bay Garuda Indonesia xanh vàng đỗ trên mặt lát trước tháp không lưu kẻ ô và một nhà chứa máy bay.",
+    "soc-chatgpt-07.webp": "Nhà ga cũ là một khối trắng dài dưới những mái ngói tối so le, cầu thang lên máy bay đỗ bên ngoài và một vạch chỉ dẫn vàng trên sân đỗ."
+  },
+  "SPG": {
+    "spg-sat-1.webp": "Ảnh vệ tinh: Sân bay Albert Whitted (SPG) được bao quanh bởi thị trấn, đồng ruộng và cây cối."
+  },
+  "SPI": {
+    "spi-page-6.webp": "Tượng đài lối vào Sân bay Abraham Lincoln Capital — tên đầy đủ và “AT SPRINGFIELD” được khắc vào đá.",
+    "spi-page-7.webp": "Một chiếc vận tải cơ C-47 trên sân đỗ Springfield, cánh quạt và phù hiệu quân sự hiện rõ."
+  },
+  "SRG": {
+    "srg-sat-1.webp": "Ảnh vệ tinh: đường băng của Semarang nằm gần bờ biển phía bắc Java, nhà ga và sân đỗ ở phía nam sân bay, xung quanh là thành phố và đồng ruộng."
+  },
+  "STN": {
+    "stn-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay London Stansted (STN) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "SVD": {
+    "svd-baidu-2.webp": "Argyle International sau mưa — một chiếc máy bay LIAT trước nhà ga vòm xanh, sân đỗ ướt phản chiếu bầu trời, đồi xếp lớp dưới mây.",
+    "svd-chatgpt-01.webp": "Nhà ga xanh lam và xanh lá rực rỡ mang tên sân bay phía trên bãi đỗ xe chật kín, phía sau là dải biển thẳm.",
+    "svd-chatgpt-02.webp": "Từ trên cao, một sân đỗ rộng trải bên nhà ga mái xanh, nơi vài máy bay hạng nhẹ đỗ và đường băng chạy dọc bờ biển.",
+    "svd-chatgpt-03.webp": "Máy bay của Virgin Atlantic, British Airways, jetBlue và Air Canada xếp hàng tại cầu ống của nhà ga mái xanh, phía sau là đồi rừng rậm.",
+    "svd-chatgpt-04.webp": "Một chiếc Airbus A330-300 đỗ tại cửa ra với cầu ống nối, nhân viên mặt đất làm việc dưới thân máy bay và phía xa là đồi xanh.",
+    "svd-chatgpt-05.webp": "Mặt tiền kính cong của nhà ga mang tên sân bay bằng chữ xanh phía trên sân đỗ nhạt trống dưới bầu trời đầy mây.",
+    "svd-chatgpt-06.webp": "Ảnh chụp từ trên cao cho thấy một đường băng đen mới trải qua nền đất công trình thô, phía xa là cánh đồng xanh và sóng trắng ôm bờ biển.",
+    "svd-chatgpt-07.webp": "Lúc chạng vạng, một chiếc máy bay cánh quạt nhỏ chờ trên sân đỗ khi hành khách mang hành lý đi giữa các nón cam về phía nhà ga dưới bầu trời ửng hồng."
+  },
+  "SVO": {
+    "svo-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Sheremetyevo (SVO)."
+  },
+  "SYD": {
+    "syd-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Kingsford Smith Sydney (SYD)."
+  },
+  "SZX": {
+    "szx-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Bảo An Thâm Quyến (SZX), đường băng và nhà ga trên bờ đông cửa sông Châu Giang."
+  },
+  "TAB": {
+    "tab-sat-1.webp": "Ảnh vệ tinh: đường băng của Scarborough nằm bên bờ biển Tobago, nhà ga và sân đỗ bên cạnh, xung quanh là bãi biển và đồi xanh.",
+    "tab-chatgpt-01.webp": "Một nhà ga hiện đại với mái gợn sóng và vách kính, chữ đỏ ghi tên đầy đủ của sân bay phía trên sân đỗ bê tông trống.",
+    "tab-chatgpt-02.webp": "Đường băng thẳng ôm sát bờ biển, nước xanh ngọc vỗ vào bãi biển trong khi các khu nghỉ dưỡng mái đỏ và thị trấn trải dọc theo.",
+    "tab-chatgpt-03.webp": "Những biển xanh đứng bên làn đường vào, lều trắng xếp dọc các cột mặt trước nhà ga và mây xám thấp treo trên những mái nhà.",
+    "tab-chatgpt-04.webp": "Những dãy ghế xanh thẳm hướng ra cửa sổ kính từ sàn tới trần của phòng chờ khởi hành, trần gỗ tỏa sáng ấm áp trong ánh chiều.",
+    "tab-chatgpt-05.webp": "Một chiếc máy bay Caribbean Airlines lăn qua bờ cỏ có đèn cam mắc thành dây, những dãy nhà đứng mờ xám phía xa.",
+    "tab-chatgpt-06.webp": "Bên trong sảnh làm thủ tục cũ, cột bê tông vươn trên các quầy tím đánh số, rào chắn dây đỏ tạo làn xếp hàng và một đôi người chờ trên ghế băng.",
+    "tab-chatgpt-07.webp": "Sau khi trời tối, biển sáng của nhà ga chiếu lên mái che cong trên làn đón trả khách, nơi một chiếc ô tô chờ bên các cột sọc đỏ trắng."
+  },
+  "TAS": {
+    "tas-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Islam Karimov Tashkent (TAS)."
+  },
+  "TGZ": {
+    "tgz-sat-1.webp": "Ảnh vệ tinh: đường băng của Tuxtla Gutiérrez nằm trong một thung lũng Chiapas, nhà ga và sân đỗ bên cạnh, xung quanh là núi và đồng ruộng."
+  },
+  "TND": {
+    "tnd-sat-1.webp": "Ảnh vệ tinh: Sân bay Alberto Delgado (TND) được bao quanh bởi thảm thực vật xanh và đồng ruộng.",
+    "tnd-chatgpt-01.webp": "Bức tường trắng lối vào mang các biển chữ đen phía trên mái hiên sọc xanh trắng, bên dưới là bậc thang sơn xanh và bóng cọ trên lớp vôi.",
+    "tnd-chatgpt-02.webp": "Ảnh chụp màn hình trò chơi cho thấy một nhà gác cổng màu xanh mòng két mái ngói đỏ với biển sân bay, lan can tím và cọ tạo khung lối vào, kèm la bàn trên màn hình.",
+    "tnd-chatgpt-03.webp": "Một ảnh chụp màn hình trò chơi khác ghép nhà ga một tầng mái bằng màu xanh mòng két với một xe khách xanh trắng đỗ bên ngoài, cọ và hàng rào cây dọc lề đường, bảng nhiệm vụ nổi ở bên trái.",
+    "tnd-chatgpt-04.webp": "Hai máy bay hạng nhẹ đỗ trên sân đỗ trước một hàng cột sọc đỏ trắng, nhà ga cũ mái cam ở bên trái và cỏ ngập nắng xung quanh."
+  },
+  "TPE": {
+    "tpe-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Taoyuan (TPE), với các đường băng song song, nhà ga và các thị trấn xung quanh."
+  },
+  "TQD": {
+    "tqd-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Căn cứ Không quân Al Taqaddum (TQD) nằm giữa đất khô và vùng đất trống."
+  },
+  "TTQ": {
+    "ttq-page-1.webp": "Dải băng Tortuguero — một chiếc Cessna Caravan của Nature Air (TI-BDY) trên mặt nhựa, chòi chờ nhỏ mái xanh và rừng mưa ngay sau cánh (ảnh: Sebastian Arndt / Flugzeugbilder.de).",
+    "ttq-chatgpt-01.webp": "Một đường băng nhựa trống chạy thẳng tới rừng nhiệt đới rậm, vạch tim đường trắng và vạch ngưỡng sắc nét giữa hai lề cỏ và hàng rào lưới xanh.",
+    "ttq-chatgpt-02.webp": "Một chiếc máy bay cánh quạt một động cơ nhỏ màu trắng hướng về phía máy ảnh trên sân đỗ bê tông, hai nón cam trên cỏ phía trước và cọ trên nền trời xanh phía sau.",
+    "ttq-chatgpt-03.webp": "Qua cửa sổ cabin, một vỏ động cơ trắng sơn đỏ và cánh quạt đang quay tạo khung cho sân đỗ xa, nơi một chiếc máy bay nhỏ xanh trắng khác chờ bên chòi mái đỏ.",
+    "ttq-chatgpt-04.webp": "Một chiếc máy bay cánh quạt trắng đỗ nghiêng trên sân đỗ, đuôi sọc đỏ xanh, số đăng ký trên thân, xung quanh là cọ và bầu trời xanh thẳm.",
+    "ttq-chatgpt-05.webp": "Trên bờ nước nhiệt đới, một chòi gỗ mái xanh nằm trong bóng cây trong khi một con diệc đứng trên cỏ phía trên mặt nước tối phẳng lặng."
+  },
+  "UAM": {
+    "uam-sat-1.webp": "Trong ảnh vệ tinh, Căn cứ Không quân Andersen (UAM) hòa vào nước và bờ biển xung quanh."
+  },
+  "VBA": {
+    "vba-sat-1.webp": "Ảnh vệ tinh: một đường băng chạy qua đồi xanh ở miền trung Myanmar, sân đỗ nhỏ và nhà ga ở bên cạnh.",
+    "vba-chatgpt-01.webp": "Một cổng đá tối màu mang chữ vàng trên nền chữ Miến Điện, phía sau là mái nhà ga đỏ vươn lên dưới bầu trời xám phẳng."
+  },
+  "VIE": {
+    "vie-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Viên (VIE)."
+  },
+  "VLN": {
+    "vln-sat-1.webp": "Ảnh vệ tinh: đường băng của Valencia nằm trong một thung lũng Venezuela, nhà ga và sân đỗ bên cạnh, xung quanh là thành phố, đồng ruộng và hồ."
+  },
+  "VLY": {
+    "vly-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Anglesey (VLY) hòa vào thảm thực vật xanh và đồng ruộng xung quanh.",
+    "vly-chatgpt-01.webp": "Lúc chạng vạng, lối vào nhà ga tỏa ánh vàng ấm qua cửa kính, nơi in biểu tượng rồng đỏ và tên sân bay song ngữ.",
+    "vly-chatgpt-02.webp": "Nhìn từ trên không, các đường băng cắt nhau nằm giữa cánh đồng xanh với nhà chứa máy bay và sân đỗ ở giữa, bãi cát và sóng vỗ lấp đầy mép trái.",
+    "vly-chatgpt-03.webp": "Hành khách mặc áo phản quang băng qua sân đỗ về phía nhà ga gạch đỏ, một đuôi trắng sọc xanh và số đăng ký đỗ gần đó dưới bầu trời nhiều mây.",
+    "vly-chatgpt-04.webp": "Những biển song ngữ vàng chỉ tới quầy làm thủ tục, quầy thông tin và nhà vệ sinh trong sảnh khởi hành, vài du khách trò chuyện gần quầy dưới bức tranh tường hải đăng.",
+    "vly-chatgpt-05.webp": "Một biển ranh giới trắng ghi tên sân bay bằng tiếng Wales và tiếng Anh đứng trước hàng rào lưới, phía sau là tháp không lưu và sân đỗ trống dưới bầu trời u ám.",
+    "vly-chatgpt-06.webp": "Một chiếc máy bay cánh quạt hai động cơ lăn thẳng về phía máy ảnh, cánh quạt nhòe thành đĩa và đèn mũi sáng, hai bên là cỏ phẳng và bầu trời xám nhạt.",
+    "vly-chatgpt-07.webp": "Một tháp không lưu đỉnh kính vươn lên từ tòa nhà mái xanh, phía trước là xe cứu hỏa đỏ và vài ô tô đỗ trên bãi cỏ gọn gàng dưới bầu trời xanh trong.",
+    "vly-chatgpt-08.webp": "Du khách nghỉ trên những dãy ghế băng trong phòng chờ khởi hành sáng, một máy tính trên bàn tròn ở giữa và biển vàng chỉ lối ra cùng nhà vệ sinh phía trên."
+  },
+  "VUP": {
+    "vup-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Alfonso López Pumarejo (VUP) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
+  },
+  "WAI": {
+    "wai-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Ambalabe (WAI) nằm giữa đất khô và vùng đất trống.",
+    "wai-chatgpt-01.webp": "Một nhà ga trắng thấp mang tên thị trấn bằng chữ đỏ, cờ Madagascar bay trên tháp bên trái, sân đỗ nhựa trống gặp cây bụi khô.",
+    "wai-chatgpt-02.webp": "Ảnh vệ tinh này cho thấy một cụm nhà thị trấn nhạt màu trải trên địa hình nâu khô, bị cắt bởi những mảng thực vật tối và ruộng rải rác."
+  },
+  "WAM": {
+    "wam-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Ambatondrazaka (WAM) nằm giữa đất khô và vùng đất trống."
+  },
+  "WAQ": {
+    "waq-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Antsalova (WAQ) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "WKK": {
+    "wkk-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Aleknagik / New (WKK) nằm giữa thảm thực vật xanh và đồng ruộng.",
+    "wkk-chatgpt-01.webp": "Trong ánh chiều thấp, một chiếc máy bay cánh quạt hai động cơ nghỉ trên sân đỗ sỏi, vài túp lều tôn rải rác trên đồng cỏ rộng và những ngọn đồi tròn quấn mây phía xa."
+  },
+  "WMR": {
+    "wmr-sat-1.webp": "Ảnh vệ tinh: Sân bay Mananara Nord (WMR) được bao quanh bởi nước và bờ biển."
+  },
+  "XJD": {
+    "xjd-sat-1.webp": "Ảnh vệ tinh: các đường băng song song và sân đỗ lớn của Căn cứ Không quân Al Udeid, với các tòa nhà căn cứ ở phía đông sân bay."
+  },
+  "YAA": {
+    "yaa-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Anahim Lake (YAA) hòa vào thảm thực vật xanh và đồng ruộng xung quanh."
+  },
+  "YAT": {
+    "yat-sat-1.webp": "Ảnh vệ tinh: Sân bay Attawapiskat (YAT) được bao quanh bởi thảm thực vật xanh và đồng ruộng."
+  },
+  "YEK": {
+    "yek-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Arviat (YEK) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "YIB": {
+    "yib-sat-1.webp": "Ảnh vệ tinh: Sân bay Thành phố Atikokan (YIB) nằm giữa thảm thực vật xanh và đồng ruộng."
+  },
+  "YIE": {
+    "yie-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Arxan Yi'ershi (YIE) hòa vào thảm thực vật xanh và đồng ruộng xung quanh."
+  },
+  "YLT": {
+    "ylt-sat-1.webp": "Ảnh vệ tinh: một đường băng sỏi trên lãnh nguyên ven biển tại Alert, bao quanh bởi băng biển và đất trơ trọi."
+  },
+  "YPJ": {
+    "ypj-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Aupaluk (YPJ) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
+  },
+  "YVR": {
+    "yvr-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế Vancouver (YVR) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "YXX": {
+    "yxx-sat-1.webp": "Ảnh vệ tinh: các đường băng của Abbotsford nằm giữa đồng ruộng và núi trong Thung lũng Fraser, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "YYW": {
+    "yyw-sat-1.webp": "Ảnh vệ tinh: một đường băng cắt qua rừng ở bắc Ontario, sân đỗ và nhà ga nhỏ ở điểm giữa.",
+    "yyw-chatgpt-01.webp": "Một con đường sỏi chạy thẳng qua cánh đồng xanh về phía cụm nhà công nghiệp trắng viền đỏ, cột điện đứng dọc lề dưới bầu trời xám nhạt."
+  },
+  "YYZ": {
+    "yyz-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Toronto Pearson (YYZ)."
+  },
+  "ZCA": {
+    "zca-sat-1.webp": "Ảnh vệ tinh: Sân bay Arnsberg Menden (ZCA) được bao quanh bởi thảm thực vật xanh và đồng ruộng.",
+    "zca-chatgpt-01.webp": "Từ trên không, nhà ga và tháp không lưu nằm trên nền rừng tối rậm, tên sân bay sơn dọc mái trắng và máy bay hạng nhẹ đỗ trên sân đỗ bên dưới.",
+    "zca-chatgpt-02.webp": "Nhà ga ốp xám hiển thị tên sân bay bằng chữ đen, cabin kính vươn từ mái, phía trước là bãi cỏ rộng và một hàng chậu cây.",
+    "zca-chatgpt-03.webp": "Từ trên cao, một đường băng cắt chéo qua rừng và đồng ruộng, ngưỡng gần đánh dấu 06 và một cụm nhà chứa máy bay trắng ở giữa.",
+    "zca-chatgpt-04.webp": "Lúc hoàng hôn, mặt trời lặn sau hàng cây ở cuối đường băng nhựa, những dãy vạch mũi tên trắng bắt lấy ánh sáng cuối ở tiền cảnh.",
+    "zca-chatgpt-05.webp": "Một chiếc máy bay thương gia trắng chờ trên sân đỗ dưới nhà ga, một tấm vàng đánh dấu 05 trên cửa sổ tháp không lưu và đám đông tụ tập dọc sân hiên dưới nắng sáng.",
+    "zca-chatgpt-06.webp": "Cận cảnh, một chiếc máy bay hai động cơ hạng nhẹ xám tối lăn qua, cánh quạt nhòe đi, phi công hiện rõ trong buồng lái và một nón cam đứng trên lề cỏ."
+  },
+  "ZRH": {
+    "zrh-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Zürich (ZRH)."
+  },
+  "ZWA": {
+    "zwa-sat-1.webp": "Ảnh vệ tinh: Sân bay Andapa (ZWA) được bao quanh bởi thảm thực vật xanh và đồng ruộng."
+  }
+}

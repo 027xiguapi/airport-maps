@@ -18,14 +18,21 @@ const NUMBER_LOCALE: Partial<Record<Locale, string>> = {
   fr: 'fr-FR',
   it: 'it-IT',
   ko: 'ko-KR',
+  id: 'id-ID',
+  vi: 'vi-VN',
+  ja: 'ja-JP',
+  ru: 'ru-RU',
+  tr: 'tr-TR',
+  th: 'th-TH',
   zh: 'zh-CN',
   tw: 'zh-TW',
 };
 
-/** Chinese locales write the ten-thousand/hundred-million units in their own script. */
+/** Chinese/Japanese locales write the ten-thousand/hundred-million units in their own script. */
 const CJK_UNITS: Partial<Record<Locale, { wan: string; yi: string; about: string }>> = {
   zh: { wan: '万', yi: '亿', about: '约' },
   tw: { wan: '萬', yi: '億', about: '約' },
+  ja: { wan: '万', yi: '億', about: '約' },
   ko: { wan: '만', yi: '억', about: '약' },
 };
 
@@ -68,6 +75,55 @@ export function formatPax(
     // "cerca de 67 milhões" / "cerca de 1 milhão" — Portuguese likewise.
     const rounded = Number(trimZeros(millions.toFixed(2)));
     return `cerca de ${formatNumber(rounded, locale)} ${rounded === 1 ? 'milhão' : 'milhões'}`;
+  }
+  if (locale === 'id') {
+    // "sekitar 67 juta" / "sekitar 1 juta" — Indonesian has no plural inflection.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `sekitar ${formatNumber(rounded, locale)} juta`;
+  }
+  if (locale === 'vi') {
+    // "khoảng 67 triệu" / "khoảng 1 triệu".
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `khoảng ${formatNumber(rounded, locale)} triệu`;
+  }
+  if (locale === 'ru') {
+    // "около 67 миллионов" / "около 1 миллиона" — Russian plural rules.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    const abs = Math.abs(rounded);
+    const mod100 = Math.round(abs * 100) % 100;
+    const mod10 = Math.round(abs) % 10;
+    const noun = !Number.isInteger(rounded)
+      ? 'миллиона'
+      : mod100 >= 11 && mod100 <= 14
+        ? 'миллионов'
+        : mod10 === 1
+          ? 'миллион'
+          : mod10 >= 2 && mod10 <= 4
+            ? 'миллиона'
+            : 'миллионов';
+    return `около ${formatNumber(rounded, locale)} ${noun}`;
+  }
+  if (locale === 'tr') {
+    // "yaklaşık 67 milyon" — no plural inflection.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `yaklaşık ${formatNumber(rounded, locale)} milyon`;
+  }
+  if (locale === 'th') {
+    // "ประมาณ 67 ล้าน" — no plural inflection.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `ประมาณ ${formatNumber(rounded, locale)} ล้าน`;
+  }
+  if (locale === 'ja') {
+    // 約6,700万人 / 約1億800万人 — like Chinese, grouped by 10,000 and
+    // 100,000,000, but written without spaces.
+    if (millions >= 100) {
+      const oku = Math.floor(millions / 100);
+      const man = Math.round((millions - oku * 100) * 100);
+      return man > 0
+        ? `約${oku}億${formatNumber(man, locale)}万人`
+        : `約${oku}億人`;
+    }
+    return `約${formatNumber(Math.round(millions * 100), locale)}万人`;
   }
   if (locale === 'ko') {
     // 약 6,700만 명 / 약 1억 800만 명 — Korean groups by 10,000 (만) and

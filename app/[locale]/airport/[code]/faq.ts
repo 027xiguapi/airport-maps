@@ -8,6 +8,12 @@ import { isItalianGateRangePhrase } from '@/lib/i18n/it-data';
 import { isKoreanGateRangePhrase } from '@/lib/i18n/ko-data';
 import { isSpanishGateRangePhrase } from '@/lib/i18n/es-data';
 import { isPortugueseGateRangePhrase } from '@/lib/i18n/pt-data';
+import { isIndonesianGateRangePhrase } from '@/lib/i18n/id-data';
+import { isVietnameseGateRangePhrase } from '@/lib/i18n/vi-data';
+import { isJapaneseGateRangePhrase } from '@/lib/i18n/ja-data';
+import { isRussianGateRangePhrase } from '@/lib/i18n/ru-data';
+import { isTurkishGateRangePhrase } from '@/lib/i18n/tr-data';
+import { isThaiGateRangePhrase } from '@/lib/i18n/th-data';
 import { clauseSeparator, isCjkLocale, listSeparator } from '@/lib/i18n/display';
 import type { AirportDetail, AirportFlightBoard, Terminal } from '@/lib/types';
 
@@ -30,7 +36,13 @@ function gatePhrase(locale: Locale, t: ReturnType<typeof getMessages>, terminal:
     (locale === 'it' && isItalianGateRangePhrase(gateRange)) ||
     (locale === 'ko' && isKoreanGateRangePhrase(gateRange)) ||
     (locale === 'es' && isSpanishGateRangePhrase(gateRange)) ||
-    (locale === 'pt' && isPortugueseGateRangePhrase(gateRange));
+    (locale === 'pt' && isPortugueseGateRangePhrase(gateRange)) ||
+    (locale === 'id' && isIndonesianGateRangePhrase(gateRange)) ||
+    (locale === 'vi' && isVietnameseGateRangePhrase(gateRange)) ||
+    (locale === 'ja' && isJapaneseGateRangePhrase(gateRange)) ||
+    (locale === 'ru' && isRussianGateRangePhrase(gateRange)) ||
+    (locale === 'tr' && isTurkishGateRangePhrase(gateRange)) ||
+    (locale === 'th' && isThaiGateRangePhrase(gateRange));
   return isPhrase ? gateRange : t.units.gatesLabel(gateRange);
 }
 

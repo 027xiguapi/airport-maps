@@ -106,7 +106,19 @@ export default function DealSubmitForm({
           ? 'EUR'
           : locale === 'pt'
             ? 'BRL'
-            : 'USD'
+            : locale === 'id'
+              ? 'IDR'
+              : locale === 'vi'
+                ? 'VND'
+                : locale === 'ja'
+                  ? 'JPY'
+                  : locale === 'ru'
+                    ? 'RUB'
+                    : locale === 'tr'
+                      ? 'TRY'
+                      : locale === 'th'
+                        ? 'THB'
+                        : 'USD'
   );
   const [cabin, setCabin] = useState<DealCabin>('economy');
   const [tripType, setTripType] = useState<DealTripType>('oneway');

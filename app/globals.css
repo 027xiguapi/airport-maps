@@ -269,6 +269,20 @@ html[data-theme="dark"] {
   body {
     @apply bg-paper font-sans text-ink text-[15px] leading-[1.6] antialiased;
   }
+  /* Japanese pages must render kanji with Japanese glyph forms, not the
+     Simplified-Chinese ones Noto Sans SC carries; restart the stack at Noto
+     Sans JP before the Chinese/Latin faces. */
+  html[lang="ja"] body {
+    font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Noto Sans SC", sans-serif;
+  }
+  /* Cyrillic pages take the non-CJK Noto Sans first (better Cyrillic shapes
+     than the Chinese face); Thai pages need the Thai face for tone marks. */
+  html[lang="ru"] body {
+    font-family: "Noto Sans", "Noto Sans SC", system-ui, sans-serif;
+  }
+  html[lang="th"] body {
+    font-family: "Noto Sans Thai", "Noto Sans", "Noto Sans SC", sans-serif;
+  }
   img {
     @apply block max-w-full;
   }

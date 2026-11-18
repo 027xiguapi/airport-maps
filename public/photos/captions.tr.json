@@ -1,0 +1,1755 @@
+{
+  "_readme": [
+    "Türkçe fotoğraf altyazıları, IATA koduna ve ardından görsel dosya adına göre anahtarlanmıştır.",
+    "public/photos/captions/<IATA>.json dosyalarındaki İngilizce altyazılardan çevrilmiştir.",
+    "lib/airport-photos.ts bu dosyayı captions.tr.json olarak okur; burada eksik olan",
+    "havalimanları veya dosyalar İngilizce altyazıya düşer, asla Çinceye düşmez."
+  ],
+  "AAA": {
+    "aaa-page-1.webp": "Anaa atolü, Uluslararası Uzay İstasyonu'ndan fotoğraflandı (NASA görüntüsü ISS007-E-14624, kamu malı) — dar atol, beyaz resif kenarı ve turkuaz lagünüyle; havalimanı ana adacıkta yer alıyor."
+  },
+  "AAE": {
+    "aae-sat-1.webp": "Uydu görüntüsü: Annaba'nın pistleri Akdeniz kıyısı ile tepeler arasında uzanıyor; terminal ve apron da sahanın yanında."
+  },
+  "AAL": {
+    "aal-bing-2.webp": "Aalborg Havalimanı terminalinin ön cephesi — bir sıra kolon üzerinde taşınan alçak bir saçak ve arkasında camlı giriş.",
+    "aal-bing-3.webp": "Apronda biniş: yolcular Atlantic Airways jetine merdivenlerden tırmanırken yer ekibi yanlarında bekliyor."
+  },
+  "AAN": {
+    "aan-bing-1.webp": "Al Ain Uluslararası Havalimanı'nın 2. Terminali geceleyin; girişleri Arapça Abu Dabi Havalimanları tabelasının altında aydınlatılmış.",
+    "aan-doubao-01.webp": "Aprondan bakıldığında Al Ain'in uzun, alçak beyaz terminali yüksek aydınlatma direklerinin altında uzanıyor; kontrol kulesi açık mavi gökyüzünün altında sağda yükseliyor.",
+    "aan-doubao-03.webp": "Giriş yolu palmiyeler ve biçilmiş çimenlerin arasından Al Ain terminaline doğru kıvrılıyor; beyaz çatısı ince çöl pusunun içinde yumuşamış.",
+    "aan-doubao-04.webp": "Terminalin önündeki döner kavşakta yeşil harflerle havalimanının adı yazıyor; puslu gökyüzünün altında palmiyelerin yanında beyaz bir araba park etmiş.",
+    "aan-doubao-05.webp": "Al Ain'in beyaz terminali ve apronuna yukarıdan bakış: hizmet araçları yanında sıralar halinde park etmiş, soluk çöl dağınık bulutların altında ufka kadar uzanıyor.",
+    "aan-doubao-06.webp": "Havalimanı otoparkında beyaz güneşlik tenteleri otobüs ve arabaların üzerini örtüyor; yeşil peyzajın hemen ötesinde açık çöl başlıyor.",
+    "aan-doubao-02.webp": "Al Ain terminalinin ön cephesi karşıdan: cephe boyunca uzanan soluk, oymalı kemerlerden oluşan uzun bir sütun dizisi; dışarıda bir otobüs ve bir araba duruyor."
+  },
+  "AAO": {
+    "aao-sat-1.webp": "Uydu görüntüsünde Anaco Havalimanı'nın (AAO) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "AAP": {
+    "aap-bing-1.webp": "Samarinda'daki APT Pranoto Uluslararası Havalimanı'nın terminali: açılı beyaz çelik desteklerle güçlendirilmiş geniş cam cephe; saçak, indirme-bindirme alanının üzerine uzanıyor.",
+    "aap-doubao-01.webp": "Kırmızı-beyaz bir turboprop apron üzerinde beklerken uzun cam terminalin üzerinde ağır bulutlar toplanıyor; terminalin çatısı beyaz çelik makaslarla taşınıyor.",
+    "aap-doubao-03.webp": "Havalimanı girişindeki kırmızı harfli tabelada Aji Pangeran Tumenggung Pranoto adı yazıyor; arkasında beyaz, kavisli çatılı terminal yükseliyor.",
+    "aap-doubao-04.webp": "Terminal duvarı boyunca yeşil bir isim tabelası ile sarı numaralı bir plaket uzanıyor; yolcular cam-çelik yürüyüş köprüsünün altındaki beton ön avludan geçiyor.",
+    "aap-doubao-05.webp": "Çimlerden bakıldığında terminalin gümüş çatısı iki ucunda yukarı kıvrılıyor; cam cephe gri-beyaz gökyüzünü yansıtıyor, solda bir otobüs bekliyor.",
+    "aap-doubao-06.webp": "Apronda geniş kemerli bir hangar açık duruyor, içinde biniş merdivenleri park etmiş; loş ışıkta yanında beyaz kontrol kulesi yükseliyor."
+  },
+  "AAR": {
+    "aar-sat-1.webp": "Uydu görüntüsü: Aarhus'un iki pisti Jutland'ın doğu kıyısındaki tarım arazileri arasında uzanıyor; terminal ve apron da yanlarında."
+  },
+  "AAT": {
+    "aat-sat-1.webp": "Uydu görüntüsü: Altay'ın pisti Altay Dağları'ndaki vadiler ve kar diyarı arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "AAX": {
+    "aax-bing-2.webp": "Araxá Havalimanı terminalinin içi: check-in gişesinde bir kuyruk ve aprona açılan cam kapılara bakan sıralar halinde metal koltuklar.",
+    "aax-bing-3.webp": "Araxá Havalimanı'na havadan bakış: kızıl toprak platolar arasında tek bir asfalt pist; apron ve hangarlar pistin orta noktasının yanında.",
+    "aax-doubao-01.webp": "Terminal cephesindeki mavi harfler havalimanının adını yazıyor; kırmızı tuğla duvarlar ve zikzak beyaz çatı kenarı açık gökyüzüne karşı.",
+    "aax-doubao-02.webp": "Girişe karşıdan bakış: cam kapılar check-in ve bagaj salonuna açılıyor; üstte açık mavi gökyüzü altında küçük yeşil bir biniş tabelası var.",
+    "aax-doubao-03.webp": "Arabalar terminalin dışındaki gölgeli otoparkta duruyor; terminalin kırmızı tuğla cephesi, mavi şeridi ve zikzak çatı kenarı parlak gökyüzü altında keskin biçimde öne çıkıyor.",
+    "aax-doubao-05.webp": "Bir uydu haritası ekran görüntüsü, Araxá Havalimanı'nın pistini ve taksi yolunu çevredeki sokaklarla birlikte işaretliyor; görüntünün üzerinde yer adları yer alıyor.",
+    "aax-doubao-04.webp": "Beyaz bir iş jeti açık hangar kapısının hemen içinde duruyor; cilalı gövdesi eşiğin ötesindeki çimenleri ve gökyüzünü yansıtıyor."
+  },
+  "AAY": {
+    "aay-sat-1.webp": "Uydu görüntüsü: Al Ghaydah'ın pisti Yemen kıyısı ile kurak tepeler arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "ABA": {
+    "aba-sat-1.webp": "Uydu görüntüsü: pist Abakan'ın kenarı boyunca uzanıyor; apron ve terminal orta noktasının yanında."
+  },
+  "ABB": {
+    "abb-bing-1.webp": "Asaba Uluslararası Havalimanı'na havadan bakış: pistin yanındaki kemerli terminal çatıları ve koyu renkli kontrol kulesi; ön planda kırmızı-beyaz itfaiye istasyonu ve bir yakıt kamyonu.",
+    "abb-bing-2.webp": "Terminalin ön yüzü ve otoparkı — kemerli cepheye yerleştirilmiş üçgen cam giydirme cephe; kontrol kulesi solda.",
+    "abb-bing-3.webp": "Terminal aprondan görünüyor: bağımsız kontrol kulesinin yanındaki beyaz tonozlu çatılar, sıralar halindeki projektör direklerinin altında."
+  },
+  "ABC": {
+    "abc-sat-1.webp": "Uydu görüntüsü: Albacete Havalimanı / Los Llanos Hava Üssü (ABC) kuru zemin ve çıplak araziyle çevrili."
+  },
+  "ABD": {
+    "abd-bing-1.webp": "Abadan Uluslararası Havalimanı'nın giriş tabelası — Farsça ve İngilizce yan yana, ikisi de 'Ayetullah Cami Uluslararası Havalimanı' yazıyor.",
+    "abd-bing-3.webp": "Terminal girişi: yolcular kırmızı harfli tabelanın altında valizlerini sürükleyerek salona yürüyor; yürüyüş yolu desenli karolarla döşenmiş."
+  },
+  "ABI": {
+    "abi-bing-1.webp": "Abilene Bölge Havalimanı'na havadan bakış: indirme-bindirme döngüsünün üzerinde beyaz çadır benzeri tenteler; apronda yolcu alan bir uçak.",
+    "abi-bing-2.webp": "Kontrol kulesi ve terminalin tente çatıları; üzerlerinden bir C-130 nakliye uçağı geçiyor.",
+    "abi-bing-3.webp": "Pist boyunca kuleye doğru bakış — beyaz işaretler koyu asfalt boyunca ufuktaki kırmızı-beyaz kuleye kadar uzanıyor.",
+    "abi-doubao-01.webp": "Pickup'lar terminalin yanındaki otoparkta kırmızı gölgeliklerin altında bekliyor, üstte Teksas bayrağı dalgalanıyor; çimenliğin ötesindeki taksi yolunda bir yolcu uçağı var.",
+    "abi-doubao-02.webp": "Kırmızı kuyruklu iki dört motorlu bölgesel jet beton apronda duruyor; yanlarına turuncu koniler yerleştirilmiş, üstte bulutsuz koyu mavi bir gökyüzü.",
+    "abi-doubao-03.webp": "Kırmızı tepeli kule, ten rengi terminal binasının yanında yükseliyor; geniş bir canlı meşe çimenliği gölgeliyor, sağda kırmızı bir bagaj arabası park etmiş.",
+    "abi-doubao-04.webp": "İkiz yürüyen merdivenler meydandan terminale çıkıyor; beton kolonların taşıdığı beyaz çekme tente altında, sağda tarihi bir işaret levhası duruyor.",
+    "abi-doubao-05.webp": "Geceleyin terminalin taraklı beyaz tenteleri girişin üzerinde parlıyor, bayraklar direklerinde hareketsiz asılı; aşağıda karanlıkta arabalar park etmiş.",
+    "abi-doubao-06.webp": "Kırmızı bir iğnenin Abilene Bölge Havalimanı'nı işaretlediği uydu haritası ekran görüntüsü; iki pisti, taksi yolları ve terminal binaları tarım tarlaları arasında uzanıyor."
+  },
+  "ABL": {
+    "abl-sat-1.webp": "Uydu görüntüsü: Ambler'ın çakıl pisti Kobuk Nehri kıyısında tundra ile ormanlık alan arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "ABQ": {
+    "abq-bing-1.webp": "Altın saatte Sunport: terminal, sıralar halindeki otopark yapıları ve park yerlerinin arkasında; ötesinde Albuquerque'nin silueti ve çöl yamacı.",
+    "abq-bing-3.webp": "Terminal ve aprona havadan bakış: pembe Pueblo tarzı konkorlar jet köprüleriyle aprona bağlanıyor, uçaklar kapılarda park etmiş; arkada otopark katları ve şehir.",
+    "abq-doubao-01.webp": "Alacakaranlıkta terminalin yükseltilmiş kaldırım yolu, turkuaz tentelerin altında servis araçlarını ve arabaları barındırıyor; terrakota blokların üzerinden bulutlar akıyor.",
+    "abq-doubao-02.webp": "Yukarıdan bakıldığında otopark katlarının çatısı güneş panelleriyle kaplı; soluk pembe konkorlar apron boyunca yayılıyor, uçaklar iki uçta park etmiş.",
+    "abq-doubao-03.webp": "Mavi başlık çubuklu bir ekran görüntüsü, pistlerin ve terminalin havadan görünümünü gösteriyor; şehir ızgarası karla çizgili dağlara doğru uzanıyor.",
+    "abq-doubao-04.webp": "Karanlık çöktükten sonra terminal cephesi sıcak bir ışıkla aydınlanıyor; turkuaz ışık şeritleri, ıssız yolun üzerindeki tenteleri çiziyor.",
+    "abq-doubao-05.webp": "Yandan bakıldığında jetler jet köprülerinde duruyor; ön planı güneş panelli otopark ve sıralar halindeki arabalar dolduruyor.",
+    "abq-doubao-06.webp": "Havaalanının soluk, eski bir fotoğrafı: arabalar tuğla terminalin önündeki otoparkı doldurmuş, apronda bir yolcu uçağı bekliyor."
+  },
+  "ABR": {
+    "abr-bing-1.webp": "Bekleme alanının üzerindeki büyük duvar resmi — tüm duvara yayılan bir bozkır kasabası sokak manzarası; terminalin en çarpıcı özelliği.",
+    "abr-bing-2.webp": "GİDİŞLER kapısının önündeki kıvrımlı kuyruk; sağda Delta self-servis kioskları ve check-in gişeleri.",
+    "abr-bing-3.webp": "Kapı bekleme alanı — yolcular duvar resmini taşıyan ahşap tavanın altında, pencerelerin yanındaki sıralarda bekliyor.",
+    "abr-doubao-01.webp": "Kapalı bir kış gününde havalimanının adı cam cephe boyunca uzanıyor; apron kenarında kar lekeleri duruyor.",
+    "abr-doubao-02.webp": "Alacakaranlıkta koyu taş duvardaki kabartma metal harfler turuncu gökyüzünden bir şerit yakalıyor; yürüyüş yolunda hâlâ kar var.",
+    "abr-doubao-03.webp": "Bir harita ekran görüntüsü, Aberdeen Bölge Havalimanı'nı kırmızı bir iğneyle işaretliyor; pisti yeşil tarım arazilerini çaprazlama kesiyor.",
+    "abr-doubao-04.webp": "Tepeden uydu görünümü: bir pist ve ona paralel taksi yolu çimenleri geçiyor; binalar kuzeybatı köşesinde toplanmış.",
+    "abr-doubao-05.webp": "Bir uydu altlık haritası, haritalama hizmeti filigranları taşıyor; eğik pisti bir otoyolun yanındaki yamalı tarlalar arasında gösteriyor."
+  },
+  "ABS": {
+    "abs-bing-1.webp": "Havalimanı bağlantı yolundan görünüyor: ağaçlar arasında alçak bir terminal ve kule, her yanı çöl.",
+    "abs-bing-3.webp": "Terminal çatısındaki 'ABU SIMBEL AIRPORT' tabelası; altındaki duvar eski Mısır tarzı duvar resimleriyle boyanmış."
+  },
+  "ABT": {
+    "abt-sat-1.webp": "Uydu görüntüsü: Al Baha'nın pisti Asir dağlarındaki bir platoda uzanıyor; terminal ve apron yanında, çevrede kasaba ve sırtlar var."
+  },
+  "ABU": {
+    "abu-sat-1.webp": "Uydu görüntüsü: AA Bere Tallo (Haliwen) Havalimanı (ABU) kuru zemin ve çıplak araziyle çevrili."
+  },
+  "ABX": {
+    "abx-sat-1.webp": "Uydu görüntüsü: Albury'nin pisti Murray Nehri kıyısında tarım arazileri ile tepeler arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "ACD": {
+    "acd-bing-1.webp": "Acandí'nin çim havaalanı — çakıl apronda küçük bir Cessna, çimende park etmiş bir başka uçak; çevresi tropikal orman ve alçak tepelerle sarılı."
+  },
+  "ACE": {
+    "ace-bing-2.webp": "César Manrique-Lanzarote Havalimanı alacakaranlıkta — havalimanı tabelası çukur bir kaktüs bahçesinin üzerinde, arkada adanın tepeleri.",
+    "ace-doubao-01.webp": "Açık gökyüzü altında sarı harfler havalimanının ve 1. Terminalin adını yazıyor; kontrol kulesi sağda, önde kaktüsler.",
+    "ace-doubao-02.webp": "Bahçe yolundan yukarı bakınca sarı tabela çatı hattı boyunca uzanıyor; sütun dizisinin altında kiralık arabalar park etmiş.",
+    "ace-doubao-03.webp": "Boş beton apronun karşısında beyaz terminal havalimanının tam adını taşıyor; iki yanında gidişler ve gelişler işaretlenmiş.",
+    "ace-doubao-04.webp": "Pistin ötesinden bakıldığında terminal, park etmiş iki yolcu uçağı arasında alçakta duruyor; üstte projektör direkleri, önde kuru volkanik zemin.",
+    "ace-doubao-05.webp": "Düzenlenmiş bir döner kavşakta koyu taş kaide üzerinde soyut metal bir heykel duruyor; arkasında çıplak bir volkanik koni yükseliyor.",
+    "ace-doubao-06.webp": "Bir yolcu uçağı suyun üzerinde tırmanıyor; gövdesi bir plaj ve uzun iskelenin üzerinde, kıyı boyunca beyaz evler ve arkada ağır bulutlar."
+  },
+  "ACF": {
+    "acf-sat-1.webp": "Uydu görüntüsü: Aral Tarim Havalimanı (ACF) kuru zemin ve çıplak araziyle çevrili."
+  },
+  "ACI": {
+    "aci-sat-1.webp": "Uydu görüntüsü: Alderney'nin kısa pisti Manş Adası'nda uzanıyor; terminal ve apron yanında, çevrede kıyı ve çayırlar."
+  },
+  "ACR": {
+    "acr-sat-1.webp": "Uydu görüntüsü: Araracuara Havalimanı (ACR) yeşil bitki örtüsü ve tarım arazileriyle çevrili."
+  },
+  "ACV": {
+    "acv-bing-1.webp": "Terminalin dış duvarındaki 'ARCATA – EUREKA AIRPORT' yazısı, havalimanının hizmet ettiği iki şehri adlandırıyor.",
+    "acv-bing-3.webp": "Havaalanının yanında: trafik hangarların önünden geçerken hafif bir pervaneli uçak pistin üzerinden tırmanıyor."
+  },
+  "ACY": {
+    "acy-bing-1.webp": "Terminalin kara tarafındaki cephesi — gümüş paneller ve geniş camlar; sağda 'ATLANTIC CITY INTERNATIONAL AIRPORT' yazıyor.",
+    "acy-bing-2.webp": "Havalimanı girişindeki 'A' anıtı: terminalin önündeki çimende küçük bir uçak siluetini kesen mavi harf.",
+    "acy-bing-3.webp": "Atlantic City Uluslararası Havalimanı'na havadan bakış: ortada terminal ve konkor, çevrede otoparklar ve taksi yolları, ufukta şehir silueti yüzüyor."
+  },
+  "ADB": {
+    "adb-sat-1.webp": "Uydu görüntüsü: İzmir'in pistleri ve taksi yolları Ege kıyısındaki ovada uzanıyor; terminal ve apron sahanın güneyinde."
+  },
+  "ADE": {
+    "ade-bing-3.webp": "Aden Uluslararası Havalimanı'nın terminali ve kontrol kulesi — duvarda havalimanının Arapça adı, önünde park etmiş iki geri itme traktörü."
+  },
+  "ADF": {
+    "adf-sat-1.webp": "Uydu görüntüsü: Adıyaman'ın pisti Türkiye'nin güneydoğusundaki platoda uzanıyor; terminal ve apron yanında, çevrede tepeler ve tarım arazileri var."
+  },
+  "ADK": {
+    "adk-bing-1.webp": "Pistin sonunda Adak — volkanik tepelerin üzerinde alçak bulutlar, aydınlatılmış pist onların eteğine doğru uzanıyor.",
+    "adk-bing-3.webp": "Tundradan Adak havaalanına doğru — pist ve taksi yolu araziye yayılmış, havalimanı binaları ufukta küçücük.",
+    "adk-doubao-01.webp": "Pist eşiğinden bir sıra kırmızı yaklaşma ışığı çimenleri geçiyor; gri pist karla çizgili volkanlara doğru dümdüz uzanıyor.",
+    "adk-doubao-02.webp": "Çitin arkasındaki yoldan, mavi çatılı terminalin yanında bir jet duruyor; bulutlar karla lekelenmiş sırtlara baskı yapıyor.",
+    "adk-doubao-03.webp": "Adak apronsunda bir Alaska Airlines jeti, merdiveni açık halde duruyor; volkanlarda hâlâ kar var, bulutlar alçakta asılı.",
+    "adk-doubao-04.webp": "Terminalin kara tarafındaki cephesi — mavi çatı altında pembe ve kırmızı pencere şeritleri, üstü kapalı bir yürüyüş yolu ve boş bir asfalt şeridi.",
+    "adk-doubao-05.webp": "İki yolcu, N.A.F. Adak'a hoş geldiniz tabelasının altında terminal kapısına yürüyor; kaldırım boyunca turuncu koniler dizilmiş.",
+    "adk-doubao-06.webp": "Kuru çimenlerde taş kaplamalı bir giriş tabelası duruyor; ötesinde park etmiş bir jet ve terminal, bulut şeridinin altında karlı zirveler görünüyor."
+  },
+  "ADL": {
+    "adl-sat-1.webp": "Uydu görüntüsü: Adelaide'in pisti ve terminali şehir merkezinin batısında; çevresinde liman, sanayi ve konutlar var."
+  },
+  "ADM": {
+    "adm-bing-1.webp": "Ardmore Belediye Havalimanı'na havadan bakış — yeşil tarlalar üzerinde kesişen iki pist; terminal ve hangarlar güneybatı tarafında toplanmış.",
+    "adm-bing-3.webp": "Ardmore Belediye Havalimanı'nın giriş tabelası — havalimanı işletmelerinin rehberinin yanındaki taş kaide üzerinde adı yazıyor.",
+    "adm-doubao-01.webp": "Hafif bir uçağın kanat direğinin ötesinden görünen Ardmore Belediye pistleri yeşil tarlaları kesiyor; bir nehir ağaçların arasından kıvrılıyor.",
+    "adm-doubao-02.webp": "Eski bir siyah-beyaz hava fotoğrafı, sahanın kesişen pistlerini gösteriyor; sıralar halindeki hangarlar ve destek binaları açık tarım arazisine yayılmış.",
+    "adm-doubao-03.webp": "Bir Federal Havacılık Dairesi (FAA) havalimanı diyagramı, Ardmore Belediye'nin iki pistini, taksi yollarını, yükseltilerini ve manyetik istikametlerini gösteriyor.",
+    "adm-doubao-04.webp": "Bir Google Haritalar ekran görüntüsü, Springer ile Gene Autry arasındaki otoyollar ve tarım arazileri arasında havalimanının yaklaşık konumunu kırmızı bir iğneyle işaretliyor."
+  },
+  "ADS": {
+    "ads-sat-1.webp": "Uydu görüntüsü: Addison Havalimanı (ADS) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "ADU": {
+    "adu-sat-1.webp": "Uydu görüntüsü: Erdebil'in pisti İran platosunda uzanıyor; terminal ve apron yanında, çevrede dağlar ve kurak arazi var."
+  },
+  "ADW": {
+    "adw-sat-1.webp": "Uydu görüntüsü: Joint Base Andrews (ADW) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor.",
+    "adw-doubao-01.webp": "Yüksekten bakıldığında Joint Base Andrews, geniş çimenlikler ve kaplı apronlar boyunca uzanan iki uzun paralel pist ve bağlantı taksi yolları gösteriyor.",
+    "adw-doubao-02.webp": "Sıralar halinde küçük jet uçakları apronda düzgünce duruyor; solda bir grup kemer çatılı hangar, arkada ana pist var.",
+    "adw-doubao-03.webp": "Beyaz çift motorlu jetler geniş beton apronda düzgün sıralar halinde park etmiş; karenin alt kısmında üç helikopter duruyor.",
+    "adw-doubao-04.webp": "Gri gökyüzü altında büyük, kavisli çatılı bir hangarın önünde bir sıra savaş uçağı bekliyor; uzakta bir pist uzanıyor.",
+    "adw-doubao-05.webp": "Üs giriş tabelası, Andrews Hava Kuvvetleri Üssü ve Joint Base Andrews yazılarının üzerinde ABD Hava Kuvvetleri amblemiyle başlıyor.",
+    "adw-doubao-06.webp": "Bir Google uydu görüntüsü, üssün pist düzenini gösteriyor; çevresi banliyö konutları, otoyollar ve ormanlık parçalarla çevrili."
+  },
+  "AEG": {
+    "aeg-sat-1.webp": "Uydu görüntüsünde Aek Godang Havalimanı'nın (AEG) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor.",
+    "aeg-doubao-01.webp": "Ağır bulutlar altında Aek Godang Havalimanı'nın terminali yeşil, sarı ve turuncu şeritler taşıyor; adı cepheye kırmızı harflerle yazılmış."
+  },
+  "AEH": {
+    "aeh-sat-1.webp": "Uydu görüntüsü: Abeche Havalimanı (AEH) kuru zemin ve çıplak araziyle çevrili."
+  },
+  "AEP": {
+    "aep-baidu-1.webp": "Check-in salonundaki LATAM self-servis kioskları — check-in yapan yolcuların önünde bir sıra sarı makine.",
+    "aep-baidu-2.webp": "Bir Austral yolcu uçağı taksi yapıyor; kuyruğunun arkasında Buenos Aires'in silueti yükseliyor.",
+    "aep-baidu-3.webp": "Bir Aerolíneas Argentinas Boeing 737; arkasında şehir kuleleri ve ağaçlar var."
+  },
+  "AES": {
+    "aes-sat-1.webp": "Uydu görüntüsü: Ålesund'un pisti adalar ile fiyort arasında uzanıyor; terminal ve apron yanında, çevrede deniz ve dağlar var."
+  },
+  "AET": {
+    "aet-sat-1.webp": "Uydu görüntüsü: Allakaket Havalimanı (AET) yeşil bitki örtüsü ve tarım arazileriyle çevrili.",
+    "aet-doubao-01.webp": "Notlandırılmış hava fotoğrafı: Allakaket'in çakıl pisti köyün ve Koyukuk Nehri'nin yanında uzanıyor; etiketler rüzgâr çoraplarını ve terk edilmiş eski havaalanını işaretliyor.",
+    "aet-doubao-02.webp": "Uydu haritası görünümü: Allakaket'in pisti koyu ladin ormanını kesiyor; bir iğne ile etiketler havalimanını ve bir rüzgâr çorabını işaretliyor.",
+    "aet-doubao-03.webp": "Bölge haritası: kırmızı bir iğne, iç Alaska'daki Allakaket Havalimanı'nı işaretliyor; çevresinde Nome, Fairbanks ve Anchorage etiketlenmiş."
+  },
+  "AEU": {
+    "aeu-sat-1.webp": "Uydu görüntüsünde Abu Musa Adası Havalimanı (AEU) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
+  },
+  "AEX": {
+    "aex-sat-1.webp": "Uydu görüntüsü: Alexandria'nın pistleri Louisiana'daki nehirler ve ormanlık alanlar arasında uzanıyor; terminal ve apron sahanın yanında."
+  },
+  "AEY": {
+    "aey-sat-1.webp": "Uydu görüntüsü: Akureyri'nin pisti kuzey İzlanda'da fiyort ile vadi arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "AFL": {
+    "afl-sat-1.webp": "Uydu görüntüsü: Alta Floresta'nın pisti Amazon yağmur ormanlarının kenarında uzanıyor; terminal ve apron da yanında."
+  },
+  "AFY": {
+    "afy-sat-1.webp": "Uydu görüntüsü: Afyon Hava Üssü (AFY) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "AGB": {
+    "agb-sat-1.webp": "Uydu görüntüsü: Augsburg Havalimanı (AGB) yeşil bitki örtüsü ve tarım arazileriyle çevrili."
+  },
+  "AGC": {
+    "agc-sat-1.webp": "Uydu görüntüsünde Allegheny County Havalimanı (AGC) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor."
+  },
+  "AGQ": {
+    "agq-sat-1.webp": "Uydu görüntüsünde Dhokimion Havaalanı'nın (AGQ) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "AGR": {
+    "agr-sat-1.webp": "Uydu görüntüsü: Agra'nın pistleri Yamuna kıyısında şehir ile tarım arazileri arasında uzanıyor; terminal ve apron sahanın yanında.",
+    "agr-doubao-02.webp": "Tanıtım amaçlı birleşik görsel: Agra Havalimanı'nın krem-kırmızı terminali uluslararası varış tabelası taşıyor; gökyüzüne bir jet ve silik bir Tac Mahal yerleştirilmiş.",
+    "agr-doubao-03.webp": "Şematik harita: Agra'nın terminali ve apronu soluk gri çizgilerle çizilmiş; altında otopark, otobüs, yemek ve araba kiralama simgeleri var.",
+    "agr-doubao-01.webp": "Agra Havalimanı'nın terminal cephesi, mavi tabelalarda adını ve iç hat varışını gösteriyor; birkaç yolcu valizlerini sürükleyerek girişe ilerliyor."
+  },
+  "AGS": {
+    "ags-sat-1.webp": "Uydu görüntüsü: Augusta'nın pistleri Savannah Nehri kıyısında ormanlık alan ile kasaba arasında uzanıyor; terminal ve apron sahanın yanında."
+  },
+  "AGX": {
+    "agx-sat-1.webp": "Uydu görüntüsü: Agatti'nin pisti Lakshadweep'in dar bir adasında uzanıyor; terminal ve apron yanında, çevrede lagün ve resif var.",
+    "agx-doubao-01.webp": "Video karesi: Agatti'nin pistine alçak yaklaşma; pist turkuaz lagün ile beyaz dalgalar arasındaki dar adaya yaslanmış.",
+    "agx-doubao-02.webp": "Havadan bakış: Agatti'nin pisti neredeyse ince adanın tamamını dolduruyor; çevresini derin mavi okyanusa açılan soluk yeşil sığlıklar sarıyor.",
+    "agx-doubao-03.webp": "Bir yolcu uçağı Agatti pistine son yaklaşmada turkuaz lagünün üzerinden alçaktan süzülüyor; pistin ucunda apron ve alçak binalar var.",
+    "agx-doubao-04.webp": "Alacakaranlıkta havadan bir görünüm, Agatti'nin dar ada boyunca ufka doğru uzanan pistini izliyor; iki yandaki plajların ötesinde sakin resif suyu."
+  },
+  "AGZ": {
+    "agz-sat-1.webp": "Uydu görüntüsü: Aggeneys Havalimanı (AGZ) kuru zemin ve çıplak araziyle çevrili."
+  },
+  "AHB": {
+    "ahb-baidu-2.webp": "Apronda: yeşil boyalı bir yolcu uçağı park etmiş; sağda Abha'nın kontrol kulesi ve terminali."
+  },
+  "AHE": {
+    "ahe-sat-1.webp": "Uydu görüntüsü: Ahe'nin pisti atolün dar bir motu'sunda uzanıyor; terminal ve apron yanında, çevrede lagün ve resif var."
+  },
+  "AHN": {
+    "ahn-baidu-1.webp": "Terminalin dışında: tuğla Ben Epps Uçuş Merkezi, ön avluda bir fil heykeli."
+  },
+  "AHO": {
+    "aho-baidu-2.webp": "Alghero apronsunda bir Ryanair Boeing 737; arkasında terminal ve yer ekipmanları var."
+  },
+  "AHS": {
+    "ahs-sat-1.webp": "Uydu görüntüsü: Ahuas Havalimanı (AHS) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "AIA": {
+    "aia-sat-1.webp": "Uydu görüntüsü: Alliance'ın pistleri Nebraska yüksek ovalarındaki tarım arazileri ve prairie arasında uzanıyor; terminal ve apron sahanın yanında."
+  },
+  "AIP": {
+    "aip-sat-1.webp": "Uydu görüntüsü: Adampur Havalimanı (AIP) yeşil bitki örtüsü ve tarım arazileriyle çevrili.",
+    "aip-chatgpt-01.webp": "Açık gökyüzü altında cam cepheli terminalin üzerinde mavi bir Adampur tabelası var; bir grup merdivenlerde poz veriyor.",
+    "aip-chatgpt-02.webp": "Kemerli pencereler ve küçük kubbeli bir köşk Adampur Havalimanı terminalini süslüyor; çimenlikte uzun bir bayrak direği ve kırmızı bir halı var.",
+    "aip-chatgpt-03.webp": "İki itfaiye aracı aprondaki bir yolcu uçağının üzerinden su kavisleri fışkırtıyor; bir yanda bir helikopter park etmiş.",
+    "aip-chatgpt-04.webp": "Alacakaranlıkta aydınlatılmış terminalin önünde bir fıskiye su fışkırtıyor; Hindistan bayrağı uzun direğinden sarkıyor.",
+    "aip-chatgpt-05.webp": "Parlak yüksek görünürlüklü yelekler giymiş personel, terminalin önündeki kaplı ön avluda uzun bir sıra halinde duruyor.",
+    "aip-chatgpt-06.webp": "Kırmızı-beyaz bir SpiceJet turbopropu apronda duruyor; puslu gökyüzü altında yer personeli ve ziyaretçiler yakınlarda yürüyor.",
+    "aip-chatgpt-07.webp": "Alçak tek katlı bir bina, kapısında çizgili bir tente ile Adampur Havalimanı'nı Pencapça ve İngilizce adlandıran mavi bir tabela taşıyor."
+  },
+  "AIR": {
+    "air-sat-1.webp": "Uydu görüntüsü: Aripuanã Havalimanı (AIR) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "AIT": {
+    "ait-sat-1.webp": "Uydu görüntüsü: Aitutaki Havalimanı (AIT) su ve kıyı şeridiyle çevrili.",
+    "ait-chatgpt-01.webp": "Sivri çatı altındaki krem boyalı terminal girişi, yeşil çitlerle çevrili 'Aitutaki'ye Hoş Geldiniz' tabelasının altında ziyaretçileri karşılıyor.",
+    "ait-chatgpt-02.webp": "Havadan bakıldığında Aitutaki pisti, soluk turkuaz lagün şeritleriyle çevrili yeşil bir adacığı dümdüz kesiyor.",
+    "ait-chatgpt-03.webp": "Mavi kuyruklu beyaz çift pervaneli bir yolcu uçağı, bir dizi bagaj arabasının yanındaki soluk apron üzerinde duruyor.",
+    "ait-chatgpt-04.webp": "Aitutaki Uluslararası Havalimanı adını taşıyan dalgaların sürüklediği ahşaptan bir tabela, birkaç yolcunun gölgede beklediği sazdan bir barakanın önünde duruyor.",
+    "ait-chatgpt-05.webp": "Ağır bulutlar altında terminalin Aitutaki tabelası çimenlik bir şeride, bir karşılama panosuna ve palmiyelerin bulunduğu küçük bir otoparka bakıyor.",
+    "ait-chatgpt-06.webp": "Bulanık bir pervane ve motor naselinden bakınca, pisti olan alçak bir adacık turkuaz lagün boyunca uzanıyor.",
+    "ait-chatgpt-07.webp": "Çift motorlu bir turboprop pistte kameraya bakıyor; burnunun arkasında deniz ufku görünüyor."
+  },
+  "AIU": {
+    "aiu-sat-1.webp": "Uydu görüntüsünde Enua Havalimanı (AIU) çevredeki su ve kıyı şeridiyle bütünleşiyor.",
+    "aiu-chatgpt-01.webp": "Palmiyelerin altında yeşil-kırmızı, yanları açık bir terminal 'Atiu'ya hoş geldiniz' pankartı taşıyor; sırt çantalı yolcular gölgesinde toplanmış.",
+    "aiu-chatgpt-02.webp": "Kanadın yanından bakınca ilerideki pist yıpranmış ve yamalı görünüyor; kenarlarında çalılar ve bir ağaç sırası var."
+  },
+  "AJF": {
+    "ajf-sat-1.webp": "Uydu görüntüsü: Al-Jawf'un pisti kuzey Suudi çölünde uzanıyor; terminal ve apron yanında, çevrede kurak arazi ve birkaç tarla var.",
+    "ajf-chatgpt-01.webp": "Terminalin cam cephesi, giriş kapılarının üzerinde Al Jouf Uluslararası Havalimanı adını İngilizce ve Arapça taşıyor.",
+    "ajf-chatgpt-02.webp": "Check-in salonu boş; cilalı zeminde parlak tavan ışıkları altında numaralı bir gişe sırası mavi renkte parlıyor.",
+    "ajf-chatgpt-03.webp": "Yukarıdan bakıldığında bölünmüş bir yol, çıplak çölü geçerek bir döner kavşaktan havalimanı terminaline doğru uzanıyor.",
+    "ajf-chatgpt-04.webp": "Beyaz kafes tavanın altında geniş kolonlar, Al-Jouf'un kompakt terminalinden çok daha büyük görünen geniş ve cilalı bir konkoru taşıyor.",
+    "ajf-chatgpt-05.webp": "Aprondaki dar gövdeli bir jetin üzerinde iki su jeti kesişiyor; havalimanı çitinin ötesinde kurak çöl uzanıyor.",
+    "ajf-chatgpt-06.webp": "Gün batımından sonra aydınlatılmış Al Jouf terminalinin arkasında turuncu-mor bir gökyüzü parlıyor; giriş yolu palmiyelerle çevrili.",
+    "ajf-chatgpt-07.webp": "Alçak güneş ışığı Jouf Havalimanı'nın eski terminalini altın rengine boyarken yeşil kuyruklu bir yolcu uçağı kapıda duruyor."
+  },
+  "AJI": {
+    "aji-sat-1.webp": "Uydu görüntüsü: Ağrı'nın pisti Doğu Anadolu'nun yüksek platosunda uzanıyor; terminal ve apron yanında, çevrede dağlar ve kurak arazi var."
+  },
+  "AJL": {
+    "ajl-sat-1.webp": "Uydu görüntüsü: Lengpui'nin pisti Mizoram'ın yeşil tepeleri arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "AJR": {
+    "ajr-sat-1.webp": "Uydu görüntüsü: Arvidsjaur'un pisti kuzey İsveç'te ormanlar ve göller arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "AKA": {
+    "aka-sat-1.webp": "Uydu görüntüsünde Ankang Fuqiang Havalimanı'nın (AKA) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "AKD": {
+    "akd-sat-1.webp": "Uydu görüntüsü: Akola Havalimanı (AKD) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "AKJ": {
+    "akj-sat-1.webp": "Uydu görüntüsü: Asahikawa'nın pisti orta Hokkaido'da tarım arazileri ile tepeler arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "AKL": {
+    "akl-sat-1.webp": "Uydu görüntüsü: Auckland Havalimanı'ndaki (AKL) terminaller, pistler ve çevredeki şehir."
+  },
+  "AKP": {
+    "akp-sat-1.webp": "Uydu görüntüsü: Anaktuvuk Pass'in çakıl pisti Brooks Sıradağları'ndaki bir vadide uzanıyor; terminal ve apron da yanında."
+  },
+  "AKR": {
+    "akr-page-1.webp": "Akure Havalimanı'nın terminali — mavi çatı altında krem duvarlar, girişlerin üzerinde kavisli tenteler ve mavi-beyaz bir bordür çizgisi.",
+    "akr-page-3.webp": "Akure apronsunda park etmiş bir Overland Airways ATR 72 (tescil 5N-BPE).",
+    "akr-chatgpt-01.webp": "Yolcular krem terminalin önündeki yol boyunca yürüyor; duvara monte bir uydu çanağı ve mavi çatı kenarını geçiyorlar.",
+    "akr-chatgpt-02.webp": "Puslu gri gökyüzü altında 'Akure Havalimanı'na Hoş Geldiniz' yazılı giriş kapısı yolun üzerinde duruyor.",
+    "akr-chatgpt-03.webp": "Yolcular apronu geçerek bir Overland Cargo turbopropuna yürüyor; arkasında Allied Air yazılı beyaz bir kargo uçağı park etmiş.",
+    "akr-chatgpt-04.webp": "Yarı saydam mavi bir tente varış girişini koruyor; kapının yanında bir salgın sağlığı afişi asılı.",
+    "akr-chatgpt-05.webp": "Ön avluda bir çit yön tabelasını sarıyor, arabalar bordür boyunca bekliyor ve ötede kule duruyor.",
+    "akr-chatgpt-06.webp": "Beyaz-mavi bir bölgesel jet apronda duruyor; yanında yer personeli ve bir servis minibüsü var, üstte bulutlu bir gökyüzü.",
+    "akr-chatgpt-07.webp": "Yukarıdan bakıldığında tek bir pist koyu yeşil çalılık ve ormanlık alanı dümdüz kesiyor; iki ucunda açıklıklar var."
+  },
+  "AKS": {
+    "aks-sat-1.webp": "Uydu görüntüsünde Gwaunaru'u Havalimanı (AKS) çevredeki su ve kıyı şeridiyle bütünleşiyor.",
+    "aks-chatgpt-01.webp": "Terminal cephesini 'Gwaunaru'u Havalimanı'na Hoş Geldiniz' yazılı bir pankart kaplıyor; çimenlikte bir kalabalık yerli halk ve çocuklar var.",
+    "aks-chatgpt-02.webp": "Soluk, kaplanmamış bir şerit, deniz ile ağaçlar arasındaki ormanlık bir yarımadada uzanıyor; görüntü bir uçuş simülatörü render'ına benziyor."
+  },
+  "AKT": {
+    "akt-sat-1.webp": "Uydu görüntüsü: RAF Akrotiri (AKT) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "AKU": {
+    "aku-sat-1.webp": "Uydu görüntüsü: Aksu'nun pisti Taklamakan'ın kuzey kenarında vaha ile tarım arazileri arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "AKV": {
+    "akv-sat-1.webp": "Uydu görüntüsü: Akulivik Havalimanı (AKV) kasaba, tarım arazileri ve bitki örtüsüyle çevrili."
+  },
+  "AKX": {
+    "akx-sat-1.webp": "Uydu görüntüsü: Aktobe'nin pisti Kazak bozkırında uzanıyor; terminal ve apron yanında, çevrede şehir ve nehir var.",
+    "akx-chatgpt-01.webp": "Açık öğle gökyüzü altında terminalin kavisli cam cephesi ışığı yansıtıyor; girişin üzerinde kırmızı harfler var.",
+    "akx-chatgpt-02.webp": "Terminalin içinde sarı yönlendirme çizgileri, küçük dükkânlar, bir kafe ve sıralar halindeki koltuklar arasında cilalı zemini geçiyor.",
+    "akx-chatgpt-03.webp": "Beyaz bir jet körükte bekliyor; apron kenarı, solmakta olan gökyüzü altında düz ve boş bozkıra açılıyor.",
+    "akx-chatgpt-04.webp": "Yüksek görünürlüklü yelekli iki teknisyen, buzlu bir kış apronsunda park etmiş bir jetin motorunda kırmızı bir merdivenden çalışıyor.",
+    "akx-chatgpt-05.webp": "Mavi-beyaz bir turboprop, apron üzerinde bir yakıt tankerinin yanında duruyor; parlak gökyüzü altında iki yer görevlisi onunla ilgileniyor.",
+    "akx-chatgpt-06.webp": "Gri terminal duvarında 'Aliya Moldagulova Havalimanı' yazılı kırmızı harfler duruyor; ön avluda ince bir kar var.",
+    "akx-chatgpt-07.webp": "Terminalin altındaki ön planı turuncu ve pembe çiçek tarhları dolduruyor; çatıda kırmızı harfler var."
+  },
+  "ALA": {
+    "ala-baidu-1.webp": "Almatı terminali gündüz — kıvrımlı çatı hattı ve gidişlere trafik taşıyan rampası.",
+    "ala-baidu-2.webp": "Geceleyin cam cephenin üzerinde kırmızı neon 'АЭРОПОРТ АЛМАТЫ' yazısı parlıyor.",
+    "ala-baidu-3.webp": "Terminalin önünde bir kış görünümü — çatının elmas biçimli tepe süsü altında karda taksiler ve minibüsler.",
+    "ala-chatgpt-01.webp": "ALA harfleri Almatı terminalinin cam cephesine hâkim; altında havalimanının Kazakça ve İngilizce adı yazıyor.",
+    "ala-chatgpt-02.webp": "Havadan bakıldığında geniş çimenlikler Almatı'nın pistini taksi yollarından ayırıyor; mavi çatılı terminalin yanındaki apronu yolcu uçakları dolduruyor.",
+    "ala-chatgpt-03.webp": "Apronda birkaç beyaz yolcu uçağı duruyor, biri yeşil kuyruklu; açık havada ötede karlı dağlar yükseliyor.",
+    "ala-chatgpt-04.webp": "Mavi-beyaz bir jet kapalı gökyüzü altında apronda bekliyor; yanında ALA yazılı bir bagaj konveyörü park etmiş.",
+    "ala-chatgpt-05.webp": "Karlı zirvelerin altında çatıda ALMATY AIRPORT yazıyor; apronda beyaz bir jet, solda kule var.",
+    "ala-chatgpt-06.webp": "Bu gündüz hava görüntüsünde terminalin soluk mavi çatıları birleşiyor, yolcu uçakları park yerlerini dolduruyor ve yanında bir inşaat alanı var.",
+    "ala-chatgpt-07.webp": "Almatı havalimanının uydu görüntüsü — uzun bir pist apron ve taksi yollarını çaprazlama geçiyor; diğer yanda yoğun konutlar var."
+  },
+  "ALB": {
+    "alb-sat-1.webp": "Uydu görüntüsü: Albany'nin pistleri Hudson Vadisi kasabalarının kenarı boyunca uzanıyor; terminal ve apron sahanın doğusunda."
+  },
+  "ALC": {
+    "alc-sat-1.webp": "Uydu görüntüsü: Alicante'deki pist kıyıya paralel uzanıyor; terminal ve apron doğusunda, çevrede şehir ve beyaz seralar var."
+  },
+  "ALF": {
+    "alf-sat-1.webp": "Uydu görüntüsü: Alta'nın pisti fiyort ile plato arasında uzanıyor; terminal ve apron yanında, çevrede su ve alçak tepeler var."
+  },
+  "ALH": {
+    "alh-sat-1.webp": "Uydu görüntüsü: Albany'nin pistleri Batı Avustralya'nın güney kıyısında orman ve tarım arazileri arasında uzanıyor; terminal ve apron sahanın yanında."
+  },
+  "ALI": {
+    "ali-sat-1.webp": "Uydu görüntüsü: Alice Uluslararası Havalimanı (ALI) kasaba, tarım arazileri ve bitki örtüsüyle çevrili.",
+    "ali-chatgpt-01.webp": "Alice Uluslararası Havalimanı (ALI) merkezli bir VFR kesit haritası, VOR'unu, çevredeki nokta yükseltilerini ve yakın kasabaları işaretliyor."
+  },
+  "ALJ": {
+    "alj-sat-1.webp": "Uydu görüntüsü: Alexander Bay'deki pistler Orange Nehri ağzı yakınındaki kurak kıyıda uzanıyor; terminal ve apron da yanında."
+  },
+  "ALL": {
+    "all-sat-1.webp": "Uydu görüntüsünde Riviera Villanova d'Albenga Uluslararası Havalimanı'nın (ALL) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor.",
+    "all-chatgpt-01.webp": "Havadan bakıldığında Albenga'nın pisti geniş bir çakıl nehir yatağının yanındaki yeşil bir vadide uzanıyor; sahanın ötesinde dağ sırtları yükseliyor.",
+    "all-chatgpt-02.webp": "Kırmızı-beyaz kontrol kulesi alçak bir terminal binasının arkasında yükseliyor; önündeki duvarda ALBENGA adı yazılı, ötesinde dağlar var.",
+    "all-chatgpt-03.webp": "Alacakaranlıkta Albenga havalimanının beton apronsunda iki iş jeti duruyor; arkalarında cam cepheli bir terminal binası var.",
+    "all-chatgpt-04.webp": "Albenga'da akşam ışığında küçük, beyaz-sarı tek motorlu bir pervaneli uçak apronda duruyor; ötede koyu renkli dağlar.",
+    "all-chatgpt-05.webp": "Havadan bakıldığında Albenga pisti ve geniş çimenlik sahası bir yol ile nehir yatağı arasında uzanıyor; uzakta kıyı kasabası ve deniz görünüyor.",
+    "all-chatgpt-06.webp": "Albenga'da beyaz bir çadır hangarın önünde bir helikopter duruyor; üstte kabarık bulutlarla dolu mavi bir gökyüzü var."
+  },
+  "ALM": {
+    "alm-page-1.webp": "Alamogordo-White Sands Bölge Havalimanı'nda korunan bir Lockheed P-2H Neptune (N14447); arkasında sahanın hangarları ve apronu (fotoğraf: silverhawkauthor.com).",
+    "alm-chatgpt-01.webp": "Alamogordo-White Sands Bölge Havalimanı'nın ana girişi, kapılarının üzerinde sahanın adını taşıyor; açık mavi gökyüzü altında beton bir yürüyüş yoluna açılıyor.",
+    "alm-chatgpt-02.webp": "Alamogordo-White Sands Bölge Havalimanı'ndaki 21 pistinin havadan görünümü; iki yanda çöl çalılıkları ve ufuk boyunca soluk bir kum şeridi.",
+    "alm-chatgpt-03.webp": "Alamogordo'da çatlamış apronda üç hafif uçak park etmiş; solda metal bir hangar, uzak sırtın üzerinde yükselen kümülüs bulutları var.",
+    "alm-chatgpt-04.webp": "Alamogordo Havalimanı'nın 4. pistindeki eşik işaretlerinin dron görüntüsü; alt kenar boyunca bir uçuş verisi şeridi basılmış.",
+    "alm-chatgpt-05.webp": "Alamogordo-White Sands Bölge Havalimanı terminalinin önünde, çıplak ağaçların üzerindeki direkten Yıldızlar ve Çizgiler ile New Mexico eyalet bayrağı dalgalanıyor."
+  },
+  "ALP": {
+    "alp-sat-1.webp": "Uydu görüntüsünde Halep Uluslararası Havalimanı'nın (ALP) pisti kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "ALQ": {
+    "alq-sat-1.webp": "Uydu görüntüsü: Alegrete Novo Havalimanı (ALQ) kasaba, tarım arazileri ve bitki örtüsüyle çevrili.",
+    "alq-chatgpt-01.webp": "Alegrete havalimanında sarı tente altında mavi bir tabela sahanın adını taşıyor; girişin yanındaki beton yolda bir köpek yatıyor.",
+    "alq-chatgpt-02.webp": "Alegrete terminalinin önünde, Azul yazılı küçük mavi-beyaz tek motorlu bir turboprop, benekli gökyüzü altında kaplı apronda duruyor.",
+    "alq-chatgpt-03.webp": "Alegrete terminalinin ön yüzü, kuru çimenlerin üzerinde ve bulutsuz gökyüzü altında havalimanının adını taşıyan iki mavi tente tabelası gösteriyor.",
+    "alq-chatgpt-04.webp": "Koyu mavi gökyüzü altında bir Azul turbopropu Alegrete apronsunda duruyor; yanında birkaç kişi bekliyor.",
+    "alq-chatgpt-05.webp": "Yandan bakıldığında Alegrete terminalinin mavi tabelaları sarı saçakları boyunca uzanıyor; önündeki çimende birkaç bank yerleştirilmiş."
+  },
+  "ALR": {
+    "alr-sat-1.webp": "Uydu görüntüsünde Alexandra Havaalanı (ALR) çevredeki kuru zemin ve çıplak araziyle bütünleşiyor."
+  },
+  "ALU": {
+    "alu-sat-1.webp": "Uydu görüntüsü: Alula Havalimanı (ALU) kasaba, tarım arazileri ve bitki örtüsüyle çevrili.",
+    "alu-chatgpt-01.webp": "Bir uçuş simülasyonu hava görüntüsü: çöl kıyısında küçük bir köy plajı izliyor; yanında binalarıyla bir havaalanı yer alıyor."
+  },
+  "ALY": {
+    "aly-baidu-1.webp": "İskenderiye'deki eski El Nouzha terminali — çok katlı beyaz bir bina; dışarıda kalabalık yolcular ve girişin üzerinde Arapça yazı."
+  },
+  "AMB": {
+    "amb-sat-1.webp": "Uydu görüntüsü: Ambilobe Havalimanı (AMB) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "AMD": {
+    "amd-page-3.webp": "Geceleyin terminal — mor ışık konsol çatıyı yıkıyor, kaldırım üzerinde kolonlar var ve cephe boyunca havalimanının adı Gucaratça yazılı.",
+    "amd-page-4.webp": "İndirme alanından terminal — yolun üzerinde beyaz çekme tenteler ve kesintisiz cam-çelik bir cephe.",
+    "amd-page-5.webp": "Terminalin içindeki bir sanat duvarı — çizgisel şehir siluetinin önünde iki bronz figür; ekranda havalimanının tam adı görünüyor.",
+    "amd-chatgpt-01.webp": "Gündüz vakti terminal cephesinde havalimanının tam adı mavi harflerle yazılı; aşağıda kaldırım boyunca yolcular ve beyaz arabalar hareket ediyor.",
+    "amd-chatgpt-02.webp": "Alacakaranlık derinleşirken mor ışık terminal cephesini yıkıyor; beyaz tenteli bir yürüyüş yolu, aydınlatılmış küçük dükkân sırasına doğru yolu kat ediyor.",
+    "amd-chatgpt-03.webp": "IndiGo boyalı bir yolcu uçağı beton apronda duruyor; arka planda terminal ve boyalı taksi yolu işaretleri görünüyor.",
+    "amd-chatgpt-04.webp": "Terminalin havadan görünümü, çok parçalı gümüş bir çatı, önünde otoparklar ve bir çevre yolu gösteriyor; yanındaki apronda bir yolcu uçağı park etmiş.",
+    "amd-chatgpt-05.webp": "Geceleyin alttan aydınlatılan beyaz çekme tenteler, ön avlu meydanında yürüyenleri koruyor; arkalarında aydınlatılmış terminal cephesi var.",
+    "amd-chatgpt-06.webp": "Alacakaranlıkta havadan: tepesinde genişleyen, sıcak renkte parlayan ve renkli ışık şeritleri taşıyan yüksek bir kule; yanında alçak binalar ve tepelerin altında aydınlatılmış bir kasaba.",
+    "amd-chatgpt-07.webp": "Geceleyin yağmurla ıslanmış apronda bir IndiGo jeti park yerinde bekliyor; burnunun yakınında yer ekipmanları duruyor."
+  },
+  "AMH": {
+    "amh-sat-1.webp": "Uydu görüntüsü: Arba Minch'in pisti Etiyopya Rift Vadisi'nde tarım arazileri ve tepeler arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "AMS": {
+    "ams-sat-1.webp": "Uydu görüntüsünde Amsterdam Schiphol Havalimanı'ndaki (AMS) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "AMV": {
+    "amv-sat-1.webp": "Uydu görüntüsü: Amderma Havalimanı (AMV) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "ANB": {
+    "anb-sat-1.webp": "Uydu görüntüsünde Anniston Bölge Havalimanı'nın (ANB) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "AND": {
+    "and-sat-1.webp": "Uydu görüntüsü: yeşil kırlar arasında iki pist kesişiyor; terminal ve apron kesişme noktasının yakınında.",
+    "and-chatgpt-01.webp": "Açık mavi gökyüzü altında yeşil metal çatılı ve ahşap giriş portikolu küçük taş kaplama terminalin kapılarında bir Amerikan bayrağı dalgalanıyor.",
+    "and-chatgpt-02.webp": "Havadan bakıldığında iki pist ormanlık alan ile tarım arazileri arasında kesişiyor; pist uçlarının yakınında birkaç beyaz bina dağılmış.",
+    "and-chatgpt-03.webp": "Taş kaideli bir giriş tabelası, büyük beyaz harflerle Anderson Bölge Havalimanı'na hoş geldiniz yazıyor; arkasında bir pickup kamyonu park etmiş.",
+    "and-chatgpt-04.webp": "Tel örgü çitin ötesinden bakınca pistin yanındaki sarı tabelada 17 ve 35 yazıyor; ileride küçük beyaz bir kule ve kırmızı bir uçak var.",
+    "and-chatgpt-05.webp": "Havaalanının yanındaki bir oyun parkı, mavi zeminine pist işaretleri çizmiş; yeşil gölgelik tentelerin altında kaydıraklar ve tırmanma çerçeveleri var."
+  },
+  "ANE": {
+    "ane-sat-1.webp": "Uydu görüntüsü: Angers Marcé Havalimanı (ANE) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor.",
+    "ane-chatgpt-01.webp": "Ağır bulutlar altında alçak gri terminal genişçe uzanıyor; camların üzerinde adı turuncu harflerle yazılı, önünde boş bir avlu var.",
+    "ane-chatgpt-02.webp": "Alçak akşam güneşinde bir turboprop yolcu uçağı terminalin önünde duruyor; yanında kontrol kulesi ve Angers-Marce yazılı alçak bir bina, yakında yer personeli var.",
+    "ane-chatgpt-03.webp": "Havadan bir görünüm, apron boyunca sıralar halindeki gri hangarları, ortada bir kontrol kulesini ve betonda park etmiş birkaç hafif uçağı gösteriyor.",
+    "ane-chatgpt-04.webp": "Bir uçuş simülasyonu ekran görüntüsü, 26 pistinin dümdüz uzağa uzandığını gösteriyor; orta çizgi ve iniş işaretleri çimen ile ormanlık alan arasında keskin.",
+    "ane-chatgpt-05.webp": "Düz gri gökyüzü altında küçük beyaz bir hafif uçak, 26-08 işaretli kırmızı tabelanın yanındaki çimende duruyor.",
+    "ane-chatgpt-06.webp": "Havalimanı girişindeki beyaz duvarda Angers Loire Aéroport yazısının yanında turuncu bir uçak grafiği yer alıyor; altında Marcé beldesi belirtilmiş.",
+    "ane-chatgpt-07.webp": "Mavi-beyaz bir hafif uçak, aprondaki sarı taksi çizgilerinin yanında park etmiş; arkasında açık gökyüzü altında bir sıra koyu hangar var."
+  },
+  "ANI": {
+    "ani-sat-1.webp": "Uydu görüntüsü: Aniak'ın pisti Kuskokwim Nehri boyunca uzanıyor; terminal ve apron yanında, çevrede ormanlık alan ve sulak araziler var.",
+    "ani-chatgpt-01.webp": "Uydu görüntüsünde düz bir pist geniş bir nehrin yanında uzanıyor; yanında dağınık evler, yollar ve yoğun orman var.",
+    "ani-chatgpt-02.webp": "Alçak beyaz binaların önündeki apronda bir turboprop yolcu uçağı duruyor; arkasında pus içinde kaybolan ormanlık dağlar, önünde iskeleye bağlı bir mavna var.",
+    "ani-chatgpt-03.webp": "Bir kış hava görüntüsü, karla kaplı pistin iki donmuş nehir kanalı arasında uzandığını gösteriyor; alçak güneşte köy çatıları sıcak bir ışıkla parlıyor."
+  },
+  "ANM": {
+    "anm-sat-1.webp": "Uydu görüntüsü: Antsirabe Havalimanı (ANM) su ve kıyı şeridi arasında yer alıyor."
+  },
+  "ANN": {
+    "ann-sat-1.webp": "Uydu görüntüsünde Annette Island Havalimanı'nın (ANN) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor.",
+    "ann-chatgpt-01.webp": "Bu siyah-beyaz hava görüntüsünde apron ve taksi yolu yer yer çimenlerin arasında birleşiyor; kenar boyunca uzun bir hangar ve birkaç alçak bina var.",
+    "ann-chatgpt-02.webp": "Bu havalimanı diyagramı, 07/25 ve 02/20 olarak adlandırılmış kesişen iki pisti gösteriyor; uzunlukları ve saha yükseltisi belirtilmiş.",
+    "ann-chatgpt-03.webp": "Kokpitten bir uçuş simülatörü görünümü, pervane kanatlarının üzerinden düz karlı arazideki bir piste bakıyor; ötede dağlar ve deniz var.",
+    "ann-chatgpt-04.webp": "Eski bir siyah-beyaz karede tel örgü çitin yanındaki bir tabela havalimanının Ketchikan ve çevresine hizmet ettiğini söylüyor; solda bir Pan Am kuyruğu görünüyor.",
+    "ann-chatgpt-05.webp": "Uçak işaretli bir konum haritası, havaalanını Ketchikan'ın güneyindeki bir adaya yerleştiriyor; haritada Hydaburg ve Prince Rupert da adlandırılmış."
+  },
+  "ANR": {
+    "anr-baidu-1.webp": "Antwerp havadan — çimlerle çevrili pist ile taksi yolları arasına dağılmış hangarlar; sağda yollar ve depolar var.",
+    "anr-baidu-2.webp": "Alçak beyaz terminal ve apronun ortasında yükselen koyu renkli kontrol kulesi.",
+    "anr-baidu-3.webp": "Terminal çatısından apron boyunca bakış — kule, biniş alanları ve yer araçları görünüyor."
+  },
+  "ANS": {
+    "ans-sat-1.webp": "Uydu görüntüsü: Andahuaylas Havalimanı (ANS) kuru zemin ve çıplak araziyle çevrili."
+  },
+  "ANV": {
+    "anv-sat-1.webp": "Uydu görüntüsü: Anvik'in çakıl pisti Yukon Nehri kıyısında ormanlık alan ve sulak araziler arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "ANX": {
+    "anx-sat-1.webp": "Uydu görüntüsü: Andenes'in pisti Andøya Adası'nda uzanıyor; terminal ve apron yanında, çevrede deniz ve dağlar var."
+  },
+  "AOC": {
+    "aoc-sat-1.webp": "Uydu görüntüsünde Leipzig–Altenburg Havalimanı (AOC) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor.",
+    "aoc-chatgpt-01.webp": "Açık mavi gökyüzü altında beyaz terminalin camlı cephesi güneşi yakalıyor; sağda ince silindirik bir kontrol kulesi yükseliyor.",
+    "aoc-chatgpt-02.webp": "Gidiş salonu boş; açılı ahşap kolonlar, sıralar halindeki mavi koltukların ve görevlisiz bir check-in gişesinin üzerindeki tavanı taşıyor.",
+    "aoc-chatgpt-03.webp": "Bir harita ekran görüntüsü, pistin tarlalar ve ormanlar arasından çaprazlama geçtiğini gösteriyor; çevresi çakıl ocakları ve dikdörtgen tarım arazileriyle çevrili.",
+    "aoc-chatgpt-04.webp": "Uzun beton pist ve biçilmiş çimenlerin üzerinde ağır bulutlar asılı; ufukta ince bir köy çatıları çizgisi var.",
+    "aoc-chatgpt-05.webp": "Bir Ryanair yolcu uçağı ile küçük bir iş jeti apronu paylaşıyor; boyalı park çizgileri boyunca kulenin yanında kırmızı bir itfaiye aracı park etmiş.",
+    "aoc-chatgpt-06.webp": "Bir havacılık açık gününde gri bir deniz devriye uçağı çimenlerde duruyor; kuyruk dikeyinde Alman bayrağı, çevresinde sarı bir kurtarma kapsülünün etrafında toplanmış kalabalık var.",
+    "aoc-chatgpt-07.webp": "Birkaç hafif uçak geniş bir hangarın içine sığınmış; önde kırmızı-beyaz bir akrobasi uçağı, beton zemin yeşile boyanmış ve sarı bir çerçeveyle çevrilmiş."
+  },
+  "AOE": {
+    "aoe-sat-1.webp": "Uydu görüntüsü: Eskişehir'in pisti Anadolu platosunda şehrin kenarında uzanıyor; terminal ve apron da yanında."
+  },
+  "AOG": {
+    "aog-baidu-1.webp": "Anshan Teng'ao Havalimanı terminalinin ön yüzü — çatıda kırmızı '鞍山' karakterleri ve 'An Shan' yazısı, altında neredeyse boş bir avlu.",
+    "aog-baidu-2.webp": "Terminale daha yakın bir bakış — cam cephenin önünde merdivenler ve fenerler, solda yuvarlak kontrol kulesi.",
+    "aog-chatgpt-01.webp": "Koyu mavi gökyüzü altında terminal çatısında büyük kırmızı Anshan karakterleri ve 'An Shan' yazısı var; arkasında kontrol kulesinin camları görünüyor.",
+    "aog-chatgpt-02.webp": "Gri terminal girişinin üzerinde kırmızı bir pankart asılı; bir grup insan sıra pencerelerin altındaki merdivenlerden yukarı çıkıyor.",
+    "aog-chatgpt-03.webp": "Bir harita ekran görüntüsü, Anshan şehrinin hemen batısına kırmızı bir iğne bırakıyor; G15 ve G16 otoyolları ile doğudaki dağlar açıkça okunuyor."
+  },
+  "AOJ": {
+    "aoj-baidu-1.webp": "Terminalin içinde: ahşap harflerle yazılmış 'Welcome to AOMORI' yazısının yanında iki geleneksel kokeshi bebeği.",
+    "aoj-baidu-2.webp": "Bagaj salonu — Aomori'nin mevsimlerini gösteren arkadan aydınlatmalı panellerin altında ahşap kaplı kolonların etrafında kıvrılan konveyörler.",
+    "aoj-baidu-3.webp": "AOMORI AIRPORT FOREST DINING yemek alanı — yapraklı cam duvara karşı sıcak ahşap bir tezgâh, sağda masalar."
+  },
+  "AOO": {
+    "aoo-sat-1.webp": "Uydu görüntüsü: Altoona'nın pistleri Allegheny Dağları'nın ormanlık alanları ve sırtları arasında uzanıyor; terminal ve apron sahanın yanında."
+  },
+  "AOT": {
+    "aot-sat-1.webp": "Uydu görüntüsü: Aosta Corrado Gex Havalimanı (AOT) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "APK": {
+    "apk-sat-1.webp": "Uydu görüntüsü: Apataki Havalimanı (APK) su ve kıyı şeridi arasında yer alıyor."
+  },
+  "APN": {
+    "apn-sat-1.webp": "Uydu görüntüsü: Alpena'nın pistleri Huron Gölü kıyısında ormanlık alan ve tarım arazileri arasında uzanıyor; terminal ve apron sahanın yanında.",
+    "apn-chatgpt-01.webp": "Alacakaranlıkta terminalin taş ve cam cephesinde sıcak bir ışık parlıyor; girişin üzerinde APN harfleri var.",
+    "apn-chatgpt-02.webp": "Bir uydu haritası Alpena havalimanına yukarıdan bakıyor; kesişen pistler koyu yeşil ormanlık alan arasında, bir kenarında su var.",
+    "apn-chatgpt-03.webp": "Alçak akşam güneşi terminalin bir yüzünü altın rengine boyarken geri kalanı gölgede kalıyor; önündeki yol boş.",
+    "apn-chatgpt-04.webp": "Terminalin içinde sıralar halindeki gri koltuklar, soluk ahşap görünümlü zemin boyunca uzanan yüksek pencerelere bakıyor.",
+    "apn-chatgpt-05.webp": "Koltuklar salonun pencereleri boyunca dizilmiş; apronda mobil bir merdiven ünitesi duruyor ve gökyüzü hafif turuncu parlıyor.",
+    "apn-chatgpt-06.webp": "Check-in gişelerinin önünde iki self-servis kiosk duruyor; yanlarında Delta markası ve duvarda bir Amerikan bayrağı var."
+  },
+  "APO": {
+    "apo-sat-1.webp": "Uydu görüntüsü: Apartadó'nun pisti Karayip ovalarındaki yağmur ormanları ve tarım arazileri arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "AQA": {
+    "aqa-sat-1.webp": "Uydu görüntüsü: Araraquara'nın pisti Sao Paulo eyaletinin iç kesimlerinde tarım arazileri ile kasaba arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "AQG": {
+    "aqg-sat-1.webp": "Uydu görüntüsü: Anqing'in pisti Yangtze'nin kuzey kıyısı ile alçak tepeler arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "AQJ": {
+    "aqj-sat-1.webp": "Uydu görüntüsü: çöl boyunca uzanan bir pist ve paralel taksi yolu; terminal ve apron orta noktasında.",
+    "aqj-chatgpt-01.webp": "Havalimanının krem terminali yol kenarı boyunca kıvrılıyor; cephesinde adı Arapça ve İngilizce yazılı.",
+    "aqj-chatgpt-02.webp": "Yolcular çantalarını apron boyunca taşıyarak beyaz dar gövdeli bir jetin yanındaki biniş merdivenlerine yürüyor; ötede kurak tepeler var.",
+    "aqj-chatgpt-03.webp": "Beyaz bir kontrol kulesi tabanında dışa doğru genişliyor ve tepesinde bir cam halka taşıyor; arkasında çıplak çöl dağları yükseliyor.",
+    "aqj-chatgpt-04.webp": "Yolcular valizlerini varış girişinden dışarı sürüklüyor; kumaş bir tente cam kapıları ve bekleyen insan kalabalığını gölgeliyor.",
+    "aqj-chatgpt-05.webp": "Yukarıdan bakıldığında gidiş salonunun önündeki yolun ortasında biçilmiş bir çit uzanıyor; üzerinde bir yaya geçidi çizili.",
+    "aqj-chatgpt-06.webp": "Apron boyunca sıralar halinde küçük iş jetleri park etmiş; beyaz gövdeleri çıplak tepelere karşı öğleden sonra ışığını yakalıyor.",
+    "aqj-chatgpt-07.webp": "Su jetleri iki yandan fışkırarak yolcu uçağının üzerinde kavis yapıyor; yüksek görünürlüklü yelekli yer ekibi geride durup izliyor."
+  },
+  "ARA": {
+    "ara-sat-1.webp": "Uydu görüntüsü: Acadiana Bölge Havalimanı (ARA) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor.",
+    "ara-chatgpt-01.webp": "Gümüş harfler giriş tentesi boyunca havalimanının adını yazıyor; mavi gökyüzü altında soluk duvarlar, tuğla işçiliği ve bir çimenlik var.",
+    "ara-chatgpt-02.webp": "Havadan bakıldığında 35 pisti tarım arazilerini dümdüz kesiyor; bir taksi yolu sağdaki hangarlara ve kaplı aprona gidiyor.",
+    "ara-chatgpt-03.webp": "Küçük beyaz bir hafif spor uçak beton apronda duruyor; gövdesi boyunca tescili boyanmış, arkasında su ve yeşil tarlalar var.",
+    "ara-chatgpt-04.webp": "Tuğla kolonlar, üzerinde TERMINAL yazılı beyaz bir giriş tentesini taşıyor; çitin ötesinde çimenlik ve uzakta bir pist var.",
+    "ara-chatgpt-05.webp": "Havalimanının amblemi salon duvarına basılmış; sıralar halindeki siyah koltuklar televizyonlara ve çerçeveli afiş sırasına bakıyor.",
+    "ara-chatgpt-06.webp": "Geniş beton apron üzerinde park etmiş küçük pistonlu bir uçak ve hafif bir jetin arkasında bir hangar açık duruyor.",
+    "ara-chatgpt-07.webp": "Hangarın içinde iki adam hafif bir jetin açık burun kapağının yanında yeşil bir gaz tüpüyle çalışıyor; arkada bir başka küçük beyaz uçak park etmiş."
+  },
+  "ARC": {
+    "arc-sat-1.webp": "Uydu görüntüsü: Arctic Village yakınında ormanlar ve göller arasından bir çakıl pist geçiyor; köy pistin kuzey ucunda."
+  },
+  "ARE": {
+    "are-sat-1.webp": "Uydu görüntüsü: Antonio Nery Juarbe Pol Havalimanı (ARE) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "ARK": {
+    "ark-baidu-1.webp": "Terminal girişi — yolcular ve onları uğurlayanlar kanvas tente altında toplanmış.",
+    "ark-baidu-2.webp": "Apronda hafif uçaklar — bulutların altında bir Cessna sırası, ufukta dağlar.",
+    "ark-baidu-3.webp": "Ahşap kulübesindeki 'ARUSHA AIRPORT INFORMATION' penceresi — havalimanının olanakları açıkça görünüyor."
+  },
+  "ARM": {
+    "arm-sat-1.webp": "Uydu görüntüsü: Armidale'in pistleri New England yaylalarında tepeler ve tarım arazileri arasında uzanıyor; terminal ve apron sahanın yanında.",
+    "arm-chatgpt-01.webp": "Kapalı gökyüzü altında iki yolcu, Armidale Bölge Havalimanı'nın alçak gri terminalinin cam girişinin önünden valizlerini sürükleyerek geçiyor.",
+    "arm-chatgpt-02.webp": "Havadan bakıldığında pist yeşil otlakların yanından dümdüz geçiyor; yeni kaplanmış döngüsel bir taksi yolu apron ve hangarlarının etrafında kıvrılıyor.",
+    "arm-chatgpt-03.webp": "Alacakaranlıkta çift motorlu bir turboprop, cam duvarlı terminalin yanındaki apronda duruyor; gölgesi koyu asfalt boyunca uzanıyor.",
+    "arm-chatgpt-04.webp": "Terminalin koyu renkli beşik çatılı ucu saçaklardan yere kadar camla kaplı; kırmızı tuğla yolun yanında pas rengi sanat panelleri duruyor.",
+    "arm-chatgpt-05.webp": "Akşam karanlığında terminal tentesinin altında sıcak lambalar parlıyor; uzaktaki apronda bir uçak kuyruğu son ışığı yakalıyor.",
+    "arm-chatgpt-06.webp": "Boş check-in salonunun içinde üniformalı bir görevli, Qantas ve Link Airways için işaretlenmiş ekranların altındaki bir tezgâha yaslanmış.",
+    "arm-chatgpt-07.webp": "Açık mavi gökyüzü altında yolcular QantasLink turbopropundan aprona iniyor; yer ekibi kanadın yanında bekliyor."
+  },
+  "ARN": {
+    "arn-sat-1.webp": "Uydu görüntüsünde Stockholm Arlanda Havalimanı'ndaki (ARN) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "ARU": {
+    "aru-sat-1.webp": "Uydu görüntüsü: Araçatuba'nın pisti Sao Paulo eyaletinin iç kesimlerinde tarım arazileri ile kasaba arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "ARW": {
+    "arw-sat-1.webp": "Uydu görüntüsü: Arad'ın pisti batı Romanya ovasında uzanıyor; terminal ve apron yanında, çevrede şehir ve tarım arazileri var.",
+    "arw-chatgpt-01.webp": "Alacakaranlıkta Arad Havalimanı'nın mavi cephesi Aeroportul Arad tabelasıyla parlıyor; aşağıda yolcular geniş beton ön avluyu geçiyor.",
+    "arw-chatgpt-02.webp": "Bir yolcu uçağı güzel hava bulutlarının altında piste doğru alçalıyor; apronda yer ekipmanları ve ARAD AIRPORT biniş merdivenleri bekliyor.",
+    "arw-chatgpt-03.webp": "Apronu birkaç yolcu uçağı paylaşıyor; önde wizzair.com yazılı mor bir jet, arkada beyaz bir Moldovya uçağı var; yer ekibi merdivenlerde çalışıyor.",
+    "arw-chatgpt-04.webp": "Check-in salonu boş ve parlak; mavi tavan tabelası Rumence ve İngilizce check-in ve kapılara yönlendiriyor.",
+    "arw-chatgpt-05.webp": "Beyaz şevronlar ve pist kenarı ışıkları soluk, puslu bir ufka doğru uzaklaşıyor; lastik izleri beton yüzeyi karartıyor.",
+    "arw-chatgpt-06.webp": "Bulutsuz mavi gökyüzü altında beyaz çift pervaneli bir yolcu uçağı beton apronda park etmiş; altında uzun bir gölge var.",
+    "arw-chatgpt-07.webp": "Beyaz dar gövdeli bir jet ARAD AIRPORT biniş merdivenlerine bağlanmış; önünde sarı-siyah damalı bir takip aracı bekliyor."
+  },
+  "ARX": {
+    "arx-sat-1.webp": "Uydu görüntüsünde Aracati Dragão do Mar Bölge Havalimanı (ARX) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor.",
+    "arx-chatgpt-01.webp": "Ağır gri gökyüzü altında personel Aracati'deki uzun sazdan terminalin dışında duruyor; yakında bir polis arabası park etmiş.",
+    "arx-chatgpt-02.webp": "Yukarıdan bakıldığında terminal, sıra halinde dik sazdan üçgen çatılar olarak görünüyor; çevresine otoparklar ve hafif bir apron yayılmış.",
+    "arx-chatgpt-03.webp": "Mavi-beyaz boyalı bir Azul yolcu uçağı apronda duruyor; terminalin sazdan çatısının yanında bir kalabalık toplanmış.",
+    "arx-chatgpt-04.webp": "Sazdan terminalin önündeki betonda birkaç küçük tek motorlu uçak park etmiş; gölgesinin altında seyirciler toplanmış.",
+    "arx-chatgpt-05.webp": "Cesur turuncu taksi çizgileri beton apron boyunca kıvrılıyor; uzun sazdan terminalin önünde iş jetleri ve hafif uçaklar park etmiş.",
+    "arx-chatgpt-06.webp": "Yeşil bir yol kenarı tabelası yolcu terminaline yönü gösteriyor; mavi gökyüzü altında sazdan çatıların yanında yüksek beyaz bir su kulesi yükseliyor.",
+    "arx-chatgpt-07.webp": "Hafif uçaklar sazdan terminalin önündeki apronda park etmiş; aralarında kanopisi örtülü parlak turuncu bir alçak kanatlı uçak da var."
+  },
+  "ASA": {
+    "asa-sat-1.webp": "Uydu görüntüsünde Assab Uluslararası Havalimanı'nın (ASA) pisti kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "ASB": {
+    "asb-baidu-2.webp": "Kargo apronunda: YÜK terminalinin önünde park etmiş bir Türkmenistan Havayolları An-74 kargo uçağı.",
+    "asb-baidu-3.webp": "Kargo terminali binası — yeşil bir cephe altında beyaz duvarlar, zemin seviyesinde uzun bir yükleme rampası sırası."
+  },
+  "ASD": {
+    "asd-sat-1.webp": "Uydu görüntüsü: Andros Town Havalimanı (ASD) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor.",
+    "asd-chatgpt-01.webp": "Tek katlı mavi-beyaz bir terminal Andros Town Uluslararası Havalimanı tabelasını taşıyor; direkte Bahama bayrağı, ıslak apronda su birikintileri var."
+  },
+  "ASE": {
+    "ase-sat-1.webp": "Uydu görüntüsü: Aspen'in pisti Rocky Dağları'nda bir vadide uzanıyor; terminal ve apron yanında, çevrede orman ve karlı zirveler var."
+  },
+  "ASF": {
+    "asf-sat-1.webp": "Uydu görüntüsü: Astrahan'ın pisti aşağı Volga ovasında uzanıyor; terminal ve apron yanında, çevrede su yolları ve kurak arazi var.",
+    "asf-chatgpt-01.webp": "Terminalin mavi cam cephesi, dev mavi çatı harflerinin altında çerçeveyi dolduruyor; yolcuların geçtiği yerde düzenli bir çimenlik ve küçük iğne yapraklılar var.",
+    "asf-chatgpt-02.webp": "Gidiş salonunun ahşap kaplı duvarı boyunca uzun bir self-servis check-in kiosku sırası uzanıyor; ekranlar pembe parlıyor, kürk mantolu bir yolcu bir makineyi kullanıyor.",
+    "asf-chatgpt-03.webp": "Gün batımında kuyruğunda Rus üç renkli bayrağı taşıyan bir yolcu uçağı cam terminalin önünde duruyor; yanında bir körük, üstte turuncu-mor bir gökyüzü.",
+    "asf-chatgpt-04.webp": "Terminalin içinde parlak karo zeminli geniş bir koridor, camlı asma kat korkulukları arasında uzanıyor; sıralar halinde tavan ışıkları ve birkaç yolcu dolaşıyor.",
+    "asf-chatgpt-05.webp": "Valizli yolcular cam giriş kapılarında toplanmış; mavi çatı harfleri nemli kaldırımın üzerindeki gri gökyüzüne karşı öne çıkıyor.",
+    "asf-chatgpt-06.webp": "Alacakaranlıkta eski terminal bej taş kaplama ve sıra pencereler gösteriyor; antenlerle dolu bir kulenin yanında mavi havalimanı tabelası, çimenlikte konik iğne yapraklılar var."
+  },
+  "ASJ": {
+    "asj-baidu-1.webp": "'AMAMI' yazılı binaya doğru valizleriyle ilerleyen yolcular terminal önündeki apronda; yer personeli onları yönlendiriyor.",
+    "asj-baidu-2.webp": "Park yerlerinde Japan Air Commuter uçakları — tabelaların altında biniş yapan iki bölgesel jet, pistin hemen ötesinde deniz.",
+    "asj-baidu-3.webp": "Havadan Amami — kıyı boyunca dizilmiş pist, altında resiflerle dolu su uzanıyor."
+  },
+  "ASM": {
+    "asm-sat-1.webp": "Uydu görüntüsü: Asmara'nın pisti yüksek plato üzerinde yer alıyor; terminal ve apron yanında, çevrede şehir ve sırtlar var."
+  },
+  "ASO": {
+    "aso-sat-1.webp": "Uydu görüntüsü: Asosa'nın pisti batı Etiyopya'da tepeler ve ormanlık alanlar arasında uzanıyor; terminal ve apron da yanında.",
+    "aso-chatgpt-01.webp": "Beyaz havalimanı yazısı mavi cam cephenin üzerinde; çapraz kolonların taşıdığı beton tenteler, camdan check-in bankoları ve bekleme koltukları görünüyor.",
+    "aso-chatgpt-02.webp": "Gün batımında bir tepeden: çift turboprop bir yolcu uçağı apronda duruyor; yeşil çatılı binalar ve pist açık tarım arazisine yayılmış, ötede tepeler.",
+    "aso-chatgpt-03.webp": "Sıcak akşam ışığında ikiz kavisli taş merdivenler havalimanı girişindeki taş havuzu kucaklıyor; üstte bayraklar dalgalanıyor ve camlar boyunca havalimanının adı yazılı.",
+    "aso-chatgpt-04.webp": "Uydu görüntüsü yoğun yeşil ormanlık alanı kesen tek bir pisti gösteriyor; çevresinde dağınık tarım arazileri ve küçük yerleşimler var, yüzeyde başka ayrıntı görünmüyor."
+  },
+  "ASP": {
+    "asp-page-2.webp": "Alice Springs'in eski kontrol kulesi — camlı kabinin altında tuğla bir gövde, apronda bekleyen bir Fokker F.27 (yaklaşık 1970; fotoğraf Terry Martin, CAHS koleksiyonu, Airways Museum aracılığıyla).",
+    "asp-page-3.webp": "Havadan Alice Springs — kızıl çöl boyunca uzanan pistler ve taksi yolları; kule, terminal ve apron saha boyunca sıralanmış (CAHS koleksiyonu, Airways Museum aracılığıyla).",
+    "asp-chatgpt-01.webp": "Kırmızı kolonlar ve beyaz gölgelik yelkenleri terminalin kaldırım kenarını süslüyor; üstteki cephede Qantas tabelası var, dışarıda arabalar ve beyaz bir minibüs bekliyor.",
+    "asp-chatgpt-02.webp": "Havadan bir görünüm uzun pisti, taksi yolunu ve apronu seçiyor; birkaç hafif uçak park etmiş, terminal, hangarlar ve otoparklar kızıl çöl zeminine dağılmış.",
+    "asp-chatgpt-03.webp": "Bir Virgin yolcu uçağının kırmızı kuyruğu, arka motorlarının üzerinde çerçeveyi dolduruyor; sarı kır çiçekleri arasında kanadın altında iki yer görevlisi duruyor.",
+    "asp-chatgpt-04.webp": "Boş siyah koltuklar sessiz bir gidiş salonunu dolduruyor; yanlarındaki seyahat acentesi tezgâhı kafesiyle kapalı, duvar panelleri çizgili ve tavan ışıkları altında cilalı bir zemin var.",
+    "asp-chatgpt-05.webp": "Havadan bir görünüm, kızıl toprak park yerlerinde yan yana park etmiş dört yolcu uçağına bakıyor; ötede çalılıkları bir pist kesiyor, ufukta alçak sıradağlar var.",
+    "asp-chatgpt-06.webp": "Bir QantasLink bölgesel jeti çöl pistinden tırmanıyor; kırmızı kuyruğu açık gökyüzüne karşı parlak, kuru çimenlerin ötesinde iki park edilmiş yolcu uçağı pistin karşısında duruyor.",
+    "asp-chatgpt-07.webp": "Qantas check-in bankoları salon boyunca uzanıyor; kırmızı kuyruk bariyerleri sağlık duyuru panosuna doğru kıvrılıyor, hepsi mavi-sarı desenli bir halının üzerinde."
+  },
+  "ASV": {
+    "asv-sat-1.webp": "Uydu görüntüsü: Amboseli'nin pisti Kilimanjaro'nun altındaki savanada uzanıyor; terminal ve apron da yanında."
+  },
+  "ASW": {
+    "asw-sat-1.webp": "Uydu görüntüsü: Asvan'ın pisti Nil Vadisi ile çöl arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "ATB": {
+    "atb-sat-1.webp": "Uydu görüntüsünde Atbara Havalimanı (ATB) çevredeki kuru zemin ve çıplak araziyle bütünleşiyor."
+  },
+  "ATC": {
+    "atc-sat-1.webp": "Uydu görüntüsü: Arthur's Town pisti Bahama kıyısında uzanıyor; terminal ve apron yanında, çevrede deniz ve bitki örtüsü var."
+  },
+  "ATH": {
+    "ath-sat-1.webp": "Uydu görüntüsünde Atina Uluslararası Havalimanı'ndaki (ATH) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "ATK": {
+    "atk-sat-1.webp": "Uydu görüntüsü: Atqasuk'un pisti Alaska Kuzey Yamacı tundrasında uzanıyor; terminal ve apron yanında, çevrede sulak araziler ve göller var.",
+    "atk-chatgpt-01.webp": "Alçak güneş altında küçük tek motorlu bir uçak, tek katlı terminalin yanındaki çakıl apronda duruyor; park etmiş bir pickup ve dalgalı tundra."
+  },
+  "ATL": {
+    "atl-sat-1.webp": "Uydu görüntüsünde Hartsfield-Jackson Atlanta Uluslararası Havalimanı'ndaki (ATL) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "ATM": {
+    "atm-sat-1.webp": "Uydu görüntüsü: Altamira'nın pisti Amazon yağmur ormanları ve nehirler arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "ATR": {
+    "atr-sat-1.webp": "Uydu görüntüsünde Atar Uluslararası Havalimanı (ATR) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
+  },
+  "ATW": {
+    "atw-sat-1.webp": "Uydu görüntüsü: tarım arazileri ile kasaba arasında iki pist kesişiyor; terminal ve apron sahanın ortasında.",
+    "atw-chatgpt-01.webp": "Kavisli bir tente altında girişin üzerindeki tabela Appleton Uluslararası Havalimanı yazıyor; tuğla sütunlar ve cam kapılar salona açılıyor.",
+    "atw-chatgpt-02.webp": "Açık bir günde üç mavi-turuncu yolcu uçağı körüklerde yan yana duruyor; terminal çatısında güneş panelleri, ötede taksi yolları var.",
+    "atw-chatgpt-03.webp": "Çift motorlu bir American Eagle bölgesel jeti, kümülüs bulutlarının altında kırmızı-beyaz-mavi şeritli kuyruğuyla uzun otların yanından pist boyunca hızlanıyor.",
+    "atw-chatgpt-04.webp": "Terminalin içinde çift yükseklikte bir cam duvar, cilalı zeminler ve kavisli bir tavanın üzerinde yükseliyor; bir yolcu yuvarlak hizmet masasının önünden valizini sürüklüyor.",
+    "atw-chatgpt-05.webp": "Terminalin önündeki yolun yanında üç bayrak direği duruyor; giriş barınağı açık gökyüzü altında karanlık, kontrol kulesi solda.",
+    "atw-chatgpt-06.webp": "Gün batımından sonra United renklerinde iki bölgesel jet körüklerde bekliyor; kule ve saha üzerindeki akşam kızıllığı siluete dönüşüyor.",
+    "atw-chatgpt-07.webp": "Kapı salonunda sıralar halindeki gri koltuklar kavisli ahşap tavanın altında; bir görevli, aprona bakan pencerelerin önünden temizlik arabasını itiyor."
+  },
+  "ATZ": {
+    "atz-sat-1.webp": "Uydu görüntüsü: Asyut'un pisti Nil Vadisi'nin çölle buluştuğu yerde uzanıyor; terminal ve apron da yanında."
+  },
+  "AUG": {
+    "aug-sat-1.webp": "Uydu görüntüsü: orman ile kasaba arasına yerleşmiş kısa bir pist; terminal ve apron da yanında."
+  },
+  "AUH": {
+    "auh-baidu-1.webp": "Zayed Uluslararası Havalimanı'nın dalga biçimli çatısı — üzerinden bir yolcu uçağı geçiyor, ön planda indirme yolu ve güneşlikler.",
+    "auh-chatgpt-01.webp": "Ana salonda dev beyaz kemerler tepeden süpürülüyor; kavisli bir oturma adası gümrüksüz mağazalar ve ekranlar arasında, uzakta yolcular hareket ediyor.",
+    "auh-chatgpt-02.webp": "Havadan bakıldığında dalga çatılı terminal yükseltilmiş yollarla çevrili; sağda otoparkı güneş panelleri kaplıyor, apronda yolcu uçakları park etmiş.",
+    "auh-chatgpt-03.webp": "Alacakaranlıkta X biçimli terminal ışıkla parlıyor; bir yolcu uçağı kapıya burnu üzerinde yaklaşıyor, apron ve taksi yolları projektörlerin altında keskin biçimde öne çıkıyor.",
+    "auh-chatgpt-04.webp": "Mavi gökyüzü altında terminalin cam giydirme cephesi dalga biçimli çatısıyla yükselip alçalıyor; beyaz kenarı yol tentelerinin üzerinde güneşte parlıyor.",
+    "auh-chatgpt-05.webp": "Uzun beyaz check-in bankoları, C ve D ile işaretlenmiş yüksek sütunlar arasında uzanıyor; üstte katmanlı kemerli tenteler ve aydınlatılmış yön ekranları var.",
+    "auh-chatgpt-06.webp": "Geceleyin terminalin dalga biçimli cephesi ışıkla yıkanıyor; 1'den 7'ye numaralı sütunların önünden indirme yolunda bir otobüs geçiyor.",
+    "auh-chatgpt-07.webp": "Bu hava bakışı terminalin dalgalanan metal çatısını, altındaki körükleri ve park yerlerini, solda güneş panelli otoparkı içine alıyor."
+  },
+  "AUK": {
+    "auk-sat-1.webp": "Uydu görüntüsünde Alakanuk Havalimanı'nın (AUK) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "AUR": {
+    "aur-sat-1.webp": "Uydu görüntüsü: Aurillac'ın pisti Massif Central'da tepeler ve tarım arazileri arasında uzanıyor; terminal ve apron da yanında.",
+    "aur-chatgpt-01.webp": "AURILLAC yazan dev mavi harfler terminalin soluk duvarında duruyor; yanında küçük kontrol kulesi, mavi gökyüzünde beyaz bulutlar var.",
+    "aur-chatgpt-02.webp": "Etiketli bir uydu haritası ekran görüntüsü, Aurillac-Tronquières havalimanının güneyindeki pisti, apronu ve bir güneş paneli dizisini işaretliyor.",
+    "aur-chatgpt-03.webp": "Yolcular çift turbopropun merdivenlerinden inip terminale doğru apronu geçiyor; yolda cam kabinli bir kontrol kulesi ve kırmızı bir itfaiye aracı var.",
+    "aur-chatgpt-04.webp": "Bu hava karesi, bir çevre yoluyla kesilen alçak düz çatılı bina ve otopark sıralarını gösteriyor; çevrede çimen ve ağaçlar var, pist görünmüyor.",
+    "aur-chatgpt-05.webp": "Yağmurla ıslanmış apronda HOP! renklerini taşıyan çift turboprop kameraya bakıyor; sarı yönlendirme çizgileri ıslak çimene doğru uzanıyor.",
+    "aur-chatgpt-06.webp": "Beyaz bir turboprop apronda duruyor; burnunun yanında turuncu bir traktör park etmiş, gövdesi boyunca HOP! ve Air France yazıları görünüyor.",
+    "aur-chatgpt-07.webp": "Kırmızı, beyaz ve sarı renkli hafif tek motorlu bir uçak apronda duruyor; tescili kuyruğunda net, ötede gri gökyüzü altında alçak barakalar var."
+  },
+  "AUS": {
+    "aus-page-4.webp": "Austin-Bergstrom'daki giriş anıtı ve çeşme — havalimanının adı ve işareti alacakaranlıkta aydınlatılmış.",
+    "aus-page-5.webp": "Barbara Jordan Terminali'nin içinde — çantalı yolcular \"C Gates 1–25\" tabelasının ve gidiş ekranlarının önünden geçiyor.",
+    "aus-chatgpt-01.webp": "\"BARBARA JORDAN TERMINAL\" duvar yazısının altında yolcular tekerlekli çantalarını kapılara doğru çekiyor.",
+    "aus-chatgpt-02.webp": "Terminal ve apronun havadan görünümü; jetler körükleri doldurmuş, yanlarında tıklım tıklım otoparklar ve bir inşaat alanı var.",
+    "aus-chatgpt-03.webp": "Geceleyin apronda bir yolcu uçağı körüğünde bekliyor; derin mavi gökyüzü altında terminal ışıkları parlıyor.",
+    "aus-chatgpt-04.webp": "Gidiş konkorunda yolcular yemek tezgâhlarının yanında yemek yiyor; yüksek pencerelerden gelen gün ışığı cilalı zemini dolduruyor.",
+    "aus-chatgpt-05.webp": "Havaalanının uzaktan hava görüntüsü; pistleri ve taksi yolları açık çayırları kesiyor, terminal ve kule çok uzakta.",
+    "aus-chatgpt-06.webp": "İki yolcu uçağı gri terminalin önünde yan yana duruyor; kırmızı, beyaz ve mavi kuyruk boyaları güneşte parlıyor.",
+    "aus-chatgpt-07.webp": "Bir terminal güvenlik salonunun mimari görselleştirmesi: ahşap çıtalı tavan, kuyruk bariyerleri ve duvarlar boyunca renkli duvar resimleri."
+  },
+  "AUU": {
+    "auu-sat-1.webp": "Uydu görüntüsünde Aurukun Havalimanı (AUU) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor.",
+    "auu-chatgpt-01.webp": "Açık mavi gökyüzü altında çift motorlu bir turboprop, \"Aurukun'a Hoş Geldiniz\" yazılı terminalin dışındaki koyu apronda bekliyor."
+  },
+  "AUX_": {
+    "aux-sat-1.webp": "Uydu görüntüsü: Araguaína Havalimanı (AUX) kasaba, tarım arazileri ve bitki örtüsüyle çevrili."
+  },
+  "AUY": {
+    "auy-sat-1.webp": "Uydu görüntüsünde Aneityum Havalimanı (AUY) çevredeki su ve kıyı şeridiyle bütünleşiyor.",
+    "auy-chatgpt-01.webp": "Soluk sarı tek katlı bir bina \"MYSTERY IS. AIRPORT\" tabelasını taşıyor; çevresinde çimenlik, palmiyeler ve sazdan barınaklar var.",
+    "auy-chatgpt-02.webp": "Uydu görüntüsünde Aneityum'un pisti adanın dar kıyısı boyunca uzanıyor; çevresini parlak turkuaz resif suyu sarıyor.",
+    "auy-chatgpt-03.webp": "Küçük çift motorlu bir uçak çim pistin üzerinden alçaktan süzülüyor, inişe geçmek üzere; arkasında gür palmiyeler var."
+  },
+  "AVA": {
+    "ava-baidu-1.webp": "Anshun Huangguoshu Havalimanı'nın terminali; kıvrımlı çatısında kırmızı '黄果树' karakterleri, altında neredeyse boş bir avlu.",
+    "ava-baidu-2.webp": "Alacakaranlıkta terminal ve kule — yol kenarındaki reklam panosunda '21℃的城市' yazıyor, kontrol kulesi akşam gökyüzüne karşı aydınlatılmış.",
+    "ava-baidu-3.webp": "Yolcular binmek için dışarı yürüyor — arkalarında yaldızlı '黄果树' tabelası ve cam cephe, üstlerinde kule.",
+    "ava-chatgpt-01.webp": "Açık gökyüzü altında terminalin gümüş kavisli çatısı, cam cephe ve boş yolun üzerinde büyük kırmızı karakterler taşıyor.",
+    "ava-chatgpt-02.webp": "Yeni terminalin havadan görünümü: solda kontrol kulesi, çatısının arkasında pist ve otoparkta düzgün sıralar halinde genç ağaçlar.",
+    "ava-chatgpt-03.webp": "Yağmurlu, kapalı bir günde yolcular havalimanının adıyla boyanmış üstü kapalı merdivenlerden çıkıyor; apron yağmurla parlıyor.",
+    "ava-chatgpt-04.webp": "Kırmızı kenarlı tenteleri olan krem duvarlı eski bir terminal; arkasında kontrol kulesi yükseliyor, giriş yolunda beyaz bariyer direkleri var."
+  },
+  "AVB": {
+    "avb-sat-1.webp": "Uydu görüntüsünde Aviano Hava Üssü'nün (AVB) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "AVK": {
+    "avk-sat-1.webp": "Uydu görüntüsü: Arvaikheer Havalimanı (AVK) kasaba, tarım arazileri ve bitki örtüsüyle çevrili."
+  },
+  "AVL": {
+    "avl-page-3.webp": "Asheville Bölge Havalimanı'nın giriş tabelası — SHUTTLE LOT ekranının yanında yeşil harfler, arkada ormanlık tepeler."
+  },
+  "AVR": {
+    "avr-sat-1.webp": "Uydu görüntüsünde Amravati Havalimanı'nın (AVR) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "AVV": {
+    "avv-baidu-1.webp": "Terminalin dışındaki gerilmiş kumaş tente, çelik iskeleti üzerinde ön avluya ve yürüyüş yollarına yayılıyor.",
+    "avv-baidu-2.webp": "Geliş ve gidiş kapıları — 'Domestic Arrivals' ile 'International & Domestic Departures' yan yana; Avalon'un Çin seferleri için tabelalar Çince de yazılmış."
+  },
+  "AWA": {
+    "awa-sat-1.webp": "Uydu görüntüsünde Hawassa Uluslararası Havalimanı'nın (AWA) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor.",
+    "awa-chatgpt-01.webp": "Bulutlarla çizgili gökyüzü altında insanlar terminalin geniş soluk tentesi altındaki cam kapıların yanında toplanmış; çimenlikten bir yaya geçidi geliyor.",
+    "awa-chatgpt-02.webp": "Koyu mavi gökyüzü altında yeşil, sarı ve kırmızı kuyruklu bir yolcu uçağı apronda duruyor; yolcular merdivenlerden çıkıyor."
+  },
+  "AWD": {
+    "awd-sat-1.webp": "Uydu görüntüsü: Aniwa Havalimanı (AWD) su ve kıyı şeridi arasında yer alıyor."
+  },
+  "AWZ": {
+    "awz-sat-1.webp": "Uydu görüntüsü: pist Ahvaz'ın sokak ızgarasına paralel uzanıyor; terminal ve apron orta noktasında.",
+    "awz-chatgpt-01.webp": "Terminal cephesi havalimanının adını İngilizce ve Farsça taşıyor; dışarıda sarı ve beyaz taksiler park etmiş.",
+    "awz-chatgpt-02.webp": "Gidiş salonunun içinde kasetli tavandan gelen ışıklar cilalı zeminde yansıyor; sıralar halindeki koltuklar arasına dağılmış birkaç yolcu var.",
+    "awz-chatgpt-03.webp": "Alçak güneş eski terminali altın rengine boyarken çantalı üç yolcu apronu geçerek binaya yürüyor.",
+    "awz-chatgpt-04.webp": "Yolcular \"IranAir\" yazılı merdivenlerden çıkıyor; biri dönüp el sallıyor, diğerleri aşağıda apronda bekliyor.",
+    "awz-chatgpt-05.webp": "Geceleyin terminal cephesi mavi Farsça ve İngilizce yazılarla parlıyor; duvarın önünde motosikletler ve afiş panoları var.",
+    "awz-chatgpt-06.webp": "Arkadan motorlu bir jet, yağmurla ıslanmış apronda turuncu-mavi çizgili eski terminalin önünde bekliyor; sağında kule var.",
+    "awz-chatgpt-07.webp": "Geceleyin havalimanının adı terminal girişinin üzerinde parlıyor; ön avluda birkaç araba duruyor."
+  },
+  "AXF": {
+    "axf-sat-1.webp": "Uydu görüntüsünde Alxa Sol Banner Bayanhot Havalimanı (AXF) çevredeki kuru zemin ve çıplak araziyle bütünleşiyor."
+  },
+  "AXJ": {
+    "axj-sat-1.webp": "Uydu görüntüsünde Amakusa Havalimanı (AXJ) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor."
+  },
+  "AXK": {
+    "axk-sat-1.webp": "Uydu görüntüsü: Ataq Havalimanı (AXK) kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "AXR": {
+    "axr-sat-1.webp": "Uydu görüntüsü: Arutua'nın pisti Tuamotu'daki bir atol adacığında uzanıyor; terminal ve apron yanında, çevrede lagün var."
+  },
+  "AXT": {
+    "axt-baidu-1.webp": "Akita terminali alacakaranlıkta — tuğla tonlu cephenin üzerinde '秋田空港' yazılı, ortasında kontrol kulesi ve camların arkasında sıcak ışık.",
+    "axt-baidu-2.webp": "Gündüz terminal cephesi — koyu camlar arasında pas kırmızısı kaplama şeritleri, ön avlu yolunda hafif trafik.",
+    "axt-baidu-3.webp": "Terminal girişinin yanında — turuncu altlık altında kolonlar ve saksılar, ötede otoparka giden bir yürüyüş yolu."
+  },
+  "AXU": {
+    "axu-page-2.webp": "Aksum havalimanı terminalindeki isim tabelası — Amharca ile 'AXUM YOHANNES IV AIRPORT' yan yana, üstte Ethiopian Airlines işareti (2024'teki yeniden açılıştan sonra çekildi).",
+    "axu-chatgpt-01.webp": "Mavi gökyüzü altında taş kaplamalı bir kontrol kulesi kemerli terminalin yanında duruyor; bir yolcu çiçek tarhlarının önünden valizini sürüklüyor.",
+    "axu-chatgpt-02.webp": "Havadan bakıldığında mavi çatılı bir terminal ve geniş beton apron yamalı tarım arazileri arasında; pist karenin alt kısmını kesiyor.",
+    "axu-chatgpt-03.webp": "Parlak güneş altında Ethiopian renklerinde çift turboprop bir yolcu uçağı apronda duruyor; kabin kapısı açık, yanında biniş merdivenleri var.",
+    "axu-chatgpt-04.webp": "Geç güneş soluk terminalin üzerinden sıyırıyor; yazılı tabelası havalimanının İngilizce adını gösteriyor, altında boş banklar ve solda dayanmış bir merdiven var.",
+    "axu-chatgpt-05.webp": "Yolcular, Amharca ve İngilizce yazılı kemerli portallerin altından terminal girişine giden beton yoldan yukarı yürüyor; iki yanda yeşil çimenlikler var.",
+    "axu-chatgpt-06.webp": "Gün batımında küçük bir havaalanı altın rengine bürünüyor; park etmiş bir çift turbopropun yanında beyaz kule ve alçak terminal, ötede ormanlık tepeler ve çayır."
+  },
+  "AYJ": {
+    "ayj-sat-1.webp": "Uydu görüntüsü: Maharshi Valmiki Uluslararası Havalimanı (AYJ) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "AYQ": {
+    "ayq-baidu-2.webp": "Terminalin dışındaki transfer alanı — Uluru tur otobüsleri, havalimanı buluşma noktası tabelalarının yanındaki üstü kapalı yürüyüş yolunun altında sıralanmış.",
+    "ayq-chatgpt-01.webp": "Alacakaranlıkta terminalin beyaz çadır zirveleri sırası alçak güneşte parlıyor; yakında beyaz bir bölgesel jet bekliyor ve yolcular aprona yürüyor.",
+    "ayq-chatgpt-02.webp": "Kızıl toprak apronda birkaç yolcu uçağı park etmiş, biri Jetstar yazılı; uzak ufukta devasa hardal renkli kaya hafifçe görünüyor.",
+    "ayq-chatgpt-03.webp": "Pistin bir ucunda kuyruğunda kanguru bulunan bir jet, boyalı 13 işaretinin yanında bekliyor; büyük hardal renkli kaya alçak çalılıkların ötesinde uzanıyor.",
+    "ayq-chatgpt-04.webp": "Kiremit kırmızısı terminalin üzerindeki metal harfler Connellan Havalimanı yazıyor; yolcular boş bir otoparkın önündeki cam kapılardan geçiyor.",
+    "ayq-chatgpt-05.webp": "Sert mavi gökyüzü altında bir Virgin Australia jeti kapısında merdivenlerle bekliyor; yolcular apronu geçiyor, ufuk boyunca kızıl çöl uzanıyor.",
+    "ayq-chatgpt-06.webp": "Terminalin içinde sıralar halindeki metal koltuklar duvar boyunca uzanıyor; kırmızı self-servis kiosklar ve kuyruk direkleri salonu dolduruyor, uzak uçta turkuaz bir duvar var.",
+    "ayq-chatgpt-07.webp": "Kabin penceresinden bakıldığında uzun bir pist kızıl çölü çaprazlama kesiyor; apronda bir yolcu uçağı duruyor, terminal ve otopark bir yanda toplanmış."
+  },
+  "AYT": {
+    "ayt-page-1.webp": "Havadan Antalya Havalimanı — dairesel uydunun etrafında yelpaze biçiminde park etmiş yolcu uçakları, dışarıya doğru yayılan körükler (fotoğrafın haber başlığı çubuğu kırpılmış)."
+  },
+  "AZH": {
+    "azh-sat-1.webp": "Uydu görüntüsünde Azamgarh Havalimanı (AZH) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
+  },
+  "AZN": {
+    "azn-sat-1.webp": "Uydu görüntüsü: Andican'ın pisti Fergana Vadisi'nde tarım arazileri ile kasaba arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "BBU": {
+    "bbu-page-3.webp": "Alacakaranlıkta Băneasa — mavi terminal ve kule aydınlatılmış, apronda otobüsler ve bir yolcu uçağı.",
+    "bbu-chatgpt-01.webp": "Kavisli mavi terminalin üzerinde uzun bir başlık sırası Bükreş Băneasa adını yazıyor; dışarıda beyaz bir minibüs bekliyor.",
+    "bbu-chatgpt-02.webp": "Yukarıdan bakıldığında yuvarlak kubbeli terminal ortada; çevresini kule ve uzun ofis blokları sarıyor, önünde geniş bir çimenlik ve tıklım tıklım otoparklar var.",
+    "bbu-chatgpt-03.webp": "Sarı tek kişilik bir akrobasi uçağı beton apronda duruyor; arkasında kontrol kulesi ve yuvarlak Aurel Vlaicu terminali, üstte bulutlarla çizgili bir gökyüzü.",
+    "bbu-chatgpt-04.webp": "Soluk sarı terminal kıvrılarak uzanıyor; koyu cam kubbesi kavisin ortasına yerleşmiş, mavi harfler Aurel Vlaicu adını yazıyor ve kule çatı hattının hemen arkasında yükseliyor.",
+    "bbu-chatgpt-05.webp": "Geceleyin mavi-gümüş bir iş jeti apronda duruyor; projektörlerle aydınlatılmış, çevresinde turuncu koniler ve arkada aydınlatılmış kule var.",
+    "bbu-chatgpt-06.webp": "Bir turbopropun kanadı ve pervanesi çerçevenin üzerine sarkıyor; altında mavi terminal, kule ve Bükreş Băneasa yazısının altında toplanmış bir kalabalık var.",
+    "bbu-chatgpt-07.webp": "Geniş bir çerçevede beyaz bir iş jeti apronun sağında duruyor; yuvarlak terminal ve kule solu kaplıyor, açık gökyüzü altında keskin gölgeler var."
+  },
+  "BCN": {
+    "bcn-sat-1.webp": "Uydu görüntüsünde Barselona-El Prat Havalimanı'ndaki (BCN) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "BIG": {
+    "big-sat-1.webp": "Uydu görüntüsü: Allen Ordu Havaalanı (BIG) kasaba, tarım arazileri ve bitki örtüsüyle çevrili."
+  },
+  "BKK": {
+    "bkk-sat-1.webp": "Uydu görüntüsü: Suvarnabhumi Havalimanı'ndaki (BKK) terminaller, pistler ve çevredeki şehir."
+  },
+  "BPS": {
+    "bps-sat-1.webp": "Uydu görüntüsü: Porto Seguro'nun pisti Brezilya'nın Atlantik kıyısında orman ile plaj arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "BYF": {
+    "byf-sat-1.webp": "Uydu görüntüsünde Albert Bray Havalimanı'nın (BYF) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "BYH": {
+    "byh-sat-1.webp": "Uydu görüntüsü: uzun bir pist tarım arazilerini çaprazlama kesiyor; apron ve hangarlar orta noktasının yanında.",
+    "byh-chatgpt-01.webp": "Gün doğumunda küçük tek motorlu bir turboprop, alçak beyaz terminalin önündeki apronda bekliyor; güneş pararken birkaç kişi ona doğru yürüyor.",
+    "byh-chatgpt-02.webp": "Sahanın havadan görünümü: geniş ve boş beton apronda tek başına beyaz çift jetli bir yolcu uçağı; ötede beyaz kule, su kulesi ve orman var.",
+    "byh-chatgpt-03.webp": "Beyaz kule küçük bir amblem taşıyor; yanında alçak tek katlı bir ofis bloğu ve çimenlikler, ön planda geniş çizgili ve boş bir apron var."
+  },
+  "CAI": {
+    "cai-page-1.webp": "Kahire Uluslararası'ndaki EgyptAir / Star Alliance salonu resepsiyonu — ahşap paneller ve mermer bir sehpa, kapıların ötesinde sakin oturma alanları (Mısır Sivil Havacılık Bakanlığı, Ocak 2025, Devlet Enformasyon Servisi aracılığıyla).",
+    "cai-page-2.webp": "EgyptAir'in business sınıfı check-in alanı — uçuş ekranlarının altında mavi bankolar, check-in yapan yolcular (Mısır Sivil Havacılık Bakanlığı, Ağustos 2021, Devlet Enformasyon Servisi aracılığıyla)."
+  },
+  "CAK": {
+    "cak-page-1.webp": "Bir American Airlines check-in bankosu — bir görevli çantayla ilgilenirken yolcular izliyor, arkada havayolunun mavi-beyaz markası var.",
+    "cak-page-2.webp": "Varış koridoru — çantalı yolcular 'Arrivals' tabelasının altında çıkışa ilerliyor."
+  },
+  "CAN": {
+    "can-sat-1.webp": "Uydu görüntüsü: Guangzhou Baiyun Uluslararası Havalimanı (CAN) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "CDG": {
+    "cdg-baidu-1.webp": "Charles de Gaulle'ün 1. Terminali içinde — dairesel atriyumdaki 'Bars, Restaurants' sırası cam duvarlarının altında, yanlarından yolcular akıyor.",
+    "cdg-baidu-2.webp": "2. Terminale giden yürüyen merdiven — üstteki tabela 'Bagages / Baggage / 行李提取' ve 'Sortie / Exit' yazılarını üç dilde gösteriyor."
+  },
+  "CFE": {
+    "cfe-baidu-2.webp": "İş havacılığı terminali — koyu cephesinde 'départs / departures' yazılı, önünde döner kapı ve indirme şeridi.",
+    "cfe-baidu-3.webp": "Apronda bir Dassault Falcon iş jeti; arkasında kontrol kulesi ve terminal.",
+    "cfe-chatgpt-01.webp": "İndirme döner kavşağının ortasındaki direk üzerinde bir çift kanatlı uçak heykeli duruyor; bir yolcu cam cepheli terminale doğru valizini sürüklüyor.",
+    "cfe-chatgpt-02.webp": "Yukarıdan bakıldığında iskele ana binadan aprona uzanıyor; birkaç küçük uçak park etmiş, ötede kırmızı çatılı bir kasaba var.",
+    "cfe-chatgpt-03.webp": "Yolcular bir jeti binmek için mobil merdivenlerden çıkıyor; yüksek görünürlüklü bir yer görevlisi yanda duruyor, üstlerinde terminalin isim tabelası var.",
+    "cfe-chatgpt-04.webp": "Havaalanının notlandırılmış hava görüntüsü çim ve kaplı pistleri işaretliyor; solda tarlaların yanında birkaç hafif uçak park etmiş.",
+    "cfe-chatgpt-05.webp": "Aşağıdan bakıldığında terminal ve tıklım tıklım otoparkları, iki yolcu uçağının durduğu bir apronu çevreliyor; döner kavşak adasında çift kanatlı uçak anıtı var.",
+    "cfe-chatgpt-06.webp": "Bir Air France HOP bölgesel jeti apronda duruyor; yanında bir bagaj yükleyici ve bir yer aracı çalışıyor, ötede tepeler yükseliyor.",
+    "cfe-chatgpt-07.webp": "Sırt çantalı bir yolcu, terminalin koyu tentesindeki sarı 'départs' yazısının altındaki döner kapılardan geçiyor."
+  },
+  "CGK": {
+    "cgk-baidu-1.webp": "Soekarno-Hatta terminalinin içinde — gidiş salonunun geometrik tavanı altında telkari desenli kırmızı kemerler duruyor.",
+    "cgk-baidu-2.webp": "Biniş koridoru — tropikal bitkilere bakan yeşil kirişler ve camlar, D6 kapısına yönelen sarı bir tabela."
+  },
+  "CJS": {
+    "cjs-sat-1.webp": "Uydu görüntüsü: Ciudad Juarez'in pistleri Chihuahua Çölü'nün kenarında şehir ile kurak arazi arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "CLO": {
+    "clo-sat-1.webp": "Uydu görüntüsü: Cali'nin pisti Cauca Vadisi'nde yer alıyor; terminal ve apron doğusunda, çevrede şehir ve şeker kamışı tarlaları var.",
+    "clo-chatgpt-01.webp": "Terminalin koyu, testere dişli çatı hattı bulutlu gökyüzüne uzanıyor; indirme yolunda taksiler ve arabalar bekliyor, ötede kontrol kulesi var.",
+    "clo-chatgpt-02.webp": "Havadan bir görünüm uzun düz bir pisti ve paralel taksi yolunu izliyor; solda düz tarım arazileri arasındaki terminalin yanında uçaklar park etmiş.",
+    "clo-chatgpt-03.webp": "Arkadan bakıldığında beyaz çift jetli bir uçak apronda duruyor; arkasında konik kontrol kulesi, projektör direkleri ve çitlerle çevrili terminal var.",
+    "clo-chatgpt-04.webp": "Yolcular gidiş salonundaki banklarda ikişer üçer oturuyor; iki yanda dükkânlar ve uçuş ekranları, açık bölmelerin ötesinde palmiye yaprakları görünüyor.",
+    "clo-chatgpt-05.webp": "Kırmızı kuyruklu ve kırmızı motor kaportolu bir jet B9 kapısında bekliyor; önündeki aprona bagaj arabaları ve yer ekipmanları dağılmış.",
+    "clo-chatgpt-06.webp": "Mavi, bulutlarla çizgili bir gökyüzü altında LATAM yazılı bir jet apronda duruyor; terminalin üzerinde beton kontrol kulesi palmiye ağaçlarının yanında yükseliyor.",
+    "clo-chatgpt-07.webp": "Bir yolcu uçağı kapısında kameraya bakıyor; sağda terminalden sarkan bir körük ve kırmızı çizgili apronda mavi bir bagaj arabası var."
+  },
+  "CMF": {
+    "cmf-sat-1.webp": "Uydu görüntüsü: pist Chambéry dışındaki yeşil kırlarda uzanıyor; terminal ve apron da yanında."
+  },
+  "COR": {
+    "cor-sat-1.webp": "Uydu görüntüsü: Cordoba'nın pistleri şehrin kuzeyinde; terminal ve apron sahanın doğusunda, çevrede tarım arazileri ve konutlar var."
+  },
+  "CPC": {
+    "cpc-sat-1.webp": "Uydu görüntüsü: San Martín de los Andes pisti Patagonya Andları'nda vadiler ve göller arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "CPH": {
+    "cph-sat-1.webp": "Uydu görüntüsünde Kopenhag Kastrup Havalimanı'ndaki (CPH) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "CPT": {
+    "cpt-sat-1.webp": "Uydu görüntüsünde Cape Town Uluslararası Havalimanı'ndaki (CPT) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "CTD": {
+    "ctd-sat-1.webp": "Uydu görüntüsünde Alonso Valderrama Havalimanı (CTD) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
+  },
+  "CUM": {
+    "cum-sat-1.webp": "Uydu görüntüsü: Cumaná'nın pisti Venezuela Karayip kıyısında şehir ile tepeler arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "CUZ": {
+    "cuz-sat-1.webp": "Uydu görüntüsü: Cusco'nun pisti bir And vadisinde yer alıyor; terminal ve apron yanında, çevrede şehir ve yamaçlar var.",
+    "cuz-chatgpt-01.webp": "Kavisli tentenin üzerinde adı yazılı terminalin dışındaki indirme şeridinde arabalar ve taksiler kuyruk oluşturmuş; solda dağlar görünüyor.",
+    "cuz-chatgpt-02.webp": "Havadan bir görünüm, yoğun kırmızı çatılı evlerin arasına yerleşmiş tek bir pisti gösteriyor; şehri teraslı tepeler sarıyor.",
+    "cuz-chatgpt-03.webp": "LAN renklerinde bir jet terminalin önünde yanaşmış; yanında bagaj arabalarını idare eden yer ekibi, arkada koyu yeşil bir dağ sırtı var.",
+    "cuz-chatgpt-04.webp": "Ağır gri bulutlar altında yolcular terminalin önünden geçiyor; adı tentenin üzerinde, sarı korkulukların üstündeki kulede bir CORPAC tabelası var.",
+    "cuz-chatgpt-05.webp": "Kanadın üzerinden bakınca bir taksi yolu kuru sarı çimenlerin yanından piste doğru uzanıyor; ötede şehir yamaçları ve uzak dağlar var.",
+    "cuz-chatgpt-06.webp": "Bir LATAM jeti, tuğla binalar sırasının önündeki apronda duruyor; duvarda sarı bir '07' işareti ve tepelerin üzerinde yükselen kümülüs bulutları var.",
+    "cuz-chatgpt-07.webp": "Bir uçak, kapılarda park etmiş iki LAN jetinin yanından apron boyunca taksi yapıyor; arkalarında yeşil yamaca sıkışık tuğla evler yükseliyor."
+  },
+  "CWB": {
+    "cwb-baidu-1.webp": "Brezilya Hava Kuvvetleri'ne ait bir Boeing 737, Curitiba pistinden tırmanıyor.",
+    "cwb-baidu-2.webp": "Burun üstü taksi yapan bir Tu-154, üç motoru görünüyor — Curitiba'ya fotoğrafçıları çeken nadir ziyaretçilerden biri.",
+    "cwb-chatgpt-01.webp": "Açık mavi gökyüzü altında, havalimanının tam adının yazılı olduğu uzun mavi bir tabela, düzgün biçilmiş çimenliğin üzerindeki terminal tentesinin altında uzanıyor.",
+    "cwb-chatgpt-02.webp": "Yüksekten bakıldığında terminal ve geniş otoparkları araçlarla dolu; ötede pist ve geniş şehir bulutların altında uzanıyor.",
+    "cwb-chatgpt-03.webp": "Havadan bakıldığında terminalin kapılarında bir sıra yolcu uçağı duruyor; pistin yanındaki kaldırıma iki oval çimen adası yerleştirilmiş.",
+    "cwb-chatgpt-04.webp": "Bir jet körükte burun üstü duruyor; altında sarı-siyah bir geri itme traktörü, ıslak aprona turuncu koniler serpilmiş.",
+    "cwb-chatgpt-05.webp": "Havadan bir görünüm terminalin körüklerini sıra halinde, kırmızı kuyruklu yolcu uçaklarını park yerlerinde ve yeşil çimenler arasında taksi yollarıyla buluşan bir pisti gösteriyor.",
+    "cwb-chatgpt-06.webp": "Mavi harfler terminalin çatı hattı boyunca uzanıyor; altında mavi tentelerle gölgelenen bir otopark, kaldırımda araba kiralama yön tabelaları var.",
+    "cwb-chatgpt-07.webp": "Tepeden bakışta terminalin parmaklarında iki uçak, arabalarla dolu halka biçimli otoparklar ve pistte iniş yapan bir jet görülüyor."
+  },
+  "CYA": {
+    "cya-sat-1.webp": "Uydu görüntüsünde Antoine-Simon Uluslararası Havalimanı'nın (CYA) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor.",
+    "cya-chatgpt-01.webp": "Soluk yeşil bir tente altındaki beyaz tabela, Les Cayes'teki Antoine Simon Uluslararası Havalimanı'na Fransızca hoş geldiniz yazıyor; altından insanlar geçiyor.",
+    "cya-chatgpt-02.webp": "Kapalı gökyüzü altında arka motorlu ve T kuyruklu beyaz bir bölgesel jet, koyu asfalt apron boyunca yeşil ağaç duvarının önünden taksi yapıyor.",
+    "cya-chatgpt-03.webp": "Parlak öğle güneşi altında küçük yeşil-beyaz tek motorlu bir turboprop beton apronda duruyor; kabin kapısı açık, merdivende bir kişi var.",
+    "cya-chatgpt-04.webp": "Mavi-beyaz bir bölgesel jet, su topu selamlaması eşliğinde ıslak pist boyunca ilerliyor; çimenden iki itfaiyeci koyu kıyafetleriyle hortumları doğrultuyor.",
+    "cya-chatgpt-05.webp": "Aeroport Antoine Simon des Cayes yazılı mavi bir tabela tel örgü çitin yanında duruyor; parlak gökyüzünde kümülüs bulutları, yanında bir palmiye ve pembe zakkum çiçekleri var.",
+    "cya-chatgpt-06.webp": "Batan güneş, duvarında Les Cayes Airport yazan küçük beyaz terminalin arkasındaki apronu altın rengine boyuyor; girişin yanında birkaç yolcu duruyor.",
+    "cya-chatgpt-07.webp": "Soluk nane yeşili varış girişi, iki aşağı okun üzerinde Arrivee yazılı beyaz bir tabela taşıyor; önünde mavi korkuluklar ve çalılar var."
+  },
+  "DEL": {
+    "del-sat-1.webp": "Uydu görüntüsünde Indira Gandhi Uluslararası Havalimanı'ndaki (DEL) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "DHF": {
+    "dhf-sat-1.webp": "Uydu görüntüsü: Al Dhafra Hava Üssü (DHF) kuru zemin ve çıplak araziyle çevrili."
+  },
+  "DIE": {
+    "die-sat-1.webp": "Uydu görüntüsü: Antsiranana'nın pisti kuzey Madagaskar'da tepeler ile kasaba arasında yer alıyor; terminal ve apron da yanında."
+  },
+  "DOH": {
+    "doh-sat-1.webp": "Uydu görüntüsünde Hamad Uluslararası Havalimanı'ndaki (DOH) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "DUB": {
+    "dub-sat-1.webp": "Uydu görüntüsünde Dublin Havalimanı'ndaki (DUB) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "DXB": {
+    "dxb-sat-1.webp": "Uydu görüntüsü: Dubai Uluslararası Havalimanı (DXB) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "EDC": {
+    "edc-baidu-3.webp": "Havalimanının beyaz kontrol kulesi — kare bir gövde üzerinde camlı kabin, dibinde araçlar ve bir helikopter.",
+    "edc-chatgpt-01.webp": "Koyu mavi alacakaranlıkta, kavisli geniş tenteli beyaz bir hangar ışıklarla parlıyor; cam cephesinde apronun üzerinde Henriksen yazılı.",
+    "edc-chatgpt-02.webp": "Alacakaranlıkta beyaz bir iş jeti kavisli tentenin altında bekliyor; yanında bir yakıt kamyonu çalışıyor, beton apronu turuncu koniler işaretliyor.",
+    "edc-chatgpt-03.webp": "Soluk ahşap zeminli ve taş sütunlu geniş bir salon, yüksek pencerelerden aprona bakıyor; ortada bir stand üzerinde büyük bir jet motoru sergileniyor.",
+    "edc-chatgpt-04.webp": "Resepsiyonun arkasında iki görevli tezgâh üzerinden bir anahtar setini uzatıyor; yanlarındaki monitörde Austin Executive logosu görünüyor.",
+    "edc-chatgpt-05.webp": "Açık mavi gökyüzü altında dev beyaz bir hangar Austin Executive Airport yazısını taşıyor; önündeki boş beton yol boyunca sarı bariyer direkleri dizilmiş.",
+    "edc-chatgpt-06.webp": "Hangar karanlık çöktükten sonra parlak biçimde aydınlatılmış; cilalı zeminde yan yana birkaç küçük tek motorlu uçak ve bir çift motorlu uçak park etmiş.",
+    "edc-chatgpt-07.webp": "Geceleyin hangarın dışındaki kavisli tente bir sıra lambayla parlıyor; beyaz duvarları ve geniş beton apronu aydınlatıyor."
+  },
+  "EPS": {
+    "eps-sat-1.webp": "Uydu görüntüsü: Arroyo Barril Havalimanı (EPS) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "EWR": {
+    "ewr-sat-1.webp": "Uydu görüntüsü: Newark Liberty Uluslararası Havalimanı (EWR) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "FCO": {
+    "fco-sat-1.webp": "Uydu görüntüsü: Roma Fiumicino Havalimanı'ndaki (FCO) terminaller, pistler ve çevredeki şehir."
+  },
+  "FMM": {
+    "fmm-sat-1.webp": "Uydu görüntüsü: Memmingen'in pisti Allgäu tepeleri ile tarım arazileri arasında uzanıyor; terminal ve apron sahanın kuzeyinde."
+  },
+  "FON": {
+    "fon-sat-1.webp": "Uydu görüntüsü: La Fortuna havalimanı kırmızıyla daire içine alınmış; Kosta Rika'da yağmur ormanları ve tarım arazileriyle çevrili.",
+    "fon-chatgpt-01.webp": "Hava görüntüsünde 24 ile işaretli bir pist yeşil tarlaları kesiyor; bir ucunda kırmızı çatılı bir bina ve yeşil bir hangar toplanmış, ötede yağmur ormanları ve dağlar var.",
+    "fon-chatgpt-02.webp": "Gün batımında kırmızı-beyaz tek motorlu bir uçak FON işaretli pistte bekliyor; parlayan gökyüzü altında dev bir volkan koyu bir koni olarak yükseliyor.",
+    "fon-chatgpt-03.webp": "SANSA yazılı beyaz tek motorlu bir turboprop pist boyunca taksi yapıyor; arkasında dik konik bir volkan soluk gökyüzüne yükseliyor.",
+    "fon-chatgpt-04.webp": "Bir pervane göbeği ve motor kaportası sol ön planı dolduruyor; ötesinde boş bir apron, kümülüs bulutu yığınlarının altındaki bir volkana doğru uzanıyor.",
+    "fon-chatgpt-05.webp": "NatureAir yazılı beyaz çift motorlu bir turboprop çim kenarında duruyor, yanında turuncu koniler var; uzakta bir volkan pus içinde kayboluyor.",
+    "fon-chatgpt-06.webp": "Beyaz tek motorlu bir turboprop tekerlekleri inik halde yaklaşıyor, ağaç tepelerinin üzerinden alçaktan süzülerek ormanla çevrili piste inişe geçiyor.",
+    "fon-chatgpt-07.webp": "Sırt çantalı yolcular apron boyunca sırayla uzaklaşıyor; elinde panosuyla bir yer görevlisi SANSA yazılı bir uçağın yanında duruyor, arkada bulutlara bürünmüş bir volkan var."
+  },
+  "FRA": {
+    "fra-baidu-2.webp": "Frankfurt Havalimanı'ndaki Squaire — eğimli destekleri üzerinde rayları ikiye ayıran uzun beyaz kavisli bina, yanından otoyol geçiyor.",
+    "fra-baidu-3.webp": "Havadan Frankfurt — apron ve pistlere dağılmış uçaklar ve inşaat trafiği, orman kuşağının ötesinde şehir silueti."
+  },
+  "GOY": {
+    "goy-sat-1.webp": "Uydu görüntüsü: Ampara Havalimanı (GOY), 07/25 pisti Doğu Sri Lanka'da yeşil bitki örtüsü ve tarım arazilerini kesiyor.",
+    "goy-chatgpt-01.webp": "Bu bir fotoğraf değil, koyu renkli bir havalimanı veri kartı; büyük mavi harflerle VCCG ve ADP, Ampara Havalimanı ve Sri Lanka, Ampara'yı adlandıran bir başlık var."
+  },
+  "GPA": {
+    "gpa-sat-1.webp": "Uydu görüntüsü: Patras havalimanının pisti kuzeybatı Mora'nın kıyı ve tepeleri arasında uzanıyor; terminal ve apron da yanında.",
+    "gpa-chatgpt-01.webp": "Koyu mavi bir tente altında alçak Araxos Havalimanı terminali boş bir ön avluya bakıyor; açık gökyüzü altında tek bir taksi bekliyor.",
+    "gpa-chatgpt-02.webp": "Kapısında mobil merdivenler bulunan bir Aegean Airbus apronda duruyor; alçak güneş ışığı ve uzun gölgeler betona yayılıyor.",
+    "gpa-chatgpt-03.webp": "Havadan bakıldığında pist eşiği büyük beyaz rakamlarla 07 olarak işaretli; solda hangarlar ve apron, çevrede tarım arazileri uzanıyor.",
+    "gpa-chatgpt-04.webp": "Pasaport kontrol bankosu terminalin içinde boş duruyor; cam kabinlerin ve cilalı zeminin üzerindeki mavi tabelalar Yunanca ve İngilizce yazılı.",
+    "gpa-chatgpt-05.webp": "Çantalı yolcular, parlak bir öğleden sonra mobil merdivenlerle sarı bir TUIfly Boeing 737-800'e binmek için apronu geçiyor.",
+    "gpa-chatgpt-06.webp": "Terminalin bir köşesinde Master Coffee Air kiosku kepenkli; koridorun ilerisinde güvenlik kontrolü ve sivil havacılık otoritesi tabelaları var."
+  },
+  "GRB": {
+    "grb-sat-1.webp": "Uydu görüntüsü: Green Bay'in iki pisti Michigan Gölü kıyısındaki ovada uzanıyor; terminal ve apron sahanın yanında."
+  },
+  "GRU": {
+    "gru-sat-1.webp": "Uydu görüntüsü: Sao Paulo/Guarulhos Uluslararası Havalimanı (GRU) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "GUW": {
+    "guw-sat-1.webp": "Uydu görüntüsü: Atırav'ın pisti kurak Hazar ovasında uzanıyor; terminal ve apron yanında, çevrede nehirler ve sulak araziler var."
+  },
+  "GYL": {
+    "gyl-sat-1.webp": "Uydu görüntüsü: Argyle Havalimanı (GYL) kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "GZP": {
+    "gzp-sat-1.webp": "Uydu görüntüsü: Gazipaşa'nın pisti Toros Dağları ile Akdeniz arasındaki kıyı ovasında yer alıyor; terminal ve apron da yanında."
+  },
+  "HKG": {
+    "hkg-baidu-1.webp": "Kabin penceresinden: terminalin tonozlu çatısının önündeki park yerinde bir Cathay uçağı; aşağıdaki apronda 'S35' park işareti boyanmış.",
+    "hkg-baidu-2.webp": "1. Terminalin gidiş katı — dalga biçimli tavanın altında yürüyen bantlar, üstte 40 ve 41 kapı tabelaları, yanlarından valizlerini sürükleyen yolcular geçiyor.",
+    "hkg-baidu-3.webp": "Bir Cathay Pacific Cargo Boeing 747, deniz kıyısındaki pistten havalanıyor; uçağın altından bir feribot geçiyor.",
+    "hkg-chatgpt-01.webp": "1. Terminalin atriyumuna aşağıdan bakış: kafes tavanın altında üst üste yürüyen merdivenler, katlar arasında hareket eden yolcular.",
+    "hkg-chatgpt-02.webp": "Havadan bakıldığında dolgu adada iki pist ve uzun terminal var; körfezin arkasında yeşil dağlar yükseliyor.",
+    "hkg-chatgpt-03.webp": "Bir Cathay Pacific Boeing 747, dalga biçimli terminal çatısının yanındaki park yerinde duruyor; aprona kargo arabaları ve paletler dağılmış.",
+    "hkg-chatgpt-04.webp": "Gidiş konkorunda 211 ve 212 kapı tabelaları, tonozlu tavana doğru uzanan bir çift yürüyen bandı çevreliyor.",
+    "hkg-chatgpt-05.webp": "Bulutların altında yüksekten bakıldığında havalimanı adası ve pist şeritleri açık suda yer alıyor; uzak kıyı boyunca puslu tepeler var.",
+    "hkg-chatgpt-06.webp": "Cathay Pacific jetleri dalga çatılı konkorun önündeki park yerlerinde sıralanmış; arkalarında kontrol kulesi apronun üzerinde yükseliyor.",
+    "hkg-chatgpt-07.webp": "Havadan bakıldığında uzun Y biçimli konkor dışarı uzanıyor; kapılarında düzinelerce uçak burun üstü park etmiş."
+  },
+  "HND": {
+    "hnd-sat-1.webp": "Uydu görüntüsü: Tokyo Haneda Havalimanı (HND) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "HOF": {
+    "hof-sat-1.webp": "Uydu görüntüsü: Al-Ahsa'nın pisti vaha ile çöl arasında uzanıyor; terminal ve apron yanında, çevrede palmiye bahçeleri ve kasaba var."
+  },
+  "HPN": {
+    "hpn-sat-1.webp": "Uydu görüntüsü: Westchester County Havalimanı (HPN) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "HQQ": {
+    "hqq-sat-1.webp": "Uydu görüntüsü: Anyang Hongqiqu Havalimanı (HQQ) kasaba, tarım arazileri ve bitki örtüsüyle çevrili."
+  },
+  "HRH": {
+    "hrh-sat-1.webp": "Uydu görüntüsü: Aligarh Havalimanı (HRH) kasaba, tarım arazileri ve bitki örtüsüyle çevrili."
+  },
+  "HUU": {
+    "huu-page-1.webp": "Huánuco pistinin yanındaki turuncu rüzgâr çorabı — mavi çitin ötesinde yamaçtaki şehir yükseliyor (fotoğraf CORPAC'ın resmi havalimanı veri sayfasından, Eylül 2023).",
+    "huu-page-2.webp": "Gidiş salonu — havaalanına bakan tavandan zemine camlar, sıralar halinde bekleyen yolcular (fotoğraf CORPAC'ın resmi havalimanı veri sayfasından).",
+    "huu-chatgpt-01.webp": "Huánuco terminalinin girişinde uzun mavi bir tabela cam cephe boyunca uzanıyor; kuru kahverengi tepelerin altında kapılara doğru bir rampa çıkıyor.",
+    "huu-chatgpt-02.webp": "Direkler üzerinde siyah bir kule terminalin yanında yükseliyor; terminalin mavi cephesi ağır bulutlar ve yeşil dağlar altında havalimanının tam adını taşıyor.",
+    "huu-chatgpt-03.webp": "Bir LC Perú çift turbopropu apronda duruyor; yolcular arka merdivenlerden çıkıyor, kırmızı kuyruğu sıcak mavi gökyüzü altında parlıyor.",
+    "huu-chatgpt-04.webp": "Yolcular apronu geçerek, tuğla evlerle kaplı çorak bir yamacın altında park etmiş kırmızı kuyruklu bir uçağa doğru yürüyor.",
+    "huu-chatgpt-05.webp": "Soluk pist kenarı işareti güneşi yakalıyor; omuz boyunca kuru çimenler ve ötede katmanlı kahverengi sırtlar var.",
+    "huu-chatgpt-06.webp": "Sırt çantalı bir yolcu terminalin dışındaki rampayı yürüyor; terminalin çatı hattı havalimanının tam adını beyaz harflerle taşıyor.",
+    "huu-chatgpt-07.webp": "Bir itfaiye aracı taksi yapan yolcu uçağının üzerine su kavisi fışkırtıyor; sprey kırmızı kuyruklu gövdenin önünde sise dönüşüyor."
+  },
+  "HVA": {
+    "hva-sat-1.webp": "Uydu görüntüsünde Analalava Havalimanı (HVA) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
+  },
+  "IAD": {
+    "iad-sat-1.webp": "Uydu görüntüsü: Washington Dulles Uluslararası Havalimanı (IAD) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "ICN": {
+    "icn-sat-1.webp": "Uydu görüntüsü: Incheon Uluslararası Havalimanı (ICN) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "IEO": {
+    "ieo-sat-1.webp": "Uydu görüntüsünde Aioun el Atrouss Havalimanı'nın (IEO) pisti kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "IQA": {
+    "iqa-sat-1.webp": "Uydu görüntüsünde Al Asad Hava Üssü (IQA) çevredeki kuru zemin ve çıplak araziyle bütünleşiyor.",
+    "iqa-chatgpt-01.webp": "Havadan bakıldığında sıralar halinde savaş uçakları bir çöl apronunda duruyor; pistler ve soluk üs binaları ufka doğru uzanıyor.",
+    "iqa-chatgpt-02.webp": "Gün batımında çöl üssü patlama duvarlarıyla bloklara ayrılmış; ön planda büyük beyaz çatılı bir hangar, çok ötede tarım arazileri var.",
+    "iqa-chatgpt-03.webp": "Gri bir F-16 savaş uçağı beton bir sertleştirilmiş siperin ağzında duruyor; kanopisi açık, kemerin ötesinde hafif yağmur yağıyor.",
+    "iqa-chatgpt-04.webp": "Çöl kamuflajlı yer ekibi, parlak bulutlu gökyüzü altında beyaz bir süpürge ve sarı bir kompresörün yanında pist derzlerinde çalışıyor.",
+    "iqa-chatgpt-05.webp": "Gün batımında tandem rotorlu iki helikopter apronda duruyor; bir mürettebat üyesi birinin üstünde çalışırken gövdeler siluete dönüşüyor.",
+    "iqa-chatgpt-06.webp": "Küçük beyaz bir nakliye uçağı apronda bekliyor, arka merdivenleri inik; askerler yanından geçerken biri selam veriyor.",
+    "iqa-chatgpt-07.webp": "Havadan bakıldığında çöl üssü sıralar halinde kemerli çadırlar ve park etmiş araçlarla yayılıyor; arkada boş araziyi bir pist kesiyor."
+  },
+  "ISL": {
+    "isl-sat-1.webp": "Uydu görüntüsü: İstanbul Atatürk Havalimanı (ISL) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "IST": {
+    "ist-sat-1.webp": "Uydu görüntüsü: İstanbul Havalimanı'ndaki (IST) terminaller, pistler ve çevredeki şehir."
+  },
+  "IVA": {
+    "iva-sat-1.webp": "Uydu görüntüsü: Ampampamena Havalimanı (IVA) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "IXA": {
+    "ixa-baidu-1.webp": "Agartala apronsunda kameraya bakan çift turboprop; havaalanının ötesinde Tripura'nın alçak tepeleri var.",
+    "ixa-chatgpt-01.webp": "Terminalin beyaz tentesi havalimanının adını mavi harflerle taşıyor; kapalı gökyüzü altında kaplı yol boyunca palmiyeler ve çiçek tarhları var.",
+    "ixa-chatgpt-02.webp": "Gidiş salonunda koyu bir tabela check-in gişelerine ve e-biletlemeye yönlendiriyor; üstteki duvara bir sıra pişmiş toprak parça yerleştirilmiş.",
+    "ixa-chatgpt-03.webp": "IndiGo boyalı dar gövdeli bir uçak körükte duruyor; yer ekibi gövdesinin ve motorunun çevresinde çalışıyor.",
+    "ixa-chatgpt-04.webp": "Geceleyin terminalin mavi Devanagari havalimanı tabelası, bir dizi beyaz çekme tente üzerinde parlıyor.",
+    "ixa-chatgpt-05.webp": "Dikenli tel çitin ötesinden bakınca kırmızı kuyruklu bir jet, puslu ağaç sırasına karşı pist boyunca ilerliyor.",
+    "ixa-chatgpt-06.webp": "Apronun arkasında soluk yeşil çatılı alçak beyaz bir terminal duruyor; önünde kafes biçimli bir projektör direği, en sağda kontrol kulesi var.",
+    "ixa-chatgpt-07.webp": "Yüksek kümülüs bulutlarının altında bir IndiGo jetinin ön kapısına biniş merdiveni dayanmış."
+  },
+  "IXD": {
+    "ixd-sat-1.webp": "Uydu görüntüsü: Prayagraj'ın pistleri Ganj ovasında şehir ile tarım arazileri arasında uzanıyor; terminal ve apron sahanın yanında."
+  },
+  "IXU": {
+    "ixu-page-1.webp": "Terminalin ön avlusu — indirme şeridinin ve gidiş girişinin üzerinde beyaz fıçı tonozlu bir çatı.",
+    "ixu-page-2.webp": "Çimenden terminal — kavisli çatı cephe boyunca uzanıyor, kontrol kulesi en sağda.",
+    "ixu-page-3.webp": "Gidiş girişi — tentesinde 'WELCOME TO CHHATRAPATI SAMBHAJINAGAR AIRPORT' ve 'प्रस्थान DEPARTURE' yazılı.",
+    "ixu-chatgpt-01.webp": "Terminaldeki mavi tabelalar 'Aurangabad Airport' ve 'Arrival' yazıyor; kaldırım boyunca bir sıra saksı bitkisi var.",
+    "ixu-chatgpt-02.webp": "Bir IndiGo jeti alçak sınır duvarının ötesindeki pist boyunca ilerliyor; arkada kasaba çatıları, önündeki zeminde parlak sarı bir leke var.",
+    "ixu-chatgpt-03.webp": "Yolcular alçak güneşte apronu geçerek terminalin uzun kavisli metal çatısına doğru yürüyor.",
+    "ixu-chatgpt-04.webp": "Büyük çift jetli bir uçak iniş ışıkları açık halde kameraya bakıyor; sol kenarda puslu bir kafes kule yığını var.",
+    "ixu-chatgpt-05.webp": "Çelik makaslı tenterin altında mavi bir 'Departure' tabelası asılı; bagaj arabaları sıralanmış, iki güvenlik görevlisi içeri yürüyor.",
+    "ixu-chatgpt-06.webp": "Geceleyin havalimanının adı girişin üzerinde beyaz renkte parlıyor; farlar bariyerler ve sıra saksı bitkileri üzerinde geziniyor.",
+    "ixu-chatgpt-07.webp": "Kırmızı kuyruklu bir jet çisenti altında pist boyunca burun üstü ilerliyor; ön planı kuru çalılık ve çimen dolduruyor."
+  },
+  "JEG": {
+    "jeg-sat-1.webp": "Uydu görüntüsü: Aasiaat'ın kısa pisti Grönland adasında uzanıyor; terminal ve apron yanında, çevrede deniz ve çıplak kaya var.",
+    "jeg-chatgpt-01.webp": "Gümüş kırma çatı altında mavi kaplamalı bir kule binası; dışında piknik masaları, arkasında plaj ve kayalık adacıklar uzanıyor.",
+    "jeg-chatgpt-02.webp": "Valizli yolcular 'AASIAAT' yazılı mavi terminale yürüyor; kontrol kulesi doğrudan çatıdan yükseliyor.",
+    "jeg-chatgpt-03.webp": "Kırmızı bir Air Greenland çift turbopropu çakıl yüzeyde duruyor; ötede mavi su ve soluk bir buzdağı var.",
+    "jeg-chatgpt-04.webp": "Yolcular kırmızı bir pervanenin yanından 'AASIAAT' terminaline geçiyor; arkadaki kayalarda hâlâ kar lekeleri var.",
+    "jeg-chatgpt-05.webp": "Küçük gidiş salonunda birkaç yolcu, kırmızı çerçeveli cam kapının ve ahşap çerçeveli sanat panellerinin yanındaki banklarda bekliyor.",
+    "jeg-chatgpt-06.webp": "Aprona yukarıdan bakış: solda mavi kule ve terminal, çakıl alanda park etmiş bir turboprop ve ötede deniz.",
+    "jeg-chatgpt-07.webp": "Sıkı giyinmiş yolcular karda varış kapısına doğru yürüyor; üstte mavi kulenin 'AASIAAT' tabelası öne çıkıyor."
+  },
+  "JFK": {
+    "jfk-sat-1.webp": "Uydu görüntüsünde John F. Kennedy Uluslararası Havalimanı'ndaki (JFK) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "JIB": {
+    "jib-sat-1.webp": "Uydu görüntüsü: Cibuti'nin pisti Tadjoura Körfezi'nin güney kıyısında uzanıyor; terminal ve apron sahanın kuzeyinde, çevrede liman ve şehir var."
+  },
+  "JOG": {
+    "jog-sat-1.webp": "Uydu görüntüsü: Yogyakarta'nın pisti ve taksi yolu şehrin doğu kenarında; terminal ve apron sahanın kuzeyinde."
+  },
+  "JSI": {
+    "jsi-sat-1.webp": "Uydu görüntüsü: Skiathos Adası Ulusal Havalimanı (JSI) su ve kıyı şeridiyle çevrili."
+  },
+  "JTY": {
+    "jty-sat-1.webp": "Uydu görüntüsünde Astypalaia Havalimanı (JTY) çevredeki su ve kıyı şeridiyle bütünleşiyor.",
+    "jty-chatgpt-01.webp": "Beyaz düz çatılı bir terminal çakıl ön avlu boyunca uzanıyor; sağ ucunda yuvarlak bir kule bloğu, önünde bagaj arabaları park etmiş.",
+    "jty-chatgpt-02.webp": "Alacakaranlıkta pist ve taksi yolu kavisleri alçak beyaz bir terminalin yanından süpürülüyor; ötede sakin deniz ve koyu bir burun var.",
+    "jty-chatgpt-03.webp": "Bir yolcu apronda biniş kartlarını ve pasaportunu kaldırıyor; alçak güneşte arkasında çift turboprop park etmiş.",
+    "jty-chatgpt-04.webp": "Boş apronda sarı bir yay küçük beyaz bir terminale doğru kıvrılıyor; kontrol kulesi kabini açık gökyüzü altında köşeye yerleşmiş.",
+    "jty-chatgpt-05.webp": "Havadan bakıldığında tek bir pist derin mavi suya uzanan bir yarımada boyunca uzanıyor; terminal ortasına sıkışmış."
+  },
+  "JVA": {
+    "jva-sat-1.webp": "Uydu görüntüsünde Ankavandra Havalimanı'nın (JVA) pisti kuru zemin ve çıplak arazi arasında yer alıyor.",
+    "jva-chatgpt-01.webp": "Mavi dağların altındaki kuru çim pistte küçük beyaz tek motorlu bir turboprop duruyor; çevresinde bir kalabalık köylü toplanmış."
+  },
+  "KIX": {
+    "kix-sat-1.webp": "Uydu görüntüsü: Kansai Uluslararası Havalimanı'ndaki (KIX) terminaller, pistler ve çevredeki şehir."
+  },
+  "KQA": {
+    "kqa-sat-1.webp": "Uydu görüntüsünde Akutan Havalimanı'nın (KQA) pisti kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "KSO": {
+    "kso-sat-1.webp": "Uydu görüntüsünde Kastoria Ulusal Havalimanı Aristotle'un (KSO) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor.",
+    "kso-chatgpt-01.webp": "Saçaklar boyunca altın rengi Yunan harfleri, gidiş girişinin üzerinde havalimanının adını yazıyor; yürüyüş yolu boyunca beyaz saksılar dizilmiş.",
+    "kso-chatgpt-02.webp": "Akşam ışığında küçük beyaz bir yolcu uçağı kontrol kulesinin önündeki apronda bekliyor; arkada bir göl ve dağ sırtı var.",
+    "kso-chatgpt-03.webp": "Kırmızı-mavi şeritli beyaz çift turboprop bir yolcu uçağı, 12-30 işaretli kırmızı tabelanın yanından taksi yapıyor; pistin ötesinde tepeler yükseliyor.",
+    "kso-chatgpt-04.webp": "Alacakaranlıkta terminal cephesi boş duruyor; tabelaları son güneşte sıcak turuncu parlıyor, kaplama üzerinde uzun gölgeler uzanıyor.",
+    "kso-chatgpt-05.webp": "Farklı boyalarda birkaç yolcu uçağı terminalin körüklerinde park etmiş; biri mavi-beyaz bir AEGEAN jeti."
+  },
+  "KUL": {
+    "kul-sat-1.webp": "Uydu görüntüsü: Kuala Lumpur Uluslararası Havalimanı'ndaki (KUL) terminaller, pistler ve çevredeki şehir."
+  },
+  "LAK": {
+    "lak-sat-1.webp": "Uydu görüntüsü: Aklavik/Freddie Carmichael Havalimanı (LAK) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "LAX": {
+    "lax-sat-1.webp": "Uydu görüntüsünde Los Angeles Uluslararası Havalimanı'ndaki (LAX) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "LBE": {
+    "lbe-sat-1.webp": "Uydu görüntüsü: Latrobe'un pisti Pennsylvania'nın tepeleri ve ormanlık alanları arasında uzanıyor; terminal ve apron da yanında.",
+    "lbe-chatgpt-01.webp": "Beyaz bulutlu mavi gökyüzü altında valizli yolcular turkuaz çatılı terminalin önünden geçiyor; kaldırımda bir Amerikan bayrağı dalgalanıyor.",
+    "lbe-chatgpt-02.webp": "Bir uçağın kanadı üzerinden çekilen görüntüde iki pist yeşil tarım arazilerini kesiyor; aşağıda apron boyunca sıralar halinde beyaz hangarlar ve park yerleri var.",
+    "lbe-chatgpt-03.webp": "Bir körüğün yanında tamamen sarı bir yolcu uçağı geri itme traktörüyle dışarı alınıyor; turuncu koniler boyalı apron çizgilerini işaretliyor.",
+    "lbe-chatgpt-04.webp": "Gidiş salonunda iki yolcu çantaları ayaklarının dibinde pencere kenarındaki koltuklarda bekliyor; diğerleri koridorda valizlerini sürüklüyor.",
+    "lbe-chatgpt-05.webp": "Havadan bakıldığında sıralar halinde beyaz hangarlar ve geniş pistler ağaçlar arasında; uzakta bir kasaba ve puslu tepeler kayboluyor.",
+    "lbe-chatgpt-06.webp": "Soluk puslu gökyüzü altında iki beyaz iş jeti apronda yan yana duruyor; birinin kabin kapısı açık ve merdivenleri inik.",
+    "lbe-chatgpt-07.webp": "Orta çizgi kurumuş sarı kenar şeritleri arasında dümdüz ilerliyor; uzak ucunda açık mavi gökyüzü altında alçak bir tepe sırtı var."
+  },
+  "LCG": {
+    "lcg-sat-1.webp": "Uydu görüntüsü: A Coruña'nın pisti Galiçya'nın kıyı tepeleri arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "LEI": {
+    "lei-sat-1.webp": "Uydu görüntüsü: pist Almería kıyısını izliyor; terminal ve apron batı ucunda, altında Akdeniz var."
+  },
+  "LET": {
+    "let-sat-1.webp": "Uydu görüntüsünde Alfredo Vásquez Cobo Uluslararası Havalimanı'nın (LET) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "LFK": {
+    "lfk-baidu-1.webp": "Son yaklaşmada bir Cessna — kanadının altında çim pist ve pas kırmızısı bir su kulesi, sahanın kırsal karakteri tek karede.",
+    "lfk-chatgpt-01.webp": "Açık mavi gökyüzüne karşı terminalin soluk duvarı havalimanının adını koyu harflerle taşıyor; yeşil çatılı binanın boyunca alçak çalılar budanmış.",
+    "lfk-chatgpt-02.webp": "Beyaz şevronlar ve sarı yönlendirme çizgileri koyu pist eşiğini işaretliyor; kuru çimenler uzakta bir ağaç hattına doğru uzanıyor.",
+    "lfk-chatgpt-03.webp": "Bordo-beyaz tek motorlu pervaneli bir uçak apronda duruyor; arkasında bir radyo kulesi ve yeşil çatılı terminal var.",
+    "lfk-chatgpt-04.webp": "Gri gökyüzü altında çift turboprop bir uçak bir hangarın açık kapısında duruyor; içeride koyu çelik çatı iskeleti görünüyor.",
+    "lfk-chatgpt-05.webp": "Doğrudan yukarıdan bakıldığında beyaz yüksek kanatlı tek motorlu bir uçak beton apronda duruyor; plakalar üzerine keskin bir gölge düşürüyor.",
+    "lfk-chatgpt-06.webp": "Terminalin krem duvarındaki yeşil harfler havalimanının adını, iki çerçeveli yılın havalimanı plaketinin üzerinde yazıyor; altında budanmış çitler var.",
+    "lfk-chatgpt-07.webp": "Bir televizyon haber karesi, bir hangarın içindeki iki küçük çift motorlu uçağı gösteriyor; biri krikolar üzerinde, üstte hava durumu bandı var."
+  },
+  "LGA": {
+    "lga-sat-1.webp": "Uydu görüntüsü: LaGuardia Havalimanı'ndaki (LGA) terminaller, pistler ve çevredeki şehir."
+  },
+  "LGW": {
+    "lgw-sat-1.webp": "Uydu görüntüsü: Gatwick Havalimanı (LGW) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "LHE": {
+    "lhe-sat-1.webp": "Uydu görüntüsü: Lahor'un pistleri ve paralel taksi yolları şehrin güneydoğu kenarını kesiyor; terminal ve apron sahanın kuzeyinde."
+  },
+  "LHR": {
+    "lhr-baidu-1.webp": "Havadan Heathrow — uçaklarla dolu iskeleler ve park yerleri, uzanan pistler ve taksi yolları.",
+    "lhr-baidu-2.webp": "Terminal penceresinden: kapıda bir Japan Airlines uçağı, ötede Heathrow'un kontrol kulesi.",
+    "lhr-baidu-3.webp": "Alacakaranlıkta Heathrow — terminaller aydınlatılmış, apronda park etmiş bir Etihad uçağı."
+  },
+  "LIS": {
+    "lis-sat-1.webp": "Uydu görüntüsü: Humberto Delgado Havalimanı'ndaki (LIS) terminaller, pistler ve çevredeki şehir."
+  },
+  "LIT": {
+    "lit-sat-1.webp": "Uydu görüntüsü: Little Rock'ın pistleri Arkansas Nehri'nin güney kıyısı boyunca uzanıyor; terminal ve apron sahanın kuzeyinde."
+  },
+  "LLU": {
+    "llu-sat-1.webp": "Uydu görüntüsünde Alluitsup Paa Helikopter Pisti'nin (LLU) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "LME": {
+    "lme-sat-1.webp": "Uydu görüntüsü: Le Mans-Arnage Havalimanı (LME) yeşil bitki örtüsü ve tarım arazileriyle çevrili."
+  },
+  "LTI": {
+    "lti-sat-1.webp": "Uydu görüntüsünde Altay Havalimanı'nın (LTI) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "LTS": {
+    "lts-sat-1.webp": "Uydu görüntüsünde Altus Hava Kuvvetleri Üssü (LTS) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor.",
+    "lts-chatgpt-01.webp": "Yoğun pus içinde uzun bir gri askeri jet sırası taksi yolunda burun kuyruğa park etmiş; hepsi kameraya bakıyor.",
+    "lts-chatgpt-02.webp": "U.S. Air Force yazılı büyük gri askeri nakliye uçağı apronda duruyor; ön kapısında biniş merdivenleri var.",
+    "lts-chatgpt-03.webp": "Mavi gökyüzü altında gri nakliye uçağı havalandıktan hemen sonra tırmanıyor; iniş takımları hâlâ aşağıda, altında ufka uzanan düz çayırlar var.",
+    "lts-chatgpt-04.webp": "Bir askeri nakliye uçağı pistin üzerinden alçaktan süzülüyor; kuru çimenlerin ötesinde sıralar halinde park etmiş tankerler ve soluk hangarlar var.",
+    "lts-chatgpt-05.webp": "Bir sıra tankerin burunları apron boyunca dizilmiş; yansıtıcı yelekli ve üniformalı yer ekibi sarı işaretlerin arasında duruyor.",
+    "lts-chatgpt-06.webp": "Kapalı gökyüzü altında geniş beton taksi yolu ufka doğru dümdüz uzanıyor; uzakta birkaç yer aracı hareket ediyor.",
+    "lts-chatgpt-07.webp": "Ön plandaki bir yakıt ikmal bumu üzerinden çerçevelenmiş: gri bir tankerin burnu ve motorları net görünüyor, ötede başka bir uçak bekliyor."
+  },
+  "LYM": {
+    "lym-sat-1.webp": "Uydu görüntüsü: Ashford Havalimanı (LYM) yeşil bitki örtüsü ve tarım arazileriyle çevrili.",
+    "lym-chatgpt-01.webp": "Düz bir pistin yeşil tarlaları çaprazlama kestiği hava görüntüsü; uzakta bir kıyı kasabası yayılmış."
+  },
+  "MAD": {
+    "mad-sat-1.webp": "Uydu görüntüsü: Madrid-Barajas Havalimanı (MAD) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "MDQ": {
+    "mdq-sat-1.webp": "Uydu görüntüsü: Mar del Plata'nın pisti Atlantik kıyısı ile pampalar arasında uzanıyor; terminal ve apron da yanında.",
+    "mdq-chatgpt-01.webp": "Alacakaranlıkta terminal cephesi aydınlatılmış; uzun kırmızı tabelası Mar del Plata uluslararası havalimanı yazıyor, arkasında kontrol kulesi var.",
+    "mdq-chatgpt-02.webp": "Mavi çatılı terminal ve kontrol kulesinin birleşik halinin havadan görünümü; kapıda bir Aerolíneas Argentinas jeti ve araçlarla dolu bir otopark.",
+    "mdq-chatgpt-03.webp": "Bir KLM Cityhopper bölgesel jeti alçak beyaz terminalin önündeki apronda duruyor; ön planda küçük bir kule ve çimen var.",
+    "mdq-chatgpt-04.webp": "Turuncu check-in bankoları aydınlık salon boyunca uzanıyor; üstlerinde uçuş bilgi ekranları, arkalarında bant bariyerleriyle kuyruk oluşturan yolcular var.",
+    "mdq-chatgpt-05.webp": "Yolcular geniş beyaz bir salonda sıralar halindeki siyah koltuklarda bekliyor; üstte uzun tavan ışığı şeritleri uzanıyor.",
+    "mdq-chatgpt-06.webp": "Mavi-beyaz bir yolcu uçağı tel çitin ötesindeki pist boyunca taksi yapıyor; soluk gökyüzü altında ön planda kuru çimen var.",
+    "mdq-chatgpt-07.webp": "Yolcular uluslararası biniş kapısının önünde kuyruk oluşturmuş; cilalı beyaz zemin uzun tavan ışıklarını yansıtıyor."
+  },
+  "MEL": {
+    "mel-sat-1.webp": "Uydu görüntüsü: Melbourne Havalimanı (MEL), pistleri, terminal kompleksi ve Tullamarine sanayi bölgesi."
+  },
+  "MEX": {
+    "mex-sat-1.webp": "Uydu görüntüsü: Meksiko Uluslararası Havalimanı (MEX) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "MGQ": {
+    "mgq-sat-1.webp": "Uydu görüntüsü: Mogadişu'nun pisti Hint Okyanusu kıyısının yanında uzanıyor; terminal ve apron yanında, çevrede şehir ve plaj var."
+  },
+  "MIA": {
+    "mia-sat-1.webp": "Uydu görüntüsünde Miami Uluslararası Havalimanı'ndaki (MIA) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "MLG": {
+    "mlg-sat-1.webp": "Uydu görüntüsü: Malang'ın pistleri Cava yaylalarının kasabaları ve tarım arazileri arasında uzanıyor; terminal ve apron sahanın yanında, ötede volkanlar var."
+  },
+  "MNL": {
+    "mnl-sat-1.webp": "Uydu görüntüsünde Ninoy Aquino Uluslararası Havalimanı'ndaki (MNL) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "MOL": {
+    "mol-baidu-2.webp": "Terminal camlarından kapıdaki bir Norwegian 737 görünüyor; çevresinde yer ekibi çalışıyor.",
+    "mol-baidu-3.webp": "Fiyort ile dağlar arasındaki havalimanı — pisti su ile yamaç arasındaki dar rafta, bulutlar zirveleri sıyırıyor.",
+    "mol-chatgpt-01.webp": "Koyu ahşap terminalin dışında bir karavan ve otopark; duvarında bir seyahat afişi, fiyordun karşısında karlı dağlar var.",
+    "mol-chatgpt-02.webp": "Havadan bakıldığında pist fiyordun yanındaki dar yeşil rafta uzanıyor; sağda küçük bir kasaba, arkada karla kaplı zirveler.",
+    "mol-chatgpt-03.webp": "Apron ve taksi yolu üzerinden hava görüntüsü: kırmızı-beyaz bir turboprop ilerliyor, yakında birkaç hafif uçak park etmiş.",
+    "mol-chatgpt-04.webp": "Gri gökyüzü altında uzun koyu ahşap terminal uzanıyor; üstünde çatı tabelası, dışarıdaki yolda otobüs şeridi işaretli.",
+    "mol-chatgpt-05.webp": "Geceleyin check-in salonu boş; self-servis kiosklar ve ekranlar siyah karo zemin üzerinde parlıyor, sırada kimse yok.",
+    "mol-chatgpt-06.webp": "Bir yolcu uçağı kayalık bir dalgakıranın üzerinden alçalarak piste yaklaşıyor; altında mavi su, arkada puslu dağlar var.",
+    "mol-chatgpt-07.webp": "Havalimanının isim plakası ahşap kaplamalı terminalin girişinin üzerinde; çatıda kar, yanında camlı bir yürüyüş yolu var."
+  },
+  "MRD": {
+    "mrd-sat-1.webp": "Uydu görüntüsünde Alberto Carnevalli Havalimanı (MRD) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor."
+  },
+  "MUC": {
+    "muc-sat-1.webp": "Uydu görüntüsünde Münih Havalimanı'ndaki (MUC) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "MXP": {
+    "mxp-sat-1.webp": "Uydu görüntüsünde Milano Malpensa Havalimanı'ndaki (MXP) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "MZI": {
+    "mzi-sat-1.webp": "Uydu görüntüsü: Mopti Havalimanı (MZI) kuru zemin ve çıplak arazi arasında yer alıyor.",
+    "mzi-chatgpt-01.webp": "Uzun bir palmiyenin altında krem terminal binası Aeroport de Mopti Hambodedjo yazılı bir tabela taşıyor; dışarıda kızıl toprakta yolcular bekliyor.",
+    "mzi-chatgpt-02.webp": "Beyaz çift motorlu bir turboprop soluk apronda duruyor; yolcular binmek için dışarı yürüyor, kuru çalılıklar ufka uzanıyor.",
+    "mzi-chatgpt-03.webp": "Terminal girişinin üzerindeki tabelalar varış ve gidişi Fransızca ve İngilizce yazıyor; dışarıda beyaz pickup'lar park etmiş, yakında mavi bereli askerler duruyor.",
+    "mzi-chatgpt-04.webp": "Açık mavi gökyüzü altında mavi şeritli beyaz çift turboprop apronda yandan duruyor; arkasında bir palmiye ve alçak terminal binası var.",
+    "mzi-chatgpt-05.webp": "Güneş şapkalı yolcular kızıl apron üzerindeki küçük çift turbopropa doğru yürüyor; yanında bir yakıt kamyonu bekliyor.",
+    "mzi-chatgpt-06.webp": "Düz beyaz pus içinde kamuflajlı bir asker betonda durmuş, kum sarısı çift turbopropun apron boyunca ilerlemesini izliyor.",
+    "mzi-chatgpt-07.webp": "Yeşil kuyruk amblemli bir jet, kuru zemin üzerine yayılmış bagajların ötesinde bekliyor; bagaj görevlileri çantalı bir arabaya yüklüyor."
+  },
+  "NRT": {
+    "nrt-baidu-1.webp": "1. Terminalin iç hat gidiş salonu; tabela 'Domestic Departures' yazısını Japonca, Çince, Korece ve İngilizce gösteriyor.",
+    "nrt-baidu-3.webp": "Terminalden apron görünümü — ötede park etmiş bir ANA 787 ve iki Vanilla Air A320."
+  },
+  "NSK": {
+    "nsk-sat-1.webp": "Uydu görüntüsü: Norilsk'in pisti Kuzey Kutup Dairesi içindeki tundrada uzanıyor; terminal ve apron yanında, çevrede göller ve sanayi var."
+  },
+  "OAJ": {
+    "oaj-sat-1.webp": "Uydu görüntüsü: Jacksonville'in pisti Kuzey Karolina kıyı ovasında ormanlık alan ve tarım arazileri arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "OBS": {
+    "obs-sat-1.webp": "Uydu görüntüsü: Aubenas-Güney Ardèche Havalimanı (OBS) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor.",
+    "obs-chatgpt-01.webp": "Havadan bakıldığında tek bir pist, çalılarla kaplı dalgalı tepeler arasında uzanıyor; kenarında soluk bir apron ve birkaç alçak bina var.",
+    "obs-chatgpt-02.webp": "Beyaz bir kontrol kulesi, birkaç hangar ve çimende dağılmış hafif uçaklar, uzun mavi dağ sırtının önünde duruyor.",
+    "obs-chatgpt-03.webp": "Küçük beyaz bir hafif uçak asfalt üzerinde duruyor; arkasında karla çizgili dağlar yükseliyor, mavi gökyüzünde birkaç bulut var.",
+    "obs-chatgpt-04.webp": "Kırmızı-sarı boyalı çift turboprop geniş apronda duruyor; kapısı açık ve biniş merdivenleri yerleştirilmiş.",
+    "obs-chatgpt-05.webp": "Kapalı gökyüzü altında düzinelerce hafif uçak çimen ve beton üzerinde sıkıca park etmiş; aralarında birkaç kişi dolaşıyor.",
+    "obs-chatgpt-06.webp": "Bulutsuz mavi gökyüzü altında beyaz-turuncu bir hafif uçak, tek katlı beyaz terminalin önündeki betonda duruyor.",
+    "obs-chatgpt-07.webp": "Yeşil tel örgü çitin arkasında ziyaretçiler, parlak güneş ışığında kırmızı-sarı şeritlerle boyalı çift turbopropa bakıyor."
+  },
+  "OCV": {
+    "ocv-sat-1.webp": "Uydu görüntüsü: Aguas Claras Havalimanı (OCV) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor.",
+    "ocv-chatgpt-01.webp": "Terminalin kavisli beyaz çatısı Aeropuerto Aguas Claras Ocaña adını taşıyor; önünde çiçekli saksılar, üstte koyu mavi bir gökyüzü var.",
+    "ocv-chatgpt-02.webp": "Terminalin önündeki direklerde iki bayrak dalgalanıyor; biri koyu, diğeri sarı-mavi-kırmızı, altında sarı-siyah çizgili bir bordür var.",
+    "ocv-chatgpt-03.webp": "Palmiye yapraklarının arasından, büyük gri bir askeri nakliye uçağı beyaz kontrol kulesinin yanındaki apronda duruyor; ötede yeşil tepeler var.",
+    "ocv-chatgpt-04.webp": "Beyaz çift turboprop ıslak pist boyunca ilerliyor; önünde uzun kuru otlar, arkasında bulutlara bürünmüş yeşil dağlar çerçeveliyor."
+  },
+  "OES": {
+    "oes-sat-1.webp": "Uydu görüntüsünde Antoine de Saint Exupéry Havalimanı (OES) çevredeki kuru zemin ve çıplak araziyle bütünleşiyor.",
+    "oes-chatgpt-01.webp": "Beyaz tuğla duvarda Aerodromo Saint A Exupery ve sivil havacılık otoritesi yazılı; bir grup insan turkuaz kapı sütunlarının önünden geçiyor.",
+    "oes-chatgpt-02.webp": "Yeşil süslemeli beyaz bir kontrol kulesi alçak bir terminal binasına bağlanıyor; önünde küçük ağaçlar, mavi gökyüzünde ince bulutlar var.",
+    "oes-chatgpt-03.webp": "Boş, kızılımsı çakıl bir pist kuru çimenler arasında uzanıyor; düz ufku soluk mavi bir gökyüzüyle buluşuyor.",
+    "oes-chatgpt-04.webp": "Alttan çekilmiş: beyaz bir kontrol kulesinin cam kabini, yeşil kiremitli çatı ve tuğla duvarların üzerinde açık mavi gökyüzüne karşı yükseliyor.",
+    "oes-chatgpt-05.webp": "Yeşil şeritli beyaz çift turboprop asfaltta burnu kameraya dönük park etmiş; arkasında bir ağaç sırası var.",
+    "oes-chatgpt-06.webp": "Bu, kırmızı bir iğnenin Aeroclub San Antonio Oeste'yi işaretlediği bir harita ekran görüntüsü; yanında bir körfez doğa koruma alanı ve kıyı yolu var."
+  },
+  "OKC": {
+    "okc-sat-1.webp": "Uydu görüntüsünde Will Rogers World Havalimanı'ndaki (OKC) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "ORD": {
+    "ord-sat-1.webp": "Uydu görüntüsünde O'Hare Uluslararası Havalimanı'ndaki (ORD) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "ORY": {
+    "ory-sat-1.webp": "Uydu görüntüsü: Paris Orly Havalimanı (ORY) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "OUD": {
+    "oud-sat-1.webp": "Uydu görüntüsü: Oujda'nın iki pisti doğu Fas'ın kurak ovasında uzanıyor; terminal ve apron aralarında.",
+    "oud-chatgpt-01.webp": "Açık mavi gökyüzü altında Oujda Angads Havalimanı'nın bej kavisli tentesi cam girişi koruyor; yolcular ve bagaj arabaları kapılardan geçiyor.",
+    "oud-chatgpt-02.webp": "Yolcular beton apronu geçerek terminale yürüyor; sağda bir biniş merdiveni duruyor, çitin arkasındaki binada havalimanının adı yazılı.",
+    "oud-chatgpt-03.webp": "Gün batımında bir Royal Air Maroc jeti, açılı geometrik panellerle kaplı terminalin önündeki körükte bekliyor; gökyüzü turuncu parlıyor.",
+    "oud-chatgpt-04.webp": "Geceleyin terminalin kavisli çatısı altındaki Arapça ve Latin harfli tabelalar aydınlatılmış; cilalı kaldırım mor bir parıltıyı yansıtıyor.",
+    "oud-chatgpt-05.webp": "Üniformalı personel puslu apronda sıra halinde duruyor; çitte havalimanının adı harflerle yazılı, sağ altta beyaz bir yolcu uçağının burnu görünüyor.",
+    "oud-chatgpt-06.webp": "Geniş asfalt pist eşiğinde düzgün beyaz çubuklar kuru kahverengi zemin boyunca uzanıyor; bulutlarla çizgili mavi gökyüzü altında uzakta bir dağ sırtı var."
+  },
+  "OVD": {
+    "ovd-sat-1.webp": "Uydu görüntüsü: pist kıyı ile tepeler arasındaki bir platoda; terminal ve apron orta noktasında.",
+    "ovd-chatgpt-01.webp": "Kapalı gökyüzü altında büyük beyaz harfler terminalin cam cephesi boyunca Asturias Havalimanı yazıyor; üç bayrağın yanında sarı bir yükseltme platformu çalışıyor.",
+    "ovd-chatgpt-02.webp": "Havadan bakıldığında geniş bir pist ve kıvrılan bir taksi yolu yoğun iğne yapraklı orman ve yeşil tarlalar arasında buluşuyor; kaplama arasında kızılımsı toprak şeritleri görünüyor.",
+    "ovd-chatgpt-03.webp": "Kırmızı kuyruklu bir yolcu uçağı körükte duruyor; arkasındaki terminalde Asturias Havalimanı yazıyor, beyaz bir kontrol kulesi gri bulutlara yükseliyor.",
+    "ovd-chatgpt-04.webp": "Check-in salonunun beyaz kafes çatısı altında yolcular bir Lufthansa bagaj bırakma noktasında kuyruk oluşturmuş; üstteki uçuş bilgi ekranı yeşil yazılarla parlıyor.",
+    "ovd-chatgpt-05.webp": "Bir Ryanair yolcu uçağı, mavi-sarı kuyruğu ve gövdesi güneşi yakalarken apronda duruyor; arkasında koyu bir ağaç hattı ve bulutsuz mavi gökyüzü var.",
+    "ovd-chatgpt-06.webp": "Bulutlu gökyüzü altında birkaç yolcu uçağı terminalin önündeki apronda yan yana duruyor; yeşil kuyruklu olanın yanında biniş merdivenleri var.",
+    "ovd-chatgpt-07.webp": "Cilalı taş zemin gidiş koridoru boyunca, sarı çıtalı tavanın altındaki koltuk sıralarının yanından uzanıyor; uzak uçta bir kafeterya tabelası var."
+  },
+  "PEK": {
+    "pek-sat-1.webp": "Uydu görüntüsü: Pekin Başkent Uluslararası Havalimanı'ndaki (PEK) terminaller, pistler ve çevredeki şehir."
+  },
+  "PKH": {
+    "pkh-sat-1.webp": "Uydu görüntüsünde Alexion Havalimanı (PKH) çevredeki su ve kıyı şeridiyle bütünleşiyor."
+  },
+  "PNR": {
+    "pnr-sat-1.webp": "Uydu görüntüsü: Pointe-Noire'ın pisti Atlantik kıyısının yanında uzanıyor; terminal ve apron doğusunda, çevrede şehir ve ormanlık alan var.",
+    "pnr-chatgpt-01.webp": "Kapalı bir günde, Aeroport A.A. Neto de Pointe Noire yazan altın harfler terminalin geniş mavi cam cephesinin üzerinde duruyor; ön avluda arabalar park etmiş.",
+    "pnr-chatgpt-02.webp": "Yukarıdan bakıldığında farklı boyutlarda birkaç uçak sarı yönlendirme çizgileri arasındaki apronda park etmiş; ötede alçak evler ve deniz ufku var.",
+    "pnr-chatgpt-03.webp": "Koyu asfalt pistteki beyaz eşik çubukları düz bir ufka doğru uzanıyor; orada alçak ağaç sırası puslu gri gökyüzüyle buluşuyor.",
+    "pnr-chatgpt-04.webp": "Check-in salonunda birden altıya numaralı monitörler mavi bankoların üzerinde asılı; üniformalı personel çok cilalı bir zeminde bekliyor.",
+    "pnr-chatgpt-05.webp": "Parlak gökyüzü altında terminalin koyu cam cephesi bulutları yansıtıyor; çatıda bir tabela var, önündeki otoparkı soluk renkli taksiler dolduruyor.",
+    "pnr-chatgpt-06.webp": "Terminalin çok katlı salonunda yürüyen merdivenler gün ışığı alan bir cam duvara doğru çıkıyor; üstte asma kat korkuluğu boyunca insanlar duruyor."
+  },
+  "PSO": {
+    "pso-sat-1.webp": "Uydu görüntüsü: Pasto'nun pisti bir And vadisinde uzanıyor; terminal ve apron yanında, çevrede dağlar ve tarım arazileri var."
+  },
+  "PVG": {
+    "pvg-baidu-1.webp": "Kabin penceresinden Pudong terminali — çatı hattında '上海 SHANGHAI', kapılarda China Eastern uçakları."
+  },
+  "PVK": {
+    "pvk-sat-1.webp": "Uydu görüntüsü: Preveza'nın pisti Yunanistan'ın batı kıyısında lagünler ile deniz arasında yer alıyor; terminal ve apron da yanında."
+  },
+  "PXA": {
+    "pxa-sat-1.webp": "Uydu görüntüsünde Atung Bungsu Havalimanı'nın (PXA) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor.",
+    "pxa-chatgpt-01.webp": "Açık mavi gökyüzü altında havalimanının adı yeşil-sarı terminal cephesine yerleştirilmiş; önünde yapraklı bitkiler, saçağın altında uzun bir gölge var.",
+    "pxa-chatgpt-02.webp": "Hava görüntüsü, 24 pisti eşiğinin beyaz çubuklarını koyu asfalt üzerinde gösteriyor; iki yanında yoğun orman ve yağmurla kahverengileşmiş toprak var.",
+    "pxa-chatgpt-03.webp": "Küçük beyaz yüksek kanatlı tek motorlu bir turboprop apronda duruyor; ötede yeşil tarlalar ve soluk mavi tepeler pus içinde birbirine karışıyor.",
+    "pxa-chatgpt-04.webp": "Yukarıdan bakıldığında alçak terminal açık yeşil arazide; arkasında uzun mavi bir dağ sırası, solda küçük beyaz kubbeli bir bina var.",
+    "pxa-chatgpt-05.webp": "Boş bir otoparkta beyaz boyalı park yerleri siyah-sarı çizgili bordürlerin yanında düzgün sıralar oluşturuyor; yığılmış bulutların altında dağlar silik.",
+    "pxa-chatgpt-06.webp": "Alacakaranlıkta gökyüzü turuncu ve kırmızı yanıyor, terminalin ışıkları yanıyor ve nemli zemin ufuk boyunca son parıltıyı yansıtıyor.",
+    "pxa-chatgpt-07.webp": "Ağır bulutlar altında beyaz çift turboprop bir yolcu uçağı, uzun kırmızı çatılı binanın önündeki çamurlu zeminde duruyor; kuyruğu kırmızı boyalı, sağda turuncu bir rüzgâr çorabı var."
+  },
+  "PYR": {
+    "pyr-sat-1.webp": "Uydu görüntüsünde Andravida Hava Üssü (PYR) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
+  },
+  "QNJ": {
+    "qnj-sat-1.webp": "Uydu görüntüsünde Annemasse Havaalanı'nın (QNJ) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "QSF": {
+    "qsf-sat-1.webp": "Uydu görüntüsü: Setif'in pisti Atlas platosunda uzanıyor; terminal ve apron yanında, çevrede kurak arazi ve kasaba var."
+  },
+  "QXB": {
+    "qxb-sat-1.webp": "Uydu görüntüsünde Aix Les Milles Havalimanı (QXB) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor.",
+    "qxb-chatgpt-01.webp": "Küçük beyaz tek motorlu bir uçak, düz gri gökyüzü altında alçak bir kontrol kulesi ve terminal binalarının önünden taksi yapıyor.",
+    "qxb-chatgpt-02.webp": "Bu hava görüntüsünde iki pist tarım arazileri arasında kesişiyor; apron ve hangarlar bir kenar boyunca sıralanmış.",
+    "qxb-chatgpt-03.webp": "Parlak güneşte düzgün bir sıra beyaz hafif uçak apronda duruyor; arkasında kontrol kulesi ve bir ağaç hattı var.",
+    "qxb-chatgpt-04.webp": "Krem rengi bir kontrol kulesi alçak bir terminalin ortasından yükseliyor; iki yanında hangarlar, arkasında çıplak gri tepeler var.",
+    "qxb-chatgpt-05.webp": "Havadan bakıldığında bir demiryolu hattı, çayır ve sonbahar ağaçları havaalanını çevreliyor; uzakta alçak tepeler kayboluyor.",
+    "qxb-chatgpt-06.webp": "Güneş ufukta dururken kırmızı-beyaz bir akrobasi uçağı pistin yanında bekliyor; kanopisi parıltıyı yakalıyor."
+  },
+  "RAE": {
+    "rae-sat-1.webp": "Uydu görüntüsü: bir pist Arar dışındaki kurak ovanın karşısından geçiyor; apron ve terminal da yanında.",
+    "rae-chatgpt-01.webp": "Kavisli cam duvarlı bir terminalin dışında, Arapça ve İngilizce 3. Kapıyı işaretleyen bir tabela var.",
+    "rae-chatgpt-02.webp": "Yolcular, gidişlere yönelen koyu mavi tabelaların altında parlak ve geniş bir konkorda valizlerini çekiyor.",
+    "rae-chatgpt-03.webp": "Bulutsuz mavi gökyüzü altında bir Saudia geniş gövdeli jeti geniş beton apronda duruyor.",
+    "rae-chatgpt-04.webp": "Geceleyin yolcular valizlerini aydınlatılmış gidiş girişine doğru yuvarlıyor; cilalı zemin parıltıyı yansıtıyor.",
+    "rae-chatgpt-05.webp": "Varış salonu sessiz ve boş; araba kiralama bankolarının önüne mavi bariyerler yerleştirilmiş, cilalı zemin tavan ışıklarını yansıtıyor.",
+    "rae-chatgpt-06.webp": "Bu alacakaranlık hava görüntüsünde pist kenarı ışıkları, çöl karanlığına doğru dümdüz uzanan parlak bir çizgi oluşturuyor."
+  },
+  "RAF": {
+    "raf-sat-1.webp": "Uydu görüntüsünde Rafaela Havalimanı'nın (RAF) pisti kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "RCH": {
+    "rch-sat-1.webp": "Uydu görüntüsünde Almirante Padilla Havalimanı'nın (RCH) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "REL": {
+    "rel-sat-1.webp": "Uydu görüntüsü: Rawson'ın pisti Patagonya platosunda uzanıyor; terminal ve apron yanında, çevrede kuru çalılıklar ve kasaba var."
+  },
+  "RUA": {
+    "rua-page-1.webp": "Arua havaalanının itfaiye aracı, çevre çiti içindeki garajında (fotoğraf: Uganda CAA'nın Temmuz 2025 tarihli Arua havaalanı genişletme ÇED raporundan).",
+    "rua-chatgpt-01.webp": "Yolcular, taş kaplamalı duvarlı tek katlı binanın dışında çantalarıyla toplanmış; üstte kabaran bulutlarla dolu bir gökyüzü var.",
+    "rua-chatgpt-02.webp": "Mavi gömlekli bir adam kızıl toprağın asfaltla buluştuğu yerde duruyor; apron boyunca park etmiş tek motorlu pervaneli bir uçağı izliyor.",
+    "rua-chatgpt-03.webp": "Kızıl toprak apronda küçük çift turboprop bir yolcu uçağı kapısı açık halde duruyor; bir görevli merdivenlere doğru bir çanta taşıyor.",
+    "rua-chatgpt-04.webp": "Hafif kavisli çatılı uzun beyaz bir terminal boş gri apronun yanında duruyor; sarı bir yönlendirme çizgisi yanından süpürülüyor.",
+    "rua-chatgpt-05.webp": "Yabani otlarla kaplı kızıl toprak, alçak ve soluk gri gökyüzü altında uzak bir ağaç hattına doğru uzanıyor.",
+    "rua-chatgpt-06.webp": "Apronu birkaç tek motorlu uçak kaplamış; en yakındaki mavi bir kuyruk amblemi gösteriyor, kanadının altında bir görevli duruyor."
+  },
+  "RUH": {
+    "ruh-sat-1.webp": "Uydu görüntüsünde Kral Halid Uluslararası Havalimanı'ndaki (RUH) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "SAY": {
+    "say-sat-1.webp": "Uydu görüntüsünde Siena-Ampugnano Havalimanı'nın (SAY) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "SBK": {
+    "sbk-sat-1.webp": "Uydu görüntüsü: Saint-Brieuc-Armor Havalimanı (SBK) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "SCL": {
+    "scl-baidu-1.webp": "Terminal dışarıdan — çelik-cam cepheyi kapsayan kemerli bir çatı, yolu otoparklara bağlayan bir yürüyüş yolu."
+  },
+  "SCO": {
+    "sco-baidu-1.webp": "Geceleyin biniş — yolcular bir FlyArystan uçağına merdivenlerden çıkıyor; kırmızı boyası apron ışıkları altında keskin.",
+    "sco-chatgpt-01.webp": "Açık mavi gökyüzü altında Aktau Uluslararası Havalimanı'nın gri cephesi adını Kazakça ve İngilizce taşıyor.",
+    "sco-chatgpt-02.webp": "Yukarıdan bakıldığında iki körük terminalden aprona uzanıyor; pist ufka yakın uzanıyor.",
+    "sco-chatgpt-03.webp": "Işık azalırken bir yolcu uçağı kapısında merdivenlerle terminalin önünde duruyor; gün batımı bulutları altın rengine boyuyor.",
+    "sco-chatgpt-04.webp": "Beyaz eşik rakamları ve orta çizgi uzak uçtaki kuru çayıra doğru dümdüz uzanırken asfalt çerçeveyi dolduruyor.",
+    "sco-chatgpt-05.webp": "Mavi-beyaz birkaç yolcu uçağı körüklerde yan yana duruyor; arkalarında tıknaz bir kontrol kulesi sabah ışığında yükseliyor.",
+    "sco-chatgpt-06.webp": "Bir Air Astana jeti, ön ve arka kapılarında biniş merdivenleri yerleştirilmiş halde çatlamış beton apronda bekliyor.",
+    "sco-chatgpt-07.webp": "Gün batımından sonra gökyüzü pembe ve mora dönüyor; havalimanının koyu tabelası boş bir ön avlunun üzerinde yanıyor."
+  },
+  "SCU": {
+    "scu-sat-1.webp": "Uydu görüntüsü: pist Santiago de Cuba kıyısının yanında uzanıyor; terminal ve apron da yanında, altında Karayip Denizi.",
+    "scu-chatgpt-01.webp": "Santiago de Cuba havalimanının adı yazılı kırmızı-beyaz terminal mavi gökyüzü altında duruyor; valizli yolcular apronu geçiyor.",
+    "scu-chatgpt-02.webp": "Apronda bir yolcu uçağının sadece kırmızı-beyaz-mavi kuyruğu görünüyor; yanında bagaj arabaları park etmiş, yakında sarı yelekli yer personeli var.",
+    "scu-chatgpt-03.webp": "Check-in salonu boş; mavi kuyruk bariyerleri ve kırmızı kolonlar sessiz şeritleri çerçeveliyor, karo zemine yuvarlak mesafe işaretleri serpiştirilmiş.",
+    "scu-chatgpt-04.webp": "Beyaz ok işaretleri asfalt piste yönlendiriyor; iki yanda kuru çimenler, ufuk boyunca puslu mavi dağlar yükseliyor.",
+    "scu-chatgpt-05.webp": "Silver yazılı çift motorlu bir turboprop apronda duruyor; arkasında kontrol kulesi ve terminalde havalimanının adını taşıyan pankart var.",
+    "scu-chatgpt-06.webp": "Çimenden bakıldığında uzun kırmızı-beyaz terminal çerçeveye yayılıyor; solda kule, açık mavi gökyüzü altında dağlar var.",
+    "scu-chatgpt-07.webp": "Check-in alanının önünde mavi-beyaz bir bilgi tabelası duruyor; bariyer hatları kırmızı yuvarlak zemin işaretlerinin üzerinde boş şeritler oluşturuyor."
+  },
+  "SDN": {
+    "sdn-page-1.webp": "Sandane havalimanı — apronda merdiveni inik bir Widerøe Dash 8, uçağın arkasında fiyort ve dağlar uzanıyor (fotoğraf: Bjoern Huke / PlanePictures.net)."
+  },
+  "SEA": {
+    "sea-sat-1.webp": "Uydu görüntüsünde Seattle-Tacoma Uluslararası Havalimanı'ndaki (SEA) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "SFO": {
+    "sfo-sat-1.webp": "Uydu görüntüsü: San Francisco Uluslararası Havalimanı'ndaki (SFO) terminaller, pistler ve çevredeki şehir."
+  },
+  "SGN": {
+    "sgn-sat-1.webp": "Uydu görüntüsü: Tan Son Nhat Uluslararası Havalimanı'ndaki (SGN) terminaller, pistler ve çevredeki şehir."
+  },
+  "SID": {
+    "sid-sat-1.webp": "Uydu görüntüsü: Sal'ın pisti Yeşil Burun Adaları'ndaki adanın kurak kıyısında uzanıyor; terminal ve apron sahanın doğusunda.",
+    "sid-chatgpt-01.webp": "Partidas ve Departures yazılı mavi bir tente altında yolcular, turuncu-beyaz terminalin önündeki çizgili yolu geçiyor.",
+    "sid-chatgpt-02.webp": "Yukarıdan bakıldığında terminal ve kontrol kulesi, sıralar halinde park etmiş arabaların arkasındaki kurak arazide; ufukta okyanus var.",
+    "sid-chatgpt-03.webp": "Ön gövdesinde Cabo Verde yazılı bir yolcu uçağı apronda duruyor; kapısında mobil merdivenler, çevresinde yer personeli çalışıyor.",
+    "sid-chatgpt-04.webp": "Turuncu çerçeveli pencereler uzun terminal cephesi boyunca uzanıyor; mavi çatı harfleri havalimanının adını, gümüş bir arabanın beklediği yolun üzerinde yazıyor.",
+    "sid-chatgpt-05.webp": "Hava görüntüsü, beyaz bir çadır tentesinin yanında park etmiş iki küçük uçağı gösteriyor; sol altta kontrol kulesi, ötede pist var.",
+    "sid-chatgpt-06.webp": "Turuncu kuyruklu ve turuncu motor naselli bir yolcu uçağı kapalı gökyüzü altında taksi yolunda kameraya bakıyor; çevresinde düz ufuk boş."
+  },
+  "SIN": {
+    "sin-sat-1.webp": "Uydu görüntüsü: Singapur Changi Havalimanı (SIN) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "SLK": {
+    "slk-sat-1.webp": "Uydu görüntüsü: Adirondack Bölge Havalimanı (SLK) yeşil bitki örtüsü ve tarım arazileriyle çevrili.",
+    "slk-chatgpt-01.webp": "Koyu kahverengi ahşap terminal ağır ahşap bir sundurma gösteriyor; önünde beton yürüyüş yolu ve çakıl tarhlar, üstte bulutsuz gökyüzü var.",
+    "slk-chatgpt-02.webp": "Havadan bakıldığında iki pist biçilmiş çimen ve yoğun yaprak dökmeyen orman arasında buluşuyor; bulutlar uzak tepelere gölge düşürüyor.",
+    "slk-chatgpt-03.webp": "Alacakaranlıkta küçük bir Cape Air çift motorlu uçağı, ahşap Adirondack Havalimanı terminalinin önündeki apronda bekliyor; iki kişi yanından geçiyor.",
+    "slk-chatgpt-04.webp": "Gün batımında yukarıdan çekilmiş: kütük terminal ve beyaz hangar, iki küçük uçağın bulunduğu apronu çevreliyor; ön planda kalabalık bir otopark var.",
+    "slk-chatgpt-05.webp": "27 pistinin soluk rakamları ve eşik şeritleri alacakaranlıkta yeşil çimene açılıyor; dağların üzerinde turuncu-mor bulutlar var.",
+    "slk-chatgpt-06.webp": "Deri koltuklu ahşap sandalye sıraları gri halı üzerinde duruyor, pencerelerin yanında bitkiler var ve kahverengi bir yönlendirme panosu kafe ve tuvaletlere yöneliyor.",
+    "slk-chatgpt-07.webp": "Mavi kuyruğuna beyaz bir kuş boyanmış Cape Air çift pervaneli uçağı taksi yolunda duruyor; tescil harfleri net görünüyor.",
+    "slk-chatgpt-08.webp": "Çift motorlu bir turboprop kalkıştan hemen sonra tırmanıyor; ağaç hattı ve bir pistin üzerinde, arka planı ormanlık tepeler dolduruyor."
+  },
+  "SNU": {
+    "snu-sat-1.webp": "Uydu görüntüsü: Santa Clara'nın pisti orta Küba'da şehir ile tarım arazileri arasında uzanıyor; terminal ve apron da yanında.",
+    "snu-chatgpt-01.webp": "Kırmızı-kahverengi harfler yeşil cephe boyunca Abel Santamaria uluslararası havalimanı adını yazıyor; dışarıda birkaç yolcu duruyor.",
+    "snu-chatgpt-02.webp": "Yukarıdan bakıldığında kırmızı çatılı terminalin yanında beyaz çift motorlu pervaneli bir uçak duruyor; yakında bir otobüs ve arabalar bekliyor, ötede yeşil tarlalar var.",
+    "snu-chatgpt-03.webp": "Mobil merdivenler beyaz bir yolcu uçağının burnunda duruyor; çantalı yolcular yeşil terminal ve isim tabelasının önündeki apronda kuyruk oluşturmuş.",
+    "snu-chatgpt-04.webp": "Check-in salonunun turuncu duvarlarında plaj afişleri asılı; cilalı zemin bankoları ve tavan ışıklarını yansıtıyor, ortalıkta neredeyse kimse yok.",
+    "snu-chatgpt-05.webp": "Gidiş salonunu sıralar halindeki turuncu koltuklar dolduruyor, çoğu boş; birkaç yolcu yeşil-beyaz zeminin üzerindeki manzara afişlerinin altında bekliyor.",
+    "snu-chatgpt-06.webp": "Bir uçuş simülasyonu ekran görüntüsü, yoğun ormanı dümdüz kesen uzun bir pisti gösteriyor; kenarlarında kıvrılan bir taksi yolu ve dağınık tarım arazileri var.",
+    "snu-chatgpt-07.webp": "Yeşil terminalin önünde palmiye ağaçları duruyor; beyaz harfler havalimanının adını, birkaç sarı arabanın park ettiği ön avlunun üzerinde yazıyor."
+  },
+  "SOC": {
+    "soc-baidu-1.webp": "Terminal cephesi — kırmızı kiremit çatı altında 'ADI SOEMARMO AIRPORT' yazılı, bayrak direkleri ve çitler düzgün sıralar halinde.",
+    "soc-chatgpt-01.webp": "Beyaz oklar ve yaya geçidi bulunan düz bir bağlantı yolu terminale gidiyor; kümülüs bulutları altında kenar boyunca palmiyeler ve budanmış çalılar var.",
+    "soc-chatgpt-02.webp": "Check-in salonunda parlak soluk zeminler, sıra halindeki desenli kolonları ve asılı davul lambaları yansıtıyor; yolcular bankolarda kuyruk oluşturmuş.",
+    "soc-chatgpt-03.webp": "Bir Garuda Indonesia jeti terminalin önündeki apronda duruyor; uzun mavi kuyruğu, uzun kırmızı kiremit çatı bandına karşı yükseliyor.",
+    "soc-chatgpt-04.webp": "Katmanlı Cava tarzı çatılar ve oymalı bir alınlık terminali ayırt ediyor; giriş tabelası ağaçların gölgelediği çimenliğin üzerinde.",
+    "soc-chatgpt-05.webp": "Apron boyunca bakınca birkaç Garuda Indonesia jeti kırmızı çatılı terminal binalarının ve ötedeki kasaba çatılarının önünde sıralanmış.",
+    "soc-chatgpt-06.webp": "Alçak altın ışıkta yeşil-sarı bir Garuda Indonesia jeti, damalı bir kontrol kulesi ve bir hangarın önündeki kaplamada duruyor.",
+    "soc-chatgpt-07.webp": "Eski terminal, kademeli koyu kiremit çatılar altında uzun beyaz bir blok; dışarıda biniş merdivenleri park etmiş, apronda sarı bir yönlendirme çizgisi var."
+  },
+  "SPG": {
+    "spg-sat-1.webp": "Uydu görüntüsü: Albert Whitted Havalimanı (SPG) kasaba, tarım arazileri ve bitki örtüsüyle çevrili."
+  },
+  "SPI": {
+    "spi-page-6.webp": "Abraham Lincoln Capital Havalimanı'nın giriş anıtı — taşa oyulmuş tam ad ve \"AT SPRINGFIELD\" yazısı.",
+    "spi-page-7.webp": "Springfield apronsunda bir C-47 nakliye uçağı; pervaneleri ve askeri işaretleri net görünüyor."
+  },
+  "SRG": {
+    "srg-sat-1.webp": "Uydu görüntüsü: Semarang'ın pisti Cava'nın kuzey kıyısına yakın uzanıyor; terminal ve apron sahanın güneyinde, çevrede şehir ve tarım arazileri var."
+  },
+  "STN": {
+    "stn-sat-1.webp": "Uydu görüntüsünde Londra Stansted Havalimanı'ndaki (STN) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "SVD": {
+    "svd-baidu-2.webp": "Yağmurdan sonra Argyle International — mavi tonozlu terminalin önünde bir LIAT uçağı, ıslak apron gökyüzünü yansıtıyor, bulutların altında katmanlı tepeler.",
+    "svd-chatgpt-01.webp": "Parlak mavi-yeşil terminal, havalimanının adını dolu bir otoparkın üzerinde taşıyor; arkasında derin denizden bir şerit var.",
+    "svd-chatgpt-02.webp": "Yukarıdan bakıldığında mavi çatılı terminalin yanında geniş bir apron yayılıyor; üzerinde birkaç hafif uçak park etmiş, pist kıyı boyunca uzaklaşıyor.",
+    "svd-chatgpt-03.webp": "Virgin Atlantic, British Airways, jetBlue ve Air Canada jetleri, sık ormanlı tepelerle çevrili mavi çatılı terminalin körüklerinde sıralanmış.",
+    "svd-chatgpt-04.webp": "Bir Airbus A330-300 kapıda körüğü bağlı halde duruyor; gövdesinin altında yer ekibi çalışıyor, ötede yeşil tepeler var.",
+    "svd-chatgpt-05.webp": "Terminalin kavisli cam cephesi havalimanı adını mavi harflerle, bulutlarla dolu gökyüzü altındaki boş soluk apronun üzerinde taşıyor.",
+    "svd-chatgpt-06.webp": "Hava görüntüsü, ham toprak işlerinin üzerine serilmiş yeni siyah bir pisti gösteriyor; çevredeki kıyıyı yeşil tarlalar ve beyaz dalgalar sarıyor.",
+    "svd-chatgpt-07.webp": "Alacakaranlıkta küçük bir pervaneli uçak apronda bekliyor; valizli yolcular pembe tonlu gökyüzü altında koniler arasından terminale yürüyor."
+  },
+  "SVO": {
+    "svo-sat-1.webp": "Uydu görüntüsü: Şeremetyevo Uluslararası Havalimanı'ndaki (SVO) terminaller, pistler ve çevredeki şehir."
+  },
+  "SYD": {
+    "syd-sat-1.webp": "Uydu görüntüsü: Sidney Kingsford Smith Havalimanı'ndaki (SYD) terminaller, pistler ve çevredeki şehir."
+  },
+  "SZX": {
+    "szx-sat-1.webp": "Uydu görüntüsü: Shenzhen Bao'an Uluslararası Havalimanı (SZX), pistleri ve terminali İnci Nehri halicinin doğu kıyısında."
+  },
+  "TAB": {
+    "tab-sat-1.webp": "Uydu görüntüsü: Scarborough'un pisti Tobago kıyısının yanında uzanıyor; terminal ve apron yanında, çevrede plaj ve yeşil tepeler var.",
+    "tab-chatgpt-01.webp": "Dalgalanan çatılı ve cam duvarlı modern terminal, boş beton apronun üzerinde kırmızı harflerle havalimanının tam adını taşıyor.",
+    "tab-chatgpt-02.webp": "Düz pist kıyı şeridine yaslanmış; turkuaz su plajda kırılıyor, yanında kırmızı çatılı tatil köyleri ve bir kasaba yayılıyor.",
+    "tab-chatgpt-03.webp": "Bağlantı yolunun yanında mavi tabelalar duruyor, beyaz tenteler terminal cephesinin kolonlarını sıralıyor; çatıların üzerinde alçak gri bulutlar asılı.",
+    "tab-chatgpt-04.webp": "Koyu mavi koltuk sıraları gidiş salonunun tavandan zemine pencerelerine bakıyor; ahşap tavan öğleden sonra ışığında sıcak parlıyor.",
+    "tab-chatgpt-05.webp": "Bir Caribbean Airlines jeti, turuncu ışıklarla donatılmış çimenli bir yamacın yanından taksi yapıyor; gri uzaklıkta bina sıraları duruyor.",
+    "tab-chatgpt-06.webp": "Eski bir check-in salonunun içinde beton kolonlar numaralı mor bankoların üzerinde yükseliyor; kırmızı halat bariyerleri kuyruk şeridi oluşturuyor, bir çift bankta bekliyor.",
+    "tab-chatgpt-07.webp": "Karanlık çöktükten sonra terminalin parlayan tabelası indirme şeridinin üzerindeki kavisli tenteyi aydınlatıyor; kırmızı-beyaz çizgili kolonların yanında bir araba bekliyor."
+  },
+  "TAS": {
+    "tas-sat-1.webp": "Uydu görüntüsü: İslam Kerimov Taşkent Uluslararası Havalimanı'ndaki (TAS) terminaller, pistler ve çevredeki şehir."
+  },
+  "TGZ": {
+    "tgz-sat-1.webp": "Uydu görüntüsü: Tuxtla Gutiérrez'in pisti Chiapas'ta bir vadide uzanıyor; terminal ve apron yanında, çevrede dağlar ve tarım arazileri var."
+  },
+  "TND": {
+    "tnd-sat-1.webp": "Uydu görüntüsü: Alberto Delgado Havalimanı (TND) yeşil bitki örtüsü ve tarım arazileriyle çevrili.",
+    "tnd-chatgpt-01.webp": "Beyaz giriş duvarı, mavi-beyaz çizgili tentenin üzerinde siyah harfli tabelalar taşıyor; altında mavi boyalı basamaklar, sıva üzerinde palmiye gölgeleri var.",
+    "tnd-chatgpt-02.webp": "Bir oyun ekran görüntüsü, kırmızı kiremit çatılı ve havalimanı tabelalı turkuaz bir kapı binası gösteriyor; girişi mor korkuluklar ve palmiyeler çerçeveliyor, ayrıca ekranda bir pusula var.",
+    "tnd-chatgpt-03.webp": "Bir başka oyun ekran görüntüsü, turkuaz düz çatılı bir terminali dışarıda park etmiş mavi-beyaz bir otobüsle eşleştiriyor; kaldırım boyunca palmiyeler ve çitler, solda yüzen bir görev paneli var.",
+    "tnd-chatgpt-04.webp": "Apronda iki hafif uçak, kırmızı-beyaz çizgili direk sırasının önünde duruyor; solda turuncu çatılı eski terminal, çevrede güneşli çimenler var."
+  },
+  "TPE": {
+    "tpe-sat-1.webp": "Uydu görüntüsü: Taoyuan Uluslararası Havalimanı (TPE), paralel pistleri, terminalleri ve çevredeki kasabalarıyla."
+  },
+  "TQD": {
+    "tqd-sat-1.webp": "Uydu görüntüsünde Al Taqaddum Hava Üssü'nün (TQD) pisti kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "TTQ": {
+    "ttq-page-1.webp": "Tortuguero pisti — asfaltta bir Nature Air Cessna Caravan (TI-BDY), küçük yeşil çatılı bekleme kulübesi ve kanadın hemen arkasında yağmur ormanı (fotoğraf: Sebastian Arndt / Flugzeugbilder.de).",
+    "ttq-chatgpt-01.webp": "Boş bir asfalt pist yoğun tropikal ağaçlara doğru dümdüz uzanıyor; beyaz orta çizgi ve eşik işaretleri çimen kenarları ile yeşil tel örgü çit arasında keskin.",
+    "ttq-chatgpt-02.webp": "Küçük beyaz tek motorlu bir turboprop beton apronda kameraya bakıyor; önündeki çimende iki turuncu koni, arkasında mavi gökyüzüne karşı palmiyeler var.",
+    "ttq-chatgpt-03.webp": "Kabin penceresinden, kırmızıyla işaretlenmiş beyaz bir motor naseli ve dönen pervane, ötedeki apronu çerçeveliyor; orada mavi-beyaz küçük bir uçak kırmızı çatılı bir barınağın yanında bekliyor.",
+    "ttq-chatgpt-04.webp": "Beyaz bir turboprop apron boyunca yandan duruyor; kuyruğunda kırmızı-mavi şeritler, gövdesinde tescili, çevresinde palmiyeler ve koyu mavi gökyüzü var.",
+    "ttq-chatgpt-05.webp": "Tropikal bir su kıyısında yeşil çatılı ahşap bir barınak ağaçların gölgesinde duruyor; koyu ve durgun suyun üstündeki çimende bir balıkçıl var."
+  },
+  "UAM": {
+    "uam-sat-1.webp": "Uydu görüntüsünde Andersen Hava Kuvvetleri Üssü (UAM) çevredeki su ve kıyı şeridiyle bütünleşiyor."
+  },
+  "VBA": {
+    "vba-sat-1.webp": "Uydu görüntüsü: orta Myanmar'da yeşil tepeler arasından bir pist geçiyor; yanında küçük bir apron ve terminal var.",
+    "vba-chatgpt-01.webp": "Koyu taş bir giriş kapısı, Birmanca yazının üzerinde altın harfler taşıyor; arkasında düz gri gökyüzü altında terminalin kırmızı çatısı yükseliyor."
+  },
+  "VIE": {
+    "vie-sat-1.webp": "Uydu görüntüsü: Viyana Uluslararası Havalimanı'ndaki (VIE) terminaller, pistler ve çevredeki şehir."
+  },
+  "VLN": {
+    "vln-sat-1.webp": "Uydu görüntüsü: Valencia'nın pisti Venezuela'da bir vadide yer alıyor; terminal ve apron yanında, çevrede şehir, tarım arazileri ve göl var."
+  },
+  "VLY": {
+    "vly-sat-1.webp": "Uydu görüntüsünde Anglesey Havalimanı (VLY) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor.",
+    "vly-chatgpt-01.webp": "Alacakaranlıkta terminal girişi cam kapılarından sıcak sarı bir ışıkla parlıyor; kapılarda kırmızı bir ejderha amblemi ve iki dilli havalimanı adı basılı.",
+    "vly-chatgpt-02.webp": "Havadan bakıldığında kesişen pistler yeşil tarlalar arasında, ortalarında hangarlar ve apronlar; sol kenarı kumlu bir plaj ve kırılan dalgalar dolduruyor.",
+    "vly-chatgpt-03.webp": "Yüksek görünürlüklü yelekli yolcular apronu geçerek kırmızı tuğlalı terminale yürüyor; bulutlu gökyüzü altında yakında yeşil şeritli beyaz bir kuyruk ve tescil harfleri duruyor.",
+    "vly-chatgpt-04.webp": "Gidiş salonunda sarı iki dilli tabelalar check-in, danışma ve tuvaletlere yönlendiriyor; birkaç yolcu bankoların yanında sohbet ediyor, üstte bir deniz feneri duvar resmi var.",
+    "vly-chatgpt-05.webp": "Havalimanı adını Galce ve İngilizce veren beyaz bir sınır tabelası tel örgü çitin önünde duruyor; kapalı gökyüzü altında arkada kontrol kulesi ve boş apron var.",
+    "vly-chatgpt-06.webp": "Çift turboprop bir yolcu uçağı doğrudan kameraya doğru taksi yapıyor; pervaneler disk halinde bulanık, burun ışıkları yanıyor, iki yanda düz çimen ve soluk gri gökyüzü var.",
+    "vly-chatgpt-07.webp": "Cam tepeli bir kontrol kulesi yeşil çatılı bir binadan yükseliyor; açık mavi gökyüzü altında önündeki düzgün çimenlikte kırmızı bir itfaiye aracı ve birkaç araba park etmiş.",
+    "vly-chatgpt-08.webp": "Yolcular aydınlık bir gidiş salonunda sıralar halindeki banklarda dinleniyor; ortadaki yuvarlak masada bir bilgisayar, üstte çıkış ve tuvaletler için sarı tabelalar var."
+  },
+  "VUP": {
+    "vup-sat-1.webp": "Uydu görüntüsünde Alfonso López Pumarejo Havalimanı (VUP) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
+  },
+  "WAI": {
+    "wai-sat-1.webp": "Uydu görüntüsünde Ambalabe Havalimanı'nın (WAI) pisti kuru zemin ve çıplak arazi arasında yer alıyor.",
+    "wai-chatgpt-01.webp": "Alçak beyaz bir terminal kırmızı harflerle bir kasaba adı taşıyor; soldaki kuleden Madagaskar bayrağı dalgalanıyor, boş asfalt apron kuru çalılıklarla buluşuyor.",
+    "wai-chatgpt-02.webp": "Bu uydu görüntüsü, kuru kahverengi araziye yayılmış soluk renkli bir kasaba bina kümesini gösteriyor; koyu bitki örtüsü parçaları ve dağınık tarlalar bölüyor."
+  },
+  "WAM": {
+    "wam-sat-1.webp": "Uydu görüntüsünde Ambatondrazaka Havalimanı'nın (WAM) pisti kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "WAQ": {
+    "waq-sat-1.webp": "Uydu görüntüsünde Antsalova Havalimanı'nın (WAQ) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "WKK": {
+    "wkk-sat-1.webp": "Uydu görüntüsünde Aleknagik / New Havalimanı'nın (WKK) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor.",
+    "wkk-chatgpt-01.webp": "Alçak akşam ışığında çift turboprop bir uçak çakıl apronda duruyor; açık çayıra dağılmış birkaç oluklu metal kulübe, ötede bulutlara bürünmüş yuvarlak tepeler var."
+  },
+  "WMR": {
+    "wmr-sat-1.webp": "Uydu görüntüsü: Mananara Nord Havalimanı (WMR) su ve kıyı şeridiyle çevrili."
+  },
+  "XJD": {
+    "xjd-sat-1.webp": "Uydu görüntüsü: Al Udeid Hava Üssü'nün paralel pistleri ve büyük apronu; üs binaları sahanın doğusunda."
+  },
+  "YAA": {
+    "yaa-sat-1.webp": "Uydu görüntüsünde Anahim Lake Havalimanı (YAA) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor."
+  },
+  "YAT": {
+    "yat-sat-1.webp": "Uydu görüntüsü: Attawapiskat Havalimanı (YAT) yeşil bitki örtüsü ve tarım arazileriyle çevrili."
+  },
+  "YEK": {
+    "yek-sat-1.webp": "Uydu görüntüsünde Arviat Havalimanı'nın (YEK) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "YIB": {
+    "yib-sat-1.webp": "Uydu görüntüsü: Atikokan Belediye Havalimanı (YIB) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
+  },
+  "YIE": {
+    "yie-sat-1.webp": "Uydu görüntüsünde Arxan Yi'ershi Havalimanı (YIE) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor."
+  },
+  "YLT": {
+    "ylt-sat-1.webp": "Uydu görüntüsü: Alert'teki kıyı tundrasında bir çakıl pist, deniz buzu ve çıplak araziyle çevrili."
+  },
+  "YPJ": {
+    "ypj-sat-1.webp": "Uydu görüntüsünde Aupaluk Havalimanı (YPJ) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
+  },
+  "YVR": {
+    "yvr-sat-1.webp": "Uydu görüntüsünde Vancouver Uluslararası Havalimanı'ndaki (YVR) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "YXX": {
+    "yxx-sat-1.webp": "Uydu görüntüsü: Abbotsford'un pistleri Fraser Vadisi'nde tarım arazileri ile dağlar arasında uzanıyor; terminal ve apron sahanın yanında."
+  },
+  "YYW": {
+    "yyw-sat-1.webp": "Uydu görüntüsü: kuzey Ontario'da ormanı bir pist kesiyor; orta noktasında apron ve küçük terminal var.",
+    "yyw-chatgpt-01.webp": "Yeşil tarlaların ortasından düz bir çakıl yol, kırmızı kenarlı beyaz sanayi binaları kümesine doğru uzanıyor; soluk kapalı gökyüzü altında kenar boyunca elektrik direkleri var."
+  },
+  "YYZ": {
+    "yyz-sat-1.webp": "Uydu görüntüsü: Toronto Pearson Uluslararası Havalimanı'ndaki (YYZ) terminaller, pistler ve çevredeki şehir."
+  },
+  "ZCA": {
+    "zca-sat-1.webp": "Uydu görüntüsü: Arnsberg Menden Havalimanı (ZCA) yeşil bitki örtüsü ve tarım arazileriyle çevrili.",
+    "zca-chatgpt-01.webp": "Havadan bakıldığında terminal ve kulesi koyu yoğun ormana karşı duruyor; havalimanı adı beyaz bir çatı boyunca boyanmış, aşağıdaki apronda hafif uçaklar park etmiş.",
+    "zca-chatgpt-02.webp": "Gri kaplamalı terminal havaalanının adını siyah harflerle gösteriyor; çatısından camlı bir kontrol kabini yükseliyor, önünde açık çimen ve bir sıra saksı var.",
+    "zca-chatgpt-03.webp": "Yüksekten bakıldığında tek bir pist orman ve tarım arazilerini çaprazlama kesiyor; yakın eşiği 06 ile işaretli, yarısında bir grup beyaz hangar var.",
+    "zca-chatgpt-04.webp": "Gün batımında güneş, asfalt pistin uzak ucundaki ağaç hattının arkasına iniyor; ön planda sıralar halindeki beyaz şevron işaretleri son ışığı yakalıyor.",
+    "zca-chatgpt-05.webp": "Beyaz bir iş jeti terminalin altındaki apronda bekliyor; kule pencerelerinde 05 işaretli sarı bir panel var, parlak güneşte teras boyunca bir kalabalık toplanmış.",
+    "zca-chatgpt-06.webp": "Yakından: koyu gri hafif çift motorlu bir uçak yanından taksi yapıyor, pervanesi bulanık, pilotu kokpitte net görünüyor; çimen kenarında turuncu bir koni duruyor."
+  },
+  "ZRH": {
+    "zrh-sat-1.webp": "Uydu görüntüsü: Zürih Havalimanı'ndaki (ZRH) terminaller, pistler ve çevredeki şehir."
+  },
+  "ZWA": {
+    "zwa-sat-1.webp": "Uydu görüntüsü: Andapa Havalimanı (ZWA) yeşil bitki örtüsü ve tarım arazileriyle çevrili."
+  }
+}

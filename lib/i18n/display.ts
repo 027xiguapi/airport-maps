@@ -9,21 +9,23 @@ import type { Locale } from './config';
  */
 
 /**
- * Chinese-script locales with CJK punctuation (、；（）) and 万/亿 units.
+ * Chinese-script locales with Chinese punctuation (、；（）) and 万/亿 units.
  * Korean is *not* included: it writes Western punctuation and spaces, so it
- * follows the comma/semicolon branch even though its script is CJK.
+ * follows the comma/semicolon branch even though its script is CJK. Japanese
+ * gets its own branches below (、 for lists, 。 for clauses).
  */
 export function isCjkLocale(locale: Locale): boolean {
   return locale === 'zh' || locale === 'tw';
 }
 
-/** "a、b、c" for Chinese, "a, b, c" for every other locale. */
+/** "a、b、c" for Chinese and Japanese, "a, b, c" for every other locale. */
 export function listSeparator(locale: Locale): string {
-  return isCjkLocale(locale) ? '、' : ', ';
+  return isCjkLocale(locale) || locale === 'ja' ? '、' : ', ';
 }
 
-/** Clause separator: "；" for Chinese, "; " for every other locale. */
+/** Clause separator: "；" for Chinese, "。" for Japanese, "; " otherwise. */
 export function clauseSeparator(locale: Locale): string {
+  if (locale === 'ja') return '。';
   return isCjkLocale(locale) ? '；' : '; ';
 }
 
@@ -47,6 +49,18 @@ export function intlLocale(locale: Locale): string {
     case 'pt':
       // The catalog is Brazilian Portuguese (see LOCALE_META.acceptLanguage).
       return 'pt-BR';
+    case 'id':
+      return 'id-ID';
+    case 'vi':
+      return 'vi-VN';
+    case 'ja':
+      return 'ja-JP';
+    case 'ru':
+      return 'ru-RU';
+    case 'tr':
+      return 'tr-TR';
+    case 'th':
+      return 'th-TH';
     default:
       return 'en-US';
   }
@@ -54,12 +68,26 @@ export function intlLocale(locale: Locale): string {
 
 /**
  * Wikipedia language edition to link to. Traditional Chinese pages use the
- * Chinese edition with the article's Traditional title; German, French, Italian,
- * Korean, Spanish and Portuguese use their own edition with the localized name.
+ * Chinese edition with the article's Traditional title; every translated
+ * locale uses its own edition with the localized name.
  */
 export function wikipediaLocale(
   locale: Locale
-): 'en' | 'zh' | 'de' | 'fr' | 'it' | 'ko' | 'es' | 'pt' {
+):
+  | 'en'
+  | 'zh'
+  | 'de'
+  | 'fr'
+  | 'it'
+  | 'ko'
+  | 'es'
+  | 'pt'
+  | 'id'
+  | 'vi'
+  | 'ja'
+  | 'ru'
+  | 'tr'
+  | 'th' {
   if (locale === 'en') return 'en';
   if (locale === 'de') return 'de';
   if (locale === 'fr') return 'fr';
@@ -67,6 +95,12 @@ export function wikipediaLocale(
   if (locale === 'ko') return 'ko';
   if (locale === 'es') return 'es';
   if (locale === 'pt') return 'pt';
+  if (locale === 'id') return 'id';
+  if (locale === 'vi') return 'vi';
+  if (locale === 'ja') return 'ja';
+  if (locale === 'ru') return 'ru';
+  if (locale === 'tr') return 'tr';
+  if (locale === 'th') return 'th';
   return 'zh';
 }
 

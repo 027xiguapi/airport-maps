@@ -79,15 +79,20 @@ export function buildAirportGraph(input: {
   // already uses, so schema and visible links never disagree.
   const enWikiUrl = facts?.wikiEn ?? wikiUrl('en', airport.nameEn);
   const zhWikiUrl = wikiUrl('zh', airportEncyclopediaTitle(airport.iata, airport.nameZh));
-  // German/French/Italian/Korean/Spanish/Portuguese editions, filed under the
-  // localized airport name ("Flughafen München", "Aéroport de Munich",
-  // "Aeroporto di Monaco di Baviera", "인천국제공항", "Aeropuerto de Múnich").
+  // German/French/Italian/Korean/Spanish/Portuguese/Indonesian/Vietnamese/
+  // Japanese editions, filed under the localized airport name.
   const deWikiUrl = wikiUrl('de', airport.name);
   const frWikiUrl = wikiUrl('fr', airport.name);
   const itWikiUrl = wikiUrl('it', airport.name);
   const koWikiUrl = wikiUrl('ko', airport.name);
   const esWikiUrl = wikiUrl('es', airport.name);
   const ptWikiUrl = wikiUrl('pt', airport.name);
+  const idWikiUrl = wikiUrl('id', airport.name);
+  const viWikiUrl = wikiUrl('vi', airport.name);
+  const jaWikiUrl = wikiUrl('ja', airport.name);
+  const ruWikiUrl = wikiUrl('ru', airport.name);
+  const trWikiUrl = wikiUrl('tr', airport.name);
+  const thWikiUrl = wikiUrl('th', airport.name);
 
   const pax = formatPax(airport.annualPaxM, locale);
   const distance = formatDistance(airport.distanceKm, locale);
@@ -209,7 +214,19 @@ export function buildAirportGraph(input: {
                           ? esWikiUrl
                           : locale === 'pt'
                             ? ptWikiUrl
-                            : zhWikiUrl,
+                            : locale === 'id'
+                              ? idWikiUrl
+                              : locale === 'vi'
+                                ? viWikiUrl
+                                : locale === 'ja'
+                                  ? jaWikiUrl
+                                  : locale === 'ru'
+                                    ? ruWikiUrl
+                                    : locale === 'tr'
+                                      ? trWikiUrl
+                                      : locale === 'th'
+                                        ? thWikiUrl
+                                        : zhWikiUrl,
           },
           { '@type': 'CreativeWork', name: t.airport.sourcesOurAirports, url: OURAIRPORTS_DATA_URL },
         ],

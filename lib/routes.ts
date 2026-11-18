@@ -9,6 +9,12 @@ import { italianAirportName, italianCity, italianCountry } from './i18n/it-data'
 import { koreanAirportName, koreanCity, koreanCountry } from './i18n/ko-data';
 import { spanishAirportName, spanishCity, spanishCountry } from './i18n/es-data';
 import { portugueseAirportName, portugueseCity, portugueseCountry } from './i18n/pt-data';
+import { indonesianAirportName, indonesianCity, indonesianCountry } from './i18n/id-data';
+import { vietnameseAirportName, vietnameseCity, vietnameseCountry } from './i18n/vi-data';
+import { japaneseAirportName, japaneseCity, japaneseCountry } from './i18n/ja-data';
+import { russianAirportName, russianCity, russianCountry } from './i18n/ru-data';
+import { turkishAirportName, turkishCity, turkishCountry } from './i18n/tr-data';
+import { thaiAirportName, thaiCity, thaiCountry } from './i18n/th-data';
 
 /**
  * Route data for the airport page's route map.
@@ -161,10 +167,10 @@ export async function getAirportRouteMap(
   if (!raw || raw.destinations.length === 0) return null;
 
   const world = loadWorldAirports();
-  // German/French/Italian/Korean/Spanish/Portuguese apply their vocabulary to
-  // the bulk index too (Peking / Pékin / Pechino / Pekín, Vereinigte Staaten /
-  // États-Unis / Stati Uniti / Estados Unidos); the airport name stays
-  // international.
+  // German/French/Italian/Korean/Spanish/Portuguese/Indonesian/Vietnamese/
+  // Japanese apply their vocabulary to the bulk index too (Peking / Pékin /
+  // Pechino / Pekín / Pequim, Vereinigte Staaten / Estados Unidos); the airport
+  // name stays international.
   const vocab =
     locale === 'de'
       ? { airport: germanAirportName, city: germanCity, country: germanCountry }
@@ -182,7 +188,43 @@ export async function getAirportRouteMap(
                     city: portugueseCity,
                     country: portugueseCountry,
                   }
-                : null;
+                : locale === 'id'
+                  ? {
+                      airport: indonesianAirportName,
+                      city: indonesianCity,
+                      country: indonesianCountry,
+                    }
+                  : locale === 'vi'
+                    ? {
+                        airport: vietnameseAirportName,
+                        city: vietnameseCity,
+                        country: vietnameseCountry,
+                      }
+                    : locale === 'ja'
+                      ? {
+                          airport: japaneseAirportName,
+                          city: japaneseCity,
+                          country: japaneseCountry,
+                        }
+                      : locale === 'ru'
+                        ? {
+                            airport: russianAirportName,
+                            city: russianCity,
+                            country: russianCountry,
+                          }
+                        : locale === 'tr'
+                          ? {
+                              airport: turkishAirportName,
+                              city: turkishCity,
+                              country: turkishCountry,
+                            }
+                          : locale === 'th'
+                            ? {
+                                airport: thaiAirportName,
+                                city: thaiCity,
+                                country: thaiCountry,
+                              }
+                            : null;
   const destinations: RouteDestination[] = [];
   for (const entry of raw.destinations) {
     const place = world.get(entry.iata);

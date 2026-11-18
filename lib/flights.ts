@@ -17,6 +17,12 @@ import { italianAirportName, italianCity, italianCountry } from './i18n/it-data'
 import { koreanAirportName, koreanCity, koreanCountry } from './i18n/ko-data';
 import { spanishAirportName, spanishCity, spanishCountry } from './i18n/es-data';
 import { portugueseAirportName, portugueseCity, portugueseCountry } from './i18n/pt-data';
+import { indonesianAirportName, indonesianCity, indonesianCountry } from './i18n/id-data';
+import { vietnameseAirportName, vietnameseCity, vietnameseCountry } from './i18n/vi-data';
+import { japaneseAirportName, japaneseCity, japaneseCountry } from './i18n/ja-data';
+import { russianAirportName, russianCity, russianCountry } from './i18n/ru-data';
+import { turkishAirportName, turkishCity, turkishCountry } from './i18n/tr-data';
+import { thaiAirportName, thaiCity, thaiCountry } from './i18n/th-data';
 
 /**
  * Flight numbers for the airport page's flight board.
@@ -91,6 +97,12 @@ function vocabulary(locale: Locale) {
   if (locale === 'ko') return { airport: koreanAirportName, city: koreanCity, country: koreanCountry };
   if (locale === 'es') return { airport: spanishAirportName, city: spanishCity, country: spanishCountry };
   if (locale === 'pt') return { airport: portugueseAirportName, city: portugueseCity, country: portugueseCountry };
+  if (locale === 'id') return { airport: indonesianAirportName, city: indonesianCity, country: indonesianCountry };
+  if (locale === 'vi') return { airport: vietnameseAirportName, city: vietnameseCity, country: vietnameseCountry };
+  if (locale === 'ja') return { airport: japaneseAirportName, city: japaneseCity, country: japaneseCountry };
+  if (locale === 'ru') return { airport: russianAirportName, city: russianCity, country: russianCountry };
+  if (locale === 'tr') return { airport: turkishAirportName, city: turkishCity, country: turkishCountry };
+  if (locale === 'th') return { airport: thaiAirportName, city: thaiCity, country: thaiCountry };
   return null;
 }
 

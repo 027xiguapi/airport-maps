@@ -3,10 +3,16 @@ import { de } from './messages/de';
 import { en } from './messages/en';
 import { es } from './messages/es';
 import { fr } from './messages/fr';
+import { id } from './messages/id';
 import { it } from './messages/it';
+import { ja } from './messages/ja';
 import { ko } from './messages/ko';
 import { pt } from './messages/pt';
+import { ru } from './messages/ru';
+import { th } from './messages/th';
+import { tr } from './messages/tr';
 import { tw } from './messages/tw';
+import { vi } from './messages/vi';
 import { zh, type Messages } from './messages/zh';
 
 /**
@@ -30,6 +36,12 @@ const CATALOGS: Partial<Record<Locale, Messages>> = {
   fr,
   it,
   ko,
+  id,
+  ja,
+  vi,
+  ru,
+  tr,
+  th,
   zh,
   tw,
 };

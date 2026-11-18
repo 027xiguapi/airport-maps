@@ -49,31 +49,31 @@ function localeMeta(locales) {
   return meta;
 }
 
+/** Article file suffix per locale, mirroring lib/blog.ts's articleNames(). */
+const BLOG_SUFFIX = {
+  en: '.en.md',
+  es: '.es.md',
+  pt: '.pt.md',
+  de: '.de.md',
+  fr: '.fr.md',
+  it: '.it.md',
+  ko: '.ko.md',
+  id: '.id.md',
+  vi: '.vi.md',
+  ja: '.ja.md',
+  ru: '.ru.md',
+  tr: '.tr.md',
+  th: '.th.md',
+  tw: '.tw.md',
+  zh: '.md',
+};
+
 /** Article files per locale, by the same suffix rules as lib/blog.ts. */
 function blogCounts(locales) {
   const dir = join(ROOT, 'public', 'blog');
   const counts = Object.fromEntries(locales.map((l) => [l, 0]));
   if (!existsSync(dir)) return counts;
-  const suffixFor = (locale) =>
-    locale === 'en'
-      ? '.en.md'
-      : locale === 'de'
-        ? '.de.md'
-        : locale === 'fr'
-          ? '.fr.md'
-          : locale === 'it'
-            ? '.it.md'
-            : locale === 'ko'
-              ? '.ko.md'
-              : locale === 'es'
-                ? '.es.md'
-                : locale === 'pt'
-                  ? '.pt.md'
-                  : locale === 'tw'
-                    ? '.tw.md'
-                    : locale === 'zh'
-                      ? '.md'
-                      : null;
+  const suffixFor = (locale) => BLOG_SUFFIX[locale] ?? null;
   const articles = readdirSync(dir, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name);
