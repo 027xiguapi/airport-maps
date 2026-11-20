@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-11-20",
   "note": "Data-driven localized content generated from the repository's own data. These are not translations of the English editorial pages. A later editorial translation may replace any row; the generators only fill missing rows unless --refresh is passed.",
-  "locales": ["es", "pt", "ja", "id", "vi", "ru", "tr", "th"],
+  "locales": ["es", "pt", "ja", "id", "vi", "ru", "tr", "th", "nl", "sv", "pl", "cs", "ro", "uk", "hi", "bn", "sw"],
   "content_documents": {
     "airport": 516,
     "country": 46,
@@ -9,6 +9,11 @@
     "total_per_locale": 567
   },
   "airport_translations": 516,
+  "blog": {
+    "locales": ["nl", "sv", "pl", "cs", "ro", "uk", "hi", "bn", "sw"],
+    "articles_per_locale": 100,
+    "note": "Full translations of the 100 English blog articles, written as public/blog/<slug>/<slug>.<locale>.md with the English frontmatter, images and structure preserved."
+  },
   "generators": [
     "scripts/generate-localized-guides.mjs",
     "scripts/generate-localized-descriptions.mjs",

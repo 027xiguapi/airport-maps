@@ -325,6 +325,49 @@ const italianDescriptions = (() => {
   }
 })();
 
+/**
+ * Locales whose airport descriptions were translated outside the seed. The
+ * maps sit in data/<locale>-descriptions.json (IATA -> Markdown, tracked), with
+ * content/translation-work/<locale>-descriptions.json as the working-copy
+ * fallback. The seed's built-in inserts only cover zh/en/tw/de/ko/fr/it, and
+ * the TRUNCATE above clears every locale, so these rows are re-applied before
+ * COMMIT to keep a re-seed from silently dropping them.
+ */
+const IMPORTED_DESCRIPTION_LOCALES = [
+  'es',
+  'pt',
+  'ja',
+  'id',
+  'vi',
+  'ru',
+  'tr',
+  'th',
+  'nl',
+  'sv',
+  'pl',
+  'cs',
+  'ro',
+  'uk',
+  'hi',
+  'bn',
+  'sw',
+];
+
+/** [IATA, Markdown] pairs for a locale translated outside the seed, or []. */
+function importedDescriptions(locale) {
+  for (const path of [
+    join(ROOT, 'data', `${locale}-descriptions.json`),
+    join(ROOT, 'content', 'translation-work', `${locale}-descriptions.json`),
+  ]) {
+    try {
+      return Object.entries(JSON.parse(readFileSync(path, 'utf8')));
+    } catch {
+      // Not there — try the next location.
+    }
+  }
+  return [];
+}
+
 /** "a, b and c" */
 function joinList(items) {
   if (items.length <= 1) return items[0] ?? '';
@@ -631,6 +674,29 @@ try {
           directoryDescriptionIt(a, countries[a.country], airportFacts[a.iata]),
       ]
     );
+  }
+
+  // Re-apply the descriptions translated outside the seed (see the loader
+  // above). The inserts in both loops only cover the built-in locales, while
+  // the TRUNCATE cleared every locale.
+  let restoredDescriptions = 0;
+  for (const locale of IMPORTED_DESCRIPTION_LOCALES) {
+    const rows = importedDescriptions(locale);
+    if (!rows.length) continue;
+    const payload = JSON.stringify(rows.map(([iata, body]) => ({ iata, body })));
+    const { rowCount } = await client.query(
+      `INSERT INTO airport_translations (airport_iata, locale, description_md)
+       SELECT x.iata, $1, x.body
+         FROM jsonb_to_recordset($2::jsonb) AS x(iata text, body text)
+         JOIN airports a ON a.iata = x.iata
+       ON CONFLICT (airport_iata, locale)
+       DO UPDATE SET description_md = EXCLUDED.description_md`,
+      [locale, payload]
+    );
+    restoredDescriptions += rowCount;
+  }
+  if (restoredDescriptions) {
+    console.log(`restored ${restoredDescriptions} imported airport description(s)`);
   }
 
   await client.query('COMMIT');

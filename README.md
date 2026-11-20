@@ -1,6 +1,6 @@
 # 全球机场地图 · World Airport Maps
 
-全球机场导航站点（生产域名 **worldairportmap.com**）：按国家 / 地区浏览 **516 座机场、101 个国家 / 地区**，查看每座机场的**航站楼平面示意图**、登机口范围、主要航司、地面交通与设施；可交互的**直飞航线图**与目的地列表；三个地理计算工具；以及用 **Markdown** 维护的长文（516 篇机场指南：60 篇精编手写 + 456 篇数据驱动起步稿、46 篇国家介绍）。**默认语言为英语**，同时提供完整中文版、繁体中文版、**德语版（`/de`）**、**韩语版（`/ko`）**、**法语版（`/fr`）**、**意大利语版（`/it`）**、**西班牙语版（`/es`）**、**葡萄牙语版（`/pt`）**、**日语版（`/ja`）**、**印尼语版（`/id`）**、**越南语版（`/vi`）**、**俄语版（`/ru`）**、**土耳其语版（`/tr`）**、**泰语版（`/th`）**、**荷兰语版（`/nl`）**、**瑞典语版（`/sv`）**、**波兰语版（`/pl`）**、**捷克语版（`/cs`）**、**罗马尼亚语版（`/ro`）**、**乌克兰语版（`/uk`）**、**印地语版（`/hi`）**、**孟加拉语版（`/bn`）**与**斯瓦希里语版（`/sw`）**。24 种注册语言现已全部发布 UI 与结构化词表；其中 nl/sv/pl/cs/ro/uk/hi/bn/sw 的长文、机场简介与博客仍按语种逐步补译，缺失时回退英文。
+全球机场导航站点（生产域名 **worldairportmap.com**）：按国家 / 地区浏览 **516 座机场、101 个国家 / 地区**，查看每座机场的**航站楼平面示意图**、登机口范围、主要航司、地面交通与设施；可交互的**直飞航线图**与目的地列表；三个地理计算工具；以及用 **Markdown** 维护的长文（516 篇机场指南：60 篇精编手写 + 456 篇数据驱动起步稿、46 篇国家介绍）。**默认语言为英语**，同时提供完整中文版、繁体中文版、**德语版（`/de`）**、**韩语版（`/ko`）**、**法语版（`/fr`）**、**意大利语版（`/it`）**、**西班牙语版（`/es`）**、**葡萄牙语版（`/pt`）**、**日语版（`/ja`）**、**印尼语版（`/id`）**、**越南语版（`/vi`）**、**俄语版（`/ru`）**、**土耳其语版（`/tr`）**、**泰语版（`/th`）**、**荷兰语版（`/nl`）**、**瑞典语版（`/sv`）**、**波兰语版（`/pl`）**、**捷克语版（`/cs`）**、**罗马尼亚语版（`/ro`）**、**乌克兰语版（`/uk`）**、**印地语版（`/hi`）**、**孟加拉语版（`/bn`）**与**斯瓦希里语版（`/sw`）**。24 种注册语言现已全部发布：每种语言都有完整 UI、结构化词表、516 篇机场指南、46 篇国家介绍、5 个静态页、516 条机场简介与 100 篇博客译文。
 
 由原来的单文件静态页面（`legacy/index.html`，哈希路由 + 内嵌 JS 数据）重构为 **Vinext（基于 Vite 的 Next.js 兼容框架，App Router）+ PostgreSQL**：
 
@@ -211,7 +211,7 @@ npm run build:raw                   # 完全不限制（等价于裸 vite build�
 countries             101 行   国家 / 地区（code、中文名、name_en、region、region_en、国旗）
 airports              516 行   机场（iata、slug、中英文名、城市、登机口数、年旅客量、
                               距市中心、更新时间、search_blob）
-airport_translations 7755 行  机场简介（按语言存放的 Markdown；en/zh/tw/de/fr/it/ko 各 516 行，其余已发布语言回退英文）
+airport_translations 12384 行 机场简介（按语言存放的 Markdown；24 种语言各 516 行）
 terminals            174 行   航站楼（代码、中英文名、登机口范围（含英文）、登机口数、
                               主要航司（含英文）、是否卫星厅）
 terminal_amenities   413 行   航站楼设施（label + label_en）
@@ -235,7 +235,7 @@ ground_transport     216 行   地面交通（name/description + 英文列，可
 
 ### 语言注册表与 URL 方案
 
-`lib/i18n/config.ts` 的 `LOCALES` 注册了 24 个语言代码（顺序即语言切换器顺序），但**只有 `lib/i18n/catalogs.ts` 里登记了消息目录的语言才真正发布**——当前是 `en` + `es`（西班牙语，`htmlLang=es`，URL 前缀 `/es`）+ `pt`（巴西葡萄牙语，`htmlLang=pt`，URL 前缀 `/pt`）+ `fr`（法语，`htmlLang=fr`，URL 前缀 `/fr`）+ `de`（德语，`htmlLang=de`，URL 前缀 `/de`）+ `it`（意大利语，`htmlLang=it`，URL 前缀 `/it`）+ `ko`（韩语，`htmlLang=ko`，URL 前缀 `/ko`）+ `zh` + `tw`（繁体中文，`htmlLang=zh-hant`，URL 前缀 `/tw`）。未发布的前缀会被剥掉并跳到访客的最佳可用语言，而不是 404，也不会出现「同一批英文页面挂在 /ja 下」的重复收录。
+`lib/i18n/config.ts` 的 `LOCALES` 注册了 24 个语言代码（顺序即语言切换器顺序），`lib/i18n/catalogs.ts` 里登记了消息目录的语言才真正发布——当前 **24 种全部已发布**：`en`、`zh`、`tw`（繁体中文，`htmlLang=zh-hant`）、`de`、`fr`、`it`、`ko`、`es`、`pt`、`ja`、`id`、`vi`、`ru`、`tr`、`th`、`nl`、`sv`、`pl`、`cs`、`ro`、`uk`、`hi`、`bn`、`sw`。未发布的前缀会被剥掉并跳到访客的最佳可用语言，而不是 404，也不会出现「同一批英文页面挂在未发布前缀下」的重复收录。
 
 URL 方案（与生产站点地图一致）：
 
@@ -254,10 +254,10 @@ URL 方案（与生产站点地图一致）：
 | `/tr/airport/PEK` | 土耳其语页面的规范地址（`hreflang="tr"`） |
 | `/th/airport/PEK` | 泰语页面的规范地址（`hreflang="th"`） |
 | `/en/airport/PEK` | 旧地址，308 跳到裸路径，保证一个英文页面只有一个可收录 URL |
-| `/ru/...` | 已注册但未发布（或任意两位语言前缀）：剥离前缀后跳到访客最佳可用语言 |
+| `/xx/...` | 任意两位未注册前缀：剥离前缀后跳到访客最佳可用语言 |
 | 深层裸路径（`/airport/PEK`） | 访问过某个语言后由 `preferred-locale` Cookie 记住选择；未设置时按 `Accept-Language` 判断 |
 
-每页都输出 `hreflang`（`en`、`es`、`pt`、`fr`、`id`、`de`、`ja`、`vi`、`ru`、`tr`、`th`、`ko`、`it`、`zh-hans`、`zh-hant`、`x-default`）与按语言区分的 `canonical`；`sitemap.xml` 为每个语言无关的路径只列一条 `<url>`：`<loc>` 是主语言的规范地址，全部已发布语言以 `hreflang` alternates 挂在同一条目下（`/de/...`、`/es/...` 等不再重复为独立 `<url>`）。`proxy.ts` 跳过 `/api`、`/_next` 与带扩展名的静态文件。
+每页都输出 `hreflang`（`en`、`zh-hans`、`zh-hant`、`de`、`fr`、`it`、`ko`、`es`、`pt`、`ja`、`id`、`vi`、`ru`、`tr`、`th`、`nl`、`sv`、`pl`、`cs`、`ro`、`uk`、`hi`、`bn`、`sw`、`x-default`）与按语言区分的 `canonical`；`sitemap.xml` 为每个语言无关的路径只列一条 `<url>`：`<loc>` 是主语言的规范地址，全部已发布语言以 `hreflang` alternates 挂在同一条目下（`/de/...`、`/es/...` 等不再重复为独立 `<url>`）。`proxy.ts` 跳过 `/api`、`/_next` 与带扩展名的静态文件。
 
 页头右上角的语言切换器用 `<details>` 实现（**无 JS 也能用**），列出**全部 24 种已注册语言**；现在 24 种都有 `messages/<code>.ts` 并在 `CATALOGS` 注册，因此全部是指向「当前页面等价路径」的真实链接（`components/LanguageSwitcher.tsx` 从 pathname 剥掉语言段再拼回去）。切换器仍保留「筹备中」的禁用渲染分支：以后在 `LOCALES` 里新增但尚未注册目录的语言会自动以禁用的 `lang` / `hreflang` 条目出现（无 href，只有 tooltip），不会被点进一个会被 `proxy.ts` 跳回原语言的前缀。每行右侧的小字是 `LOCALE_META[locale].htmlLang`，即该语言的 hreflang 代码（`de`、`fr`、`it`、`zh-hans`、`zh-hant`…）；点击语言时顺手写入 `preferred-locale` Cookie。
 
@@ -299,9 +299,9 @@ URL 方案（与生产站点地图一致）：
 - **搜索**：`airports.search_blob` 只有中 / 英 / 繁名称，所以德语搜索会把德语地名反查成英文再查一遍（`germanSearchAlias()`：Peking → Beijing、Moskau → Moscow、München → Munich，并接受 `muenchen` 这类无变音符写法），否则德国用户搜不到自己语言的地名。
 - **博客也有德语**：`lib/blog.ts` 的 `BLOG_LOCALES` 现在是 `en / es / pt / de / fr / it / ko / id / ja / vi / ru / tr / th / zh / tw`，德语译文放在 `public/blog/<slug>/<slug>.de.md`（与 `<slug>.en.md` 并列，100 篇全部翻译）。缺译的文章不会回退到英语或中文，只是不出现在 `/de/blog` 列表里；`/de/blog` 页头入口、文章页、`hreflang`、`lastmod` 与站点地图条目都由文件是否存在自动推导。
 
-**西班牙语（`es`）、葡萄牙语（`pt`）、日语（`ja`）、印尼语（`id`）、越南语（`vi`）、俄语（`ru`）、土耳其语（`tr`）与泰语（`th`）走完全相同的模型**（es/pt/ja/id/vi 于 2026-11-18 发布，ru/tr/th 同日随后发布）：`lib/i18n/<code>-data.ts` / `<code>-vocab.json` 提供渲染期词表，`messages/<code>.ts` 是完整 UI 目录；每种语言各 516 篇指南、46 篇国家介绍、5 个静态页、517 条机场简介、100 篇博客与 1015 条照片说明，全部从英文版翻译，`content_documents` 与 `airport_translations` 各有一整套行，博客文件为 `<slug>.<code>.md`。日语页额外加载 Noto Sans JP 并覆盖 `html[lang="ja"] body` 字体栈，避免用简体字形渲染汉字；俄语页用 Noto Sans 覆盖西里尔字形，泰语页用 Noto Sans Thai。机场简介的批量入库走 `scripts/import-airport-descriptions.mjs --locale <code> --file <json>`（`scripts/export-airport-descriptions.mjs` 导出英文源）。`scripts/check-translation-tree.mjs --source <en 树> --target <code 树>` 是翻译批次的结构门禁（文件集、frontmatter、标题/图片/链接/表格计数）。
+**西班牙语（`es`）、葡萄牙语（`pt`）、日语（`ja`）、印尼语（`id`）、越南语（`vi`）、俄语（`ru`）、土耳其语（`tr`）与泰语（`th`）走完全相同的模型**（es/pt/ja/id/vi 于 2026-11-18 发布，ru/tr/th 同日随后发布）：`lib/i18n/<code>-data.ts` / `<code>-vocab.json` 提供渲染期词表，`messages/<code>.ts` 是完整 UI 目录；每种语言各 516 篇指南、46 篇国家介绍、5 个静态页、516 条机场简介、100 篇博客与约 1,019 条照片说明，全部从英文版翻译，`content_documents` 与 `airport_translations` 各有一整套行，博客文件为 `<slug>.<code>.md`。日语页额外加载 Noto Sans JP 并覆盖 `html[lang="ja"] body` 字体栈，避免用简体字形渲染汉字；俄语页用 Noto Sans 覆盖西里尔字形，泰语页用 Noto Sans Thai。机场简介的批量入库走 `scripts/import-airport-descriptions.mjs --locale <code> --file <json>`（`scripts/export-airport-descriptions.mjs` 导出英文源）。`scripts/check-translation-tree.mjs --source <en 树> --target <code 树>` 是翻译批次的结构门禁（文件集、frontmatter、标题/图片/链接/表格计数）。
 
-**荷兰语（`nl`）、瑞典语（`sv`）、波兰语（`pl`）、捷克语（`cs`）、罗马尼亚语（`ro`）、乌克兰语（`uk`）、印地语（`hi`）、孟加拉语（`bn`）与斯瓦希里语（`sw`）于 2026-11-20 发布代码层**：每种语言都有完整的 `messages/<code>.ts`（约 520 个键）、`<code>-vocab.json` / `<code>-data.ts`（国家、地区、城市、机场、航站楼、设施标签、交通方式、机场等级）、`deals` / `auth` 文案、免责声明、`BLOG_LOCALES` 与文章后缀、默认货币、`display.ts` 的 `intlLocale` / `wikipediaLocale`、`format.ts` 的数字/日期/客运量格式，以及 `queries.ts` 的词表与搜索别名。印地语和孟加拉语页额外加载 Noto Sans Devanagari / Noto Sans Bengali，乌克兰语复用西里尔字形栈。**长文、机场简介、博客与照片说明尚未入库**：`content_documents`、`airport_translations`、`public/blog/*.<code>.md`、`public/photos/captions.<code>.json` 对这 9 种语言均为 0，页面按现有回退链显示英文。补译时直接复用上文的 `fill-missing-translations.mjs`、`content-import.mjs`、`import-airport-descriptions.mjs` 与博客/图注流程即可，不需要再改注册代码。
+**荷兰语（`nl`）、瑞典语（`sv`）、波兰语（`pl`）、捷克语（`cs`）、罗马尼亚语（`ro`）、乌克兰语（`uk`）、印地语（`hi`）、孟加拉语（`bn`）与斯瓦希里语（`sw`）于 2026-11-20 发布并补齐内容**：每种语言都有完整的 `messages/<code>.ts`（约 520 个键）、`<code>-vocab.json` / `<code>-data.ts`（国家、地区、城市、机场、航站楼、设施标签、交通方式、机场等级）、`deals` / `auth` 文案、免责声明、`BLOG_LOCALES` 与文章后缀、默认货币、`display.ts` 的 `intlLocale` / `wikipediaLocale`、`format.ts` 的数字/日期/客运量格式，以及 `queries.ts` 的词表与搜索别名。印地语和孟加拉语页额外加载 Noto Sans Devanagari / Noto Sans Bengali，乌克兰语复用西里尔字形栈。内容层同样齐全：`content_documents` 每种语言 567 篇（516 机场指南 + 46 国家介绍 + 5 静态页），`airport_translations` 每种语言 516 条简介，`public/blog` 每种语言 100 篇完整译文；长文与简介为数据驱动生成稿，博客为英文文章的逐篇翻译。`db:seed` 会从 `data/<code>-descriptions.json` 恢复这 17 种派生语言的简介，避免重建数据库时丢失。**唯一剩余缺口是照片说明**：`public/photos/captions.<code>.json` 对这 9 种语言尚未生成（约 9×1,019 条，页面回退英文说明），补译时沿用 `public/photos/captions.fr.json` 的结构即可。
 
 重新翻译的顺序：`content-export --locale en` 导出当前英文长文 → 翻译成 `de/` → `content-import --dir <目录> --only de`（552 篇：501 机场 + 46 国家 + 5 静态页）→ 德语简介写回 `data/de-descriptions.json` 并入库 → 需要重建结构化数据时再 `npm run db:seed`（会优先读取该 JSON，不会丢译文）。
 
