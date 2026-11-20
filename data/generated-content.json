@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-11-20",
+  "note": "Data-driven localized content generated from the repository's own data. These are not translations of the English editorial pages. A later editorial translation may replace any row; the generators only fill missing rows unless --refresh is passed.",
+  "locales": ["es", "pt", "ja", "id", "vi", "ru", "tr", "th"],
+  "content_documents": {
+    "airport": 516,
+    "country": 46,
+    "page": 5,
+    "total_per_locale": 567
+  },
+  "airport_translations": 516,
+  "generators": [
+    "scripts/generate-localized-guides.mjs",
+    "scripts/generate-localized-descriptions.mjs",
+    "scripts/generate-localized-countries.mjs",
+    "scripts/content-import.mjs (static pages imported from content/translation-work/<locale>-pages.json)"
+  ],
+  "static_pages": ["about", "contact", "privacy", "sources", "terms"]
+}

@@ -816,4 +816,472 @@ Burada bir fiyat, harita veya rota yanlışsa iletişim sayfası üzerinden bize
 
 หากราคา แผนที่ หรือเส้นทางในหน้านี้ไม่ถูกต้อง โปรดแจ้งผ่านหน้าติดต่อเรา โดยการแก้ไขจะได้รับการดำเนินการก่อน คำถามทางกฎหมายเกี่ยวกับหน้านี้ก็มาถึงเราในช่องทางเดียวกัน`,
   },
+
+  nl: {
+    title: 'Disclaimer en affiliate-openbaarmaking',
+    summary:
+      'Wat de kaarten, tarieven en uitgaande links van deze site wel en niet zijn: gegevensnauwkeurigheid, affiliatelinks, advertenties en de grenzen van onze aansprakelijkheid.',
+    updated: UPDATED,
+    body: `World Airport Maps is een onafhankelijke naslagwebsite over luchthavens. Deze pagina legt uit wat de inhoud van de site is, hoe de site wordt gefinancierd en waar haar verantwoordelijkheid ophoudt. Zij geldt voor elke pagina, in elke taal.
+
+## Geen officiële bron
+
+Deze site is geen luchthaven, luchtvaartmaatschappij, reisbureau of overheidsinstantie en is niet aan een daarvan verbonden. Het is een planningshulp die is opgebouwd uit openbare gegevens en redactioneel werk.
+
+- **De terminalplattegronden zijn illustratief.** Ze zijn getekend op basis van aantallen terminals en gates en de knooppunten van het grondvervoer, om te tonen hoe een luchthaven in elkaar zit — niet op basis van ingemeten bouwtekeningen. Vorm, schaal en oriëntatie kunnen afwijken van het werkelijke gebouw.
+- **Gegevens raken verouderd.** Terminals gaan open en dicht, gatenummers veranderen, maatschappijen verhuizen tussen terminals, en vervoersroutes, eerste en laatste dienstregeling en tarieven worden zonder kennisgeving gewijzigd.
+- **Controleer vóór u reist.** Voor gates, inchecksluitingstijden, minimale overstaptijden, visa, toegangsregels en veiligheidsvoorschriften moet u vertrouwen op de luchthaven, uw luchtvaartmaatschappij en de bevoegde autoriteiten.
+
+## Tarieven, deals en boekingen
+
+De tarieven in de dealsectie zijn **ingestuurd door lezers** en worden door deze site niet geverifieerd of gegarandeerd.
+
+- Een vermelde prijs is wat één persoon op één moment zag. Belastingen, kosten, bagage, stoelkeuze, reisdatums en beschikbaarheid kunnen die prijs allemaal veranderen.
+- Deze site verkoopt geen tickets, houdt geen reserveringen aan en neemt geen betalingen aan. Elke boeking wordt afgerond op de website van de derde partij, onder haar voorwaarden en privacybeleid.
+- Er is geen garantie dat een aanbieding nog beschikbaar is. Vermeldingen kunnen op elk moment worden verwijderd of verlopen, en een gewijzigde prijs is geen misleiding door deze site.
+
+## Affiliatelinks
+
+Sommige uitgaande links op deze site zijn **affiliatelinks** — vooral de boekingslinks bij tarieven, plus enkele aanbevelingen voor vervoer en diensten. Als u er een volgt en een aankoop afrondt, kan de aanbieder deze site een commissie betalen.
+
+- De commissie komt uit de marge van de aanbieder. **Zij verandert de prijs die u betaalt niet**, en u betaalt niet meer omdat u via deze site komt.
+- Commissie koopt geen vermelding. De site verkoopt geen ranglijsten, reviews of plaatsingen, en geen betaling bepaalt wat een pagina zegt.
+- De openbaarmaking staat zowel op de pagina met elke link als hier; deze pagina is de verklaring voor de hele site.
+
+## Advertenties
+
+Advertenties op deze site worden geleverd door externe advertentienetwerken; het privacybeleid vermeldt de huidige. Adverteerders verkrijgen via deze site geen lezersgegevens en kunnen de redactionele inhoud niet beïnvloeden. Een advertentie hier is geen aanbeveling van het product of de dienst, en geen garantie voor veiligheid, legaliteit of kwaliteit.
+
+## Door lezers ingestuurde inhoud
+
+Tarieven, reacties en correcties worden door lezers ingestuurd. Duidelijk onrechtmatig materiaal wordt verwijderd, maar de site kan elke inzending niet op juistheid, actualiteit of volledigheid controleren. Beslissingen op basis daarvan zijn uw eigen verantwoordelijkheid.
+
+## Externe websites
+
+Deze site kan linken naar luchthavens, luchtvaartmaatschappijen, vervoerders en andere derde partijen. Hun inhoud, prijzen, beschikbaarheid en privacypraktijken zijn hun eigen verantwoordelijkheid; deze site heeft daar geen controle over en aanvaardt daarvoor geen aansprakelijkheid.
+
+## Beperking van aansprakelijkheid
+
+De volledige clausule staat in de gebruiksvoorwaarden. Kort samengevat: voor zover wettelijk toegestaan is de site niet aansprakelijk voor gemiste vluchten, gewijzigde reisplannen, geweigerde instap, extra kosten of verloren gegevens als gevolg van het gebruik van deze site.
+
+## Vragen en correcties
+
+Als een prijs, kaart of route hier onjuist is, meld het via de contactpagina — correcties worden als eerste behandeld. Juridische vragen over deze pagina bereiken ons via dezelfde weg.`,
+  },
+
+  sv: {
+    title: 'Ansvarsfriskrivning och affiliate-information',
+    summary:
+      'Vad webbplatsens kartor, priser och utgående länkar är — och inte är: datanoggrannhet, affiliatelänkar, annonser och gränserna för vårt ansvar.',
+    updated: UPDATED,
+    body: `World Airport Maps är en oberoende referenswebbplats för flygplatser. Sidan förklarar vad webbplatsens innehåll är, hur den finansieras och var dess ansvar slutar. Den gäller för varje sida, på varje språk.
+
+## Inte en officiell källa
+
+Webbplatsen är inte en flygplats, ett flygbolag, en resebyrå eller en myndighet och är inte knuten till någon av dem. Den är ett planeringsverktyg byggt på öppna data och redaktionellt arbete.
+
+- **Terminalplanerna är illustrativa.** De ritas utifrån antal terminaler och gater samt marktransportnoder för att visa hur en flygplats är uppbyggd — inte utifrån inmätta planritningar. Form, skala och orientering kan skilja sig från den verkliga byggnaden.
+- **Uppgifter blir inaktuella.** Terminaler öppnar och stänger, gatnummer ändras, flygbolag flyttar mellan terminaler, och transportlinjer, första och sista avgång samt priser ändras utan varsel.
+- **Kontrollera före resan.** För gater, incheckningsdeadlines, minsta anslutningstider, visum, inreseregler och säkerhetskrav ska du lita på flygplatsen, ditt flygbolag och berörda myndigheter.
+
+## Priser, deals och bokningar
+
+Priserna i dealsavsnittet **skickas in av läsare** och verifieras eller garanteras inte av webbplatsen.
+
+- Ett listat pris är vad en person såg vid ett tillfälle. Skatter, avgifter, bagage, platsval, resedatum och tillgänglighet kan alla ändra det.
+- Webbplatsen säljer inga biljetter, håller inga reservationer och tar inga betalningar. Varje bokning slutförs på tredje partens egen webbplats, enligt dennas villkor och integritetspolicy.
+- Inget erbjudande garanteras vara tillgängligt. Annonser kan tas bort eller löpa ut när som helst, och ett ändrat pris är inte en vilseledande uppgift från webbplatsen.
+
+## Affiliatelänkar
+
+Vissa utgående länkar på webbplatsen är **affiliatelänkar** — främst bokningslänkar kopplade till priser, plus några rekommendationer för transport och tjänster. Om du följer en och genomför ett köp kan operatören betala webbplatsen en provision.
+
+- Provisionen tas från operatörens marginal. **Den ändrar inte priset du betalar**, och du betalar inte mer för att du kommer via webbplatsen.
+- Provision köper ingen bevakning. Webbplatsen säljer inte rankningar, recensioner eller placeringar, och ingen betalning avgör vad en sida säger.
+- Informationen visas både på sidan med varje länk och här; den här sidan är webbplatsens övergripande uttalande.
+
+## Annonser
+
+Annonser på webbplatsen levereras av tredje parts annonsnätverk; integritetspolicyn listar de aktuella. Annonsörer får inte läsardata via webbplatsen och kan inte påverka redaktionellt innehåll. En annons här är inte en rekommendation av produkten eller tjänsten och inte en garanti för dess säkerhet, laglighet eller kvalitet.
+
+## Läsarinskickat innehåll
+
+Priser, kommentarer och rättelser skickas in av läsare. Uppenbart olagligt material tas bort, men webbplatsen kan inte verifiera varje inläggs riktighet, aktualitet eller fullständighet. Beslut som fattas på den grunden är ditt eget ansvar.
+
+## Externa webbplatser
+
+Webbplatsen kan länka till flygplatser, flygbolag, transportoperatörer och andra tredje parter. Deras innehåll, priser, tillgänglighet och integritetspraxis är deras eget ansvar; webbplatsen kontrollerar dem inte och ansvarar inte för dem.
+
+## Ansvarsbegränsning
+
+Den fullständiga klausulen finns i användarvillkoren. Kort: i den utsträckning lagen tillåter ansvarar webbplatsen inte för missade flyg, ändrade resplaner, nekad ombordstigning, extra kostnader eller förlorad data till följd av användning av webbplatsen.
+
+## Frågor och rättelser
+
+Om ett pris, en karta eller en rutt här är fel, berätta det via kontaktsidan — rättelser hanteras först. Juridiska frågor om sidan når oss på samma sätt.`,
+  },
+
+  pl: {
+    title: 'Zastrzeżenia prawne i informacja o linkach afiliacyjnych',
+    summary:
+      'Czym są — a czym nie są — mapy, ceny i linki zewnętrzne na tej stronie: dokładność danych, linki afiliacyjne, reklamy i granice naszej odpowiedzialności.',
+    updated: UPDATED,
+    body: `World Airport Maps to niezależny serwis informacyjny o lotniskach. Ta strona wyjaśnia, czym jest treść serwisu, jak jest finansowany i gdzie kończy się jego odpowiedzialność. Dotyczy każdej strony i każdego języka.
+
+## To nie jest oficjalne źródło
+
+Ten serwis nie jest lotniskiem, linią lotniczą, biurem podróży ani organem administracji publicznej i nie jest z żadnym z nich powiązany. To pomoc w planowaniu podróży oparta na danych publicznych i pracy redakcyjnej.
+
+- **Schematy terminali są poglądowe.** Powstają na podstawie liczby terminali i bramek oraz węzłów transportu naziemnego, aby pokazać, jak zbudowane jest lotnisko — nie na podstawie geodezyjnych planów budynków. Kształt, skala i orientacja mogą różnić się od rzeczywistego budynku.
+- **Dane się dezaktualizują.** Terminale otwierają się i zamykają, numery bramek się zmieniają, linie przenoszą się między terminalami, a trasy transportu, godziny pierwszych i ostatnich kursów oraz ceny są zmieniane bez zapowiedzi.
+- **Sprawdź przed podróżą.** W kwestii bramek, terminów odprawy, minimalnych czasów przesiadki, wiz, zasad wjazdu i wymogów bezpieczeństwa polegaj na lotnisku, swojej linii lotniczej i właściwych organach.
+
+## Ceny, oferty i rezerwacje
+
+Ceny w sekcji ofert są **zgłaszane przez czytelników** i nie są weryfikowane ani gwarantowane przez ten serwis.
+
+- Podana cena to cena, którą jedna osoba zobaczyła w jednym momencie. Podatki, opłaty, bagaż, wybór miejsca, daty podróży i dostępność mogą ją zmienić.
+- Serwis nie sprzedaje biletów, nie utrzymuje rezerwacji ani nie przyjmuje płatności. Każda rezerwacja jest finalizowana na stronie osoby trzeciej, na jej warunkach i zgodnie z jej polityką prywatności.
+- Żadna oferta nie jest gwarantowana jako nadal dostępna. Ogłoszenia mogą zostać usunięte lub wygasnąć w każdej chwili, a zmieniona cena nie jest wprowadzającym w błąd przedstawieniem serwisu.
+
+## Linki afiliacyjne
+
+Niektóre linki zewnętrzne w serwisie to **linki afiliacyjne** — głównie linki rezerwacyjne przy cenach oraz kilka rekomendacji transportu i usług. Jeśli klikniesz taki link i sfinalizujesz zakup, operator może zapłacić serwisowi prowizję.
+
+- Prowizja pochodzi z marży operatora. **Nie zmienia ceny, którą płacisz**, i nie płacisz więcej za wejście przez ten serwis.
+- Prowizja nie kupuje miejsca w serwisie. Serwis nie sprzedaje rankingów, recenzji ani pozycji, i żadna płatność nie decyduje o treści strony.
+- Informacja pojawia się zarówno na stronie z każdym linkiem, jak i tutaj; ta strona jest oświadczeniem dla całego serwisu.
+
+## Reklamy
+
+Reklamy w serwisie dostarczają zewnętrzne sieci reklamowe; polityka prywatności wymienia obecne. Reklamodawcy nie otrzymują danych czytelników za pośrednictwem serwisu i nie mogą wpływać na treść redakcyjną. Reklama pojawiająca się tutaj nie jest rekomendacją produktu lub usługi ani gwarancją jego bezpieczeństwa, legalności czy jakości.
+
+## Treści przysyłane przez czytelników
+
+Ceny, komentarze i poprawki są przysyłane przez czytelników. Oczywiście bezprawne materiały są usuwane, ale serwis nie może zweryfikować każdego zgłoszenia pod kątem prawdziwości, aktualności i kompletności. Decyzje podjęte na tej podstawie są Twoją własną odpowiedzialnością.
+
+## Strony zewnętrzne
+
+Serwis może linkować do lotnisk, linii lotniczych, przewoźników i innych osób trzecich. Ich treść, ceny, dostępność i praktyki prywatności są ich własną odpowiedzialnością; serwis ich nie kontroluje i nie ponosi za nie odpowiedzialności.
+
+## Ograniczenie odpowiedzialności
+
+Pełna klauzula znajduje się w warunkach korzystania. W skrócie: w najszerszym zakresie dopuszczalnym przez prawo serwis nie odpowiada za utracone loty, zmienione plany podróży, odmowę wejścia na pokład, dodatkowe koszty ani utracone dane wynikające z korzystania z serwisu.
+
+## Pytania i poprawki
+
+Jeśli cena, mapa lub trasa jest tutaj błędna, zgłoś to przez stronę kontaktową — poprawki są rozpatrywane w pierwszej kolejności. Pytania prawne dotyczące tej strony trafiają do nas tą samą drogą.`,
+  },
+
+  cs: {
+    title: 'Prohlášení a informace o affiliate odkazech',
+    summary:
+      'Co mapy, ceny a odchozí odkazy na tomto webu jsou — a co nejsou: přesnost dat, affiliate odkazy, reklama a limity naší odpovědnosti.',
+    updated: UPDATED,
+    body: `World Airport Maps je nezávislý referenční web o letištích. Tato stránka vysvětluje, co je obsahem webu, jak je financován a kde končí jeho odpovědnost. Platí pro každou stránku v každém jazyce.
+
+## Neoficiální zdroj
+
+Tento web není letiště, aerolinka, cestovní agentura ani státní orgán a není s žádným z nich spojen. Je to plánovací pomůcka postavená na veřejných datech a redakční práci.
+
+- **Schémata terminálů jsou ilustrační.** Vycházejí z počtů terminálů a bran a z uzlů pozemní dopravy, aby ukázala, jak je letiště uspořádáno — nikoli z geodeticky zaměřených půdorysů. Tvar, měřítko a orientace se mohou od skutečné budovy lišit.
+- **Údaje stárnou.** Terminály se otevírají a zavírají, čísla bran se mění, aerolinky se přesouvají mezi terminály a trasy dopravy, časy prvního a posledního spoje i ceny se mění bez oznámení.
+- **Před cestou si vše ověřte.** U bran, uzávěrek odbavení, minimálních přestupních časů, víz, vstupních pravidel a bezpečnostních požadavků se spolehněte na letiště, svou aerolinku a příslušné úřady.
+
+## Ceny, nabídky a rezervace
+
+Ceny v sekci nabídek **zasílají čtenáři** a tento web je neověřuje ani negarantuje.
+
+- Uvedená cena je to, co jedna osoba viděla v jednom okamžiku. Daně, poplatky, zavazadla, výběr sedadla, data cesty a dostupnost ji mohou změnit.
+- Web neprodává letenky, nedrží rezervace ani nepřijímá platby. Každá rezervace se dokončuje na webu třetí strany podle jejích podmínek a zásad ochrany osobních údajů.
+- Žádná nabídka není zaručena jako stále dostupná. Nabídky lze kdykoli odstranit nebo mohou vypršet a změněná cena není zavádějícím sdělením tohoto webu.
+
+## Affiliate odkazy
+
+Některé odchozí odkazy na tomto webu jsou **affiliate odkazy** — zejména rezervační odkazy u cen a několik doporučení dopravy a služeb. Pokud některý sledujete a dokončíte nákup, může provozovatel zaplatit tomuto webu provizi.
+
+- Provize pochází z marže provozovatele. **Nemění cenu, kterou platíte**, a neplatíte více za to, že přijdete přes tento web.
+- Provize nekupuje prostor. Web neprodává žebříčky, recenze ani umístění a žádná platba nerozhoduje o tom, co stránka uvádí.
+- Informace se zobrazuje na stránce s každým odkazem i zde; tato stránka je prohlášením pro celý web.
+
+## Reklama
+
+Reklamu na tomto webu zajišťují reklamní sítě třetích stran; zásady ochrany osobních údajů uvádějí aktuální. Inzerenti nezískávají údaje čtenářů prostřednictvím tohoto webu a nemohou ovlivňovat redakční obsah. Reklama zde není doporučením produktu nebo služby ani zárukou jejich bezpečnosti, zákonnosti či kvality.
+
+## Obsah zaslaný čtenáři
+
+Ceny, komentáře a opravy zasílají čtenáři. Zjevně protiprávní materiál je odstraněn, ale web nemůže ověřit každý příspěvek z hlediska správnosti, aktuálnosti a úplnosti. Rozhodnutí učiněná na tomto základě jsou vaší vlastní odpovědností.
+
+## Externí weby
+
+Web může odkazovat na letiště, aerolinky, dopravce a další třetí strany. Jejich obsah, ceny, dostupnost a postupy ochrany soukromí jsou jejich vlastní odpovědností; web je neovládá a nenese za ně odpovědnost.
+
+## Omezení odpovědnosti
+
+Úplná klauzule je v podmínkách používání. Stručně: v nejširším rozsahu povoleném zákonem web neodpovídá za zmeškané lety, změněné cestovní plány, odmítnutí nástupu, dodatečné náklady ani ztrátu dat vzniklou používáním tohoto webu.
+
+## Dotazy a opravy
+
+Pokud je zde cena, mapa nebo trasa chybná, oznamte to přes kontaktní stránku — opravy se vyřizují přednostně. Právní dotazy k této stránce se k nám dostanou stejnou cestou.`,
+  },
+
+  ro: {
+    title: 'Declinarea răspunderii și informare privind linkurile afiliate',
+    summary:
+      'Ce sunt — și ce nu sunt — hărțile, tarifele și linkurile externe ale acestui site: acuratețea datelor, linkurile afiliate, publicitatea și limitele răspunderii noastre.',
+    updated: UPDATED,
+    body: `World Airport Maps este un site independent de referință pentru aeroporturi. Această pagină explică ce este conținutul site-ului, cum este finanțat și unde se termină responsabilitatea sa. Se aplică fiecărei pagini, în fiecare limbă.
+
+## Nu este o sursă oficială
+
+Acest site nu este un aeroport, o companie aeriană, o agenție de turism sau un organism guvernamental și nu este afiliat cu niciunul dintre ele. Este un instrument de planificare construit din date publice și muncă redacțională.
+
+- **Schemele terminalelor sunt ilustrative.** Sunt desenate pe baza numărului de terminale și porți și a nodurilor de transport terestru, pentru a arăta cum este compus un aeroport — nu pe baza unor planuri de arhitectură măsurate. Forma, scara și orientarea pot diferi de clădirea reală.
+- **Detaliile se învechesc.** Terminalele se deschid și se închid, numerele porților se schimbă, companiile se mută între terminale, iar rutele de transport, orele primului și ultimului serviciu și tarifele se modifică fără notificare.
+- **Verificați înainte de călătorie.** Pentru porți, termenele de check-in, timpii minimi de legătură, vize, regulile de intrare și cerințele de securitate, bazați-vă pe aeroport, pe compania aeriană și pe autoritățile competente.
+
+## Tarife, oferte și rezervări
+
+Tarifele din secțiunea de oferte sunt **trimise de cititori** și nu sunt verificate sau garantate de acest site.
+
+- Un preț afișat este ceea ce a văzut o persoană într-un anumit moment. Taxele, comisioanele, bagajul, alegerea locului, datele călătoriei și disponibilitatea îl pot modifica.
+- Acest site nu vinde bilete, nu ține rezervări și nu primește plăți. Fiecare rezervare se finalizează pe site-ul terței părți, conform termenilor și politicii de confidențialitate ale acesteia.
+- Nicio ofertă nu este garantată ca disponibilă. Anunțurile pot fi eliminate sau pot expira oricând, iar un preț modificat nu este o prezentare înșelătoare a acestui site.
+
+## Linkuri afiliate
+
+Unele linkuri externe de pe acest site sunt **linkuri afiliate** — în principal linkurile de rezervare atașate tarifelor, plus câteva recomandări de transport și servicii. Dacă urmați unul și finalizați o achiziție, operatorul poate plăti acestui site un comision.
+
+- Comisionul provine din marja operatorului. **Nu modifică prețul pe care îl plătiți** și nu plătiți mai mult pentru că ajungeți prin acest site.
+- Comisionul nu cumpără acoperire. Site-ul nu vinde clasamente, recenzii sau plasări, iar nicio plată nu decide ce spune o pagină.
+- Informarea apare atât pe pagina cu fiecare link, cât și aici; această pagină este declarația pentru întregul site.
+
+## Publicitate
+
+Publicitatea de pe acest site este furnizată de rețele de publicitate terțe; politica de confidențialitate le enumeră pe cele actuale. Anunțatorii nu obțin date despre cititori prin acest site și nu pot influența conținutul redacțional. Un anunț care apare aici nu este o aprobare a produsului sau serviciului și nici o garanție a siguranței, legalității sau calității acestuia.
+
+## Conținut trimis de cititori
+
+Tarifele, comentariile și corectările sunt trimise de cititori. Materialele vădit ilegale sunt eliminate, dar site-ul nu poate verifica fiecare trimitere pentru acuratețe, actualitate sau completitudine. Deciziile luate pe baza acestora sunt responsabilitatea dumneavoastră.
+
+## Site-uri externe
+
+Acest site poate face legături către aeroporturi, companii aeriene, operatori de transport și alte terțe părți. Conținutul, prețurile, disponibilitatea și practicile lor de confidențialitate sunt responsabilitatea lor; acest site nu le controlează și nu răspunde pentru ele.
+
+## Limitarea răspunderii
+
+Clauza completă se află în termenii de utilizare. Pe scurt: în măsura maximă permisă de lege, site-ul nu răspunde pentru zboruri pierdute, itinerarii modificate, refuzul îmbarcării, costuri suplimentare sau date pierdute ca urmare a utilizării acestui site.
+
+## Întrebări și corectări
+
+Dacă un preț, o hartă sau o rută de aici este greșită, spuneți-ne prin pagina de contact — corectările sunt tratate cu prioritate. Întrebările juridice despre această pagină ne ajung pe aceeași cale.`,
+  },
+
+  uk: {
+    title: 'Відмова від відповідальності та розкриття партнерських посилань',
+    summary:
+      'Що таке — і чим не є — карти, тарифи та зовнішні посилання цього сайту: точність даних, партнерські посилання, реклама та межі нашої відповідальності.',
+    updated: UPDATED,
+    body: `World Airport Maps — незалежний довідковий сайт про аеропорти. Ця сторінка пояснює, що є вмістом сайту, як він фінансується і де закінчується його відповідальність. Вона стосується кожної сторінки будь-якою мовою.
+
+## Не офіційне джерело
+
+Цей сайт не є аеропортом, авіакомпанією, туристичною агенцією чи державним органом і не пов'язаний з жодним із них. Це інструмент планування, побудований на публічних даних і редакційній роботі.
+
+- **Схеми терміналів є ілюстративними.** Вони створені на основі кількості терміналів і виходів та вузлів наземного транспорту, щоб показати будову аеропорту — а не на основі виміряних архітектурних планів. Форма, масштаб і орієнтація можуть відрізнятися від реальної будівлі.
+- **Дані застарівають.** Термінали відкриваються й закриваються, номери виходів змінюються, авіакомпанії переїжджають між терміналами, а маршрути транспорту, час першого й останнього рейсу та тарифи змінюються без попередження.
+- **Перевіряйте перед подорожжю.** Щодо виходів, дедлайнів реєстрації, мінімального часу на пересадку, віз, правил в'їзду та вимог безпеки покладайтеся на аеропорт, авіакомпанію та відповідні органи.
+
+## Тарифи, пропозиції та бронювання
+
+Тарифи в розділі пропозицій **надсилають читачі**, і сайт їх не перевіряє та не гарантує.
+
+- Зазначена ціна — це те, що одна людина побачила в один момент. Податки, збори, багаж, вибір місця, дати подорожі й наявність можуть її змінити.
+- Сайт не продає квитки, не тримає резервацій і не приймає платежів. Кожне бронювання завершується на сайті третьої сторони, за її умовами та політикою конфіденційності.
+- Жодна пропозиція не гарантована як доступна. Оголошення можуть бути видалені або прострочені в будь-який момент, а змінена ціна не є оманливим поданням цього сайту.
+
+## Партнерські посилання
+
+Деякі зовнішні посилання на цьому сайті є **партнерськими посиланнями** — переважно посилання для бронювання, прикріплені до тарифів, а також кілька рекомендацій щодо транспорту й послуг. Якщо ви перейдете за таким посиланням і завершите покупку, оператор може сплатити сайту комісію.
+
+- Комісія походить з маржі оператора. **Вона не змінює ціну, яку ви платите**, і ви не платите більше через те, що прийшли із цього сайту.
+- Комісія не купує висвітлення. Сайт не продає рейтинги, відгуки чи розміщення, і жодна оплата не визначає, що написано на сторінці.
+- Розкриття з'являється як на сторінці з кожним посиланням, так і тут; ця сторінка є заявою для всього сайту.
+
+## Реклама
+
+Рекламу на цьому сайті надають сторонні рекламні мережі; політика конфіденційності перелічує поточні. Рекламодавці не отримують даних читачів через цей сайт і не можуть впливати на редакційний вміст. Реклама тут не є схваленням продукту чи послуги і не є гарантією їхньої безпеки, законності чи якості.
+
+## Вміст, надісланий читачами
+
+Тарифи, коментарі та виправлення надсилають читачі. Явно незаконний матеріал видаляється, але сайт не може перевірити кожне надсилання на точність, актуальність і повноту. Рішення, ухвалені на цій основі, є вашою власною відповідальністю.
+
+## Зовнішні сайти
+
+Сайт може посилатися на аеропорти, авіакомпанії, транспортних операторів та інших третіх осіб. Їхній вміст, ціни, доступність і практики конфіденційності є їхньою власною відповідальністю; сайт їх не контролює і не несе за них відповідальності.
+
+## Обмеження відповідальності
+
+Повне положення міститься в умовах використання. Коротко: у максимальному обсязі, дозволеному законом, сайт не відповідає за пропущені рейси, змінені плани подорожі, відмову в посадці, додаткові витрати чи втрачені дані внаслідок використання цього сайту.
+
+## Запитання та виправлення
+
+Якщо ціна, карта чи маршрут тут неправильні, повідомте через сторінку контактів — виправлення обробляються першими. Юридичні запитання щодо цієї сторінки надходять до нас тим самим шляхом.`,
+  },
+
+  hi: {
+    title: 'अस्वीकरण और एफ़िलिएट प्रकटीकरण',
+    summary:
+      'इस साइट के मैप, किराए और बाहरी लिंक क्या हैं — और क्या नहीं: डेटा सटीकता, एफ़िलिएट लिंक, विज्ञापन और हमारी देयता की सीमाएं।',
+    updated: UPDATED,
+    body: `World Airport Maps एक स्वतंत्र हवाई अड्डा संदर्भ साइट है। यह पेज बताता है कि साइट की सामग्री क्या है, साइट को कैसे वित्तपोषित किया जाता है, और इसकी ज़िम्मेदारी कहां समाप्त होती है। यह हर पेज पर, हर भाषा में लागू होता है।
+
+## आधिकारिक स्रोत नहीं
+
+यह साइट हवाई अड्डा, एयरलाइन, ट्रैवल एजेंसी या सरकारी निकाय नहीं है, और इनमें से किसी से भी संबद्ध नहीं है। यह सार्वजनिक डेटा और संपादकीय काम से बनी एक योजना सहायता है।
+
+- **टर्मिनल आरेख उदाहरणात्मक हैं।** ये टर्मिनल और गेट की संख्या तथा ज़मीनी परिवहन केंद्रों से बनाए गए हैं, ताकि दिखाया जा सके कि हवाई अड्डा कैसे बना है — सर्वेक्षित फ़्लोर प्लान से नहीं। आकार, पैमाना और दिशा वास्तविक भवन से भिन्न हो सकते हैं।
+- **विवरण पुराने हो जाते हैं।** टर्मिनल खुलते और बंद होते हैं, गेट नंबर बदलते हैं, एयरलाइंस टर्मिनलों के बीच स्थानांतरित होती हैं, और परिवहन मार्ग, पहली और अंतिम सेवा का समय तथा किराए बिना सूचना के संशोधित होते हैं।
+- **यात्रा से पहले जांचें।** गेट, चेक-इन की अंतिम तिथि, न्यूनतम कनेक्शन समय, वीज़ा, प्रवेश नियम और सुरक्षा आवश्यकताओं के लिए हवाई अड्डे, अपनी एयरलाइन और संबंधित अधिकारियों पर भरोसा करें।
+
+## किराए, डील और बुकिंग
+
+डील अनुभाग के किराए **पाठकों द्वारा भेजे जाते हैं** और इस साइट द्वारा सत्यापित या गारंटीकृत नहीं हैं।
+
+- सूचीबद्ध कीमत वह है जो किसी एक व्यक्ति ने किसी एक क्षण में देखी। कर, शुल्क, सामान, सीट चयन, यात्रा तिथियां और उपलब्धता इसे बदल सकते हैं।
+- यह साइट टिकट नहीं बेचती, आरक्षण नहीं रखती और भुगतान नहीं लेती। हर बुकिंग तीसरे पक्ष की अपनी वेबसाइट पर, उसकी शर्तों और गोपनीयता नीति के तहत पूरी होती है।
+- किसी भी ऑफ़र के उपलब्ध रहने की गारंटी नहीं है। लिस्टिंग कभी भी हटाई या समाप्त हो सकती है, और बदली हुई कीमत इस साइट द्वारा गलत प्रस्तुति नहीं है।
+
+## एफ़िलिएट लिंक
+
+इस साइट के कुछ बाहरी लिंक **एफ़िलिएट लिंक** हैं — मुख्य रूप से किराए से जुड़े बुकिंग लिंक, साथ ही कुछ परिवहन और सेवा सिफ़ारिशें। यदि आप उनमें से किसी को फ़ॉलो करते हैं और खरीदारी पूरी करते हैं, तो ऑपरेटर इस साइट को कमीशन दे सकता है।
+
+- कमीशन ऑपरेटर के मार्जिन से आता है। **यह आपके द्वारा भुगतान की जाने वाली कीमत को नहीं बदलता**, और इस साइट के माध्यम से आने के लिए आपसे अधिक शुल्क नहीं लिया जाता।
+- कमीशन कवरेज नहीं खरीदता। साइट रैंकिंग, समीक्षा या प्लेसमेंट नहीं बेचती, और कोई भी भुगतान यह तय नहीं करता कि पेज क्या कहता है।
+- प्रकटीकरण प्रत्येक लिंक वाले पेज पर और यहां भी दिखाई देता है; यह पेज पूरी साइट के लिए वक्तव्य है।
+
+## विज्ञापन
+
+इस साइट पर विज्ञापन तीसरे पक्ष के विज्ञापन नेटवर्क द्वारा दिए जाते हैं; गोपनीयता नीति वर्तमान नेटवर्क की सूची देती है। विज्ञापनदाता इस साइट के माध्यम से पाठक डेटा प्राप्त नहीं करते और संपादकीय सामग्री को प्रभावित नहीं कर सकते। यहां दिखने वाला विज्ञापन उत्पाद या सेवा का समर्थन नहीं है, और न ही उसकी सुरक्षा, वैधता या गुणवत्ता की गारंटी है।
+
+## पाठकों द्वारा भेजी गई सामग्री
+
+किराए, टिप्पणियां और सुधार पाठकों द्वारा भेजे जाते हैं। स्पष्ट रूप से अवैध सामग्री हटा दी जाती है, लेकिन साइट प्रत्येक सबमिशन की सटीकता, समयबद्धता या पूर्णता सत्यापित नहीं कर सकती। उस आधार पर लिए गए निर्णय आपकी अपनी ज़िम्मेदारी हैं।
+
+## बाहरी वेबसाइटें
+
+यह साइट हवाई अड्डों, एयरलाइंस, परिवहन ऑपरेटरों और अन्य तीसरे पक्षों से लिंक कर सकती है। उनकी सामग्री, कीमतें, उपलब्धता और गोपनीयता प्रथाएं उनकी अपनी ज़िम्मेदारी हैं; यह साइट उन्हें नियंत्रित नहीं करती और उनके लिए कोई देयता स्वीकार नहीं करती।
+
+## देयता की सीमा
+
+पूरा खंड उपयोग की शर्तों में है। संक्षेप में: कानून द्वारा अनुमत पूरी सीमा तक, साइट छूटी उड़ानों, बदले यात्रा कार्यक्रम, बोर्डिंग से इनकार, अतिरिक्त लागत या इस साइट के उपयोग से हुई डेटा हानि के लिए उत्तरदायी नहीं है।
+
+## प्रश्न और सुधार
+
+यदि यहां कोई कीमत, मैप या मार्ग गलत है, तो संपर्क पेज के माध्यम से बताएं — सुधार पहले संभाले जाते हैं। इस पेज के बारे में कानूनी प्रश्न भी उसी रास्ते से हम तक पहुंचते हैं।`,
+  },
+
+  bn: {
+    title: 'দাবিত্যাগ ও অ্যাফিলিয়েট প্রকাশ',
+    summary:
+      'এই সাইটের ম্যাপ, ভাড়া ও বাহ্যিক লিংক কী — এবং কী নয়: ডেটার নির্ভুলতা, অ্যাফিলিয়েট লিংক, বিজ্ঞাপন এবং আমাদের দায়ের সীমা।',
+    updated: UPDATED,
+    body: `World Airport Maps একটি স্বাধীন বিমানবন্দর রেফারেন্স সাইট। এই পৃষ্ঠা ব্যাখ্যা করে সাইটের বিষয়বস্তু কী, সাইট কীভাবে অর্থায়িত হয় এবং এর দায় কোথায় শেষ হয়। এটি প্রতিটি পৃষ্ঠায়, প্রতিটি ভাষায় প্রযোজ্য।
+
+## অফিসিয়াল উৎস নয়
+
+এই সাইট কোনো বিমানবন্দর, এয়ারলাইন, ট্রাভেল এজেন্সি বা সরকারি সংস্থা নয় এবং এর কোনোটির সাথে সংযুক্ত নয়। এটি প্রকাশ্য ডেটা ও সম্পাদকীয় কাজ থেকে তৈরি একটি পরিকল্পনা সহায়তা।
+
+- **টার্মিনাল চিত্রগুলো উদাহরণমূলক।** এগুলো টার্মিনাল ও গেটের সংখ্যা এবং ভূমি পরিবহন কেন্দ্র থেকে আঁকা, যাতে বোঝা যায় বিমানবন্দর কীভাবে গঠিত — জরিপকৃত ফ্লোর প্ল্যান থেকে নয়। আকৃতি, মাপকাঠি ও অভিমুখ বাস্তব ভবন থেকে ভিন্ন হতে পারে।
+- **বিবরণ পুরোনো হয়।** টার্মিনাল খোলে ও বন্ধ হয়, গেট নম্বর বদলায়, এয়ারলাইন টার্মিনালের মধ্যে স্থানান্তরিত হয়, এবং পরিবহন রুট, প্রথম ও শেষ সার্ভিসের সময় এবং ভাড়া না জানিয়ে সংশোধিত হয়।
+- **যাত্রার আগে যাচাই করুন।** গেট, চেক-ইন সময়সীমা, ন্যূনতম সংযোগ সময়, ভিসা, প্রবেশ নিয়ম ও নিরাপত্তা প্রয়োজনীয়তার জন্য বিমানবন্দর, আপনার এয়ারলাইন ও সংশ্লিষ্ট কর্তৃপক্ষের উপর নির্ভর করুন।
+
+## ভাড়া, ডিল ও বুকিং
+
+ডিল বিভাগের ভাড়া **পাঠকদের পাঠানো** এবং এই সাইট দ্বারা যাচাই বা নিশ্চিত করা হয় না।
+
+- তালিকাভুক্ত দাম হলো যা একজন ব্যক্তি এক মুহূর্তে দেখেছেন। কর, ফি, ব্যাগেজ, সিট নির্বাচন, ভ্রমণের তারিখ ও প্রাপ্যতা এটি বদলাতে পারে।
+- এই সাইট টিকিট বিক্রি করে না, রিজার্ভেশন রাখে না এবং পেমেন্ট নেয় না। প্রতিটি বুকিং তৃতীয় পক্ষের নিজের ওয়েবসাইটে, তার শর্ত ও গোপনীয়তা নীতির অধীনে সম্পন্ন হয়।
+- কোনো অফার উপলব্ধ থাকার নিশ্চয়তা নেই। তালিকা যেকোনো সময় সরানো বা মেয়াদোত্তীর্ণ হতে পারে, এবং পরিবর্তিত দাম এই সাইটের ভুল উপস্থাপন নয়।
+
+## অ্যাফিলিয়েট লিংক
+
+এই সাইটের কিছু বাহ্যিক লিংক **অ্যাফিলিয়েট লিংক** — প্রধানত ভাড়ার সাথে সংযুক্ত বুকিং লিংক, সাথে কিছু পরিবহন ও সেবা সুপারিশ। আপনি যদি একটি অনুসরণ করেন এবং কেনাকাটা সম্পন্ন করেন, অপারেটর এই সাইটকে কমিশন দিতে পারে।
+
+- কমিশন অপারেটরের মার্জিন থেকে আসে। **এটি আপনার দেওয়া দাম পরিবর্তন করে না**, এবং এই সাইটের মাধ্যমে আসার জন্য আপনাকে বেশি চার্জ করা হয় না।
+- কমিশন কভারেজ কিনে না। সাইট র‍্যাংকিং, পর্যালোচনা বা প্লেসমেন্ট বিক্রি করে না, এবং কোনো পেমেন্ট নির্ধারণ করে না পৃষ্ঠা কী বলে।
+- প্রকাশটি প্রতিটি লিংকযুক্ত পৃষ্ঠায় এবং এখানেও দেখা যায়; এই পৃষ্ঠাটি পুরো সাইটের বিবৃতি।
+
+## বিজ্ঞাপন
+
+এই সাইটের বিজ্ঞাপন তৃতীয় পক্ষের বিজ্ঞাপন নেটওয়ার্ক দ্বারা পরিবেশিত; গোপনীয়তা নীতি বর্তমানগুলো তালিকাভুক্ত করে। বিজ্ঞাপনদাতারা এই সাইটের মাধ্যমে পাঠক ডেটা পান না এবং সম্পাদকীয় বিষয়বস্তু প্রভাবিত করতে পারেন না। এখানে দেখানো বিজ্ঞাপন পণ্য বা সেবার অনুমোদন নয়, এবং এর নিরাপত্তা, বৈধতা বা গুণমানের নিশ্চয়তাও নয়।
+
+## পাঠকদের পাঠানো বিষয়বস্তু
+
+ভাড়া, মন্তব্য ও সংশোধন পাঠকরা পাঠান। স্পষ্টভাবে অবৈধ উপাদান সরানো হয়, কিন্তু সাইট প্রতিটি জমার নির্ভুলতা, সময়োপযোগিতা বা সম্পূর্ণতা যাচাই করতে পারে না। তার ভিত্তিতে নেওয়া সিদ্ধান্ত আপনার নিজের দায়িত্ব।
+
+## বাহ্যিক ওয়েবসাইট
+
+এই সাইট বিমানবন্দর, এয়ারলাইন, পরিবহন অপারেটর ও অন্যান্য তৃতীয় পক্ষের লিংক দিতে পারে। তাদের বিষয়বস্তু, দাম, প্রাপ্যতা ও গোপনীয়তা অনুশীলন তাদের নিজস্ব দায়িত্ব; এই সাইট তাদের নিয়ন্ত্রণ করে না এবং তাদের জন্য কোনো দায় গ্রহণ করে না।
+
+## দায়ের সীমা
+
+সম্পূর্ণ ধারা ব্যবহারের শর্তাবলিতে আছে। সংক্ষেপে: আইন দ্বারা অনুমোদিত সর্বোচ্চ পরিমাণে, সাইট মিস হওয়া ফ্লাইট, পরিবর্তিত ভ্রমণসূচি, বোর্ডিং প্রত্যাখ্যান, অতিরিক্ত খরচ বা এই সাইট ব্যবহারের ফলে হারানো ডেটার জন্য দায়ী নয়।
+
+## প্রশ্ন ও সংশোধন
+
+এখানে কোনো দাম, ম্যাপ বা রুট ভুল হলে যোগাযোগ পৃষ্ঠার মাধ্যমে জানান — সংশোধন প্রথমে সমাধান হয়। এই পৃষ্ঠা সম্পর্কে আইনি প্রশ্নও একই পথে আমাদের কাছে পৌঁছায়।`,
+  },
+
+  sw: {
+    title: 'Kanusho na ufichuzi wa viungo vya ushirikiano',
+    summary:
+      'Ramani, nauli na viungo vya nje vya tovuti hii ni nini — na si nini: usahihi wa data, viungo vya ushirikiano, matangazo na mipaka ya dhima yetu.',
+    updated: UPDATED,
+    body: `World Airport Maps ni tovuti huru ya marejeo ya viwanja vya ndege. Ukurasa huu unaeleza maudhui ya tovuti ni nini, tovuti inafadhiliwa vipi na dhima yake inaishia wapi. Unatumika kwa kila ukurasa, katika kila lugha.
+
+## Si chanzo rasmi
+
+Tovuti hii si uwanja wa ndege, shirika la ndege, wakala wa safari au taasisi ya serikali, na haihusiani na yoyote kati yao. Ni chombo cha kupanga kilichojengwa kutoka data ya umma na kazi ya uhariri.
+
+- **Michoro ya terminali ni ya kielelezo.** Imechorwa kutoka idadi ya terminali na malango na vituo vya usafiri wa ardhini, kuonyesha jinsi uwanja wa ndege umeundwa — si kutoka mipango ya sakafu iliyopimwa. Umbo, kipimo na mwelekeo vinaweza kutofautiana na jengo halisi.
+- **Maelezo hupitwa na wakati.** Terminali hufunguka na kufungwa, namba za malango hubadilika, shirika za ndege huhamia kati ya terminali, na njia za usafiri, nyakati za huduma ya kwanza na ya mwisho na nauli hurekebishwa bila taarifa.
+- **Hakikisha kabla ya safari.** Kwa malango, tarehe za mwisho za kujiandikisha, muda mdogo wa kuunganisha, visa, sheria za kuingia na mahitaji ya usalama, tegemea uwanja wa ndege, shirika lako la ndege na mamlaka husika.
+
+## Nauli, ofa na uhifadhi
+
+Nauli katika sehemu ya ofa **zinatumwa na wasomaji** na hazithibitishwi wala kuhakikishiwa na tovuti hii.
+
+- Bei iliyoorodheshwa ni kile mtu mmoja aliona kwa wakati mmoja. Kodi, ada, mizigo, uchaguzi wa kiti, tarehe za safari na upatikanaji vinaweza kuibadilisha.
+- Tovuti hii hauzi tiketi, haihifadhi nafasi na haipokei malipo. Kila uhifadhi hukamilika kwenye tovuti ya mtu wa tatu, chini ya masharti na sera ya faragha yake.
+- Hakuna ofa inayohakikishiwa kuwa bado inapatikana. Orodha zinaweza kuondolewa au kuisha muda wowote, na bei iliyobadilika si uwakilishi wa uongo wa tovuti hii.
+
+## Viungo vya ushirikiano
+
+Baadhi ya viungo vya nje kwenye tovuti hii ni **viungo vya ushirikiano** — hasa viungo vya uhifadhi vilivyounganishwa na nauli, pamoja na mapendekezo machache ya usafiri na huduma. Ukifuata kimoja na kukamilisha ununuzi, mwendeshaji anaweza kulipa tovuti hii kamisheni.
+
+- Kamisheni inatoka kwenye margin ya mwendeshaji. **Haibadilishi bei unayolipa**, na hulipishwi zaidi kwa kuja kupitia tovuti hii.
+- Kamisheni haitinunui ufikiaji. Tovuti hauzi viwango, hakiki au nafasi, na hakuna malipo yanayoamua ukurasa unasema nini.
+- Ufichuzi unaonekana kwenye ukurasa wenye kila kiungo na hapa; ukurasa huu ni taarifa ya tovuti yote.
+
+## Matangazo
+
+Matangazo kwenye tovuti hii hutolewa na mitandao ya matangazo ya wahusika wengine; sera ya faragha inaorodhesha ya sasa. Watangazaji hawapati data ya wasomaji kupitia tovuti hii na hawawezi kuathiri maudhui ya uhariri. Tangazo linaloonekana hapa si uidhinishaji wa bidhaa au huduma, wala hakikisho la usalama, uhalali au ubora wake.
+
+## Maudhui yaliyotumwa na wasomaji
+
+Nauli, maoni na marekebisho hutumwa na wasomaji. Maudhui haramu dhahiri huondolewa, lakini tovuti haiwezi kuthibitisha kila wasilisho kwa usahihi, uhalisia au ukamilifu. Maamuzi yaliyofanywa kwa msingi huo ni dhima yako mwenyewe.
+
+## Tovuti za nje
+
+Tovuti hii inaweza kuunganisha kwa viwanja vya ndege, shirika za ndege, waendeshaji wa usafiri na wahusika wengine. Maudhui, bei, upatikanaji na taratibu zao za faragha ni dhima yao wenyewe; tovuti hii haiwasimamii na haiwajibiki kwao.
+
+## Ukomo wa dhima
+
+Kifungu kamili kiko katika masharti ya matumizi. Kwa ufupi: kwa kiwango kikubwa kinachoruhusiwa na sheria, tovuti haiwajibiki kwa safari zilizokosekana, mipango iliyobadilika, kukataliwa kupanda, gharama za ziada au data iliyopotea kutokana na matumizi ya tovuti hii.
+
+## Maswali na marekebisho
+
+Ikiwa bei, ramani au njia hapa si sahihi, tujulishe kupitia ukurasa wa mawasiliano — marekebisho hushughulikiwa kwanza. Maswali ya kisheria kuhusu ukurasa huu yanatufikia kwa njia hiyo hiyo.`,
+  },
 };

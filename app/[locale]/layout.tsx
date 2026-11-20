@@ -99,7 +99,7 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Sans+Thai:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Sans+Thai:wght@300;400;500;700;900&family=Noto+Sans+Devanagari:wght@300;400;500;700;900&family=Noto+Sans+Bengali:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap"
         />
         <a className="sr-only" href="#view">
           {t.common.skipToContent}

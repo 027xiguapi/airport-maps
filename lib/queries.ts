@@ -120,6 +120,96 @@ import {
   thaiSearchAlias,
   thaiTerminalName,
 } from './i18n/th-data';
+import {
+  dutchAirportName,
+  dutchCity,
+  dutchCountry,
+  dutchGateRange,
+  dutchLabel,
+  dutchRegion,
+  dutchSearchAlias,
+  dutchTerminalName,
+} from './i18n/nl-data';
+import {
+  swedishAirportName,
+  swedishCity,
+  swedishCountry,
+  swedishGateRange,
+  swedishLabel,
+  swedishRegion,
+  swedishSearchAlias,
+  swedishTerminalName,
+} from './i18n/sv-data';
+import {
+  polishAirportName,
+  polishCity,
+  polishCountry,
+  polishGateRange,
+  polishLabel,
+  polishRegion,
+  polishSearchAlias,
+  polishTerminalName,
+} from './i18n/pl-data';
+import {
+  czechAirportName,
+  czechCity,
+  czechCountry,
+  czechGateRange,
+  czechLabel,
+  czechRegion,
+  czechSearchAlias,
+  czechTerminalName,
+} from './i18n/cs-data';
+import {
+  romanianAirportName,
+  romanianCity,
+  romanianCountry,
+  romanianGateRange,
+  romanianLabel,
+  romanianRegion,
+  romanianSearchAlias,
+  romanianTerminalName,
+} from './i18n/ro-data';
+import {
+  ukrainianAirportName,
+  ukrainianCity,
+  ukrainianCountry,
+  ukrainianGateRange,
+  ukrainianLabel,
+  ukrainianRegion,
+  ukrainianSearchAlias,
+  ukrainianTerminalName,
+} from './i18n/uk-data';
+import {
+  hindiAirportName,
+  hindiCity,
+  hindiCountry,
+  hindiGateRange,
+  hindiLabel,
+  hindiRegion,
+  hindiSearchAlias,
+  hindiTerminalName,
+} from './i18n/hi-data';
+import {
+  bengaliAirportName,
+  bengaliCity,
+  bengaliCountry,
+  bengaliGateRange,
+  bengaliLabel,
+  bengaliRegion,
+  bengaliSearchAlias,
+  bengaliTerminalName,
+} from './i18n/bn-data';
+import {
+  swahiliAirportName,
+  swahiliCity,
+  swahiliCountry,
+  swahiliGateRange,
+  swahiliLabel,
+  swahiliRegion,
+  swahiliSearchAlias,
+  swahiliTerminalName,
+} from './i18n/sw-data';
 import type {
   AirportDetail,
   AirportListParams,
@@ -276,6 +366,117 @@ const VOCAB: Partial<Record<Locale, Partial<Record<NameField, Translator>>>> = {
     label: thaiLabel,
     gateRange: thaiGateRange,
   },
+  nl: {
+    airportName: dutchAirportName,
+    city: dutchCity,
+    country: dutchCountry,
+    region: dutchRegion,
+    terminalName: dutchTerminalName,
+    label: dutchLabel,
+    gateRange: dutchGateRange,
+  },
+  sv: {
+    airportName: swedishAirportName,
+    city: swedishCity,
+    country: swedishCountry,
+    region: swedishRegion,
+    terminalName: swedishTerminalName,
+    label: swedishLabel,
+    gateRange: swedishGateRange,
+  },
+  pl: {
+    airportName: polishAirportName,
+    city: polishCity,
+    country: polishCountry,
+    region: polishRegion,
+    terminalName: polishTerminalName,
+    label: polishLabel,
+    gateRange: polishGateRange,
+  },
+  cs: {
+    airportName: czechAirportName,
+    city: czechCity,
+    country: czechCountry,
+    region: czechRegion,
+    terminalName: czechTerminalName,
+    label: czechLabel,
+    gateRange: czechGateRange,
+  },
+  ro: {
+    airportName: romanianAirportName,
+    city: romanianCity,
+    country: romanianCountry,
+    region: romanianRegion,
+    terminalName: romanianTerminalName,
+    label: romanianLabel,
+    gateRange: romanianGateRange,
+  },
+  uk: {
+    airportName: ukrainianAirportName,
+    city: ukrainianCity,
+    country: ukrainianCountry,
+    region: ukrainianRegion,
+    terminalName: ukrainianTerminalName,
+    label: ukrainianLabel,
+    gateRange: ukrainianGateRange,
+  },
+  hi: {
+    airportName: hindiAirportName,
+    city: hindiCity,
+    country: hindiCountry,
+    region: hindiRegion,
+    terminalName: hindiTerminalName,
+    label: hindiLabel,
+    gateRange: hindiGateRange,
+  },
+  bn: {
+    airportName: bengaliAirportName,
+    city: bengaliCity,
+    country: bengaliCountry,
+    region: bengaliRegion,
+    terminalName: bengaliTerminalName,
+    label: bengaliLabel,
+    gateRange: bengaliGateRange,
+  },
+  sw: {
+    airportName: swahiliAirportName,
+    city: swahiliCity,
+    country: swahiliCountry,
+    region: swahiliRegion,
+    terminalName: swahiliTerminalName,
+    label: swahiliLabel,
+    gateRange: swahiliGateRange,
+  },
+};
+
+/**
+ * Per-locale exonym lookup for the search box: the visitor's localized place
+ * name is translated back to the English column value, so "Peking", "Pékin" or
+ * "Pekín" all find Beijing in `airports.search_blob` (which only carries the
+ * Chinese, English and Traditional names).
+ */
+const SEARCH_ALIASES: Partial<Record<Locale, (term: string) => string | null>> = {
+  de: germanSearchAlias,
+  fr: frenchSearchAlias,
+  it: italianSearchAlias,
+  ko: koreanSearchAlias,
+  es: spanishSearchAlias,
+  pt: portugueseSearchAlias,
+  id: indonesianSearchAlias,
+  vi: vietnameseSearchAlias,
+  ja: japaneseSearchAlias,
+  ru: russianSearchAlias,
+  tr: turkishSearchAlias,
+  th: thaiSearchAlias,
+  nl: dutchSearchAlias,
+  sv: swedishSearchAlias,
+  pl: polishSearchAlias,
+  cs: czechSearchAlias,
+  ro: romanianSearchAlias,
+  uk: ukrainianSearchAlias,
+  hi: hindiSearchAlias,
+  bn: bengaliSearchAlias,
+  sw: swahiliSearchAlias,
 };
 
 /** Translator for one field of a locale, when that locale has a vocabulary. */
@@ -924,32 +1125,7 @@ export async function searchAirports(
       value,
       likePattern(value),
       (() => {
-        const alias =
-          locale === 'de'
-            ? germanSearchAlias(value)
-            : locale === 'fr'
-              ? frenchSearchAlias(value)
-              : locale === 'it'
-                ? italianSearchAlias(value)
-                : locale === 'ko'
-                  ? koreanSearchAlias(value)
-                  : locale === 'es'
-                    ? spanishSearchAlias(value)
-                    : locale === 'pt'
-                      ? portugueseSearchAlias(value)
-                      : locale === 'id'
-                        ? indonesianSearchAlias(value)
-                        : locale === 'vi'
-                          ? vietnameseSearchAlias(value)
-                          : locale === 'ja'
-                            ? japaneseSearchAlias(value)
-                            : locale === 'ru'
-                              ? russianSearchAlias(value)
-                              : locale === 'tr'
-                                ? turkishSearchAlias(value)
-                                : locale === 'th'
-                                  ? thaiSearchAlias(value)
-                                  : null;
+        const alias = SEARCH_ALIASES[locale]?.(value) ?? null;
         return alias ? likePattern(alias) : null;
       })(),
       limit,
@@ -1019,32 +1195,7 @@ export async function listAirports(
     ];
     // Translated-locale exonym typed instead of the English name ("Peking",
     // "Pékin", "Pechino", "도쿄", "Pekín", "Pequim", "Bắc Kinh", "北京", "Пекин", "Pekin").
-    const alias =
-      locale === 'de'
-        ? germanSearchAlias(term)
-        : locale === 'fr'
-          ? frenchSearchAlias(term)
-          : locale === 'it'
-            ? italianSearchAlias(term)
-            : locale === 'ko'
-              ? koreanSearchAlias(term)
-              : locale === 'es'
-                ? spanishSearchAlias(term)
-                : locale === 'pt'
-                  ? portugueseSearchAlias(term)
-                  : locale === 'id'
-                    ? indonesianSearchAlias(term)
-                    : locale === 'vi'
-                      ? vietnameseSearchAlias(term)
-                      : locale === 'ja'
-                        ? japaneseSearchAlias(term)
-                        : locale === 'ru'
-                          ? russianSearchAlias(term)
-                          : locale === 'tr'
-                            ? turkishSearchAlias(term)
-                            : locale === 'th'
-                              ? thaiSearchAlias(term)
-                              : null;
+    const alias = SEARCH_ALIASES[locale]?.(term) ?? null;
     if (alias) {
       args.push(likePattern(alias));
       clauses.push(`a.search_blob ILIKE $${args.length} ESCAPE '\\'`);

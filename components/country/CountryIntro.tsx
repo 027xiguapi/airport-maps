@@ -38,21 +38,10 @@ export default function CountryIntro({
     name: country.name,
     // Suppressed when the two coincide (Japan / 日本) or when the page language
     // already has its own form — a translated page should not read "Deutschland
-    // (Germany)" or "日本 (Japan)".
+    // (Germany)" or "日本 (Japan)". Only the Chinese pages and English itself
+    // keep the English gloss.
     nameEn:
-      locale === 'de' ||
-      locale === 'fr' ||
-      locale === 'it' ||
-      locale === 'ko' ||
-      locale === 'es' ||
-      locale === 'pt' ||
-      locale === 'id' ||
-      locale === 'vi' ||
-      locale === 'ja' ||
-      locale === 'ru' ||
-      locale === 'tr' ||
-      locale === 'th' ||
-      country.nameEn === country.name
+      locale !== 'zh' && locale !== 'tw' && country.nameEn !== country.name
         ? ''
         : country.nameEn,
     region: country.region,

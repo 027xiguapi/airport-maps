@@ -38,24 +38,9 @@ export default function RelatedLinks({
   const titleZh = airportEncyclopediaTitle(iata, nameZh);
   const wikiLang = wikipediaLocale(locale);
   // Translated editions file the article under the localized airport name;
-  // the English one under the international name.
+  // English under the international name, Chinese under the encyclopedia title.
   const wikiTitle =
-    locale === 'en'
-      ? nameEn
-      : locale === 'de' ||
-          locale === 'fr' ||
-          locale === 'it' ||
-          locale === 'ko' ||
-          locale === 'es' ||
-          locale === 'pt' ||
-          locale === 'id' ||
-          locale === 'vi' ||
-          locale === 'ja' ||
-          locale === 'ru' ||
-          locale === 'tr' ||
-          locale === 'th'
-        ? name
-        : titleZh;
+    locale === 'en' ? nameEn : wikiLang === 'zh' ? titleZh : name;
   const wikiHref = wikiUrl(wikiLang, wikiTitle);
 
   return (

@@ -61,6 +61,24 @@ export function intlLocale(locale: Locale): string {
       return 'tr-TR';
     case 'th':
       return 'th-TH';
+    case 'nl':
+      return 'nl-NL';
+    case 'sv':
+      return 'sv-SE';
+    case 'pl':
+      return 'pl-PL';
+    case 'cs':
+      return 'cs-CZ';
+    case 'ro':
+      return 'ro-RO';
+    case 'uk':
+      return 'uk-UA';
+    case 'hi':
+      return 'hi-IN';
+    case 'bn':
+      return 'bn-BD';
+    case 'sw':
+      return 'sw-TZ';
     default:
       return 'en-US';
   }
@@ -87,7 +105,16 @@ export function wikipediaLocale(
   | 'ja'
   | 'ru'
   | 'tr'
-  | 'th' {
+  | 'th'
+  | 'nl'
+  | 'sv'
+  | 'pl'
+  | 'cs'
+  | 'ro'
+  | 'uk'
+  | 'hi'
+  | 'bn'
+  | 'sw' {
   if (locale === 'en') return 'en';
   if (locale === 'de') return 'de';
   if (locale === 'fr') return 'fr';
@@ -101,6 +128,15 @@ export function wikipediaLocale(
   if (locale === 'ru') return 'ru';
   if (locale === 'tr') return 'tr';
   if (locale === 'th') return 'th';
+  if (locale === 'nl') return 'nl';
+  if (locale === 'sv') return 'sv';
+  if (locale === 'pl') return 'pl';
+  if (locale === 'cs') return 'cs';
+  if (locale === 'ro') return 'ro';
+  if (locale === 'uk') return 'uk';
+  if (locale === 'hi') return 'hi';
+  if (locale === 'bn') return 'bn';
+  if (locale === 'sw') return 'sw';
   return 'zh';
 }
 

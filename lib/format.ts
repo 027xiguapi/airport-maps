@@ -24,6 +24,15 @@ const NUMBER_LOCALE: Partial<Record<Locale, string>> = {
   ru: 'ru-RU',
   tr: 'tr-TR',
   th: 'th-TH',
+  nl: 'nl-NL',
+  sv: 'sv-SE',
+  pl: 'pl-PL',
+  cs: 'cs-CZ',
+  ro: 'ro-RO',
+  uk: 'uk-UA',
+  hi: 'hi-IN',
+  bn: 'bn-BD',
+  sw: 'sw-TZ',
   zh: 'zh-CN',
   tw: 'zh-TW',
 };
@@ -112,6 +121,100 @@ export function formatPax(
     // "ประมาณ 67 ล้าน" — no plural inflection.
     const rounded = Number(trimZeros(millions.toFixed(2)));
     return `ประมาณ ${formatNumber(rounded, locale)} ล้าน`;
+  }
+  if (locale === 'nl') {
+    // "ongeveer 67 miljoen" / "ongeveer 1 miljoen" — miljoen stays invariant.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `ongeveer ${formatNumber(rounded, locale)} miljoen`;
+  }
+  if (locale === 'sv') {
+    // "cirka 67 miljoner" / "cirka 1 miljon".
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `cirka ${formatNumber(rounded, locale)} ${rounded === 1 ? 'miljon' : 'miljoner'}`;
+  }
+  if (locale === 'pl') {
+    // "około 67 milionów" / "około 2 miliony" / "około 1 miliona".
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    const abs = Math.abs(rounded);
+    const mod10 = Math.round(abs) % 10;
+    const mod100 = Math.round(abs) % 100;
+    const noun =
+      abs === 1 || !Number.isInteger(abs)
+        ? 'miliona'
+        : mod10 >= 2 && mod10 <= 4 && !(mod100 >= 12 && mod100 <= 14)
+          ? 'miliony'
+          : 'milionów';
+    return `około ${formatNumber(rounded, locale)} ${noun}`;
+  }
+  if (locale === 'cs') {
+    // "přibližně 67 milionů" / "přibližně 2 miliony" / "přibližně 1 milion".
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    const abs = Math.abs(rounded);
+    const mod10 = Math.round(abs) % 10;
+    const mod100 = Math.round(abs) % 100;
+    const noun =
+      abs === 1
+        ? 'milion'
+        : !Number.isInteger(abs)
+          ? 'milionu'
+          : mod10 >= 2 && mod10 <= 4 && !(mod100 >= 12 && mod100 <= 14)
+            ? 'miliony'
+            : 'milionů';
+    return `přibližně ${formatNumber(rounded, locale)} ${noun}`;
+  }
+  if (locale === 'ro') {
+    // "aproximativ 67 de milioane" / "aproximativ 2 milioane" / "aproximativ 1 milion".
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    const abs = Math.abs(rounded);
+    const mod100 = Math.round(abs) % 100;
+    const noun =
+      abs === 1 || mod100 === 1
+        ? 'milion'
+        : abs < 20
+          ? 'milioane'
+          : 'de milioane';
+    return `aproximativ ${formatNumber(rounded, locale)} ${noun}`;
+  }
+  if (locale === 'uk') {
+    // "приблизно 67 мільйонів" / "приблизно 2 мільйони" / "приблизно 1 мільйон".
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    const abs = Math.abs(rounded);
+    const mod10 = Math.round(abs) % 10;
+    const mod100 = Math.round(abs) % 100;
+    const noun =
+      abs === 1
+        ? 'мільйон'
+        : !Number.isInteger(abs)
+          ? 'мільйона'
+          : mod10 >= 2 && mod10 <= 4 && !(mod100 >= 12 && mod100 <= 14)
+            ? 'мільйони'
+            : 'мільйонів';
+    return `приблизно ${formatNumber(rounded, locale)} ${noun}`;
+  }
+  if (locale === 'hi') {
+    // Indian numbering: "लगभग 6.7 करोड़" above ten million, else lakh.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    if (rounded >= 10) {
+      const crore = Number(trimZeros((rounded / 10).toFixed(2)));
+      return `लगभग ${formatNumber(crore, locale)} करोड़`;
+    }
+    const lakh = Number(trimZeros((rounded * 10).toFixed(2)));
+    return `लगभग ${formatNumber(lakh, locale)} लाख`;
+  }
+  if (locale === 'bn') {
+    // Bengali numbering: "প্রায় ৬.৭ কোটি" above ten million, else lakh.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    if (rounded >= 10) {
+      const crore = Number(trimZeros((rounded / 10).toFixed(2)));
+      return `প্রায় ${formatNumber(crore, locale)} কোটি`;
+    }
+    const lakh = Number(trimZeros((rounded * 10).toFixed(2)));
+    return `প্রায় ${formatNumber(lakh, locale)} লাখ`;
+  }
+  if (locale === 'sw') {
+    // "takriban milioni 67" — the number follows the noun.
+    const rounded = Number(trimZeros(millions.toFixed(2)));
+    return `takriban milioni ${formatNumber(rounded, locale)}`;
   }
   if (locale === 'ja') {
     // 約6,700万人 / 約1億800万人 — like Chinese, grouped by 10,000 and

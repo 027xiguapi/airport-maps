@@ -1,17 +1,26 @@
 import { DEFAULT_LOCALE, LOCALES, type Locale } from './config';
 import { de } from './messages/de';
+import { cs } from './messages/cs';
+import { bn } from './messages/bn';
 import { en } from './messages/en';
 import { es } from './messages/es';
 import { fr } from './messages/fr';
 import { id } from './messages/id';
 import { it } from './messages/it';
+import { hi } from './messages/hi';
 import { ja } from './messages/ja';
 import { ko } from './messages/ko';
+import { nl } from './messages/nl';
+import { pl } from './messages/pl';
 import { pt } from './messages/pt';
+import { ro } from './messages/ro';
 import { ru } from './messages/ru';
+import { sv } from './messages/sv';
+import { sw } from './messages/sw';
 import { th } from './messages/th';
 import { tr } from './messages/tr';
 import { tw } from './messages/tw';
+import { uk } from './messages/uk';
 import { vi } from './messages/vi';
 import { zh, type Messages } from './messages/zh';
 
@@ -44,6 +53,15 @@ const CATALOGS: Partial<Record<Locale, Messages>> = {
   th,
   zh,
   tw,
+  nl,
+  sv,
+  pl,
+  cs,
+  ro,
+  uk,
+  hi,
+  bn,
+  sw,
 };
 
 /** Locales whose UI catalog exists; everything else falls back to the default. */

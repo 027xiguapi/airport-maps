@@ -64,6 +64,15 @@ const VARIANT_SUFFIXES = [
   '.ru.md',
   '.tr.md',
   '.th.md',
+  '.nl.md',
+  '.sv.md',
+  '.pl.md',
+  '.cs.md',
+  '.ro.md',
+  '.uk.md',
+  '.hi.md',
+  '.bn.md',
+  '.sw.md',
   '.tw.md',
 ];
 const isVariant = (file) => VARIANT_SUFFIXES.some((suffix) => file.endsWith(suffix));

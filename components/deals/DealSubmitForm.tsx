@@ -36,6 +36,33 @@ type Hit = {
 
 type FormErrors = Partial<Record<DealErrorCode, string>>;
 
+/** Default currency suggested by the page locale. */
+const DEFAULT_CURRENCY: Record<string, string> = {
+  zh: 'CNY',
+  tw: 'CNY',
+  ko: 'KRW',
+  de: 'EUR',
+  fr: 'EUR',
+  it: 'EUR',
+  es: 'EUR',
+  nl: 'EUR',
+  sv: 'SEK',
+  pl: 'PLN',
+  cs: 'CZK',
+  ro: 'RON',
+  uk: 'UAH',
+  hi: 'INR',
+  bn: 'BDT',
+  sw: 'TZS',
+  pt: 'BRL',
+  id: 'IDR',
+  vi: 'VND',
+  ja: 'JPY',
+  ru: 'RUB',
+  tr: 'TRY',
+  th: 'THB',
+};
+
 const ERROR_LABEL: Record<DealErrorCode, keyof DealsMessages> = {
   invalid_airport: 'airportError',
   invalid_destination: 'destinationError',
@@ -97,29 +124,7 @@ export default function DealSubmitForm({
   const [destination, setDestination] = useState('');
   const [airline, setAirline] = useState('');
   const [price, setPrice] = useState('');
-  const [currency, setCurrency] = useState(
-    locale === 'zh' || locale === 'tw'
-      ? 'CNY'
-      : locale === 'ko'
-        ? 'KRW'
-        : locale === 'de' || locale === 'fr' || locale === 'it' || locale === 'es'
-          ? 'EUR'
-          : locale === 'pt'
-            ? 'BRL'
-            : locale === 'id'
-              ? 'IDR'
-              : locale === 'vi'
-                ? 'VND'
-                : locale === 'ja'
-                  ? 'JPY'
-                  : locale === 'ru'
-                    ? 'RUB'
-                    : locale === 'tr'
-                      ? 'TRY'
-                      : locale === 'th'
-                        ? 'THB'
-                        : 'USD'
-  );
+  const [currency, setCurrency] = useState(DEFAULT_CURRENCY[locale] ?? 'USD');
   const [cabin, setCabin] = useState<DealCabin>('economy');
   const [tripType, setTripType] = useState<DealTripType>('oneway');
   const [travelFrom, setTravelFrom] = useState('');

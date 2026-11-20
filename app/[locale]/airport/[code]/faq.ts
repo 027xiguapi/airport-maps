@@ -2,19 +2,8 @@ import type { FaqItem } from '@/components/Faq';
 import { formatDate, formatNumber, transitLabel } from '@/lib/format';
 import { getMessages } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n/config';
-import { isGateRangePhrase } from '@/lib/i18n/de-data';
-import { isFrenchGateRangePhrase } from '@/lib/i18n/fr-data';
-import { isItalianGateRangePhrase } from '@/lib/i18n/it-data';
-import { isKoreanGateRangePhrase } from '@/lib/i18n/ko-data';
-import { isSpanishGateRangePhrase } from '@/lib/i18n/es-data';
-import { isPortugueseGateRangePhrase } from '@/lib/i18n/pt-data';
-import { isIndonesianGateRangePhrase } from '@/lib/i18n/id-data';
-import { isVietnameseGateRangePhrase } from '@/lib/i18n/vi-data';
-import { isJapaneseGateRangePhrase } from '@/lib/i18n/ja-data';
-import { isRussianGateRangePhrase } from '@/lib/i18n/ru-data';
-import { isTurkishGateRangePhrase } from '@/lib/i18n/tr-data';
-import { isThaiGateRangePhrase } from '@/lib/i18n/th-data';
-import { clauseSeparator, isCjkLocale, listSeparator } from '@/lib/i18n/display';
+import { isCjkLocale, listSeparator, clauseSeparator } from '@/lib/i18n/display';
+import { isLocalizedGateRangePhrase } from '@/lib/i18n/gate-ranges';
 import type { AirportDetail, AirportFlightBoard, Terminal } from '@/lib/types';
 
 /**
@@ -30,19 +19,7 @@ function gatePhrase(locale: Locale, t: ReturnType<typeof getMessages>, terminal:
   if (isCjkLocale(locale)) {
     return gateRange.endsWith('廊') ? gateRange : t.units.gatesLabel(gateRange);
   }
-  const isPhrase =
-    isGateRangePhrase(gateRange) ||
-    (locale === 'fr' && isFrenchGateRangePhrase(gateRange)) ||
-    (locale === 'it' && isItalianGateRangePhrase(gateRange)) ||
-    (locale === 'ko' && isKoreanGateRangePhrase(gateRange)) ||
-    (locale === 'es' && isSpanishGateRangePhrase(gateRange)) ||
-    (locale === 'pt' && isPortugueseGateRangePhrase(gateRange)) ||
-    (locale === 'id' && isIndonesianGateRangePhrase(gateRange)) ||
-    (locale === 'vi' && isVietnameseGateRangePhrase(gateRange)) ||
-    (locale === 'ja' && isJapaneseGateRangePhrase(gateRange)) ||
-    (locale === 'ru' && isRussianGateRangePhrase(gateRange)) ||
-    (locale === 'tr' && isTurkishGateRangePhrase(gateRange)) ||
-    (locale === 'th' && isThaiGateRangePhrase(gateRange));
+  const isPhrase = isLocalizedGateRangePhrase(locale, gateRange);
   return isPhrase ? gateRange : t.units.gatesLabel(gateRange);
 }
 

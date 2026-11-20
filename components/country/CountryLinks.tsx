@@ -113,22 +113,7 @@ function ReferenceLinks({
   const t = getMessages(locale);
   // Wikipedia follows the page language; Baidu Baike is Chinese either way.
   const wikiTitle =
-    locale === 'en'
-      ? nameEn
-      : locale === 'de' ||
-          locale === 'fr' ||
-          locale === 'it' ||
-          locale === 'ko' ||
-          locale === 'es' ||
-          locale === 'pt' ||
-          locale === 'id' ||
-          locale === 'vi' ||
-          locale === 'ja' ||
-          locale === 'ru' ||
-          locale === 'tr' ||
-          locale === 'th'
-        ? name
-        : titleZh;
+    locale === 'en' ? nameEn : wikipediaLocale(locale) === 'zh' ? titleZh : name;
 
   return (
     <>
