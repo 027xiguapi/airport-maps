@@ -142,6 +142,11 @@
   "ADB": {
     "adb-sat-1.webp": "Satellitenansicht: Die Start- und Rollbahnen von Izmir liegen in der Ebene am Ägäischen Meer, Terminal und Vorfeld südlich des Flugfelds."
   },
+  "ADD": {
+    "add-baidu-1.webp": "Vor dem Terminal des Addis Ababa Bole International Airport: die mehrstöckige Fassade hinter einer Vorfahrt, die mit schwarz-gelben Pollern gesäumt ist.",
+    "add-baidu-2.webp": "Ein Frachtflugzeug von Ethiopian Cargo auf dem Vorfeld, dahinter das Ethiopian-Cargo-Gebäude und ferne Hügel.",
+    "add-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Addis Ababa Bole International Airport (ADD) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "ADE": {
     "ade-bing-3.webp": "Terminal und Kontrollturm des Aden International Airport — der Name des Flughafens auf Arabisch an der Wand, davor zwei Pushback-Schlepper."
   },
@@ -225,6 +230,11 @@
   },
   "AGC": {
     "agc-sat-1.webp": "Auf dem Satellitenbild geht der Allegheny County Airport (AGC) in die umgebende grüne Vegetation und das Ackerland über."
+  },
+  "AGP": {
+    "agp-baidu-1.webp": "In der Abflughalle hängen große Deckenventilatoren über Reisenden, die zu den Check-in-Schaltern und den Gate-Anzeigen unterwegs sind.",
+    "agp-baidu-2.webp": "Auf dem Vorfeld steht eine easyJet-Maschine an der Parkposition, im Vordergrund Bodengeräte, dahinter ein startendes Flugzeug und Berge.",
+    "agp-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Málaga-Costa del Sol Airport (AGP) und die umliegende Landschaft deutlich zu erkennen."
   },
   "AGQ": {
     "agq-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Flugfelds Dhokimion (AGQ) zwischen Stadt, Ackerland und Vegetation."
@@ -758,7 +768,7 @@
     "auu-sat-1.webp": "Auf dem Satellitenbild geht der Flughafen Aurukun (AUU) in die umgebende Stadt, das Ackerland und die Vegetation über.",
     "auu-chatgpt-01.webp": "Unter klarem blauem Himmel wartet eine zweimotorige Turboprop auf dem dunklen Vorfeld vor dem Terminal mit der Aufschrift „Welcome to Aurukun“."
   },
-  "AUX": {
+  "AUX_": {
     "aux-sat-1.webp": "Satellitenansicht: Der Flughafen Araguaína (AUX) ist von Stadt, Ackerland und Vegetation umgeben."
   },
   "AUY": {
@@ -871,14 +881,60 @@
   "BCN": {
     "bcn-sat-1.webp": "Auf dem Satellitenbild sind die Terminals, das Vorfeld und die Startbahnen des Barcelona–El Prat Airport (BCN) deutlich zu erkennen."
   },
+  "BER": {
+    "ber-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Berlin Brandenburg Airport (BER) und die umliegende Landschaft deutlich zu erkennen.",
+    "ber-baidu-1.webp": "Die Glasfassade des Terminals des Berlin Brandenburg Airport trägt die Schriftzüge „BERLIN BRANDENBURG AIRPORT“ und „WILLY BRANDT“; darüber liegen die Gates B12 und B13 mit ihren Fluggastbrücken über einem weiten Vorfeld.",
+    "ber-baidu-2.webp": "Ein Lufthansa Airbus A320neo (Kennzeichen D-AINZ, mit „Hauptstadtflieger“-Schriftzug und BER-Markierung) steht auf dem Vorfeld vor dem Terminal des Berlin Brandenburg Airport."
+  },
+  "BET": {
+    "bet-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Bethel Airport (BET) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "BIG": {
     "big-sat-1.webp": "Satellitenansicht: Das Allen Army Airfield (BIG) ist von Stadt, Ackerland und Vegetation umgeben."
   },
   "BKK": {
     "bkk-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umgebende Stadt am Suvarnabhumi Airport (BKK)."
   },
+  "BLR": {
+    "blr-baidu-2.webp": "Ein Airbus A320 von Go First auf regennassem Vorfeld, daneben zwei Gepäckwagen und in der Ferne grüne Hügel.",
+    "blr-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Kempegowda International Airport Bengaluru (BLR) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "BNA": {
+    "bna-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Nashville International Airport (BNA) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "BNE": {
+    "bne-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Brisbane International Airport (BNE) und die umliegende Landschaft deutlich zu erkennen.",
+    "bne-baidu-1.webp": "Außenansicht des internationalen Terminals von Brisbane, entlang der Dachkante steht der Schriftzug „Brisbane International“."
+  },
+  "BOG": {
+    "bog-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des El Dorado International Airport (BOG) und die umliegende Landschaft deutlich zu erkennen.",
+    "bog-baidu-2.webp": "Auf dem Vorfeld in Bogotá El Dorado: Jets von LATAM und Avianca an den Terminal-Gates, dahinter Wohnhochhäuser der Stadt."
+  },
+  "BOM": {
+    "bom-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Chhatrapati Shivaji Maharaj International Airport (BOM) und die umliegende Landschaft deutlich zu erkennen.",
+    "bom-baidu-2.webp": "Eine Luftaufnahme der sich kreuzenden Start- und Landebahnen und des Terminals von Mumbai, westlich davon die Küste des Arabischen Meeres."
+  },
+  "BOS": {
+    "bos-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Boston Logan International Airport (BOS) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "BPS": {
     "bps-sat-1.webp": "Satellitenansicht: Die Startbahn von Porto Seguro liegt zwischen Wald und Strand an der Atlantikküste Brasiliens, mit Terminal und Vorfeld daneben."
+  },
+  "BRU": {
+    "bru-baidu-2.webp": "Das glasfrontige Terminal des Flughafens Brüssel: das große rote „b“-Logo neben einer Fluggastbrücke, an deren Gate eine Maschine von Brussels Airlines steht.",
+    "bru-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Brussels Airport (BRU) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "BSB": {
+    "bsb-baidu-2.webp": "Luftaufnahme des kreisförmigen Hauptterminals und der Abfertigungsbereiche von Brasília, Flugzeuge auf dem Vorfeld und Baustellen am Rand.",
+    "bsb-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Presidente Juscelino Kubitschek International Airport (BSB) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "BUD": {
+    "bud-baidu-1.webp": "Erhöhte Ansicht von Terminal 2 in Budapest: das silberne, wellenförmige Dach über dem Gebäude, Flugzeuge auf dem Vorfeld und ein voller Parkplatz davor.",
+    "bud-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Budapest Liszt Ferenc International Airport (BUD) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "BWI": {
+    "bwi-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Baltimore/Washington International Thurgood Marshall Airport (BWI) und die umliegende Landschaft deutlich zu erkennen.",
+    "bwi-baidu-1.webp": "Aus dem Kabinenfenster: Southwest-Jets an ihren Gates, Bodengeräte und Gepäckwagen verteilt auf dem sonnenbeschienenen Vorfeld."
   },
   "BYF": {
     "byf-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Flughafens Albert Bray (BYF) zwischen grüner Vegetation und Ackerland."
@@ -900,9 +956,16 @@
   "CAN": {
     "can-sat-1.webp": "Satellitenansicht: der Flughafen Guangzhou-Baiyun (CAN) ist von Stadt, Küste oder Gelände umgeben, die Startbahn durchquert das Bild."
   },
+  "CCU": {
+    "ccu-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Netaji Subhash Chandra Bose International Airport (CCU) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "CDG": {
     "cdg-baidu-1.webp": "Im Terminal 1 von Charles de Gaulle – die Reihe „Bars, Restaurants“ im runden Atrium unter den Glaswänden, an der Reisende vorbeiströmen.",
     "cdg-baidu-2.webp": "Die Rolltreppe Richtung Terminal 2 – das Schild über dem Kopf zeigt „Bagages / Baggage / Gepäckausgabe“ und „Sortie / Exit“ in drei Sprachen."
+  },
+  "CEB": {
+    "ceb-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Mactan Cebu International Airport (CEB) und die umliegende Landschaft deutlich zu erkennen.",
+    "ceb-baidu-1.webp": "In Mactan-Cebu nach Sonnenuntergang: eine Maschine von Cebu Pacific an der Fluggastbrücke, darunter Bodenpersonal und Gepäckwagen."
   },
   "CFE": {
     "cfe-baidu-2.webp": "Das Terminal der Business Aviation – „départs / departures“ auf der dunklen Fassade, davor eine Drehtür und eine Vorfahrtspur.",
@@ -915,12 +978,35 @@
     "cfe-chatgpt-06.webp": "Ein Regionaljet von Air France HOP steht auf dem Vorfeld, während ein Gepäcklader und ein Bodengerät an seiner Seite arbeiten, dahinter erheben sich Hügel.",
     "cfe-chatgpt-07.webp": "Ein Reisender mit Rucksack tritt durch die Drehtüren unter gelben Buchstaben „départs“ an der dunklen Überdachung des Terminals."
   },
+  "CGH": {
+    "cgh-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Congonhas–Deputado Freitas Nobre Airport (CGH) und die umliegende Landschaft deutlich zu erkennen.",
+    "cgh-baidu-1.webp": "TAM-Flugzeuge stehen mit dem Bug voraus an den Gates unter dem Terminal mit der Aufschrift „AEROPORTO DE CONGONHAS“.",
+    "cgh-baidu-2.webp": "Vorfeldbetrieb in Congonhas, direkt dahinter die Startbahn und die Skyline von São Paulo."
+  },
   "CGK": {
     "cgk-baidu-1.webp": "Im Terminal von Soekarno-Hatta – rote Bögen mit filigranen Mustern unter der geometrischen Decke der Abflughalle.",
     "cgk-baidu-2.webp": "Ein Boarding-Korridor – grüne Träger und Glasflächen mit Blick auf tropische Bepflanzung, ein gelbes Schild weist den Weg zu Gate D6."
   },
+  "CGO": {
+    "cgo-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Zhengzhou Xinzheng International Airport (CGO) und die umliegende Landschaft deutlich zu erkennen.",
+    "cgo-baidu-1.webp": "Eine Maschine von Shandong Airlines am Gate vor der Glasfassade des Terminals, Gepäckwagen und ein Tankwagen bei untergehender Sonne.",
+    "cgo-baidu-2.webp": "Ein bunt lackiertes Flugzeug an der Fluggastbrücke während der Bodenabfertigung, dahinter die lange horizontale Dachlinie des Terminals."
+  },
+  "CGQ": {
+    "cgq-baidu-1.webp": "Eine Maschine von Loong Air an einem Gate vor dem Terminal des Changchun Longjia International Airport, dessen Glasfassade den bewölkten Himmel spiegelt.",
+    "cgq-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Changchun Longjia International Airport (CGQ) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "CJS": {
     "cjs-sat-1.webp": "Satellitenansicht: die Startbahnen von Ciudad Juárez liegen zwischen der Stadt und trockenem Land am Rand der Chihuahua-Wüste, Terminal und Vorfeld daneben."
+  },
+  "CJU": {
+    "cju-baidu-1.webp": "Jeju bei Nacht: das beleuchtete Schild „JEJU INT'L AIRPORT“ an der Terminalfassade, links der Kontrollturm und Verkehr auf der Straße.",
+    "cju-baidu-2.webp": "Blick entlang der erhöhten Zufahrt in Jeju: der runde Kontrollturm ragt über dem Terminaleingang auf, eingerahmt von Palmen und Vorfahrtverkehr.",
+    "cju-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Jeju International Airport (CJU) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "CKG": {
+    "ckg-baidu-1.webp": "Der Bordstein vor Terminal 3 in Chongqing Jiangbei: ein hohes weißes Vordach über einem Schild für Inlandsabflüge, das die Check-in-Reihen der Airlines auflistet.",
+    "ckg-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Chongqing Jiangbei International Airport (CKG) und die umliegende Landschaft deutlich zu erkennen."
   },
   "CLO": {
     "clo-sat-1.webp": "Satellitenansicht: die Startbahn von Cali liegt im Cauca-Tal, Terminal und Vorfeld östlich davon, ringsum Stadt und Zuckerrohrfelder.",
@@ -932,8 +1018,27 @@
     "clo-chatgpt-06.webp": "Unter einem blauen, von Wolkenstreifen durchzogenen Himmel steht ein Jet mit LATAM-Kennzeichnung auf dem Vorfeld, während der Beton-Kontrollturm neben Palmen über das Terminal ragt.",
     "clo-chatgpt-07.webp": "Ein Verkehrsflugzeug blickt am Gate zur Kamera, rechts hängt eine Fluggastbrücke vom Terminal, und auf dem rot markierten Vorfeld steht ein blauer Gepäckwagen."
   },
+  "CLT": {
+    "clt-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Charlotte Douglas International Airport (CLT) und die umliegende Landschaft deutlich zu erkennen.",
+    "clt-baidu-1.webp": "Luftaufnahme des Flughafens mit seinem weißen Terminal und den Abfertigungsstegen, die sich über ein weites, dicht mit Flugzeugen belegtes Vorfeld erstrecken."
+  },
   "CMF": {
     "cmf-sat-1.webp": "Satellitenansicht: die Startbahn liegt in grüner Landschaft vor Chambéry, Terminal und Vorfeld daneben."
+  },
+  "CMH": {
+    "cmh-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des John Glenn Columbus International Airport (CMH) und die umliegende Landschaft deutlich zu erkennen.",
+    "cmh-baidu-1.webp": "Das Terminal-Atrium des John Glenn Columbus International Airport mit einer großen „COLUMBUS“-Mosaikwand über den Rolltreppen."
+  },
+  "CMJ": {
+    "cmj-baidu-1.webp": "Das kleine Terminal des Flughafens Qimei mit wellenförmig bemalter Fassade und davor abgestellten Motorrollern.",
+    "cmj-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Qimei Airport (CMJ) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "CMN": {
+    "cmn-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Mohammed V International Airport (CMN) und die umliegende Landschaft deutlich zu erkennen.",
+    "cmn-baidu-1.webp": "Vor dem Terminal in Casablanca Mohammed V: der Schriftzug „AEROPORT MOHAMMED V“ auf der Dachkante, Reisende unter dem Eingangsvordach."
+  },
+  "CNF": {
+    "cnf-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Tancredo Neves International Airport (CNF) und die umliegende Landschaft deutlich zu erkennen."
   },
   "COR": {
     "cor-sat-1.webp": "Satellitenansicht: die Startbahnen von Córdoba liegen nördlich der Stadt, Terminal und Vorfeld östlich des Flugfelds, ringsum Ackerland und Siedlungen."
@@ -947,11 +1052,27 @@
   "CPT": {
     "cpt-sat-1.webp": "Auf dem Satellitenbild sind die Terminals, das Vorfeld und die Startbahnen des Flughafens Kapstadt (CPT) deutlich zu erkennen."
   },
+  "CSX": {
+    "csx-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Changsha Huanghua International Airport (CSX) und die umliegende Landschaft deutlich zu erkennen.",
+    "csx-baidu-1.webp": "Aus dem Kabinenfenster über die Tragfläche hinweg: eine Maschine von China Southern am Terminal in Changsha, auf dessen Dach „CHANGSHA“ steht.",
+    "csx-baidu-2.webp": "Eine Maschine von Shandong Airlines hebt vor dem Terminal in Changsha ab, dessen rote Dachschilder „长沙 CHANGSHA“ zeigen."
+  },
   "CTD": {
     "ctd-sat-1.webp": "Im Satellitenbild geht der Flughafen Alonso Valderrama (CTD) in die umgebende Stadt, das Ackerland und die Vegetation über."
   },
+  "CTS": {
+    "cts-baidu-2.webp": "Das Terminal des New Chitose Airport vom Vorplatz aus: ein Bus davor, die Dachkonstruktion vor klarem blauem Himmel.",
+    "cts-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des New Chitose Airport (CTS) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "CTU": {
+    "ctu-baidu-2.webp": "Rote Buchstaben „CHENGDU“ und die Schriftzeichen für Shu und Du stehen über der geschwungenen Glasfassade des Terminals, rechts ein kleiner Turm.",
+    "ctu-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Chengdu Shuangliu International Airport (CTU) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "CUM": {
     "cum-sat-1.webp": "Satellitenansicht: die Startbahn von Cumaná liegt zwischen Stadt und Hügeln an der venezolanischen Karibikküste, Terminal und Vorfeld daneben."
+  },
+  "CUN": {
+    "cun-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Cancún International Airport (CUN) und die umliegende Landschaft deutlich zu erkennen."
   },
   "CUZ": {
     "cuz-sat-1.webp": "Satellitenansicht: die Startbahn von Cusco liegt in einem Tal der Anden, Terminal und Vorfeld daneben, ringsum Stadt und Hänge.",
@@ -984,8 +1105,39 @@
     "cya-chatgpt-06.webp": "Die untergehende Sonne färbt das Vorfeld hinter einem kleinen weißen Terminal golden, an dessen Wand Les Cayes Airport steht, während einige Reisende nahe dem Eingang stehen.",
     "cya-chatgpt-07.webp": "Ein heller minzgrüner Eingang für Ankünfte trägt ein weißes Schild mit der Aufschrift Arrivee über zwei nach unten weisenden Pfeilen, davor blaue Geländer und Sträucher."
   },
+  "CYI": {
+    "cyi-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Chiayi Airport (CYI) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "DAC": {
+    "dac-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Hazrat Shahjalal International Airport (DAC) und die umliegende Landschaft deutlich zu erkennen.",
+    "dac-baidu-1.webp": "Eine Boeing 777 von Biman Bangladesh im Endanflug mit ausgefahrenem Fahrwerk, tief über den Dächern von Dhaka.",
+    "dac-baidu-2.webp": "Der Bug einer Boeing 777 von Biman Bangladesh beim Rollen, dahinter niedrige Gebäude am Flughafenrand."
+  },
+  "DAD": {
+    "dad-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Da Nang International Airport (DAD) und die umliegende Landschaft deutlich zu erkennen.",
+    "dad-baidu-1.webp": "Die Vorfahrtstraße vor dem Terminal des Flughafens Da Nang, gesäumt von einer Reihe geschwungener weißer Vordächer.",
+    "dad-baidu-2.webp": "Im Terminal des Flughafens Da Nang leuchtet ein Schild „Welcome to Da Nang“ über einer begrünten Wand."
+  },
+  "DAL": {
+    "dal-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Dallas Love Field (DAL) und die umliegende Landschaft deutlich zu erkennen.",
+    "dal-baidu-1.webp": "Eine Southwest-Maschine rollt über das Vorfeld des Dallas Love Field.",
+    "dal-baidu-2.webp": "Die Terminalzufahrt des Dallas Love Field bei Nacht: Reisende mit Gepäck neben wartenden Autos, der Flughafenname beleuchtet am Gebäude."
+  },
+  "DCA": {
+    "dca-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Ronald Reagan Washington National Airport (DCA) und die umliegende Landschaft deutlich zu erkennen.",
+    "dca-baidu-1.webp": "Eine Maschine von American Airlines auf dem Vorfeld, dahinter der Potomac River mit vorbeifahrenden Booten.",
+    "dca-baidu-2.webp": "Luftaufnahme des Terminals, der Parkhäuser und des Kontrollturms, mit einer Startbahn, die sich am Potomac entlangzieht."
+  },
   "DEL": {
     "del-sat-1.webp": "Auf dem Satellitenbild liegen die Terminals und Startbahnen des Flughafens Indira Gandhi (DEL) mitten im Stadt- und Straßennetz."
+  },
+  "DEN": {
+    "den-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Denver International Airport (DEN) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "DFW": {
+    "dfw-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Dallas Fort Worth International Airport (DFW) und die umliegende Landschaft deutlich zu erkennen.",
+    "dfw-baidu-1.webp": "Im Terminal des DFW gehen Reisende unter Ladenfronten und Gate-Beschilderung entlang.",
+    "dfw-baidu-2.webp": "Luftaufnahme des Terminalkomplexes, der Ringstraßen und Flugzeugpositionen am Dallas Fort Worth International Airport (DFW)."
   },
   "DHF": {
     "dhf-sat-1.webp": "Satellitenansicht: die Al Dhafra Air Base (DHF) ist von trockenem Boden und karger Landschaft umgeben."
@@ -993,11 +1145,31 @@
   "DIE": {
     "die-sat-1.webp": "Satellitenansicht: die Startbahn von Antsiranana liegt zwischen Hügeln und Stadt im Norden Madagaskars, Terminal und Vorfeld daneben."
   },
+  "DLC": {
+    "dlc-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Dalian Zhoushuizi International Airport (DLC) und die umliegende Landschaft deutlich zu erkennen.",
+    "dlc-baidu-1.webp": "Die Vorderseite des Terminals von Dalian Zhoushuizi, die roten Dachschilder „大连 DALIAN“ vor der hügeligen Stadt im Hintergrund.",
+    "dlc-baidu-2.webp": "Das Terminal von Dalian von der Zufahrt aus: die roten Schilder „DALIAN AIRPORT“ und „大连周水子“ über einem Taxistand."
+  },
+  "DMK": {
+    "dmk-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Don Mueang International Airport (DMK) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "DOH": {
     "doh-sat-1.webp": "Auf dem Satellitenbild sind die Terminals, das Vorfeld und die Startbahnen des Flughafens Hamad (DOH) deutlich zu erkennen."
   },
+  "DPS": {
+    "dps-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Denpasar I Gusti Ngurah Rai International Airport (DPS) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "DTW": {
+    "dtw-baidu-2.webp": "Luftaufnahme des Detroit Metro: das lange McNamara Terminal und seine zwei parallelen Abfertigungsbereiche am Vorfeld, dahinter Rollwege und Start- und Landebahnen.",
+    "dtw-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Detroit Metropolitan Wayne County Airport (DTW) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "DUB": {
     "dub-sat-1.webp": "Auf dem Satellitenbild sind die Terminals, das Vorfeld und die Startbahnen des Flughafens Dublin (DUB) deutlich zu erkennen."
+  },
+  "DUS": {
+    "dus-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Düsseldorf Airport (DUS) und die umliegende Landschaft deutlich zu erkennen.",
+    "dus-baidu-1.webp": "Die Abflughalle des Flughafens Düsseldorf, wo Reisende mit Gepäck an den Selbstbedienungs-Check-in-Automaten unter einem blauen Schild „Abflug / Departures“ anstehen.",
+    "dus-baidu-2.webp": "Rote Buchstaben „Düsseldorf Airport“ und blaue „DUS“ stehen auf einem Stahlgerüst über dem Terminaldach vor klarem blauem Himmel."
   },
   "DXB": {
     "dxb-sat-1.webp": "Satellitenansicht: der Flughafen Dubai (DXB) ist von Stadt, Küste oder Gelände umgeben, die Startbahn durchquert das Bild."
@@ -1012,6 +1184,11 @@
     "edc-chatgpt-06.webp": "Der Hangar ist nach Einbruch der Dunkelheit hell erleuchtet, mehrere kleine einmotorige Flugzeuge und eine zweimotorige Maschine stehen nebeneinander auf dem polierten Boden.",
     "edc-chatgpt-07.webp": "In der Nacht leuchtet das geschwungene Vordach vor dem Hangar mit einer Reihe von Lampen und wirft Licht auf weiße Wände und eine weite Betonfläche des Vorfelds."
   },
+  "EDI": {
+    "edi-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Edinburgh Airport (EDI) und die umliegende Landschaft deutlich zu erkennen.",
+    "edi-baidu-1.webp": "Außenansicht des Terminals des Flughafens Edinburgh, mit einem blau-weißen Bus am Bordstein.",
+    "edi-baidu-2.webp": "Der Kontrollturm des Flughafens Edinburgh, purpur beleuchtet vor dem Abendhimmel."
+  },
   "EPS": {
     "eps-sat-1.webp": "Satellitenansicht: der Flughafen Arroyo Barril (EPS) liegt inmitten grüner Vegetation und Ackerland."
   },
@@ -1021,8 +1198,14 @@
   "FCO": {
     "fco-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umliegende Stadt am Flughafen Rom-Fiumicino (FCO)."
   },
+  "FLL": {
+    "fll-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Fort Lauderdale Hollywood International Airport (FLL) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "FMM": {
     "fmm-sat-1.webp": "Satellitenansicht: die Startbahn von Memmingen liegt zwischen den Hügeln des Allgäus und Ackerland, Terminal und Vorfeld nördlich des Flugfelds."
+  },
+  "FOC": {
+    "foc-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Fuzhou Changle International Airport (FOC) und die umliegende Landschaft deutlich zu erkennen."
   },
   "FON": {
     "fon-sat-1.webp": "Satellitenansicht: der Flugplatz La Fortuna ist rot eingekreist, umgeben von Regenwald und Ackerland in Costa Rica.",
@@ -1037,6 +1220,27 @@
   "FRA": {
     "fra-baidu-2.webp": "The Squaire am Flughafen Frankfurt – der lange, weiß geschwungene Bau, der auf seinen schrägen Stützen die Gleise überspannt, die Autobahn führt vorbei.",
     "fra-baidu-3.webp": "Frankfurt aus der Luft – Flugzeuge und Baufahrzeuge über Vorfeld und Startbahnen verteilt, hinter dem Waldgürtel die Skyline der Stadt."
+  },
+  "FUK": {
+    "fuk-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Fukuoka Airport (FUK) und die umliegende Landschaft deutlich zu erkennen.",
+    "fuk-baidu-2.webp": "Das Domestic Terminal des Flughafens Fukuoka mit dem roten Schild „福岡空港 国内線 DOMESTIC“ neben einer großen „2“ über der Vorfahrtspur."
+  },
+  "GDL": {
+    "gdl-baidu-2.webp": "Die moderne Abflughalle von Guadalajara: ein weißes Gitterdach und eine Holzdecke in Orange über Sitzbereichen, durch die Glaswand ist das Vorfeld zu sehen.",
+    "gdl-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Guadalajara International Airport (GDL) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "GIG": {
+    "gig-baidu-2.webp": "Am Gate steht eine GOL-Maschine an der Fluggastbrücke, daneben ein Bodengerät; dahinter ragen die turmartigen Strukturen des Terminals auf.",
+    "gig-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Rio de Janeiro Galeão – Tom Jobim International Airport (GIG) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "GMP": {
+    "gmp-baidu-1.webp": "Die Abflughalle von Gimpo: eine Kassettendecke mit hängendem Korean-Air-Schild, Werbebildschirme und Check-in-Bereiche zu beiden Seiten.",
+    "gmp-baidu-2.webp": "Eine weite, helle Terminalhalle mit Holzlamellendecke über raumhohen Fenstern, Reisende mit Gepäck gehen an den Check-in-Schaltern vorbei.",
+    "gmp-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Seoul Gimpo International Airport (GMP) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "GNI": {
+    "gni-baidu-1.webp": "Das Terminal des Flughafens Lyudao und sein weißer Kontrollturm, davor eine geschwungene Zufahrt.",
+    "gni-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Lyudao Airport (GNI) und die umliegende Landschaft deutlich zu erkennen."
   },
   "GOY": {
     "goy-sat-1.webp": "Satellitenansicht: der Flughafen Ampara (GOY), dessen Startbahn 07/25 durch grüne Vegetation und Ackerland im Osten Sri Lankas schneidet.",
@@ -1060,11 +1264,47 @@
   "GUW": {
     "guw-sat-1.webp": "Satellitenansicht: die Startbahn von Atyrau liegt in der ariden Kaspischen Niederung, Terminal und Vorfeld daneben, ringsum Flüsse und Feuchtgebiete."
   },
+  "GVA": {
+    "gva-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Geneva International Airport (GVA) und die umliegende Landschaft deutlich zu erkennen.",
+    "gva-baidu-1.webp": "Die Fassade des Terminals, deren steil geneigte Glaswand von Stahlstreben gestützt wird, daneben Schlepper auf dem Vorfeld.",
+    "gva-baidu-2.webp": "Maschinen von easyJet und KLM an den Parkpositionen, dahinter liegt noch Schnee auf den Alpen."
+  },
   "GYL": {
     "gyl-sat-1.webp": "Satellitenansicht: der Flughafen Argyle (GYL) liegt in trockenem Boden und karger Landschaft."
   },
   "GZP": {
     "gzp-sat-1.webp": "Satellitenansicht: die Startbahn von Gazipaşa liegt in der Küstenebene zwischen dem Taurusgebirge und dem Mittelmeer, Terminal und Vorfeld daneben."
+  },
+  "HAK": {
+    "hak-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Haikou Meilan International Airport (HAK) und die umliegende Landschaft deutlich zu erkennen.",
+    "hak-baidu-1.webp": "Im Terminal 2 des Flughafens Haikou Meilan weist ein Hängeschild zum Meilan Airport (Terminal 2) und zum Ausgang.",
+    "hak-baidu-2.webp": "Außenansicht des Terminals des Flughafens Haikou Meilan, an der Dachkante steht „HAIKOU“ in Rot."
+  },
+  "HAM": {
+    "ham-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Hamburg Helmut Schmidt Airport (HAM) und die umliegende Landschaft deutlich zu erkennen.",
+    "ham-baidu-1.webp": "Im Terminal 1 des Flughafens Hamburg: Check-in-Inseln unter einer Holzlamellendecke, darüber hängt ein Schild „Terminal 1“.",
+    "ham-baidu-2.webp": "Die Check-in-Halle des Flughafens Hamburg: Passagiere stehen an den Selbstbedienungsautomaten für die Gepäckaufgabe an."
+  },
+  "HAN": {
+    "han-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Noi Bai International Airport (HAN) und die umliegende Landschaft deutlich zu erkennen.",
+    "han-baidu-1.webp": "Das Terminal von Noi Bai von der Flughafenstraße aus, auf der Glasfront steht „NỘI BÀI INTERNATIONAL TERMINAL“."
+  },
+  "HEL": {
+    "hel-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Helsinki Vantaa Airport (HEL) und die umliegende Landschaft deutlich zu erkennen.",
+    "hel-baidu-1.webp": "Der überdachte Gehweg vor dem Terminal von Helsinki-Vantaa, Bänke und Laternenmasten auf dem steingepflasterten Platz, dahinter wehen finnische Fahnen."
+  },
+  "HET": {
+    "het-baidu-1.webp": "Das Terminal des Hohhot Baita International Airport: rote Schriftzeichen für „Hohhot“ über der geschwungenen Glasfassade, der Vorplatz ist voller Autos.",
+    "het-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Hohhot Baita International Airport (HET) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "HFE": {
+    "hfe-baidu-1.webp": "Auf dem Vorfeld steht eine Maschine von China Eastern am Gate unter den roten Schriftzügen „Hefei“ und „HEFEI“ auf dem Terminaldach, links der Kontrollturm.",
+    "hfe-baidu-2.webp": "Eine Großraummaschine von Air China auf dem Vorfeld, dahinter das goldene Dach des Terminals von Hefei Xinqiao.",
+    "hfe-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Hefei Xinqiao International Airport (HFE) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "HGH": {
+    "hgh-baidu-2.webp": "Das Terminal von Hangzhou Xiaoshan bei Nacht: rote „Hangzhou“-Schriftzeichen beleuchtet auf dem Dach, ein Flugzeug an der Fluggastbrücke und Bodengeräte auf dem Vorfeld.",
+    "hgh-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Hangzhou Xiaoshan International Airport (HGH) und die umliegende Landschaft deutlich zu erkennen."
   },
   "HKG": {
     "hkg-baidu-1.webp": "Aus dem Kabinenfenster: eine Maschine von Cathay an der Parkposition vor dem gewölbten Dach des Terminals, auf dem Vorfeld darunter die aufgemalte Positionsmarkierung „S35“.",
@@ -1078,11 +1318,24 @@
     "hkg-chatgpt-06.webp": "Maschinen von Cathay Pacific stehen in einer Reihe an den Parkpositionen vor dem wellenförmig überdachten Terminal, dahinter erhebt sich der Kontrollturm über dem Vorfeld.",
     "hkg-chatgpt-07.webp": "Von oben gesehen streckt sich der lange Y-förmige Concourse nach beiden Seiten, an dessen Gates dutzende Flugzeuge mit dem Bug zum Gebäude parken."
   },
+  "HKT": {
+    "hkt-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Phuket International Airport (HKT) und die umliegende Landschaft deutlich zu erkennen.",
+    "hkt-baidu-1.webp": "Der Name des Flughafens zieht sich über das Dach des Terminals, darunter steht eine Turboprop-Maschine von Bangkok Airways an einer Fluggastbrücke.",
+    "hkt-baidu-2.webp": "Ein blaues Schild „Welcome to Phuket International Airport“ im Terminal, über den Schaltern und dem Weg zur Gepäckhalle."
+  },
   "HND": {
     "hnd-sat-1.webp": "Satellitenansicht: der Flughafen Tokio-Haneda (HND) ist von Stadt, Küste oder Gelände umgeben, die Startbahn durchquert das Bild."
   },
+  "HNL": {
+    "hnl-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Daniel K. Inouye International Airport (HNL) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "HOF": {
     "hof-sat-1.webp": "Satellitenansicht: die Startbahn von Al-Ahsa liegt zwischen Oase und Wüste, Terminal und Vorfeld daneben, ringsum Palmenhaine und Stadt."
+  },
+  "HOU": {
+    "hou-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des William P. Hobby Airport (HOU) und die umliegende Landschaft deutlich zu erkennen.",
+    "hou-baidu-1.webp": "Der Terminaleingang von Houston Hobby: ein Propellerdenkmal in einem begrünten Kreisverkehr, über den Glastüren steht der Name des Flughafens.",
+    "hou-baidu-2.webp": "Blick aus der Kabine einer Southwest-Maschine über Houston Hobby: Start- und Landebahnen sowie Rollwege gehen unter der Tragfläche in Vorstadtviertel über."
   },
   "HPN": {
     "hpn-sat-1.webp": "Satellitenansicht: der Flughafen Westchester County (HPN) ist von Stadt, Küste oder Gelände umgeben, die Startbahn durchquert das Bild."
@@ -1090,8 +1343,16 @@
   "HQQ": {
     "hqq-sat-1.webp": "Satellitenansicht: der Flughafen Anyang Hongqiqu (HQQ) ist von Stadt, Ackerland und Vegetation umgeben."
   },
+  "HRB": {
+    "hrb-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Harbin Taiping International Airport (HRB) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "HRH": {
     "hrh-sat-1.webp": "Satellitenansicht: der Flughafen Aligarh (HRH) ist von Stadt, Ackerland und Vegetation umgeben."
+  },
+  "HUN": {
+    "hun-baidu-1.webp": "Die blumengesäumte Steinmauer am Eingang des Flughafens Hualien mit der Aufschrift „Hualien Airport“.",
+    "hun-baidu-2.webp": "Die Vorderseite des Terminals des Flughafens Hualien, mit Palmen entlang der Glasfassade und dem Kontrollturm links.",
+    "hun-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Hualien Airport (HUN) und die umliegende Landschaft deutlich zu erkennen."
   },
   "HUU": {
     "huu-page-1.webp": "Der orangefarbene Windsack neben der Startbahn von Huánuco – hinter dem blauen Zaun steigt die Stadt am Hang an (Foto aus dem offiziellen Flughafendatenblatt von CORPAC, September 2023).",
@@ -1107,14 +1368,25 @@
   "HVA": {
     "hva-sat-1.webp": "Im Satellitenbild geht der Flughafen Analalava (HVA) in die umgebende Stadt, das Ackerland und die Vegetation über."
   },
+  "HYD": {
+    "hyd-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Rajiv Gandhi International Airport (HYD) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "IAD": {
     "iad-sat-1.webp": "Satellitenansicht: der Flughafen Washington-Dulles (IAD) ist von Stadt, Küste oder Gelände umgeben, die Startbahn durchquert das Bild."
+  },
+  "IAH": {
+    "iah-baidu-1.webp": "Der George Bush Intercontinental Airport in der Abenddämmerung: Terminals und Vorfeld beleuchtet, United-Maschinen an den Gates.",
+    "iah-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des George Bush Intercontinental Airport (IAH) und die umliegende Landschaft deutlich zu erkennen."
   },
   "ICN": {
     "icn-sat-1.webp": "Satellitenansicht: der Flughafen Incheon (ICN) ist von Stadt, Küste oder Gelände umgeben, die Startbahn durchquert das Bild."
   },
   "IEO": {
     "ieo-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Flughafens Aioun el Atrouss (IEO) zwischen trockenem Boden und karger Landschaft."
+  },
+  "IND": {
+    "ind-baidu-1.webp": "Indianapolis in der Abenddämmerung: das geschwungene Stahldach des Terminals leuchtet vor tiefblauem Himmel über der leeren Abflugstraße.",
+    "ind-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Indianapolis International Airport (IND) und die umliegende Landschaft deutlich zu erkennen."
   },
   "IQA": {
     "iqa-sat-1.webp": "Im Satellitenbild geht die Al Asad Air Base (IQA) in den umgebenden trockenen Boden und die karge Landschaft über.",
@@ -1131,6 +1403,10 @@
   },
   "IST": {
     "ist-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umliegende Stadt am Flughafen Istanbul (IST)."
+  },
+  "ITM": {
+    "itm-baidu-1.webp": "Luftaufnahme von Osaka Itami: die parallelen Start- und Landebahnen 14L/14R in flachem Gelände, links Terminal und Vorfeld, ringsum dichte Stadtviertel.",
+    "itm-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Osaka Itami International Airport (ITM) und die umliegende Landschaft deutlich zu erkennen."
   },
   "IVA": {
     "iva-sat-1.webp": "Satellitenansicht: der Flughafen Ampampamena (IVA) liegt inmitten grüner Vegetation und Ackerland."
@@ -1160,6 +1436,9 @@
     "ixu-chatgpt-06.webp": "Bei Nacht leuchtet der Name des Flughafens weiß über dem Eingang, während Scheinwerfer über Absperrungen und Reihen von Topfpflanzen streifen.",
     "ixu-chatgpt-07.webp": "Ein Jet mit rotem Leitwerk rollt im Nieselregen frontal über die Startbahn, im Vordergrund füllen trockenes Gestrüpp und Gras das Bild."
   },
+  "JED": {
+    "jed-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des King Abdulaziz International Airport (JED) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "JEG": {
     "jeg-sat-1.webp": "Satellitenansicht: die kurze Startbahn von Aasiaat liegt auf einer grönländischen Insel, Terminal und Vorfeld daneben, ringsum Meer und nackter Fels.",
     "jeg-chatgpt-01.webp": "Ein blau verkleidetes Turmgebäude unter einem silbernen Walmdach hat Tische im Freien, dahinter erstrecken sich Strand und Schären.",
@@ -1175,6 +1454,9 @@
   },
   "JIB": {
     "jib-sat-1.webp": "Satellitenansicht: die Startbahn von Dschibuti liegt am Südufer des Golfs von Tadjoura, Terminal und Vorfeld nördlich des Flugfelds, ringsum Hafen und Stadt."
+  },
+  "JNB": {
+    "jnb-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des O.R. Tambo International Airport (JNB) und die umliegende Landschaft deutlich zu erkennen."
   },
   "JOG": {
     "jog-sat-1.webp": "Satellitenansicht: Startbahn und Rollweg von Yogyakarta liegen am östlichen Stadtrand, Terminal und Vorfeld nördlich des Flugfelds."
@@ -1194,8 +1476,21 @@
     "jva-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Flughafens Ankavandra (JVA) zwischen trockenem Boden und karger Landschaft.",
     "jva-chatgpt-01.webp": "Auf einer trockenen Graspiste unter blauen Bergen steht ein kleines weißes einmotoriges Turboprop-Flugzeug, um das sich eine Menge Dorfbewohner versammelt."
   },
+  "KHH": {
+    "khh-baidu-1.webp": "Die Vorderseite des Terminals des Flughafens Kaohsiung mit Glasfassaden unter dem dreieckigen Dach.",
+    "khh-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Kaohsiung International Airport (KHH) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "KIX": {
     "kix-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umliegende Stadt am Flughafen Kansai (KIX)."
+  },
+  "KMG": {
+    "kmg-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Kunming Changshui International Airport (KMG) und die umliegende Landschaft deutlich zu erkennen.",
+    "kmg-baidu-1.webp": "Vor dem Terminal von Kunming Changshui: eine Glasfassade, die Wolken spiegelt, davor eine Steinplatte mit der Aufschrift „Kunming International Airport“."
+  },
+  "KNH": {
+    "knh-baidu-1.webp": "Auf dem Vorfeld des Flughafens Kinmen steigen Passagiere über mobile Treppen in ein Flugzeug, daneben Bodengeräte.",
+    "knh-baidu-2.webp": "Die Außenfassade des Terminals des Flughafens Kinmen, an der Wand die Flagge der Republik China, davor gelbe Servicefahrzeuge.",
+    "knh-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Kinmen Airport (KNH) und die umliegende Landschaft deutlich zu erkennen."
   },
   "KQA": {
     "kqa-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Flughafens Akutan (KQA) zwischen trockenem Boden und karger Landschaft."
@@ -1208,11 +1503,34 @@
     "kso-chatgpt-04.webp": "In der Abenddämmerung steht die Vorderseite des Terminals leer, die Beschilderung glüht warm orange im letzten Sonnenlicht, während lange Schatten über das Pflaster reichen.",
     "kso-chatgpt-05.webp": "Mehrere Verkehrsflugzeuge in unterschiedlichen Lackierungen stehen an den Fluggastbrücken des Terminals, eines davon eine blau-weiße Maschine von AEGEAN."
   },
+  "KTM": {
+    "ktm-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Tribhuvan International Airport (KTM) und die umliegende Landschaft deutlich zu erkennen.",
+    "ktm-baidu-1.webp": "Das orangefarbene Terminal des Tribhuvan International Airport, aus dessen Dach der Kontrollturm ragt, davor Autos und Busse."
+  },
   "KUL": {
     "kul-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umliegende Stadt am Flughafen Kuala Lumpur (KUL)."
   },
+  "KWE": {
+    "kwe-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Guiyang Longdongbao International Airport (KWE) und die umliegende Landschaft deutlich zu erkennen.",
+    "kwe-baidu-1.webp": "Im Terminal von Guiyang Longdongbao: weiße, sich verzweigende Säulen tragen eine Holzlamellendecke über einer weiten Halle, in der Reisende an den Schaltern anstehen.",
+    "kwe-baidu-2.webp": "Eine Maschine von Spring Airlines rollt am Flughafen von Guiyang, dahinter ragen die Karstberge auf, die die Stadt umgeben."
+  },
+  "KWI": {
+    "kwi-baidu-1.webp": "Die Warteschlangen an den Abfluggates des Kuwait International Airport: Passagiere warten zwischen gelben Absperrungen unter Fluginformationsbildschirmen.",
+    "kwi-baidu-2.webp": "Die Terminalhalle des Kuwait International Airport: der Name des Flughafens auf Arabisch und Englisch über dem Eingang, während Reisende mit ihrem Gepäck vorbeigehen.",
+    "kwi-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Kuwait International Airport (KWI) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "KYD": {
+    "kyd-baidu-1.webp": "Das Terminal des Flughafens Lanyu mit der Aufschrift „Lanyu Airport“ auf der rot-weißen Fassade.",
+    "kyd-baidu-2.webp": "Eine zweimotorige Turboprop auf dem Vorfeld des Flughafens Lanyu, dahinter ein grüner Hang und das Meer.",
+    "kyd-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Lanyu Airport (KYD) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "LAK": {
     "lak-sat-1.webp": "Satellitenansicht: der Flughafen Aklavik/Freddie Carmichael (LAK) liegt zwischen Stadt, Ackerland und Vegetation."
+  },
+  "LAS": {
+    "las-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Harry Reid International Airport (LAS) und die umliegende Landschaft deutlich zu erkennen.",
+    "las-baidu-1.webp": "Luftaufnahme des Harry Reid International Airport (LAS) mit den Terminalbereichen, Flugzeugpositionen und Start- und Landebahnen."
   },
   "LAX": {
     "lax-sat-1.webp": "Auf dem Satellitenbild liegen die Terminals und Startbahnen des Flughafens Los Angeles (LAX) mitten im Stadt- und Straßennetz."
@@ -1229,6 +1547,11 @@
   },
   "LCG": {
     "lcg-sat-1.webp": "Satellitenansicht: die Startbahn von A Coruña liegt zwischen den Küstenhügeln Galiciens, Terminal und Vorfeld daneben."
+  },
+  "LED": {
+    "led-baidu-1.webp": "Am Gate in Pulkovo steht eine Rossiya-Maschine auf dem Vorfeld, dahinter das Terminal mit dem Schriftzug „SAINT PETERSBURG“ und rechts der runde Kontrollturm.",
+    "led-baidu-2.webp": "Im neuen Terminal von Pulkovo zieht sich die facettierte goldene Decke entlang der Achse über den Check-in- und Sicherheitsbereichen.",
+    "led-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Pulkovo Airport (LED) und die umliegende Landschaft deutlich zu erkennen."
   },
   "LEI": {
     "lei-sat-1.webp": "Satellitenansicht: die Startbahn folgt der Küste von Almería, Terminal und Vorfeld an ihrem westlichen Ende, darunter das Mittelmeer."
@@ -1260,6 +1583,16 @@
     "lhr-baidu-2.webp": "Aus einem Terminalfenster: eine Maschine von Japan Airlines am Gate, dahinter der Kontrollturm von Heathrow.",
     "lhr-baidu-3.webp": "Heathrow in der Dämmerung – die Terminals erleuchtet, eine Maschine von Etihad auf dem Vorfeld abgestellt."
   },
+  "LHW": {
+    "lhw-baidu-1.webp": "Entlang der Zufahrt zum Flughafen Lanzhou Zhongchuan: voraus das weiße, wellenförmige Terminaldach unter blauen Hinweisschildern.",
+    "lhw-baidu-2.webp": "Die Front des Terminals von Lanzhou Zhongchuan: geschichtete weiße Dächer auf bogenförmigen Stützen, rote Schriftzeichen „兰州“ auf dem First und Verkehr am Bordstein.",
+    "lhw-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Lanzhou Zhongchuan International Airport (LHW) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "LIM": {
+    "lim-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Jorge Chávez International Airport (LIM) und die umliegende Landschaft deutlich zu erkennen.",
+    "lim-baidu-1.webp": "Luftaufnahme des Flughafens von Lima: das lange Terminal liegt in wüstenartigem Gelände, dahinter der Pazifik, rechts Erdarbeiten.",
+    "lim-baidu-2.webp": "Reisende stehen in der Ankunftshalle an den Schaltern an, links hängt eine Metallskulptur von der Decke."
+  },
   "LIS": {
     "lis-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umliegende Stadt am Flughafen Humberto Delgado (LIS)."
   },
@@ -1272,8 +1605,20 @@
   "LME": {
     "lme-sat-1.webp": "Satellitenansicht: der Flughafen Le Mans-Arnage (LME) ist von grüner Vegetation und Ackerland umgeben."
   },
+  "LOS": {
+    "los-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Murtala Muhammed International Airport (LOS) und die umliegende Landschaft deutlich zu erkennen.",
+    "los-baidu-1.webp": "Das Terminal und der Kontrollturm des Flughafens Lagos, davor ein voller Parkplatz.",
+    "los-baidu-2.webp": "Die Außenansicht des neuen Terminals des Murtala Muhammed International Airport in Lagos, mit Glasfassade und dunklem Dach über einem regennassen Vorplatz."
+  },
+  "LPA": {
+    "lpa-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Gran Canaria Airport (LPA) und die umliegende Landschaft deutlich zu erkennen.",
+    "lpa-baidu-1.webp": "Der Check-in-Bereich des Flughafens Gran Canaria: Reisende stehen an der Priority-Spur neben einem Business-Class-Schalter von Turkish Airlines."
+  },
   "LTI": {
     "lti-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Flughafens Altai (LTI) zwischen Stadt, Ackerland und Vegetation."
+  },
+  "LTN": {
+    "ltn-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des London Luton Airport (LTN) und die umliegende Landschaft deutlich zu erkennen."
   },
   "LTS": {
     "lts-sat-1.webp": "Im Satellitenbild geht die Altus Air Force Base (LTS) in die umgebende Stadt, das Ackerland und die Vegetation über.",
@@ -1289,8 +1634,33 @@
     "lym-sat-1.webp": "Satellitenansicht: der Flughafen Ashford (LYM) ist von grüner Vegetation und Ackerland umgeben.",
     "lym-chatgpt-01.webp": "Eine Luftaufnahme einer geraden Startbahn, die diagonal durch grüne Felder schneidet, während sich in der Ferne eine Küstenstadt ausbreitet."
   },
+  "LZN": {
+    "lzn-baidu-1.webp": "Die Vorderseite des Terminals des Flughafens Matsu Nangan mit rotem Ziegeldach, Blick über Parkplatz und Kreisverkehr.",
+    "lzn-baidu-2.webp": "Die goldene Aufschrift „Matsu Nangan Airport“ über dem Terminaleingang.",
+    "lzn-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Matsu Nangan Airport (LZN) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "MAA": {
+    "maa-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Chennai International Airport (MAA) und die umliegende Landschaft deutlich zu erkennen.",
+    "maa-baidu-1.webp": "Der Vorplatz des Terminals in Chennai mit einer Reihe weißer spitz zulaufender Vordächer über wartenden Taxis, rechts führt ein Viadukt vorbei."
+  },
   "MAD": {
     "mad-sat-1.webp": "Satellitenansicht: der Flughafen Madrid-Barajas (MAD) ist von Stadt, Küste oder Gelände umgeben, die Startbahn durchquert das Bild."
+  },
+  "MAN": {
+    "man-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Manchester Airport (MAN) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "MCI": {
+    "mci-baidu-1.webp": "Vor dem Terminal von Kansas City tragen weiße Y-förmige Stützen ein breites, holzverkleidetes Vordach über Reisenden und Fahrzeugen.",
+    "mci-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Kansas City International Airport (MCI) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "MCO": {
+    "mco-baidu-2.webp": "Das South Terminal in Orlando: ein großer weißer Ring schwingt über der geschwungenen Glasfront, darunter Vorfahrtvordach und Bodengeräte.",
+    "mco-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Orlando International Airport (MCO) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "MDE": {
+    "mde-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Jose Maria Córdova International Airport (MDE) und die umliegende Landschaft deutlich zu erkennen.",
+    "mde-baidu-1.webp": "Der Kontrollturm von Jose Maria Córdova mit seinem Namen auf dem weißen Schaft, davor Terminal und Parkplatz.",
+    "mde-baidu-2.webp": "Eine rote sternförmige Skulptur vor dem Kontrollturm, dessen Aufschrift „JOSE MARIA CORDOVA“ sich vom blauen Himmel abhebt."
   },
   "MDQ": {
     "mdq-sat-1.webp": "Satellitenansicht: die Startbahn von Mar del Plata liegt zwischen Atlantikküste und Pampa, Terminal und Vorfeld daneben.",
@@ -1302,11 +1672,19 @@
     "mdq-chatgpt-06.webp": "Ein blau-weißes Verkehrsflugzeug rollt hinter einem Drahtzaun entlang der Startbahn, im Vordergrund trockenes Gras unter blassem Himmel.",
     "mdq-chatgpt-07.webp": "Passagiere warten vor dem internationalen Abfluggate, der polierte weiße Boden spiegelt die langen Deckenleuchten."
   },
+  "MDW": {
+    "mdw-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Chicago Midway International Airport (MDW) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "MEL": {
     "mel-sat-1.webp": "Satellitenansicht: der Flughafen Melbourne (MEL) mit seinen Startbahnen, dem Terminalkomplex und dem Industriegebiet Tullamarine."
   },
   "MEX": {
     "mex-sat-1.webp": "Satellitenansicht: der Flughafen Mexiko-Stadt (MEX) ist von Stadt, Küste oder Gelände umgeben, die Startbahn durchquert das Bild."
+  },
+  "MFK": {
+    "mfk-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Matsu Beigan Airport (MFK) und die umliegende Landschaft deutlich zu erkennen.",
+    "mfk-baidu-1.webp": "Die Vorderseite des Terminals des Flughafens Matsu Beigan mit grauen, steinverkleideten Wänden und Fensterreihen zum Vorplatz.",
+    "mfk-baidu-2.webp": "Zwei gelbe Taxis warten vor dem Terminaleingang unter dem Dachschild „Matsu Beigan Airport“."
   },
   "MGQ": {
     "mgq-sat-1.webp": "Satellitenansicht: die Startbahn von Mogadischu liegt an der Küste des Indischen Ozeans, Terminal und Vorfeld daneben, ringsum Stadt und Strand."
@@ -1334,11 +1712,25 @@
   "MRD": {
     "mrd-sat-1.webp": "Im Satellitenbild geht der Flughafen Alberto Carnevalli (MRD) in die umgebende grüne Vegetation und das Ackerland über."
   },
+  "MSP": {
+    "msp-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Minneapolis–Saint Paul International Airport / Wold–Chamberlain Field (MSP) und die umliegende Landschaft deutlich zu erkennen.",
+    "msp-baidu-1.webp": "Die Gates am Minneapolis–Saint Paul: Delta-Maschinen aneinandergereiht am Terminal, am Horizont die Gebäude der Stadt."
+  },
+  "MSY": {
+    "msy-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Louis Armstrong New Orleans International Airport (MSY) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "MTY": {
+    "mty-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Monterrey International Airport (MTY) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "MUC": {
     "muc-sat-1.webp": "Auf dem Satellitenbild liegen die Terminals und Startbahnen des Flughafens München (MUC) mitten im Stadt- und Straßennetz."
   },
   "MXP": {
     "mxp-sat-1.webp": "Auf dem Satellitenbild liegen die Terminals und Startbahnen des Flughafens Mailand-Malpensa (MXP) mitten im Stadt- und Straßennetz."
+  },
+  "MZG": {
+    "mzg-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Magong Airport (MZG) und die umliegende Landschaft deutlich zu erkennen.",
+    "mzg-baidu-2.webp": "Blaue Aufschrift „Penghu Airport“ auf dem Terminal, daneben ein Schild mit den Koordinaten des Flughafens."
   },
   "MZI": {
     "mzi-sat-1.webp": "Satellitenansicht: der Flughafen Mopti (MZI) liegt in trockenem Boden und karger Landschaft.",
@@ -1349,6 +1741,29 @@
     "mzi-chatgpt-05.webp": "Reisende mit Sonnenhüten gehen über das rötliche Vorfeld auf eine kleine zweimotorige Turboprop-Maschine zu, während daneben ein Tankwagen wartet.",
     "mzi-chatgpt-06.webp": "In flachem weißem Dunst steht ein Soldat in Tarnkleidung auf dem Beton und beobachtet, wie eine sandgelbe zweimotorige Turboprop-Maschine über das Vorfeld rollt.",
     "mzi-chatgpt-07.webp": "Ein Jet mit grünem Heckemblem wartet hinter einer auf trockenem Boden ausgebreiteten Fläche aus Gepäck, wo Gepäckabfertiger Taschen auf einen Wagen stapeln."
+  },
+  "NBO": {
+    "nbo-baidu-1.webp": "Luftaufnahme des Jomo Kenyatta International Airport: das runde Terminal um einen zentralen Parkplatz, Flugzeuge auf dem Vorfeld und dahinter der Kontrollturm.",
+    "nbo-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Jomo Kenyatta International Airport (NBO) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "NCE": {
+    "nce-baidu-1.webp": "Luftaufnahme des Flughafens Nizza-Côte d'Azur auf seiner in das Mittelmeer ragenden Landzunge, Start- und Landebahnen sowie Terminals zwischen Meer und Stadt.",
+    "nce-baidu-2.webp": "Von oben: Terminal, Vorfeld und Parkplätze von Nizza unter schweren Gewitterwolken.",
+    "nce-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Nice-Côte d'Azur Airport (NCE) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "NGB": {
+    "ngb-baidu-1.webp": "Die Check-in-Halle von Ningbo Lishe: Reihen von Schaltern und Absperrungen unter einem weißen Tonnengewölbe aus Rohrträgern, Tageslicht fällt durch hohe Fenster an beiden Seiten.",
+    "ngb-baidu-2.webp": "Ein Airbus A320 von Air China in seiner bunten „Ningbo“-Lackierung rollt am Terminal von Ningbo Lishe vorbei, an der Dachkante rote Schriftzeichen „Ningbo“, rechts der Kontrollturm.",
+    "ngb-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Ningbo Lishe International Airport (NGB) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "NKG": {
+    "nkg-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Nanjing Lukou International Airport (NKG) und die umliegende Landschaft deutlich zu erkennen.",
+    "nkg-baidu-1.webp": "Das Terminal von Nanjing Lukou, wo eine Maschine von Juneyao Air unter den roten Schriftzeichen „Nanjing“ auf dem Dach wartet, eine Fluggastbrücke an der Tür."
+  },
+  "NNG": {
+    "nng-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Nanning Wuxu International Airport (NNG) und die umliegende Landschaft deutlich zu erkennen.",
+    "nng-baidu-1.webp": "Außenansicht des Terminals des Flughafens Nanning Wuxu, dessen geschwungenes Dach an ausgebreitete Flügel erinnert.",
+    "nng-baidu-2.webp": "Eine Maschine von OK Air auf dem Vorfeld vor dem Terminal des Flughafens Nanning Wuxu, dahinter der Kontrollturm und ein Straßenschild „Wuxu Airport Station“."
   },
   "NRT": {
     "nrt-baidu-1.webp": "Die Halle der Inlandsabflüge in Terminal 1, das Schild zeigt „Domestic Departures“ auf Japanisch, Chinesisch, Koreanisch und Englisch.",
@@ -1386,14 +1801,30 @@
     "oes-chatgpt-05.webp": "Eine weiße zweimotorige Turboprop-Maschine mit grünem Streifen steht mit der Nase zur Kamera auf dem Vorfeld, dahinter eine Baumreihe.",
     "oes-chatgpt-06.webp": "Dies ist ein Karten-Screenshot mit einer roten Markierung, die den Aeroclub San Antonio Oeste kennzeichnet, neben einem Naturschutzgebiet an einer Bucht und einer Küstenstraße."
   },
+  "OKA": {
+    "oka-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Naha International Airport (OKA) und die umliegende Landschaft deutlich zu erkennen.",
+    "oka-baidu-1.webp": "ANA-Maschinen aufgereiht auf dem Vorfeld von Naha, ihre Leitwerke überlappen sich, dahinter Meer und ein Dammweg.",
+    "oka-baidu-2.webp": "Ein Wandbild im Terminal von Naha: Figuren in Okinawa-Tracht vor der Burg Shuri, angeführt von einem Banner zur Unterstützung der Burgrestaurierung."
+  },
   "OKC": {
     "okc-sat-1.webp": "Auf dem Satellitenbild liegen die Terminals und Startbahnen des Flughafens Will Rogers World (OKC) mitten im Stadt- und Straßennetz."
+  },
+  "OPO": {
+    "opo-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Francisco de Sá Carneiro Airport (OPO) und die umliegende Landschaft deutlich zu erkennen."
   },
   "ORD": {
     "ord-sat-1.webp": "Auf dem Satellitenbild liegen die Terminals und Startbahnen des Flughafens O'Hare (ORD) mitten im Stadt- und Straßennetz."
   },
   "ORY": {
     "ory-sat-1.webp": "Satellitenansicht: der Flughafen Paris-Orly (ORY) ist von Stadt, Küste oder Gelände umgeben, die Startbahn durchquert das Bild."
+  },
+  "OSL": {
+    "osl-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Oslo-Gardermoen International Airport (OSL) und die umliegende Landschaft deutlich zu erkennen.",
+    "osl-baidu-1.webp": "Im Terminal von Oslo Gardermoen warten Fahrgäste auf Bänken am Gate A2, mit Holzböden und einer Glaswand zum Vorfeld."
+  },
+  "OTP": {
+    "otp-baidu-1.webp": "Das Terminal des Flughafens Bukarest Henri Coandă: „International Henri Coandă Bucharest“ entlang der blauen Dachkante, davor parkende Autos.",
+    "otp-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Bucharest Henri Coandă International Airport (OTP) und die umliegende Landschaft deutlich zu erkennen."
   },
   "OUD": {
     "oud-sat-1.webp": "Satellitenansicht: die beiden Startbahnen von Oujda liegen in der ariden Ebene des östlichen Marokko, Terminal und Vorfeld dazwischen.",
@@ -1414,11 +1845,42 @@
     "ovd-chatgpt-06.webp": "Mehrere Verkehrsflugzeuge stehen unter wolkigem Himmel nebeneinander auf dem Vorfeld vor dem Terminal, neben einer Maschine mit grünem Leitwerk steht eine Fluggasttreppe.",
     "ovd-chatgpt-07.webp": "Ein polierter Steinboden zieht sich durch den Abflugkorridor an Sitzreihen unter einer gelben Lamellendecke vorbei, am Ende hängt ein Cafeteria-Schild."
   },
+  "PDX": {
+    "pdx-baidu-1.webp": "Bei Einbruch der Dunkelheit am PDX: das wellenförmige Glasdach zwischen Parkhaus und Terminal, darunter Lichtspuren von Autos auf der Straße.",
+    "pdx-baidu-2.webp": "Der PDX in der Abenddämmerung: Flugzeuge auf dem Vorfeld, während die Terminalbeleuchtung angeht und am Horizont das Wasser glitzert.",
+    "pdx-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Portland International Airport (PDX) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "PEK": {
     "pek-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umliegende Stadt am Flughafen Peking Capital (PEK)."
   },
+  "PER": {
+    "per-baidu-2.webp": "Im Flughafen Perth: Rolltreppen unter blauen Schildern mit der Aufschrift „PERTH“, daneben eine Anzeige von China Southern.",
+    "per-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Perth International Airport (PER) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "PHL": {
+    "phl-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Philadelphia International Airport (PHL) und die umliegende Landschaft deutlich zu erkennen.",
+    "phl-baidu-1.webp": "Philadelphia bei Nacht: die weißen, wellenförmigen Terminaldächer und Vorfelder sind beleuchtet, dahinter breitet sich das Licht der Stadt aus.",
+    "phl-baidu-2.webp": "Eine Maschine von American Airlines rollt am Kontrollturm und den Terminalgebäuden vorbei."
+  },
+  "PHX": {
+    "phx-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Phoenix Sky Harbor International Airport (PHX) und die umliegende Landschaft deutlich zu erkennen.",
+    "phx-baidu-2.webp": "Reisende stehen an einer Sicherheitskontrolle im Terminal des Phoenix Sky Harbor an."
+  },
+  "PIT": {
+    "pit-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Pittsburgh International Airport (PIT) und die umliegende Landschaft deutlich zu erkennen.",
+    "pit-baidu-1.webp": "Der Kontrollturm und das Terminal von Pittsburgh International: ein Regionaljet von United Express an seinem Gate.",
+    "pit-baidu-2.webp": "Erhöhte Ansicht von Pittsburgh International: das Landside-Terminal und die Abfertigungsbereiche reichen ins Flugfeld, dahinter der Turm."
+  },
   "PKH": {
     "pkh-sat-1.webp": "Im Satellitenbild geht der Flughafen Alexion (PKH) in das umgebende Wasser und die Küstenlinie über."
+  },
+  "PKX": {
+    "pkx-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Beijing Daxing International Airport (PKX) und die umliegende Landschaft deutlich zu erkennen.",
+    "pkx-baidu-1.webp": "Draufsicht auf das sternförmige Terminal von Daxing, an dessen fünf Fingern Flugzeuge parken."
+  },
+  "PMI": {
+    "pmi-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Palma de Mallorca Airport (PMI) und die umliegende Landschaft deutlich zu erkennen.",
+    "pmi-baidu-1.webp": "Das Terminal des Flughafens Palma de Mallorca von außen, die riesige Glasflaschen-Skulptur auf dem Rasen und der Name des Flughafens an der Fassade."
   },
   "PNR": {
     "pnr-sat-1.webp": "Satellitenansicht: die Startbahn von Pointe-Noire liegt an der Atlantikküste, Terminal und Vorfeld östlich davon, ringsum Stadt und Wald.",
@@ -1429,8 +1891,21 @@
     "pnr-chatgpt-05.webp": "Unter hellem Himmel spiegelt die dunkle Glasfront des Terminals die Wolken, auf dem Dach steht ein Schild, und helle Taxis füllen den Parkplatz davor.",
     "pnr-chatgpt-06.webp": "In der mehrgeschossigen Halle des Terminals führen Rolltreppen zu einer Glaswand empor, die Tageslicht hereinlässt, während oben Menschen am Geländer des Zwischengeschosses stehen."
   },
+  "PRG": {
+    "prg-baidu-1.webp": "Luftaufnahme des Václav Havel Airport Prague: das Terminal mit geschwungenem Dach und seine Fluggastbrücken am Vorfeld, dahinter Start- und Landebahnen und Felder.",
+    "prg-baidu-2.webp": "Bei Sonnenuntergang steht eine Maschine von British Airways an einer Fluggastbrücke, während Bodenpersonal und Gepäckwagen um sie herum arbeiten.",
+    "prg-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Václav Havel Airport Prague (PRG) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "PSO": {
     "pso-sat-1.webp": "Satellitenansicht: die Startbahn von Pasto liegt in einem Tal der Anden, Terminal und Vorfeld daneben, ringsum Berge und Ackerland."
+  },
+  "PTY": {
+    "pty-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Tocumen International Airport (PTY) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "PUS": {
+    "pus-baidu-1.webp": "Eine Maschine von Korean Air auf dem Vorfeld in Busan Gimhae, Passagiere steigen über Treppen ein, daneben Gepäckwagen und Verkehrshütchen.",
+    "pus-baidu-2.webp": "Das Terminal von Busan Gimhae vom Vorfeld aus: „김해 GIMHAE“ auf der grauen, gerippten Metallwand, daneben eine Fluggastbrücke und ein Flutlichtmast.",
+    "pus-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Gimhae International Airport (PUS) und die umliegende Landschaft deutlich zu erkennen."
   },
   "PVG": {
     "pvg-baidu-1.webp": "Pudongs Terminal aus dem Kabinenfenster – „SHANGHAI“ auf der Dachkante, Maschinen von China Eastern an den Gates."
@@ -1481,8 +1956,19 @@
   "RCH": {
     "rch-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Flughafens Almirante Padilla (RCH) zwischen Stadt, Ackerland und Vegetation."
   },
+  "RDU": {
+    "rdu-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Raleigh-Durham International Airport (RDU) und die umliegende Landschaft deutlich zu erkennen.",
+    "rdu-baidu-1.webp": "Abenddämmerung am Bordstein des Terminals, wo die Schilder „Bag Claim“ unter dem Parkdeck leuchten und die Glasfassade das letzte Licht einfängt.",
+    "rdu-baidu-2.webp": "Das Schild „RDU Welcome“ am Flughafeneingang, darüber zieht eine Southwest-Maschine über den blauen Himmel."
+  },
   "REL": {
     "rel-sat-1.webp": "Satellitenansicht: die Startbahn von Rawson liegt auf der patagonischen Hochebene, Terminal und Vorfeld daneben, ringsum Trockengebüsch und Stadt."
+  },
+  "RMQ": {
+    "rmq-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Taichung International Airport (RMQ) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "RSW": {
+    "rsw-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Southwest Florida International Airport (RSW) und die umliegende Landschaft deutlich zu erkennen."
   },
   "RUA": {
     "rua-page-1.webp": "Das Löschfahrzeug des Flugplatzes Arua an seiner Garage innerhalb des Umfassungszauns (Foto aus dem ESIA-Bericht der Uganda CAA vom Juli 2025 zur Erweiterung des Flugplatzes Arua).",
@@ -1495,6 +1981,14 @@
   },
   "RUH": {
     "ruh-sat-1.webp": "Auf dem Satellitenbild sind die Terminals, das Vorfeld und die Startbahnen des Flughafens King Khalid (RUH) deutlich zu erkennen."
+  },
+  "SAN": {
+    "san-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des San Diego International Airport (SAN) und die umliegende Landschaft deutlich zu erkennen.",
+    "san-baidu-1.webp": "Das Vorfeld des San Diego International: Southwest- und JetBlue-Maschinen dicht hintereinander, dahinter ein Frachter von FedEx, Palmen vor dem Terminal."
+  },
+  "SAW": {
+    "saw-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Istanbul Sabiha Gökçen International Airport (SAW) und die umliegende Landschaft deutlich zu erkennen.",
+    "saw-baidu-1.webp": "Das Terminal von Sabiha Gökçen bei Nacht, sein Name beleuchtet unter dem geschwungenen Dach über dem Bordstein."
   },
   "SAY": {
     "say-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Flughafens Siena-Ampugnano (SAY) zwischen grüner Vegetation und Ackerland."
@@ -1537,6 +2031,20 @@
   "SGN": {
     "sgn-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umliegende Stadt am Flughafen Tan Son Nhat (SGN)."
   },
+  "SHA": {
+    "sha-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Shanghai Hongqiao International Airport (SHA) und die umliegende Landschaft deutlich zu erkennen.",
+    "sha-baidu-1.webp": "Das Terminal von Shanghai Hongqiao von der Zufahrt aus, die roten Dachbuchstaben „虹橋機場“ vor hoch aufragenden Wolken."
+  },
+  "SHE": {
+    "she-baidu-1.webp": "Ein Flugzeug rollt am Terminal des Shenyang Taoxian International Airport vorbei, rote Schriftzeichen für „Shenyang“ auf dem Dach.",
+    "she-baidu-2.webp": "Das Terminal des Shenyang Taoxian International Airport: eine gefaltete Dachlinie über der Glasfassade, in die rote Schriftzeichen gesetzt sind.",
+    "she-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Shenyang Taoxian International Airport (SHE) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "SHJ": {
+    "shj-baidu-1.webp": "Luftaufnahme der weißen Kuppelbauten des Terminals von Sharjah, rechts der Kontrollturm und Start- und Landebahnen, die in die Wüste führen.",
+    "shj-baidu-2.webp": "In der Abenddämmerung an der Flughafenstraße: ein begrünter Kreisverkehr führt zum Kuppelterminal von Sharjah in der Ferne.",
+    "shj-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Sharjah International Airport (SHJ) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "SID": {
     "sid-sat-1.webp": "Satellitenansicht: die Startbahn von Sal liegt an der ariden Küste der kapverdischen Insel, Terminal und Vorfeld östlich des Flugfelds.",
     "sid-chatgpt-01.webp": "Unter einer blauen Überdachung mit der Aufschrift Partidas und Departures überqueren Reisende die gestrichelte Straße vor dem orange-weißen Terminal.",
@@ -1549,6 +2057,18 @@
   "SIN": {
     "sin-sat-1.webp": "Satellitenansicht: der Flughafen Singapur-Changi (SIN) ist von Stadt, Küste oder Gelände umgeben, die Startbahn durchquert das Bild."
   },
+  "SJO": {
+    "sjo-baidu-1.webp": "Luftaufnahme aus dem Kabinenfenster über San José: Startbahn und Rollwege zwischen grünen Feldern und Lagerhallen, dahinter die roten Dächer der Stadt.",
+    "sjo-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Juan Santamaría International Airport (SJO) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "SJU": {
+    "sju-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Luis Munoz Marin International Airport (SJU) und die umliegende Landschaft deutlich zu erkennen.",
+    "sju-baidu-1.webp": "Die Vorfahrtstraße vor dem Terminal, ein weißer Van am Bordstein, dahinter der Kontrollturm mit seinem ausgestellten Obergeschoss."
+  },
+  "SLC": {
+    "slc-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Salt Lake City International Airport (SLC) und die umliegende Landschaft deutlich zu erkennen.",
+    "slc-baidu-1.webp": "Luftaufnahme der Terminals, Vorfelder und Start- und Landebahnen des Flughafens Salt Lake City, am Horizont Berge und ein See."
+  },
   "SLK": {
     "slk-sat-1.webp": "Satellitenansicht: der Flughafen Adirondack Regional (SLK) ist von grüner Vegetation und Ackerland umgeben.",
     "slk-chatgpt-01.webp": "Das dunkelbraune Holzterminal zeigt eine wuchtige Holzveranda, davor ein Betonweg und Kiesbeete unter wolkenlosem Himmel.",
@@ -1559,6 +2079,13 @@
     "slk-chatgpt-06.webp": "Reihen von Holzstühlen mit Ledersitzen stehen auf grauem Teppich, Pflanzen säumen die Fenster, und ein braunes Schild weist zu Café und Toiletten.",
     "slk-chatgpt-07.webp": "Ein zweimotoriges Propellerflugzeug von Cape Air mit einem weißen Vogel auf dem blauen Leitwerk steht auf der Rollbahn, die Kennzeichenbuchstaben sind gut lesbar.",
     "slk-chatgpt-08.webp": "Ein zweimotoriges Turbopropflugzeug steigt kurz nach dem Abheben über die Baumkronen und eine Startbahn, im Hintergrund füllen bewaldete Hügel das Bild."
+  },
+  "SMF": {
+    "smf-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Sacramento International Airport (SMF) und die umliegende Landschaft deutlich zu erkennen.",
+    "smf-baidu-1.webp": "Im Terminal von Sacramento International: Reisende mit Gepäck kommen am Food Court und einem Schild „Gates B4–B11“ vorbei."
+  },
+  "SNA": {
+    "sna-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des John Wayne Orange County International Airport (SNA) und die umliegende Landschaft deutlich zu erkennen."
   },
   "SNU": {
     "snu-sat-1.webp": "Satellitenansicht: die Startbahn von Santa Clara liegt zwischen Stadt und Ackerland im Zentrum Kubas, Terminal und Vorfeld daneben.",
@@ -1590,8 +2117,15 @@
   "SRG": {
     "srg-sat-1.webp": "Satellitenansicht: die Startbahn von Semarang liegt nahe der Nordküste Javas, Terminal und Vorfeld südlich des Flugfelds, ringsum Stadt und Ackerland."
   },
+  "STL": {
+    "stl-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des St. Louis Lambert International Airport (STL) und die umliegende Landschaft deutlich zu erkennen.",
+    "stl-baidu-1.webp": "Der Kontrollturm von St. Louis Lambert ragt hinter dem geschwungenen Terminal mit Glasdach aus dem Nebel auf."
+  },
   "STN": {
     "stn-sat-1.webp": "Auf dem Satellitenbild liegen die Terminals und Startbahnen des Flughafens London-Stansted (STN) mitten im Stadt- und Straßennetz."
+  },
+  "SUB": {
+    "sub-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Juanda International Airport (SUB) und die umliegende Landschaft deutlich zu erkennen."
   },
   "SVD": {
     "svd-baidu-2.webp": "Argyle International nach dem Regen – eine Maschine von LIAT vor dem blau gewölbten Terminal, das nasse Vorfeld spiegelt den Himmel, dahinter gestaffelte Hügel unter Wolken.",
@@ -1609,6 +2143,11 @@
   "SYD": {
     "syd-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umliegende Stadt am Flughafen Sydney-Kingsford Smith (SYD)."
   },
+  "SYX": {
+    "syx-baidu-1.webp": "Das Vorfeld von Sanya Phoenix: rote Buchstaben „SAN YA“ und Schriftzeichen für Sanya auf dem niedrigen Terminaldach über Fluggastbrücken und Gepäckwagen.",
+    "syx-baidu-2.webp": "Bei Nacht in Sanya Phoenix rollt eine Maschine von Shenzhen Airlines am beleuchteten Terminal vorbei, dessen Dach mit bunten Fahnen gesäumt ist.",
+    "syx-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Sanya Phoenix International Airport (SYX) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "SZX": {
     "szx-sat-1.webp": "Satellitenansicht: der Flughafen Shenzhen-Bao'an (SZX), seine Startbahnen und das Terminal am Ostufer des Perlfluss-Ästuars."
   },
@@ -1622,11 +2161,30 @@
     "tab-chatgpt-06.webp": "In einer älteren Check-in-Halle erheben sich Betonsäulen über nummerierten violetten Schaltern, rote Absperrseile bilden eine Warteschlange, und ein Paar wartet auf einer Bank.",
     "tab-chatgpt-07.webp": "Nach Einbruch der Dunkelheit beleuchtet das leuchtende Schild des Terminals die geschwungene Überdachung über der Vorfahrt, wo ein Auto neben rot-weiß gestreiften Säulen wartet."
   },
+  "TAO": {
+    "tao-baidu-2.webp": "Der Kontrollturm und das Terminal von Qingdao Jiaodong: links der rautenförmig gemusterte Turm, darunter Fluggastbrücken und parkende Flugzeuge unter dem geschwungenen Dach.",
+    "tao-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Qingdao Jiaodong International Airport (TAO) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "TAS": {
     "tas-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umliegende Stadt am Flughafen Taschkent „Islam Karimow“ (TAS)."
   },
+  "TFU": {
+    "tfu-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Chengdu Tianfu International Airport (TFU) und die umliegende Landschaft deutlich zu erkennen.",
+    "tfu-baidu-1.webp": "Luftaufnahme von Chengdu Tianfu: zwei geschwungene Terminalflügel erstrecken sich beiderseits eines runden, von Grün umgebenen Zentrums.",
+    "tfu-baidu-2.webp": "Die Sicherheitskontrolle für Inlandsabflüge, wo ein rotes Banner den Namen des Flughafens trägt und Reisende mit Gepäck zu den Kontrollspuren gehen."
+  },
   "TGZ": {
     "tgz-sat-1.webp": "Satellitenansicht: die Startbahn von Tuxtla Gutiérrez liegt in einem Tal in Chiapas, Terminal und Vorfeld daneben, ringsum Berge und Ackerland."
+  },
+  "TLV": {
+    "tlv-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Ben Gurion International Airport (TLV) und die umliegende Landschaft deutlich zu erkennen.",
+    "tlv-baidu-1.webp": "Die Schildwand „Welcome to Israel“ mit hebräischer Schrift im Ben Gurion Airport.",
+    "tlv-baidu-2.webp": "Außenansicht eines Terminals des Ben Gurion Airport, dahinter ist der Kontrollturm über dem Glasgebäude zu sehen."
+  },
+  "TNA": {
+    "tna-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Jinan Yaoqiang International Airport (TNA) und die umliegende Landschaft deutlich zu erkennen.",
+    "tna-baidu-1.webp": "Vor dem Terminal von Jinan Yaoqiang: eine Maschine von China Eastern auf dem Vorfeld unter roten Dachbuchstaben mit der Aufschrift „JINAN INTERNATIONAL AIRPORT“.",
+    "tna-baidu-2.webp": "Die Abflughalle von Jinan Yaoqiang: ein weißes Raumfachwerkdach darüber und Schilder zu den Inlandsgates B13–B32."
   },
   "TND": {
     "tnd-sat-1.webp": "Satellitenansicht: der Flughafen Alberto Delgado (TND) ist von grüner Vegetation und Ackerland umgeben.",
@@ -1635,11 +2193,28 @@
     "tnd-chatgpt-03.webp": "Ein weiterer Spiel-Screenshot zeigt ein blaugrünes Terminal mit Flachdach und einen davor geparkten blau-weißen Reisebus, Palmen und Hecken am Straßenrand und links ein eingeblendetes Aufgabenfenster.",
     "tnd-chatgpt-04.webp": "Zwei Leichtflugzeuge stehen auf dem Vorfeld vor einer Reihe rot-weiß gestreifter Masten, links das alte Terminal mit orangefarbenem Dach, ringsum sonnenbeschienener Rasen."
   },
+  "TNN": {
+    "tnn-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Tainan Airport (TNN) und die umliegende Landschaft deutlich zu erkennen.",
+    "tnn-baidu-1.webp": "Die Vorderseite des Terminals des Flughafens Tainan mit bogenförmigem Giebel und dem Taxistand auf dem Vorplatz."
+  },
+  "TPA": {
+    "tpa-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Tampa International Airport (TPA) und die umliegende Landschaft deutlich zu erkennen.",
+    "tpa-baidu-1.webp": "Luftaufnahme des kreisförmigen Landside-Terminals von Tampa und seiner Airside-Bereiche, darunter rollt eine Boeing 737 von Southwest."
+  },
   "TPE": {
     "tpe-sat-1.webp": "Satellitenansicht: der Flughafen Taoyuan (TPE) mit seinen parallelen Startbahnen, den Terminals und den umliegenden Orten."
   },
   "TQD": {
     "tqd-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn der Al Taqaddum Air Base (TQD) zwischen trockenem Boden und karger Landschaft."
+  },
+  "TSA": {
+    "tsa-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Taipei Songshan Airport (TSA) und die umliegende Landschaft deutlich zu erkennen.",
+    "tsa-baidu-1.webp": "Eine Maschine von China Airlines rollt über die Startbahn von Songshan, dahinter erhebt sich die Skyline von Taipeh."
+  },
+  "TSN": {
+    "tsn-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Tianjin Binhai International Airport (TSN) und die umliegende Landschaft deutlich zu erkennen.",
+    "tsn-baidu-1.webp": "Das Terminal von Tianjin Binhai, dessen geschwungenes Dach die roten Schriftzeichen „天津“ trägt, davor ein voller oberirdischer Parkplatz.",
+    "tsn-baidu-2.webp": "Das Terminal von Tianjin Binhai vom Vorplatz aus: ein riesiges auskragendes Dach überspannt eine Glasfassade, obenauf die roten Schriftzeichen „天津“."
   },
   "TTQ": {
     "ttq-page-1.webp": "Die Piste von Tortuguero – eine Cessna Caravan von Nature Air (TI-BDY) auf dem Asphalt, der kleine Warteschuppen mit grünem Dach und der Regenwald direkt hinter der Tragfläche (Foto: Sebastian Arndt / Flugzeugbilder.de).",
@@ -1649,12 +2224,32 @@
     "ttq-chatgpt-04.webp": "Ein weißes Turboprop-Flugzeug steht seitlich auf dem Vorfeld, rot-blaue Streifen am Leitwerk, das Kennzeichen am Rumpf, ringsum Palmen und ein tiefblauer Himmel.",
     "ttq-chatgpt-05.webp": "An einem tropischen Ufer steht ein hölzerner Unterstand mit grünem Dach im Schatten der Bäume, während ein Reiher auf dem Gras über dunklem, stillem Wasser steht."
   },
+  "TTT": {
+    "ttt-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Taitung Airport (TTT) und die umliegende Landschaft deutlich zu erkennen.",
+    "ttt-baidu-1.webp": "Das Terminal des Flughafens Taitung mit dreieckigem Giebel und grünem Schild, links der Kontrollturm."
+  },
+  "TYN": {
+    "tyn-baidu-1.webp": "Das Terminal des Taiyuan Wusu International Airport: rote Schriftzeichen für „Taiyuan“ und die Aufschrift „Taiyuan International Airport“ auf dem Dach, darunter parken Autos vor der Abflugebene.",
+    "tyn-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Taiyuan Wusu International Airport (TYN) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "UAM": {
     "uam-sat-1.webp": "Im Satellitenbild geht die Andersen Air Force Base (UAM) in das umgebende Wasser und die Küstenlinie über."
+  },
+  "UPG": {
+    "upg-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Sultan Hasanuddin International Airport (UPG) und die umliegende Landschaft deutlich zu erkennen."
+  },
+  "URC": {
+    "urc-baidu-2.webp": "Das Terminal und der Kontrollturm von Ürümqi Tianshan vor der schneebedeckten Tianshan-Kette, darüber zieht ein Flugzeug hinweg.",
+    "urc-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Ürümqi Tianshan International Airport (URC) und die umliegende Landschaft deutlich zu erkennen."
   },
   "VBA": {
     "vba-sat-1.webp": "Satellitenansicht: eine Startbahn führt durch grüne Hügel in Zentralmyanmar, ein kleines Vorfeld und Terminal daneben.",
     "vba-chatgpt-01.webp": "Ein dunkles steinernes Eingangsschild trägt goldene Lettern über birmanischer Schrift, dahinter erhebt sich das rote Dach des Terminals unter flachem grauem Himmel."
+  },
+  "VCP": {
+    "vcp-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Viracopos International Airport (VCP) und die umliegende Landschaft deutlich zu erkennen.",
+    "vcp-baidu-1.webp": "Blaue Buchstaben „Aeroporto Internacional de Viracopos“ vor der Glasfassade des Terminals.",
+    "vcp-baidu-2.webp": "Ein mit Gepäck beladener Wagen steht neben dem weißen Tonnendach des Terminals, während zwei Mitarbeiter vorbeigehen."
   },
   "VIE": {
     "vie-sat-1.webp": "Satellitenansicht: die Terminals, Startbahnen und die umliegende Stadt am Flughafen Wien (VIE)."
@@ -1687,6 +2282,9 @@
   "WAQ": {
     "waq-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Flughafens Antsalova (WAQ) zwischen Stadt, Ackerland und Vegetation."
   },
+  "WAW": {
+    "waw-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Warsaw Chopin Airport (WAW) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "WKK": {
     "wkk-sat-1.webp": "Auf dem Satellitenbild liegt die Startbahn des Flughafens Aleknagik / New (WKK) zwischen grüner Vegetation und Ackerland.",
     "wkk-chatgpt-01.webp": "In tiefem Abendlicht ruht ein zweimotoriges Turboprop-Flugzeug auf einem Schottervorfeld, umgeben von offenem Grasland mit einigen Wellblechhütten und dahinter runden, wolkenverhangenen Hügeln."
@@ -1694,8 +2292,26 @@
   "WMR": {
     "wmr-sat-1.webp": "Satellitenansicht: der Flughafen Mananara Nord (WMR) ist von Wasser und Küste umgeben."
   },
+  "WOT": {
+    "wot-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Wang'an Airport (WOT) und die umliegende Landschaft deutlich zu erkennen.",
+    "wot-baidu-1.webp": "Das kompakte Terminal des Flughafens Wang'an mit Kontrollturm auf dem Dach und dem Schild „Wang'an Airport“ an der Wand."
+  },
+  "WUH": {
+    "wuh-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Wuhan Tianhe International Airport (WUH) und die umliegende Landschaft deutlich zu erkennen.",
+    "wuh-baidu-1.webp": "Eine Maschine von Hainan Airlines auf dem Vorfeld vor dem Terminal von Wuhan Tianhe, auf dessen Dach „WUHAN TIANHE AIRPORT“ steht.",
+    "wuh-baidu-2.webp": "Aus dem Kabinenfenster in Wuhan Tianhe: eine Maschine von Air China am Gate, die Schriftzeichen für Wuhan auf dem Terminaldach und dahinter der ausgestellte Kontrollturm."
+  },
+  "XIY": {
+    "xiy-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Xi'an Xianyang International Airport (XIY) und die umliegende Landschaft deutlich zu erkennen.",
+    "xiy-baidu-1.webp": "Der Kontrollturm und das Terminal von Xi'an Xianyang, über dem Dach große rote Schriftzeichen „Xi'an“, an den Gates zwei Maschinen vom Typ 737 von Air Changan."
+  },
   "XJD": {
     "xjd-sat-1.webp": "Satellitenansicht: die parallelen Startbahnen und das große Vorfeld der Al Udeid Air Base, die Gebäude der Basis östlich des Flugfelds."
+  },
+  "XMN": {
+    "xmn-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Xiamen Gaoqi International Airport (XMN) und die umliegende Landschaft deutlich zu erkennen.",
+    "xmn-baidu-1.webp": "Xiamen Gaoqi: eine Maschine von XiamenAir auf dem Rollweg vor dem Terminal mit der Aufschrift „XIAMEN AIRPORT“, dahinter drängt sich die Stadt an die Hügel.",
+    "xmn-baidu-2.webp": "Eine Maschine von XiamenAir im kurzen Endanflug über dem Gaoqi Airport, unter ihr Verkehr an einem grünen Straßenschild „高崎机场 Gaoqi Airport“."
   },
   "YAA": {
     "yaa-sat-1.webp": "Im Satellitenbild geht der Flughafen Anahim Lake (YAA) in die umgebende grüne Vegetation und das Ackerland über."
@@ -1718,11 +2334,21 @@
   "YPJ": {
     "ypj-sat-1.webp": "Im Satellitenbild geht der Flughafen Aupaluk (YPJ) in die umgebende Stadt, das Ackerland und die Vegetation über."
   },
+  "YUL": {
+    "yul-baidu-1.webp": "Das Vorfeld in Montreal Trudeau in der Abenddämmerung: die dreieckige beleuchtete Fassade des Terminals, an einer Fluggastbrücke eine Maschine von Air Canada.",
+    "yul-baidu-2.webp": "Eine Maschine von Air Canada hebt in Montreal Trudeau ab, dahinter der Kontrollturm mit der Aufschrift „MONTREAL“.",
+    "yul-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Montreal / Pierre Elliott Trudeau International Airport (YUL) und die umliegende Landschaft deutlich zu erkennen."
+  },
   "YVR": {
     "yvr-sat-1.webp": "Auf dem Satellitenbild liegen die Terminals und Startbahnen des Flughafens Vancouver (YVR) mitten im Stadt- und Straßennetz."
   },
   "YXX": {
     "yxx-sat-1.webp": "Satellitenansicht: die Startbahnen von Abbotsford liegen zwischen Ackerland und Bergen im Fraser Valley, Terminal und Vorfeld neben dem Flugfeld."
+  },
+  "YYC": {
+    "yyc-baidu-1.webp": "Im Terminal von Calgary: ein YYC-Schild an einer Check-in-Säule unter der Holzdecke und den Oberlichtern.",
+    "yyc-baidu-2.webp": "Luftaufnahme des Terminals und der Abfertigungsbereiche von Calgary mit Flugzeugen an den Gates, links Parkhäuser und Hotels.",
+    "yyc-sat-1.webp": "Auf dem Satellitenbild sind die Anlage des Calgary International Airport (YYC) und die umliegende Landschaft deutlich zu erkennen."
   },
   "YYW": {
     "yyw-sat-1.webp": "Satellitenansicht: eine Startbahn schneidet durch Wald im Norden Ontarios, Vorfeld und kleines Terminal in ihrer Mitte.",

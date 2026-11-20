@@ -1,10 +1,4 @@
 {
-  "_readme": [
-    "Chú thích ảnh tiếng Việt, khóa theo mã IATA rồi tên tệp ảnh.",
-    "Dịch từ chú thích tiếng Anh trong public/photos/captions/<IATA>.json.",
-    "lib/airport-photos.ts đọc tệp này với tên captions.vi.json; sân bay hoặc tệp",
-    "thiếu ở đây sẽ dùng chú thích tiếng Anh, không bao giờ dùng bản tiếng Trung."
-  ],
   "AAA": {
     "aaa-page-1.webp": "Đảo san hô Anaa nhìn từ Trạm Vũ trụ Quốc tế (ảnh NASA ISS007-E-14624, phạm vi công cộng) — đảo hẹp với vành rạn san hô trắng và đầm phá xanh ngọc; sân bay nằm trên đảo chính."
   },
@@ -148,6 +142,11 @@
   "ADB": {
     "adb-sat-1.webp": "Ảnh vệ tinh: các đường băng và đường lăn ở Izmir nằm trên đồng bằng bên biển Aegean, nhà ga và sân đỗ ở phía nam sân bay."
   },
+  "ADD": {
+    "add-baidu-1.webp": "Bên ngoài nhà ga Sân bay Quốc tế Addis Ababa Bole — mặt tiền nhiều tầng phía sau khu đưa khách, ven theo hàng cọc chắn đen vàng.",
+    "add-baidu-2.webp": "Một máy bay chở hàng Ethiopian Cargo đỗ trên sân đỗ, phía sau là tòa nhà Ethiopian Cargo và những ngọn đồi xa.",
+    "add-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Addis Ababa Bole (ADD) và khu vực xung quanh hiện rõ."
+  },
   "ADE": {
     "ade-bing-3.webp": "Nhà ga và tháp không lưu Sân bay Quốc tế Aden — tên sân bay bằng tiếng Ả Rập trên tường, phía trước đỗ hai xe kéo đẩy máy bay."
   },
@@ -231,6 +230,11 @@
   },
   "AGC": {
     "agc-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Quận Allegheny (AGC) hòa vào thảm thực vật xanh và đồng ruộng xung quanh."
+  },
+  "AGP": {
+    "agp-baidu-1.webp": "Bên trong sảnh khởi hành, những chiếc quạt trần lớn treo trên hành khách đang đi tới quầy làm thủ tục và biển chỉ dẫn cổng.",
+    "agp-baidu-2.webp": "Trên sân đỗ, một máy bay easyJet ở vị trí đỗ, thiết bị mặt đất ở tiền cảnh, phía xa là một máy bay đang cất cánh và những ngọn núi.",
+    "agp-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Málaga-Costa del Sol (AGP) và khu vực xung quanh hiện rõ."
   },
   "AGQ": {
     "agq-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Dhokimion (AGQ) nằm giữa thị trấn, đồng ruộng và cây cối."
@@ -877,14 +881,60 @@
   "BCN": {
     "bcn-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Barcelona–El Prat (BCN) hiện rõ."
   },
+  "BER": {
+    "ber-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Berlin Brandenburg (BER) và khu vực xung quanh hiện rõ.",
+    "ber-baidu-1.webp": "Mặt tiền bằng kính của nhà ga Sân bay Berlin Brandenburg mang dòng chữ “BERLIN BRANDENBURG AIRPORT” và “WILLY BRANDT”, với cổng B12, B13 và các cầu hành khách phía trên sân đỗ rộng.",
+    "ber-baidu-2.webp": "Một chiếc Lufthansa Airbus A320neo (số đăng ký D-AINZ, mang dòng chữ “Hauptstadtflieger” và biểu tượng BER) đỗ trên sân đỗ trước nhà ga Sân bay Berlin Brandenburg."
+  },
+  "BET": {
+    "bet-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Bethel (BET) và khu vực xung quanh hiện rõ."
+  },
   "BIG": {
     "big-sat-1.webp": "Ảnh vệ tinh: Sân bay Lục quân Allen (BIG) được bao quanh bởi thị trấn, đồng ruộng và cây cối."
   },
   "BKK": {
     "bkk-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Suvarnabhumi (BKK)."
   },
+  "BLR": {
+    "blr-baidu-2.webp": "Trên sân đỗ ướt đẫm mưa, một chiếc Go First Airbus A320 cùng hai xe đẩy hành lý bên cạnh, phía xa là những ngọn đồi xanh.",
+    "blr-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Kempegowda Bengaluru (BLR) và khu vực xung quanh hiện rõ."
+  },
+  "BNA": {
+    "bna-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Nashville (BNA) và khu vực xung quanh hiện rõ."
+  },
+  "BNE": {
+    "bne-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Brisbane (BNE) và khu vực xung quanh hiện rõ.",
+    "bne-baidu-1.webp": "Bên ngoài nhà ga quốc tế Brisbane, với biển “Brisbane International” dọc theo mái nhà ga."
+  },
+  "BOG": {
+    "bog-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế El Dorado (BOG) và khu vực xung quanh hiện rõ.",
+    "bog-baidu-2.webp": "Trên sân đỗ Sân bay El Dorado ở Bogotá — máy bay của LATAM và Avianca tại các cổng nhà ga, phía sau là những tòa chung cư của thành phố."
+  },
+  "BOM": {
+    "bom-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Chhatrapati Shivaji Maharaj (BOM) và khu vực xung quanh hiện rõ.",
+    "bom-baidu-2.webp": "Ảnh nhìn từ trên cao cho thấy các đường băng giao nhau và nhà ga của Mumbai, với bờ biển Ả Rập ở phía tây."
+  },
+  "BOS": {
+    "bos-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Boston Logan (BOS) và khu vực xung quanh hiện rõ."
+  },
   "BPS": {
     "bps-sat-1.webp": "Ảnh vệ tinh: đường băng của Porto Seguro nằm giữa rừng và bãi biển trên bờ Đại Tây Dương của Brazil, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "BRU": {
+    "bru-baidu-2.webp": "Nhà ga mặt kính của Sân bay Brussels — biểu tượng chữ “b” đỏ lớn bên cạnh cầu hành khách, với một máy bay Brussels Airlines ở cổng.",
+    "bru-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Brussels (BRU) và khu vực xung quanh hiện rõ."
+  },
+  "BSB": {
+    "bsb-baidu-2.webp": "Ảnh nhìn từ trên cao cho thấy nhà ga chính hình tròn và các sảnh chờ của Brasília, máy bay trên sân đỗ và các khu vực thi công quanh rìa.",
+    "bsb-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Presidente Juscelino Kubitschek (BSB) và khu vực xung quanh hiện rõ."
+  },
+  "BUD": {
+    "bud-baidu-1.webp": "Ảnh nhìn từ trên cao về Nhà ga 2 của Budapest — mái bạc hình sóng vắt ngang tòa nhà, máy bay trên sân đỗ và bãi đỗ xe chật kín phía trước.",
+    "bud-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Budapest Liszt Ferenc (BUD) và khu vực xung quanh hiện rõ."
+  },
+  "BWI": {
+    "bwi-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Baltimore/Washington Thurgood Marshall (BWI) và khu vực xung quanh hiện rõ.",
+    "bwi-baidu-1.webp": "Qua cửa sổ máy bay, những chiếc Southwest đỗ tại cổng, xe mặt đất và xe đẩy hành lý rải khắp sân đỗ ngập nắng."
   },
   "BYF": {
     "byf-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Albert Bray (BYF) nằm giữa thảm thực vật xanh và đồng ruộng."
@@ -906,9 +956,16 @@
   "CAN": {
     "can-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Bạch Vân Quảng Châu (CAN) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
   },
+  "CCU": {
+    "ccu-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Netaji Subhash Chandra Bose (CCU) và khu vực xung quanh hiện rõ."
+  },
   "CDG": {
     "cdg-baidu-1.webp": "Bên trong Nhà ga 1 tại Charles de Gaulle — dãy “Bars, Restaurants” trong giếng trời tròn dưới các bức tường kính, du khách nối đuôi đi qua.",
     "cdg-baidu-2.webp": "Thang cuốn về phía Nhà ga 2 — biển trên cao ghi “Bagages / Baggage / 行李提取” và “Sortie / Exit” bằng ba thứ tiếng."
+  },
+  "CEB": {
+    "ceb-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Mactan Cebu (CEB) và khu vực xung quanh hiện rõ.",
+    "ceb-baidu-1.webp": "Tại Mactan-Cebu sau hoàng hôn — một máy bay Cebu Pacific ở cầu hành khách, phía dưới là nhân viên mặt đất và xe đẩy hành lý đang làm việc."
   },
   "CFE": {
     "cfe-baidu-2.webp": "Nhà ga hàng không thương gia — chữ “départs / departures” trên mặt tiền tối, cửa xoay và làn đón trả khách phía trước.",
@@ -921,12 +978,35 @@
     "cfe-chatgpt-06.webp": "Một máy bay phản lực khu vực HOP của Air France nghỉ trên sân đỗ trong khi máy xếp hành lý và một xe mặt đất làm việc bên cạnh, phía xa là đồi.",
     "cfe-chatgpt-07.webp": "Một du khách mang ba lô bước qua cửa xoay dưới chữ “départs” màu vàng trên mái che tối của nhà ga."
   },
+  "CGH": {
+    "cgh-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Congonhas–Deputado Freitas Nobre (CGH) và khu vực xung quanh hiện rõ.",
+    "cgh-baidu-1.webp": "Những chiếc máy bay TAM đỗ mũi vào cổng phía dưới nhà ga mang dòng chữ “AEROPORTO DE CONGONHAS”.",
+    "cgh-baidu-2.webp": "Hoạt động trên sân đỗ tại Congonhas, với đường băng và đường chân trời São Paulo ngay phía sau."
+  },
   "CGK": {
     "cgk-baidu-1.webp": "Bên trong nhà ga Soekarno-Hatta — những vòm đỏ chạm lộng đứng dưới trần hình học của sảnh khởi hành.",
     "cgk-baidu-2.webp": "Hành lang lên máy bay — dầm xanh và kính nhìn ra cây nhiệt đới, biển vàng chỉ tới cửa D6."
   },
+  "CGO": {
+    "cgo-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Zhengzhou Xinzheng (CGO) và khu vực xung quanh hiện rõ.",
+    "cgo-baidu-1.webp": "Một máy bay Shandong Airlines ở cổng trước mặt tiền kính của nhà ga; xe đẩy hành lý và xe chở nhiên liệu đang làm việc quanh máy bay dưới bầu trời hoàng hôn.",
+    "cgo-baidu-2.webp": "Một máy bay sơn màu sặc sỡ ở cầu hành khách trong lúc được phục vụ mặt đất, phía sau là đường mái ngang dài của nhà ga."
+  },
+  "CGQ": {
+    "cgq-baidu-1.webp": "Một máy bay Loong Air đỗ tại cổng trước nhà ga Sân bay Quốc tế Changchun Longjia, mặt tiền kính phản chiếu bầu trời nhiều mây.",
+    "cgq-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Changchun Longjia (CGQ) và khu vực xung quanh hiện rõ."
+  },
   "CJS": {
     "cjs-sat-1.webp": "Ảnh vệ tinh: các đường băng của Ciudad Juárez nằm giữa thành phố và đất khô ở rìa sa mạc Chihuahua, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "CJU": {
+    "cju-baidu-1.webp": "Jeju về đêm, biển “JEJU INT'L AIRPORT” sáng trên mặt tiền nhà ga, tháp không lưu ở bên trái và dòng xe trên đường.",
+    "cju-baidu-2.webp": "Nhìn dọc con đường trên cao tại Jeju, tháp không lưu hình tròn vươn lên trên lối vào nhà ga, với cây cọ và dòng xe đưa khách hai bên.",
+    "cju-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Jeju (CJU) và khu vực xung quanh hiện rõ."
+  },
+  "CKG": {
+    "ckg-baidu-1.webp": "Lề đường trước Nhà ga 3 của Chongqing Jiangbei — mái che trắng cao vút trên tấm biển chỉ dẫn khởi hành nội địa, liệt kê hàng làm thủ tục của từng hãng hàng không.",
+    "ckg-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Chongqing Jiangbei (CKG) và khu vực xung quanh hiện rõ."
   },
   "CLO": {
     "clo-sat-1.webp": "Ảnh vệ tinh: đường băng của Cali nằm trong thung lũng Cauca, nhà ga và sân đỗ ở phía đông, xung quanh là thành phố và ruộng mía.",
@@ -938,8 +1018,27 @@
     "clo-chatgpt-06.webp": "Dưới bầu trời xanh có mây kéo vệt, một máy bay mang nhãn LATAM đỗ trên sân đỗ trong khi tháp không lưu bê tông vươn lên trên nhà ga bên cạnh những cây cọ.",
     "clo-chatgpt-07.webp": "Một máy bay chở khách hướng về phía máy ảnh tại cửa ra, cầu ống treo từ nhà ga bên phải và một xe đẩy hành lý xanh trên sân đỗ có vạch đỏ."
   },
+  "CLT": {
+    "clt-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Charlotte Douglas (CLT) và khu vực xung quanh hiện rõ.",
+    "clt-baidu-1.webp": "Ảnh nhìn từ trên cao cho thấy sân bay, nhà ga màu trắng và các dải sảnh chờ trải rộng trên sân đỗ, dày đặc máy bay tại các cổng."
+  },
   "CMF": {
     "cmf-sat-1.webp": "Ảnh vệ tinh: đường băng nằm trong vùng nông thôn xanh ngoài Chambéry, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "CMH": {
+    "cmh-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế John Glenn Columbus (CMH) và khu vực xung quanh hiện rõ.",
+    "cmh-baidu-1.webp": "Sảnh trung tâm nhà ga Sân bay Quốc tế John Glenn Columbus, nổi bật với bức tường khảm lớn mang chữ “COLUMBUS” phía trên thang cuốn."
+  },
+  "CMJ": {
+    "cmj-baidu-1.webp": "Nhà ga nhỏ của Sân bay Qimei, mặt tiền sơn hình gợn sóng và xe máy đỗ phía trước.",
+    "cmj-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Qimei (CMJ) và khu vực xung quanh hiện rõ."
+  },
+  "CMN": {
+    "cmn-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Mohammed V (CMN) và khu vực xung quanh hiện rõ.",
+    "cmn-baidu-1.webp": "Bên ngoài nhà ga Sân bay Mohammed V ở Casablanca — dòng chữ “AEROPORT MOHAMMED V” nổi trên mái, hành khách đi qua dưới mái che lối vào."
+  },
+  "CNF": {
+    "cnf-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Tancredo Neves (CNF) và khu vực xung quanh hiện rõ."
   },
   "COR": {
     "cor-sat-1.webp": "Ảnh vệ tinh: các đường băng của Cordoba nằm phía bắc thành phố, nhà ga và sân đỗ ở phía đông sân bay, xung quanh là đồng ruộng và nhà ở."
@@ -953,11 +1052,27 @@
   "CPT": {
     "cpt-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Quốc tế Cape Town (CPT) hiện rõ."
   },
+  "CSX": {
+    "csx-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Changsha Huanghua (CSX) và khu vực xung quanh hiện rõ.",
+    "csx-baidu-1.webp": "Nhìn qua cánh máy bay từ cửa sổ cabin, một máy bay China Southern đỗ tại nhà ga Changsha, với dòng chữ “CHANGSHA” trên mái.",
+    "csx-baidu-2.webp": "Một máy bay Shandong Airlines cất cánh trước nhà ga Changsha, nơi những tấm biển đỏ trên mái ghi “长沙 CHANGSHA”."
+  },
   "CTD": {
     "ctd-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Alonso Valderrama (CTD) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
   },
+  "CTS": {
+    "cts-baidu-2.webp": "Nhà ga Sân bay New Chitose nhìn từ sân trước — một xe buýt đỗ phía trước, kết cấu trên mái in nổi trên nền trời xanh trong.",
+    "cts-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay New Chitose (CTS) và khu vực xung quanh hiện rõ."
+  },
+  "CTU": {
+    "ctu-baidu-2.webp": "Dòng chữ “CHENGDU” màu đỏ và hai chữ Hán “Thục”, “Đô” nổi trên mặt tiền kính cong của nhà ga, bên phải là một tháp nhỏ.",
+    "ctu-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Chengdu Shuangliu (CTU) và khu vực xung quanh hiện rõ."
+  },
   "CUM": {
     "cum-sat-1.webp": "Ảnh vệ tinh: đường băng của Cumaná nằm giữa thành phố và đồi trên bờ biển Caribe của Venezuela, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "CUN": {
+    "cun-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Cancún (CUN) và khu vực xung quanh hiện rõ."
   },
   "CUZ": {
     "cuz-sat-1.webp": "Ảnh vệ tinh: đường băng của Cusco nằm trong một thung lũng Andes, nhà ga và sân đỗ bên cạnh, xung quanh là thành phố và sườn đồi.",
@@ -990,8 +1105,39 @@
     "cya-chatgpt-06.webp": "Mặt trời lặn nhuộm vàng sân đỗ phía sau một nhà ga trắng nhỏ có tường ghi Les Cayes Airport, vài du khách đứng gần lối vào.",
     "cya-chatgpt-07.webp": "Lối vào phòng đến màu xanh bạc hà nhạt mang biển trắng ghi Arrivee phía trên hai mũi tên chỉ xuống, phía trước là lan can xanh và cây bụi."
   },
+  "CYI": {
+    "cyi-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Chiayi (CYI) và khu vực xung quanh hiện rõ."
+  },
+  "DAC": {
+    "dac-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Hazrat Shahjalal (DAC) và khu vực xung quanh hiện rõ.",
+    "dac-baidu-1.webp": "Một chiếc Biman Bangladesh Boeing 777 đang tiếp cận cuối để hạ cánh với càng bánh đã mở, bay thấp trên những mái nhà ở Dhaka.",
+    "dac-baidu-2.webp": "Phần mũi của một chiếc Biman Bangladesh 777 khi đang lăn bánh, phía sau là những tòa nhà thấp ở rìa sân bay."
+  },
+  "DAD": {
+    "dad-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Đà Nẵng (DAD) và khu vực xung quanh hiện rõ.",
+    "dad-baidu-1.webp": "Con đường đưa khách bên ngoài nhà ga Sân bay Đà Nẵng, ven theo là hàng mái che trắng cong.",
+    "dad-baidu-2.webp": "Bên trong nhà ga Sân bay Đà Nẵng, tấm biển “Welcome to Da Nang” phát sáng đặt trên bức tường cây xanh."
+  },
+  "DAL": {
+    "dal-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Dallas Love Field (DAL) và khu vực xung quanh hiện rõ.",
+    "dal-baidu-1.webp": "Một máy bay Southwest đang lăn bánh trên sân đỗ Sân bay Dallas Love Field.",
+    "dal-baidu-2.webp": "Khu đón khách tại Sân bay Dallas Love Field về đêm — hành khách xách túi bên những chiếc xe đang nổ máy, tên sân bay sáng trên tòa nhà."
+  },
+  "DCA": {
+    "dca-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc gia Ronald Reagan Washington (DCA) và khu vực xung quanh hiện rõ.",
+    "dca-baidu-1.webp": "Một máy bay American Airlines trên sân đỗ, ngay phía sau là sông Potomac và những con thuyền đang qua lại.",
+    "dca-baidu-2.webp": "Ảnh nhìn từ trên cao cho thấy nhà ga, các ga-ra đỗ xe và tháp không lưu, với một đường băng chạy dọc theo sông Potomac."
+  },
   "DEL": {
     "del-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế Indira Gandhi (DEL) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "DEN": {
+    "den-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Denver (DEN) và khu vực xung quanh hiện rõ."
+  },
+  "DFW": {
+    "dfw-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Dallas Fort Worth (DFW) và khu vực xung quanh hiện rõ.",
+    "dfw-baidu-1.webp": "Bên trong một nhà ga của DFW, hành khách đi qua các cửa hàng và biển chỉ dẫn cổng.",
+    "dfw-baidu-2.webp": "Ảnh nhìn từ trên cao về quần thể nhà ga, đường vành đai và các vị trí đỗ máy bay tại Sân bay Quốc tế Dallas Fort Worth (DFW)."
   },
   "DHF": {
     "dhf-sat-1.webp": "Ảnh vệ tinh: Căn cứ Không quân Al Dhafra (DHF) được bao quanh bởi đất khô và vùng đất trống."
@@ -999,11 +1145,31 @@
   "DIE": {
     "die-sat-1.webp": "Ảnh vệ tinh: đường băng của Antsiranana nằm giữa đồi và thị trấn ở bắc Madagascar, nhà ga và sân đỗ ở bên cạnh."
   },
+  "DLC": {
+    "dlc-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Dalian Zhoushuizi (DLC) và khu vực xung quanh hiện rõ.",
+    "dlc-baidu-1.webp": "Phía trước nhà ga Sân bay Dalian Zhoushuizi, những tấm biển đỏ “大连 DALIAN” trên mái in nổi trên nền thành phố đồi núi phía sau.",
+    "dlc-baidu-2.webp": "Nhà ga Dalian nhìn từ đường xe, các biển đỏ “DALIAN AIRPORT” và “大连周水子” phía trên hàng taxi đang chờ."
+  },
+  "DMK": {
+    "dmk-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Don Mueang (DMK) và khu vực xung quanh hiện rõ."
+  },
   "DOH": {
     "doh-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Quốc tế Hamad (DOH) hiện rõ."
   },
+  "DPS": {
+    "dps-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Denpasar I Gusti Ngurah Rai (DPS) và khu vực xung quanh hiện rõ."
+  },
+  "DTW": {
+    "dtw-baidu-2.webp": "Ảnh nhìn từ trên cao về Sân bay Detroit Metro — Nhà ga McNamara dài và hai sảnh chờ song song dọc sân đỗ, phía xa là đường lăn và đường băng.",
+    "dtw-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Detroit Metropolitan Wayne County (DTW) và khu vực xung quanh hiện rõ."
+  },
   "DUB": {
     "dub-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Dublin (DUB) hiện rõ."
+  },
+  "DUS": {
+    "dus-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Düsseldorf (DUS) và khu vực xung quanh hiện rõ.",
+    "dus-baidu-1.webp": "Sảnh khởi hành Sân bay Düsseldorf, nơi hành khách mang hành lý xếp hàng tại các máy tự làm thủ tục dưới biển xanh “Abflug / Departures”.",
+    "dus-baidu-2.webp": "Chữ “Düsseldorf Airport” màu đỏ và “DUS” màu xanh nổi trên mái nhà ga bằng khung thép, in trên nền trời xanh trong."
   },
   "DXB": {
     "dxb-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Dubai (DXB) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
@@ -1018,6 +1184,11 @@
     "edc-chatgpt-06.webp": "Nhà chứa máy bay sáng rực sau khi trời tối, vài máy bay một động cơ nhỏ và một máy bay hai động cơ đỗ cạnh nhau trên nền bóng.",
     "edc-chatgpt-07.webp": "Về đêm, mái che cong bên ngoài nhà chứa máy bay sáng lên với một hàng đèn, chiếu sáng tường trắng và một dải sân đỗ bê tông rộng."
   },
+  "EDI": {
+    "edi-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Edinburgh (EDI) và khu vực xung quanh hiện rõ.",
+    "edi-baidu-1.webp": "Bên ngoài nhà ga Sân bay Edinburgh, một xe buýt xanh trắng đỗ ở lề đường.",
+    "edi-baidu-2.webp": "Tháp không lưu Sân bay Edinburgh rực sáng màu tím trên nền trời chạng vạng."
+  },
   "EPS": {
     "eps-sat-1.webp": "Ảnh vệ tinh: Sân bay Arroyo Barril (EPS) nằm giữa thảm thực vật xanh và đồng ruộng."
   },
@@ -1027,8 +1198,14 @@
   "FCO": {
     "fco-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Roma Fiumicino (FCO)."
   },
+  "FLL": {
+    "fll-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Fort Lauderdale Hollywood (FLL) và khu vực xung quanh hiện rõ."
+  },
   "FMM": {
     "fmm-sat-1.webp": "Ảnh vệ tinh: đường băng của Memmingen nằm giữa đồi Allgäu và đồng ruộng, nhà ga và sân đỗ ở phía bắc sân bay."
+  },
+  "FOC": {
+    "foc-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Fuzhou Changle (FOC) và khu vực xung quanh hiện rõ."
   },
   "FON": {
     "fon-sat-1.webp": "Ảnh vệ tinh: sân bay La Fortuna được khoanh đỏ, bao quanh bởi rừng mưa và đồng ruộng ở Costa Rica.",
@@ -1043,6 +1220,27 @@
   "FRA": {
     "fra-baidu-2.webp": "The Squaire tại Sân bay Frankfurt — tòa nhà trắng cong dài bắc qua đường sắt trên các trụ nghiêng, đường cao tốc chạy ngang qua.",
     "fra-baidu-3.webp": "Frankfurt nhìn từ trên không — máy bay và xe thi công rải rác trên sân đỗ và đường băng, đường chân trời thành phố phía xa sau vành đai rừng."
+  },
+  "FUK": {
+    "fuk-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Fukuoka (FUK) và khu vực xung quanh hiện rõ.",
+    "fuk-baidu-2.webp": "Nhà ga Nội địa của Sân bay Fukuoka, biển đỏ “福岡空港 国内線 DOMESTIC” bên cạnh số “2” lớn, phía trên làn đưa khách."
+  },
+  "GDL": {
+    "gdl-baidu-2.webp": "Sảnh khởi hành hiện đại của Guadalajara — mái lưới trắng và trần gỗ màu cam phía trên khu ghế ngồi, sân đỗ hiện ra qua vách kính.",
+    "gdl-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Guadalajara (GDL) và khu vực xung quanh hiện rõ."
+  },
+  "GIG": {
+    "gig-baidu-2.webp": "Tại cổng, một máy bay GOL đỗ bên cầu hành khách cùng một xe mặt đất, phía sau là những khối nhà ga tựa tháp.",
+    "gig-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Rio de Janeiro Galeão – Tom Jobim (GIG) và khu vực xung quanh hiện rõ."
+  },
+  "GMP": {
+    "gmp-baidu-1.webp": "Sảnh khởi hành Gimpo — trần ô vuông lõm với biển Korean Air treo lơ lửng, màn hình quảng cáo và các khu làm thủ tục hai bên.",
+    "gmp-baidu-2.webp": "Sảnh nhà ga rộng và sáng — trần gỗ thanh mảnh phía trên cửa kính cao sát trần, hành khách mang túi đi qua quầy làm thủ tục.",
+    "gmp-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Seoul Gimpo (GMP) và khu vực xung quanh hiện rõ."
+  },
+  "GNI": {
+    "gni-baidu-1.webp": "Nhà ga Sân bay Lyudao và tháp không lưu màu trắng, phía trước là đường xe cong.",
+    "gni-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Lyudao (GNI) và khu vực xung quanh hiện rõ."
   },
   "GOY": {
     "goy-sat-1.webp": "Ảnh vệ tinh: Sân bay Ampara (GOY), đường băng 07/25 cắt qua thảm thực vật xanh và đồng ruộng ở miền đông Sri Lanka.",
@@ -1066,11 +1264,47 @@
   "GUW": {
     "guw-sat-1.webp": "Ảnh vệ tinh: đường băng của Atyrau nằm trên vùng trũng Caspian khô cằn, nhà ga và sân đỗ bên cạnh, xung quanh là sông và đầm lầy."
   },
+  "GVA": {
+    "gva-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Geneva (GVA) và khu vực xung quanh hiện rõ.",
+    "gva-baidu-1.webp": "Mặt tiền nhà ga với vách kính dốc đứng được gia cố bằng thanh thép, bên cạnh là xe kéo mặt đất đỗ trên sân đỗ.",
+    "gva-baidu-2.webp": "Máy bay easyJet và KLM tại các vị trí đỗ, phía sau là dãy Alps còn phủ tuyết."
+  },
   "GYL": {
     "gyl-sat-1.webp": "Ảnh vệ tinh: Sân bay Argyle (GYL) nằm giữa đất khô và vùng đất trống."
   },
   "GZP": {
     "gzp-sat-1.webp": "Ảnh vệ tinh: đường băng của Gazipaşa nằm trên đồng bằng ven biển giữa dãy Taurus và Địa Trung Hải, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "HAK": {
+    "hak-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Haikou Meilan (HAK) và khu vực xung quanh hiện rõ.",
+    "hak-baidu-1.webp": "Bên trong Nhà ga 2 Sân bay Haikou Meilan, biển chỉ dẫn trên cao hướng tới Sân bay Meilan (Nhà ga 2) và lối ra.",
+    "hak-baidu-2.webp": "Bên ngoài nhà ga Sân bay Haikou Meilan, dòng chữ “HAIKOU” màu đỏ trên mái."
+  },
+  "HAM": {
+    "ham-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Hamburg Helmut Schmidt (HAM) và khu vực xung quanh hiện rõ.",
+    "ham-baidu-1.webp": "Bên trong Nhà ga 1 Sân bay Hamburg — các đảo làm thủ tục dưới trần gỗ thanh mảnh, biển “Terminal 1” treo phía trên.",
+    "ham-baidu-2.webp": "Sảnh làm thủ tục Sân bay Hamburg — hành khách xếp hàng tại các quầy tự gửi hành lý."
+  },
+  "HAN": {
+    "han-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Nội Bài (HAN) và khu vực xung quanh hiện rõ.",
+    "han-baidu-1.webp": "Nhà ga Sân bay Nội Bài nhìn từ đường vào sân bay, dòng chữ “NỘI BÀI INTERNATIONAL TERMINAL” trên mặt tiền kính."
+  },
+  "HEL": {
+    "hel-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Helsinki Vantaa (HEL) và khu vực xung quanh hiện rõ.",
+    "hel-baidu-1.webp": "Hành lang có mái che bên ngoài nhà ga Sân bay Helsinki-Vantaa, ghế dài và cột đèn trên quảng trường lát đá, phía xa là những lá cờ Phần Lan."
+  },
+  "HET": {
+    "het-baidu-1.webp": "Nhà ga Sân bay Quốc tế Hohhot Baita — dòng chữ “Hohhot” màu đỏ trên mặt tiền kính cong, sân trước kín xe ô tô.",
+    "het-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Hohhot Baita (HET) và khu vực xung quanh hiện rõ."
+  },
+  "HFE": {
+    "hfe-baidu-1.webp": "Trên sân đỗ, một máy bay China Eastern tại cổng phía dưới dòng chữ “Hefei” và “HEFEI” màu đỏ trên mái nhà ga, tháp không lưu ở bên trái.",
+    "hfe-baidu-2.webp": "Chiếc máy bay thân rộng của Air China trên sân đỗ, phía sau là mái nhà ga Sân bay Hefei Xinqiao ánh vàng.",
+    "hfe-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Hefei Xinqiao (HFE) và khu vực xung quanh hiện rõ."
+  },
+  "HGH": {
+    "hgh-baidu-2.webp": "Nhà ga Sân bay Hangzhou Xiaoshan về đêm — dòng chữ “Hangzhou” đỏ sáng trên mái, máy bay ở cầu hành khách và xe mặt đất trên sân đỗ.",
+    "hgh-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Hangzhou Xiaoshan (HGH) và khu vực xung quanh hiện rõ."
   },
   "HKG": {
     "hkg-baidu-1.webp": "Từ cửa sổ cabin: một chiếc máy bay Cathay tại vị trí đỗ trước mái vòm của nhà ga, vạch vị trí “S35” sơn trên sân đỗ bên dưới.",
@@ -1084,11 +1318,24 @@
     "hkg-chatgpt-06.webp": "Máy bay Cathay Pacific xếp dọc các vị trí đỗ trước hành lang mái hình sóng, tháp không lưu vươn lên phía sau trên sân đỗ.",
     "hkg-chatgpt-07.webp": "Từ trên không, hành lang dài hình chữ Y vươn ra với hàng chục máy bay đỗ mũi vào các cửa ra."
   },
+  "HKT": {
+    "hkt-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Phuket (HKT) và khu vực xung quanh hiện rõ.",
+    "hkt-baidu-1.webp": "Tên sân bay chạy dọc trên mái nhà ga, phía dưới là một máy bay cánh quạt Bangkok Airways ở cầu hành khách.",
+    "hkt-baidu-2.webp": "Biển “Welcome to Phuket International Airport” màu xanh trong nhà ga, phía trên quầy làm thủ tục và lối tới khu nhận hành lý."
+  },
   "HND": {
     "hnd-sat-1.webp": "Ảnh vệ tinh: Sân bay Tokyo Haneda (HND) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
   },
+  "HNL": {
+    "hnl-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Daniel K. Inouye (HNL) và khu vực xung quanh hiện rõ."
+  },
   "HOF": {
     "hof-sat-1.webp": "Ảnh vệ tinh: đường băng của Al-Ahsa nằm giữa ốc đảo và sa mạc, nhà ga và sân đỗ bên cạnh, xung quanh là rừng cọ và thị trấn."
+  },
+  "HOU": {
+    "hou-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay William P. Hobby (HOU) và khu vực xung quanh hiện rõ.",
+    "hou-baidu-1.webp": "Lối vào nhà ga Sân bay Houston Hobby — tượng đài cánh quạt trong vòng xuyến cây xanh, tên sân bay trên cửa kính.",
+    "hou-baidu-2.webp": "Nhìn từ khoang hành khách Southwest phía trên Sân bay Houston Hobby — đường băng và đường lăn nhường chỗ cho các khu dân cư ngoại ô bên dưới cánh máy bay."
   },
   "HPN": {
     "hpn-sat-1.webp": "Ảnh vệ tinh: Sân bay Quận Westchester (HPN) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
@@ -1096,8 +1343,16 @@
   "HQQ": {
     "hqq-sat-1.webp": "Ảnh vệ tinh: Sân bay Anyang Hongqiqu (HQQ) được bao quanh bởi thị trấn, đồng ruộng và cây cối."
   },
+  "HRB": {
+    "hrb-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Harbin Taiping (HRB) và khu vực xung quanh hiện rõ."
+  },
   "HRH": {
     "hrh-sat-1.webp": "Ảnh vệ tinh: Sân bay Aligarh (HRH) được bao quanh bởi thị trấn, đồng ruộng và cây cối."
+  },
+  "HUN": {
+    "hun-baidu-1.webp": "Bức tường đá trồng hoa tại lối vào Sân bay Hualien, có dòng chữ “Hualien Airport”.",
+    "hun-baidu-2.webp": "Phía trước nhà ga Sân bay Hualien, cây cọ dọc theo mặt tiền kính và tháp không lưu ở bên trái.",
+    "hun-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Hualien (HUN) và khu vực xung quanh hiện rõ."
   },
   "HUU": {
     "huu-page-1.webp": "Cột gió cam bên đường băng Huánuco — thành phố trên sườn đồi vươn lên sau hàng rào xanh (ảnh từ bảng dữ liệu sân bay chính thức của CORPAC, tháng 9 năm 2023).",
@@ -1113,14 +1368,25 @@
   "HVA": {
     "hva-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Analalava (HVA) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
   },
+  "HYD": {
+    "hyd-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Rajiv Gandhi (HYD) và khu vực xung quanh hiện rõ."
+  },
   "IAD": {
     "iad-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Washington Dulles (IAD) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "IAH": {
+    "iah-baidu-1.webp": "Sân bay George Bush Intercontinental lúc chạng vạng — các nhà ga và sân đỗ sáng đèn, máy bay United xếp hàng tại các cổng.",
+    "iah-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế George Bush Intercontinental (IAH) và khu vực xung quanh hiện rõ."
   },
   "ICN": {
     "icn-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Incheon (ICN) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
   },
   "IEO": {
     "ieo-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Aioun el Atrouss (IEO) nằm giữa đất khô và vùng đất trống."
+  },
+  "IND": {
+    "ind-baidu-1.webp": "Indianapolis lúc chạng vạng, mái che thép uốn cong của nhà ga phát sáng trên nền trời xanh thẫm, phía dưới là đường khởi hành vắng xe.",
+    "ind-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Indianapolis (IND) và khu vực xung quanh hiện rõ."
   },
   "IQA": {
     "iqa-sat-1.webp": "Trong ảnh vệ tinh, Căn cứ Không quân Al Asad (IQA) hòa vào đất khô và vùng đất trống xung quanh.",
@@ -1137,6 +1403,10 @@
   },
   "IST": {
     "ist-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Istanbul (IST)."
+  },
+  "ITM": {
+    "itm-baidu-1.webp": "Ảnh nhìn từ trên cao về Sân bay Osaka Itami — hai đường băng song song 14L/14R trên cánh đồng bằng phẳng, nhà ga và sân đỗ ở bên trái, xung quanh là những khu phố dày đặc.",
+    "itm-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Osaka Itami (ITM) và khu vực xung quanh hiện rõ."
   },
   "IVA": {
     "iva-sat-1.webp": "Ảnh vệ tinh: Sân bay Ampampamena (IVA) nằm giữa thảm thực vật xanh và đồng ruộng."
@@ -1166,6 +1436,9 @@
     "ixu-chatgpt-06.webp": "Về đêm, tên sân bay sáng trắng phía trên lối vào trong khi đèn pha ô tô quét qua rào chắn và những hàng chậu cây.",
     "ixu-chatgpt-07.webp": "Một máy bay đuôi đỏ lăn chính diện xuống đường băng trong mưa phùn, cây bụi khô và cỏ lấp đầy tiền cảnh."
   },
+  "JED": {
+    "jed-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế King Abdulaziz (JED) và khu vực xung quanh hiện rõ."
+  },
   "JEG": {
     "jeg-sat-1.webp": "Ảnh vệ tinh: đường băng ngắn của Aasiaat nằm trên một đảo Greenland, nhà ga và sân đỗ bên cạnh, xung quanh là biển và đá trơ trọi.",
     "jeg-chatgpt-01.webp": "Một tòa tháp ốp xanh dưới mái bản lề bạc có bàn picnic bên ngoài, phía sau là bãi biển và những đảo đá nhỏ trải dài.",
@@ -1181,6 +1454,9 @@
   },
   "JIB": {
     "jib-sat-1.webp": "Ảnh vệ tinh: đường băng của Djibouti nằm trên bờ nam vịnh Tadjoura, nhà ga và sân đỗ ở phía bắc sân bay, xung quanh là cảng và thành phố."
+  },
+  "JNB": {
+    "jnb-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế O.R. Tambo (JNB) và khu vực xung quanh hiện rõ."
   },
   "JOG": {
     "jog-sat-1.webp": "Ảnh vệ tinh: đường băng và đường lăn của Yogyakarta nằm ở rìa phía đông thành phố, nhà ga và sân đỗ ở phía bắc sân bay."
@@ -1200,8 +1476,21 @@
     "jva-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Ankavandra (JVA) nằm giữa đất khô và vùng đất trống.",
     "jva-chatgpt-01.webp": "Trên một dải cỏ khô dưới những ngọn núi xanh, một chiếc máy bay cánh quạt một động cơ nhỏ màu trắng đỗ trong khi đám đông dân làng tụ tập quanh nó."
   },
+  "KHH": {
+    "khh-baidu-1.webp": "Phía trước nhà ga Sân bay Quốc tế Kaohsiung, vách kính bao quanh bên dưới mái hình tam giác.",
+    "khh-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Kaohsiung (KHH) và khu vực xung quanh hiện rõ."
+  },
   "KIX": {
     "kix-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Kansai (KIX)."
+  },
+  "KMG": {
+    "kmg-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Kunming Changshui (KMG) và khu vực xung quanh hiện rõ.",
+    "kmg-baidu-1.webp": "Bên ngoài nhà ga Sân bay Kunming Changshui — mặt tiền kính phản chiếu mây, phía trước là tấm đá ghi “Kunming International Airport”."
+  },
+  "KNH": {
+    "knh-baidu-1.webp": "Trên sân đỗ Sân bay Kinmen, hành khách lên máy bay bằng cầu thang di động, bên cạnh là xe mặt đất.",
+    "knh-baidu-2.webp": "Bên ngoài nhà ga Sân bay Kinmen, lá cờ Trung Hoa Dân Quốc được vẽ trên tường và xe phục vụ màu vàng đỗ bên ngoài.",
+    "knh-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Kinmen (KNH) và khu vực xung quanh hiện rõ."
   },
   "KQA": {
     "kqa-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Akutan (KQA) nằm giữa đất khô và vùng đất trống."
@@ -1214,11 +1503,34 @@
     "kso-chatgpt-04.webp": "Lúc chạng vạng, mặt trước nhà ga vắng vẻ, biển hiệu sáng cam ấm trong nắng cuối trong khi bóng dài trải trên mặt lát.",
     "kso-chatgpt-05.webp": "Nhiều máy bay chở khách với các màu sơn khác nhau đỗ tại cầu ống của nhà ga, một chiếc là máy bay AEGEAN xanh trắng."
   },
+  "KTM": {
+    "ktm-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Tribhuvan (KTM) và khu vực xung quanh hiện rõ.",
+    "ktm-baidu-1.webp": "Nhà ga Sân bay Quốc tế Tribhuvan màu cam, tháp không lưu vươn lên từ mái, bên ngoài có xe ô tô và xe buýt."
+  },
   "KUL": {
     "kul-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Kuala Lumpur (KUL)."
   },
+  "KWE": {
+    "kwe-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Guiyang Longdongbao (KWE) và khu vực xung quanh hiện rõ.",
+    "kwe-baidu-1.webp": "Bên trong nhà ga Sân bay Guiyang Longdongbao: những cột trắng phân nhánh đỡ trần gỗ thanh mảnh trên sảnh rộng, nơi hành khách xếp hàng tại các quầy.",
+    "kwe-baidu-2.webp": "Một máy bay Spring Airlines đang lăn bánh tại sân bay Guiyang, phía sau là những đỉnh núi đá vôi bao quanh thành phố."
+  },
+  "KWI": {
+    "kwi-baidu-1.webp": "Các làn xếp hàng tại cổng khởi hành Sân bay Quốc tế Kuwait — hành khách chờ giữa những rào chắn màu vàng, bên dưới màn hình thông tin chuyến bay.",
+    "kwi-baidu-2.webp": "Sảnh nhà ga Sân bay Quốc tế Kuwait — tên sân bay bằng tiếng Ả Rập và tiếng Anh phía trên lối vào, hành khách đi qua cùng hành lý.",
+    "kwi-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Kuwait (KWI) và khu vực xung quanh hiện rõ."
+  },
+  "KYD": {
+    "kyd-baidu-1.webp": "Nhà ga Sân bay Lanyu, dòng chữ “Lanyu Airport” trên mặt tiền đỏ trắng.",
+    "kyd-baidu-2.webp": "Một máy bay cánh quạt hai động cơ trên sân đỗ Sân bay Lanyu, phía sau là sườn đồi xanh và biển.",
+    "kyd-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Lanyu (KYD) và khu vực xung quanh hiện rõ."
+  },
   "LAK": {
     "lak-sat-1.webp": "Ảnh vệ tinh: Sân bay Aklavik/Freddie Carmichael (LAK) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "LAS": {
+    "las-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Harry Reid (LAS) và khu vực xung quanh hiện rõ.",
+    "las-baidu-1.webp": "Ảnh nhìn từ trên cao về Sân bay Quốc tế Harry Reid (LAS), cho thấy các sảnh nhà ga, vị trí đỗ máy bay và đường băng."
   },
   "LAX": {
     "lax-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế Los Angeles (LAX) nằm trong mạng lưới thành phố và đường bộ."
@@ -1235,6 +1547,11 @@
   },
   "LCG": {
     "lcg-sat-1.webp": "Ảnh vệ tinh: đường băng của A Coruña nằm giữa những ngọn đồi ven biển Galicia, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "LED": {
+    "led-baidu-1.webp": "Tại cổng của Pulkovo, một máy bay Rossiya trên sân đỗ, phía sau là biển “SAINT PETERSBURG” trên nhà ga và tháp không lưu hình tròn ở bên phải.",
+    "led-baidu-2.webp": "Bên trong nhà ga mới của Pulkovo, trần vàng nhiều mặt cắt chạy dọc trục phía trên khu làm thủ tục và kiểm tra an ninh.",
+    "led-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Pulkovo (LED) và khu vực xung quanh hiện rõ."
   },
   "LEI": {
     "lei-sat-1.webp": "Ảnh vệ tinh: đường băng chạy dọc bờ biển Almería, nhà ga và sân đỗ ở đầu phía tây và Địa Trung Hải bên dưới."
@@ -1266,6 +1583,16 @@
     "lhr-baidu-2.webp": "Từ cửa sổ nhà ga: một chiếc máy bay Japan Airlines tại cửa ra, phía xa là tháp không lưu Heathrow.",
     "lhr-baidu-3.webp": "Heathrow lúc chạng vạng — các nhà ga sáng đèn, một chiếc máy bay Etihad đỗ trên sân đỗ."
   },
+  "LHW": {
+    "lhw-baidu-1.webp": "Trên đường dẫn tới Sân bay Lanzhou Zhongchuan — mái nhà ga trắng hình sóng phía trước, bên dưới những biển chỉ dẫn màu xanh treo trên cao.",
+    "lhw-baidu-2.webp": "Mặt tiền nhà ga Sân bay Lanzhou Zhongchuan — những mái trắng xếp lớp vươn lên từ các cột vòm, chữ “兰州” màu đỏ trên nóc và xe cộ ở lề đường.",
+    "lhw-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Lanzhou Zhongchuan (LHW) và khu vực xung quanh hiện rõ."
+  },
+  "LIM": {
+    "lim-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Jorge Chávez (LIM) và khu vực xung quanh hiện rõ.",
+    "lim-baidu-1.webp": "Ảnh nhìn từ trên cao về sân bay Lima, nhà ga dài trải trên vùng đất hoang mạc, phía xa là Thái Bình Dương và bên phải là các công trình đào đắp đang thi công.",
+    "lim-baidu-2.webp": "Hành khách xếp hàng tại các quầy trong sảnh đến, bên trái có tác phẩm điêu khắc kim loại treo trên trần."
+  },
   "LIS": {
     "lis-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Humberto Delgado (LIS)."
   },
@@ -1278,8 +1605,20 @@
   "LME": {
     "lme-sat-1.webp": "Ảnh vệ tinh: Sân bay Le Mans-Arnage (LME) được bao quanh bởi thảm thực vật xanh và đồng ruộng."
   },
+  "LOS": {
+    "los-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Murtala Muhammed (LOS) và khu vực xung quanh hiện rõ.",
+    "los-baidu-1.webp": "Nhà ga và tháp không lưu của sân bay Lagos, nhìn qua một bãi đỗ xe kín chỗ.",
+    "los-baidu-2.webp": "Bên ngoài nhà ga mới của Sân bay Quốc tế Murtala Muhammed ở Lagos, mặt tiền kính và mái tối màu phía trên sân trước ướt đẫm mưa."
+  },
+  "LPA": {
+    "lpa-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Gran Canaria (LPA) và khu vực xung quanh hiện rõ.",
+    "lpa-baidu-1.webp": "Khu làm thủ tục Sân bay Gran Canaria — hành khách xếp hàng tại làn ưu tiên bên cạnh quầy hạng thương gia của Turkish Airlines."
+  },
   "LTI": {
     "lti-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Altai (LTI) nằm giữa thị trấn, đồng ruộng và cây cối."
+  },
+  "LTN": {
+    "ltn-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay London Luton (LTN) và khu vực xung quanh hiện rõ."
   },
   "LTS": {
     "lts-sat-1.webp": "Trong ảnh vệ tinh, Căn cứ Không quân Altus (LTS) hòa vào thị trấn, đồng ruộng và cây cối xung quanh.",
@@ -1295,8 +1634,33 @@
     "lym-sat-1.webp": "Ảnh vệ tinh: Sân bay Ashford (LYM) được bao quanh bởi thảm thực vật xanh và đồng ruộng.",
     "lym-chatgpt-01.webp": "Ảnh chụp từ trên cao một đường băng thẳng cắt chéo qua cánh đồng xanh, phía xa là một thị trấn ven biển trải rộng."
   },
+  "LZN": {
+    "lzn-baidu-1.webp": "Phía trước nhà ga Sân bay Matsu Nangan với mái ngói đỏ, nhìn qua bãi đỗ xe và vòng xuyến.",
+    "lzn-baidu-2.webp": "Dòng chữ “Matsu Nangan Airport” màu vàng phía trên lối vào nhà ga.",
+    "lzn-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Matsu Nangan (LZN) và khu vực xung quanh hiện rõ."
+  },
+  "MAA": {
+    "maa-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Chennai (MAA) và khu vực xung quanh hiện rõ.",
+    "maa-baidu-1.webp": "Sân trước nhà ga Chennai, hàng mái che trắng hình chóp phía trên dãy taxi đang chờ, bên phải có cầu vượt trên cao."
+  },
   "MAD": {
     "mad-sat-1.webp": "Ảnh vệ tinh: Sân bay Madrid–Barajas (MAD) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "MAN": {
+    "man-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Manchester (MAN) và khu vực xung quanh hiện rõ."
+  },
+  "MCI": {
+    "mci-baidu-1.webp": "Bên ngoài nhà ga Kansas City, những cột trắng hình chữ Y nâng mái che rộng ốp gỗ phía trên hành khách và xe cộ.",
+    "mci-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Kansas City (MCI) và khu vực xung quanh hiện rõ."
+  },
+  "MCO": {
+    "mco-baidu-2.webp": "Nhà ga Nam của Orlando — vòng trắng khổng lồ uốn lượn trên mặt tiền kính cong, phía dưới là mái đón khách và xe mặt đất.",
+    "mco-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Orlando (MCO) và khu vực xung quanh hiện rõ."
+  },
+  "MDE": {
+    "mde-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Jose Maria Córdova (MDE) và khu vực xung quanh hiện rõ.",
+    "mde-baidu-1.webp": "Tháp không lưu Sân bay Jose Maria Córdova, tên sân bay in trên thân tháp màu trắng, phía trước là nhà ga và bãi đỗ xe.",
+    "mde-baidu-2.webp": "Tác phẩm điêu khắc hình ngôi sao tỏa tia màu đỏ trước tháp không lưu, dòng chữ “JOSE MARIA CORDOVA” nổi bật trên nền trời xanh."
   },
   "MDQ": {
     "mdq-sat-1.webp": "Ảnh vệ tinh: đường băng của Mar del Plata nằm giữa bờ biển Đại Tây Dương và đồng bằng pampa, nhà ga và sân đỗ ở bên cạnh.",
@@ -1308,11 +1672,19 @@
     "mdq-chatgpt-06.webp": "Một máy bay chở khách xanh trắng lăn dọc đường băng ngoài hàng rào dây, cỏ khô ở tiền cảnh dưới bầu trời nhạt.",
     "mdq-chatgpt-07.webp": "Hành khách xếp hàng trước cửa lên máy bay quốc tế, nền trắng bóng phản chiếu những dải đèn trần dài."
   },
+  "MDW": {
+    "mdw-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Chicago Midway (MDW) và khu vực xung quanh hiện rõ."
+  },
   "MEL": {
     "mel-sat-1.webp": "Ảnh vệ tinh: Sân bay Melbourne (MEL), với các đường băng, quần thể nhà ga và khu công nghiệp Tullamarine."
   },
   "MEX": {
     "mex-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Mexico City (MEX) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "MFK": {
+    "mfk-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Matsu Beigan (MFK) và khu vực xung quanh hiện rõ.",
+    "mfk-baidu-1.webp": "Mặt tiền nhà ga Sân bay Matsu Beigan với tường ốp đá xám và những dãy cửa sổ hướng ra sân trước.",
+    "mfk-baidu-2.webp": "Hai chiếc taxi vàng chờ bên ngoài lối vào nhà ga, dưới biển hiệu trên mái “Matsu Beigan Airport”."
   },
   "MGQ": {
     "mgq-sat-1.webp": "Ảnh vệ tinh: đường băng của Mogadishu nằm bên bờ Ấn Độ Dương, nhà ga và sân đỗ bên cạnh, xung quanh là thành phố và bãi biển."
@@ -1340,11 +1712,25 @@
   "MRD": {
     "mrd-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Alberto Carnevalli (MRD) hòa vào thảm thực vật xanh và đồng ruộng xung quanh."
   },
+  "MSP": {
+    "msp-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Minneapolis–Saint Paul / Wold–Chamberlain Field (MSP) và khu vực xung quanh hiện rõ.",
+    "msp-baidu-1.webp": "Các cổng tại Sân bay Minneapolis–Saint Paul — máy bay Delta xếp hàng dọc nhà ga, phía chân trời là các tòa nhà thành phố."
+  },
+  "MSY": {
+    "msy-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Louis Armstrong New Orleans (MSY) và khu vực xung quanh hiện rõ."
+  },
+  "MTY": {
+    "mty-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Monterrey (MTY) và khu vực xung quanh hiện rõ."
+  },
   "MUC": {
     "muc-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay München (MUC) nằm trong mạng lưới thành phố và đường bộ."
   },
   "MXP": {
     "mxp-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Milan Malpensa (MXP) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "MZG": {
+    "mzg-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Magong (MZG) và khu vực xung quanh hiện rõ.",
+    "mzg-baidu-2.webp": "Dòng chữ “Penghu Airport” màu xanh trên nóc nhà ga, bên cạnh là biển ghi tọa độ sân bay."
   },
   "MZI": {
     "mzi-sat-1.webp": "Ảnh vệ tinh: Sân bay Mopti (MZI) nằm giữa đất khô và vùng đất trống.",
@@ -1355,6 +1741,29 @@
     "mzi-chatgpt-05.webp": "Du khách đội mũ rộng vành đi về phía một chiếc máy bay cánh quạt hai động cơ nhỏ trên sân đỗ đỏ nhạt trong khi một xe bồn nhiên liệu chờ bên cạnh.",
     "mzi-chatgpt-06.webp": "Trong màn sương trắng phẳng lặng, một người lính mặc ngụy trang đứng trên bê tông nhìn một chiếc máy bay cánh quạt hai động cơ màu vàng cát di chuyển qua sân đỗ.",
     "mzi-chatgpt-07.webp": "Một máy bay có biểu tượng đuôi xanh chờ bên kia đám hành lý trải trên nền đất khô, nơi nhân viên hành lý xếp túi lên xe."
+  },
+  "NBO": {
+    "nbo-baidu-1.webp": "Ảnh nhìn từ trên cao về Sân bay Quốc tế Jomo Kenyatta — nhà ga hình tròn bao quanh bãi đỗ xe trung tâm, máy bay trên sân đỗ và tháp không lưu phía xa.",
+    "nbo-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Jomo Kenyatta (NBO) và khu vực xung quanh hiện rõ."
+  },
+  "NCE": {
+    "nce-baidu-1.webp": "Ảnh nhìn từ trên cao về Sân bay Nice-Côte d'Azur trên mũi đất nhô ra Địa Trung Hải, đường băng và nhà ga nằm giữa biển và thành phố.",
+    "nce-baidu-2.webp": "Nhìn từ trên cao, nhà ga, sân đỗ và bãi đỗ xe của Nice trải rộng bên dưới những đám mây giông nặng nề.",
+    "nce-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Nice-Côte d'Azur (NCE) và khu vực xung quanh hiện rõ."
+  },
+  "NGB": {
+    "ngb-baidu-1.webp": "Sảnh làm thủ tục Sân bay Ningbo Lishe — các dãy quầy và rào xếp hàng dưới vòm giàn ống trắng, ánh sáng ban ngày chiếu vào từ cửa sổ cao hai bên.",
+    "ngb-baidu-2.webp": "Một chiếc Air China A320 trong bộ sơn sặc sỡ “Ningbo” lăn bánh qua nhà ga Sân bay Ningbo Lishe — chữ “Ningbo” màu đỏ trên mái và tháp không lưu ở bên phải.",
+    "ngb-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Ningbo Lishe (NGB) và khu vực xung quanh hiện rõ."
+  },
+  "NKG": {
+    "nkg-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Nanjing Lukou (NKG) và khu vực xung quanh hiện rõ.",
+    "nkg-baidu-1.webp": "Nhà ga Sân bay Nanjing Lukou, nơi một máy bay Juneyao Air chờ dưới dòng chữ “Nanjing” màu đỏ trên mái, cầu hành khách áp vào cửa máy bay."
+  },
+  "NNG": {
+    "nng-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Nanning Wuxu (NNG) và khu vực xung quanh hiện rõ.",
+    "nng-baidu-1.webp": "Bên ngoài nhà ga Sân bay Nanning Wuxu, mái cong uốn lượn trông như đôi cánh dang rộng.",
+    "nng-baidu-2.webp": "Một máy bay OK Air đỗ trên sân đỗ trước nhà ga Sân bay Nanning Wuxu, phía sau là tháp không lưu và biển đường bộ “Wuxu Airport Station”."
   },
   "NRT": {
     "nrt-baidu-1.webp": "Sảnh khởi hành nội địa của Nhà ga 1, biển ghi “Domestic Departures” bằng tiếng Nhật, tiếng Trung, tiếng Hàn và tiếng Anh.",
@@ -1392,14 +1801,30 @@
     "oes-chatgpt-05.webp": "Một chiếc máy bay cánh quạt hai động cơ trắng sọc xanh đỗ mũi về phía máy ảnh trên mặt lát, phía sau là hàng cây.",
     "oes-chatgpt-06.webp": "Đây là ảnh chụp màn hình bản đồ có ghim đỏ đánh dấu Aeroclub San Antonio Oeste, bên cạnh khu bảo tồn vịnh và đường ven biển."
   },
+  "OKA": {
+    "oka-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Naha (OKA) và khu vực xung quanh hiện rõ.",
+    "oka-baidu-1.webp": "Máy bay ANA xếp hàng trên sân đỗ tại Naha — các đuôi máy bay chồng lên nhau, phía xa là biển và con đường đắp cao.",
+    "oka-baidu-2.webp": "Bức tranh tường trong nhà ga Naha — những nhân vật trong trang phục Okinawa trước Thành Shuri, phía trên là băng rôn ủng hộ việc trùng tu tòa thành."
+  },
   "OKC": {
     "okc-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Will Rogers World (OKC) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "OPO": {
+    "opo-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Francisco de Sá Carneiro (OPO) và khu vực xung quanh hiện rõ."
   },
   "ORD": {
     "ord-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế O'Hare (ORD) nằm trong mạng lưới thành phố và đường bộ."
   },
   "ORY": {
     "ory-sat-1.webp": "Ảnh vệ tinh: Sân bay Paris Orly (ORY) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
+  },
+  "OSL": {
+    "osl-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Oslo-Gardermoen (OSL) và khu vực xung quanh hiện rõ.",
+    "osl-baidu-1.webp": "Bên trong nhà ga Oslo Gardermoen, hành khách chờ trên ghế dài cạnh cổng A2, sàn gỗ và vách kính nhìn ra sân đỗ."
+  },
+  "OTP": {
+    "otp-baidu-1.webp": "Nhà ga Sân bay Quốc tế Bucharest Henri Coandă — dòng chữ “International Henri Coandă Bucharest” dọc theo mái xanh, phía trước có xe ô tô đỗ.",
+    "otp-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Bucharest Henri Coandă (OTP) và khu vực xung quanh hiện rõ."
   },
   "OUD": {
     "oud-sat-1.webp": "Ảnh vệ tinh: hai đường băng của Oujda nằm trên đồng bằng khô cằn phía đông Maroc, nhà ga và sân đỗ ở giữa.",
@@ -1420,11 +1845,42 @@
     "ovd-chatgpt-06.webp": "Nhiều máy bay chở khách đỗ cạnh nhau trên sân đỗ trước nhà ga dưới bầu trời nhiều mây, cầu thang lên máy bay đứng bên một chiếc đuôi xanh.",
     "ovd-chatgpt-07.webp": "Nền đá bóng chạy dọc hành lang khởi hành qua những dãy ghế dưới trần lam vàng, cuối hành lang là biển quán cà phê."
   },
+  "PDX": {
+    "pdx-baidu-1.webp": "Lúc màn đêm buông tại PDX, mái kính hình sóng nằm giữa bãi đỗ xe và nhà ga, đèn xe kéo thành vệt trên đường phía dưới.",
+    "pdx-baidu-2.webp": "PDX lúc chạng vạng, máy bay đỗ khắp sân đỗ khi đèn nhà ga bật sáng và mặt nước lấp lánh ở phía chân trời.",
+    "pdx-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Portland (PDX) và khu vực xung quanh hiện rõ."
+  },
   "PEK": {
     "pek-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Thủ đô Bắc Kinh (PEK)."
   },
+  "PER": {
+    "per-baidu-2.webp": "Bên trong Sân bay Perth — thang cuốn dưới những biển chỉ dẫn màu xanh ghi “PERTH”, bên cạnh là quảng cáo China Southern.",
+    "per-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Perth (PER) và khu vực xung quanh hiện rõ."
+  },
+  "PHL": {
+    "phl-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Philadelphia (PHL) và khu vực xung quanh hiện rõ.",
+    "phl-baidu-1.webp": "Philadelphia về đêm, những mái nhà ga trắng hình sóng và sân đỗ sáng đèn, ánh sáng thành phố lan tỏa phía xa.",
+    "phl-baidu-2.webp": "Một máy bay American Airlines lăn bánh qua tháp không lưu và cụm tòa nhà ga của sân bay."
+  },
+  "PHX": {
+    "phx-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Phoenix Sky Harbor (PHX) và khu vực xung quanh hiện rõ.",
+    "phx-baidu-2.webp": "Hành khách xếp hàng tại điểm kiểm tra an ninh trong nhà ga Sân bay Phoenix Sky Harbor."
+  },
+  "PIT": {
+    "pit-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Pittsburgh (PIT) và khu vực xung quanh hiện rõ.",
+    "pit-baidu-1.webp": "Tháp không lưu và nhà ga Sân bay Quốc tế Pittsburgh — một máy bay khu vực United Express đỗ tại cổng.",
+    "pit-baidu-2.webp": "Ảnh nhìn từ trên cao về Sân bay Quốc tế Pittsburgh — nhà ga phía ngoài và các sảnh chờ vươn ra khu bay, tháp không lưu ở phía xa."
+  },
   "PKH": {
     "pkh-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Alexion (PKH) hòa vào nước và bờ biển xung quanh."
+  },
+  "PKX": {
+    "pkx-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Beijing Daxing (PKX) và khu vực xung quanh hiện rõ.",
+    "pkx-baidu-1.webp": "Ảnh nhìn từ trên xuống về nhà ga hình ngôi sao của Daxing, máy bay đỗ dọc theo cả năm nhánh."
+  },
+  "PMI": {
+    "pmi-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Palma de Mallorca (PMI) và khu vực xung quanh hiện rõ.",
+    "pmi-baidu-1.webp": "Nhà ga Sân bay Palma de Mallorca nhìn từ bên ngoài, tác phẩm điêu khắc chai thủy tinh khổng lồ trên bãi cỏ và tên sân bay trên mặt tiền."
   },
   "PNR": {
     "pnr-sat-1.webp": "Ảnh vệ tinh: đường băng của Pointe-Noire nằm bên bờ Đại Tây Dương, nhà ga và sân đỗ ở phía đông, xung quanh là thành phố và rừng.",
@@ -1435,8 +1891,21 @@
     "pnr-chatgpt-05.webp": "Dưới bầu trời sáng, mặt kính tối của nhà ga phản chiếu mây, một biển đặt trên mái và taxi nhạt màu lấp đầy bãi đỗ phía trước.",
     "pnr-chatgpt-06.webp": "Bên trong sảnh nhiều tầng của nhà ga, thang cuốn vươn lên bức tường kính đón ánh sáng trong khi mọi người đứng dọc lan can tầng lửng phía trên."
   },
+  "PRG": {
+    "prg-baidu-1.webp": "Ảnh nhìn từ trên cao về Sân bay Václav Havel Prague — nhà ga mái cong cùng hàng cầu hành khách dọc sân đỗ, phía xa là đường băng và cánh đồng.",
+    "prg-baidu-2.webp": "Lúc hoàng hôn, một máy bay British Airways đỗ tại cầu hành khách trong khi nhân viên mặt đất và xe đẩy hành lý làm việc quanh đó.",
+    "prg-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Václav Havel Prague (PRG) và khu vực xung quanh hiện rõ."
+  },
   "PSO": {
     "pso-sat-1.webp": "Ảnh vệ tinh: đường băng của Pasto nằm trong một thung lũng Andes, nhà ga và sân đỗ bên cạnh, xung quanh là núi và đồng ruộng."
+  },
+  "PTY": {
+    "pty-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Tocumen (PTY) và khu vực xung quanh hiện rõ."
+  },
+  "PUS": {
+    "pus-baidu-1.webp": "Một máy bay Korean Air trên sân đỗ Sân bay Busan Gimhae, hành khách lên máy bay bằng thang di động, bên cạnh là xe đẩy hành lý và cọc giao thông.",
+    "pus-baidu-2.webp": "Nhà ga Sân bay Busan Gimhae nhìn từ sân đỗ — dòng chữ “김해 GIMHAE” trên vách kim loại gân xám, bên cạnh là cầu hành khách và cột đèn pha.",
+    "pus-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Gimhae (PUS) và khu vực xung quanh hiện rõ."
   },
   "PVG": {
     "pvg-baidu-1.webp": "Nhà ga Phố Đông nhìn từ cửa sổ cabin — “上海 SHANGHAI” trên mép mái, máy bay China Eastern tại các cửa ra."
@@ -1487,8 +1956,19 @@
   "RCH": {
     "rch-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Almirante Padilla (RCH) nằm giữa thị trấn, đồng ruộng và cây cối."
   },
+  "RDU": {
+    "rdu-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Raleigh-Durham (RDU) và khu vực xung quanh hiện rõ.",
+    "rdu-baidu-1.webp": "Chạng vạng tại lề đường nhà ga, những biển “Bag Claim” dưới bãi đỗ xe phát sáng và mặt tiền kính bắt lấy ánh sáng cuối ngày.",
+    "rdu-baidu-2.webp": "Biển “RDU Welcome” tại lối vào sân bay, phía trên là một máy bay Southwest đang bay ngang bầu trời xanh."
+  },
   "REL": {
     "rel-sat-1.webp": "Ảnh vệ tinh: đường băng của Rawson nằm trên cao nguyên Patagonia, nhà ga và sân đỗ bên cạnh, xung quanh là cây bụi khô và thị trấn."
+  },
+  "RMQ": {
+    "rmq-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Taichung (RMQ) và khu vực xung quanh hiện rõ."
+  },
+  "RSW": {
+    "rsw-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Southwest Florida (RSW) và khu vực xung quanh hiện rõ."
   },
   "RUA": {
     "rua-page-1.webp": "Xe cứu hỏa của sân bay Arua tại gara trong hàng rào vành đai (ảnh từ báo cáo ESIA tháng 7 năm 2025 của Cục Hàng không Dân dụng Uganda về việc mở rộng sân bay Arua).",
@@ -1501,6 +1981,14 @@
   },
   "RUH": {
     "ruh-sat-1.webp": "Trong ảnh vệ tinh, các nhà ga, sân đỗ và đường băng của Sân bay Quốc tế King Khalid (RUH) hiện rõ."
+  },
+  "SAN": {
+    "san-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế San Diego (SAN) và khu vực xung quanh hiện rõ.",
+    "san-baidu-1.webp": "Sân đỗ Sân bay Quốc tế San Diego — máy bay Southwest và JetBlue nối mũi nhau, phía sau là máy bay chở hàng FedEx, trước nhà ga là những cây cọ."
+  },
+  "SAW": {
+    "saw-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Istanbul Sabiha Gökçen (SAW) và khu vực xung quanh hiện rõ.",
+    "saw-baidu-1.webp": "Nhà ga Sân bay Sabiha Gökçen về đêm, tên sân bay sáng đèn dưới mái cong vút phía trên lề đường."
   },
   "SAY": {
     "say-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Siena-Ampugnano (SAY) nằm giữa thảm thực vật xanh và đồng ruộng."
@@ -1543,6 +2031,20 @@
   "SGN": {
     "sgn-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Tân Sơn Nhất (SGN)."
   },
+  "SHA": {
+    "sha-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Shanghai Hongqiao (SHA) và khu vực xung quanh hiện rõ.",
+    "sha-baidu-1.webp": "Nhà ga Sân bay Shanghai Hongqiao nhìn từ đường dẫn vào, dòng chữ “虹橋機場” màu đỏ trên mái in nổi trên những đám mây cao."
+  },
+  "SHE": {
+    "she-baidu-1.webp": "Một máy bay lăn bánh qua nhà ga Sân bay Quốc tế Shenyang Taoxian, dòng chữ “Shenyang” màu đỏ trên mái.",
+    "she-baidu-2.webp": "Nhà ga Sân bay Quốc tế Shenyang Taoxian — đường mái gấp khúc phía trên vách kính, những chữ Hán màu đỏ gắn trên mặt tiền.",
+    "she-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Shenyang Taoxian (SHE) và khu vực xung quanh hiện rõ."
+  },
+  "SHJ": {
+    "shj-baidu-1.webp": "Ảnh nhìn từ trên cao về dãy nhà ga mái vòm trắng của Sharjah, tháp không lưu ở bên phải và những đường băng vươn vào sa mạc.",
+    "shj-baidu-2.webp": "Lúc chạng vạng trên con đường tới sân bay, một vòng xuyến có cây xanh dẫn về phía nhà ga mái vòm của Sharjah ở đằng xa.",
+    "shj-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Sharjah (SHJ) và khu vực xung quanh hiện rõ."
+  },
   "SID": {
     "sid-sat-1.webp": "Ảnh vệ tinh: đường băng của Sal nằm trên bờ biển khô cằn của đảo Cabo Verde, nhà ga và sân đỗ ở phía đông sân bay.",
     "sid-chatgpt-01.webp": "Dưới mái che xanh ghi Partidas và Departures, du khách băng qua con đường sọc trước nhà ga cam trắng.",
@@ -1555,6 +2057,18 @@
   "SIN": {
     "sin-sat-1.webp": "Ảnh vệ tinh: Sân bay Singapore Changi (SIN) được bao quanh bởi thành phố, bờ biển hoặc địa hình, đường băng cắt ngang khung cảnh."
   },
+  "SJO": {
+    "sjo-baidu-1.webp": "Ảnh nhìn từ cửa sổ máy bay phía trên San José — đường băng và đường lăn giữa những cánh đồng xanh và nhà kho, phía xa là những mái nhà đỏ của thị trấn.",
+    "sjo-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Juan Santamaría (SJO) và khu vực xung quanh hiện rõ."
+  },
+  "SJU": {
+    "sju-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Luis Munoz Marin (SJU) và khu vực xung quanh hiện rõ.",
+    "sju-baidu-1.webp": "Đường đưa khách bên ngoài nhà ga, một xe van trắng đỗ ở lề đường, phía sau là phần đỉnh loe rộng của tháp không lưu vươn lên."
+  },
+  "SLC": {
+    "slc-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Salt Lake City (SLC) và khu vực xung quanh hiện rõ.",
+    "slc-baidu-1.webp": "Ảnh nhìn từ trên cao về các nhà ga, sân đỗ và đường băng của sân bay Salt Lake City, phía chân trời là núi và hồ."
+  },
   "SLK": {
     "slk-sat-1.webp": "Ảnh vệ tinh: Sân bay Khu vực Adirondack (SLK) được bao quanh bởi thảm thực vật xanh và đồng ruộng.",
     "slk-chatgpt-01.webp": "Nhà ga gỗ nâu tối có hiên gỗ đồ sộ, phía trước là lối đi bê tông và các luống sỏi dưới bầu trời không mây.",
@@ -1565,6 +2079,13 @@
     "slk-chatgpt-06.webp": "Những dãy ghế gỗ bọc da đặt trên thảm xám, cây xanh bên cửa sổ và một biển nâu chỉ về phía quán cà phê và nhà vệ sinh.",
     "slk-chatgpt-07.webp": "Một chiếc máy bay cánh quạt hai động cơ của Cape Air với hình chim trắng trên đuôi xanh nghỉ trên đường lăn, số đăng ký hiện rõ.",
     "slk-chatgpt-08.webp": "Một chiếc máy bay cánh quạt hai động cơ bay lên ngay sau khi cất cánh, trên hàng cây và đường băng, phía sau là đồi rừng."
+  },
+  "SMF": {
+    "smf-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Sacramento (SMF) và khu vực xung quanh hiện rõ.",
+    "smf-baidu-1.webp": "Bên trong nhà ga Sân bay Sacramento, hành khách mang túi đi qua khu ẩm thực và biển “Gates B4–B11”."
+  },
+  "SNA": {
+    "sna-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế John Wayne Orange County (SNA) và khu vực xung quanh hiện rõ."
   },
   "SNU": {
     "snu-sat-1.webp": "Ảnh vệ tinh: đường băng của Santa Clara nằm giữa thành phố và đồng ruộng ở trung tâm Cuba, nhà ga và sân đỗ ở bên cạnh.",
@@ -1596,8 +2117,15 @@
   "SRG": {
     "srg-sat-1.webp": "Ảnh vệ tinh: đường băng của Semarang nằm gần bờ biển phía bắc Java, nhà ga và sân đỗ ở phía nam sân bay, xung quanh là thành phố và đồng ruộng."
   },
+  "STL": {
+    "stl-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế St. Louis Lambert (STL) và khu vực xung quanh hiện rõ.",
+    "stl-baidu-1.webp": "Tháp không lưu Sân bay St. Louis Lambert vươn lên phía sau nhà ga mái kính cong trong sương mù."
+  },
   "STN": {
     "stn-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay London Stansted (STN) nằm trong mạng lưới thành phố và đường bộ."
+  },
+  "SUB": {
+    "sub-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Juanda (SUB) và khu vực xung quanh hiện rõ."
   },
   "SVD": {
     "svd-baidu-2.webp": "Argyle International sau mưa — một chiếc máy bay LIAT trước nhà ga vòm xanh, sân đỗ ướt phản chiếu bầu trời, đồi xếp lớp dưới mây.",
@@ -1615,6 +2143,11 @@
   "SYD": {
     "syd-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Kingsford Smith Sydney (SYD)."
   },
+  "SYX": {
+    "syx-baidu-1.webp": "Sân đỗ Sân bay Sanya Phoenix, dòng chữ “SAN YA” màu đỏ và các chữ Hán “Tam Á” trên mái nhà ga thấp, phía trên cầu hành khách và xe đẩy hành lý.",
+    "syx-baidu-2.webp": "Về đêm tại Sân bay Sanya Phoenix, một máy bay Shenzhen Airlines lăn bánh qua nhà ga sáng đèn với mái phủ đầy cờ nhiều màu.",
+    "syx-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Sanya Phoenix (SYX) và khu vực xung quanh hiện rõ."
+  },
   "SZX": {
     "szx-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Bảo An Thâm Quyến (SZX), đường băng và nhà ga trên bờ đông cửa sông Châu Giang."
   },
@@ -1628,11 +2161,30 @@
     "tab-chatgpt-06.webp": "Bên trong sảnh làm thủ tục cũ, cột bê tông vươn trên các quầy tím đánh số, rào chắn dây đỏ tạo làn xếp hàng và một đôi người chờ trên ghế băng.",
     "tab-chatgpt-07.webp": "Sau khi trời tối, biển sáng của nhà ga chiếu lên mái che cong trên làn đón trả khách, nơi một chiếc ô tô chờ bên các cột sọc đỏ trắng."
   },
+  "TAO": {
+    "tao-baidu-2.webp": "Tháp không lưu và nhà ga Sân bay Qingdao Jiaodong — tháp có hoa văn hình thoi ở bên trái, bên dưới mái cong vút là cầu hành khách và những chiếc máy bay đỗ.",
+    "tao-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Qingdao Jiaodong (TAO) và khu vực xung quanh hiện rõ."
+  },
   "TAS": {
     "tas-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Islam Karimov Tashkent (TAS)."
   },
+  "TFU": {
+    "tfu-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Chengdu Tianfu (TFU) và khu vực xung quanh hiện rõ.",
+    "tfu-baidu-1.webp": "Ảnh nhìn từ trên cao về Sân bay Chengdu Tianfu, hai cánh nhà ga uốn cong vươn ra hai bên một trung tâm hình tròn được bao quanh bởi cây xanh.",
+    "tfu-baidu-2.webp": "Khu kiểm tra an ninh khởi hành nội địa, nơi băng rôn đỏ mang tên sân bay, hành khách cùng hành lý tiến về các làn kiểm tra."
+  },
   "TGZ": {
     "tgz-sat-1.webp": "Ảnh vệ tinh: đường băng của Tuxtla Gutiérrez nằm trong một thung lũng Chiapas, nhà ga và sân đỗ bên cạnh, xung quanh là núi và đồng ruộng."
+  },
+  "TLV": {
+    "tlv-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Ben Gurion (TLV) và khu vực xung quanh hiện rõ.",
+    "tlv-baidu-1.webp": "Bức tường biển “Welcome to Israel” với chữ Do Thái bên trong Sân bay Ben Gurion.",
+    "tlv-baidu-2.webp": "Bên ngoài một nhà ga Sân bay Ben Gurion, tháp không lưu hiện ra phía sau tòa nhà mặt kính."
+  },
+  "TNA": {
+    "tna-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Jinan Yaoqiang (TNA) và khu vực xung quanh hiện rõ.",
+    "tna-baidu-1.webp": "Trước nhà ga Sân bay Jinan Yaoqiang — một máy bay China Eastern trên sân đỗ bên dưới dòng chữ đỏ “JINAN INTERNATIONAL AIRPORT” trên mái.",
+    "tna-baidu-2.webp": "Sảnh khởi hành Sân bay Jinan Yaoqiang — mái giàn không gian màu trắng phía trên và biển chỉ dẫn tới các cổng nội địa B13–B32."
   },
   "TND": {
     "tnd-sat-1.webp": "Ảnh vệ tinh: Sân bay Alberto Delgado (TND) được bao quanh bởi thảm thực vật xanh và đồng ruộng.",
@@ -1641,11 +2193,28 @@
     "tnd-chatgpt-03.webp": "Một ảnh chụp màn hình trò chơi khác ghép nhà ga một tầng mái bằng màu xanh mòng két với một xe khách xanh trắng đỗ bên ngoài, cọ và hàng rào cây dọc lề đường, bảng nhiệm vụ nổi ở bên trái.",
     "tnd-chatgpt-04.webp": "Hai máy bay hạng nhẹ đỗ trên sân đỗ trước một hàng cột sọc đỏ trắng, nhà ga cũ mái cam ở bên trái và cỏ ngập nắng xung quanh."
   },
+  "TNN": {
+    "tnn-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Tainan (TNN) và khu vực xung quanh hiện rõ.",
+    "tnn-baidu-1.webp": "Phía trước nhà ga Sân bay Tainan, đầu hồi hình vòm và bến taxi ở sân trước."
+  },
+  "TPA": {
+    "tpa-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Tampa (TPA) và khu vực xung quanh hiện rõ.",
+    "tpa-baidu-1.webp": "Ảnh nhìn từ trên cao về nhà ga phía ngoài hình tròn và các sảnh chờ phía khu bay của Tampa, bên dưới là một chiếc Southwest 737 đang lăn bánh."
+  },
   "TPE": {
     "tpe-sat-1.webp": "Ảnh vệ tinh: Sân bay Quốc tế Taoyuan (TPE), với các đường băng song song, nhà ga và các thị trấn xung quanh."
   },
   "TQD": {
     "tqd-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Căn cứ Không quân Al Taqaddum (TQD) nằm giữa đất khô và vùng đất trống."
+  },
+  "TSA": {
+    "tsa-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Taipei Songshan (TSA) và khu vực xung quanh hiện rõ.",
+    "tsa-baidu-1.webp": "Một máy bay China Airlines lăn bánh trên đường băng của Songshan, phía sau là đường chân trời Taipei."
+  },
+  "TSN": {
+    "tsn-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Tianjin Binhai (TSN) và khu vực xung quanh hiện rõ.",
+    "tsn-baidu-1.webp": "Nhà ga Sân bay Tianjin Binhai, chữ “天津” màu đỏ trên mái cong, phía dưới là bãi đỗ xe mặt đất đông kín.",
+    "tsn-baidu-2.webp": "Nhà ga Sân bay Tianjin Binhai nhìn từ sân trước — mái đua khổng lồ che vách kính, bên trên là chữ “天津” màu đỏ."
   },
   "TTQ": {
     "ttq-page-1.webp": "Dải băng Tortuguero — một chiếc Cessna Caravan của Nature Air (TI-BDY) trên mặt nhựa, chòi chờ nhỏ mái xanh và rừng mưa ngay sau cánh (ảnh: Sebastian Arndt / Flugzeugbilder.de).",
@@ -1655,12 +2224,32 @@
     "ttq-chatgpt-04.webp": "Một chiếc máy bay cánh quạt trắng đỗ nghiêng trên sân đỗ, đuôi sọc đỏ xanh, số đăng ký trên thân, xung quanh là cọ và bầu trời xanh thẳm.",
     "ttq-chatgpt-05.webp": "Trên bờ nước nhiệt đới, một chòi gỗ mái xanh nằm trong bóng cây trong khi một con diệc đứng trên cỏ phía trên mặt nước tối phẳng lặng."
   },
+  "TTT": {
+    "ttt-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Taitung (TTT) và khu vực xung quanh hiện rõ.",
+    "ttt-baidu-1.webp": "Nhà ga Sân bay Taitung với đầu hồi hình tam giác và biển hiệu xanh, tháp không lưu ở bên trái."
+  },
+  "TYN": {
+    "tyn-baidu-1.webp": "Nhà ga Sân bay Quốc tế Taiyuan Wusu — chữ “Taiyuan” màu đỏ và dòng chữ “Taiyuan International Airport” trên mái, xe ô tô đỗ bên dưới tầng khởi hành.",
+    "tyn-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Taiyuan Wusu (TYN) và khu vực xung quanh hiện rõ."
+  },
   "UAM": {
     "uam-sat-1.webp": "Trong ảnh vệ tinh, Căn cứ Không quân Andersen (UAM) hòa vào nước và bờ biển xung quanh."
+  },
+  "UPG": {
+    "upg-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Sultan Hasanuddin (UPG) và khu vực xung quanh hiện rõ."
+  },
+  "URC": {
+    "urc-baidu-2.webp": "Nhà ga và tháp không lưu Sân bay Ürümqi Tianshan với dãy Tianshan phủ tuyết phía sau, một máy bay đang bay qua trên đầu.",
+    "urc-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Ürümqi Tianshan (URC) và khu vực xung quanh hiện rõ."
   },
   "VBA": {
     "vba-sat-1.webp": "Ảnh vệ tinh: một đường băng chạy qua đồi xanh ở miền trung Myanmar, sân đỗ nhỏ và nhà ga ở bên cạnh.",
     "vba-chatgpt-01.webp": "Một cổng đá tối màu mang chữ vàng trên nền chữ Miến Điện, phía sau là mái nhà ga đỏ vươn lên dưới bầu trời xám phẳng."
+  },
+  "VCP": {
+    "vcp-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Viracopos (VCP) và khu vực xung quanh hiện rõ.",
+    "vcp-baidu-1.webp": "Dòng chữ “Aeroporto Internacional de Viracopos” màu xanh trên vách kính của nhà ga.",
+    "vcp-baidu-2.webp": "Một xe đẩy chất đầy hành lý bên cạnh mái vòm trắng của nhà ga khi hai nhân viên đi ngang qua."
   },
   "VIE": {
     "vie-sat-1.webp": "Ảnh vệ tinh: các nhà ga, đường băng và thành phố xung quanh tại Sân bay Quốc tế Viên (VIE)."
@@ -1693,6 +2282,9 @@
   "WAQ": {
     "waq-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Antsalova (WAQ) nằm giữa thị trấn, đồng ruộng và cây cối."
   },
+  "WAW": {
+    "waw-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Warsaw Chopin (WAW) và khu vực xung quanh hiện rõ."
+  },
   "WKK": {
     "wkk-sat-1.webp": "Trên ảnh vệ tinh, đường băng của Sân bay Aleknagik / New (WKK) nằm giữa thảm thực vật xanh và đồng ruộng.",
     "wkk-chatgpt-01.webp": "Trong ánh chiều thấp, một chiếc máy bay cánh quạt hai động cơ nghỉ trên sân đỗ sỏi, vài túp lều tôn rải rác trên đồng cỏ rộng và những ngọn đồi tròn quấn mây phía xa."
@@ -1700,8 +2292,26 @@
   "WMR": {
     "wmr-sat-1.webp": "Ảnh vệ tinh: Sân bay Mananara Nord (WMR) được bao quanh bởi nước và bờ biển."
   },
+  "WOT": {
+    "wot-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Wang'an (WOT) và khu vực xung quanh hiện rõ.",
+    "wot-baidu-1.webp": "Nhà ga nhỏ gọn và tháp không lưu trên mái của Sân bay Wang'an, với biển “Wang'an Airport” trên tường."
+  },
+  "WUH": {
+    "wuh-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Wuhan Tianhe (WUH) và khu vực xung quanh hiện rõ.",
+    "wuh-baidu-1.webp": "Một máy bay Hainan Airlines trên sân đỗ trước nhà ga Sân bay Wuhan Tianhe, trên mái ghi “WUHAN TIANHE AIRPORT”.",
+    "wuh-baidu-2.webp": "Nhìn từ cửa sổ máy bay tại Wuhan Tianhe — một máy bay Air China ở cổng, chữ Hán “Vũ Hán” trên mái nhà ga và tháp không lưu loe rộng phía xa."
+  },
+  "XIY": {
+    "xiy-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Xi'an Xianyang (XIY) và khu vực xung quanh hiện rõ.",
+    "xiy-baidu-1.webp": "Tháp không lưu và nhà ga Sân bay Xi'an Xianyang, với chữ “Xi'an” màu đỏ lớn trên mái và hai chiếc Air Changan 737 tại các cổng."
+  },
   "XJD": {
     "xjd-sat-1.webp": "Ảnh vệ tinh: các đường băng song song và sân đỗ lớn của Căn cứ Không quân Al Udeid, với các tòa nhà căn cứ ở phía đông sân bay."
+  },
+  "XMN": {
+    "xmn-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Xiamen Gaoqi (XMN) và khu vực xung quanh hiện rõ.",
+    "xmn-baidu-1.webp": "Sân bay Xiamen Gaoqi: một máy bay XiamenAir trên đường lăn trước nhà ga mang dòng chữ “XIAMEN AIRPORT”, thành phố chen chúc trên những ngọn đồi phía sau.",
+    "xmn-baidu-2.webp": "Một máy bay XiamenAir đang tiếp cận cuối để hạ cánh trên Sân bay Gaoqi, phía dưới là dòng xe đi qua biển đường bộ màu xanh “高崎机场 Gaoqi Airport”."
   },
   "YAA": {
     "yaa-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Anahim Lake (YAA) hòa vào thảm thực vật xanh và đồng ruộng xung quanh."
@@ -1724,11 +2334,21 @@
   "YPJ": {
     "ypj-sat-1.webp": "Trong ảnh vệ tinh, Sân bay Aupaluk (YPJ) hòa vào thị trấn, đồng ruộng và cây cối xung quanh."
   },
+  "YUL": {
+    "yul-baidu-1.webp": "Sân đỗ Sân bay Montreal Trudeau lúc chạng vạng — mặt tiền hình tam giác sáng đèn, một máy bay Air Canada ở cầu hành khách.",
+    "yul-baidu-2.webp": "Một máy bay Air Canada cất cánh tại Sân bay Montreal Trudeau, phía sau là tháp không lưu mang dòng chữ “MONTREAL”.",
+    "yul-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Montreal / Pierre Elliott Trudeau (YUL) và khu vực xung quanh hiện rõ."
+  },
   "YVR": {
     "yvr-sat-1.webp": "Trên ảnh vệ tinh, các nhà ga và đường băng của Sân bay Quốc tế Vancouver (YVR) nằm trong mạng lưới thành phố và đường bộ."
   },
   "YXX": {
     "yxx-sat-1.webp": "Ảnh vệ tinh: các đường băng của Abbotsford nằm giữa đồng ruộng và núi trong Thung lũng Fraser, nhà ga và sân đỗ ở bên cạnh."
+  },
+  "YYC": {
+    "yyc-baidu-1.webp": "Bên trong nhà ga Calgary, biển YYC trên một cột làm thủ tục bên dưới trần gỗ và giếng trời.",
+    "yyc-baidu-2.webp": "Ảnh nhìn từ trên cao về nhà ga và các sảnh chờ của Calgary với máy bay tại cổng, bên trái là bãi đỗ xe nhiều tầng và khách sạn.",
+    "yyc-sat-1.webp": "Trong ảnh vệ tinh, bố cục của Sân bay Quốc tế Calgary (YYC) và khu vực xung quanh hiện rõ."
   },
   "YYW": {
     "yyw-sat-1.webp": "Ảnh vệ tinh: một đường băng cắt qua rừng ở bắc Ontario, sân đỗ và nhà ga nhỏ ở điểm giữa.",

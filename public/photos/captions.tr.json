@@ -1,10 +1,4 @@
 {
-  "_readme": [
-    "Türkçe fotoğraf altyazıları, IATA koduna ve ardından görsel dosya adına göre anahtarlanmıştır.",
-    "public/photos/captions/<IATA>.json dosyalarındaki İngilizce altyazılardan çevrilmiştir.",
-    "lib/airport-photos.ts bu dosyayı captions.tr.json olarak okur; burada eksik olan",
-    "havalimanları veya dosyalar İngilizce altyazıya düşer, asla Çinceye düşmez."
-  ],
   "AAA": {
     "aaa-page-1.webp": "Anaa atolü, Uluslararası Uzay İstasyonu'ndan fotoğraflandı (NASA görüntüsü ISS007-E-14624, kamu malı) — dar atol, beyaz resif kenarı ve turkuaz lagünüyle; havalimanı ana adacıkta yer alıyor."
   },
@@ -148,6 +142,11 @@
   "ADB": {
     "adb-sat-1.webp": "Uydu görüntüsü: İzmir'in pistleri ve taksi yolları Ege kıyısındaki ovada uzanıyor; terminal ve apron sahanın güneyinde."
   },
+  "ADD": {
+    "add-baidu-1.webp": "Addis Ababa Bole Uluslararası Havalimanı'nda terminalin dışı — siyah-sarı dubalarla çevrili yolcu indirme alanının gerisinde çok katlı cephe.",
+    "add-baidu-2.webp": "Apronda park etmiş bir Ethiopian Cargo kargo uçağı; arkasında Ethiopian Cargo binası ve uzaktaki tepeler.",
+    "add-sat-1.webp": "Uydu görüntüsünde, Addis Ababa Bole Uluslararası Havalimanı'nın (ADD) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "ADE": {
     "ade-bing-3.webp": "Aden Uluslararası Havalimanı'nın terminali ve kontrol kulesi — duvarda havalimanının Arapça adı, önünde park etmiş iki geri itme traktörü."
   },
@@ -231,6 +230,11 @@
   },
   "AGC": {
     "agc-sat-1.webp": "Uydu görüntüsünde Allegheny County Havalimanı (AGC) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor."
+  },
+  "AGP": {
+    "agp-baidu-1.webp": "Kalkış salonunun içinde, check-in işlemlerine ve kapı tabelalarına yönelen yolcuların üzerinde büyük tavan pervaneleri asılı.",
+    "agp-baidu-2.webp": "Apronda, park pozisyonundaki easyJet yolcu uçağı; ön planda yer ekipmanı, ötede kalkış yapan bir uçak ve arkada dağlar.",
+    "agp-sat-1.webp": "Uydu görüntüsünde, Málaga-Costa del Sol Havalimanı'nın (AGP) yerleşimi ve çevresi açıkça görülüyor."
   },
   "AGQ": {
     "agq-sat-1.webp": "Uydu görüntüsünde Dhokimion Havaalanı'nın (AGQ) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
@@ -877,14 +881,60 @@
   "BCN": {
     "bcn-sat-1.webp": "Uydu görüntüsünde Barselona-El Prat Havalimanı'ndaki (BCN) terminaller, apron ve pistler açıkça görünüyor."
   },
+  "BER": {
+    "ber-sat-1.webp": "Uydu görüntüsünde, Berlin Brandenburg Havalimanı'nın (BER) yerleşimi ve çevresi açıkça görülüyor.",
+    "ber-baidu-1.webp": "Berlin Brandenburg Havalimanı terminalinin cam cephesinde “BERLIN BRANDENBURG AIRPORT” ve “WILLY BRANDT” yazıyor; geniş apronun üzerinde B12 ve B13 kapıları ile yolcu köprüleri yer alıyor.",
+    "ber-baidu-2.webp": "Lufthansa Airbus A320neo (tescil D-AINZ, “Hauptstadtflieger” yazıları ve BER işaretleriyle) Berlin Brandenburg Havalimanı terminalinin önündeki apronda duruyor."
+  },
+  "BET": {
+    "bet-sat-1.webp": "Uydu görüntüsünde, Bethel Havalimanı'nın (BET) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "BIG": {
     "big-sat-1.webp": "Uydu görüntüsü: Allen Ordu Havaalanı (BIG) kasaba, tarım arazileri ve bitki örtüsüyle çevrili."
   },
   "BKK": {
     "bkk-sat-1.webp": "Uydu görüntüsü: Suvarnabhumi Havalimanı'ndaki (BKK) terminaller, pistler ve çevredeki şehir."
   },
+  "BLR": {
+    "blr-baidu-2.webp": "Yağmurla ıslanmış apronda bir Go First Airbus A320; yanında iki bagaj arabası, uzakta yeşil tepeler.",
+    "blr-sat-1.webp": "Uydu görüntüsünde, Bengaluru Kempegowda Uluslararası Havalimanı'nın (BLR) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "BNA": {
+    "bna-sat-1.webp": "Uydu görüntüsünde, Nashville Uluslararası Havalimanı'nın (BNA) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "BNE": {
+    "bne-sat-1.webp": "Uydu görüntüsünde, Brisbane Uluslararası Havalimanı'nın (BNE) yerleşimi ve çevresi açıkça görülüyor.",
+    "bne-baidu-1.webp": "Brisbane Uluslararası terminalinin dışı; çatı hattı boyunca 'Brisbane International' tabelası."
+  },
+  "BOG": {
+    "bog-sat-1.webp": "Uydu görüntüsünde, El Dorado Uluslararası Havalimanı'nın (BOG) yerleşimi ve çevresi açıkça görülüyor.",
+    "bog-baidu-2.webp": "Bogotá El Dorado'da apron — terminal kapılarında LATAM ve Avianca uçakları, arkada şehrin apartman kuleleri."
+  },
+  "BOM": {
+    "bom-sat-1.webp": "Uydu görüntüsünde, Chhatrapati Shivaji Maharaj Uluslararası Havalimanı'nın (BOM) yerleşimi ve çevresi açıkça görülüyor.",
+    "bom-baidu-2.webp": "Mumbai'nin kesişen pistleri ve terminalinin havadan görünümü; batıda Arap Denizi kıyısı."
+  },
+  "BOS": {
+    "bos-sat-1.webp": "Uydu görüntüsünde, Boston Logan Uluslararası Havalimanı'nın (BOS) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "BPS": {
     "bps-sat-1.webp": "Uydu görüntüsü: Porto Seguro'nun pisti Brezilya'nın Atlantik kıyısında orman ile plaj arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "BRU": {
+    "bru-baidu-2.webp": "Brüksel Havalimanı'nın cam cepheli terminali — yolcu köprüsünün yanındaki büyük kırmızı 'b' logosu, kapıda bir Brussels Airlines uçağı.",
+    "bru-sat-1.webp": "Uydu görüntüsünde, Brüksel Havalimanı'nın (BRU) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "BSB": {
+    "bsb-baidu-2.webp": "Brasília'nın yuvarlak ana terminali ve konkorslarının havadan görünümü; apronda yolcu uçakları, çevrede inşaat alanları.",
+    "bsb-sat-1.webp": "Uydu görüntüsünde, Presidente Juscelino Kubitschek Uluslararası Havalimanı'nın (BSB) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "BUD": {
+    "bud-baidu-1.webp": "Budapeşte Terminal 2'ye yüksekten bakış — binayı boydan boya saran dalga biçimli gümüş çatı, apronda yolcu uçakları ve önde tıklım tıklım otopark.",
+    "bud-sat-1.webp": "Uydu görüntüsünde, Budapest Liszt Ferenc Uluslararası Havalimanı'nın (BUD) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "BWI": {
+    "bwi-sat-1.webp": "Uydu görüntüsünde, Baltimore/Washington Uluslararası Thurgood Marshall Havalimanı'nın (BWI) yerleşimi ve çevresi açıkça görülüyor.",
+    "bwi-baidu-1.webp": "Kabin penceresinden, kapılarında bekleyen Southwest uçakları; güneşli aprona yayılmış yer araçları ve bagaj arabaları."
   },
   "BYF": {
     "byf-sat-1.webp": "Uydu görüntüsünde Albert Bray Havalimanı'nın (BYF) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
@@ -906,9 +956,16 @@
   "CAN": {
     "can-sat-1.webp": "Uydu görüntüsü: Guangzhou Baiyun Uluslararası Havalimanı (CAN) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
   },
+  "CCU": {
+    "ccu-sat-1.webp": "Uydu görüntüsünde, Netaji Subhash Chandra Bose Uluslararası Havalimanı'nın (CCU) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "CDG": {
     "cdg-baidu-1.webp": "Charles de Gaulle'ün 1. Terminali içinde — dairesel atriyumdaki 'Bars, Restaurants' sırası cam duvarlarının altında, yanlarından yolcular akıyor.",
     "cdg-baidu-2.webp": "2. Terminale giden yürüyen merdiven — üstteki tabela 'Bagages / Baggage / 行李提取' ve 'Sortie / Exit' yazılarını üç dilde gösteriyor."
+  },
+  "CEB": {
+    "ceb-sat-1.webp": "Uydu görüntüsünde, Mactan Cebu Uluslararası Havalimanı'nın (CEB) yerleşimi ve çevresi açıkça görülüyor.",
+    "ceb-baidu-1.webp": "Gün batımından sonra Mactan-Cebu'da — yolcu köprüsünde bir Cebu Pacific uçağı, altında çalışan yer ekibi ve bagaj arabaları."
   },
   "CFE": {
     "cfe-baidu-2.webp": "İş havacılığı terminali — koyu cephesinde 'départs / departures' yazılı, önünde döner kapı ve indirme şeridi.",
@@ -921,12 +978,35 @@
     "cfe-chatgpt-06.webp": "Bir Air France HOP bölgesel jeti apronda duruyor; yanında bir bagaj yükleyici ve bir yer aracı çalışıyor, ötede tepeler yükseliyor.",
     "cfe-chatgpt-07.webp": "Sırt çantalı bir yolcu, terminalin koyu tentesindeki sarı 'départs' yazısının altındaki döner kapılardan geçiyor."
   },
+  "CGH": {
+    "cgh-sat-1.webp": "Uydu görüntüsünde, Congonhas–Deputado Freitas Nobre Havalimanı'nın (CGH) yerleşimi ve çevresi açıkça görülüyor.",
+    "cgh-baidu-1.webp": "TAM uçakları, “AEROPORTO DE CONGONHAS” yazılı terminalin altındaki kapılarda burunları kapıya dönük park etmiş.",
+    "cgh-baidu-2.webp": "Congonhas'ta apron hareketliliği; hemen arkasında pist ve São Paulo'nun silüeti."
+  },
   "CGK": {
     "cgk-baidu-1.webp": "Soekarno-Hatta terminalinin içinde — gidiş salonunun geometrik tavanı altında telkari desenli kırmızı kemerler duruyor.",
     "cgk-baidu-2.webp": "Biniş koridoru — tropikal bitkilere bakan yeşil kirişler ve camlar, D6 kapısına yönelen sarı bir tabela."
   },
+  "CGO": {
+    "cgo-sat-1.webp": "Uydu görüntüsünde, Zhengzhou Xinzheng Uluslararası Havalimanı'nın (CGO) yerleşimi ve çevresi açıkça görülüyor.",
+    "cgo-baidu-1.webp": "Gün batımı gökyüzü altında, terminalin cam cephesi önünde kapıda bir Shandong Airlines uçağı; çevresinde bagaj arabaları ve bir yakıt tankeri çalışıyor.",
+    "cgo-baidu-2.webp": "Yer hizmeti sırasında yolcu köprüsünde canlı renklerde boyanmış bir uçak; arkasında terminalin uzun yatay çatı hattı."
+  },
+  "CGQ": {
+    "cgq-baidu-1.webp": "Changchun Longjia Uluslararası Havalimanı terminalinin önünde kapıda park etmiş bir Loong Air uçağı; cam cephesi bulutlu gökyüzünü yansıtıyor.",
+    "cgq-sat-1.webp": "Uydu görüntüsünde, Changchun Longjia Uluslararası Havalimanı'nın (CGQ) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "CJS": {
     "cjs-sat-1.webp": "Uydu görüntüsü: Ciudad Juarez'in pistleri Chihuahua Çölü'nün kenarında şehir ile kurak arazi arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "CJU": {
+    "cju-baidu-1.webp": "Gece Jeju — terminal cephesinde JEJU INT'L AIRPORT tabelası yanıyor; solda kontrol kulesi, yolda trafik.",
+    "cju-baidu-2.webp": "Jeju'da yükseltilmiş yoldan bakış; terminal girişinin üzerinde yükselen yuvarlak kontrol kulesi, palmiyeler ve yolcu indirme trafiğiyle çevrili.",
+    "cju-sat-1.webp": "Uydu görüntüsünde, Jeju Uluslararası Havalimanı'nın (CJU) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "CKG": {
+    "ckg-baidu-1.webp": "Chongqing Jiangbei Terminal 3'ün yolcu indirme kenarı — iç hat kalkışları tabelasının üzerinde yüksek beyaz bir gölgelik; tabelada her havayolunun check-in sırası listeleniyor.",
+    "ckg-sat-1.webp": "Uydu görüntüsünde, Chongqing Jiangbei Uluslararası Havalimanı'nın (CKG) yerleşimi ve çevresi açıkça görülüyor."
   },
   "CLO": {
     "clo-sat-1.webp": "Uydu görüntüsü: Cali'nin pisti Cauca Vadisi'nde yer alıyor; terminal ve apron doğusunda, çevrede şehir ve şeker kamışı tarlaları var.",
@@ -938,8 +1018,27 @@
     "clo-chatgpt-06.webp": "Mavi, bulutlarla çizgili bir gökyüzü altında LATAM yazılı bir jet apronda duruyor; terminalin üzerinde beton kontrol kulesi palmiye ağaçlarının yanında yükseliyor.",
     "clo-chatgpt-07.webp": "Bir yolcu uçağı kapısında kameraya bakıyor; sağda terminalden sarkan bir körük ve kırmızı çizgili apronda mavi bir bagaj arabası var."
   },
+  "CLT": {
+    "clt-sat-1.webp": "Uydu görüntüsünde, Charlotte Douglas Uluslararası Havalimanı'nın (CLT) yerleşimi ve çevresi açıkça görülüyor.",
+    "clt-baidu-1.webp": "Havalimanının havadan görünümü; beyaz terminali ve konkors kolları, kapılarda uçaklarla dolu geniş bir aprona yayılmış."
+  },
   "CMF": {
     "cmf-sat-1.webp": "Uydu görüntüsü: pist Chambéry dışındaki yeşil kırlarda uzanıyor; terminal ve apron da yanında."
+  },
+  "CMH": {
+    "cmh-sat-1.webp": "Uydu görüntüsünde, John Glenn Columbus Uluslararası Havalimanı'nın (CMH) yerleşimi ve çevresi açıkça görülüyor.",
+    "cmh-baidu-1.webp": "John Glenn Columbus Uluslararası Havalimanı'nın terminal atriumu; merkezde yürüyen merdivenlerin üzerindeki büyük 'COLUMBUS' mozaik duvarı yer alıyor."
+  },
+  "CMJ": {
+    "cmj-baidu-1.webp": "Qimei Havalimanı'nın küçük terminali; dalgalı boyalı cephesi ve önünde park etmiş scooterlar.",
+    "cmj-sat-1.webp": "Uydu görüntüsünde, Qimei Havalimanı'nın (CMJ) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "CMN": {
+    "cmn-sat-1.webp": "Uydu görüntüsünde, Mohammed V Uluslararası Havalimanı'nın (CMN) yerleşimi ve çevresi açıkça görülüyor.",
+    "cmn-baidu-1.webp": "Kazablanka Mohammed V'te terminalin dışı — çatı hattında yükselen “AEROPORT MOHAMMED V” yazısı, giriş gölgeliğinin altından geçen yolcular."
+  },
+  "CNF": {
+    "cnf-sat-1.webp": "Uydu görüntüsünde, Tancredo Neves Uluslararası Havalimanı'nın (CNF) yerleşimi ve çevresi açıkça görülüyor."
   },
   "COR": {
     "cor-sat-1.webp": "Uydu görüntüsü: Cordoba'nın pistleri şehrin kuzeyinde; terminal ve apron sahanın doğusunda, çevrede tarım arazileri ve konutlar var."
@@ -953,11 +1052,27 @@
   "CPT": {
     "cpt-sat-1.webp": "Uydu görüntüsünde Cape Town Uluslararası Havalimanı'ndaki (CPT) terminaller, apron ve pistler açıkça görünüyor."
   },
+  "CSX": {
+    "csx-sat-1.webp": "Uydu görüntüsünde, Changsha Huanghua Uluslararası Havalimanı'nın (CSX) yerleşimi ve çevresi açıkça görülüyor.",
+    "csx-baidu-1.webp": "Kabin penceresinden kanadın ötesinde, Changsha terminalinde park etmiş bir China Southern uçağı; çatısında 'CHANGSHA' yazıyor.",
+    "csx-baidu-2.webp": "Changsha terminalinin önünde havalanan bir Shandong Airlines uçağı; terminalin kırmızı çatı tabelalarında '长沙 CHANGSHA' yazıyor."
+  },
   "CTD": {
     "ctd-sat-1.webp": "Uydu görüntüsünde Alonso Valderrama Havalimanı (CTD) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
   },
+  "CTS": {
+    "cts-baidu-2.webp": "Ön avludan New Chitose Havalimanı terminali — önünde park etmiş bir otobüs, masmavi gökyüzüne karşı yükselen çatı yapısı.",
+    "cts-sat-1.webp": "Uydu görüntüsünde, New Chitose Havalimanı'nın (CTS) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "CTU": {
+    "ctu-baidu-2.webp": "Kıvrımlı cam cephenin üzerinde kırmızı CHENGDU harfleri ile Shu ve Du karakterleri yükseliyor; sağda küçük bir kule var.",
+    "ctu-sat-1.webp": "Uydu görüntüsünde, Chengdu Shuangliu Uluslararası Havalimanı'nın (CTU) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "CUM": {
     "cum-sat-1.webp": "Uydu görüntüsü: Cumaná'nın pisti Venezuela Karayip kıyısında şehir ile tepeler arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "CUN": {
+    "cun-sat-1.webp": "Uydu görüntüsünde, Cancún Uluslararası Havalimanı'nın (CUN) yerleşimi ve çevresi açıkça görülüyor."
   },
   "CUZ": {
     "cuz-sat-1.webp": "Uydu görüntüsü: Cusco'nun pisti bir And vadisinde yer alıyor; terminal ve apron yanında, çevrede şehir ve yamaçlar var.",
@@ -990,8 +1105,39 @@
     "cya-chatgpt-06.webp": "Batan güneş, duvarında Les Cayes Airport yazan küçük beyaz terminalin arkasındaki apronu altın rengine boyuyor; girişin yanında birkaç yolcu duruyor.",
     "cya-chatgpt-07.webp": "Soluk nane yeşili varış girişi, iki aşağı okun üzerinde Arrivee yazılı beyaz bir tabela taşıyor; önünde mavi korkuluklar ve çalılar var."
   },
+  "CYI": {
+    "cyi-sat-1.webp": "Uydu görüntüsünde, Chiayi Havalimanı'nın (CYI) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "DAC": {
+    "dac-sat-1.webp": "Uydu görüntüsünde, Hazrat Shahjalal Uluslararası Havalimanı'nın (DAC) yerleşimi ve çevresi açıkça görülüyor.",
+    "dac-baidu-1.webp": "İniş takımları açık bir Biman Bangladesh Boeing 777, Dhaka'nın çatıları üzerinde alçaktan son yaklaşmasını yapıyor.",
+    "dac-baidu-2.webp": "Takside ilerleyen bir Biman Bangladesh 777'nin burnu; arkasında havalimanı kenarındaki alçak binalar."
+  },
+  "DAD": {
+    "dad-sat-1.webp": "Uydu görüntüsünde, Da Nang Uluslararası Havalimanı'nın (DAD) yerleşimi ve çevresi açıkça görülüyor.",
+    "dad-baidu-1.webp": "Da Nang Havalimanı terminalinin dışındaki yolcu indirme yolu; sıra sıra kıvrımlı beyaz gölgeliklerle çevrili.",
+    "dad-baidu-2.webp": "Da Nang Havalimanı terminalinin içinde, bitki kaplı duvarın üzerinde parlayan 'Welcome to Da Nang' tabelası."
+  },
+  "DAL": {
+    "dal-sat-1.webp": "Uydu görüntüsünde, Dallas Love Field'ın (DAL) yerleşimi ve çevresi açıkça görülüyor.",
+    "dal-baidu-1.webp": "Dallas Love Field'da apronda taksi yapan bir Southwest uçağı.",
+    "dal-baidu-2.webp": "Gece Dallas Love Field'da terminal yolu — bagajlarıyla yolcular, rölantide bekleyen arabalar ve binada ışıklandırılmış havalimanı adı."
+  },
+  "DCA": {
+    "dca-sat-1.webp": "Uydu görüntüsünde, Ronald Reagan Washington Ulusal Havalimanı'nın (DCA) yerleşimi ve çevresi açıkça görülüyor.",
+    "dca-baidu-1.webp": "Apronda bir American Airlines uçağı; hemen ötesinde Potomac Nehri ve geçen tekneler.",
+    "dca-baidu-2.webp": "Terminalin, otoparklarının ve kontrol kulesinin havadan görünümü; Potomac boyunca dışarı uzanan bir pist."
+  },
   "DEL": {
     "del-sat-1.webp": "Uydu görüntüsünde Indira Gandhi Uluslararası Havalimanı'ndaki (DEL) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "DEN": {
+    "den-sat-1.webp": "Uydu görüntüsünde, Denver Uluslararası Havalimanı'nın (DEN) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "DFW": {
+    "dfw-sat-1.webp": "Uydu görüntüsünde, Dallas Fort Worth Uluslararası Havalimanı'nın (DFW) yerleşimi ve çevresi açıkça görülüyor.",
+    "dfw-baidu-1.webp": "Bir DFW terminalinin içinde, yolcular mağazaların ve kapı tabelalarının altından geçiyor.",
+    "dfw-baidu-2.webp": "Dallas Fort Worth Uluslararası Havalimanı'nda (DFW) terminal kompleksi, çevre yolları ve uçak park yerlerinin havadan görünümü."
   },
   "DHF": {
     "dhf-sat-1.webp": "Uydu görüntüsü: Al Dhafra Hava Üssü (DHF) kuru zemin ve çıplak araziyle çevrili."
@@ -999,11 +1145,31 @@
   "DIE": {
     "die-sat-1.webp": "Uydu görüntüsü: Antsiranana'nın pisti kuzey Madagaskar'da tepeler ile kasaba arasında yer alıyor; terminal ve apron da yanında."
   },
+  "DLC": {
+    "dlc-sat-1.webp": "Uydu görüntüsünde, Dalian Zhoushuizi Uluslararası Havalimanı'nın (DLC) yerleşimi ve çevresi açıkça görülüyor.",
+    "dlc-baidu-1.webp": "Dalian Zhoushuizi terminalinin önü; kırmızı '大连 DALIAN' çatı tabelaları, arkalarındaki yamaç şehrine karşı öne çıkıyor.",
+    "dlc-baidu-2.webp": "Yol kenarından Dalian terminali; taksi sırasının üzerindeki kırmızı 'DALIAN AIRPORT' ve '大连周水子' tabelaları."
+  },
+  "DMK": {
+    "dmk-sat-1.webp": "Uydu görüntüsünde, Don Mueang Uluslararası Havalimanı'nın (DMK) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "DOH": {
     "doh-sat-1.webp": "Uydu görüntüsünde Hamad Uluslararası Havalimanı'ndaki (DOH) terminaller, apron ve pistler açıkça görünüyor."
   },
+  "DPS": {
+    "dps-sat-1.webp": "Uydu görüntüsünde, Denpasar I Gusti Ngurah Rai Uluslararası Havalimanı'nın (DPS) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "DTW": {
+    "dtw-baidu-2.webp": "Detroit Metro'nun havadan görünümü — aprona paralel uzanan uzun McNamara Terminali ve iki konkorsu; ötede taksi yolları ve pistler.",
+    "dtw-sat-1.webp": "Uydu görüntüsünde, Detroit Metropolitan Wayne County Havalimanı'nın (DTW) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "DUB": {
     "dub-sat-1.webp": "Uydu görüntüsünde Dublin Havalimanı'ndaki (DUB) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "DUS": {
+    "dus-sat-1.webp": "Uydu görüntüsünde, Düsseldorf Havalimanı'nın (DUS) yerleşimi ve çevresi açıkça görülüyor.",
+    "dus-baidu-1.webp": "Düsseldorf Havalimanı'nın kalkış salonu; mavi 'Abflug / Departures' tabelasının altında self-servis check-in makinelerinde bagajlarıyla sıra bekleyen yolcular.",
+    "dus-baidu-2.webp": "Masmavi gökyüzü önünde, terminal çatısının üstündeki çelik kafes üzerinde kırmızı 'Düsseldorf Airport' ve mavi 'DUS' harfleri yükseliyor."
   },
   "DXB": {
     "dxb-sat-1.webp": "Uydu görüntüsü: Dubai Uluslararası Havalimanı (DXB) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
@@ -1018,6 +1184,11 @@
     "edc-chatgpt-06.webp": "Hangar karanlık çöktükten sonra parlak biçimde aydınlatılmış; cilalı zeminde yan yana birkaç küçük tek motorlu uçak ve bir çift motorlu uçak park etmiş.",
     "edc-chatgpt-07.webp": "Geceleyin hangarın dışındaki kavisli tente bir sıra lambayla parlıyor; beyaz duvarları ve geniş beton apronu aydınlatıyor."
   },
+  "EDI": {
+    "edi-sat-1.webp": "Uydu görüntüsünde, Edinburgh Havalimanı'nın (EDI) yerleşimi ve çevresi açıkça görülüyor.",
+    "edi-baidu-1.webp": "Edinburgh Havalimanı terminalinin dış görünümü; kaldırımda park etmiş mavi-beyaz bir otobüs.",
+    "edi-baidu-2.webp": "Alacakaranlık gökyüzüne karşı mor ışıklarla aydınlatılmış Edinburgh Havalimanı kontrol kulesi."
+  },
   "EPS": {
     "eps-sat-1.webp": "Uydu görüntüsü: Arroyo Barril Havalimanı (EPS) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
   },
@@ -1027,8 +1198,14 @@
   "FCO": {
     "fco-sat-1.webp": "Uydu görüntüsü: Roma Fiumicino Havalimanı'ndaki (FCO) terminaller, pistler ve çevredeki şehir."
   },
+  "FLL": {
+    "fll-sat-1.webp": "Uydu görüntüsünde, Fort Lauderdale Hollywood Uluslararası Havalimanı'nın (FLL) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "FMM": {
     "fmm-sat-1.webp": "Uydu görüntüsü: Memmingen'in pisti Allgäu tepeleri ile tarım arazileri arasında uzanıyor; terminal ve apron sahanın kuzeyinde."
+  },
+  "FOC": {
+    "foc-sat-1.webp": "Uydu görüntüsünde, Fuzhou Changle Uluslararası Havalimanı'nın (FOC) yerleşimi ve çevresi açıkça görülüyor."
   },
   "FON": {
     "fon-sat-1.webp": "Uydu görüntüsü: La Fortuna havalimanı kırmızıyla daire içine alınmış; Kosta Rika'da yağmur ormanları ve tarım arazileriyle çevrili.",
@@ -1043,6 +1220,27 @@
   "FRA": {
     "fra-baidu-2.webp": "Frankfurt Havalimanı'ndaki Squaire — eğimli destekleri üzerinde rayları ikiye ayıran uzun beyaz kavisli bina, yanından otoyol geçiyor.",
     "fra-baidu-3.webp": "Havadan Frankfurt — apron ve pistlere dağılmış uçaklar ve inşaat trafiği, orman kuşağının ötesinde şehir silueti."
+  },
+  "FUK": {
+    "fuk-sat-1.webp": "Uydu görüntüsünde, Fukuoka Havalimanı'nın (FUK) yerleşimi ve çevresi açıkça görülüyor.",
+    "fuk-baidu-2.webp": "Fukuoka Havalimanı İç Hatlar Terminali; yolcu indirme şeridinin üzerinde büyük '2' rakamının yanındaki kırmızı '福岡空港 国内線 DOMESTIC' tabelası."
+  },
+  "GDL": {
+    "gdl-baidu-2.webp": "Guadalajara'nın modern kalkış salonu — oturma alanının üzerinde beyaz kafes çatı ve turuncu ahşap tavan; cam duvardan apron görünüyor.",
+    "gdl-sat-1.webp": "Uydu görüntüsünde, Guadalajara Uluslararası Havalimanı'nın (GDL) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "GIG": {
+    "gig-baidu-2.webp": "Kapıda, yolcu köprüsünün yanında park etmiş bir GOL uçağı ve yanında bir yer aracı; arkalarında terminalin kule benzeri yapıları yükseliyor.",
+    "gig-sat-1.webp": "Uydu görüntüsünde, Rio de Janeiro Galeão – Tom Jobim Uluslararası Havalimanı'nın (GIG) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "GMP": {
+    "gmp-baidu-1.webp": "Gimpo'nun kalkış salonu — kasetli tavan, asılı Korean Air tabelası, reklam ekranları ve iki yanda check-in alanları.",
+    "gmp-baidu-2.webp": "Geniş, aydınlık bir terminal salonu — yerden tavana pencerelerin üzerinde ahşap çıtalı tavan, check-in kontuarlarının önünden bagajlarıyla geçen yolcular.",
+    "gmp-sat-1.webp": "Uydu görüntüsünde, Seul Gimpo Uluslararası Havalimanı'nın (GMP) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "GNI": {
+    "gni-baidu-1.webp": "Lyudao Havalimanı'nın terminali ve beyaz kontrol kulesi; önünde kıvrımlı bir araç yolu.",
+    "gni-sat-1.webp": "Uydu görüntüsünde, Lyudao Havalimanı'nın (GNI) yerleşimi ve çevresi açıkça görülüyor."
   },
   "GOY": {
     "goy-sat-1.webp": "Uydu görüntüsü: Ampara Havalimanı (GOY), 07/25 pisti Doğu Sri Lanka'da yeşil bitki örtüsü ve tarım arazilerini kesiyor.",
@@ -1066,11 +1264,47 @@
   "GUW": {
     "guw-sat-1.webp": "Uydu görüntüsü: Atırav'ın pisti kurak Hazar ovasında uzanıyor; terminal ve apron yanında, çevrede nehirler ve sulak araziler var."
   },
+  "GVA": {
+    "gva-sat-1.webp": "Uydu görüntüsünde, Cenevre Uluslararası Havalimanı'nın (GVA) yerleşimi ve çevresi açıkça görülüyor.",
+    "gva-baidu-1.webp": "Terminal cephesi; çelik payandalarla desteklenen dik eğimli cam duvar ve yanındaki apronda park etmiş yer çekicileri.",
+    "gva-baidu-2.webp": "Park pozisyonlarında easyJet ve KLM uçakları; arkalarında Alpler'de hâlâ duran kar."
+  },
   "GYL": {
     "gyl-sat-1.webp": "Uydu görüntüsü: Argyle Havalimanı (GYL) kuru zemin ve çıplak arazi arasında yer alıyor."
   },
   "GZP": {
     "gzp-sat-1.webp": "Uydu görüntüsü: Gazipaşa'nın pisti Toros Dağları ile Akdeniz arasındaki kıyı ovasında yer alıyor; terminal ve apron da yanında."
+  },
+  "HAK": {
+    "hak-sat-1.webp": "Uydu görüntüsünde, Haikou Meilan Uluslararası Havalimanı'nın (HAK) yerleşimi ve çevresi açıkça görülüyor.",
+    "hak-baidu-1.webp": "Haikou Meilan Havalimanı Terminal 2'nin içinde, asılı bir tabela Meilan Havalimanı (Terminal 2) ve çıkış yönünü gösteriyor.",
+    "hak-baidu-2.webp": "Haikou Meilan Havalimanı terminalinin dışı; çatı hattında kırmızı HAIKOU harfleri."
+  },
+  "HAM": {
+    "ham-sat-1.webp": "Uydu görüntüsünde, Hamburg Helmut Schmidt Havalimanı'nın (HAM) yerleşimi ve çevresi açıkça görülüyor.",
+    "ham-baidu-1.webp": "Hamburg Havalimanı Terminal 1'in içinde — ahşap çıtalı tavanın altında check-in adaları, tepede asılı 'Terminal 1' tabelası.",
+    "ham-baidu-2.webp": "Hamburg Havalimanı'nın check-in salonu — self-servis bagaj teslim kontuarlarında sıra bekleyen yolcular."
+  },
+  "HAN": {
+    "han-sat-1.webp": "Uydu görüntüsünde, Noi Bai Uluslararası Havalimanı'nın (HAN) yerleşimi ve çevresi açıkça görülüyor.",
+    "han-baidu-1.webp": "Havalimanı yolundan Noi Bai terminali; cam cephesi boyunca “NỘI BÀI INTERNATIONAL TERMINAL” yazıyor."
+  },
+  "HEL": {
+    "hel-sat-1.webp": "Uydu görüntüsünde, Helsinki Vantaa Havalimanı'nın (HEL) yerleşimi ve çevresi açıkça görülüyor.",
+    "hel-baidu-1.webp": "Helsinki-Vantaa terminalinin dışındaki üstü kapalı yürüyüş yolu; taş döşeli meydan boyunca banklar ve sokak lambaları, ötede dalgalanan Finlandiya bayrakları."
+  },
+  "HET": {
+    "het-baidu-1.webp": "Hohhot Baita Uluslararası Havalimanı terminali — kıvrımlı cam cephenin üzerinde kırmızı 'Hohhot' karakterleri, ön avluyu dolduran arabalar.",
+    "het-sat-1.webp": "Uydu görüntüsünde, Hohhot Baita Uluslararası Havalimanı'nın (HET) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "HFE": {
+    "hfe-baidu-1.webp": "Apronda, terminal çatısındaki kırmızı Hefei ve HEFEI yazılarının altında kapıda bir China Eastern uçağı; solda kontrol kulesi.",
+    "hfe-baidu-2.webp": "Apronda bir Air China geniş gövdeli uçağı; arkasında Hefei Xinqiao terminalinin altın renkli çatısı.",
+    "hfe-sat-1.webp": "Uydu görüntüsünde, Hefei Xinqiao Uluslararası Havalimanı'nın (HFE) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "HGH": {
+    "hgh-baidu-2.webp": "Gece Hangzhou Xiaoshan terminali — çatıda kırmızı 'Hangzhou' yazısı ışıklandırılmış, yolcu köprüsünde bir uçak ve apronda yer araçları.",
+    "hgh-sat-1.webp": "Uydu görüntüsünde, Hangzhou Xiaoshan Uluslararası Havalimanı'nın (HGH) yerleşimi ve çevresi açıkça görülüyor."
   },
   "HKG": {
     "hkg-baidu-1.webp": "Kabin penceresinden: terminalin tonozlu çatısının önündeki park yerinde bir Cathay uçağı; aşağıdaki apronda 'S35' park işareti boyanmış.",
@@ -1084,11 +1318,24 @@
     "hkg-chatgpt-06.webp": "Cathay Pacific jetleri dalga çatılı konkorun önündeki park yerlerinde sıralanmış; arkalarında kontrol kulesi apronun üzerinde yükseliyor.",
     "hkg-chatgpt-07.webp": "Havadan bakıldığında uzun Y biçimli konkor dışarı uzanıyor; kapılarında düzinelerce uçak burun üstü park etmiş."
   },
+  "HKT": {
+    "hkt-sat-1.webp": "Uydu görüntüsünde, Phuket Uluslararası Havalimanı'nın (HKT) yerleşimi ve çevresi açıkça görülüyor.",
+    "hkt-baidu-1.webp": "Terminalin çatısı boyunca havalimanının adı uzanıyor; altında yolcu köprüsünde bir Bangkok Airways turbopropu.",
+    "hkt-baidu-2.webp": "Terminalin içinde, kontuarların ve bagaj salonuna giden yolun üzerinde mavi 'Welcome to Phuket International Airport' tabelası."
+  },
   "HND": {
     "hnd-sat-1.webp": "Uydu görüntüsü: Tokyo Haneda Havalimanı (HND) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
   },
+  "HNL": {
+    "hnl-sat-1.webp": "Uydu görüntüsünde, Daniel K. Inouye Uluslararası Havalimanı'nın (HNL) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "HOF": {
     "hof-sat-1.webp": "Uydu görüntüsü: Al-Ahsa'nın pisti vaha ile çöl arasında uzanıyor; terminal ve apron yanında, çevrede palmiye bahçeleri ve kasaba var."
+  },
+  "HOU": {
+    "hou-sat-1.webp": "Uydu görüntüsünde, William P. Hobby Havalimanı'nın (HOU) yerleşimi ve çevresi açıkça görülüyor.",
+    "hou-baidu-1.webp": "Houston Hobby'de terminal girişi — çevre düzenlemeli bir ada içinde pervane anıtı, cam kapıların üzerinde havalimanının adı.",
+    "hou-baidu-2.webp": "Bir Southwest kabininden Houston Hobby üzerinden görünüm — kanadın altında yerini banliyö mahallelerine bırakan pistler ve taksi yolları."
   },
   "HPN": {
     "hpn-sat-1.webp": "Uydu görüntüsü: Westchester County Havalimanı (HPN) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
@@ -1096,8 +1343,16 @@
   "HQQ": {
     "hqq-sat-1.webp": "Uydu görüntüsü: Anyang Hongqiqu Havalimanı (HQQ) kasaba, tarım arazileri ve bitki örtüsüyle çevrili."
   },
+  "HRB": {
+    "hrb-sat-1.webp": "Uydu görüntüsünde, Harbin Taiping Uluslararası Havalimanı'nın (HRB) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "HRH": {
     "hrh-sat-1.webp": "Uydu görüntüsü: Aligarh Havalimanı (HRH) kasaba, tarım arazileri ve bitki örtüsüyle çevrili."
+  },
+  "HUN": {
+    "hun-baidu-1.webp": "Hualien Havalimanı girişinde çiçeklerle çevrili taş duvar; üzerinde 'Hualien Airport' yazıyor.",
+    "hun-baidu-2.webp": "Hualien Havalimanı terminalinin önü; cam cephe boyunca palmiye ağaçları, solda kontrol kulesi.",
+    "hun-sat-1.webp": "Uydu görüntüsünde, Hualien Havalimanı'nın (HUN) yerleşimi ve çevresi açıkça görülüyor."
   },
   "HUU": {
     "huu-page-1.webp": "Huánuco pistinin yanındaki turuncu rüzgâr çorabı — mavi çitin ötesinde yamaçtaki şehir yükseliyor (fotoğraf CORPAC'ın resmi havalimanı veri sayfasından, Eylül 2023).",
@@ -1113,14 +1368,25 @@
   "HVA": {
     "hva-sat-1.webp": "Uydu görüntüsünde Analalava Havalimanı (HVA) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
   },
+  "HYD": {
+    "hyd-sat-1.webp": "Uydu görüntüsünde, Rajiv Gandhi Uluslararası Havalimanı'nın (HYD) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "IAD": {
     "iad-sat-1.webp": "Uydu görüntüsü: Washington Dulles Uluslararası Havalimanı (IAD) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "IAH": {
+    "iah-baidu-1.webp": "Alacakaranlıkta George Bush Intercontinental Havalimanı — terminal ve apron ışıklarla aydınlanmış, kapılarda sıralanmış United uçakları.",
+    "iah-sat-1.webp": "Uydu görüntüsünde, George Bush Intercontinental Havalimanı'nın (IAH) yerleşimi ve çevresi açıkça görülüyor."
   },
   "ICN": {
     "icn-sat-1.webp": "Uydu görüntüsü: Incheon Uluslararası Havalimanı (ICN) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
   },
   "IEO": {
     "ieo-sat-1.webp": "Uydu görüntüsünde Aioun el Atrouss Havalimanı'nın (IEO) pisti kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "IND": {
+    "ind-baidu-1.webp": "Alacakaranlıkta Indianapolis; terminalin geniş çelik gölgeliği, boş kalkış yolunun üzerindeki koyu mavi gökyüzüne karşı parlıyor.",
+    "ind-sat-1.webp": "Uydu görüntüsünde, Indianapolis Uluslararası Havalimanı'nın (IND) yerleşimi ve çevresi açıkça görülüyor."
   },
   "IQA": {
     "iqa-sat-1.webp": "Uydu görüntüsünde Al Asad Hava Üssü (IQA) çevredeki kuru zemin ve çıplak araziyle bütünleşiyor.",
@@ -1137,6 +1403,10 @@
   },
   "IST": {
     "ist-sat-1.webp": "Uydu görüntüsü: İstanbul Havalimanı'ndaki (IST) terminaller, pistler ve çevredeki şehir."
+  },
+  "ITM": {
+    "itm-baidu-1.webp": "Osaka Itami'nin havadan görünümü — düz arazi boyunca uzanan paralel 14L/14R pistleri, solda terminal ve apron, her yanında yoğun şehir blokları.",
+    "itm-sat-1.webp": "Uydu görüntüsünde, Osaka Itami Uluslararası Havalimanı'nın (ITM) yerleşimi ve çevresi açıkça görülüyor."
   },
   "IVA": {
     "iva-sat-1.webp": "Uydu görüntüsü: Ampampamena Havalimanı (IVA) yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
@@ -1166,6 +1436,9 @@
     "ixu-chatgpt-06.webp": "Geceleyin havalimanının adı girişin üzerinde beyaz renkte parlıyor; farlar bariyerler ve sıra saksı bitkileri üzerinde geziniyor.",
     "ixu-chatgpt-07.webp": "Kırmızı kuyruklu bir jet çisenti altında pist boyunca burun üstü ilerliyor; ön planı kuru çalılık ve çimen dolduruyor."
   },
+  "JED": {
+    "jed-sat-1.webp": "Uydu görüntüsünde, Kral Abdulaziz Uluslararası Havalimanı'nın (JED) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "JEG": {
     "jeg-sat-1.webp": "Uydu görüntüsü: Aasiaat'ın kısa pisti Grönland adasında uzanıyor; terminal ve apron yanında, çevrede deniz ve çıplak kaya var.",
     "jeg-chatgpt-01.webp": "Gümüş kırma çatı altında mavi kaplamalı bir kule binası; dışında piknik masaları, arkasında plaj ve kayalık adacıklar uzanıyor.",
@@ -1181,6 +1454,9 @@
   },
   "JIB": {
     "jib-sat-1.webp": "Uydu görüntüsü: Cibuti'nin pisti Tadjoura Körfezi'nin güney kıyısında uzanıyor; terminal ve apron sahanın kuzeyinde, çevrede liman ve şehir var."
+  },
+  "JNB": {
+    "jnb-sat-1.webp": "Uydu görüntüsünde, O.R. Tambo Uluslararası Havalimanı'nın (JNB) yerleşimi ve çevresi açıkça görülüyor."
   },
   "JOG": {
     "jog-sat-1.webp": "Uydu görüntüsü: Yogyakarta'nın pisti ve taksi yolu şehrin doğu kenarında; terminal ve apron sahanın kuzeyinde."
@@ -1200,8 +1476,21 @@
     "jva-sat-1.webp": "Uydu görüntüsünde Ankavandra Havalimanı'nın (JVA) pisti kuru zemin ve çıplak arazi arasında yer alıyor.",
     "jva-chatgpt-01.webp": "Mavi dağların altındaki kuru çim pistte küçük beyaz tek motorlu bir turboprop duruyor; çevresinde bir kalabalık köylü toplanmış."
   },
+  "KHH": {
+    "khh-baidu-1.webp": "Kaohsiung Uluslararası Havalimanı terminalinin önü; üçgen çatısının altında cam perde duvarlar.",
+    "khh-sat-1.webp": "Uydu görüntüsünde, Kaohsiung Uluslararası Havalimanı'nın (KHH) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "KIX": {
     "kix-sat-1.webp": "Uydu görüntüsü: Kansai Uluslararası Havalimanı'ndaki (KIX) terminaller, pistler ve çevredeki şehir."
+  },
+  "KMG": {
+    "kmg-sat-1.webp": "Uydu görüntüsünde, Kunming Changshui Uluslararası Havalimanı'nın (KMG) yerleşimi ve çevresi açıkça görülüyor.",
+    "kmg-baidu-1.webp": "Kunming Changshui terminalinin dışı — bulutları yansıtan cam cephe, önünde 'Kunming International Airport' yazılı taş levha."
+  },
+  "KNH": {
+    "knh-baidu-1.webp": "Kinmen Havalimanı apronunda yolcular seyyar merdivenle uçağa biniyor; yanlarında yer araçları.",
+    "knh-baidu-2.webp": "Kinmen Havalimanı terminalinin dışı; duvara boyanmış ROC bayrağı ve dışarıda park etmiş sarı servis araçları.",
+    "knh-sat-1.webp": "Uydu görüntüsünde, Kinmen Havalimanı'nın (KNH) yerleşimi ve çevresi açıkça görülüyor."
   },
   "KQA": {
     "kqa-sat-1.webp": "Uydu görüntüsünde Akutan Havalimanı'nın (KQA) pisti kuru zemin ve çıplak arazi arasında yer alıyor."
@@ -1214,11 +1503,34 @@
     "kso-chatgpt-04.webp": "Alacakaranlıkta terminal cephesi boş duruyor; tabelaları son güneşte sıcak turuncu parlıyor, kaplama üzerinde uzun gölgeler uzanıyor.",
     "kso-chatgpt-05.webp": "Farklı boyalarda birkaç yolcu uçağı terminalin körüklerinde park etmiş; biri mavi-beyaz bir AEGEAN jeti."
   },
+  "KTM": {
+    "ktm-sat-1.webp": "Uydu görüntüsünde, Tribhuvan Uluslararası Havalimanı'nın (KTM) yerleşimi ve çevresi açıkça görülüyor.",
+    "ktm-baidu-1.webp": "Turuncu Tribhuvan Uluslararası Havalimanı terminali; çatısından yükselen kontrol kulesi, dışarıda arabalar ve otobüsler."
+  },
   "KUL": {
     "kul-sat-1.webp": "Uydu görüntüsü: Kuala Lumpur Uluslararası Havalimanı'ndaki (KUL) terminaller, pistler ve çevredeki şehir."
   },
+  "KWE": {
+    "kwe-sat-1.webp": "Uydu görüntüsünde, Guiyang Longdongbao Uluslararası Havalimanı'nın (KWE) yerleşimi ve çevresi açıkça görülüyor.",
+    "kwe-baidu-1.webp": "Guiyang Longdongbao terminalinin içi: geniş salonun üzerindeki ahşap çıtalı tavanı taşıyan beyaz dallanan kolonlar, kontuarlarda sıra bekleyen yolcular.",
+    "kwe-baidu-2.webp": "Guiyang Havalimanı'nda taksi yapan bir Spring Airlines uçağı; arkasında şehri çevreleyen karst tepeleri yükseliyor."
+  },
+  "KWI": {
+    "kwi-baidu-1.webp": "Kuveyt Uluslararası Havalimanı'nın kalkış kapılarındaki sıra koridorları — uçuş bilgi ekranlarının altında sarı bariyerler arasında bekleyen yolcular.",
+    "kwi-baidu-2.webp": "Kuveyt Uluslararası Havalimanı terminal salonu — girişin üzerinde havalimanının Arapça ve İngilizce adı yazıyor; yolcular bagajlarıyla geçiyor.",
+    "kwi-sat-1.webp": "Uydu görüntüsünde, Kuveyt Uluslararası Havalimanı'nın (KWI) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "KYD": {
+    "kyd-baidu-1.webp": "Lanyu Havalimanı terminali; kırmızı-beyaz cephesinde 'Lanyu Airport' yazıyor.",
+    "kyd-baidu-2.webp": "Lanyu Havalimanı apronunda çift motorlu bir turboprop; arkasında yeşil yamaç ve deniz.",
+    "kyd-sat-1.webp": "Uydu görüntüsünde, Lanyu Havalimanı'nın (KYD) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "LAK": {
     "lak-sat-1.webp": "Uydu görüntüsü: Aklavik/Freddie Carmichael Havalimanı (LAK) kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "LAS": {
+    "las-sat-1.webp": "Uydu görüntüsünde, Harry Reid Uluslararası Havalimanı'nın (LAS) yerleşimi ve çevresi açıkça görülüyor.",
+    "las-baidu-1.webp": "Harry Reid Uluslararası Havalimanı'nın (LAS) havadan görünümü; terminal konkorsları, uçak park yerleri ve pistler."
   },
   "LAX": {
     "lax-sat-1.webp": "Uydu görüntüsünde Los Angeles Uluslararası Havalimanı'ndaki (LAX) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
@@ -1235,6 +1547,11 @@
   },
   "LCG": {
     "lcg-sat-1.webp": "Uydu görüntüsü: A Coruña'nın pisti Galiçya'nın kıyı tepeleri arasında uzanıyor; terminal ve apron da yanında."
+  },
+  "LED": {
+    "led-baidu-1.webp": "Pulkovo'da kapıda, apronda duran bir Rossiya uçağı; arkada terminalde 'SAINT PETERSBURG' tabelası ve sağda yuvarlak kontrol kulesi.",
+    "led-baidu-2.webp": "Pulkovo'nun yeni terminalinin içinde, check-in ve güvenlik sıralarının üzerindeki eksen boyunca uzanan çok yüzlü altın tavan.",
+    "led-sat-1.webp": "Uydu görüntüsünde, Pulkovo Havalimanı'nın (LED) yerleşimi ve çevresi açıkça görülüyor."
   },
   "LEI": {
     "lei-sat-1.webp": "Uydu görüntüsü: pist Almería kıyısını izliyor; terminal ve apron batı ucunda, altında Akdeniz var."
@@ -1266,6 +1583,16 @@
     "lhr-baidu-2.webp": "Terminal penceresinden: kapıda bir Japan Airlines uçağı, ötede Heathrow'un kontrol kulesi.",
     "lhr-baidu-3.webp": "Alacakaranlıkta Heathrow — terminaller aydınlatılmış, apronda park etmiş bir Etihad uçağı."
   },
+  "LHW": {
+    "lhw-baidu-1.webp": "Lanzhou Zhongchuan'a yaklaşma yolunda ilerlerken — mavi yol üstü tabelaların altında, ileride beyaz dalga biçimli terminal çatısı.",
+    "lhw-baidu-2.webp": "Lanzhou Zhongchuan terminalinin cephesi — kemerli kolonlardan yükselen katmanlı beyaz çatılar, sırtında kırmızı '兰州' karakterleri ve kaldırımda trafik.",
+    "lhw-sat-1.webp": "Uydu görüntüsünde, Lanzhou Zhongchuan Uluslararası Havalimanı'nın (LHW) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "LIM": {
+    "lim-sat-1.webp": "Uydu görüntüsünde, Jorge Chávez Uluslararası Havalimanı'nın (LIM) yerleşimi ve çevresi açıkça görülüyor.",
+    "lim-baidu-1.webp": "Lima Havalimanı'nın havadan görünümü; çöl zemininde uzanan uzun terminali, ötede Pasifik ve sağda süren hafriyat çalışmaları.",
+    "lim-baidu-2.webp": "Varış salonunda kontuarlarda sıra bekleyen yolcular; solda tavandan sarkan metal bir heykel."
+  },
   "LIS": {
     "lis-sat-1.webp": "Uydu görüntüsü: Humberto Delgado Havalimanı'ndaki (LIS) terminaller, pistler ve çevredeki şehir."
   },
@@ -1278,8 +1605,20 @@
   "LME": {
     "lme-sat-1.webp": "Uydu görüntüsü: Le Mans-Arnage Havalimanı (LME) yeşil bitki örtüsü ve tarım arazileriyle çevrili."
   },
+  "LOS": {
+    "los-sat-1.webp": "Uydu görüntüsünde, Murtala Muhammed Uluslararası Havalimanı'nın (LOS) yerleşimi ve çevresi açıkça görülüyor.",
+    "los-baidu-1.webp": "Araba dolu bir otoparkın ötesinde Lagos Havalimanı'nın terminali ve kontrol kulesi.",
+    "los-baidu-2.webp": "Lagos'taki Murtala Muhammed Uluslararası Havalimanı'nın yeni terminalinin dışı; yağmurla ıslanmış ön avlunun üzerinde cam cephesi ve koyu çatısı."
+  },
+  "LPA": {
+    "lpa-sat-1.webp": "Uydu görüntüsünde, Gran Canaria Havalimanı'nın (LPA) yerleşimi ve çevresi açıkça görülüyor.",
+    "lpa-baidu-1.webp": "Gran Canaria Havalimanı'nda check-in alanı — bir Turkish Airlines business sınıfı kontuarının yanındaki öncelikli sırada bekleyen yolcular."
+  },
   "LTI": {
     "lti-sat-1.webp": "Uydu görüntüsünde Altay Havalimanı'nın (LTI) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
+  },
+  "LTN": {
+    "ltn-sat-1.webp": "Uydu görüntüsünde, London Luton Havalimanı'nın (LTN) yerleşimi ve çevresi açıkça görülüyor."
   },
   "LTS": {
     "lts-sat-1.webp": "Uydu görüntüsünde Altus Hava Kuvvetleri Üssü (LTS) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor.",
@@ -1295,8 +1634,33 @@
     "lym-sat-1.webp": "Uydu görüntüsü: Ashford Havalimanı (LYM) yeşil bitki örtüsü ve tarım arazileriyle çevrili.",
     "lym-chatgpt-01.webp": "Düz bir pistin yeşil tarlaları çaprazlama kestiği hava görüntüsü; uzakta bir kıyı kasabası yayılmış."
   },
+  "LZN": {
+    "lzn-baidu-1.webp": "Matsu Nangan Havalimanı terminalinin önü; kırmızı kiremit çatısıyla otopark ve dönel kavşağa bakıyor.",
+    "lzn-baidu-2.webp": "Terminal girişinin üzerinde altın renkli 'Matsu Nangan Airport' yazısı.",
+    "lzn-sat-1.webp": "Uydu görüntüsünde, Matsu Nangan Havalimanı'nın (LZN) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "MAA": {
+    "maa-sat-1.webp": "Uydu görüntüsünde, Chennai Uluslararası Havalimanı'nın (MAA) yerleşimi ve çevresi açıkça görülüyor.",
+    "maa-baidu-1.webp": "Chennai terminalinin ön avlusu; sıraya girmiş taksilerin üzerinde beyaz sivri gölgelikler ve sağdan geçen yükseltilmiş bir viyadük."
+  },
   "MAD": {
     "mad-sat-1.webp": "Uydu görüntüsü: Madrid-Barajas Havalimanı (MAD) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "MAN": {
+    "man-sat-1.webp": "Uydu görüntüsünde, Manchester Havalimanı'nın (MAN) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "MCI": {
+    "mci-baidu-1.webp": "Kansas City terminalinin dışında, beyaz Y biçimli kolonlar yolcuların ve araçların üzerinde geniş ahşap kaplı bir gölgelik taşıyor.",
+    "mci-sat-1.webp": "Uydu görüntüsünde, Kansas City Uluslararası Havalimanı'nın (MCI) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "MCO": {
+    "mco-baidu-2.webp": "Orlando'nun Güney Terminali — kıvrımlı cam cephenin üzerinden geçen dev beyaz halka; altında yolcu indirme gölgeliği ve yer araçları.",
+    "mco-sat-1.webp": "Uydu görüntüsünde, Orlando Uluslararası Havalimanı'nın (MCO) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "MDE": {
+    "mde-sat-1.webp": "Uydu görüntüsünde, Jose Maria Córdova Uluslararası Havalimanı'nın (MDE) yerleşimi ve çevresi açıkça görülüyor.",
+    "mde-baidu-1.webp": "Jose Maria Córdova'nın kontrol kulesi; beyaz gövdesinde adı yazılı, önünde terminal ve otopark.",
+    "mde-baidu-2.webp": "Kontrol kulesinin önünde kırmızı yıldız patlaması biçiminde bir heykel; kulenin üzerindeki 'JOSE MARIA CORDOVA' yazısı masmavi gökyüzüne karşı öne çıkıyor."
   },
   "MDQ": {
     "mdq-sat-1.webp": "Uydu görüntüsü: Mar del Plata'nın pisti Atlantik kıyısı ile pampalar arasında uzanıyor; terminal ve apron da yanında.",
@@ -1308,11 +1672,19 @@
     "mdq-chatgpt-06.webp": "Mavi-beyaz bir yolcu uçağı tel çitin ötesindeki pist boyunca taksi yapıyor; soluk gökyüzü altında ön planda kuru çimen var.",
     "mdq-chatgpt-07.webp": "Yolcular uluslararası biniş kapısının önünde kuyruk oluşturmuş; cilalı beyaz zemin uzun tavan ışıklarını yansıtıyor."
   },
+  "MDW": {
+    "mdw-sat-1.webp": "Uydu görüntüsünde, Chicago Midway Uluslararası Havalimanı'nın (MDW) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "MEL": {
     "mel-sat-1.webp": "Uydu görüntüsü: Melbourne Havalimanı (MEL), pistleri, terminal kompleksi ve Tullamarine sanayi bölgesi."
   },
   "MEX": {
     "mex-sat-1.webp": "Uydu görüntüsü: Meksiko Uluslararası Havalimanı (MEX) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "MFK": {
+    "mfk-sat-1.webp": "Uydu görüntüsünde, Matsu Beigan Havalimanı'nın (MFK) yerleşimi ve çevresi açıkça görülüyor.",
+    "mfk-baidu-1.webp": "Matsu Beigan Havalimanı terminalinin cephesi; gri taş kaplı duvarları ve ön avluya bakan sıra sıra pencereleri.",
+    "mfk-baidu-2.webp": "Terminal girişinin dışında, 'Matsu Beigan Airport' çatı tabelasının altında bekleyen iki sarı taksi."
   },
   "MGQ": {
     "mgq-sat-1.webp": "Uydu görüntüsü: Mogadişu'nun pisti Hint Okyanusu kıyısının yanında uzanıyor; terminal ve apron yanında, çevrede şehir ve plaj var."
@@ -1340,11 +1712,25 @@
   "MRD": {
     "mrd-sat-1.webp": "Uydu görüntüsünde Alberto Carnevalli Havalimanı (MRD) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor."
   },
+  "MSP": {
+    "msp-sat-1.webp": "Uydu görüntüsünde, Minneapolis–Saint Paul Uluslararası Havalimanı / Wold–Chamberlain Field'ın (MSP) yerleşimi ve çevresi açıkça görülüyor.",
+    "msp-baidu-1.webp": "Minneapolis–Saint Paul'da kapılar — terminalde sıralanmış Delta uçakları, ufukta şehir binaları."
+  },
+  "MSY": {
+    "msy-sat-1.webp": "Uydu görüntüsünde, Louis Armstrong New Orleans Uluslararası Havalimanı'nın (MSY) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "MTY": {
+    "mty-sat-1.webp": "Uydu görüntüsünde, Monterrey Uluslararası Havalimanı'nın (MTY) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "MUC": {
     "muc-sat-1.webp": "Uydu görüntüsünde Münih Havalimanı'ndaki (MUC) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
   },
   "MXP": {
     "mxp-sat-1.webp": "Uydu görüntüsünde Milano Malpensa Havalimanı'ndaki (MXP) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "MZG": {
+    "mzg-sat-1.webp": "Uydu görüntüsünde, Magong Havalimanı'nın (MZG) yerleşimi ve çevresi açıkça görülüyor.",
+    "mzg-baidu-2.webp": "Terminalin tepesinde mavi 'Penghu Airport' yazısı; yanında havalimanının koordinatlarını veren bir tabela."
   },
   "MZI": {
     "mzi-sat-1.webp": "Uydu görüntüsü: Mopti Havalimanı (MZI) kuru zemin ve çıplak arazi arasında yer alıyor.",
@@ -1355,6 +1741,29 @@
     "mzi-chatgpt-05.webp": "Güneş şapkalı yolcular kızıl apron üzerindeki küçük çift turbopropa doğru yürüyor; yanında bir yakıt kamyonu bekliyor.",
     "mzi-chatgpt-06.webp": "Düz beyaz pus içinde kamuflajlı bir asker betonda durmuş, kum sarısı çift turbopropun apron boyunca ilerlemesini izliyor.",
     "mzi-chatgpt-07.webp": "Yeşil kuyruk amblemli bir jet, kuru zemin üzerine yayılmış bagajların ötesinde bekliyor; bagaj görevlileri çantalı bir arabaya yüklüyor."
+  },
+  "NBO": {
+    "nbo-baidu-1.webp": "Jomo Kenyatta Uluslararası Havalimanı'nın havadan görünümü — merkezdeki otoparkı saran yuvarlak terminal, apronda uçaklar ve ötede kontrol kulesi.",
+    "nbo-sat-1.webp": "Uydu görüntüsünde, Jomo Kenyatta Uluslararası Havalimanı'nın (NBO) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "NCE": {
+    "nce-baidu-1.webp": "Akdeniz'e uzanan burnun üzerindeki Nice-Côte d'Azur Havalimanı'nın havadan görünümü; denizle şehir arasında pistler ve terminaller.",
+    "nce-baidu-2.webp": "Yukarıdan Nice'in terminali, apronu ve otoparkları yoğun fırtına bulutlarının altına yayılıyor.",
+    "nce-sat-1.webp": "Uydu görüntüsünde, Nice-Côte d'Azur Havalimanı'nın (NCE) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "NGB": {
+    "ngb-baidu-1.webp": "Ningbo Lishe'nin check-in salonu — beyaz boru kafes tonozun altında sıra sıra kontuarlar ve sıra bariyerleri, iki yandaki yüksek pencerelerden gün ışığı.",
+    "ngb-baidu-2.webp": "Air China'nın renkli 'Ningbo' kaplamalı A320'si Ningbo Lishe terminalinin önünden taksi yapıyor — çatı hattında kırmızı 'Ningbo' karakterleri ve sağda kontrol kulesi.",
+    "ngb-sat-1.webp": "Uydu görüntüsünde, Ningbo Lishe Uluslararası Havalimanı'nın (NGB) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "NKG": {
+    "nkg-sat-1.webp": "Uydu görüntüsünde, Nanjing Lukou Uluslararası Havalimanı'nın (NKG) yerleşimi ve çevresi açıkça görülüyor.",
+    "nkg-baidu-1.webp": "Nanjing Lukou terminali; çatıdaki kırmızı 'Nanjing' karakterlerinin altında bir Juneyao Air uçağı bekliyor, kapısında yolcu köprüsü."
+  },
+  "NNG": {
+    "nng-sat-1.webp": "Uydu görüntüsünde, Nanning Wuxu Uluslararası Havalimanı'nın (NNG) yerleşimi ve çevresi açıkça görülüyor.",
+    "nng-baidu-1.webp": "Nanning Wuxu Havalimanı terminalinin dışı; geniş kıvrımlı çatısı açılmış kanatları andırıyor.",
+    "nng-baidu-2.webp": "Nanning Wuxu Havalimanı terminalinin önünde apronda park etmiş bir OK Air uçağı; arkasında kontrol kulesi ve 'Wuxu Airport Station' yol tabelası."
   },
   "NRT": {
     "nrt-baidu-1.webp": "1. Terminalin iç hat gidiş salonu; tabela 'Domestic Departures' yazısını Japonca, Çince, Korece ve İngilizce gösteriyor.",
@@ -1392,14 +1801,30 @@
     "oes-chatgpt-05.webp": "Yeşil şeritli beyaz çift turboprop asfaltta burnu kameraya dönük park etmiş; arkasında bir ağaç sırası var.",
     "oes-chatgpt-06.webp": "Bu, kırmızı bir iğnenin Aeroclub San Antonio Oeste'yi işaretlediği bir harita ekran görüntüsü; yanında bir körfez doğa koruma alanı ve kıyı yolu var."
   },
+  "OKA": {
+    "oka-sat-1.webp": "Uydu görüntüsünde, Naha Uluslararası Havalimanı'nın (OKA) yerleşimi ve çevresi açıkça görülüyor.",
+    "oka-baidu-1.webp": "Naha'da apronda sıralanmış ANA uçakları — üst üste binen kuyruk kanatları, ötede deniz ve bir geçit yolu.",
+    "oka-baidu-2.webp": "Naha terminalinin içinde bir duvar resmi — Shuri Kalesi önünde Okinawa kıyafetleri içinde figürler, başlarında kalenin restorasyonunu destekleyen bir pankart."
+  },
   "OKC": {
     "okc-sat-1.webp": "Uydu görüntüsünde Will Rogers World Havalimanı'ndaki (OKC) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "OPO": {
+    "opo-sat-1.webp": "Uydu görüntüsünde, Francisco de Sá Carneiro Havalimanı'nın (OPO) yerleşimi ve çevresi açıkça görülüyor."
   },
   "ORD": {
     "ord-sat-1.webp": "Uydu görüntüsünde O'Hare Uluslararası Havalimanı'ndaki (ORD) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
   },
   "ORY": {
     "ory-sat-1.webp": "Uydu görüntüsü: Paris Orly Havalimanı (ORY) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
+  },
+  "OSL": {
+    "osl-sat-1.webp": "Uydu görüntüsünde, Oslo-Gardermoen Uluslararası Havalimanı'nın (OSL) yerleşimi ve çevresi açıkça görülüyor.",
+    "osl-baidu-1.webp": "Oslo Gardermoen terminalinin içinde, A2 kapısının yanındaki banklarda bekleyen yolcular; ahşap zeminler ve aprona bakan cam duvar."
+  },
+  "OTP": {
+    "otp-baidu-1.webp": "Bükreş Henri Coandă Uluslararası Havalimanı'nda terminal — mavi çatı hattı boyunca 'International Henri Coandă Bucharest' yazısı, önünde park etmiş arabalar.",
+    "otp-sat-1.webp": "Uydu görüntüsünde, Bükreş Henri Coandă Uluslararası Havalimanı'nın (OTP) yerleşimi ve çevresi açıkça görülüyor."
   },
   "OUD": {
     "oud-sat-1.webp": "Uydu görüntüsü: Oujda'nın iki pisti doğu Fas'ın kurak ovasında uzanıyor; terminal ve apron aralarında.",
@@ -1420,11 +1845,42 @@
     "ovd-chatgpt-06.webp": "Bulutlu gökyüzü altında birkaç yolcu uçağı terminalin önündeki apronda yan yana duruyor; yeşil kuyruklu olanın yanında biniş merdivenleri var.",
     "ovd-chatgpt-07.webp": "Cilalı taş zemin gidiş koridoru boyunca, sarı çıtalı tavanın altındaki koltuk sıralarının yanından uzanıyor; uzak uçta bir kafeterya tabelası var."
   },
+  "PDX": {
+    "pdx-baidu-1.webp": "Gece çökerken PDX'te, otopark ile terminal arasındaki dalgalı cam gölgelik; aşağıdaki yolda araç farlarının izleri.",
+    "pdx-baidu-2.webp": "Alacakaranlıkta PDX, apronda park etmiş uçaklar; terminal ışıkları yanarken ufukta su parlıyor.",
+    "pdx-sat-1.webp": "Uydu görüntüsünde, Portland Uluslararası Havalimanı'nın (PDX) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "PEK": {
     "pek-sat-1.webp": "Uydu görüntüsü: Pekin Başkent Uluslararası Havalimanı'ndaki (PEK) terminaller, pistler ve çevredeki şehir."
   },
+  "PER": {
+    "per-baidu-2.webp": "Perth Havalimanı'nın içinde — 'PERTH' yazılı mavi asma tabelaların altında yürüyen merdivenler, yanında bir China Southern reklamı.",
+    "per-sat-1.webp": "Uydu görüntüsünde, Perth Uluslararası Havalimanı'nın (PER) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "PHL": {
+    "phl-sat-1.webp": "Uydu görüntüsünde, Philadelphia Uluslararası Havalimanı'nın (PHL) yerleşimi ve çevresi açıkça görülüyor.",
+    "phl-baidu-1.webp": "Gece Philadelphia; beyaz dalga biçimli terminal çatıları ve apronlar ışıklarla aydınlanmış, ötede şehrin parıltısı yayılıyor.",
+    "phl-baidu-2.webp": "Havalimanının kontrol kulesi ve terminal binaları topluluğunun önünden taksi yapan bir American Airlines uçağı."
+  },
+  "PHX": {
+    "phx-sat-1.webp": "Uydu görüntüsünde, Phoenix Sky Harbor Uluslararası Havalimanı'nın (PHX) yerleşimi ve çevresi açıkça görülüyor.",
+    "phx-baidu-2.webp": "Phoenix Sky Harbor terminalinin içinde güvenlik kontrol noktasında sıra bekleyen yolcular."
+  },
+  "PIT": {
+    "pit-sat-1.webp": "Uydu görüntüsünde, Pittsburgh Uluslararası Havalimanı'nın (PIT) yerleşimi ve çevresi açıkça görülüyor.",
+    "pit-baidu-1.webp": "Pittsburgh Uluslararası Havalimanı'nda kontrol kulesi ve terminal — kapısında park etmiş bir United Express bölgesel uçağı.",
+    "pit-baidu-2.webp": "Pittsburgh Uluslararası Havalimanı'na yüksekten bakış — kara tarafı terminali ve uçuş alanına uzanan konkorslar, ötede kontrol kulesi."
+  },
   "PKH": {
     "pkh-sat-1.webp": "Uydu görüntüsünde Alexion Havalimanı (PKH) çevredeki su ve kıyı şeridiyle bütünleşiyor."
+  },
+  "PKX": {
+    "pkx-sat-1.webp": "Uydu görüntüsünde, Pekin Daxing Uluslararası Havalimanı'nın (PKX) yerleşimi ve çevresi açıkça görülüyor.",
+    "pkx-baidu-1.webp": "Daxing'in yıldız biçimli terminaline tepeden bakış; beş kolunun her biri boyunca park etmiş uçaklar."
+  },
+  "PMI": {
+    "pmi-sat-1.webp": "Uydu görüntüsünde, Palma de Mallorca Havalimanı'nın (PMI) yerleşimi ve çevresi açıkça görülüyor.",
+    "pmi-baidu-1.webp": "Palma de Mallorca Havalimanı terminali dışarıdan; çimenlikteki dev cam şişe heykeli ve cephe boyunca havalimanının adı."
   },
   "PNR": {
     "pnr-sat-1.webp": "Uydu görüntüsü: Pointe-Noire'ın pisti Atlantik kıyısının yanında uzanıyor; terminal ve apron doğusunda, çevrede şehir ve ormanlık alan var.",
@@ -1435,8 +1891,21 @@
     "pnr-chatgpt-05.webp": "Parlak gökyüzü altında terminalin koyu cam cephesi bulutları yansıtıyor; çatıda bir tabela var, önündeki otoparkı soluk renkli taksiler dolduruyor.",
     "pnr-chatgpt-06.webp": "Terminalin çok katlı salonunda yürüyen merdivenler gün ışığı alan bir cam duvara doğru çıkıyor; üstte asma kat korkuluğu boyunca insanlar duruyor."
   },
+  "PRG": {
+    "prg-baidu-1.webp": "Prag Václav Havel Havalimanı'nın havadan görünümü — kıvrık çatılı terminal ve apron boyunca sıralanan yolcu köprüleri, ötede pistler ve tarlalar.",
+    "prg-baidu-2.webp": "Gün batımında bir British Airways uçağı yolcu köprüsünde; çevresinde yer ekibi ve bagaj arabaları çalışıyor.",
+    "prg-sat-1.webp": "Uydu görüntüsünde, Prag Václav Havel Havalimanı'nın (PRG) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "PSO": {
     "pso-sat-1.webp": "Uydu görüntüsü: Pasto'nun pisti bir And vadisinde uzanıyor; terminal ve apron yanında, çevrede dağlar ve tarım arazileri var."
+  },
+  "PTY": {
+    "pty-sat-1.webp": "Uydu görüntüsünde, Tocumen Uluslararası Havalimanı'nın (PTY) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "PUS": {
+    "pus-baidu-1.webp": "Busan Gimhae'de apronda bir Korean Air uçağı; yolcular seyyar merdivenle biniyor, yanlarında bagaj arabaları ve trafik konileri.",
+    "pus-baidu-2.webp": "Aprondan Busan Gimhae terminali — gri nervürlü metal duvarda '김해 GIMHAE', yanında bir yolcu köprüsü ve projektör direği.",
+    "pus-sat-1.webp": "Uydu görüntüsünde, Gimhae Uluslararası Havalimanı'nın (PUS) yerleşimi ve çevresi açıkça görülüyor."
   },
   "PVG": {
     "pvg-baidu-1.webp": "Kabin penceresinden Pudong terminali — çatı hattında '上海 SHANGHAI', kapılarda China Eastern uçakları."
@@ -1487,8 +1956,19 @@
   "RCH": {
     "rch-sat-1.webp": "Uydu görüntüsünde Almirante Padilla Havalimanı'nın (RCH) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
   },
+  "RDU": {
+    "rdu-sat-1.webp": "Uydu görüntüsünde, Raleigh-Durham Uluslararası Havalimanı'nın (RDU) yerleşimi ve çevresi açıkça görülüyor.",
+    "rdu-baidu-1.webp": "Alacakaranlıkta terminal kaldırımı; otopark katının altındaki 'Bag Claim' tabelaları parlıyor, cam cephe solmakta olan ışığı yakalıyor.",
+    "rdu-baidu-2.webp": "Havalimanı girişinde 'RDU Welcome' tabelası; üzerinde masmavi gökyüzünü kat eden bir Southwest uçağı."
+  },
   "REL": {
     "rel-sat-1.webp": "Uydu görüntüsü: Rawson'ın pisti Patagonya platosunda uzanıyor; terminal ve apron yanında, çevrede kuru çalılıklar ve kasaba var."
+  },
+  "RMQ": {
+    "rmq-sat-1.webp": "Uydu görüntüsünde, Taichung Uluslararası Havalimanı'nın (RMQ) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "RSW": {
+    "rsw-sat-1.webp": "Uydu görüntüsünde, Southwest Florida Uluslararası Havalimanı'nın (RSW) yerleşimi ve çevresi açıkça görülüyor."
   },
   "RUA": {
     "rua-page-1.webp": "Arua havaalanının itfaiye aracı, çevre çiti içindeki garajında (fotoğraf: Uganda CAA'nın Temmuz 2025 tarihli Arua havaalanı genişletme ÇED raporundan).",
@@ -1501,6 +1981,14 @@
   },
   "RUH": {
     "ruh-sat-1.webp": "Uydu görüntüsünde Kral Halid Uluslararası Havalimanı'ndaki (RUH) terminaller, apron ve pistler açıkça görünüyor."
+  },
+  "SAN": {
+    "san-sat-1.webp": "Uydu görüntüsünde, San Diego Uluslararası Havalimanı'nın (SAN) yerleşimi ve çevresi açıkça görülüyor.",
+    "san-baidu-1.webp": "San Diego Uluslararası Havalimanı'nda apron — burun buruna dizilmiş Southwest ve JetBlue uçakları, arkalarında bir FedEx kargo uçağı, terminalin önünde palmiyeler."
+  },
+  "SAW": {
+    "saw-sat-1.webp": "Uydu görüntüsünde, İstanbul Sabiha Gökçen Uluslararası Havalimanı'nın (SAW) yerleşimi ve çevresi açıkça görülüyor.",
+    "saw-baidu-1.webp": "Gece Sabiha Gökçen terminali; adı, kaldırımın üzerindeki geniş çatının altında ışıklandırılmış."
   },
   "SAY": {
     "say-sat-1.webp": "Uydu görüntüsünde Siena-Ampugnano Havalimanı'nın (SAY) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor."
@@ -1543,6 +2031,20 @@
   "SGN": {
     "sgn-sat-1.webp": "Uydu görüntüsü: Tan Son Nhat Uluslararası Havalimanı'ndaki (SGN) terminaller, pistler ve çevredeki şehir."
   },
+  "SHA": {
+    "sha-sat-1.webp": "Uydu görüntüsünde, Shanghai Hongqiao Uluslararası Havalimanı'nın (SHA) yerleşimi ve çevresi açıkça görülüyor.",
+    "sha-baidu-1.webp": "Yaklaşma yolundan Shanghai Hongqiao terminali; kırmızı '虹橋機場' çatı harflerinin arkasında yükselen bulutlar."
+  },
+  "SHE": {
+    "she-baidu-1.webp": "Bir yolcu uçağı, çatısında kırmızı 'Shenyang' karakterleri bulunan Shenyang Taoxian Uluslararası Havalimanı terminalinin önünden taksi yapıyor.",
+    "she-baidu-2.webp": "Shenyang Taoxian Uluslararası Havalimanı terminali — cam perde duvarın üzerinde katlanmış çatı hattı, cepheye yerleştirilmiş kırmızı karakterler.",
+    "she-sat-1.webp": "Uydu görüntüsünde, Shenyang Taoxian Uluslararası Havalimanı'nın (SHE) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "SHJ": {
+    "shj-baidu-1.webp": "Sharjah'ın sıra sıra beyaz kubbeli terminal binalarının havadan görünümü; sağda kontrol kulesi, çöle uzanan pistler.",
+    "shj-baidu-2.webp": "Alacakaranlıkta havalimanı yolu; çevre düzenlemeli bir dönel kavşak, uzakta Sharjah'ın kubbeli terminaline doğru götürüyor.",
+    "shj-sat-1.webp": "Uydu görüntüsünde, Sharjah Uluslararası Havalimanı'nın (SHJ) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "SID": {
     "sid-sat-1.webp": "Uydu görüntüsü: Sal'ın pisti Yeşil Burun Adaları'ndaki adanın kurak kıyısında uzanıyor; terminal ve apron sahanın doğusunda.",
     "sid-chatgpt-01.webp": "Partidas ve Departures yazılı mavi bir tente altında yolcular, turuncu-beyaz terminalin önündeki çizgili yolu geçiyor.",
@@ -1555,6 +2057,18 @@
   "SIN": {
     "sin-sat-1.webp": "Uydu görüntüsü: Singapur Changi Havalimanı (SIN) şehir, kıyı veya araziyle çevrili; pist görüntüyü kesiyor."
   },
+  "SJO": {
+    "sjo-baidu-1.webp": "Kabin penceresinden San José üzerinde havadan görünüm — yeşil tarlalar ve depolarla çevrili pist ve taksi yolları, ötede kasabanın kırmızı çatıları.",
+    "sjo-sat-1.webp": "Uydu görüntüsünde, Juan Santamaría Uluslararası Havalimanı'nın (SJO) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "SJU": {
+    "sju-sat-1.webp": "Uydu görüntüsünde, Luis Munoz Marin Uluslararası Havalimanı'nın (SJU) yerleşimi ve çevresi açıkça görülüyor.",
+    "sju-baidu-1.webp": "Terminalin dışındaki yolcu indirme yolu; kaldırımda beyaz bir minibüs, arkasında kontrol kulesinin genişleyen tepesi yükseliyor."
+  },
+  "SLC": {
+    "slc-sat-1.webp": "Uydu görüntüsünde, Salt Lake City Uluslararası Havalimanı'nın (SLC) yerleşimi ve çevresi açıkça görülüyor.",
+    "slc-baidu-1.webp": "Salt Lake City Havalimanı'nın terminal, apron ve pistlerinin havadan görünümü; ufukta dağlar ve bir göl."
+  },
   "SLK": {
     "slk-sat-1.webp": "Uydu görüntüsü: Adirondack Bölge Havalimanı (SLK) yeşil bitki örtüsü ve tarım arazileriyle çevrili.",
     "slk-chatgpt-01.webp": "Koyu kahverengi ahşap terminal ağır ahşap bir sundurma gösteriyor; önünde beton yürüyüş yolu ve çakıl tarhlar, üstte bulutsuz gökyüzü var.",
@@ -1565,6 +2079,13 @@
     "slk-chatgpt-06.webp": "Deri koltuklu ahşap sandalye sıraları gri halı üzerinde duruyor, pencerelerin yanında bitkiler var ve kahverengi bir yönlendirme panosu kafe ve tuvaletlere yöneliyor.",
     "slk-chatgpt-07.webp": "Mavi kuyruğuna beyaz bir kuş boyanmış Cape Air çift pervaneli uçağı taksi yolunda duruyor; tescil harfleri net görünüyor.",
     "slk-chatgpt-08.webp": "Çift motorlu bir turboprop kalkıştan hemen sonra tırmanıyor; ağaç hattı ve bir pistin üzerinde, arka planı ormanlık tepeler dolduruyor."
+  },
+  "SMF": {
+    "smf-sat-1.webp": "Uydu görüntüsünde, Sacramento Uluslararası Havalimanı'nın (SMF) yerleşimi ve çevresi açıkça görülüyor.",
+    "smf-baidu-1.webp": "Sacramento Uluslararası Havalimanı terminalinin içinde — bagajlarıyla yemek alanının önünden geçen yolcular ve 'Gates B4–B11' tabelası."
+  },
+  "SNA": {
+    "sna-sat-1.webp": "Uydu görüntüsünde, John Wayne Orange County Uluslararası Havalimanı'nın (SNA) yerleşimi ve çevresi açıkça görülüyor."
   },
   "SNU": {
     "snu-sat-1.webp": "Uydu görüntüsü: Santa Clara'nın pisti orta Küba'da şehir ile tarım arazileri arasında uzanıyor; terminal ve apron da yanında.",
@@ -1596,8 +2117,15 @@
   "SRG": {
     "srg-sat-1.webp": "Uydu görüntüsü: Semarang'ın pisti Cava'nın kuzey kıyısına yakın uzanıyor; terminal ve apron sahanın güneyinde, çevrede şehir ve tarım arazileri var."
   },
+  "STL": {
+    "stl-sat-1.webp": "Uydu görüntüsünde, St. Louis Lambert Uluslararası Havalimanı'nın (STL) yerleşimi ve çevresi açıkça görülüyor.",
+    "stl-baidu-1.webp": "St. Louis Lambert'in kontrol kulesi, sis içindeki kıvrımlı cam çatılı terminalin arkasından yükseliyor."
+  },
   "STN": {
     "stn-sat-1.webp": "Uydu görüntüsünde Londra Stansted Havalimanı'ndaki (STN) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
+  },
+  "SUB": {
+    "sub-sat-1.webp": "Uydu görüntüsünde, Juanda Uluslararası Havalimanı'nın (SUB) yerleşimi ve çevresi açıkça görülüyor."
   },
   "SVD": {
     "svd-baidu-2.webp": "Yağmurdan sonra Argyle International — mavi tonozlu terminalin önünde bir LIAT uçağı, ıslak apron gökyüzünü yansıtıyor, bulutların altında katmanlı tepeler.",
@@ -1615,6 +2143,11 @@
   "SYD": {
     "syd-sat-1.webp": "Uydu görüntüsü: Sidney Kingsford Smith Havalimanı'ndaki (SYD) terminaller, pistler ve çevredeki şehir."
   },
+  "SYX": {
+    "syx-baidu-1.webp": "Sanya Phoenix apronu; yolcu köprülerinin ve bagaj arabalarının üzerindeki alçak terminal çatısında kırmızı SAN YA harfleri ve Sanya karakterleri.",
+    "syx-baidu-2.webp": "Gece Sanya Phoenix'te, ışıkları yanan terminalin önünden taksi yapan bir Shenzhen Airlines uçağı; terminalin çatısı rengârenk bayraklarla sıralı.",
+    "syx-sat-1.webp": "Uydu görüntüsünde, Sanya Phoenix Uluslararası Havalimanı'nın (SYX) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "SZX": {
     "szx-sat-1.webp": "Uydu görüntüsü: Shenzhen Bao'an Uluslararası Havalimanı (SZX), pistleri ve terminali İnci Nehri halicinin doğu kıyısında."
   },
@@ -1628,11 +2161,30 @@
     "tab-chatgpt-06.webp": "Eski bir check-in salonunun içinde beton kolonlar numaralı mor bankoların üzerinde yükseliyor; kırmızı halat bariyerleri kuyruk şeridi oluşturuyor, bir çift bankta bekliyor.",
     "tab-chatgpt-07.webp": "Karanlık çöktükten sonra terminalin parlayan tabelası indirme şeridinin üzerindeki kavisli tenteyi aydınlatıyor; kırmızı-beyaz çizgili kolonların yanında bir araba bekliyor."
   },
+  "TAO": {
+    "tao-baidu-2.webp": "Qingdao Jiaodong'un kontrol kulesi ve terminali — solda elmas desenli kule, geniş çatının altında yolcu köprüleri ve park etmiş uçaklar.",
+    "tao-sat-1.webp": "Uydu görüntüsünde, Qingdao Jiaodong Uluslararası Havalimanı'nın (TAO) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "TAS": {
     "tas-sat-1.webp": "Uydu görüntüsü: İslam Kerimov Taşkent Uluslararası Havalimanı'ndaki (TAS) terminaller, pistler ve çevredeki şehir."
   },
+  "TFU": {
+    "tfu-sat-1.webp": "Uydu görüntüsünde, Chengdu Tianfu Uluslararası Havalimanı'nın (TFU) yerleşimi ve çevresi açıkça görülüyor.",
+    "tfu-baidu-1.webp": "Chengdu Tianfu'nun havadan görünümü; yeşilliklerle çevrili dairesel merkezin iki yanına uzanan kıvrımlı iki terminal kanadı.",
+    "tfu-baidu-2.webp": "İç hat kalkışları güvenlik kontrolü; kırmızı bir pankartta havalimanının adı yazıyor, bagajlarıyla yolcular kontrol koridorlarına yöneliyor."
+  },
   "TGZ": {
     "tgz-sat-1.webp": "Uydu görüntüsü: Tuxtla Gutiérrez'in pisti Chiapas'ta bir vadide uzanıyor; terminal ve apron yanında, çevrede dağlar ve tarım arazileri var."
+  },
+  "TLV": {
+    "tlv-sat-1.webp": "Uydu görüntüsünde, Ben Gurion Uluslararası Havalimanı'nın (TLV) yerleşimi ve çevresi açıkça görülüyor.",
+    "tlv-baidu-1.webp": "Ben Gurion Havalimanı'nın içinde İbranice harfli 'Welcome to Israel' yazılı duvar.",
+    "tlv-baidu-2.webp": "Ben Gurion Havalimanı terminalinin dışı; cam cepheli binanın arkasında kontrol kulesi görünüyor."
+  },
+  "TNA": {
+    "tna-sat-1.webp": "Uydu görüntüsünde, Jinan Yaoqiang Uluslararası Havalimanı'nın (TNA) yerleşimi ve çevresi açıkça görülüyor.",
+    "tna-baidu-1.webp": "Jinan Yaoqiang'da terminalin önünde — apronda bir China Eastern uçağı; üstteki kırmızı çatı yazısında 'JINAN INTERNATIONAL AIRPORT' yazıyor.",
+    "tna-baidu-2.webp": "Jinan Yaoqiang'ın kalkış salonu — üstte beyaz uzay kafes çatı ve iç hat kapıları B13–B32'yi gösteren tabelalar."
   },
   "TND": {
     "tnd-sat-1.webp": "Uydu görüntüsü: Alberto Delgado Havalimanı (TND) yeşil bitki örtüsü ve tarım arazileriyle çevrili.",
@@ -1641,11 +2193,28 @@
     "tnd-chatgpt-03.webp": "Bir başka oyun ekran görüntüsü, turkuaz düz çatılı bir terminali dışarıda park etmiş mavi-beyaz bir otobüsle eşleştiriyor; kaldırım boyunca palmiyeler ve çitler, solda yüzen bir görev paneli var.",
     "tnd-chatgpt-04.webp": "Apronda iki hafif uçak, kırmızı-beyaz çizgili direk sırasının önünde duruyor; solda turuncu çatılı eski terminal, çevrede güneşli çimenler var."
   },
+  "TNN": {
+    "tnn-sat-1.webp": "Uydu görüntüsünde, Tainan Havalimanı'nın (TNN) yerleşimi ve çevresi açıkça görülüyor.",
+    "tnn-baidu-1.webp": "Tainan Havalimanı terminalinin önü; kemerli alınlığı ve ön avludaki taksi durağı."
+  },
+  "TPA": {
+    "tpa-sat-1.webp": "Uydu görüntüsünde, Tampa Uluslararası Havalimanı'nın (TPA) yerleşimi ve çevresi açıkça görülüyor.",
+    "tpa-baidu-1.webp": "Tampa'nın yuvarlak kara tarafı terminali ve hava tarafı konkorslarının havadan görünümü; aşağıda taksi yapan bir Southwest 737."
+  },
   "TPE": {
     "tpe-sat-1.webp": "Uydu görüntüsü: Taoyuan Uluslararası Havalimanı (TPE), paralel pistleri, terminalleri ve çevredeki kasabalarıyla."
   },
   "TQD": {
     "tqd-sat-1.webp": "Uydu görüntüsünde Al Taqaddum Hava Üssü'nün (TQD) pisti kuru zemin ve çıplak arazi arasında yer alıyor."
+  },
+  "TSA": {
+    "tsa-sat-1.webp": "Uydu görüntüsünde, Taipei Songshan Havalimanı'nın (TSA) yerleşimi ve çevresi açıkça görülüyor.",
+    "tsa-baidu-1.webp": "Bir China Airlines uçağı Songshan pistinde ilerliyor; arkasında Taipei'nin silüeti yükseliyor."
+  },
+  "TSN": {
+    "tsn-sat-1.webp": "Uydu görüntüsünde, Tianjin Binhai Uluslararası Havalimanı'nın (TSN) yerleşimi ve çevresi açıkça görülüyor.",
+    "tsn-baidu-1.webp": "Tianjin Binhai terminali; geniş çatısında kırmızı '天津' karakterleri, önünde tıklım tıklım bir açık otopark.",
+    "tsn-baidu-2.webp": "Ön avludan Tianjin Binhai terminali — cam perde duvarı gölgeleyen dev konsol çatı ve tepesinde kırmızı '天津' harfleri."
   },
   "TTQ": {
     "ttq-page-1.webp": "Tortuguero pisti — asfaltta bir Nature Air Cessna Caravan (TI-BDY), küçük yeşil çatılı bekleme kulübesi ve kanadın hemen arkasında yağmur ormanı (fotoğraf: Sebastian Arndt / Flugzeugbilder.de).",
@@ -1655,12 +2224,32 @@
     "ttq-chatgpt-04.webp": "Beyaz bir turboprop apron boyunca yandan duruyor; kuyruğunda kırmızı-mavi şeritler, gövdesinde tescili, çevresinde palmiyeler ve koyu mavi gökyüzü var.",
     "ttq-chatgpt-05.webp": "Tropikal bir su kıyısında yeşil çatılı ahşap bir barınak ağaçların gölgesinde duruyor; koyu ve durgun suyun üstündeki çimende bir balıkçıl var."
   },
+  "TTT": {
+    "ttt-sat-1.webp": "Uydu görüntüsünde, Taitung Havalimanı'nın (TTT) yerleşimi ve çevresi açıkça görülüyor.",
+    "ttt-baidu-1.webp": "Taitung Havalimanı terminali; üçgen alınlığı ve yeşil tabelası, solda kontrol kulesi."
+  },
+  "TYN": {
+    "tyn-baidu-1.webp": "Taiyuan Wusu Uluslararası Havalimanı terminali — çatıda kırmızı 'Taiyuan' karakterleri ve 'Taiyuan International Airport' yazısı, kalkış katının altında park etmiş arabalar.",
+    "tyn-sat-1.webp": "Uydu görüntüsünde, Taiyuan Wusu Uluslararası Havalimanı'nın (TYN) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "UAM": {
     "uam-sat-1.webp": "Uydu görüntüsünde Andersen Hava Kuvvetleri Üssü (UAM) çevredeki su ve kıyı şeridiyle bütünleşiyor."
+  },
+  "UPG": {
+    "upg-sat-1.webp": "Uydu görüntüsünde, Sultan Hasanuddin Uluslararası Havalimanı'nın (UPG) yerleşimi ve çevresi açıkça görülüyor."
+  },
+  "URC": {
+    "urc-baidu-2.webp": "Ürümqi Tianshan'ın terminali ve kontrol kulesi; arkalarında karlı Tianshan sıradağları, üzerlerinden geçen bir yolcu uçağı.",
+    "urc-sat-1.webp": "Uydu görüntüsünde, Ürümqi Tianshan Uluslararası Havalimanı'nın (URC) yerleşimi ve çevresi açıkça görülüyor."
   },
   "VBA": {
     "vba-sat-1.webp": "Uydu görüntüsü: orta Myanmar'da yeşil tepeler arasından bir pist geçiyor; yanında küçük bir apron ve terminal var.",
     "vba-chatgpt-01.webp": "Koyu taş bir giriş kapısı, Birmanca yazının üzerinde altın harfler taşıyor; arkasında düz gri gökyüzü altında terminalin kırmızı çatısı yükseliyor."
+  },
+  "VCP": {
+    "vcp-sat-1.webp": "Uydu görüntüsünde, Viracopos Uluslararası Havalimanı'nın (VCP) yerleşimi ve çevresi açıkça görülüyor.",
+    "vcp-baidu-1.webp": "Terminalin cam perde duvarına yerleştirilmiş mavi 'Aeroporto Internacional de Viracopos' harfleri.",
+    "vcp-baidu-2.webp": "Bagajla dolu bir araba terminalin beyaz beşik tonozlu çatısının yanında duruyor; iki görevli yanından geçiyor."
   },
   "VIE": {
     "vie-sat-1.webp": "Uydu görüntüsü: Viyana Uluslararası Havalimanı'ndaki (VIE) terminaller, pistler ve çevredeki şehir."
@@ -1693,6 +2282,9 @@
   "WAQ": {
     "waq-sat-1.webp": "Uydu görüntüsünde Antsalova Havalimanı'nın (WAQ) pisti kasaba, tarım arazileri ve bitki örtüsü arasında yer alıyor."
   },
+  "WAW": {
+    "waw-sat-1.webp": "Uydu görüntüsünde, Varşova Chopin Havalimanı'nın (WAW) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "WKK": {
     "wkk-sat-1.webp": "Uydu görüntüsünde Aleknagik / New Havalimanı'nın (WKK) pisti yeşil bitki örtüsü ve tarım arazileri arasında yer alıyor.",
     "wkk-chatgpt-01.webp": "Alçak akşam ışığında çift turboprop bir uçak çakıl apronda duruyor; açık çayıra dağılmış birkaç oluklu metal kulübe, ötede bulutlara bürünmüş yuvarlak tepeler var."
@@ -1700,8 +2292,26 @@
   "WMR": {
     "wmr-sat-1.webp": "Uydu görüntüsü: Mananara Nord Havalimanı (WMR) su ve kıyı şeridiyle çevrili."
   },
+  "WOT": {
+    "wot-sat-1.webp": "Uydu görüntüsünde, Wang'an Havalimanı'nın (WOT) yerleşimi ve çevresi açıkça görülüyor.",
+    "wot-baidu-1.webp": "Wang'an Havalimanı'nın kompakt terminali ve çatısındaki kontrol kulesi; duvarında 'Wang'an Airport' tabelası."
+  },
+  "WUH": {
+    "wuh-sat-1.webp": "Uydu görüntüsünde, Wuhan Tianhe Uluslararası Havalimanı'nın (WUH) yerleşimi ve çevresi açıkça görülüyor.",
+    "wuh-baidu-1.webp": "Wuhan Tianhe terminalinin önünde apronda bir Hainan Airlines uçağı; terminalin çatısında 'WUHAN TIANHE AIRPORT' yazıyor.",
+    "wuh-baidu-2.webp": "Wuhan Tianhe'de kabin penceresinden — kapıda bir Air China uçağı, terminal çatısında Wuhan karakterleri ve ötede genişleyen tepeli kontrol kulesi."
+  },
+  "XIY": {
+    "xiy-sat-1.webp": "Uydu görüntüsünde, Xi'an Xianyang Uluslararası Havalimanı'nın (XIY) yerleşimi ve çevresi açıkça görülüyor.",
+    "xiy-baidu-1.webp": "Xi'an Xianyang'ın kontrol kulesi ve terminali; çatının üzerinde büyük kırmızı 'Xi'an' karakterleri, kapılarda iki Air Changan 737."
+  },
   "XJD": {
     "xjd-sat-1.webp": "Uydu görüntüsü: Al Udeid Hava Üssü'nün paralel pistleri ve büyük apronu; üs binaları sahanın doğusunda."
+  },
+  "XMN": {
+    "xmn-sat-1.webp": "Uydu görüntüsünde, Xiamen Gaoqi Uluslararası Havalimanı'nın (XMN) yerleşimi ve çevresi açıkça görülüyor.",
+    "xmn-baidu-1.webp": "Xiamen Gaoqi: 'XIAMEN AIRPORT' yazılı terminalin önünde taksi yolunda bir XiamenAir uçağı, arkada tepelere yayılmış şehir.",
+    "xmn-baidu-2.webp": "Gaoqi Havalimanı'na kısa finalde bir XiamenAir uçağı; altında yeşil '高崎机场 Gaoqi Airport' yol tabelasının önünden geçen trafik."
   },
   "YAA": {
     "yaa-sat-1.webp": "Uydu görüntüsünde Anahim Lake Havalimanı (YAA) çevredeki yeşil bitki örtüsü ve tarım arazileriyle bütünleşiyor."
@@ -1724,11 +2334,21 @@
   "YPJ": {
     "ypj-sat-1.webp": "Uydu görüntüsünde Aupaluk Havalimanı (YPJ) çevredeki kasaba, tarım arazileri ve bitki örtüsüyle bütünleşiyor."
   },
+  "YUL": {
+    "yul-baidu-1.webp": "Alacakaranlıkta Montreal Trudeau'da apron — terminalin üçgen biçimli ışıklı cephesi ve yolcu köprüsünde bir Air Canada uçağı.",
+    "yul-baidu-2.webp": "Montreal Trudeau'da bir Air Canada uçağı havalanıyor; arkasında 'MONTREAL' yazılı kontrol kulesi.",
+    "yul-sat-1.webp": "Uydu görüntüsünde, Montreal / Pierre Elliott Trudeau Uluslararası Havalimanı'nın (YUL) yerleşimi ve çevresi açıkça görülüyor."
+  },
   "YVR": {
     "yvr-sat-1.webp": "Uydu görüntüsünde Vancouver Uluslararası Havalimanı'ndaki (YVR) terminaller ve pistler şehir ve yol ağının içinde yer alıyor."
   },
   "YXX": {
     "yxx-sat-1.webp": "Uydu görüntüsü: Abbotsford'un pistleri Fraser Vadisi'nde tarım arazileri ile dağlar arasında uzanıyor; terminal ve apron sahanın yanında."
+  },
+  "YYC": {
+    "yyc-baidu-1.webp": "Calgary terminalinin içinde, ahşap tavan ve çatı pencerelerinin altındaki check-in kolonunda bir YYC tabelası.",
+    "yyc-baidu-2.webp": "Calgary terminali ve konkorslarının havadan görünümü; kapılarda uçaklar, solda otopark yapıları ve oteller.",
+    "yyc-sat-1.webp": "Uydu görüntüsünde, Calgary Uluslararası Havalimanı'nın (YYC) yerleşimi ve çevresi açıkça görülüyor."
   },
   "YYW": {
     "yyw-sat-1.webp": "Uydu görüntüsü: kuzey Ontario'da ormanı bir pist kesiyor; orta noktasında apron ve küçük terminal var.",

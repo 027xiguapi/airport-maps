@@ -1,10 +1,4 @@
 {
-  "_readme": [
-    "French photo captions, keyed by IATA then image file name.",
-    "Translated from the English captions in public/photos/captions/<IATA>.json.",
-    "lib/airport-photos.ts reads this file as captions.fr.json; airports or files",
-    "missing here fall back to the English caption, never to the Chinese one."
-  ],
   "AAA": {
     "aaa-page-1.webp": "L'atoll d'Anaa photographié depuis la Station spatiale internationale (image NASA ISS007-E-14624, domaine public) — l'atoll étroit, son liseré récifal blanc et son lagon turquoise ; l'aéroport se trouve sur l'îlot principal."
   },
@@ -148,6 +142,11 @@
   "ADB": {
     "adb-sat-1.webp": "Vue satellite : les pistes et voies de circulation d'Izmir s'étendent dans la plaine au bord de la mer Égée, avec le terminal et l'aire de trafic au sud du terrain."
   },
+  "ADD": {
+    "add-baidu-1.webp": "À l'extérieur du terminal de l'aéroport international d'Addis-Abeba Bole, la façade à plusieurs étages se dresse derrière une zone de dépose bordée de bornes noires et jaunes.",
+    "add-baidu-2.webp": "Un avion-cargo d'Ethiopian Cargo stationné sur l'aire de trafic, avec le bâtiment Ethiopian Cargo et des collines au loin en arrière-plan.",
+    "add-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international d'Addis-Abeba Bole (ADD) et de ses environs est clairement visible."
+  },
   "ADE": {
     "ade-bing-3.webp": "Le terminal et la tour de contrôle de l'aéroport international d'Aden — le nom de l'aéroport en arabe sur le mur, avec deux tracteurs de repoussage garés devant."
   },
@@ -231,6 +230,11 @@
   },
   "AGC": {
     "agc-sat-1.webp": "Sur l'image satellite, l'aéroport du comté d'Allegheny (AGC) se fond dans la végétation verdoyante et les terres agricoles environnantes."
+  },
+  "AGP": {
+    "agp-baidu-1.webp": "Dans le hall des départs, de grands ventilateurs de plafond sont suspendus au-dessus des voyageurs qui se dirigent vers l'enregistrement et les panneaux des portes.",
+    "agp-baidu-2.webp": "Sur l'aire de trafic, un avion easyJet à son poste de stationnement, du matériel au sol au premier plan, un appareil au départ plus loin et des montagnes en arrière-plan.",
+    "agp-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Málaga-Costa del Sol (AGP) et de ses environs est clairement visible."
   },
   "AGQ": {
     "agq-sat-1.webp": "Sur l'image satellite, la piste du terrain de Dhokimion (AGQ) se trouve entre la ville, les terres agricoles et la végétation."
@@ -877,14 +881,60 @@
   "BCN": {
     "bcn-sat-1.webp": "Sur l'image satellite, les terminaux, le tarmac et les pistes de l'aéroport de Barcelone-El Prat (BCN) sont clairement visibles."
   },
+  "BER": {
+    "ber-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Berlin-Brandebourg (BER) et de ses environs est clairement visible.",
+    "ber-baidu-1.webp": "La façade vitrée du terminal de l'aéroport de Berlin-Brandebourg porte les inscriptions « BERLIN BRANDENBURG AIRPORT » et « WILLY BRANDT », avec les portes B12 et B13 et leurs passerelles au-dessus d'une vaste aire de trafic.",
+    "ber-baidu-2.webp": "Un Airbus A320neo de Lufthansa (immatriculation D-AINZ, portant les titres « Hauptstadtflieger » et les marquages BER) stationne sur l'aire de trafic devant le terminal de l'aéroport de Berlin-Brandebourg."
+  },
+  "BET": {
+    "bet-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Bethel (BET) et de ses environs est clairement visible."
+  },
   "BIG": {
     "big-sat-1.webp": "Vue satellite : le terrain d'aviation militaire Allen (BIG) est entouré de ville, de terres agricoles et de végétation."
   },
   "BKK": {
     "bkk-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport de Suvarnabhumi (BKK)."
   },
+  "BLR": {
+    "blr-baidu-2.webp": "Un Airbus A320 de Go First sur l'aire de trafic détrempée par la pluie, deux chariots à bagages à ses côtés et des collines verdoyantes au loin.",
+    "blr-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Kempegowda de Bengaluru (BLR) et de ses environs est clairement visible."
+  },
+  "BNA": {
+    "bna-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Nashville (BNA) et de ses environs est clairement visible."
+  },
+  "BNE": {
+    "bne-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Brisbane (BNE) et de ses environs est clairement visible.",
+    "bne-baidu-1.webp": "Extérieur du terminal international de Brisbane, avec l'inscription « Brisbane International » le long de la toiture."
+  },
+  "BOG": {
+    "bog-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international El Dorado (BOG) et de ses environs est clairement visible.",
+    "bog-baidu-2.webp": "Sur l'aire de trafic de Bogotá-El Dorado, des avions LATAM et Avianca aux portes du terminal, avec des tours d'habitation en arrière-plan."
+  },
+  "BOM": {
+    "bom-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Chhatrapati Shivaji Maharaj (BOM) et de ses environs est clairement visible.",
+    "bom-baidu-2.webp": "Vue aérienne des pistes entrecroisées de Mumbai et du terminal, avec la côte de la mer d'Arabie à l'ouest."
+  },
+  "BOS": {
+    "bos-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Logan de Boston (BOS) et de ses environs est clairement visible."
+  },
   "BPS": {
     "bps-sat-1.webp": "Vue satellite : la piste de Porto Seguro s'étend entre forêt et plage sur la côte atlantique du Brésil, avec le terminal et le tarmac à côté."
+  },
+  "BRU": {
+    "bru-baidu-2.webp": "Le terminal à façade vitrée de l'aéroport de Bruxelles, avec le grand logo « b » rouge à côté d'une passerelle et un avion Brussels Airlines à la porte.",
+    "bru-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Bruxelles (BRU) et de ses environs est clairement visible."
+  },
+  "BSB": {
+    "bsb-baidu-2.webp": "Vue aérienne du terminal principal circulaire et des halls de Brasília, des avions sur l'aire de trafic et des zones de chantier en périphérie.",
+    "bsb-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Presidente Juscelino Kubitschek (BSB) et de ses environs est clairement visible."
+  },
+  "BUD": {
+    "bud-baidu-1.webp": "Vue en hauteur du terminal 2 de Budapest : son toit argenté aux formes ondulées couvre le bâtiment, des avions se trouvent sur l'aire de trafic et un parking bondé s'étend devant.",
+    "bud-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Budapest-Ferenc Liszt (BUD) et de ses environs est clairement visible."
+  },
+  "BWI": {
+    "bwi-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Thurgood Marshall de Baltimore-Washington (BWI) et de ses environs est clairement visible.",
+    "bwi-baidu-1.webp": "Vus depuis le hublot, les avions Southwest sont à leurs portes, tandis que véhicules au sol et chariots à bagages s'étendent sur l'aire de trafic baignée de soleil."
   },
   "BYF": {
     "byf-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport Albert-Bray (BYF) se trouve entre la végétation verdoyante et les terres agricoles."
@@ -906,9 +956,16 @@
   "CAN": {
     "can-sat-1.webp": "Vue satellite : l'aéroport international de Guangzhou-Baiyun (CAN) est encadré par la ville, le littoral ou le relief, avec la piste qui traverse le paysage."
   },
+  "CCU": {
+    "ccu-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Netaji Subhash Chandra Bose (CCU) et de ses environs est clairement visible."
+  },
   "CDG": {
     "cdg-baidu-1.webp": "À l'intérieur du terminal 1 de l'aéroport Charles de Gaulle — la rangée « Bars, Restaurants » dans l'atrium circulaire, sous ses parois de verre, tandis que des voyageurs défilent.",
     "cdg-baidu-2.webp": "L'escalier mécanique menant au terminal 2 — le panneau suspendu indique « Bagages / Baggage / 行李提取 » et « Sortie / Exit » en trois langues."
+  },
+  "CEB": {
+    "ceb-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Mactan-Cebu (CEB) et de ses environs est clairement visible.",
+    "ceb-baidu-1.webp": "À Mactan-Cebu après le coucher du soleil, un avion Cebu Pacific à la passerelle, avec l'équipe au sol et des chariots à bagages actifs en contrebas."
   },
   "CFE": {
     "cfe-baidu-2.webp": "Le terminal d'aviation d'affaires — « départs / departures » sur sa façade sombre, une porte à tambour et une voie de dépose devant.",
@@ -921,12 +978,35 @@
     "cfe-chatgpt-06.webp": "Un avion régional Air France HOP stationne sur le tarmac tandis qu’un chargeur de bagages et un véhicule de piste travaillent à ses côtés, des collines se dressant au-delà.",
     "cfe-chatgpt-07.webp": "Un voyageur avec un sac à dos franchit les portes tournantes sous l’inscription jaune « départs » de l’auvent sombre du terminal."
   },
+  "CGH": {
+    "cgh-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Congonhas-Deputado Freitas Nobre (CGH) et de ses environs est clairement visible.",
+    "cgh-baidu-1.webp": "Des avions TAM avancent nez en avant vers les portes, sous l'inscription « AEROPORTO DE CONGONHAS » du terminal.",
+    "cgh-baidu-2.webp": "Activité sur l'aire de trafic de Congonhas, avec la piste et les gratte-ciel de São Paulo juste derrière."
+  },
   "CGK": {
     "cgk-baidu-1.webp": "À l'intérieur du terminal de Soekarno-Hatta — des arches rouges ornées de filigranes se dressent sous le plafond géométrique du hall des départs.",
     "cgk-baidu-2.webp": "Un couloir d'embarquement — des poutres vertes et des vitrages ouvrant sur une végétation tropicale, un panneau jaune indiquant la porte D6."
   },
+  "CGO": {
+    "cgo-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Zhengzhou Xinzheng (CGO) et de ses environs est clairement visible.",
+    "cgo-baidu-1.webp": "Un avion Shandong Airlines à la porte devant la façade vitrée du terminal, des chariots à bagages et un camion de carburant autour de lui sous un ciel au coucher du soleil.",
+    "cgo-baidu-2.webp": "Un avion à la livrée colorée à une passerelle pendant son entretien au sol, avec la longue ligne de toit horizontale du terminal en arrière-plan."
+  },
+  "CGQ": {
+    "cgq-baidu-1.webp": "Un appareil Loong Air stationné à une porte devant le terminal de l'aéroport international de Changchun Longjia, dont la façade vitrée reflète un ciel nuageux.",
+    "cgq-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Changchun Longjia (CGQ) et de ses environs est clairement visible."
+  },
   "CJS": {
     "cjs-sat-1.webp": "Vue satellite : les pistes de Ciudad Juárez s'étendent entre la ville et des terres sèches à la lisière du désert de Chihuahua, avec le terminal et l'aire de trafic à leur côté."
+  },
+  "CJU": {
+    "cju-baidu-1.webp": "L'aéroport de Jeju de nuit : l'enseigne JEJU INT'L AIRPORT est éclairée sur la façade du terminal, la tour de contrôle se trouve à gauche et la circulation anime la route.",
+    "cju-baidu-2.webp": "Le long de la voie surélevée de Jeju, la tour de contrôle circulaire s'élève au-dessus de l'entrée du terminal, encadrée par des palmiers et la circulation de dépose.",
+    "cju-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Jeju (CJU) et de ses environs est clairement visible."
+  },
+  "CKG": {
+    "ckg-baidu-1.webp": "Le long du trottoir du terminal 3 de Chongqing Jiangbei, un haut auvent blanc surmonte un panneau des départs intérieurs indiquant le rang d'enregistrement de chaque compagnie.",
+    "ckg-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Chongqing Jiangbei (CKG) et de ses environs est clairement visible."
   },
   "CLO": {
     "clo-sat-1.webp": "Vue satellite : la piste de Cali se situe dans la vallée du Cauca, avec le terminal et l'aire de trafic à l'est, et la ville et les champs de canne à sucre aux alentours.",
@@ -938,8 +1018,27 @@
     "clo-chatgpt-06.webp": "Sous un ciel bleu strié de nuages, un avion marqué LATAM se tient sur le tarmac tandis que la tour de contrôle en béton s’élève au-dessus du terminal, près des palmiers.",
     "clo-chatgpt-07.webp": "Un avion de ligne fait face à l’objectif à sa porte, une passerelle suspendue au terminal à droite et un chariot à bagages bleu sur le tarmac aux lignes rouges."
   },
+  "CLT": {
+    "clt-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Charlotte-Douglas (CLT) et de ses environs est clairement visible.",
+    "clt-baidu-1.webp": "Vue aérienne de l'aéroport : son terminal blanc et ses doigts d'embarquement s'étendent sur une vaste aire de trafic où les avions se pressent aux portes."
+  },
   "CMF": {
     "cmf-sat-1.webp": "Vue satellite : la piste s'étend dans une campagne verdoyante aux portes de Chambéry, avec le terminal et l'aire de trafic à ses côtés."
+  },
+  "CMH": {
+    "cmh-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international John Glenn de Columbus (CMH) et de ses environs est clairement visible.",
+    "cmh-baidu-1.webp": "L'atrium du terminal de l'aéroport international John Glenn de Columbus, avec, au centre, un grand mur de mosaïque « COLUMBUS » au-dessus des escaliers mécaniques."
+  },
+  "CMJ": {
+    "cmj-baidu-1.webp": "Le petit terminal de l'aéroport de Qimei, avec une façade peinte ondulée et des scooters garés devant.",
+    "cmj-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Qimei (CMJ) et de ses environs est clairement visible."
+  },
+  "CMN": {
+    "cmn-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Mohammed V (CMN) et de ses environs est clairement visible.",
+    "cmn-baidu-1.webp": "Devant le terminal de l'aéroport Mohammed V de Casablanca, l'inscription « AEROPORT MOHAMMED V » se dresse sur la toiture, tandis que les voyageurs passent sous l'auvent de l'entrée."
+  },
+  "CNF": {
+    "cnf-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Tancredo Neves (CNF) et de ses environs est clairement visible."
   },
   "COR": {
     "cor-sat-1.webp": "Vue satellite : les pistes de Cordoba s'étendent au nord de la ville, avec le terminal et l'aire de trafic à l'est du terrain, et des terres agricoles et des habitations alentour."
@@ -953,11 +1052,27 @@
   "CPT": {
     "cpt-sat-1.webp": "Sur l'image satellite, les terminaux, l'aire de trafic et les pistes de l'aéroport international du Cap (CPT) sont bien visibles."
   },
+  "CSX": {
+    "csx-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Changsha Huanghua (CSX) et de ses environs est clairement visible.",
+    "csx-baidu-1.webp": "Vu depuis le hublot par-dessus l'aile, un avion China Southern est stationné au terminal de Changsha, dont les lettres sur le toit forment « CHANGSHA ».",
+    "csx-baidu-2.webp": "Un avion Shandong Airlines décolle devant le terminal de Changsha, dont les enseignes rouges sur le toit portent « 长沙 CHANGSHA »."
+  },
   "CTD": {
     "ctd-sat-1.webp": "Sur l'image satellite, l'aéroport Alonso Valderrama (CTD) se fond dans la ville, les terres agricoles et la végétation environnantes."
   },
+  "CTS": {
+    "cts-baidu-2.webp": "Le terminal de l'aéroport de Shin-Chitose vu depuis le parvis, avec un bus garé devant et la structure du toit se détachant sur un ciel bleu clair.",
+    "cts-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Shin-Chitose (CTS) et de ses environs est clairement visible."
+  },
+  "CTU": {
+    "ctu-baidu-2.webp": "Les lettres rouges CHENGDU et les caractères de Shu et Du dominent la façade vitrée incurvée du terminal, avec une petite tour sur la droite.",
+    "ctu-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Chengdu Shuangliu (CTU) et de ses environs est clairement visible."
+  },
   "CUM": {
     "cum-sat-1.webp": "Vue satellite : la piste de Cumaná s'étend entre la ville et les collines de la côte caribéenne du Venezuela, avec le terminal et l'aire de trafic à ses côtés."
+  },
+  "CUN": {
+    "cun-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Cancún (CUN) et de ses environs est clairement visible."
   },
   "CUZ": {
     "cuz-sat-1.webp": "Vue satellite : la piste de Cusco se situe dans une vallée andine, avec le terminal et l'aire de trafic à ses côtés, et la ville et les coteaux tout autour.",
@@ -990,8 +1105,39 @@
     "cya-chatgpt-06.webp": "Le soleil couchant dore le tarmac derrière un petit terminal blanc dont le mur porte l’inscription Les Cayes Airport, quelques voyageurs se tenant près de l’entrée.",
     "cya-chatgpt-07.webp": "Une entrée des arrivées vert menthe pâle porte un panneau blanc indiquant Arrivee au-dessus de deux flèches vers le bas, avec des garde-corps bleus et des buissons devant."
   },
+  "CYI": {
+    "cyi-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Chiayi (CYI) et de ses environs est clairement visible."
+  },
+  "DAC": {
+    "dac-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Hazrat Shahjalal (DAC) et de ses environs est clairement visible.",
+    "dac-baidu-1.webp": "Un Boeing 777 de Biman Bangladesh en approche finale, train sorti, volant bas au-dessus des toits de Dhaka.",
+    "dac-baidu-2.webp": "Le nez d'un Boeing 777 de Biman Bangladesh qui roule au sol, avec des bâtiments bas en lisière de l'aéroport en arrière-plan."
+  },
+  "DAD": {
+    "dad-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Da Nang (DAD) et de ses environs est clairement visible.",
+    "dad-baidu-1.webp": "La route de dépose devant le terminal de l'aéroport de Da Nang, bordée d'une rangée d'auvents blancs incurvés.",
+    "dad-baidu-2.webp": "À l'intérieur du terminal de Da Nang, une enseigne lumineuse « Welcome to Da Nang » surplombe un mur végétalisé."
+  },
+  "DAL": {
+    "dal-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport Dallas Love Field (DAL) et de ses environs est clairement visible.",
+    "dal-baidu-1.webp": "Un avion Southwest roule sur l'aire de trafic de Dallas Love Field.",
+    "dal-baidu-2.webp": "La route du terminal de Dallas Love Field de nuit : des voyageurs avec leurs bagages attendent près de voitures au ralenti, le nom de l'aéroport est éclairé sur le bâtiment."
+  },
+  "DCA": {
+    "dca-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport national Ronald-Reagan de Washington (DCA) et de ses environs est clairement visible.",
+    "dca-baidu-1.webp": "Un avion American Airlines sur l'aire de trafic, avec le Potomac et des bateaux qui passent juste derrière.",
+    "dca-baidu-2.webp": "Vue aérienne du terminal, de ses parkings et de la tour de contrôle, avec une piste qui s'étend le long du Potomac."
+  },
   "DEL": {
     "del-sat-1.webp": "Sur l'image satellite, les terminaux et les pistes de l'aéroport international Indira Gandhi (DEL) s'inscrivent dans la ville et le réseau routier."
+  },
+  "DEN": {
+    "den-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Denver (DEN) et de ses environs est clairement visible."
+  },
+  "DFW": {
+    "dfw-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Dallas-Fort Worth (DFW) et de ses environs est clairement visible.",
+    "dfw-baidu-1.webp": "À l'intérieur d'un terminal de DFW, des passagers marchent sous les devantures des commerces et la signalétique des portes.",
+    "dfw-baidu-2.webp": "Vue aérienne du complexe des terminaux, des voies périphériques et des postes de stationnement à l'aéroport international de Dallas-Fort Worth (DFW)."
   },
   "DHF": {
     "dhf-sat-1.webp": "Vue satellite : la base aérienne d'Al Dhafra (DHF) est entourée de sols secs et de terres dénudées."
@@ -999,11 +1145,31 @@
   "DIE": {
     "die-sat-1.webp": "Vue satellite : la piste d'Antsiranana se situe entre les collines et la ville dans le nord de Madagascar, avec le terminal et l'aire de trafic à ses côtés."
   },
+  "DLC": {
+    "dlc-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Dalian Zhoushuizi (DLC) et de ses environs est clairement visible.",
+    "dlc-baidu-1.webp": "La façade du terminal de Dalian Zhoushuizi, ses enseignes rouges « 大连 DALIAN » sur le toit se détachant sur la ville à flanc de colline en arrière-plan.",
+    "dlc-baidu-2.webp": "Le terminal de Dalian vu depuis la route, avec les enseignes rouges « DALIAN AIRPORT » et « 大连周水子 » au-dessus d'une file de taxis en attente."
+  },
+  "DMK": {
+    "dmk-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Don Mueang (DMK) et de ses environs est clairement visible."
+  },
   "DOH": {
     "doh-sat-1.webp": "Sur l'image satellite, les terminaux, l'aire de trafic et les pistes de l'aéroport international Hamad (DOH) sont bien visibles."
   },
+  "DPS": {
+    "dps-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international I Gusti Ngurah Rai de Denpasar (DPS) et de ses environs est clairement visible."
+  },
+  "DTW": {
+    "dtw-baidu-2.webp": "Vue aérienne de Detroit Metro : le long terminal McNamara et ses deux halls parallèles le long de l'aire de trafic, avec les voies de circulation et les pistes au-delà.",
+    "dtw-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport métropolitain de Detroit-Wayne County (DTW) et de ses environs est clairement visible."
+  },
   "DUB": {
     "dub-sat-1.webp": "Sur l'image satellite, les terminaux, l'aire de trafic et les pistes de l'aéroport de Dublin (DUB) sont bien visibles."
+  },
+  "DUS": {
+    "dus-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Düsseldorf (DUS) et de ses environs est clairement visible.",
+    "dus-baidu-1.webp": "Le hall des départs de l'aéroport de Düsseldorf, où des voyageurs avec leurs bagages font la queue aux bornes d'enregistrement automatique, sous une enseigne bleue « Abflug / Departures ».",
+    "dus-baidu-2.webp": "Les lettres rouges « Düsseldorf Airport » et bleues « DUS » se dressent au-dessus du toit du terminal sur un treillis d'acier, dans un ciel bleu limpide."
   },
   "DXB": {
     "dxb-sat-1.webp": "Vue satellite : l'aéroport international de Dubaï (DXB) est encadré par la ville, le littoral ou le relief, avec la piste qui traverse le paysage."
@@ -1018,6 +1184,11 @@
     "edc-chatgpt-06.webp": "Le hangar est vivement éclairé après la tombée de la nuit, plusieurs petits avions monomoteurs et un avion bimoteur étant garés côte à côte sur le sol poli.",
     "edc-chatgpt-07.webp": "La nuit, l’auvent courbe devant le hangar brille d’une rangée de lampes, éclairant des murs blancs et une large étendue de tarmac en béton."
   },
+  "EDI": {
+    "edi-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport d'Édimbourg (EDI) et de ses environs est clairement visible.",
+    "edi-baidu-1.webp": "Extérieur du terminal de l'aéroport d'Édimbourg, avec un bus bleu et blanc garé le long du trottoir.",
+    "edi-baidu-2.webp": "La tour de contrôle de l'aéroport d'Édimbourg, illuminée de violet sur fond de ciel crépusculaire."
+  },
   "EPS": {
     "eps-sat-1.webp": "Vue satellite : l'aéroport Arroyo Barril (EPS) se trouve parmi une végétation verdoyante et des terres agricoles."
   },
@@ -1027,8 +1198,14 @@
   "FCO": {
     "fco-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport de Rome-Fiumicino (FCO)."
   },
+  "FLL": {
+    "fll-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Fort Lauderdale-Hollywood (FLL) et de ses environs est clairement visible."
+  },
   "FMM": {
     "fmm-sat-1.webp": "Vue satellite : la piste de Memmingen s'étend entre les collines de l'Allgäu et les terres agricoles, avec le terminal et l'aire de trafic au nord du terrain."
+  },
+  "FOC": {
+    "foc-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Fuzhou Changle (FOC) et de ses environs est clairement visible."
   },
   "FON": {
     "fon-sat-1.webp": "Vue satellite : l'aéroport de La Fortuna est entouré d'un cercle rouge, au milieu de la forêt tropicale humide et des terres agricoles du Costa Rica.",
@@ -1043,6 +1220,27 @@
   "FRA": {
     "fra-baidu-2.webp": "Le Squaire à l'aéroport de Francfort — le long bâtiment blanc incurvé qui enjambe les voies ferrées sur ses supports inclinés, avec l'autoroute qui passe à côté.",
     "fra-baidu-3.webp": "Francfort vue du ciel — des avions et des engins de chantier dispersés sur l'aire de trafic et les pistes, avec la silhouette de la ville au-delà de la ceinture forestière."
+  },
+  "FUK": {
+    "fuk-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Fukuoka (FUK) et de ses environs est clairement visible.",
+    "fuk-baidu-2.webp": "Le terminal domestique de l'aéroport de Fukuoka, avec l'enseigne rouge « 福岡空港 国内線 DOMESTIC » à côté d'un grand « 2 », au-dessus de la voie de dépose."
+  },
+  "GDL": {
+    "gdl-baidu-2.webp": "Le hall des départs moderne de Guadalajara : un toit en treillis blanc et un plafond en bois orangé au-dessus des sièges, avec l'aire de trafic visible à travers la paroi vitrée.",
+    "gdl-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Guadalajara (GDL) et de ses environs est clairement visible."
+  },
+  "GIG": {
+    "gig-baidu-2.webp": "À la porte, un avion GOL est stationné près de la passerelle avec un véhicule au sol à côté, tandis que les structures en forme de tour du terminal se dressent en arrière-plan.",
+    "gig-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Rio de Janeiro-Galeão – Tom Jobim (GIG) et de ses environs est clairement visible."
+  },
+  "GMP": {
+    "gmp-baidu-1.webp": "Le hall des départs de Gimpo : un plafond à caissons avec une enseigne Korean Air suspendue, des écrans publicitaires et des zones d'enregistrement de part et d'autre.",
+    "gmp-baidu-2.webp": "Un vaste hall de terminal lumineux, avec un plafond à lattes de bois au-dessus de baies vitrées toute hauteur et des voyageurs avec leurs bagages passant devant les comptoirs d'enregistrement.",
+    "gmp-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Gimpo (GMP) et de ses environs est clairement visible."
+  },
+  "GNI": {
+    "gni-baidu-1.webp": "Le terminal de l'aéroport de Lyudao et sa tour de contrôle blanche, avec une allée incurvée devant.",
+    "gni-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Lyudao (GNI) et de ses environs est clairement visible."
   },
   "GOY": {
     "goy-sat-1.webp": "Vue satellite : l'aéroport d'Ampara (GOY) et sa piste 07/25, qui traverse une végétation verdoyante et des terres agricoles dans l'est du Sri Lanka.",
@@ -1066,11 +1264,47 @@
   "GUW": {
     "guw-sat-1.webp": "Vue satellite : la piste d'Atyrau s'étend dans la plaine aride de la Caspienne, avec le terminal et l'aire de trafic à ses côtés, et des rivières et des zones humides alentour."
   },
+  "GVA": {
+    "gva-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Genève (GVA) et de ses environs est clairement visible.",
+    "gva-baidu-1.webp": "La façade du terminal, sa paroi vitrée fortement inclinée soutenue par des contrefiches en acier, avec des tracteurs au sol stationnés sur l'aire de trafic à côté.",
+    "gva-baidu-2.webp": "Des avions easyJet et KLM aux postes de stationnement, avec la neige encore présente sur les Alpes en arrière-plan."
+  },
   "GYL": {
     "gyl-sat-1.webp": "Vue satellite : l'aéroport d'Argyle (GYL) se trouve parmi des sols secs et des terres dénudées."
   },
   "GZP": {
     "gzp-sat-1.webp": "Vue satellite : la piste de Gazipaşa s'étend sur la plaine côtière entre les monts Taurus et la Méditerranée, avec le terminal et l'aire de trafic à ses côtés."
+  },
+  "HAK": {
+    "hak-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Haikou Meilan (HAK) et de ses environs est clairement visible.",
+    "hak-baidu-1.webp": "À l'intérieur du terminal 2 de l'aéroport de Haikou Meilan, un panneau suspendu indique l'aéroport de Meilan (terminal 2) et la sortie.",
+    "hak-baidu-2.webp": "Extérieur du terminal de l'aéroport de Haikou Meilan, avec l'inscription HAIKOU en rouge sur la toiture."
+  },
+  "HAM": {
+    "ham-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport Helmut Schmidt de Hambourg (HAM) et de ses environs est clairement visible.",
+    "ham-baidu-1.webp": "À l'intérieur du terminal 1 de l'aéroport de Hambourg, des îlots d'enregistrement sous un plafond à lattes de bois et une enseigne « Terminal 1 » suspendue au-dessus.",
+    "ham-baidu-2.webp": "Le hall d'enregistrement de l'aéroport de Hambourg, où des passagers font la queue aux comptoirs de dépose-bagages automatiques."
+  },
+  "HAN": {
+    "han-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Noi Bai (HAN) et de ses environs est clairement visible.",
+    "han-baidu-1.webp": "Le terminal de Noi Bai vu depuis la route de l'aéroport, avec l'inscription « NỘI BÀI INTERNATIONAL TERMINAL » sur sa façade vitrée."
+  },
+  "HEL": {
+    "hel-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Helsinki-Vantaa (HEL) et de ses environs est clairement visible.",
+    "hel-baidu-1.webp": "L'allée couverte devant le terminal de Helsinki-Vantaa, avec des bancs et des lampadaires le long de la place pavée de pierre et des drapeaux finlandais flottant au-delà."
+  },
+  "HET": {
+    "het-baidu-1.webp": "Le terminal de l'aéroport international de Hohhot Baita : les caractères rouges « Hohhot » au-dessus de sa façade vitrée incurvée, avec des voitures remplissant le parvis.",
+    "het-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Hohhot Baita (HET) et de ses environs est clairement visible."
+  },
+  "HFE": {
+    "hfe-baidu-1.webp": "Sur l'aire de trafic, un avion China Eastern à la porte, sous les lettres rouges Hefei et HEFEI du toit du terminal, avec la tour de contrôle à gauche.",
+    "hfe-baidu-2.webp": "Un avion gros-porteur d'Air China sur l'aire de trafic, avec le toit doré du terminal de Hefei Xinqiao en arrière-plan.",
+    "hfe-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Hefei Xinqiao (HFE) et de ses environs est clairement visible."
+  },
+  "HGH": {
+    "hgh-baidu-2.webp": "Le terminal de Hangzhou Xiaoshan de nuit : l'inscription rouge « Hangzhou » éclairée sur le toit, un avion à la passerelle et des véhicules au sol sur l'aire de trafic.",
+    "hgh-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Hangzhou Xiaoshan (HGH) et de ses environs est clairement visible."
   },
   "HKG": {
     "hkg-baidu-1.webp": "Depuis le hublot d'une cabine : un appareil Cathay au poste de stationnement devant le toit voûté du terminal, la marque « S35 » peinte sur l'aire de trafic en dessous.",
@@ -1084,11 +1318,24 @@
     "hkg-chatgpt-06.webp": "Des appareils de Cathay Pacific s’alignent aux postes devant le hall au toit ondulé, la tour de contrôle se dressant derrière eux au-dessus du tarmac.",
     "hkg-chatgpt-07.webp": "Vue de l’air, la longue aérogare en forme de Y déploie ses bras, des dizaines d’appareils garés nez vers les portes."
   },
+  "HKT": {
+    "hkt-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Phuket (HKT) et de ses environs est clairement visible.",
+    "hkt-baidu-1.webp": "Le nom de l'aéroport s'affiche sur toute la longueur du toit du terminal, avec un turbopropulseur Bangkok Airways à une passerelle en dessous.",
+    "hkt-baidu-2.webp": "Une enseigne bleue « Welcome to Phuket International Airport » dans le terminal, au-dessus des comptoirs et du chemin vers la livraison des bagages."
+  },
   "HND": {
     "hnd-sat-1.webp": "Vue satellite : l'aéroport de Tokyo-Haneda (HND) est encadré par la ville, le littoral ou le relief, avec la piste qui traverse le paysage."
   },
+  "HNL": {
+    "hnl-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Daniel K. Inouye (HNL) et de ses environs est clairement visible."
+  },
   "HOF": {
     "hof-sat-1.webp": "Vue satellite : la piste d'Al-Ahsa s'étend entre l'oasis et le désert, avec le terminal et l'aire de trafic à ses côtés, et des palmeraies et la ville alentour."
+  },
+  "HOU": {
+    "hou-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport William P. Hobby (HOU) et de ses environs est clairement visible.",
+    "hou-baidu-1.webp": "L'entrée du terminal de Houston Hobby : un monument en forme d'hélice dans un rond-point paysager, avec le nom de l'aéroport inscrit au-dessus des portes vitrées.",
+    "hou-baidu-2.webp": "Vue depuis la cabine d'un avion Southwest au-dessus de Houston Hobby : les pistes et les voies de circulation cèdent la place aux quartiers résidentiels sous l'aile."
   },
   "HPN": {
     "hpn-sat-1.webp": "Vue satellite : l'aéroport du comté de Westchester (HPN) est encadré par la ville, le littoral ou le relief, avec la piste qui traverse le paysage."
@@ -1096,8 +1343,16 @@
   "HQQ": {
     "hqq-sat-1.webp": "Vue satellite : l'aéroport d'Anyang Hongqiqu (HQQ) est entouré de la ville, de terres agricoles et de végétation."
   },
+  "HRB": {
+    "hrb-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Harbin Taiping (HRB) et de ses environs est clairement visible."
+  },
   "HRH": {
     "hrh-sat-1.webp": "Vue satellite : l'aéroport d'Aligarh (HRH) est entouré de la ville, de terres agricoles et de végétation."
+  },
+  "HUN": {
+    "hun-baidu-1.webp": "Le mur de pierre bordé de fleurs à l'entrée de l'aéroport de Hualien, portant l'inscription « Hualien Airport ».",
+    "hun-baidu-2.webp": "La façade du terminal de l'aéroport de Hualien, avec des palmiers le long de la paroi vitrée et la tour de contrôle à gauche.",
+    "hun-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Hualien (HUN) et de ses environs est clairement visible."
   },
   "HUU": {
     "huu-page-1.webp": "La manche à air orange à côté de la piste de Huánuco — la ville à flanc de colline s'élève au-delà de la clôture bleue (photo tirée de la fiche officielle de l'aéroport de CORPAC, septembre 2023).",
@@ -1113,14 +1368,25 @@
   "HVA": {
     "hva-sat-1.webp": "Sur l'image satellite, l'aéroport d'Analalava (HVA) se fond dans la ville, les terres agricoles et la végétation environnantes."
   },
+  "HYD": {
+    "hyd-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Rajiv Gandhi (HYD) et de ses environs est clairement visible."
+  },
   "IAD": {
     "iad-sat-1.webp": "Vue satellite : l'aéroport international de Washington-Dulles (IAD) est encadré par la ville, le littoral ou le relief, avec la piste qui traverse le paysage."
+  },
+  "IAH": {
+    "iah-baidu-1.webp": "L'aéroport intercontinental George-Bush au crépuscule : les terminaux et l'aire de trafic sont éclairés, avec des appareils United alignés aux portes.",
+    "iah-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport intercontinental George-Bush (IAH) et de ses environs est clairement visible."
   },
   "ICN": {
     "icn-sat-1.webp": "Vue satellite : l'aéroport international d'Incheon (ICN) est encadré par la ville, le littoral ou le relief, avec la piste qui traverse le paysage."
   },
   "IEO": {
     "ieo-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport d'Aioun el Atrouss (IEO) se trouve entre des terres sèches et un sol nu."
+  },
+  "IND": {
+    "ind-baidu-1.webp": "Indianapolis au crépuscule : l'imposant auvent en acier du terminal se détache sur un ciel bleu profond au-dessus de la route des départs déserte.",
+    "ind-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international d'Indianapolis (IND) et de ses environs est clairement visible."
   },
   "IQA": {
     "iqa-sat-1.webp": "Sur l'image satellite, la base aérienne d'Al Asad (IQA) se fond dans les terres sèches et le sol nu environnants.",
@@ -1137,6 +1403,10 @@
   },
   "IST": {
     "ist-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport d'Istanbul (IST)."
+  },
+  "ITM": {
+    "itm-baidu-1.webp": "Vue aérienne d'Osaka-Itami : les pistes parallèles 14L/14R traversent une plaine, le terminal et l'aire de trafic se trouvent à gauche, entourés de quartiers urbains denses.",
+    "itm-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international d'Osaka-Itami (ITM) et de ses environs est clairement visible."
   },
   "IVA": {
     "iva-sat-1.webp": "Vue satellite : l'aéroport d'Ampampamena (IVA) se trouve parmi une végétation verdoyante et des terres agricoles."
@@ -1166,6 +1436,9 @@
     "ixu-chatgpt-06.webp": "La nuit, le nom de l’aéroport brille en blanc au-dessus de l’entrée tandis que des phares balaient les barrières et les rangées de plantes en pot.",
     "ixu-chatgpt-07.webp": "Un jet à queue rouge roule de face sur la piste dans la bruine, des broussailles sèches et de l’herbe occupant le premier plan."
   },
+  "JED": {
+    "jed-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Roi-Abdelaziz (JED) et de ses environs est clairement visible."
+  },
   "JEG": {
     "jeg-sat-1.webp": "Vue satellite : la courte piste d'Aasiaat s'étend sur une île du Groenland, avec le terminal et l'aire de trafic à ses côtés, et la mer et la roche nue alentour.",
     "jeg-chatgpt-01.webp": "Un bâtiment-tour habillé de bleu sous un toit en croupe argenté dispose de tables de pique-nique à l’extérieur, une plage et des îlots rocheux s’étendant derrière.",
@@ -1181,6 +1454,9 @@
   },
   "JIB": {
     "jib-sat-1.webp": "Vue satellite : la piste de Djibouti s'étend sur la rive sud du golfe de Tadjoura, avec le terminal et l'aire de trafic au nord du terrain, et le port et la ville alentour."
+  },
+  "JNB": {
+    "jnb-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international O. R. Tambo (JNB) et de ses environs est clairement visible."
   },
   "JOG": {
     "jog-sat-1.webp": "Vue satellite : la piste et la voie de circulation de Yogyakarta se trouvent à la lisière est de la ville, le terminal et l'aire de trafic au nord du terrain."
@@ -1200,8 +1476,21 @@
     "jva-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport d'Ankavandra (JVA) se trouve entre des terres sèches et un sol nu.",
     "jva-chatgpt-01.webp": "Sur une piste en herbe sèche au pied de montagnes bleues, un petit turbopropulseur blanc monomoteur est stationné tandis qu’une foule d’habitants du village se rassemble autour de lui."
   },
+  "KHH": {
+    "khh-baidu-1.webp": "La façade du terminal de l'aéroport international de Kaohsiung, avec des murs-rideaux vitrés sous son toit triangulaire.",
+    "khh-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Kaohsiung (KHH) et de ses environs est clairement visible."
+  },
   "KIX": {
     "kix-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport international du Kansai (KIX)."
+  },
+  "KMG": {
+    "kmg-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Kunming Changshui (KMG) et de ses environs est clairement visible.",
+    "kmg-baidu-1.webp": "Devant le terminal de Kunming Changshui, une façade vitrée reflète les nuages, avec une dalle de pierre portant l'inscription « Kunming International Airport »."
+  },
+  "KNH": {
+    "knh-baidu-1.webp": "Sur l'aire de trafic de l'aéroport de Kinmen, des passagers montent à bord d'un avion par des escaliers mobiles, avec des véhicules au sol à côté.",
+    "knh-baidu-2.webp": "L'extérieur du terminal de l'aéroport de Kinmen, avec le drapeau de la République de Chine (ROC) peint sur le mur et des véhicules de service jaunes garés devant.",
+    "knh-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Kinmen (KNH) et de ses environs est clairement visible."
   },
   "KQA": {
     "kqa-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport d'Akutan (KQA) se trouve entre des terres sèches et un sol nu."
@@ -1214,11 +1503,34 @@
     "kso-chatgpt-04.webp": "Au crépuscule, la façade du terminal est déserte, son enseigne luisant d’un orange chaud dans le dernier soleil tandis que de longues ombres s’étirent sur le dallage.",
     "kso-chatgpt-05.webp": "Plusieurs avions de ligne aux livrées différentes sont stationnés aux passerelles du terminal, dont un appareil AEGEAN bleu et blanc."
   },
+  "KTM": {
+    "ktm-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Tribhuvan (KTM) et de ses environs est clairement visible.",
+    "ktm-baidu-1.webp": "Le terminal orange de l'aéroport international Tribhuvan, sa tour de contrôle s'élevant du toit, avec des voitures et des bus à l'extérieur."
+  },
   "KUL": {
     "kul-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport international de Kuala Lumpur (KUL)."
   },
+  "KWE": {
+    "kwe-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Guiyang Longdongbao (KWE) et de ses environs est clairement visible.",
+    "kwe-baidu-1.webp": "À l'intérieur du terminal de Guiyang Longdongbao : des colonnes blanches ramifiées soutiennent un plafond à lattes de bois au-dessus d'un vaste hall où des passagers font la queue aux comptoirs.",
+    "kwe-baidu-2.webp": "Un avion Spring Airlines roule sur le tarmac de l'aéroport de Guiyang, avec les pics karstiques qui entourent la ville se dressant en arrière-plan."
+  },
+  "KWI": {
+    "kwi-baidu-1.webp": "Les files d'attente aux portes d'embarquement de l'aéroport international du Koweït : des passagers attendent entre des barrières jaunes, sous les écrans d'information sur les vols.",
+    "kwi-baidu-2.webp": "Le hall du terminal de l'aéroport international du Koweït, avec le nom de l'aéroport en arabe et en anglais au-dessus de l'entrée, tandis que les voyageurs passent avec leurs bagages.",
+    "kwi-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international du Koweït (KWI) et de ses environs est clairement visible."
+  },
+  "KYD": {
+    "kyd-baidu-1.webp": "Le terminal de l'aéroport de Lanyu, avec l'inscription « Lanyu Airport » sur sa façade rouge et blanche.",
+    "kyd-baidu-2.webp": "Un turbopropulseur bimoteur sur l'aire de trafic de l'aéroport de Lanyu, avec une colline verdoyante et la mer en arrière-plan.",
+    "kyd-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Lanyu (KYD) et de ses environs est clairement visible."
+  },
   "LAK": {
     "lak-sat-1.webp": "Vue satellite : l'aéroport d'Aklavik/Freddie Carmichael (LAK) se trouve entre la ville, des terres agricoles et de la végétation."
+  },
+  "LAS": {
+    "las-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Harry-Reid (LAS) et de ses environs est clairement visible.",
+    "las-baidu-1.webp": "Vue aérienne de l'aéroport international Harry-Reid (LAS), montrant les halls du terminal, les postes de stationnement des avions et les pistes."
   },
   "LAX": {
     "lax-sat-1.webp": "Sur l'image satellite, les terminaux et les pistes de l'aéroport international de Los Angeles (LAX) s'inscrivent dans la ville et le réseau routier."
@@ -1235,6 +1547,11 @@
   },
   "LCG": {
     "lcg-sat-1.webp": "Vue satellite : la piste de La Corogne se trouve parmi les collines côtières de Galice, avec le terminal et l'aire de trafic à côté."
+  },
+  "LED": {
+    "led-baidu-1.webp": "À la porte de Pulkovo, un avion Rossiya sur l'aire de trafic, avec l'enseigne SAINT PETERSBURG sur le terminal en arrière-plan et la tour de contrôle circulaire à droite.",
+    "led-baidu-2.webp": "À l'intérieur du nouveau terminal de Pulkovo, le plafond doré à facettes s'étend le long de l'axe au-dessus des files d'enregistrement et de contrôle de sécurité.",
+    "led-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Pulkovo (LED) et de ses environs est clairement visible."
   },
   "LEI": {
     "lei-sat-1.webp": "Vue satellite : la piste suit le littoral d'Almería, avec le terminal et l'aire de trafic à son extrémité ouest et la Méditerranée en contrebas."
@@ -1266,6 +1583,16 @@
     "lhr-baidu-2.webp": "Depuis une fenêtre du terminal : un avion de Japan Airlines à la porte d'embarquement, la tour de contrôle de Heathrow au-delà.",
     "lhr-baidu-3.webp": "Heathrow au crépuscule — les terminaux illuminés, un avion d'Etihad stationné sur l'aire de trafic."
   },
+  "LHW": {
+    "lhw-baidu-1.webp": "En empruntant la route d'accès vers Lanzhou Zhongchuan, le toit blanc en forme de vague du terminal se profile sous des panneaux bleus suspendus.",
+    "lhw-baidu-2.webp": "La façade du terminal de Lanzhou Zhongchuan : des toits blancs superposés jaillissent de colonnes arquées, des caractères rouges « 兰州 » ornent le faîte et la circulation longe le trottoir.",
+    "lhw-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Lanzhou Zhongchuan (LHW) et de ses environs est clairement visible."
+  },
+  "LIM": {
+    "lim-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Jorge-Chávez (LIM) et de ses environs est clairement visible.",
+    "lim-baidu-1.webp": "Vue aérienne de l'aéroport de Lima : son long terminal s'étend sur un terrain désertique, avec l'océan Pacifique au-delà et des travaux de terrassement à droite.",
+    "lim-baidu-2.webp": "Des passagers font la queue aux comptoirs du hall d'arrivée, avec une sculpture métallique suspendue au plafond sur la gauche."
+  },
   "LIS": {
     "lis-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport Humberto Delgado (LIS)."
   },
@@ -1278,8 +1605,20 @@
   "LME": {
     "lme-sat-1.webp": "Vue satellite : l'aéroport du Mans-Arnage (LME) est entouré d'une végétation verdoyante et de terres agricoles."
   },
+  "LOS": {
+    "los-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Murtala-Muhammed (LOS) et de ses environs est clairement visible.",
+    "los-baidu-1.webp": "Le terminal et la tour de contrôle de l'aéroport de Lagos, vus au-delà d'un parking rempli de voitures.",
+    "los-baidu-2.webp": "L'extérieur du nouveau terminal de l'aéroport international Murtala-Muhammed de Lagos, avec sa façade vitrée et son toit sombre au-dessus d'un parvis détrempé par la pluie."
+  },
+  "LPA": {
+    "lpa-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Grande Canarie (LPA) et de ses environs est clairement visible.",
+    "lpa-baidu-1.webp": "La zone d'enregistrement de l'aéroport de Grande Canarie : des voyageurs font la queue dans la file prioritaire, à côté du comptoir classe affaires de Turkish Airlines."
+  },
   "LTI": {
     "lti-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport d'Altai (LTI) se trouve entre la ville, des terres agricoles et de la végétation."
+  },
+  "LTN": {
+    "ltn-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Londres-Luton (LTN) et de ses environs est clairement visible."
   },
   "LTS": {
     "lts-sat-1.webp": "Sur l'image satellite, la base aérienne d'Altus (LTS) se fond dans la ville, les terres agricoles et la végétation environnantes.",
@@ -1295,8 +1634,33 @@
     "lym-sat-1.webp": "Vue satellite : l'aéroport d'Ashford (LYM) est entouré d'une végétation verdoyante et de terres agricoles.",
     "lym-chatgpt-01.webp": "Vue aérienne d’une piste rectiligne coupant en diagonale des champs verdoyants, avec une ville côtière étalée au loin."
   },
+  "LZN": {
+    "lzn-baidu-1.webp": "La façade du terminal de l'aéroport de Matsu Nangan, avec son toit de tuiles rouges, vue au-delà du parking et du rond-point.",
+    "lzn-baidu-2.webp": "L'inscription dorée « Matsu Nangan Airport » au-dessus de l'entrée du terminal.",
+    "lzn-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Matsu Nangan (LZN) et de ses environs est clairement visible."
+  },
+  "MAA": {
+    "maa-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Chennai (MAA) et de ses environs est clairement visible.",
+    "maa-baidu-1.webp": "Le parvis du terminal de Chennai, avec sa rangée d'auvents blancs pointus au-dessus des taxis en attente et un viaduc surélevé passant sur la droite."
+  },
   "MAD": {
     "mad-sat-1.webp": "Vue satellite : l'aéroport de Madrid-Barajas (MAD) est encadré par la ville, le littoral ou le relief, avec la piste qui traverse le paysage."
+  },
+  "MAN": {
+    "man-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Manchester (MAN) et de ses environs est clairement visible."
+  },
+  "MCI": {
+    "mci-baidu-1.webp": "Devant le terminal de Kansas City, des colonnes blanches en forme de Y soutiennent un large auvent bordé de bois au-dessus des voyageurs et des véhicules.",
+    "mci-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Kansas City (MCI) et de ses environs est clairement visible."
+  },
+  "MCO": {
+    "mco-baidu-2.webp": "Le terminal sud d'Orlando : un immense anneau blanc s'élance au-dessus de la façade vitrée incurvée, avec l'auvent de dépose et des véhicules au sol en dessous.",
+    "mco-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international d'Orlando (MCO) et de ses environs est clairement visible."
+  },
+  "MDE": {
+    "mde-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international José María Córdova (MDE) et de ses environs est clairement visible.",
+    "mde-baidu-1.webp": "La tour de contrôle de José María Córdova, son nom inscrit sur la tour blanche, avec le terminal et le parking devant.",
+    "mde-baidu-2.webp": "Une sculpture rouge en forme d'étoile devant la tour de contrôle, dont l'inscription « JOSE MARIA CORDOVA » se détache sur le ciel bleu."
   },
   "MDQ": {
     "mdq-sat-1.webp": "Vue satellite : la piste de Mar del Plata se trouve entre la côte atlantique et la pampa, avec le terminal et l'aire de trafic à côté.",
@@ -1308,11 +1672,19 @@
     "mdq-chatgpt-06.webp": "Un avion de ligne bleu et blanc roule le long de la piste derrière une clôture grillagée, de l’herbe sèche au premier plan sous un ciel pâle.",
     "mdq-chatgpt-07.webp": "Des passagers font la queue devant la porte d’embarquement internationale, le sol blanc poli reflétant les longues lumières du plafond."
   },
+  "MDW": {
+    "mdw-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Chicago Midway (MDW) et de ses environs est clairement visible."
+  },
   "MEL": {
     "mel-sat-1.webp": "Vue satellite : l'aéroport de Melbourne (MEL), avec ses pistes, son complexe terminalier et la zone industrielle de Tullamarine."
   },
   "MEX": {
     "mex-sat-1.webp": "Vue satellite : l'aéroport international de Mexico (MEX) est encadré par la ville, le littoral ou le relief, avec la piste qui traverse le paysage."
+  },
+  "MFK": {
+    "mfk-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Matsu Beigan (MFK) et de ses environs est clairement visible.",
+    "mfk-baidu-1.webp": "La façade du terminal de l'aéroport de Matsu Beigan, avec ses murs habillés de pierre grise et des rangées de fenêtres donnant sur le parvis.",
+    "mfk-baidu-2.webp": "Deux taxis jaunes attendent devant l'entrée du terminal, sous l'enseigne « Matsu Beigan Airport » sur le toit."
   },
   "MGQ": {
     "mgq-sat-1.webp": "Vue satellite : la piste de Mogadiscio se trouve le long de la côte de l'océan Indien, avec le terminal et l'aire de trafic à côté, entourés par la ville et la plage."
@@ -1340,11 +1712,25 @@
   "MRD": {
     "mrd-sat-1.webp": "Sur l'image satellite, l'aéroport Alberto Carnevalli (MRD) se fond dans la végétation verdoyante et les terres agricoles environnantes."
   },
+  "MSP": {
+    "msp-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Minneapolis-Saint Paul / Wold-Chamberlain Field (MSP) et de ses environs est clairement visible.",
+    "msp-baidu-1.webp": "Les portes de Minneapolis-Saint Paul : des avions Delta alignés au terminal, avec les immeubles de la ville à l'horizon."
+  },
+  "MSY": {
+    "msy-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Louis Armstrong de La Nouvelle-Orléans (MSY) et de ses environs est clairement visible."
+  },
+  "MTY": {
+    "mty-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Monterrey (MTY) et de ses environs est clairement visible."
+  },
   "MUC": {
     "muc-sat-1.webp": "Sur l'image satellite, les terminaux et les pistes de l'aéroport de Munich (MUC) s'inscrivent dans la ville et le réseau routier."
   },
   "MXP": {
     "mxp-sat-1.webp": "Sur l'image satellite, les terminaux et les pistes de l'aéroport de Milan-Malpensa (MXP) s'inscrivent dans la ville et le réseau routier."
+  },
+  "MZG": {
+    "mzg-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Magong (MZG) et de ses environs est clairement visible.",
+    "mzg-baidu-2.webp": "L'inscription bleue « Penghu Airport » au sommet du terminal, à côté d'un panneau indiquant les coordonnées de l'aéroport."
   },
   "MZI": {
     "mzi-sat-1.webp": "Vue satellite : l'aéroport de Mopti (MZI) se trouve entre des terres sèches et un sol nu.",
@@ -1355,6 +1741,29 @@
     "mzi-chatgpt-05.webp": "Des voyageurs en chapeaux de soleil marchent vers un petit turbopropulseur bimoteur sur le tarmac rougeâtre tandis qu'un camion-citerne attend à côté.",
     "mzi-chatgpt-06.webp": "Dans une brume blanche uniforme, un soldat en camouflage se tient sur le béton et regarde un turbopropulseur bimoteur jaune sable se déplacer sur le tarmac.",
     "mzi-chatgpt-07.webp": "Un jet à l'emblème vert sur la dérive attend au-delà d'un étalage de bagages posés sur un sol sec, où des bagagistes empilent des sacs sur un chariot."
+  },
+  "NBO": {
+    "nbo-baidu-1.webp": "Vue aérienne de l'aéroport international Jomo Kenyatta : le terminal circulaire entoure un parking central, des avions occupent l'aire de trafic et la tour de contrôle se dresse au-delà.",
+    "nbo-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Jomo Kenyatta (NBO) et de ses environs est clairement visible."
+  },
+  "NCE": {
+    "nce-baidu-1.webp": "Vue aérienne de l'aéroport de Nice-Côte d'Azur sur son promontoire avançant dans la Méditerranée, avec les pistes et les terminaux entre la mer et la ville.",
+    "nce-baidu-2.webp": "Vue du ciel, le terminal, l'aire de trafic et les parkings de Nice s'étendent sous de lourds nuages d'orage.",
+    "nce-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Nice-Côte d'Azur (NCE) et de ses environs est clairement visible."
+  },
+  "NGB": {
+    "ngb-baidu-1.webp": "Le hall d'enregistrement de Ningbo Lishe : des rangées de comptoirs et des barrières de file sous une voûte en treillis tubulaire blanc, éclairée par la lumière du jour entrant par les fenêtres hautes des deux côtés.",
+    "ngb-baidu-2.webp": "Un Airbus A320 d'Air China dans sa livrée colorée « Ningbo » roule devant le terminal de Ningbo Lishe, avec les caractères rouges « Ningbo » sur la toiture et la tour de contrôle à droite.",
+    "ngb-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Ningbo Lishe (NGB) et de ses environs est clairement visible."
+  },
+  "NKG": {
+    "nkg-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Nanjing Lukou (NKG) et de ses environs est clairement visible.",
+    "nkg-baidu-1.webp": "Le terminal de Nanjing Lukou, où un avion Juneyao Air attend sous les caractères rouges « Nanjing » du toit, une passerelle à sa porte."
+  },
+  "NNG": {
+    "nng-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Nanning Wuxu (NNG) et de ses environs est clairement visible.",
+    "nng-baidu-1.webp": "Extérieur du terminal de l'aéroport de Nanning Wuxu, dont le toit incurvé et élancé évoque des ailes déployées.",
+    "nng-baidu-2.webp": "Un appareil OK Air stationné sur l'aire de trafic devant le terminal de l'aéroport de Nanning Wuxu, avec la tour de contrôle et un panneau routier « Wuxu Airport Station » en arrière-plan."
   },
   "NRT": {
     "nrt-baidu-1.webp": "Le hall des départs intérieurs du terminal 1, où le panneau indique « Départs intérieurs » en japonais, en chinois, en coréen et en anglais.",
@@ -1392,14 +1801,30 @@
     "oes-chatgpt-05.webp": "Un turbopropulseur bimoteur blanc à bande verte est garé nez face à l'objectif sur le tarmac, avec une rangée d'arbres derrière lui.",
     "oes-chatgpt-06.webp": "Il s'agit d'une capture d'écran de carte avec une punaise rouge marquant l'Aeroclub San Antonio Oeste, à côté d'une réserve naturelle de baie et d'une route côtière."
   },
+  "OKA": {
+    "oka-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Naha (OKA) et de ses environs est clairement visible.",
+    "oka-baidu-1.webp": "Des avions ANA alignés sur l'aire de trafic de Naha : leurs dérives se chevauchent, avec la mer et une chaussée au-delà.",
+    "oka-baidu-2.webp": "Une fresque dans le terminal de Naha : des personnages en tenue d'Okinawa devant le château de Shuri, surmontés d'une banderole soutenant la restauration du château."
+  },
   "OKC": {
     "okc-sat-1.webp": "Sur l'image satellite, les terminaux et les pistes de l'aéroport Will Rogers World (OKC) s'inscrivent dans la ville et le réseau routier."
+  },
+  "OPO": {
+    "opo-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport Francisco de Sá Carneiro (OPO) et de ses environs est clairement visible."
   },
   "ORD": {
     "ord-sat-1.webp": "Sur l'image satellite, les terminaux et les pistes de l'aéroport international O'Hare (ORD) s'inscrivent dans la ville et le réseau routier."
   },
   "ORY": {
     "ory-sat-1.webp": "Vue satellite : l'aéroport de Paris-Orly (ORY) est encadré par la ville, le littoral ou le relief, avec la piste qui traverse le paysage."
+  },
+  "OSL": {
+    "osl-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international d'Oslo-Gardermoen (OSL) et de ses environs est clairement visible.",
+    "osl-baidu-1.webp": "À l'intérieur du terminal d'Oslo-Gardermoen, des passagers attendent sur des bancs près de la porte A2, avec des sols en bois et une paroi vitrée donnant sur l'aire de trafic."
+  },
+  "OTP": {
+    "otp-baidu-1.webp": "Le terminal de l'aéroport international Henri-Coandă de Bucarest : l'inscription « International Henri Coandă Bucharest » court le long de la toiture bleue, avec des voitures garées devant.",
+    "otp-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Henri-Coandă de Bucarest (OTP) et de ses environs est clairement visible."
   },
   "OUD": {
     "oud-sat-1.webp": "Vue satellite : les deux pistes d'Oujda se trouvent sur la plaine aride de l'est du Maroc, avec le terminal et l'aire de trafic entre elles.",
@@ -1420,11 +1845,42 @@
     "ovd-chatgpt-06.webp": "Plusieurs avions de ligne sont garés côte à côte sur le tarmac devant le terminal sous un ciel nuageux, un escalier d'embarquement se dressant près de l'un à la dérive verte.",
     "ovd-chatgpt-07.webp": "Un sol en pierre poli descend le couloir des départs le long de rangées de sièges sous un plafond à lattes jaunes, avec une enseigne de cafétéria au fond."
   },
+  "PDX": {
+    "pdx-baidu-1.webp": "À la tombée de la nuit à PDX, l'auvent vitré ondulé entre le parking et le terminal, avec les lumières des voitures filant sur la route en dessous.",
+    "pdx-baidu-2.webp": "PDX au crépuscule : des avions stationnés sur l'aire de trafic tandis que les lumières du terminal s'allument et que l'eau scintille à l'horizon.",
+    "pdx-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Portland (PDX) et de ses environs est clairement visible."
+  },
   "PEK": {
     "pek-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport international de Pékin-Capitale (PEK)."
   },
+  "PER": {
+    "per-baidu-2.webp": "À l'intérieur de l'aéroport de Perth, des escaliers mécaniques sous des panneaux suspendus bleus portant l'inscription « PERTH », avec une publicité China Southern à côté.",
+    "per-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Perth (PER) et de ses environs est clairement visible."
+  },
+  "PHL": {
+    "phl-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Philadelphie (PHL) et de ses environs est clairement visible.",
+    "phl-baidu-1.webp": "Philadelphie de nuit : les toits blancs en forme de vague des terminaux et les aires de trafic sont éclairés, tandis que la lueur de la ville s'étend au-delà.",
+    "phl-baidu-2.webp": "Un avion American Airlines roule devant la tour de contrôle et l'ensemble des bâtiments du terminal."
+  },
+  "PHX": {
+    "phx-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Sky Harbor de Phoenix (PHX) et de ses environs est clairement visible.",
+    "phx-baidu-2.webp": "Des voyageurs font la queue à un poste de contrôle de sécurité dans le terminal de Phoenix Sky Harbor."
+  },
+  "PIT": {
+    "pit-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Pittsburgh (PIT) et de ses environs est clairement visible.",
+    "pit-baidu-1.webp": "La tour de contrôle et le terminal de Pittsburgh International, avec un avion régional United Express stationné à sa porte.",
+    "pit-baidu-2.webp": "Vue en hauteur de Pittsburgh International : le terminal côté ville et les halls s'avancent dans la zone aéroportuaire, la tour se dressant au-delà."
+  },
   "PKH": {
     "pkh-sat-1.webp": "Sur l'image satellite, l'aéroport d'Alexion (PKH) se fond dans l'eau et les côtes qui l'entourent."
+  },
+  "PKX": {
+    "pkx-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Pékin-Daxing (PKX) et de ses environs est clairement visible.",
+    "pkx-baidu-1.webp": "Vue du dessus du terminal en forme d'étoile de Daxing, avec des avions stationnés le long de ses cinq branches."
+  },
+  "PMI": {
+    "pmi-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Palma de Majorque (PMI) et de ses environs est clairement visible.",
+    "pmi-baidu-1.webp": "Le terminal de l'aéroport de Palma de Majorque vu de l'extérieur, avec la sculpture géante en forme de bouteille de verre sur la pelouse et le nom de l'aéroport sur la façade."
   },
   "PNR": {
     "pnr-sat-1.webp": "Vue satellite : la piste de Pointe-Noire se trouve le long de la côte atlantique, avec le terminal et l'aire de trafic à l'est et la ville et les forêts alentour.",
@@ -1435,8 +1891,21 @@
     "pnr-chatgpt-05.webp": "Sous un ciel lumineux, la façade vitrée sombre du terminal reflète les nuages, une enseigne se dresse sur le toit et des taxis clairs remplissent le parking devant.",
     "pnr-chatgpt-06.webp": "À l'intérieur du hall à plusieurs niveaux du terminal, des escaliers mécaniques montent vers une paroi vitrée qui laisse entrer la lumière du jour, tandis que des gens se tiennent le long de la rambarde de la mezzanine au-dessus."
   },
+  "PRG": {
+    "prg-baidu-1.webp": "Vue aérienne de l'aéroport Václav-Havel de Prague : le terminal au toit incurvé et sa rangée de passerelles le long de l'aire de trafic, avec les pistes et les champs au-delà.",
+    "prg-baidu-2.webp": "Au coucher du soleil, un avion British Airways est à une passerelle tandis que l'équipe au sol et des chariots à bagages s'activent autour de lui.",
+    "prg-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport Václav-Havel de Prague (PRG) et de ses environs est clairement visible."
+  },
   "PSO": {
     "pso-sat-1.webp": "Vue satellite : la piste de Pasto se trouve dans une vallée andine, avec le terminal et l'aire de trafic à côté, entourés de montagnes et de terres agricoles."
+  },
+  "PTY": {
+    "pty-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Tocumen (PTY) et de ses environs est clairement visible."
+  },
+  "PUS": {
+    "pus-baidu-1.webp": "Un avion Korean Air sur l'aire de trafic de Busan Gimhae, des passagers montant par escaliers d'accès, avec des chariots à bagages et des cônes de signalisation à côté.",
+    "pus-baidu-2.webp": "Le terminal de Busan Gimhae vu depuis l'aire de trafic : l'inscription « 김해 GIMHAE » sur le mur en métal nervuré gris, avec une passerelle et un mât d'éclairage à côté.",
+    "pus-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Gimhae (PUS) et de ses environs est clairement visible."
   },
   "PVG": {
     "pvg-baidu-1.webp": "Le terminal de Pudong depuis le hublot d'une cabine — « 上海 SHANGHAI » sur la toiture, des avions de China Eastern aux portes d'embarquement."
@@ -1487,8 +1956,19 @@
   "RCH": {
     "rch-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport Almirante Padilla (RCH) se trouve entre la ville, des terres agricoles et de la végétation."
   },
+  "RDU": {
+    "rdu-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Raleigh-Durham (RDU) et de ses environs est clairement visible.",
+    "rdu-baidu-1.webp": "Crépuscule au bord du trottoir du terminal : les enseignes « Bag Claim » sous le parking s'illuminent et la façade vitrée capte la lumière déclinante.",
+    "rdu-baidu-2.webp": "L'enseigne « RDU Welcome » à l'entrée de l'aéroport, avec un avion Southwest traversant le ciel bleu au-dessus."
+  },
   "REL": {
     "rel-sat-1.webp": "Vue satellite : la piste de Rawson s'étend sur le plateau patagonien, avec le terminal et l'aire de trafic à ses côtés, et de la brousse sèche et la ville alentour."
+  },
+  "RMQ": {
+    "rmq-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Taichung (RMQ) et de ses environs est clairement visible."
+  },
+  "RSW": {
+    "rsw-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international du sud-ouest de la Floride (RSW) et de ses environs est clairement visible."
   },
   "RUA": {
     "rua-page-1.webp": "Le véhicule de pompiers de l'aérodrome d'Arua devant son garage, à l'intérieur de la clôture périmétrique (photo tirée du rapport ESIA de juillet 2025 de la CAA ougandaise sur l'extension de l'aérodrome d'Arua).",
@@ -1501,6 +1981,14 @@
   },
   "RUH": {
     "ruh-sat-1.webp": "Sur l'image satellite, les terminaux, l'aire de trafic et les pistes de l'aéroport international King Khalid (RUH) sont clairement visibles."
+  },
+  "SAN": {
+    "san-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de San Diego (SAN) et de ses environs est clairement visible.",
+    "san-baidu-1.webp": "L'aire de trafic de San Diego International : des avions Southwest et JetBlue se suivent nez à queue, un cargo FedEx derrière eux et des palmiers devant le terminal."
+  },
+  "SAW": {
+    "saw-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Sabiha-Gökçen d'Istanbul (SAW) et de ses environs est clairement visible.",
+    "saw-baidu-1.webp": "Le terminal de Sabiha Gökçen de nuit, son nom illuminé sous le toit élancé au-dessus du trottoir."
   },
   "SAY": {
     "say-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport de Sienne-Ampugnano (SAY) se trouve entre une végétation verdoyante et des terres agricoles."
@@ -1543,6 +2031,20 @@
   "SGN": {
     "sgn-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport international de Tan Son Nhat (SGN)."
   },
+  "SHA": {
+    "sha-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Shanghai Hongqiao (SHA) et de ses environs est clairement visible.",
+    "sha-baidu-1.webp": "Le terminal de Shanghai Hongqiao vu depuis la route d'accès, ses lettres rouges « 虹橋機場 » sur le toit se détachant sur des nuages imposants."
+  },
+  "SHE": {
+    "she-baidu-1.webp": "Un avion roule devant le terminal de l'aéroport international de Shenyang Taoxian, avec des caractères rouges « Shenyang » fixés sur le toit.",
+    "she-baidu-2.webp": "Le terminal de l'aéroport international de Shenyang Taoxian : une ligne de toit pliée au-dessus du mur-rideau vitré, avec des caractères rouges encastrés dans la façade.",
+    "she-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Shenyang Taoxian (SHE) et de ses environs est clairement visible."
+  },
+  "SHJ": {
+    "shj-baidu-1.webp": "Vue aérienne de la rangée de bâtiments blancs à coupoles du terminal de Charjah, avec la tour de contrôle à droite et des pistes s'étendant dans le désert.",
+    "shj-baidu-2.webp": "Au crépuscule, le long de la route de l'aéroport, un rond-point paysager mène au terminal à coupoles de Charjah au loin.",
+    "shj-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Charjah (SHJ) et de ses environs est clairement visible."
+  },
   "SID": {
     "sid-sat-1.webp": "Vue satellite : la piste de Sal s'étend sur la côte aride de l'île du Cap-Vert, avec le terminal et l'aire de trafic à l'est du terrain.",
     "sid-chatgpt-01.webp": "Sous un auvent bleu marqué Partidas et Departures, des voyageurs traversent la route striée devant le terminal orange et blanc.",
@@ -1555,6 +2057,18 @@
   "SIN": {
     "sin-sat-1.webp": "Vue satellite : l'aéroport de Singapour Changi (SIN) est encadré par la ville, la côte ou le relief, avec une piste traversant la scène."
   },
+  "SJO": {
+    "sjo-baidu-1.webp": "Vue aérienne depuis le hublot au-dessus de San José : la piste et les voies de circulation entre des champs verdoyants et des entrepôts, avec les toits rouges de la ville au-delà.",
+    "sjo-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Juan Santamaría (SJO) et de ses environs est clairement visible."
+  },
+  "SJU": {
+    "sju-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Luis-Muñoz-Marín (SJU) et de ses environs est clairement visible.",
+    "sju-baidu-1.webp": "La route de dépose devant le terminal, avec une camionnette blanche à l'arrêt le long du trottoir et le sommet évasé de la tour de contrôle se dressant derrière."
+  },
+  "SLC": {
+    "slc-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Salt Lake City (SLC) et de ses environs est clairement visible.",
+    "slc-baidu-1.webp": "Vue aérienne des terminaux, des aires de trafic et des pistes de l'aéroport de Salt Lake City, avec des montagnes et un lac à l'horizon."
+  },
   "SLK": {
     "slk-sat-1.webp": "Vue satellite : l'aéroport régional d'Adirondack (SLK) est entouré de végétation verdoyante et de terres agricoles.",
     "slk-chatgpt-01.webp": "Le terminal en bois brun foncé présente un porche à la lourde charpente, avec une allée en béton et des massifs de gravier devant, sous un ciel sans nuages.",
@@ -1565,6 +2079,13 @@
     "slk-chatgpt-06.webp": "Des rangées de chaises en bois à assise de cuir se dressent sur une moquette grise, des plantes près des fenêtres, et un panneau brun indique le café et les toilettes.",
     "slk-chatgpt-07.webp": "Un bimoteur à hélices de Cape Air, un oiseau blanc peint sur sa queue bleue, stationne sur le taxiway, ses lettres d'immatriculation bien lisibles.",
     "slk-chatgpt-08.webp": "Un bimoteur à turbopropulseurs monte juste après le décollage, au-dessus de la cime des arbres et d'une piste, des collines boisées remplissant l'arrière-plan."
+  },
+  "SMF": {
+    "smf-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Sacramento (SMF) et de ses environs est clairement visible.",
+    "smf-baidu-1.webp": "À l'intérieur du terminal de Sacramento International, des voyageurs avec leurs bagages passent devant la zone de restauration et une enseigne « Gates B4–B11 »."
+  },
+  "SNA": {
+    "sna-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international John-Wayne du comté d'Orange (SNA) et de ses environs est clairement visible."
   },
   "SNU": {
     "snu-sat-1.webp": "Vue satellite : la piste de Santa Clara s'étend entre la ville et les terres agricoles du centre de Cuba, avec le terminal et l'aire de trafic à ses côtés.",
@@ -1596,8 +2117,15 @@
   "SRG": {
     "srg-sat-1.webp": "Vue satellite : la piste de Semarang s'étend près de la côte nord de Java, avec le terminal et l'aire de trafic au sud du terrain, et la ville et des terres agricoles tout autour."
   },
+  "STL": {
+    "stl-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Lambert de Saint-Louis (STL) et de ses environs est clairement visible.",
+    "stl-baidu-1.webp": "La tour de contrôle de Saint-Louis Lambert se dresse derrière le terminal au toit vitré incurvé, dans le brouillard."
+  },
   "STN": {
     "stn-sat-1.webp": "Sur l'image satellite, les terminaux et les pistes de l'aéroport de Londres Stansted (STN) s'inscrivent dans le tissu urbain et routier."
+  },
+  "SUB": {
+    "sub-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Juanda (SUB) et de ses environs est clairement visible."
   },
   "SVD": {
     "svd-baidu-2.webp": "L'aéroport international d'Argyle après la pluie — un appareil LIAT devant le terminal à voûte bleue, l'aire de trafic détrempée reflétant le ciel, des collines étagées sous les nuages.",
@@ -1615,6 +2143,11 @@
   "SYD": {
     "syd-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport Sydney Kingsford Smith (SYD)."
   },
+  "SYX": {
+    "syx-baidu-1.webp": "L'aire de trafic de Sanya Phoenix, avec les lettres rouges SAN YA et les caractères de Sanya sur le toit bas du terminal, au-dessus des passerelles et des chariots à bagages.",
+    "syx-baidu-2.webp": "De nuit à Sanya Phoenix, un avion Shenzhen Airlines roule devant le terminal éclairé, dont le toit est bordé de drapeaux colorés.",
+    "syx-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Sanya Phoenix (SYX) et de ses environs est clairement visible."
+  },
   "SZX": {
     "szx-sat-1.webp": "Vue satellite : l'aéroport international de Shenzhen Bao'an (SZX), ses pistes et son terminal sur la rive est de l'estuaire de la rivière des Perles."
   },
@@ -1628,11 +2161,30 @@
     "tab-chatgpt-06.webp": "Dans un hall d’enregistrement plus ancien, des colonnes en béton s’élèvent au-dessus de comptoirs violets numérotés, des cordons rouges délimitent une file et un couple attend sur un banc.",
     "tab-chatgpt-07.webp": "La nuit tombée, l’enseigne lumineuse du terminal éclaire l’auvent incurvé de la zone de dépose, où une voiture attend près de colonnes rayées rouge et blanc."
   },
+  "TAO": {
+    "tao-baidu-2.webp": "La tour de contrôle et le terminal de Qingdao Jiaodong : la tour à motifs en losange se trouve à gauche, avec des passerelles et des avions stationnés sous le toit élancé.",
+    "tao-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Qingdao Jiaodong (TAO) et de ses environs est clairement visible."
+  },
   "TAS": {
     "tas-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport international Islam Karimov de Tachkent (TAS)."
   },
+  "TFU": {
+    "tfu-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Chengdu Tianfu (TFU) et de ses environs est clairement visible.",
+    "tfu-baidu-1.webp": "Vue aérienne de Chengdu Tianfu : ses deux ailes de terminal incurvées s'étendent de part et d'autre d'un noyau circulaire entouré de verdure.",
+    "tfu-baidu-2.webp": "Le contrôle de sécurité des départs intérieurs, où une banderole rouge porte le nom de l'aéroport et des passagers chargés de bagages se dirigent vers les files."
+  },
   "TGZ": {
     "tgz-sat-1.webp": "Vue satellite : la piste de Tuxtla Gutiérrez s'étend dans une vallée du Chiapas, avec le terminal et l'aire de trafic à ses côtés, et des montagnes et des terres agricoles alentour."
+  },
+  "TLV": {
+    "tlv-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Ben Gourion (TLV) et de ses environs est clairement visible.",
+    "tlv-baidu-1.webp": "Le mur d'enseigne « Welcome to Israel » avec des inscriptions en hébreu à l'intérieur de l'aéroport Ben Gourion.",
+    "tlv-baidu-2.webp": "Extérieur d'un terminal de l'aéroport Ben Gourion, avec la tour de contrôle visible derrière le bâtiment à façade vitrée."
+  },
+  "TNA": {
+    "tna-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Jinan Yaoqiang (TNA) et de ses environs est clairement visible.",
+    "tna-baidu-1.webp": "Devant le terminal de Jinan Yaoqiang, un avion China Eastern sur l'aire de trafic sous l'inscription rouge « JINAN INTERNATIONAL AIRPORT » du toit.",
+    "tna-baidu-2.webp": "Le hall des départs de Jinan Yaoqiang : un toit en structure spatiale blanche au-dessus et des panneaux indiquant les portes intérieures B13–B32."
   },
   "TND": {
     "tnd-sat-1.webp": "Vue satellite : l'aéroport Alberto Delgado (TND) est entouré de végétation verdoyante et de terres agricoles.",
@@ -1641,11 +2193,28 @@
     "tnd-chatgpt-03.webp": "Une autre capture d’écran de jeu associe un terminal bleu canard à toit plat et un autocar bleu et blanc garé dehors, des palmiers et des haies le long du trottoir et un panneau de mission flottant à gauche.",
     "tnd-chatgpt-04.webp": "Deux avions légers stationnent sur le tarmac devant une rangée de mâts rayés rouge et blanc, l’ancien terminal au toit orange à gauche et de l’herbe ensoleillée tout autour."
   },
+  "TNN": {
+    "tnn-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Tainan (TNN) et de ses environs est clairement visible.",
+    "tnn-baidu-1.webp": "La façade du terminal de l'aéroport de Tainan, avec son pignon arqué et la station de taxis sur le parvis."
+  },
+  "TPA": {
+    "tpa-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Tampa (TPA) et de ses environs est clairement visible.",
+    "tpa-baidu-1.webp": "Vue aérienne du terminal circulaire côté ville de Tampa et de ses halls côté piste, avec un Boeing 737 de Southwest roulant en dessous."
+  },
   "TPE": {
     "tpe-sat-1.webp": "Vue satellite : l'aéroport international de Taoyuan (TPE), avec ses pistes parallèles, ses terminaux et les villes environnantes."
   },
   "TQD": {
     "tqd-sat-1.webp": "Sur l'image satellite, la piste de la base aérienne d'Al Taqaddum (TQD) se trouve entre un terrain sec et une terre nue."
+  },
+  "TSA": {
+    "tsa-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Taipei Songshan (TSA) et de ses environs est clairement visible.",
+    "tsa-baidu-1.webp": "Un avion China Airlines roule sur la piste de Songshan, avec les gratte-ciel de Taipei se dressant en arrière-plan."
+  },
+  "TSN": {
+    "tsn-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Tianjin Binhai (TSN) et de ses environs est clairement visible.",
+    "tsn-baidu-1.webp": "Le terminal de Tianjin Binhai, ses caractères rouges « 天津 » dressés sur le toit élancé au-dessus d'un parking de surface bondé.",
+    "tsn-baidu-2.webp": "Le terminal de Tianjin Binhai vu depuis le parvis : un immense toit en porte-à-faux abrite un mur-rideau vitré, surmonté des lettres rouges « 天津 »."
   },
   "TTQ": {
     "ttq-page-1.webp": "La piste de Tortuguero — un Cessna Caravan de Nature Air (TI-BDY) sur le bitume, le petit abri d'attente au toit vert et la forêt tropicale juste derrière l'aile (photo : Sebastian Arndt / Flugzeugbilder.de).",
@@ -1655,12 +2224,32 @@
     "ttq-chatgpt-04.webp": "Un turbopropulseur blanc se tient de profil sur le tarmac, des bandes rouges et bleues sur la queue, son immatriculation sur le fuselage, des palmiers et un ciel bleu profond autour.",
     "ttq-chatgpt-05.webp": "Sur une berge tropicale, un abri en bois au toit vert se tient à l’ombre des arbres tandis qu’un héron se tient sur l’herbe au-dessus d’une eau sombre et calme."
   },
+  "TTT": {
+    "ttt-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Taitung (TTT) et de ses environs est clairement visible.",
+    "ttt-baidu-1.webp": "Le terminal de l'aéroport de Taitung, avec son pignon triangulaire et son enseigne verte, et la tour de contrôle à gauche."
+  },
+  "TYN": {
+    "tyn-baidu-1.webp": "Le terminal de l'aéroport international de Taiyuan Wusu : des caractères rouges « Taiyuan » et l'inscription « Taiyuan International Airport » sur le toit, avec des voitures garées sous le niveau des départs.",
+    "tyn-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Taiyuan Wusu (TYN) et de ses environs est clairement visible."
+  },
   "UAM": {
     "uam-sat-1.webp": "Sur l'image satellite, la base aérienne d'Andersen (UAM) se fond dans l'eau et le littoral environnants."
+  },
+  "UPG": {
+    "upg-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Sultan-Hasanuddin (UPG) et de ses environs est clairement visible."
+  },
+  "URC": {
+    "urc-baidu-2.webp": "Le terminal et la tour de contrôle d'Ürümqi Tianshan, avec la chaîne du Tian Shan enneigée en arrière-plan et un avion passant au-dessus.",
+    "urc-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international d'Ürümqi Tianshan (URC) et de ses environs est clairement visible."
   },
   "VBA": {
     "vba-sat-1.webp": "Vue satellite : une piste traverse des collines verdoyantes du centre du Myanmar, avec une petite aire de trafic et un terminal à ses côtés.",
     "vba-chatgpt-01.webp": "Un panneau d’entrée en pierre sombre porte des lettres dorées au-dessus d’une écriture birmane, le toit rouge du terminal se dressant derrière sous un ciel gris uniforme."
+  },
+  "VCP": {
+    "vcp-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Viracopos (VCP) et de ses environs est clairement visible.",
+    "vcp-baidu-1.webp": "Des lettres bleues « Aeroporto Internacional de Viracopos » se détachent sur le mur-rideau vitré du terminal.",
+    "vcp-baidu-2.webp": "Un chariot chargé de bagages se trouve près du toit blanc en berceau du terminal, tandis que deux membres du personnel passent."
   },
   "VIE": {
     "vie-sat-1.webp": "Vue satellite : les terminaux, les pistes et la ville environnante de l'aéroport international de Vienne (VIE)."
@@ -1693,6 +2282,9 @@
   "WAQ": {
     "waq-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport d'Antsalova (WAQ) se trouve entre la ville, des terres agricoles et de la végétation."
   },
+  "WAW": {
+    "waw-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport Chopin de Varsovie (WAW) et de ses environs est clairement visible."
+  },
   "WKK": {
     "wkk-sat-1.webp": "Sur l'image satellite, la piste de l'aéroport d'Aleknagik / New (WKK) se trouve entre une végétation verdoyante et des terres agricoles.",
     "wkk-chatgpt-01.webp": "Dans la lumière rasante du soir, un bimoteur à turbopropulseurs stationne sur un tarmac de gravier, quelques cabanes en tôle ondulée dispersées dans la prairie ouverte et des collines arrondies noyées de nuages au-delà."
@@ -1700,8 +2292,26 @@
   "WMR": {
     "wmr-sat-1.webp": "Vue satellite : l'aéroport de Mananara Nord (WMR) est entouré d'eau et de littoral."
   },
+  "WOT": {
+    "wot-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport de Wang'an (WOT) et de ses environs est clairement visible.",
+    "wot-baidu-1.webp": "Le terminal compact de l'aéroport de Wang'an et sa tour de contrôle sur le toit, avec l'enseigne « Wang'an Airport » sur le mur."
+  },
+  "WUH": {
+    "wuh-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Wuhan Tianhe (WUH) et de ses environs est clairement visible.",
+    "wuh-baidu-1.webp": "Un avion Hainan Airlines sur l'aire de trafic devant le terminal de Wuhan Tianhe, dont le toit porte l'inscription « WUHAN TIANHE AIRPORT ».",
+    "wuh-baidu-2.webp": "Depuis le hublot à Wuhan Tianhe : un avion Air China à la porte, les caractères de Wuhan sur le toit du terminal et la tour de contrôle évasée au-delà."
+  },
+  "XIY": {
+    "xiy-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Xi'an Xianyang (XIY) et de ses environs est clairement visible.",
+    "xiy-baidu-1.webp": "La tour de contrôle et le terminal de Xi'an Xianyang, avec de grands caractères rouges « Xi'an » au-dessus du toit et deux Boeing 737 d'Air Changan aux portes."
+  },
   "XJD": {
     "xjd-sat-1.webp": "Vue satellite : les pistes parallèles et la vaste aire de trafic de la base aérienne d'Al Udeid, avec les bâtiments de la base à l'est du terrain."
+  },
+  "XMN": {
+    "xmn-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Xiamen Gaoqi (XMN) et de ses environs est clairement visible.",
+    "xmn-baidu-1.webp": "Xiamen Gaoqi : un avion XiamenAir sur la voie de circulation devant le terminal portant l'inscription « XIAMEN AIRPORT », avec la ville qui s'étend sur les collines en arrière-plan.",
+    "xmn-baidu-2.webp": "Un avion XiamenAir en finale courte au-dessus de l'aéroport de Gaoqi, survolant la circulation qui passe devant un panneau routier vert « 高崎机场 Gaoqi Airport »."
   },
   "YAA": {
     "yaa-sat-1.webp": "Sur l'image satellite, l'aéroport d'Anahim Lake (YAA) se fond dans la végétation verdoyante et les terres agricoles environnantes."
@@ -1724,11 +2334,21 @@
   "YPJ": {
     "ypj-sat-1.webp": "Sur l'image satellite, l'aéroport d'Aupaluk (YPJ) se fond dans la ville, les terres agricoles et la végétation environnantes."
   },
+  "YUL": {
+    "yul-baidu-1.webp": "L'aire de trafic de Montréal-Trudeau au crépuscule : la façade triangulaire éclairée du terminal, avec un appareil Air Canada à une passerelle.",
+    "yul-baidu-2.webp": "Un appareil Air Canada décolle à Montréal-Trudeau, avec la tour de contrôle « MONTREAL » en arrière-plan.",
+    "yul-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international Montréal-Pierre-Elliott-Trudeau (YUL) et de ses environs est clairement visible."
+  },
   "YVR": {
     "yvr-sat-1.webp": "Sur l'image satellite, les terminaux et les pistes de l'aéroport international de Vancouver (YVR) s'inscrivent dans le tissu urbain et routier."
   },
   "YXX": {
     "yxx-sat-1.webp": "Vue satellite : les pistes d'Abbotsford s'étendent entre terres agricoles et montagnes dans la vallée du Fraser, avec le terminal et l'aire de trafic en bordure du terrain."
+  },
+  "YYC": {
+    "yyc-baidu-1.webp": "À l'intérieur du terminal de Calgary, une enseigne YYC sur une colonne d'enregistrement sous le plafond en bois et les verrières.",
+    "yyc-baidu-2.webp": "Vue aérienne du terminal et des halls de Calgary, avec des avions aux portes, des parkings et des hôtels à gauche.",
+    "yyc-sat-1.webp": "Sur l'image satellite, la configuration de l'aéroport international de Calgary (YYC) et de ses environs est clairement visible."
   },
   "YYW": {
     "yyw-sat-1.webp": "Vue satellite : une piste traverse la forêt du nord de l'Ontario, avec l'aire de trafic et un petit terminal en son milieu.",
